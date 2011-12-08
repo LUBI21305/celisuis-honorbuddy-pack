@@ -1,0 +1,40 @@
+<HBProfile>
+  <Name>Aeonaxx Round</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  
+  <MinLevel>1</MinLevel>
+  <MaxLevel>86</MaxLevel>
+  <Factions>99999</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>False</MailWhite>
+  <MailGreen>False</MailGreen>
+  <MailBlue>False</MailBlue>
+  <MailPurple>False</MailPurple>
+ 
+  <SellGrey>False</SellGrey>
+  <SellWhite>False</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+  
+	<Vendors>
+	</Vendors>
+
+	<Hotspots>
+		<Hotspot X="933.2988" Y="766.2095" Z="192.1476" />
+		<Hotspot X="1008.651" Y="761.2416" Z="180.1875" />
+		<Hotspot X="1148.721" Y="729.5664" Z="166.843" />
+		<Hotspot X="1251.317" Y="625.8344" Z="163.4522" />
+		<Hotspot X="1307.688" Y="490.7303" Z="162.2708" />
+		<Hotspot X="1265.218" Y="359.8488" Z="161.142" />
+		<Hotspot X="1135.79" Y="295.6895" Z="161.3087" />
+		<Hotspot X="990.5699" Y="287.7654" Z="162.2114" />
+		<Hotspot X="857.1653" Y="344.08" Z="167.882" />
+		<Hotspot X="771.0956" Y="458.8928" Z="173.9225" />
+		<Hotspot X="773.3597" Y="605.4942" Z="180.8185" />
+		<Hotspot X="881.6315" Y="701.4178" Z="159.667" />
+
+	</Hotspots>
+</HBProfile>

@@ -1,0 +1,52 @@
+<HBProfile>
+	<Name>[Neutral] Eastern Plaugelands - Mr Grubbs v1.0 by Cicro</Name>
+	<MinDurability>0.4</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+	<ProtectedItems>
+		<Item name="Hidden Stash" entry="61387" />
+		<Item name="Mr. Grubbs" entry="66076" />
+
+	</ProtectedItems>
+	<SubProfile>
+		<Name>Eastern Plaugelands - Mr Grubbs v1.0</Name>
+		<MinLevel>1</MinLevel>
+		<MaxLevel>87</MaxLevel>
+		<TargetMinLevel>35</TargetMinLevel>
+		<Factions>7</Factions>
+		<Hotspots>
+
+<Hotspot X="2088.786" Y="-5209.034" Z="83.54981" />
+<Hotspot X="2060.145" Y="-5087.272" Z="79.38395" />
+<Hotspot X="2017.146" Y="-5068.925" Z="82.91592" />
+<Hotspot X="1973.325" Y="-5061.6" Z="83.84458" />
+<Hotspot X="1923.362" Y="-4913.44" Z="86.71646" />
+<Hotspot X="1926.716" Y="-4833.404" Z="104.9547" />
+<Hotspot X="1861.288" Y="-4841.12" Z="106.4551" />
+<Hotspot X="1828.74" Y="-4881.506" Z="94.19704" />
+<Hotspot X="1842.703" Y="-4998.409" Z="90.92994" />
+<Hotspot X="1902.851" Y="-5105.688" Z="77.66106" />
+<Hotspot X="1943.84" Y="-5228.661" Z="91.11928" />
+<Hotspot X="1968.74" Y="-5240.903" Z="84.98382" />
+<Hotspot X="2079.031" Y="-5240.457" Z="81.59087" />
+
+		</Hotspots>
+		<Vendors>
+<Vendor Name="Craftsman Wilhelm" Entry="16376" Type="Repair" X="2261.174" Y="-5321.298" Z="81.86626" />
+		</Vendors>
+		<Blackspots>
+
+		</Blackspots>
+		<AvoidMobs>
+
+		</AvoidMobs>
+		<Mailboxes>
+		</Mailboxes>
+	</SubProfile>
+</HBProfile>

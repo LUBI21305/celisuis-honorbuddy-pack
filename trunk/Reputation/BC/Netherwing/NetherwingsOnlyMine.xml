@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HBProfile>
+   <!--
+      PROFILE EXPECTATIONS:
+         * When using this profile, be certain to set the HonorBuddy bot to (select only one):
+                ( ) Grinding / Mixed
+                (*) Questing
+                ( ) PvP
+   
+         * This profile is appropriate for (check all that apply):
+                [X] Alliance   [ ] Achievement
+                [X] Horde      [ ] Farming
+                               [ ] Leveling
+                               [ ] PvP
+                               [X] Questing
+                               [X] Reputation
+                               [ ] Seasonal
+   
+   
+         * An explanation of <ForceMail> and <ProtectedItems> usage is here...
+               http://www.buddyforum.de/mediawiki/index.php?title=HonorBuddy:_About_ProtectedItems_and_ForceMail
+   
+         * DO NOT INCLUDE a <ForceMail> element in a profile!
+           Instead, each user should populate his <hb_install_dir>/ForceMail.xml file.
+           The Buddy Wiki provides a robust sample <ForceMail> element here...
+               http://www.buddyforum.de/mediawiki/index.php?title=Honorbuddy:_A_prototypical_ForceMail_Element
+  
+         * DO NOT INCLUDE a <ProtectedItems> element in a profile!
+           Instead, each user should populate his <hb_install_dir>/Protected Items.xml file.
+           The Buddy Wiki provides a robust sample <ProtectedItems> element here...
+               http://www.buddyforum.de/mediawiki/index.php?title=Honorbuddy:_A_prototypical_ProtectedItems_Element -->
+   
+  
+  <Name>Netherwing Quests Friendly</Name>
+  <MinLevel>1</MinLevel>
+  <MaxLevel>90</MaxLevel>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>2</MinFreeBagSlots>
+  <MailGrey>False</MailGrey>
+  <MailWhite>False</MailWhite>
+  <MailGreen>False</MailGreen>
+  <MailBlue>False</MailBlue>
+  <MailPurple>False</MailPurple>
+  <SellGrey>False</SellGrey>
+  <SellWhite>False</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+  <TargetElites>False</TargetElites>
+
+	<Vendors>
+		<!-- Netherwing Vendor -->
+		<Vendor Name="Gug" Entry="23144" Type="Repair" X="-5119.803" Y="624.7665" Z="86.76037" />
+	</Vendors>
+
+  <!-- Quest Overrides -->
+	<Quest Id="11076" Name="Picking Up The Pieces...">
+		<CollectFrom>
+		</CollectFrom>
+    <Objective Type="CollectItem" ItemId="32723" CollectCount="15">
+      <Hotspots>
+		<Hotspot X="-5170.111" Y="761.993" Z="47.34391" />
+		<Hotspot X="-5145.279" Y="659.9875" Z="80.66531" />
+		<Hotspot X="-5071.269" Y="646.6928" Z="31.90821" />
+		<Hotspot X="-5011.128" Y="564.74" Z="22.11518" />
+		<Hotspot X="-5009.448" Y="442.7136" Z="17.29026" />
+		<Hotspot X="-5024.177" Y="367.9192" Z="1.222125" />
+      </Hotspots>
+    </Objective>
+  </Quest>  
+  	
+  <Quest Id="11077" Name="Dragons are the Least of Our Problems">
+    <Objective Type="KillMob" MobId="23169" KillCount="15">
+      <Hotspots>
+		<Hotspot X="-5052.894" Y="311.0496" Z="-6.57598" />
+		<Hotspot X="-5063.3" Y="331.8142" Z="6.009248" />
+		<Hotspot X="-4990.319" Y="278.2662" Z="-4.887864" />
+		<Hotspot X="-4940.084" Y="453.4734" Z="1.062986" />
+		<Hotspot X="-4989.935" Y="652.5052" Z="23.59564" />
+      </Hotspots>
+    </Objective>
+    <Objective Type="KillMob" MobId="23326" KillCount="5">
+      <Hotspots>
+		<Hotspot X="-5052.894" Y="311.0496" Z="-6.57598" />
+		<Hotspot X="-5063.3" Y="331.8142" Z="6.009248" />
+		<Hotspot X="-4990.319" Y="278.2662" Z="-4.887864" />
+		<Hotspot X="-4940.084" Y="453.4734" Z="1.062986" />
+		<Hotspot X="-4989.935" Y="652.5052" Z="23.59564" />
+      </Hotspots>
+    </Objective>	
+  </Quest> 
+  
+  <Quest Id="11015" Name="Netherwing Crystals">
+    <Objective Type="CollectItem" ItemId="32427" CollectCount="30">
+      <CollectFrom>
+        <Mob Name="Nethermine Ravager" Id="23326" />
+		<Mob Name="Nethermine Flayer" Id="23169" />
+      </CollectFrom>
+      <Hotspots>
+		<Hotspot X="-5052.894" Y="311.0496" Z="-6.57598" />
+		<Hotspot X="-5063.3" Y="331.8142" Z="6.009248" />
+		<Hotspot X="-4990.319" Y="278.2662" Z="-4.887864" />
+		<Hotspot X="-4940.084" Y="453.4734" Z="1.062986" />
+		<Hotspot X="-4989.935" Y="652.5052" Z="23.59564" />
+      </Hotspots>
+    </Objective>
+  </Quest>  
+   
+	<QuestOrder>
+	<!-- *****************   Pickup Quests    *********************** -->
+	<PickUp QuestName="Netherwing Crystals" GiverName="Taskmaster Varkule Dragonbreath" QuestId="11015" GiverId="23140" />
+
+	<!-- Picking Up The Pieces... (level 70) -->
+	<!-- The Mistress of the Mines at the Netherwing Mines in Shadowmoon Valley wants you to recover 15 Nethermine Cargo crates. -->
+	<!-- Classes: Any -->
+	<!-- Races: Any -->
+	<!-- http://www.wowhead.com/quest=11076 -->
+	<PickUp QuestName="Picking Up The Pieces..." GiverName="Mistress of the Mines" QuestId="11076" GiverId="23149" />
+	<PickUp QuestName="Dragons are the Least of Our Problems" GiverName="Dragonmaw Foreman" QuestId="11077" GiverId="23376" />
+
+    <If Condition="HasQuest(11076) &amp;&amp; !IsQuestCompleted(11076)">
+		<!-- Nethermine Cargo -->
+		<Objective QuestName="Picking Up The Pieces..." QuestId="11076" Type="Collect" CollectCount="15" ItemId="32723" />
+	</If>
+
+	<!-- Dragons are the Least of Our Problems (level 70) -->
+	<!-- The Dragonmaw Foreman at the Netherwing Mines in Shadowmoon Valley wants you to kill 15 Nethermine Flayers and 5 Nethermine Ravagers. -->
+	<!-- Classes: Any -->
+	<!-- Races: Any -->
+	<!-- http://www.wowhead.com/quest=11077 -->
+    <If Condition="HasQuest(11077) &amp;&amp; !IsQuestCompleted(11077)">
+		<!-- Nethermine Flayer -->
+		<Objective QuestName="Dragons are the Least of Our Problems" QuestId="11077" Type="KillMob" KillCount="15" MobId="23169" />
+		<!-- Nethermine Ravager -->
+		<Objective QuestName="Dragons are the Least of Our Problems" QuestId="11077" Type="KillMob" KillCount="5" MobId="23326" />
+	</If>
+	
+	<!-- Netherwing Crystals (level 70) -->
+	<!-- Taskmaster Varkule Dragonbreath at Dragonmaw Base Camp in Shadowmoon Valley wants you to bring him 30 Netherwing Crystals. -->
+	<!-- Classes: Any -->
+	<!-- Races: Any -->
+	<!-- http://www.wowhead.com/quest=11015 -->
+    <If Condition="HasQuest(11015) &amp;&amp; !IsQuestCompleted(11015)">
+	<!-- Netherwing Crystal -->
+	<Objective QuestName="Netherwing Crystals" QuestId="11015" Type="Collect" CollectCount="30" ItemId="32427" />
+	</If>
+
+	<If Condition="HasQuest(11077) &amp;&amp; IsQuestCompleted(11077)">
+	<TurnIn QuestName="Dragons are the Least of Our Problems" TurnInName="Dragonmaw Foreman" QuestId="11077" TurnInId="23376" />
+	</If>
+    <If Condition="HasQuest(11076) &amp;&amp; IsQuestCompleted(11076)">
+	<TurnIn QuestName="Picking Up The Pieces..." TurnInName="Mistress of the Mines" QuestId="11076" TurnInId="23149" />
+	</If>	
+
+	<!-- *****************   TurnIn Quests    *********************** -->
+     <If Condition="HasQuest(11015) &amp;&amp; IsQuestCompleted(11015)">
+	<TurnIn QuestName="Netherwing Crystals" TurnInName="Taskmaster Varkule Dragonbreath" QuestId="11015" TurnInId="23140" />
+	</If>
+
+	</QuestOrder>
+  
+</HBProfile>

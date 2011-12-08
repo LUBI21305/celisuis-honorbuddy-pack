@@ -1,0 +1,51 @@
+<HBProfile>
+  <Name>Dark Whelpling Farm - Dustwallow Marsh</Name> 
+  <MinDurability>0.3</MinDurability> 
+  <MinFreeBagSlots>2</MinFreeBagSlots> 
+  <SellGrey>True</SellGrey> 
+  <SellWhite>True</SellWhite> 
+  <SellGreen>True</SellGreen> 
+  <SellBlue>False</SellBlue> 
+  <SellPurple>False</SellPurple> 
+  <MinLevel>40</MinLevel> 
+  <MaxLevel>81</MaxLevel> 
+
+  <ProtectedItems>
+  <Item>10822</Item>  
+  </ProtectedItems>
+
+  <ForceMail>
+  <Item>10822</Item> 
+  </ForceMail>
+  
+  <SubProfile>
+  <MinLevel>40</MinLevel> 
+  <MaxLevel>81</MaxLevel> 
+
+  <Vendors>
+  <Vendor Name="Razbo Rustgear" Entry="23571" Type="Repair" X="-4603.661" Y="-3210.939" Z="34.92533" />
+  </Vendors>
+  <Mailboxes>
+  <Mailbox X="-4598.278" Y="-3178.689" Z="34.86568" /> 
+  </Mailboxes>
+  <GrindArea>
+  <Factions>103</Factions>
+  <TargetMinLevel>35</TargetMinLevel>
+  <TargetMaxLevel>70</TargetMaxLevel>
+  <RandomizeHotspots>false</RandomizeHotspots>
+  <MaximumHotspotTime>60000</MaximumHotspotTime>
+  <Hotspots>
+  <Hotspot X="-4724.631" Y="-3186.715" Z="34.18251" />
+  <Hotspot X="-4827.804" Y="-3221.737" Z="34.00636" />
+  <Hotspot X="-4723.213" Y="-3322.379" Z="38.59277" />
+  <Hotspot X="-4559.445" Y="-3336.718" Z="40.85409" />
+  <Hotspot X="-4523.405" Y="-3471.557" Z="36.36937" />
+  <Hotspot X="-4645.271" Y="-3509.791" Z="32.31435" />
+  <Hotspot X="-4836.223" Y="-3506.073" Z="31.0981" />
+  <Hotspot X="-4533.962" Y="-3443.529" Z="30.39138" />
+  <Hotspot X="-4423.573" Y="-3367.062" Z="42.44129" />
+
+  </Hotspots>
+  </GrindArea>
+  </SubProfile>
+  </HBProfile>

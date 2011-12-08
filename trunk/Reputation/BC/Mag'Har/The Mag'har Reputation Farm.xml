@@ -1,0 +1,95 @@
+<HBProfile> <!-- Made by Dartius @ Buddy Forums -->
+	
+	<Name>The Mag'har Reputation Grinding</Name>
+	<!-- Recomending Loot Filter (addon) to autodelete crap. -->
+	
+    <MinDurability>0.3</MinDurability>
+    <MinFreeBagSlots>2</MinFreeBagSlots>
+	<!--  Selling  -->
+    <SellGrey>True</SellGrey>
+    <SellWhite>False</SellWhite>
+    <SellGreen>False</SellGreen>
+    <SellBlue>False</SellBlue>
+    <SellPurple>False</SellPurple>
+	<!--  Mailing  -->
+	<MailGrey>False</MailGrey>
+	<MailWhite>True</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+	
+	<ForceMail>
+	<!-- Mailing List -->
+	<Item Name="Netherweave Cloth" Entry="21877" />
+	<!-- The End -->
+	</ForceMail>
+
+	<!-- Looting repitems and killing ogres -->
+	<SubProfile>
+    <Name>Obsidian Warbeards and Ogres</Name>
+	<!-- No point killing elites -->
+	<TargetElites>False</TargetElites>	
+	<!-- Vendor(s) in Garadar -->
+	<Vendors>
+	<Vendor Name="Osrok the Immovable" Entry="19011" Type="Repair" X="-1332.878" Y="7197.079" Z="34.19067" />
+	</Vendors>
+	<!-- Mailbox in Garadar -->
+	<Mailboxes>
+		<Mailbox X="-1268.581" Y="7175.653" Z="57.2949" />
+	</Mailboxes>
+	<!-- This mobs are avoided to prevent stuck while travel to or from city -->
+	<AvoidMobs>
+	<Mob Name="Dark Worg" Entry="18033" />
+	<Mob Name="Talbuk Stag" Entry="17130" />
+	<Mob Name="Clefthoof" Entry="18205" />
+	<Mob Name="Wild Elekk" Entry="18334" />
+	<Mob Name="Dust Howler" Entry="17158" />
+	<Mob Name="Windroc" Entry="17128" />
+	<Mob Name="Tortured Earth Spirit" Entry="17156" />
+  	</AvoidMobs>
+	
+	<Blackspots>
+	<!-- Will be added -->
+	</Blackspots>
+	
+
+	<!-- The area is both outside and in the Ogre cavern -->
+	<GrindArea>
+		<MinLevel>1</MinLevel>
+		<MaxLevel>86</MaxLevel>
+		<TargetMinLevel>60</TargetMinLevel>
+		<TargetMaxLevel>75</TargetMaxLevel>
+		<Factions>7 16 45 31 91 </Factions>
+		
+			<Hotspots>
+			<Hotspot X="-2148.935" Y="5971.975" Z="68.44835" />
+			<Hotspot X="-2186.42" Y="6028.706" Z="66.13837" />
+			<Hotspot X="-2178.123" Y="6085.374" Z="71.51006" />
+			<Hotspot X="-2140.43" Y="6057.113" Z="73.89809" />
+			<Hotspot X="-2224.414" Y="6065.317" Z="72.67616" />
+			<Hotspot X="-2214.033" Y="6052.019" Z="67.77" />
+			<Hotspot X="-2214.992" Y="6012.547" Z="67.29402" />
+			<Hotspot X="-2250.025" Y="6113.017" Z="74.83117" />
+			<Hotspot X="-2310.979" Y="6144.039" Z="59.73319" />
+			<Hotspot X="-2344.823" Y="6181.184" Z="50.66488" />
+			<Hotspot X="-2264.375" Y="6200.063" Z="47.40522" />
+			<Hotspot X="-2346.589" Y="6121.626" Z="61.06333" />
+			<Hotspot X="-2469.26" Y="6116.155" Z="90.21881" />
+			<Hotspot X="-2504.863" Y="6129.857" Z="92.14352" />
+			<Hotspot X="-2501.264" Y="6181.068" Z="59.95912" />
+			<Hotspot X="-2528.696" Y="6161.464" Z="59.93954" />
+			<Hotspot X="-2467.919" Y="6264.564" Z="30.99797" />
+			<Hotspot X="-2439.378" Y="6273.559" Z="31.32521" />
+			<Hotspot X="-2543.185" Y="6297.391" Z="14.39623" />
+			<Hotspot X="-2586.139" Y="6190.057" Z="21.33246" />
+			<Hotspot X="-2564.908" Y="6241.251" Z="18.18381" />
+			</Hotspots>
+			
+	</GrindArea>
+    
+
+	</SubProfile>
+	
+	<!-- Some blackspots probably need to be added -->
+	<!-- Thanks for using -->
+</HBProfile>

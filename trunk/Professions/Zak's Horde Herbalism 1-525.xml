@@ -1,0 +1,590 @@
+<HBProfile>
+
+	<!-- Index ...................................... -->
+
+	<!-- Eastern Kingdoms -->
+
+	<!-- Herbalism 1-70 Tirisfal Glades
+		 Train Journeyman Herbalist
+		 Herbalism 70-125 Hillsbard Foothills
+		 Herbalism 125-150 Hillsbard Foothills
+		 Train Expert Herbalist
+		 Herbalism 150-200 Western Plaguelands
+		 Train Artisan Herbalist
+		 Herbalism 200-230 Western Plaguelands
+		 Herbalism 230-275 Eastern Plaguelands
+		 Train Master Herbalist
+		 Herbalism 275-285 Eastern Plaguelands
+		 Herbalism 285-325 Swamp of Sorrows -->
+
+	<!-- Outland -->
+	
+	<!-- Profile .................................... -->
+	
+	<Name>Zak's Horde Herbalism 1-525</Name>
+	
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+
+	<MinLevel>1</MinLevel>
+	<MaxLevel>86</MaxLevel>
+   
+	<MailGrey>False</MailGrey>
+	<MailWhite>True</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+	
+	<!-- Mailbox .................................... -->
+	
+	<Mailboxes>
+	<!-- Tirisfal Glades -->
+	<Mailbox  X="2266.573" Y="291.1201" Z="33.69185" />
+	
+	<!-- Hillsbard Foothills -->
+	<Mailbox  X="-40.60152" Y="-914.9102" Z="55.58041" />
+	
+	<!-- Eastern Plaguelands -->
+	<Mailbox X="2289.885" Y="-5322.488" Z="89.95415" />
+	
+	<!-- Swamp of Sorrows -->
+	<Mailbox X="-10463.08" Y="-3265.493" Z="20.17878" />
+	<Mailbox X="-9781.689" Y="-3883.247" Z="21.75211" />
+	</Mailboxes>
+
+	<!-- Vendors .................................... -->
+	
+	<Vendors>
+	<!-- Tirisfal Glades -->
+	<Vendor Name="Eliza Callen" Entry="2137" Type="Repair" X="2302.86" Y="288.523" Z="33.35696" />
+	<Vendor Name="Abe Winters" Entry="2135" Type="Repair" X="2291.25" Y="213.134" Z="33.72493" />
+	<Vendor Name="Oliver Dwor" Entry="2136" Type="Repair" X="2287.552" Y="210.6369" Z="33.72499" />
+	<Vendor Name="Kramlod Farsight" Entry="44040" Type="Repair" X="1740.21" Y="-731.88" Z="60.06543" />
+	<Vendor Name="Argent Quartermaster Hasana" Entry="10856" Type="Repair" X="1784.72" Y="-729.1077" Z="59.82554" />
+	
+	<!-- Hillsbard Foothills -->
+	<Vendor Name="Harland Waldek" Entry="47712" Type="Repair" X="-596.851" Y="448.828" Z="81.91067" />
+	<Vendor Name="Ott" Entry="3539" Type="Repair" X="-59.941" Y="-954.156" Z="54.28916" />
+
+	<!-- Western Plaguelands -->
+	<Vendor Name="Gurt" Entry="47758" Type="Repair" X="1843.62" Y="-1762.78" Z="60.45309" />
+	<Vendor Name="Donald Emery" Entry="47864" Type="Repair" X="1476.04" Y="-1617.46" Z="67.97034" />
+
+	
+	<!-- Eastern Plaguelands -->
+	<Vendor Name="Urk Gagbaz" Entry="45500" Type="Repair" X="1872.73" Y="-3699.23" Z="158.9659" />
+	<Vendor Name="Argus Highbeacon" Entry="45451" Type="Repair" X="1841.74" Y="-3726.59" Z="195.6803" />
+	<Vendor Name="Kathryn Humphries" Entry="47149" Type="Repair" X="2252.36" Y="-4456.02" Z="114.2964" />
+	<Vendor Name="Vincent Randolph" Entry="47286" Type="Repair" X="2256.98" Y="-5292.6" Z="82.13911" />
+	<Vendor Name="Craftsman Wilhelm" Entry="16376" Type="Repair" X="2261.174" Y="-5321.298" Z="81.86642" />
+	<Vendor Name="Patricia Marshall" Entry="47144" Type="Repair" X="2567.37" Y="-4803.67" Z="108.8294" />
+	<Vendor Name="Dorris Manchester" Entry="47166" Type="Repair" X="3178.53" Y="-4342.51" Z="133.4264" />
+	
+	<!-- Swamp of Sorrows -->
+	<Vendor Name="Gharash" Entry="8176" Type="Repair" X="-10406.97" Y="-3265.748" Z="21.89192" />
+	<Vendor Name="Hartash" Entry="981" Type="Repair" X="-10399.47" Y="-3270.429" Z="21.7524" />
+	<Vendor Name="Thralosh" Entry="984" Type="Repair" X="-10406.85" Y="-3256.554" Z="21.97714" />
+	<Vendor Name="Grimnal" Entry="980" Type="Repair" X="-10391.96" Y="-3256.97" Z="21.78679" />
+	<Vendor Name="Dronk Drophammer" Entry="47059" Type="Repair" X="-9766.76" Y="-3901.64" Z="21.81492" />
+	</Vendors>
+	
+	<!-- ......................................................................... -->
+	
+	<SubProfile>
+	<Name>Zak's Horde Herbalism 1-325 Eastern Kingdom</Name>
+	<ContinentID>0</ContinentID>
+	<QuestOrder>
+
+	<!-- ......................................................................... -->
+	
+	<!-- Herbalism 1-70 Tirisfal Glades -->
+	<!-- Route -->
+	<SetGrindArea>
+	    <GrindArea>
+    	   	<LootRadius>100</LootRadius>
+
+			<Hotspots>
+				<Hotspot X="2268.498" Y="455.0283" Z="34.03255" />
+				<Hotspot X="2309.049" Y="642.0716" Z="31.37402" />
+				<Hotspot X="2314.211" Y="774.0022" Z="33.20932" />
+				<Hotspot X="2321.262" Y="844.5036" Z="44.8618" />
+				<Hotspot X="2312.101" Y="956.6558" Z="51.78051" />
+				<Hotspot X="2569.341" Y="833.7944" Z="103.0939" />
+				<Hotspot X="2728.054" Y="810.5569" Z="111.2724" />
+				<Hotspot X="2840.151" Y="770.8293" Z="117.1371" />
+				<Hotspot X="2937.934" Y="845.5328" Z="107.5505" />
+				<Hotspot X="2949.761" Y="997.2408" Z="111.0658" />
+				<Hotspot X="2855.769" Y="1058.359" Z="112.5251" />
+				<Hotspot X="2739.047" Y="985.7071" Z="110.4637" />
+				<Hotspot X="2587.773" Y="1059.973" Z="89.12312" />
+				<Hotspot X="2595.117" Y="1239.263" Z="62.90875" />
+				<Hotspot X="2450.597" Y="1346.812" Z="27.02419" />
+				<Hotspot X="2279.771" Y="1189.606" Z="31.61874" />
+				<Hotspot X="2075.568" Y="1099.86" Z="41.00395" />
+				<Hotspot X="1897.18" Y="1028.443" Z="32.35722" />
+				<Hotspot X="1798.783" Y="903.6128" Z="35.05045" />
+				<Hotspot X="1916.297" Y="796.4336" Z="37.29465" />
+				<Hotspot X="1985.167" Y="683.0502" Z="45.17063" />
+				<Hotspot X="2091.8" Y="460.8786" Z="56.08654" />
+				<Hotspot X="2112.575" Y="338.5959" Z="51.57516" />
+				<Hotspot X="2178.593" Y="84.50668" Z="33.29072" />
+				<Hotspot X="2193.711" Y="-92.7422" Z="34.28239" />
+				<Hotspot X="2323.574" Y="-207.9182" Z="39.77742" />
+				<Hotspot X="2420.115" Y="-244.9021" Z="48.4426" />
+				<Hotspot X="2583.499" Y="-275.0615" Z="57.43223" />
+				<Hotspot X="2719.204" Y="-248.594" Z="54.48359" />
+				<Hotspot X="2757.946" Y="29.55975" Z="34.4066" />
+				<Hotspot X="2675.852" Y="164.4318" Z="30.43385" />
+				<Hotspot X="2596.851" Y="306.6689" Z="41.52505" />
+				<Hotspot X="2490.828" Y="327.1416" Z="29.86195" />
+				<Hotspot X="2379.241" Y="456.9726" Z="35.13169" />
+			</Hotspots>	
+
+       	</GrindArea>
+   	</SetGrindArea>
+	<GrindTo Condition="(Me.GetSkill(Styx.SkillLine.Herbalism).CurrentValue &gt;= 70)" />
+
+	<!-- ......................................................................... -->
+
+	<!-- Train Journeyman Herbalist -->
+	<If Condition="(Me.GetSkill(Styx.SkillLine.Herbalism).CurrentValue &lt;= 69 &amp; &gt;= 71)" >
+	<!-- Name="Faruza" Entry="2114" Type="Train" -->
+	<RunTo X="2269.6" Y="349.53" Z="33.58466" />
+	</If>
+
+	<!-- ......................................................................... -->
+
+	<!-- Herbalism 70-125 Hillsbard Foothills -->
+	<!-- Route -->
+	<SetGrindArea>
+ 	    <GrindArea>
+   		   <LootRadius>100</LootRadius>
+
+			<Hotspots>
+				<Hotspot X="-582.9429" Y="422.4705" Z="79.43661" />
+				<Hotspot X="-524.4048" Y="324.773" Z="92.76395" />
+				<Hotspot X="-247.9288" Y="94.26595" Z="64.56521" />
+				<Hotspot X="-186.8126" Y="260.4532" Z="90.95839" />
+				<Hotspot X="-19.52677" Y="355.9205" Z="53.38667" />
+				<Hotspot X="50.573" Y="198.7092" Z="45.84991" />
+				<Hotspot X="115.622" Y="93.564" Z="49.36117" />
+				<Hotspot X="276.903" Y="66.23802" Z="55.02104" />
+				<Hotspot X="520.986" Y="131.7269" Z="44.62808" />
+				<Hotspot X="626.4791" Y="71.29551" Z="46.80828" />
+				<Hotspot X="1036.177" Y="-365.8964" Z="60.00939" />
+				<Hotspot X="1153.096" Y="-453.4431" Z="67.10434" />
+				<Hotspot X="783.4989" Y="-899.6979" Z="143.7816" />
+				<Hotspot X="637.4025" Y="-979.2593" Z="165.1544" />
+				<Hotspot X="549.6707" Y="-980.7785" Z="142.8363" />
+				<Hotspot X="373.2531" Y="-874.3262" Z="123.6278" />
+				<Hotspot X="185.9604" Y="-860.775" Z="156.8889" />
+				<Hotspot X="237.7475" Y="-651.0313" Z="118.8128" />
+				<Hotspot X="-134.9114" Y="-582.2822" Z="162.7274" />
+				<Hotspot X="-15.60043" Y="-387.7348" Z="121.2018" />
+				<Hotspot X="-251.596" Y="-308.1819" Z="166.7798" />
+				<Hotspot X="-61.31248" Y="-202.8868" Z="132.0769" />
+				<Hotspot X="-134.4084" Y="-48.62277" Z="150.6358" />
+				<Hotspot X="109.9305" Y="-10.69702" Z="78.89315" />
+				<Hotspot X="-56.83177" Y="53.71386" Z="68.51778" />
+				<Hotspot X="-243.7153" Y="-77.58175" Z="60.88609" />
+				<Hotspot X="-359.8086" Y="-174.7748" Z="58.28415" />
+				<Hotspot X="-624.2887" Y="-145.4106" Z="47.33723" />
+				<Hotspot X="-855.5383" Y="-256.2087" Z="41.8344" />
+				<Hotspot X="-964.39" Y="-274.8957" Z="62.57503" />
+				<Hotspot X="-939.7698" Y="-155.2275" Z="55.65409" />
+				<Hotspot X="-891.4637" Y="-111.3892" Z="25.20498" />
+				<Hotspot X="-991.9124" Y="88.46379" Z="52.68336" />
+				<Hotspot X="-788.7729" Y="106.1747" Z="40.14155" />
+				<Hotspot X="-694.0192" Y="423.9203" Z="77.07319" />
+				<Hotspot X="-583.2114" Y="374.6749" Z="76.12383" />
+			</Hotspots>	
+
+   		</GrindArea>
+	</SetGrindArea>
+	<GrindTo Condition="(Me.GetSkill(Styx.SkillLine.Herbalism).CurrentValue &gt;= 125)" />
+	
+	<!-- ......................................................................... -->	
+	
+	<!-- Herbalism 125-150 Hillsbard Foothills -->
+	<!-- Route -->
+	<SetGrindArea>
+ 	    <GrindArea>
+   		   <LootRadius>100</LootRadius>
+
+			<Hotspots>
+				<Hotspot X="203.6098" Y="-327.9573" Z="155.5096" />
+				<Hotspot X="344.7743" Y="-338.1543" Z="167.4946" />
+				<Hotspot X="473.9212" Y="-188.0381" Z="153.7405" />
+				<Hotspot X="555.2253" Y="-104.7276" Z="145.0477" />
+				<Hotspot X="570.9531" Y="-262.6343" Z="149.3544" />
+				<Hotspot X="655.6329" Y="-344.1872" Z="149.5269" />
+				<Hotspot X="739.8928" Y="-306.2785" Z="136.4431" />
+				<Hotspot X="883.8189" Y="-473.1684" Z="133.3659" />
+				<Hotspot X="789.3975" Y="-622.1683" Z="146.1648" />
+				<Hotspot X="701.9229" Y="-737.1932" Z="161.6173" />
+				<Hotspot X="639.492" Y="-540.6895" Z="179.7578" />
+			</Hotspots>	
+
+   		</GrindArea>
+	</SetGrindArea>
+	<GrindTo Condition="(Me.GetSkill(Styx.SkillLine.Herbalism).CurrentValue &gt;= 150)" />
+			
+	<!-- ......................................................................... -->
+
+	<!-- Train Expert Herbalist -->
+	<If Condition="(Me.GetSkill(Styx.SkillLine.Herbalism).CurrentValue &lt;= 149 &amp; &gt;= 151)" >
+	<!-- Name="Aranae Venomblood" Entry="2390" Type="Train" -->
+	<RunTo X="-62.3958" Y="-930.988" Z="56.31953" />
+	</If>
+
+	<!-- ......................................................................... -->
+
+	<!-- Herbalism 150-200 Western Plaguelands -->
+	<!-- Route -->
+	<SetGrindArea>
+	    <GrindArea>
+    	   	<LootRadius>100</LootRadius>
+
+			<Hotspots>
+				<Hotspot X="1719.49" Y="-812.5803" Z="58.32077" />
+				<Hotspot X="1754.522" Y="-906.2218" Z="66.48622" />
+				<Hotspot X="1712.382" Y="-1139.288" Z="60.71558" />
+				<Hotspot X="1753.141" Y="-1240.801" Z="59.61562" />
+				<Hotspot X="1785.43" Y="-1324.155" Z="60.24659" />
+				<Hotspot X="1906.296" Y="-1368.86" Z="61.72606" />
+				<Hotspot X="1799.218" Y="-1569.987" Z="59.23475" />
+				<Hotspot X="1920.084" Y="-1583.219" Z="60.55289" />
+				<Hotspot X="2057.326" Y="-1613.633" Z="63.36294" />
+				<Hotspot X="2144.502" Y="-1531.929" Z="64.71428" />
+				<Hotspot X="2269.308" Y="-1546.651" Z="85.951" />
+				<Hotspot X="2382.65" Y="-1506.841" Z="101.9886" />
+				<Hotspot X="2345.501" Y="-1686.17" Z="104.8407" />
+				<Hotspot X="2118.919" Y="-1674.337" Z="64.43618" />
+				<Hotspot X="1953.052" Y="-1925.184" Z="75.73578" />
+				<Hotspot X="1836.353" Y="-2063.022" Z="72.42488" />
+				<Hotspot X="1870.013" Y="-2183.914" Z="63.12327" />
+				<Hotspot X="1948.547" Y="-2314.595" Z="60.99826" />
+				<Hotspot X="2085.54" Y="-2472.124" Z="60.28509" />
+				<Hotspot X="1934.622" Y="-2453.662" Z="67.47509" />
+				<Hotspot X="1772.322" Y="-2357.635" Z="59.7669" />
+				<Hotspot X="1654.398" Y="-2181.332" Z="60.61175" />
+				<Hotspot X="1523.652" Y="-2001.168" Z="60.19691" />
+				<Hotspot X="1412.572" Y="-1862.725" Z="58.26398" />
+				<Hotspot X="1627.499" Y="-1690.991" Z="60.30589" />
+				<Hotspot X="1614.58" Y="-1498.006" Z="61.18626" />
+				<Hotspot X="1593.868" Y="-1349.886" Z="61.71692" />
+				<Hotspot X="1543.034" Y="-1307.602" Z="61.43247" />
+				<Hotspot X="1449.336" Y="-1191.194" Z="66.99117" />
+				<Hotspot X="1501.755" Y="-1062.639" Z="72.9453" />
+				<Hotspot X="1658.339" Y="-874.6909" Z="66.95628" />
+			</Hotspots>	
+
+    	</GrindArea>
+   	</SetGrindArea>
+	<GrindTo Condition="(Me.GetSkill(Styx.SkillLine.Herbalism).CurrentValue &gt;= 200)" />
+
+	<!-- ......................................................................... -->
+
+	<!-- Train Artisan Herbalist -->
+	<If Condition="(Me.GetSkill(Styx.SkillLine.Herbalism).CurrentValue &lt;= 199 &amp; &gt;= 201)" >
+	<!-- Name="Faruza" Entry="2114" Type="Train" -->
+	<RunTo X="2269.6" Y="349.53" Z="33.58466" />
+	</If>
+	
+	<!-- ......................................................................... -->
+	
+	<!-- Herbalism 200-230 Western Plaguelands -->
+	<!-- Route -->
+	<SetGrindArea>
+	    <GrindArea>
+    	   	<LootRadius>100</LootRadius>
+
+			<Hotspots>
+				<Hotspot X="1719.49" Y="-812.5803" Z="58.32077" />
+				<Hotspot X="1754.522" Y="-906.2218" Z="66.48622" />
+				<Hotspot X="1712.382" Y="-1139.288" Z="60.71558" />
+				<Hotspot X="1753.141" Y="-1240.801" Z="59.61562" />
+				<Hotspot X="1785.43" Y="-1324.155" Z="60.24659" />
+				<Hotspot X="1906.296" Y="-1368.86" Z="61.72606" />
+				<Hotspot X="1799.218" Y="-1569.987" Z="59.23475" />
+				<Hotspot X="1920.084" Y="-1583.219" Z="60.55289" />
+				<Hotspot X="2057.326" Y="-1613.633" Z="63.36294" />
+				<Hotspot X="2144.502" Y="-1531.929" Z="64.71428" />
+				<Hotspot X="2269.308" Y="-1546.651" Z="85.951" />
+				<Hotspot X="2382.65" Y="-1506.841" Z="101.9886" />
+				<Hotspot X="2345.501" Y="-1686.17" Z="104.8407" />
+				<Hotspot X="2118.919" Y="-1674.337" Z="64.43618" />
+				<Hotspot X="1953.052" Y="-1925.184" Z="75.73578" />
+				<Hotspot X="1836.353" Y="-2063.022" Z="72.42488" />
+				<Hotspot X="1870.013" Y="-2183.914" Z="63.12327" />
+				<Hotspot X="1948.547" Y="-2314.595" Z="60.99826" />
+				<Hotspot X="2085.54" Y="-2472.124" Z="60.28509" />
+				<Hotspot X="1934.622" Y="-2453.662" Z="67.47509" />
+				<Hotspot X="1772.322" Y="-2357.635" Z="59.7669" />
+				<Hotspot X="1654.398" Y="-2181.332" Z="60.61175" />
+				<Hotspot X="1523.652" Y="-2001.168" Z="60.19691" />
+				<Hotspot X="1412.572" Y="-1862.725" Z="58.26398" />
+				<Hotspot X="1627.499" Y="-1690.991" Z="60.30589" />
+				<Hotspot X="1614.58" Y="-1498.006" Z="61.18626" />
+				<Hotspot X="1593.868" Y="-1349.886" Z="61.71692" />
+				<Hotspot X="1543.034" Y="-1307.602" Z="61.43247" />
+				<Hotspot X="1449.336" Y="-1191.194" Z="66.99117" />
+				<Hotspot X="1501.755" Y="-1062.639" Z="72.9453" />
+				<Hotspot X="1658.339" Y="-874.6909" Z="66.95628" />
+			</Hotspots>	
+
+    	</GrindArea>
+   	</SetGrindArea>
+	<GrindTo Condition="(Me.GetSkill(Styx.SkillLine.Herbalism).CurrentValue &gt;= 230)" />
+	
+	<!-- ......................................................................... -->
+
+	<!-- Herbalism 230-275 Eastern Plaguelands  -->
+	<!-- Route -->
+	<SetGrindArea>
+	    <GrindArea>
+    	   	<LootRadius>100</LootRadius>
+
+			<Hotspots>
+				<Hotspot X="1936.746" Y="-2862.264" Z="75.40816" />
+				<Hotspot X="2004.862" Y="-3211.616" Z="84.57771" />
+				<Hotspot X="1942.538" Y="-3494.259" Z="112.4357" />
+				<Hotspot X="2045.211" Y="-3726.083" Z="131.2798" />
+				<Hotspot X="2142.84" Y="-4208.245" Z="73.81993" />
+				<Hotspot X="2338.763" Y="-4257.425" Z="91.91714" />
+				<Hotspot X="2605.201" Y="-4106.382" Z="80.75045" />
+				<Hotspot X="2899.396" Y="-4262.371" Z="91.47573" />
+				<Hotspot X="3085.455" Y="-4161.855" Z="96.14826" />
+				<Hotspot X="2979.307" Y="-4412.402" Z="96.38396" />
+				<Hotspot X="2930.337" Y="-4617.834" Z="76.85261" />
+				<Hotspot X="2912.622" Y="-4777.594" Z="96.69516" />
+				<Hotspot X="2800.69" Y="-4912.016" Z="98.93161" />
+				<Hotspot X="2446.891" Y="-4886.017" Z="74.4705" />
+				<Hotspot X="2101.553" Y="-4767.375" Z="76.91492" />
+				<Hotspot X="2008.784" Y="-5200.649" Z="81.67792" />
+				<Hotspot X="1825.329" Y="-5090.821" Z="78.3974" />
+				<Hotspot X="1761.291" Y="-4906.075" Z="90.28156" />
+				<Hotspot X="1614.027" Y="-4715.566" Z="83.58618" />
+				<Hotspot X="1657.261" Y="-4472.059" Z="81.05928" />
+				<Hotspot X="1792.916" Y="-4207.216" Z="89.41996" />
+				<Hotspot X="1737.754" Y="-4057.947" Z="110.3906" />
+				<Hotspot X="1634.282" Y="-3861.895" Z="129.9462" />
+				<Hotspot X="1683.52" Y="-3596.747" Z="121.7792" />
+				<Hotspot X="1681.406" Y="-3309.546" Z="96.18611" />
+				<Hotspot X="1859.562" Y="-2902.473" Z="84.27937" />
+			</Hotspots>	
+
+    	</GrindArea>
+   	</SetGrindArea>
+	<GrindTo Condition="(Me.GetSkill(Styx.SkillLine.Herbalism).CurrentValue &gt;= 275)" />
+		
+	<!-- ......................................................................... -->
+
+	<!-- Train Master Herbalist -->
+	<If Condition="(Me.GetSkill(Styx.SkillLine.Herbalism).MaxValue = 275)" >
+	<!-- Name="Faruza" Entry="2114" Type="Train" -->
+	<RunTo X="2269.6" Y="349.53" Z="33.58466" />
+	</If>
+	
+	<!-- ......................................................................... -->
+	
+	<!-- Herbalism 275-285 Eastern Plaguelands  -->
+	<!-- Route -->
+	<SetGrindArea>
+	    <GrindArea>
+    	   	<LootRadius>100</LootRadius>
+
+			<Hotspots>
+				<Hotspot X="1936.746" Y="-2862.264" Z="75.40816" />
+				<Hotspot X="2004.862" Y="-3211.616" Z="84.57771" />
+				<Hotspot X="1942.538" Y="-3494.259" Z="112.4357" />
+				<Hotspot X="2045.211" Y="-3726.083" Z="131.2798" />
+				<Hotspot X="2142.84" Y="-4208.245" Z="73.81993" />
+				<Hotspot X="2338.763" Y="-4257.425" Z="91.91714" />
+				<Hotspot X="2605.201" Y="-4106.382" Z="80.75045" />
+				<Hotspot X="2899.396" Y="-4262.371" Z="91.47573" />
+				<Hotspot X="3085.455" Y="-4161.855" Z="96.14826" />
+				<Hotspot X="2979.307" Y="-4412.402" Z="96.38396" />
+				<Hotspot X="2930.337" Y="-4617.834" Z="76.85261" />
+				<Hotspot X="2912.622" Y="-4777.594" Z="96.69516" />
+				<Hotspot X="2800.69" Y="-4912.016" Z="98.93161" />
+				<Hotspot X="2446.891" Y="-4886.017" Z="74.4705" />
+				<Hotspot X="2101.553" Y="-4767.375" Z="76.91492" />
+				<Hotspot X="2008.784" Y="-5200.649" Z="81.67792" />
+				<Hotspot X="1825.329" Y="-5090.821" Z="78.3974" />
+				<Hotspot X="1761.291" Y="-4906.075" Z="90.28156" />
+				<Hotspot X="1614.027" Y="-4715.566" Z="83.58618" />
+				<Hotspot X="1657.261" Y="-4472.059" Z="81.05928" />
+				<Hotspot X="1792.916" Y="-4207.216" Z="89.41996" />
+				<Hotspot X="1737.754" Y="-4057.947" Z="110.3906" />
+				<Hotspot X="1634.282" Y="-3861.895" Z="129.9462" />
+				<Hotspot X="1683.52" Y="-3596.747" Z="121.7792" />
+				<Hotspot X="1681.406" Y="-3309.546" Z="96.18611" />
+				<Hotspot X="1859.562" Y="-2902.473" Z="84.27937" />
+			</Hotspots>	
+
+    	</GrindArea>
+   	</SetGrindArea>
+	<GrindTo Condition="(Me.GetSkill(Styx.SkillLine.Herbalism).CurrentValue &gt;= 285)" />
+
+	<!-- ......................................................................... -->
+
+	<!-- Herbalism 285-325 Swamp of Sorrows -->
+	<!-- Route -->
+	<SetGrindArea>
+	    <GrindArea>
+    	   	<LootRadius>100</LootRadius>
+
+			<Hotspots>
+				<Hotspot X="-10387.1" Y="-2702.466" Z="21.67776" />
+				<Hotspot X="-10150.38" Y="-2910.042" Z="20.449" />
+				<Hotspot X="-10508.77" Y="-2960.626" Z="21.67823" />
+				<Hotspot X="-10101.62" Y="-3146.392" Z="21.83668" />
+				<Hotspot X="-10530.43" Y="-3396.537" Z="20.92344" />
+				<Hotspot X="-10016.5" Y="-3547.723" Z="21.67865" />
+				<Hotspot X="-10288.78" Y="-3645.193" Z="21.37789" />
+				<Hotspot X="-9899.729" Y="-3742.742" Z="20.59125" />
+				<Hotspot X="-10189.65" Y="-4159.772" Z="21.99136" />
+			</Hotspots>	
+
+    	</GrindArea>
+   	</SetGrindArea>
+	<GrindTo Condition="(Me.GetSkill(Styx.SkillLine.Herbalism).CurrentValue &gt;= 325)" />
+
+	<!-- ......................................................................... -->
+	
+	</QuestOrder>
+	</SubProfile>
+	
+	<!-- ......................................................................... -->
+	
+	<SubProfile>
+	<Name>Zak's Horde Herbalism 325-350 Outland</Name>
+	<ContinentID>530</ContinentID>
+	<QuestOrder>
+
+	<!-- ......................................................................... -->
+	
+	<!-- Herbalism 325-350 Terokkar Forest -->
+	<!-- Route -->
+	<SetGrindArea>
+	    <GrindArea>
+    	   	<LootRadius>100</LootRadius>
+
+			<Hotspots>
+				<Hotspot X="-1173.305" Y="5322.38" Z="32.33378" />
+				<Hotspot X="-1366.203" Y="5161.35" Z="62.74861" />
+				<Hotspot X="-1535.047" Y="5206.755" Z="25.50375" />
+				<Hotspot X="-1694.51" Y="5070.507" Z="7.513563" />
+				<Hotspot X="-1932.464" Y="5053.898" Z="20.13223" />
+				<Hotspot X="-1962.348" Y="5018.268" Z="33.04681" />
+				<Hotspot X="-1862.745" Y="4767.034" Z="1.951973" />
+				<Hotspot X="-1779.18" Y="4695.064" Z="11.05544" />
+				<Hotspot X="-1410.291" Y="4738.456" Z="14.19269" />
+				<Hotspot X="-1595.795" Y="4536.021" Z="18.13681" />
+				<Hotspot X="-1744.645" Y="4463.484" Z="0.6984916" />
+				<Hotspot X="-1803.542" Y="4355.197" Z="8.60613" />
+				<Hotspot X="-1915.996" Y="4178.627" Z="-2.969705" />
+				<Hotspot X="-2000.482" Y="3839.795" Z="-0.5113459" />
+				<Hotspot X="-1995.591" Y="3687.451" Z="-58.13664" />
+				<Hotspot X="-2146.56" Y="3877.089" Z="1.724011" />
+				<Hotspot X="-2097.988" Y="3733.739" Z="-26.86078" />
+				<Hotspot X="-2238.687" Y="3389.427" Z="-21.93607" />
+				<Hotspot X="-2321.676" Y="3722.953" Z="0.08727181" />
+				<Hotspot X="-2467.223" Y="3368.025" Z="-11.64823" />
+				<Hotspot X="-2607.05" Y="3474.934" Z="0.6504894" />
+				<Hotspot X="-2670.385" Y="3436.497" Z="1.482108" />
+				<Hotspot X="-2908.984" Y="3352.307" Z="-8.837702" />
+				<Hotspot X="-2759.285" Y="3609.255" Z="-6.52899" />
+				<Hotspot X="-2905.452" Y="3642.042" Z="-15.09013" />
+				<Hotspot X="-2827.677" Y="3740.267" Z="3.348917" />
+				<Hotspot X="-2773.556" Y="3771.667" Z="0.02368479" />
+				<Hotspot X="-2695.824" Y="4030.011" Z="3.234555" />
+				<Hotspot X="-2614.889" Y="3721.749" Z="-2.731997" />
+				<Hotspot X="-2620.757" Y="4011.678" Z="3.961621" />
+				<Hotspot X="-2417.347" Y="3857.896" Z="6.094924" />
+				<Hotspot X="-2458.934" Y="4119.872" Z="4.77527" />
+				<Hotspot X="-2241.532" Y="3977.643" Z="-23.64799" />
+				<Hotspot X="-2232.22" Y="4135.292" Z="1.289494" />
+				<Hotspot X="-2084.309" Y="4461.823" Z="5.070455" />
+				<Hotspot X="-2247.087" Y="4660.479" Z="-0.564772" />
+				<Hotspot X="-1962.021" Y="4849.439" Z="4.767736" />
+				<Hotspot X="-2452.032" Y="5137.314" Z="4.674269" />
+				<Hotspot X="-2600.916" Y="5118.85" Z="4.263081" />
+				<Hotspot X="-2696.471" Y="4890.469" Z="-0.7388" />
+				<Hotspot X="-2796.148" Y="4593.336" Z="-7.809196" />
+				<Hotspot X="-2803.737" Y="4422.165" Z="-5.783218" />
+				<Hotspot X="-3240.391" Y="4253.334" Z="-17.38385" />
+				<Hotspot X="-3446.625" Y="4237.389" Z="-9.391418" />
+				<Hotspot X="-3694.859" Y="4292.157" Z="3.577461" />
+				<Hotspot X="-3872.941" Y="4496.465" Z="-24.29147" />
+				<Hotspot X="-3777.769" Y="5369.399" Z="-10.84483" />
+				<Hotspot X="-3582.529" Y="5450.434" Z="-11.72017" />
+				<Hotspot X="-3439.032" Y="5409.746" Z="-13.14514" />
+				<Hotspot X="-3263.495" Y="5612.999" Z="-5.291304" />
+				<Hotspot X="-2973.521" Y="5554.392" Z="-3.709251" />
+				<Hotspot X="-2795.519" Y="5439.731" Z="0.7983391" />
+				<Hotspot X="-2719.351" Y="5297.481" Z="0.1717251" />
+				<Hotspot X="-2539.605" Y="5413.393" Z="0.04786004" />
+				<Hotspot X="-2352.252" Y="5435.711" Z="-0.01920542" />
+				<Hotspot X="-2125.01" Y="5107.437" Z="-6.670956" />
+			</Hotspots>	
+
+       	</GrindArea>
+   	</SetGrindArea>
+	<GrindTo Condition="(Me.GetSkill(Styx.SkillLine.Herbalism).CurrentValue &gt;= 350)" />
+
+	<!-- ......................................................................... -->
+	
+	</QuestOrder>
+	</SubProfile>
+	
+	<!-- ......................................................................... -->
+	
+	<SubProfile>
+	<Name>Zak's Horde Herbalism 350-425 Northrend</Name>
+	<ContinentID>571</ContinentID>
+	<QuestOrder>
+
+	<!-- ......................................................................... -->
+	
+	<!-- Train Grand Master Herbalist -->
+	<If Condition="(Me.GetSkill(Styx.SkillLine.Herbalism).MaxValue = 350)" >
+	<!-- Name="Marjory Kains" Entry="26958" Type="Traid" -->
+	<RunTo X="1973.489" Y="-6143.507" Z="25.12734" />
+	</If>
+
+	<!-- ......................................................................... -->
+	
+	<!-- Herbalism 350-400 Howling Fjord -->
+	<!-- Route -->
+	<SetGrindArea>
+	    <GrindArea>
+    	   	<LootRadius>100</LootRadius>
+
+			<Hotspots>
+
+			</Hotspots>	
+
+       	</GrindArea>
+   	</SetGrindArea>
+	<GrindTo Condition="(Me.GetSkill(Styx.SkillLine.Herbalism).CurrentValue &gt;= 400)" />
+
+	<!-- ......................................................................... -->
+	
+	</QuestOrder>
+	</SubProfile>
+	
+	<!-- ......................................................................... -->
+
+	
+	
+	
+		
+</HBProfile>

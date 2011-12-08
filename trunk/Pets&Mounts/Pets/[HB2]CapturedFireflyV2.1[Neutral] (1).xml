@@ -1,0 +1,264 @@
+<!-- Made by Baxterboy for HB2 -->
+<!-- Captured Firefly v2.1 -->
+<!-- Vendor at Cenarion Refuge, Zangarmarsh -->
+<!-- Use the "Grind bot" setting -->
+<!-- Turn off "Find Vendors Automatically" -->
+<!-- Turn off "Learn Flightpaths" -->
+<HBProfile>
+	<Name>[HB2]Captured Firefly v2.1[Neutral]</Name>
+	<MinDurability>0.1</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+	<SellGrey>True</SellGrey>
+    <SellWhite>True</SellWhite>
+    <SellGreen>False</SellGreen>
+    <MailWhite>True</MailWhite>
+    <MailGreen>True</MailGreen>
+    <MailBlue>True</MailBlue>
+    <MailPurple>True</MailPurple>
+		
+	<Blackspots>
+		<!-- <Blackspots /> -->
+		<!-- <Bloodscale Grounds /> -->
+		<Blackspot X="479.6501" Y="6285.049" Z="21.3882" Radius="66.83041" />
+		<Blackspot X="517.0457" Y="6382.844" Z="20.58315" Radius="32.86314" />
+		<Blackspot X="588.708" Y="6376.954" Z="20.41393" Radius="46.52064" />
+		<Blackspot X="669.2081" Y="6424.313" Z="21.70851" Radius="37.09865" />
+		<Blackspot X="547.4021" Y="6149.328" Z="20.40193" Radius="36.93176" />
+		<!-- <Bloodscale Grounds North /> -->
+		<Blackspot X="671.0715" Y="6205.82" Z="18.45172" Radius="42.23472" />
+		<Blackspot X="698.8136" Y="6274.748" Z="21.1279" Radius="30.53696" />
+		<Blackspot X="698.293" Y="6227.015" Z="19.01029" Radius="16.44347" />
+		<Blackspot X="708.4114" Y="6303.035" Z="18.94007" Radius="19.03799" />
+		<!-- <Bloodscale Grounds North Camp /> -->
+		<Blackspot X="772.8585" Y="6433.512" Z="21.07295" Radius="24.94929" />
+		<Blackspot X="783.6769" Y="6397.812" Z="20.94105" Radius="15.89571" />
+		<Blackspot X="782.2072" Y="6373.744" Z="21.04484" Radius="22.2384" />
+		<Blackspot X="789.2444" Y="6426.27" Z="19.72304" Radius="13.61799" />
+		<Blackspot X="766.6199" Y="6491.399" Z="20.54282" Radius="19.62474" />
+		<!-- <Obstacles /> -->
+		<Blackspot X="679.7992" Y="6108.734" Z="23.07963" Radius="4.760305" />
+		<Blackspot X="253.0333" Y="6788.953" Z="27.18314" Radius="4.918901" />
+		<Blackspot X="239.9548" Y="7179.845" Z="28.93462" Radius="6.572283" />
+		<!-- <Mushroom /> -->
+		<Blackspot X="759.3257" Y="7228.025" Z="22.46176" Radius="1" />
+		<Blackspot X="752.4083" Y="7369.875" Z="23.0136" Radius="1" />
+		<!-- <Spin bug spot /> -->		
+		<Blackspot X="828.4749" Y="6933.944" Z="19.78835" Radius="2" />
+		<!-- <Aboid Swimming /> -->
+		<Blackspot X="723.2964" Y="7347.314" Z="16.41731" Radius="1" />
+	</Blackspots>			
+	<AvoidMobs>
+		<!-- <Stop Bot from getting side-tracked /> -->
+		<AvoidMob Name="Marsh Walker" Entry="18135" />
+		<AvoidMob Name="Mudfin Frenzy" Entry="18212" />
+		<AvoidMob Name="Bloodscale Sentry" Entry="20090" />
+		<AvoidMob Name="Bloodscale Overseer" Entry="20088" />
+		<AvoidMob Name="Bloodscale Wavecaller" Entry="20089" />
+		<AvoidMob Name="Darkcrest Siren" Entry="18087" />
+		<AvoidMob Name="Darkcrest Taskmaster" Entry="18086" />
+		<AvoidMob Name="Darkcrest Slaver" Entry="19946" />
+		<AvoidMob Name="Dreghood Drudge" Entry="18122" />
+		<AvoidMob Name="Bloodthirsty Marshfang" Entry="20196" />
+		<AvoidMob Name="Fen Strider" Entry="18134" />
+		<AvoidMob Name="Umbraglow Stringer" Entry="18132" />
+		<AvoidMob Name="Mire Hydra" Entry="18213" />
+		<AvoidMob Name="Umbrafen Eel" Entry="18138" />
+		<AvoidMob Name="Marshfang Ripper" Entry="18130" />
+		<AvoidMob Name="Marshfang Slicer" Entry="18131" />
+		<AvoidMob Name="Rajis Fyashe" Entry="18044" />
+		<AvoidMob Name="wrekt Slave" Entry="18123" />
+	</AvoidMobs>
+	
+	<ForceMail>
+		<!-- Generic List -->
+		<Item>7973</Item>
+		<Item>14047</Item>
+		<Item>1529</Item>
+    	<Item>4304</Item>
+    	<Item>4234</Item>
+    	<Item>8170</Item>
+		<Item>4625</Item>
+		<Item>8498</Item>
+   		<Item>10822</Item> 
+		<Item>22575</Item> 
+		<Item>2589</Item>
+		<Item>2934</Item>
+		<Item>2592</Item>
+		<Item>4306</Item>
+		<Item>4338</Item>
+		<Item>14047</Item>
+		<Item>21877</Item>
+		<Item>22470</Item>
+		<Item>2318</Item>
+		<Item>2319</Item>
+		<Item>4304</Item>
+		<Item>4234</Item>
+		<Item>8170</Item>
+		<Item>21887</Item>
+		<Item>33568</Item>
+		<Item>25649</Item>
+		<Item>181166</Item>
+		<Item>2447</Item>
+		<Item>765</Item>
+		<Item>2449</Item>
+		<Item>785</Item>
+		<Item>2450</Item>
+		<Item>2452</Item>
+		<Item>2453</Item>
+		<Item>3355</Item>
+		<Item>3356</Item>
+		<Item>3357</Item>
+		<Item>3821</Item>
+		<Item>3818</Item>
+		<Item>3358</Item>
+		<Item>3819</Item>
+		<Item>8831</Item>
+		<Item>8836</Item>
+		<Item>8839</Item>
+		<Item>4625</Item>
+		<Item>8846</Item>
+		<Item>8838</Item>
+		<Item>13464</Item>
+		<Item>13466</Item>
+		<Item>13465</Item>
+		<Item>13467</Item>
+		<Item>13463</Item>
+		<Item>13468</Item>
+		<Item>22793</Item>
+		<Item>22792</Item>
+		<Item>22791</Item>
+		<Item>22786</Item>
+		<Item>22787</Item>
+		<Item>22788</Item>
+		<Item>22785</Item>
+		<Item>22789</Item>
+		<Item>22794</Item>
+		<Item>36901</Item>
+		<Item>191303</Item>
+		<Item>37921</Item>
+		<Item>36904</Item>
+		<Item>36907</Item>
+		<Item>36903</Item>
+		<Item>36906</Item>
+		<Item>36905</Item>
+		<Item>36908</Item>
+		<Item>2770</Item>
+		<Item>2771</Item>
+		<Item>2775</Item>
+		<Item>2776</Item>
+		<Item>2772</Item>
+		<Item>3858</Item>
+		<Item>7911</Item>
+		<Item>10620</Item>
+		<Item>23425</Item>
+		<Item>23424</Item>
+		<Item>23426</Item>
+		<Item>23447</Item>
+		<Item>36909</Item>
+		<Item>36912</Item>
+		<Item>36910</Item>
+		<Item>37705</Item>
+		<Item>17407</Item>
+		<Item>17378</Item>
+		<Item>17408</Item>
+		<Item>24222</Item>
+		<Item>32544</Item>
+		<Item>32522</Item>
+		<Item>24879</Item>
+		<Item>8499</Item>
+		<Item>33567</Item>
+	</ForceMail>
+	
+	<ProtectedItems>
+		<!-- Generic List -->
+		<Item>29960</Item>
+		<Item>24401</Item>
+		<Item>1645</Item>
+		<Item>4234</Item>
+		<Item>4304</Item>
+		<Item>33454</Item>
+		<Item>33567</Item>
+    	<Item>25708</Item>
+    	<Item>17032</Item>
+    	<Item>17031</Item>
+    	<Item>2512</Item>
+    	<Item>2515</Item>
+    	<Item>3030</Item>
+    	<Item>11285</Item>
+    	<Item>28056</Item>
+    	<Item>41586</Item>
+		<Item>28053</Item>
+		<Item>41584</Item>
+		<Item>2519</Item>
+		<Item>28060</Item>
+		<Item>28061</Item>
+		<Item>2516</Item>
+		<Item>3033</Item>
+		<Item>6948</Item>
+		<Item>7005</Item>
+		<Item>2901</Item>
+		<Item>40772</Item>
+		<Item>5350</Item>
+		<Item>2288</Item>
+		<Item>2136</Item>
+		<Item>3772</Item>
+		<Item>8077</Item>
+		<Item>8078</Item>
+		<Item>8079</Item>
+    	<Item>30703</Item>
+    	<Item>22018</Item>
+    	<Item>5349</Item>
+    	<Item>1113</Item>
+    	<Item>1114</Item>
+    	<Item>1487</Item>
+    	<Item>8075</Item>
+    	<Item>8076</Item>
+    	<Item>22895</Item>
+    	<Item>34062</Item>
+   		<Item>22019</Item>
+  	 	<Item>43518</Item>
+    	<Item>43523</Item>
+   		<Item>5514</Item>
+   		<Item>5513</Item>
+   		<Item>8007</Item>
+     	<Item>8008</Item>
+    	<Item>22044</Item>
+    	<Item>33312</Item>
+    	<Item>5175</Item>
+    	<Item>5176</Item>
+    	<Item>5177</Item>
+    	<Item>5178</Item> 
+	</ProtectedItems>
+	
+	<SubProfile>
+		<Name>Serpent Lake</Name>
+		<MinLevel>1</MinLevel>
+		<MaxLevel>85</MaxLevel>
+		
+		<Vendors>
+			<Vendor Name="Fedryen Swiftspear" Entry="17904" Type="Repair" X="-198.9696" Y="5490.686" Z="21.84629" />
+		</Vendors>
+	
+		<Mailboxes>
+			<Mailbox X="-199.6883" Y="5507.728" Z="22.13028" />
+		</Mailboxes>
+		
+			<GrindArea>
+        		<TargetMinLevel>58</TargetMinLevel>
+        		<TargetMaxLevel>85</TargetMaxLevel>
+        		<Factions>14</Factions>
+				<RandomizeHotspots>false</RandomizeHotspots>
+  				<MaximumHotspotTime>60000</MaximumHotspotTime>
+        			<Hotspots>
+						<!-- <Serpent Lake /> -->
+						<Hotspot X="639.376" Y="7510.601" Z="21.64247" />
+						<Hotspot X="752.4237" Y="7472.281" Z="21.33972" />
+						<Hotspot X="793.7788" Y="7373.571" Z="22.30275" />
+						<Hotspot X="761.425" Y="7176.082" Z="22.47718" />
+						<Hotspot X="873.5574" Y="7046.875" Z="22.3229" />
+						<Hotspot X="851.0418" Y="6926.974" Z="22.62196" />
+						<Hotspot X="803.4134" Y="6808.546" Z="21.22309" />
+					</Hotspots>
+      		</GrindArea>
+	</SubProfile>
+</HBProfile>	
