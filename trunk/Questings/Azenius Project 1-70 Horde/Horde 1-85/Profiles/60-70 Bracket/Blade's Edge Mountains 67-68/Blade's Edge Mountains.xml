@@ -1,0 +1,1620 @@
+<HBProfile>  <Name>Azenius Project [Blades Edge Mountains]</Name>
+  <MinLevel>65</MinLevel>
+  <MaxLevel>85</MaxLevel>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>2</MinFreeBagSlots>
+  <MailGrey>False</MailGrey>
+  <MailWhite>False</MailWhite>
+  <MailGreen>False</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+  <SellGrey>True</SellGrey>
+  <SellWhite>True</SellWhite>
+  <SellGreen>True</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+  <TargetElites>False</TargetElites>
+
+	<AvoidMobs>
+		<Mob Name="Sylvanaar Sentinel" Entry="19500" />
+		<Mob Name="Bladespire Sober Defender" Entry="21975" />
+		<Mob Name="Station Guard" Entry="21115" />
+		<Mob Name="Razak Ironsides" Entry="21118" />
+		<Mob Name="Maggoc" Entry="20600" />
+		<Mob Name="Raven's Wood Stonebark" Entry="21325" />
+		<Mob Name="Bladespire Sober Defender" Entry="21975" />
+	</AvoidMobs>
+
+	<Blackspots>
+		<Blackspot X="2310.324" Y="6654.764" Z="17.08366" Radius="20.5" />
+		<Blackspot X="2623.195" Y="6690.814" Z="20.09028" Radius="62.29182" />
+		<Blackspot X="2639.439" Y="6724.545" Z="22.27338" Radius="31.04952" />
+	</Blackspots>
+
+
+	<Mailboxes>
+		<Mailbox X="2392.853" Y="5987.063" Z="151.7385" />
+		<Mailbox X="2209.026" Y="4735.657" Z="159.6671" />
+		<Mailbox X="3019.473" Y="5450.021" Z="146.6537" />
+	</Mailboxes>
+  
+	<Vendors>
+		<Vendor Name="Karnaze" Entry="19474" Type="Food" X="2328.37" Y="6059.62" Z="142.31" />
+		<Vendor Name="Orgatha" Entry="19479" Type="Repair" X="2289.88" Y="6062.31" Z="142.93" />
+		<Vendor Name="Ruka" Entry="21086" Type="Repair" X="2252.666" Y="4760.837" Z="157.5332" />
+		<Vendor Name="Zinyen Swiftstrider" Entry="20917" Type="Repair" X="3023.432" Y="5504.725" Z="145.7469" /> 
+	</Vendors>
+
+		<Quest Id="10503" Name="The Bladespire Threat">
+	<Objective Type="KillMob" MobId="20728" KillCount="10">
+		<Hotspots>
+			<Hotspot X="2340.875" Y="6705.41" Z="15.81165" />
+			<Hotspot X="2408.765" Y="6624.996" Z="2.616026" />
+			<Hotspot X="2349.503" Y="6563.807" Z="2.499098" />
+			<Hotspot X="2495.832" Y="6576.57" Z="-0.01209902" />
+			<Hotspot X="2663.635" Y="6604.581" Z="21.95578" />
+			<Hotspot X="2648.083" Y="6512.155" Z="3.433249" />
+		</Hotspots>
+	</Objective>
+</Quest>
+		
+		<Quest Id="10618" Name="The Softest Wings">
+	<Objective Type="CollectItem" ItemId="30792" CollectCount="12">
+		<CollectFrom>
+		</CollectFrom>
+		<Hotspots>
+			<Hotspot X="2044.036" Y="4929.048" Z="141.2492" />
+			<Hotspot X="1944.617" Y="4899.273" Z="143.8059" />
+			<Hotspot X="1873.059" Y="4869.197" Z="145.1341" />
+			<Hotspot X="1907.626" Y="4715.855" Z="140.1908" />
+			<Hotspot X="1807.723" Y="4734.355" Z="142.8357" />
+		</Hotspots>
+	</Objective>
+</Quest>
+		
+		<Quest Id="10860" Name="Mok'Nathal Treats">
+	<Objective Type="CollectItem" ItemId="31670" CollectCount="3">
+		<CollectFrom>
+		</CollectFrom>
+		<Hotspots>
+			<Hotspot X="2261.407" Y="5235.819" Z="265.3142" />
+			<Hotspot X="2395.12" Y="5355.632" Z="260.7138" />
+			<Hotspot X="2530.065" Y="5424.241" Z="265.5154" />
+			<Hotspot X="2424.869" Y="5507.439" Z="266.6058" />
+		</Hotspots>
+	</Objective>
+</Quest>
+		
+		<Quest Id="10770" Name="Little Embers">
+	<Objective Type="KillMob" MobId="21021" KillCount="8">
+		<Hotspots>
+			<Hotspot X="3521.273" Y="4971.994" Z="268.8393" />
+			<Hotspot X="3601.368" Y="4962.571" Z="267.7257" />
+			<Hotspot X="3728.988" Y="4966.594" Z="275.6818" />
+		</Hotspots>
+	</Objective>
+</Quest>
+		
+		
+
+
+<QuestOrder>
+
+		<CustomBehavior File="UserSettings" LootMobs="True" UseMount="True" PullDistance="30" />
+		<CustomBehavior File="UserSettings" LootMobs="True" TrainNewSkills="False" LearnFlightPaths="True" UseFlightPaths="False" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Compiling Quests." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning off auto-train." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting UseFlightPaths to false." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting LearnFlightPaths to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting LootMobs to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting UseMount to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting PullDistance to 30." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Azenius Alert: Hello! The Azenius Project: Blade's Edge Mountains Profile has been loaded!" />
+			
+			<If Condition="!HasQuest(10928) &amp;&amp; !IsQuestCompleted(10928)">
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to 'Grunt Grahk' (Picking up Quest = Killing the Crawlers)." />
+				<CustomBehavior File="UserSettings" PullDistance="1" />
+				<CustomBehavior File="FlyTo" DestName="Flying to 'Grunt Grahk' (Picking up Quest = Killing the Crawlers)." X="928.306" Y="5970.717" Z="121.2787" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="UserSettings" PullDistance="30" />
+					</If>
+				<CustomBehavior File="UserSettings" PullDistance="30" />
+				
+			<If Condition="!HasQuest(10928) &amp;&amp; !IsQuestCompleted(10928)">
+				<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = Killing the Crawlers" />
+			</If>
+		
+	<PickUp QuestName="Killing the Crawlers" QuestId="10928" GiverName="Grunt Grahk" GiverId="22489" />
+	
+			<If Condition="HasQuest(10928) &amp;&amp; !IsQuestCompleted(10928)">
+				<CustomBehavior File="Message" LogColor="SpringGreen" Text="Moving to Hotspot area (Quest = Killing the Crawlers)" />
+			</If>
+			
+		<Objective QuestName="Killing the Crawlers" QuestId="10928" Type="KillMob" MobId="22044" KillCount="6" />
+			
+			<If Condition="HasQuest(10928) &amp;&amp; IsQuestCompleted(10928)">
+				<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning in Quest = Killing the Crawlers." />
+			</If>
+                
+		<If Condition="HasQuest(10928) &amp;&amp; IsQuestCompleted(10928)">
+		<RunTo X="1718.054" Y="6048.383" Z="143.5549" />
+				<CustomBehavior File="UserSettings" PullDistance="1" />
+				<CustomBehavior File="FlyTo" X="2294.141" Y="6035.027" Z="142.4402" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="UserSettings" PullDistance="30" />
+					</If>
+				<CustomBehavior File="UserSettings" PullDistance="30" />
+				
+		<TurnIn QuestName="Killing the Crawlers" QuestId="10928" TurnInName="Tor'chunk Twoclaws" TurnInId="21147" />
+				
+		<If Condition="!HasQuest(10503) &amp;&amp; !IsQuestCompleted(10503)">
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = The Bladespire Threat // Felling an Ancient Tree // The Encroaching Wilderness" />
+		</If>
+
+		<PickUp QuestName="The Bladespire Threat" QuestId="10503" GiverName="Tor'chunk Twoclaws" GiverId="21147" />
+		<PickUp QuestName="Felling an Ancient Tree" QuestId="10489" GiverType="Object" GiverName="Wanted Poster" GiverId="184660" X="2318.673" Y="6028.183" Z="142.6149" />
+		<PickUp QuestName="The Encroaching Wilderness" QuestId="10486" GiverName="Gor'drek" GiverId="21117" />
+
+        <If Condition="HasQuest(10486)">
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting Hearthstone to Thundermar." />
+			<CustomBehavior File="Hearthstone" MobId="19470" X="2404.13" Y="5950.77" Z="152.11" HearthLocation="3769" />
+        </If>
+		
+        <If Condition="HasQuest(10486) &amp;&amp; !IsQuestCompleted(10486)">
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Hotspot area (Quest = The Encroaching Wilderness)." />
+				<CustomBehavior File="UserSettings" PullDistance="1" />
+				<CustomBehavior File="FlyTo" X="2164.895" Y="6042.053" Z="137.8955" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="UserSettings" PullDistance="30" />
+					</If>
+				<CustomBehavior File="UserSettings" PullDistance="30" />
+
+		<Objective QuestName="The Encroaching Wilderness" QuestId="10486" Type="KillMob" MobId="21033" KillCount="12" />
+
+		<If Condition="HasQuest(10486) &amp;&amp; IsQuestCompleted(10486)">
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning in Quest = The Encroaching Wilderness." />
+		</If>
+			
+		<TurnIn QuestName="The Encroaching Wilderness" QuestId="10486" TurnInName="Gor'drek" TurnInId="21117" />
+	
+		<If Condition="!HasQuest(10487) &amp;&amp; !IsQuestCompleted(10487)">
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = Dust from the Drakes." />
+		</If>
+			
+		<PickUp QuestName="Dust from the Drakes" QuestId="10487" GiverName="Gor'drek" GiverId="21117" />
+
+        <If Condition="HasQuest(10487) &amp;&amp; !IsQuestCompleted(10487)">
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Hotspot area (Quest = Dust from the Drakes // Felling an Ancient Tree)." />
+				<CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" DestName="Flying to Hotspot area (Quest = Dust from the Drakes // Felling an Ancient Tree)." X="2007.419" Y="6648.162" Z="143.382" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+					</If>
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+				
+		<Objective QuestName="Dust from the Drakes" QuestId="10487" Type="CollectItem" ItemId="30174" CollectCount="4" />
+		<Objective QuestName="Felling an Ancient Tree" QuestId="10489" Type="CollectItem" ItemId="30177" CollectCount="1" />
+				
+        <If Condition="HasQuest(10487) &amp;&amp; IsQuestCompleted(10487) &amp;&amp; HasQuest(10489) &amp;&amp; IsQuestCompleted(10489)">
+				<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to 'Thundermar' (Turning in Quest = Dust from the Drakes // Felling an Ancient Tree)." />
+                <CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="2295.88" Y="6027.99" Z="142.56" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+					</If>
+				<CustomBehavior File="UserSettings" PullDistance="30" />
+					
+		<TurnIn QuestName="Felling an Ancient Tree" QuestId="10489" TurnInName="Tor'chunk Twoclaws" TurnInId="21147" />
+		<TurnIn QuestName="Dust from the Drakes" QuestId="10487" TurnInName="Gor'drek" TurnInId="21117" />
+	
+		<If Condition="!HasQuest(10488) &amp;&amp; !IsQuestCompleted(10488)">
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = Protecting Our Own." />
+		</If>
+			
+		<PickUp QuestName="Protecting Our Own" QuestId="10488" GiverName="Gor'drek" GiverId="21117" />
+    
+		<If Condition="HasQuest(10488) &amp;&amp; !IsQuestCompleted(10488)">
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Moving to Hotspot area (Quest = Protecting our Own)." />
+		</If>
+			
+        <While Condition="HasQuest(10488) &amp;&amp; !IsQuestCompleted(10488)">
+               <CustomBehavior File="UseItemOn" MobState="Alive" MobId="20748" ItemId="30175" WaitTime="6000" NumOfTimes="1" CollectionDistance="1000" X="2018.393" Y="6036.39" Z="145.5738" />
+			   <CustomBehavior File="InteractWith" MobState="Alive" MobId="20748" NumOfTimes="1" GossipOptions="1" WaitTime="1000" WaitForNpcs="False" X="2018.393" Y="6036.39" Z="145.5738" />
+        </While>
+            
+		<If Condition="HasQuest(10488) &amp;&amp; IsQuestCompleted(10488)">
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning in Quest = Protecting Our Own." />
+		</If>
+			 
+		<TurnIn QuestName="Protecting Our Own" QuestId="10488" TurnInName="Gor'drek" TurnInId="21117" />
+
+        <If Condition="HasQuest(10503) &amp;&amp; !IsQuestCompleted(10503)">
+			<CustomBehavior File="Message" Text="Azenius Alert: Flying to objective location for Bladespire Threat" LogColor="SpringGreen" />
+                <CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="2406.92" Y="6532.354" Z="3.471298" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+					</If>
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+				
+		<Objective QuestName="The Bladespire Threat" QuestId="10503" Type="KillMob" MobId="19995" KillCount="30" />
+		<Objective QuestName="The Bladespire Threat" QuestId="10503" Type="KillMob" MobId="20728" KillCount="10" />
+		
+		<PickUp QuestName="Thunderlord Clan Artifacts" QuestId="10524" GiverType="Item" GiverName="Thunderlord Clan Artifact" GiverId="30431" />
+		
+		<If Condition="!HasQuest(10524) &amp;&amp; !IsQuestCompleted(10524) !HasItem(30431)">
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+			<CustomBehavior File="FlyTo" X="2340.875" Y="6705.41" Z="15.81165" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+			
+				<CustomBehavior File="CollectThings" MobId1="19998" MobId2="20334" MobId3="20728" MobId4="21296" CollectUntil="RequiredCountReached" CollectItemId="30431" CollectItemCount="1" HuntingGroundRadius="200">
+					<Hotspot X="2340.875" Y="6705.41" Z="15.81165" />
+					<Hotspot X="2408.765" Y="6624.996" Z="2.616026" />
+					<Hotspot X="2349.503" Y="6563.807" Z="2.499098" />
+					<Hotspot X="2495.832" Y="6576.57" Z="-0.01209902" />
+					<Hotspot X="2663.635" Y="6604.581" Z="21.95578" />
+					<Hotspot X="2648.083" Y="6512.155" Z="3.433249" />
+				</CustomBehavior>
+				
+		<CustomBehavior File="Message" Text="Azenius Alert: Bladespire threat objectives complete. Picking up Thunderlord Clan Artifacts from item in our bags." LogColor="SpringGreen" />
+			<PickUp QuestName="Thunderlord Clan Artifacts" QuestId="10524" GiverType="Item" GiverName="Thunderlord Clan Artifact" GiverId="30431" />
+		<CustomBehavior File="Message" Text="Azenius Alert: Moving to quest objective for Thunderlord Artifacts" LogColor="SpringGreen" />
+		</If>
+		<CustomBehavior File="UserSettings" PullDistance="30" />
+		
+		<Objective QuestName="Thunderlord Clan Artifacts" QuestId="10524" Type="CollectItem" ItemId="30431" CollectCount="1" />
+		<Objective QuestName="Thunderlord Clan Artifacts" QuestId="10524" Type="CollectItem" ItemId="30433" CollectCount="1" />
+		<Objective QuestName="Thunderlord Clan Artifacts" QuestId="10524" Type="CollectItem" ItemId="30432" CollectCount="1" />
+		<Objective QuestName="Thunderlord Clan Artifacts" QuestId="10524" Type="CollectItem" ItemId="30434" CollectCount="1" />
+
+		<If Condition="HasQuest(10503) &amp;&amp; IsQuestCompleted(10503)">
+			<CustomBehavior File="Message" Text="Azenius Alert: Done! Flying to Thundermar to turn in Bladesoire Threat and Thunderlord Clan Artifacts, then going to pickup the Bloodmaul Ogres and Vision Guide" LogColor="SpringGreen" />
+                <CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="2287.465" Y="6031.473" Z="142.5221" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+					</If>
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+				
+		<TurnIn QuestName="The Bladespire Threat" QuestId="10503" TurnInName="Tor'chunk Twoclaws" TurnInId="21147" />
+		<PickUp QuestName="The Bloodmaul Ogres" QuestId="10505" GiverName="Tor'chunk Twoclaws" GiverId="21147" />
+		<TurnIn QuestName="Thunderlord Clan Artifacts" QuestId="10524" TurnInName="Rokgah Bloodgrip" TurnInId="21311" />
+		<PickUp QuestName="Vision Guide" QuestId="10525" GiverName="Rokgah Bloodgrip" GiverId="21311" />
+
+		<If Condition="HasQuest(10525) &amp;&amp; !IsQuestCompleted(10525)">
+				<CustomBehavior File="Message" Text="Azenius Alert: Just picked up The Bloodmaul Ogres and Vision Guide. Moving to empty sell, repair and mail." LogColor="SpringGreen" />
+				<CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True" DoMail="True" />
+		</If>
+
+		<While Condition="HasQuest(10525) &amp;&amp; !IsQuestCompleted(10525)">
+				<CustomBehavior File="Message" Text="Azenius Alert: Initiating Vision Guide quest." LogColor="SpringGreen" />
+        		<CustomBehavior File="UseItem" QuestId="10525" ItemId="30481" NumOfTimes="1" WaitTime="1500" X="2277.019" Y="5982.846" Z="142.6469" />
+		</While>
+			
+		<If Condition="HasQuest(10525) &amp;&amp; IsQuestCompleted(10525)">
+			<CustomBehavior File="Message" Text="Azenius Alert: Done! Turning in Vision Guide then picking up The Thunderspike." LogColor="SpringGreen" />
+		</If>
+
+		<TurnIn QuestName="Vision Guide" QuestId="10525" TurnInName="Rokgah Bloodgrip" TurnInId="21311" />
+		<PickUp QuestName="The Thunderspike" QuestId="10526" GiverName="Rokgah Bloodgrip" GiverId="21311" />
+
+		<If Condition="!HasQuest(10542) &amp;&amp; !IsQuestCompleted(10542)" >
+			<CustomBehavior File="Message" Text="Azenius Alert: Just picked up The Thunderspike, now flying to pickup quest They Stole Me Hookah and Me Brews!" LogColor="SpringGreen" />
+                <CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="1795.973" Y="6408.402" Z="-10.33896" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+					</If>
+				<CustomBehavior File="UserSettings" PullDistance="30" />
+				
+		<PickUp QuestName="They Stole Me Hookah and Me Brews!" QuestId="10542" GiverName="T'chali the Witch Doctor" GiverId="21349" />
+
+		<If Condition="HasQuest(10542) &amp;&amp; !IsQuestCompleted(10542)" >
+			<CustomBehavior File="Message" Text="Azenius Alert: Just picked up They Stole Me Hookah and Me Brews. Moving to Objective area to to complete They Stole Me Hookah and Me Brews and The Bloodmaul Ogres" LogColor="SpringGreen" />
+		</If>
+			
+		<If Condition="HasQuest(10542) &amp;&amp; !IsQuestCompleted(10542)">
+			<CustomBehavior File="CollectThings" ObjectId="184504" CollectItemId="29443" CollectUntil="RequiredCountReached" CollectItemCount="17" >
+				<Hotspot X="1485.188" Y="6577.684" Z="-10.28246" />
+				<Hotspot X="1410.073" Y="6562.897" Z="23.91364" />
+				<Hotspot X="1480.393" Y="6454.861" Z="-10.29697" />
+				<Hotspot X="1570.691" Y="6297.817" Z="3.797755" />
+			</CustomBehavior>
+		</If>
+			
+		<If Condition="HasQuest(10542) &amp;&amp; !IsObjectiveComplete(1, 10542)" >
+            <CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="1470.203" Y="6561.747" Z="-10.36528" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+				</If>
+			<CustomBehavior File="UserSettings" PullDistance="30" />
+				
+		<Objective QuestName="They Stole Me Hookah and Me Brews!" QuestId="10542" Type="CollectItem" ItemId="30468" CollectCount="1" />
+ 
+		<If Condition="HasQuest(10542) &amp;&amp; IsQuestCompleted(10542)">
+			<CustomBehavior File="Message" Text="Azenius Alert: Done with They Stole Me Hookah and Me Brews. Focusing on The Bloodmaul Ogres." LogColor="SpringGreen" />
+		</If>
+ 
+		<Objective QuestName="The Bloodmaul Ogres" QuestId="10505" Type="KillMob" MobId="19991" KillCount="30" />
+			
+		<If Condition="HasQuest(10526) &amp;&amp; !IsQuestCompleted(10526)">
+			<CustomBehavior File="Message" Text="Azenius Alert: Done with The Bloodmaul Ogres. Now moving to objective location for The Thunderspike. Please do not interefere." LogColor="SpringGreen" />
+		</If>
+			
+		<If Condition="HasQuest(10526) &amp;&amp; !IsQuestCompleted(10526)">
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+			<CustomBehavior File="FlyTo" X="1401.802" Y="6543.659" Z="7.979172" />
+			<CustomBehavior File="ForcedDismount" />
+			<CustomBehavior File="UserSettings" PullDistance="30" />
+			<CustomBehavior File="MyCTM" X="1401.802" Y="6543.659" Z="7.979172" />
+			<CustomBehavior File="MyCTM" X="1387.264" Y="6540.459" Z="12.45768" /> 
+			<CustomBehavior File="MyCTM" X="1350.526" Y="6539.399" Z="4.60427" />
+			<CustomBehavior File="MyCTM" X="1347.255" Y="6580.076" Z="-6.681577" />
+			<CustomBehavior File="MyCTM" X="1309.288" Y="6611.186" Z="-7.940243" />
+			<CustomBehavior File="MyCTM" X="1328.458" Y="6622.786" Z="-10.5434" />
+			<CustomBehavior File="MyCTM" X="1352.042" Y="6614.23" Z="-11.55271" />
+			<CustomBehavior File="MyCTM" X="1381.978" Y="6642.028" Z="-15.62932" />
+			<CustomBehavior File="MyCTM" X="1371.734" Y="6676.811" Z="-19.32221" />
+			<CustomBehavior File="MyCTM" X="1387.529" Y="6680.326" Z="-17.76471" />
+			<CustomBehavior File="MyCTM" X="1371.734" Y="6676.811" Z="-19.32221" />
+			<CustomBehavior File="MyCTM" X="1351.612" Y="6686.979" Z="-22.65623" />
+			<CustomBehavior File="MyCTM" X="1318.42" Y="6691.587" Z="-18.97229" /> 
+			<CustomBehavior File="UseGameObject" ObjectId="184729" NumOfTimes="1" WaitTime="8000" X="1315.867" Y="6690.01" Z="-18.54362" />
+			<CustomBehavior File="WaitTimer" WaitTime="10000" />
+			<CustomBehavior File="CollectThings" QuestId="10526" MobId="21319" CollectItemId="30435" CollectUntil="QuestComplete" CollectItemCount="1" WaitTime="3000" />
+			<CustomBehavior File="MyCTM" X="1318.42" Y="6691.587" Z="-18.97229" />
+			<CustomBehavior File="MyCTM" X="1351.612" Y="6686.979" Z="-22.65623" />
+			<CustomBehavior File="MyCTM" X="1371.734" Y="6676.811" Z="-19.32221" />
+			<CustomBehavior File="MyCTM" X="1381.978" Y="6642.028" Z="-15.62932" />
+			<CustomBehavior File="MyCTM" X="1352.042" Y="6614.23" Z="-11.55271" />
+			<CustomBehavior File="MyCTM" X="1328.458" Y="6622.786" Z="-10.5434" />
+			<CustomBehavior File="MyCTM" X="1309.288" Y="6611.186" Z="-7.940243" />
+			<CustomBehavior File="MyCTM" X="1347.255" Y="6580.076" Z="-6.681577" />
+			<CustomBehavior File="MyCTM" X="1350.526" Y="6539.399" Z="4.60427" />
+			<CustomBehavior File="MyCTM" X="1385.389" Y="6539.677" Z="12.49821" />
+		</If>	
+			
+			
+			
+			<!--- // This section might not be necessary. Just keeping it in for giggles. //
+			
+			<If Condition="HasItem(30435) &amp;&amp; HasQuest(10526) &amp;&amp; IsQuestCompleted(10526)" >
+				<CustomBehavior File="MyCTM" X="1318.42" Y="6691.587" Z="-18.97229" />
+				<CustomBehavior File="MyCTM" X="1351.612" Y="6686.979" Z="-22.65623" />
+				<CustomBehavior File="MyCTM" X="1371.734" Y="6676.811" Z="-19.32221" />
+				<CustomBehavior File="MyCTM" X="1381.978" Y="6642.028" Z="-15.62932" />
+				<CustomBehavior File="MyCTM" X="1352.042" Y="6614.23" Z="-11.55271" />
+				<CustomBehavior File="MyCTM" X="1328.458" Y="6622.786" Z="-10.5434" />
+				<CustomBehavior File="MyCTM" X="1309.288" Y="6611.186" Z="-7.940243" />
+				<CustomBehavior File="MyCTM" X="1347.255" Y="6580.076" Z="-6.681577" />
+				<CustomBehavior File="MyCTM" X="1350.526" Y="6539.399" Z="4.60427" />
+				<CustomBehavior File="MyCTM" X="1385.389" Y="6539.677" Z="12.49821" />
+			</If>
+				-->
+				
+		<If Condition="HasQuest(10526) &amp;&amp; IsQuestCompleted(10526)">
+			<CustomBehavior File="Message" Text="Azenius Alert: Done with The Thunderspike. Flying to turn in They Stole Me Hookah and Me Brews then picking up Bladespire Kegger." LogColor="SpringGreen" />
+		</If>
+			
+		<If Condition="HasItem(30435) &amp;&amp; HasQuest(10526) &amp;&amp; IsQuestCompleted(10526) &amp;&amp; HasQuest(10542) &amp;&amp; IsQuestCompleted(10542)" >
+            <CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="1795.973" Y="6408.402" Z="-10.33896" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+				</If>
+			<CustomBehavior File="UserSettings" PullDistance="30" />
+			
+		<TurnIn QuestName="They Stole Me Hookah and Me Brews!" QuestId="10542" TurnInName="T'chali the Witch Doctor" TurnInId="21349" />
+		<PickUp QuestName="Bladespire Kegger" QuestId="10545" GiverName="T'chali the Witch Doctor" GiverId="21349" />
+	
+		<If Condition="HasQuest(10545) &amp;&amp; !IsQuestCompleted(10545)">
+			<CustomBehavior File="Message" Text="Azenius Alert: Just picked up Bladespire Kegger. Flying to objective location." LogColor="SpringGreen" />
+		</If>
+	
+			<If Condition="HasQuest(10545) &amp;&amp; !IsQuestCompleted(10545)" >
+                <CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="2378.417" Y="6510.931" Z="10.72322" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="10" />
+					</If>
+			
+		<If Condition="HasQuest(10545) &amp;&amp; !IsQuestCompleted(10545)">
+			<CustomBehavior File="Message" Text="Azenius Alert: Initiating Bladespire Kegger quest routine. This might take a while. Please do not interfere." LogColor="SpringGreen" />
+		</If>
+			
+			<While Condition="HasQuest(10545) &amp;&amp; !IsQuestCompleted(10545)" >
+				<CustomBehavior File="UseItemTargetLocation" QuestId="10545" MobId1="19995" MobId2="19998" MobId3="20334" ItemId="30353" UseType="ToObject" Range="28" WaitTime="5000" />
+			</While>
+			
+		<If Condition="HasQuest(10545) &amp;&amp; IsQuestCompleted(10545)">
+			<CustomBehavior File="Message" Text="Azenius Alert: Done with Bladespire Kegger. Flying to turn in Bladespire Kegger, then picking up Grimnok and Korgaah, I Am For You!" LogColor="SpringGreen" />
+		</If>
+			
+		<If Condition="HasQuest(10545) &amp;&amp; IsQuestCompleted(10545)" >
+            <CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="1795.973" Y="6408.402" Z="-10.33896" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+				</If>
+			<CustomBehavior File="UserSettings" PullDistance="30" />
+			
+		<TurnIn QuestName="Bladespire Kegger" QuestId="10545" TurnInName="T'chali the Witch Doctor" TurnInId="21349" />
+		<PickUp QuestName="Grimnok and Korgaah, I Am For You!" QuestId="10543" GiverName="T'chali the Witch Doctor" GiverId="21349" />
+
+		<If Condition="HasQuest(10545) &amp;&amp; IsObjectiveComplete(1, 10543)" >
+			<CustomBehavior File="Message" Text="Azenius Alert: Just picked up Grimnok and Korgaah, I Am For You! Moving to kill Grimnok." LogColor="SpringGreen" />
+		</If>
+		
+		<If Condition="HasQuest(10543) &amp;&amp; !IsObjectiveComplete(1, 10543)" >
+            <CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="1504.281" Y="6364.32" Z="0.7732754" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="1" />
+				<CustomBehavior File="MyCTM" X="1504.822" Y="6367.276" Z="0.5486317" />
+				<CustomBehavior File="MyCTM" X="1506.67" Y="6375.66" Z="2.516499" />
+				<CustomBehavior File="MyCTM" X="1508.481" Y="6382.476" Z="5.771596" />
+				<CustomBehavior File="MyCTM" X="1510.135" Y="6389.032" Z="8.937982" />
+				<CustomBehavior File="MyCTM" X="1511.737" Y="6394.241" Z="11.44685" />
+				<CustomBehavior File="MyCTM" X="1503.099" Y="6397.614" Z="15.98043" />
+				<CustomBehavior File="MyCTM" X="1492.854" Y="6397.146" Z="21.12897" />
+				<CustomBehavior File="MyCTM" X="1484.251" Y="6395.522" Z="24.97309" />
+				<CustomBehavior File="MyCTM" X="1480.206" Y="6390.701" Z="27.91954" />
+				<CustomBehavior File="MyCTM" X="1474.722" Y="6381.127" Z="32.56403" />
+				<CustomBehavior File="MyCTM" X="1483.092" Y="6374.412" Z="34.13922" />
+				<CustomBehavior File="MyCTM" X="1489.245" Y="6368.274" Z="35.04947" />
+				<CustomBehavior File="MyCTM" X="1491.566" Y="6371.196" Z="35.24168" />
+				<CustomBehavior File="MyCTM" X="1501.899" Y="6376.059" Z="35.24089" />
+				<CustomBehavior File="WaitTimer" WaitTime="180000" />
+					</If>
+			<CustomBehavior File="UserSettings" PullDistance="30" />
+				
+		<Objective QuestName="Grimnok and Korgaah, I Am For You!" QuestId="10543" Type="KillMob" MobId="20095" KillCount="1" />
+			
+		<If Condition="HasQuest(10543) &amp;&amp; !IsObjectiveComplete(2, 10543)" >
+			<CustomBehavior File="Message" Text="Azenius Alert: Grimnok Dead! Flying to kill Korgaah." LogColor="SpringGreen" />
+		</If>
+			
+		<If Condition="HasQuest(10543) &amp;&amp; !IsObjectiveComplete(2, 10543)" >
+				<CustomBehavior File="FlyTo" X="2720.832" Y="6519.951" Z="6.175847" />
+				<CustomBehavior File="MyCTM" X="2733.396" Y="6514.734" Z="14.57803" />
+				<CustomBehavior File="MyCTM" X="2740.689" Y="6505.984" Z="22.25288" />
+				<CustomBehavior File="MyCTM" X="2734.914" Y="6494.499" Z="25.19142" />
+		</If>
+			
+		<While Condition="HasQuest(10543) &amp;&amp; !IsQuestCompleted(10543)" >
+			   <CustomBehavior File="MyCTM" X="2734.914" Y="6494.499" Z="25.19142" />
+			   <CustomBehavior File="UseItemTargetLocation" MobId1="20723" ItemId="29443" UseType="ToObject" Range="34" WaitTime="5000" />
+		</While>
+			
+		<If Condition="HasQuest(10543) &amp;&amp; IsQuestCompleted(10543)" >
+		<CustomBehavior File="MyCTM" X="2734.914" Y="6494.499" Z="25.19142" />
+		<CustomBehavior File="MyCTM" X="2740.689" Y="6505.984" Z="22.25288" />
+		<CustomBehavior File="MyCTM" X="2733.396" Y="6514.734" Z="14.57803" />
+                <CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="1795.973" Y="6408.402" Z="-10.33896" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+					</If>
+				<CustomBehavior File="UserSettings" PullDistance="30" />
+				
+		<TurnIn QuestName="Grimnok and Korgaah, I Am For You!" QuestId="10543" TurnInName="T'chali the Witch Doctor" TurnInId="21349" />
+		<PickUp QuestName="A Curse Upon Both of Your Clans!" QuestId="10544" GiverName="T'chali the Witch Doctor" GiverId="21349" />
+	
+		<While Condition="HasQuest(10544) &amp;&amp; !IsObjectiveComplete(2, 10544) &amp;&amp; !IsQuestCompleted(10544)" >
+				<CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="1586.805" Y="6288.687" Z="6.685227" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+				<RunTo X="1595.136" Y="6303.19" Z="2.404101" />
+				<UseItem QuestId="10544" ItemId="30479" NumOfTimes="1" X="1595.136" Y="6303.19" Z="2.404101" />
+				<CustomBehavior File="WaitTimer" WaitTime="30000" />
+				<UseItem QuestId="10544" ItemId="30479" NumOfTimes="1" X="1595.136" Y="6303.19" Z="2.404101" />
+		</While>
+		
+		<While Condition="HasQuest(10544) &amp;&amp; IsObjectiveComplete(2, 10544) &amp;&amp; !IsObjectiveComplete(1, 10544) &amp;&amp; !IsQuestCompleted(10544)" >
+				<CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="2478.921" Y="6555.365" Z="4.154983" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+				<RunTo X="2472.651" Y="6549.457" Z="0.6108441" />
+				<UseItem QuestId="10544" ItemId="30479" NumOfTimes="1" X="2472.651" Y="6549.457" Z="0.6108441" />
+				<CustomBehavior File="WaitTimer" WaitTime="30000" />
+				<UseItem QuestId="10544" ItemId="30479" NumOfTimes="1" X="2472.651" Y="6549.457" Z="0.6108441" />
+				<CustomBehavior File="WaitTimer" WaitTime="30000" />
+				<UseItem QuestId="10544" ItemId="30479" NumOfTimes="1" X="2472.651" Y="6549.457" Z="0.6108441" />
+				<CustomBehavior File="WaitTimer" WaitTime="30000" />
+				<UseItem QuestId="10544" ItemId="30479" NumOfTimes="1" X="2472.651" Y="6549.457" Z="0.6108441" />
+				<CustomBehavior File="WaitTimer" WaitTime="30000" />
+				<UseItem QuestId="10544" ItemId="30479" NumOfTimes="1" X="2472.651" Y="6549.457" Z="0.6108441" />
+		</While>
+		
+		<If Condition="HasQuest(10544) &amp;&amp; IsQuestCompleted(10544)" >
+                <CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="1795.973" Y="6408.402" Z="-10.33896" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>
+			
+		<TurnIn QuestName="A Curse Upon Both of Your Clans!" QuestId="10544" TurnInName="T'chali the Witch Doctor" TurnInId="21349" />
+	
+		<If Condition="HasItem(30435) &amp;&amp; HasQuest(10526) &amp;&amp; IsQuestCompleted(10526) &amp;&amp; HasQuest(10505) &amp;&amp; IsQuestCompleted(10505)" >
+			<CustomBehavior File="RunMacro" Macro="/use hearthstone" NumOfTimes="1" WaitTime="15000"/>
+		</If>	
+		
+		<TurnIn QuestName="The Thunderspike" QuestId="10526" TurnInName="Rokgah Bloodgrip" TurnInId="21311" />
+		<TurnIn QuestName="The Bloodmaul Ogres" QuestId="10505" TurnInName="Tor'chunk Twoclaws" TurnInId="21147" />
+		<PickUp QuestName="The Spirits Have Voices" QuestId="10718" GiverName="Garm Wolfbrother" GiverId="21950" />
+		
+		<If Condition="HasQuest(10718) &amp;&amp; IsQuestCompleted(10718)" >
+			<CustomBehavior File="ForceSetVendor" DoRepair="True" DoMail="True" />
+		</If>	
+		
+		<TurnIn QuestName="The Spirits Have Voices" QuestId="10718" TurnInName="Rexxar" TurnInId="21984" />
+		<PickUp QuestName="Whispers on the Wind" QuestId="10614" GiverName="Rexxar" GiverId="21984" />
+	
+		<If Condition="HasQuest(10614) &amp;&amp; IsQuestCompleted(10614)" >
+                <CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="2028.753" Y="4703.052" Z="150.4335" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>
+		
+		<TurnIn QuestName="Whispers on the Wind" QuestId="10614" TurnInName="Leoroxx" TurnInId="22004" />
+		<PickUp QuestName="Reunion" QuestId="10709" GiverName="Leoroxx" GiverId="22004" />
+		<PickUp QuestName="The Stones of Vekh'nir" QuestId="10565" GiverName="Dertrok" GiverId="21496" />
+		<PickUp QuestName="Mok'Nathal Treats" QuestId="10860" GiverName="Matron Varah" GiverId="21088" />
+
+		<If Condition="HasQuest(10709)">
+            <CustomBehavior File="Hearthstone" MobId="21088" X="2227.13" Y="4717.91" Z="161.99" HearthLocation="3844" />
+        </If>
+			
+		<PickUp QuestName="Silkwing Cocoons" QuestId="10617" GiverName="Taerek" GiverId="21895" />
+		<PickUp QuestName="The Softest Wings" QuestId="10618" GiverName="Silmara" GiverId="21896" />
+
+		<If Condition="HasQuest(10709) &amp;&amp; IsQuestCompleted(10709)" >
+                <CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="2287.173" Y="6021.294" Z="145.094" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>
+		
+		<TurnIn QuestName="Reunion" QuestId="10709" TurnInName="Rexxar" TurnInId="21984" />
+		<PickUp QuestName="On Spirit's Wings" QuestId="10714" GiverName="Rexxar" GiverId="21984" />
+
+		<If Condition="HasQuest(10617) &amp;&amp; !IsQuestCompleted(10617)" >
+                <CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="2064.757" Y="4841.255" Z="148.2198" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>
+		
+		<Objective QuestName="Silkwing Cocoons" QuestId="10617" Type="CollectItem" ItemId="30791" CollectCount="8" />
+		<Objective QuestName="The Softest Wings" QuestId="10618" Type="CollectItem" ItemId="30792" CollectCount="12" />
+		<Objective QuestName="The Stones of Vekh'nir" QuestId="10565" Type="CollectItem" ItemId="30561" CollectCount="1" />
+		
+		<While Condition="HasQuest(10565) &amp;&amp; !IsQuestCompleted(10565)">
+			<While Condition="HasQuest(10565) &amp;&amp; !IsQuestCompleted(10565) &amp;&amp; HasItem(30561)" >
+				<CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="1707.996" Y="4624.761" Z="151.8921" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+				<UseItem QuestId="10565" ItemId="30561" NumOfTimes="1" X="1707.996" Y="4624.761" Z="144.2971" />
+		</While>
+			<Objective QuestName="The Stones of Vekh'nir" QuestId="10565" Type="CollectItem" ItemId="30561" CollectCount="1" />
+		</While>
+		
+		<If Condition="HasQuest(10565) &amp;&amp; IsQuestCompleted(10565)" >
+				<CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="2178.461" Y="4771.948" Z="159.5624" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>
+	
+		<TurnIn QuestName="The Stones of Vekh'nir" QuestId="10565" TurnInName="Dertrok" TurnInId="21496" />	
+		<TurnIn QuestName="Silkwing Cocoons" QuestId="10617" TurnInName="Taerek" TurnInId="21895" />
+		<TurnIn QuestName="The Softest Wings" QuestId="10618" TurnInName="Silmara" TurnInId="21896" />
+		<PickUp QuestName="Understanding the Mok'Nathal" QuestId="10846" GiverName="Leoroxx" GiverId="22004" />
+		<PickUp QuestName="Trial and Error" QuestId="10566" GiverName="Dertrok" GiverId="21496" />
+	
+		<If Condition="HasQuest(10566) &amp;&amp; !IsQuestCompleted(10566) &amp;&amp; !IsObjectiveComplete(1, 10566)">
+			<CustomBehavior File="WaitTimer" WaitTime="2000" />
+			 <CustomBehavior File="Misc\RunLua" WaitTime="1000" NumOfTimes="1" Lua="UseItemByName(30650)" />
+			<!-- <UseItem QuestId="10566" ItemId="30650" NumOfTimes="1" X="2175.895" Y="4783.821" Z="156.6968" /> -->
+		</If>
+
+		<If Condition="HasQuest(10566) &amp;&amp; !IsQuestCompleted(10566) &amp;&amp; !IsObjectiveComplete(1, 10566)">
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+			<CustomBehavior File="FlyTo" X="1708.2" Y="4911.254" Z="170.0733" />
+			<CustomBehavior File="ForcedDismount" />
+			<CustomBehavior File="UserSettings" PullDistance="30" />
+			<CustomBehavior File="CollectThings" QuestId="10566" MobId1="19983" MobId2="19984" CollectItemId="30655" CollectUntil="RequiredCountReached" CollectItemCount="4" X="1708.2" Y="4911.254" Z="170.0733" />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+		</If> 
+		
+		<While Condition="HasQuest(10566) &amp;&amp; !IsObjectiveComplete(1, 10566)">
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="If I bug out, for instance, I don't keep a Range of 18 yards when using the item, restart me. This is because the UseItemOn behavior is buggy (Quest = Trial and Error)." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+			<CustomBehavior File="UseItemOn" NumOfTimes="10" MobId="21254" MobState="Alive" ItemId="30651" Range="18" WaitTime="6000" X="1708.2" Y="4911.254" Z="170.0733" />
+			<CustomBehavior File="WaitTimer" WaitTime="120005" />
+				</While>
+		<While Condition="HasQuest(10566) &amp;&amp; !IsObjectiveComplete(2, 10566)">
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="If I bug out, for instance, I don't keep a Range of 18 yards when using the item, restart me. This is because the UseItemOn behavior is buggy (Quest = Trial and Error)." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+			<CustomBehavior File="UseItemOn" NumOfTimes="1" MobId="21254" MobState="Alive" ItemId="30652" Range="18" WaitTime="6000" X="1708.2" Y="4911.254" Z="170.0733" /> 
+				</While>
+		<While Condition="HasQuest(10566) &amp;&amp; !IsObjectiveComplete(3, 10566)">
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="If I bug out, for instance, I don't keep a Range of 18 yards when using the item, restart me. This is because the UseItemOn behavior is buggy (Quest = Trial and Error)." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+			<CustomBehavior File="UseItemOn" NumOfTimes="1" MobId="21254" MobState="Alive" ItemId="30653" Range="18" WaitTime="6000" X="1708.2" Y="4911.254" Z="170.0733" /> 
+				</While>
+		<While Condition="HasQuest(10566) &amp;&amp; !IsObjectiveComplete(4, 10566)">
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="If I bug out, for instance, I don't keep a Range of 18 yards when using the item, restart me. This is because the UseItemOn behavior is buggy (Quest = Trial and Error)." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+			<CustomBehavior File="UseItemOn" NumOfTimes="1" MobId="21254" MobState="Alive" ItemId="30654" Range="18" WaitTime="6000" X="1708.2" Y="4911.254" Z="170.0733" /> 
+			<CustomBehavior File="UserSettings" PullDistance="30" />
+				</While>
+				
+		<Objective QuestName="Understanding the Mok'Nathal" QuestId="10846" Type="KillMob" MobId="22305" KillCount="1" />
+		
+		<If Condition="HasQuest(10846) &amp;&amp; !IsQuestCompleted(10846)" >
+			<CustomBehavior File="Message" Text="Azenius Alert: All done with Understanding the Mok'Nathal and Trial and Error. Moving to turn in these two quests." LogColor="SpringGreen" />
+		</If>
+		
+		<If Condition="HasQuest(10566) &amp;&amp; IsQuestCompleted(10566)" >
+				<CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="2183.373" Y="4758.466" Z="155.4865" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+					</If>
+				<CustomBehavior File="UserSettings" PullDistance="30" />
+		
+		<TurnIn QuestName="Trial and Error" QuestId="10566" TurnInName="Dertrok" TurnInId="21496" />
+		<TurnIn QuestName="Understanding the Mok'Nathal" QuestId="10846" TurnInName="Leoroxx" TurnInId="22004" />
+		<PickUp QuestName="Since Time Forgotten..." QuestId="10843" GiverName="Leoroxx" GiverId="22004" />
+		
+		<If Condition="HasQuest(10843) &amp;&amp; !IsQuestCompleted(10843)" >
+			<CustomBehavior File="Message" Text="Just picked up Since Time Forgotten..." LogColor="SpringGreen" />
+		</If>
+		
+		<PickUp QuestName="Ruuan Weald" QuestId="10615" GiverName="Dertrok" GiverId="21496" />
+		
+		<If Condition="HasQuest(10615) &amp;&amp; !IsQuestCompleted(10615)" >
+			<CustomBehavior File="Message" Text="Just picked up Ruuan Weald" LogColor="SpringGreen" />
+		</If>
+		
+		<PickUp QuestName="The Totems of My Enemy" QuestId="10851" GiverName="Spiritcaller Dohgar" GiverId="22312" />	
+		
+		<If Condition="HasQuest(10851) &amp;&amp; !IsQuestCompleted(10851)" >
+			<CustomBehavior File="Message" Text="Just picked up The Totems of My Enemy. Moving to objective area for Mok'Nathal Treats." LogColor="SpringGreen" />
+		</If>
+		
+		<If Condition="HasQuest(10860) &amp;&amp; !IsObjectiveComplete(2, 10860)" >
+				<CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="1949.614" Y="5113.8" Z="265.3698" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+					</If>
+				<CustomBehavior File="UserSettings" PullDistance="30" />
+		
+		<Objective QuestName="Mok'Nathal Treats" QuestId="10860" Type="CollectItem" ItemId="31671" CollectCount="3" />
+		
+		<If Condition="HasQuest(10860) &amp;&amp; !IsObjectiveComplete(1, 10860)" >
+				<CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="2261.407" Y="5235.819" Z="265.3142" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+					</If>
+				<CustomBehavior File="UserSettings" PullDistance="30" />
+				
+		<Objective QuestName="Mok'Nathal Treats" QuestId="10860" Type="CollectItem" ItemId="31670" CollectCount="3" />
+		
+		<If Condition="HasQuest(10860) &amp;&amp; IsQuestCompleted(10860)" >
+			<CustomBehavior File="Message" Text="Done with Mok'Nathal Treats! Moving to objective area for The Totems of My Enemy." LogColor="SpringGreen" />
+		</If>
+		
+		<Objective QuestName="The Totems of My Enemy" QuestId="10851" Type="CollectItem" ItemId="31651" CollectCount="5" />
+		
+		<If Condition="HasQuest(10851) &amp;&amp; IsQuestCompleted(10851)" >
+			<CustomBehavior File="Message" Text="Done with The Totems of My Enemy! Moving to kill Gnosh Brognat for Since Time Forgotten..." LogColor="SpringGreen" />
+		</If>
+		
+		<Objective QuestName="Since Time Forgotten..." QuestId="10843" Type="KillMob" MobId="20768" KillCount="1" />
+		
+		<If Condition="HasQuest(10843) &amp;&amp; IsQuestCompleted(10843)" >
+			<CustomBehavior File="Message" Text="Azenius Alert: Done with Since Time Forgotten! Moving to turn in Since Time Forgotten... / The Totems of My Enemy / Mok'Nathal Treats" LogColor="SpringGreen" />
+		</If>
+		
+		<If Condition="HasQuest(10843) &amp;&amp; IsQuestCompleted(10843)" >
+				<CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="2183.373" Y="4758.466" Z="155.4865" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+					</If>
+				<CustomBehavior File="UserSettings" PullDistance="30" />
+				
+		<TurnIn QuestName="Since Time Forgotten..." QuestId="10843" TurnInName="Leoroxx" TurnInId="22004" />
+		<TurnIn QuestName="Mok'Nathal Treats" QuestId="10860" TurnInName="Matron Varah" TurnInId="21088" />
+		<TurnIn QuestName="The Totems of My Enemy" QuestId="10851" TurnInName="Spiritcaller Dohgar" TurnInId="22312" />
+		<PickUp QuestName="Spirit Calling" QuestId="10853" GiverName="Spiritcaller Dohgar" GiverId="22312" />
+		<PickUp QuestName="Slay the Brood Mother" QuestId="10845" GiverName="Leoroxx" GiverId="22004" />
+		
+		<While Condition="HasQuest(10853) &amp;&amp; !IsQuestCompleted(10853)">
+		<If Condition="HasQuest(10853) &amp;&amp; !IsQuestCompleted(10853)">
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="1668.99" Y="5311.298" Z="265.1604" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>
+				
+		<While Condition="HasQuest(10853) &amp;&amp; !IsQuestCompleted(10853) &amp;&amp; HasItem(31663)">
+					<CustomBehavior File="CombatUseItemOn" NumOfTimes="1" MobId="21004" MobHpPercentLeft="60" MaxRange="2" ItemId="31663" />
+		</While>
+		
+		<If Condition="HasQuest(10853) &amp;&amp; !IsQuestCompleted(10853)">
+				<CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="2217.955" Y="4782.259" Z="156.1057" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+				<CustomBehavior File="InteractWith" MobId="22312" NumOfTimes="1" GossipOptions="1" X="2217.955" Y="4782.259" Z="156.1057" />
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			</If>
+		</While>
+		
+		<Objective QuestName="Slay the Brood Mother" QuestId="10845" Type="KillMob" MobId="21032" KillCount="1" />
+		
+		<If Condition="HasQuest(10845) &amp;&amp; IsQuestCompleted(10845)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Hearthing to Mok'Nathal Village (Turning in Quest = Slay the Brood Mother // Spirit Calling)." /> 
+			<CustomBehavior File="RunMacro" Macro="/use hearthstone" NumOfTimes="1" WaitTime="15000"/>
+		</If>
+		
+		<TurnIn QuestName="Slay the Brood Mother" QuestId="10845" TurnInName="Leoroxx" TurnInId="22004" />
+		<TurnIn QuestName="Spirit Calling" QuestId="10853" TurnInName="Spiritcaller Dohgar" TurnInId="22312" />
+		
+		<If Condition="!HasQuest(10859) &amp;&amp; !IsQuestCompleted(10859)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = Gather the Orbs" />
+		</If>
+		
+		<PickUp QuestName="Gather the Orbs" QuestId="10859" GiverName="Spiritcaller Dohgar" GiverId="22312" />
+			
+		<If Condition="HasQuest(10859) &amp;&amp; !IsQuestCompleted(10859)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Use Item Location (Quest = Gather the Orbs)." />
+		</If>
+			
+		<If Condition="HasQuest(10859) &amp;&amp; !IsQuestCompleted(10859)">
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+			<CustomBehavior File="FlyTo" X="2717.313" Y="5279.639" Z="272.2962" />
+			<CustomBehavior File="ForcedDismount" />
+			<CustomBehavior File="UserSettings" PullDistance="30" />		
+		</If>
+		
+		<While Condition="HasQuest(10859) &amp;&amp; !IsQuestCompleted(10859)">
+			<UseItem QuestId="10859" ItemId="31668" NumOfTimes="1" X="2733.04" Y="5278.608" Z="263.724" />
+		</While>
+		
+		<If Condition="HasQuest(10859) &amp;&amp; IsQuestCompleted(10859)">
+				<CustomBehavior File="Message" Text="Flying to Mok'Nathal Village (Turning in Quest = Gather the Orbs)." LogColor="SpringGreen" />
+				<CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="2178.461" Y="4771.948" Z="159.5624" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>	
+			
+		<TurnIn QuestName="Gather the Orbs" QuestId="10859" TurnInName="Spiritcaller Dohgar" TurnInId="22312" />
+		
+		<If Condition="!HasQuest(10865) &amp;&amp; !IsQuestCompleted(10865)">
+			<CustomBehavior File="Message" Text="Picking up Quest = Inform Leoroxx." LogColor="SpringGreen" />
+		</If>
+		
+		<PickUp QuestName="Inform Leoroxx" QuestId="10865" GiverName="Spiritcaller Dohgar" GiverId="22312" />
+		
+		<If Condition="HasQuest(10865) &amp;&amp; IsQuestCompleted(10865)">
+			<CustomBehavior File="Message" Text="Turning in Quest = Inform Leoroxx." LogColor="SpringGreen" />
+		</If>
+		
+		<TurnIn QuestName="Inform Leoroxx!" QuestId="10865" TurnInName="Leoroxx" TurnInId="22004" />
+		
+		<If Condition="!HasQuest(10867) &amp;&amp; !IsQuestCompleted(10867)">
+			<CustomBehavior File="Message" Text="Picking up Quest = There Can Be Only One Response." LogColor="SpringGreen" />
+		</If>
+		
+		<PickUp QuestName="There Can Be Only One Response" QuestId="10867" GiverName="Leoroxx" GiverId="22004" />
+
+		<If Condition="HasQuest(10867) &amp;&amp; !IsQuestCompleted(10867)">
+				<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Hotspot area (Quest = There Can Be Only One Response)." />
+				<CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="2824.352" Y="5227.929" Z="272.4829" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>	
+			
+		<While Condition="HasQuest(10867) &amp;&amp; !IsQuestCompleted(10867)">
+			<CustomBehavior File="UserSettings" LootMobs="False" />
+			
+				<RunTo X="2815.805" Y="5241.92" Z="264.4405" />
+				<CustomBehavior File="Message" LogColor="SpringGreen" Text="This quest may take a while, do not interfere (Quest = There Can Be Only One Response)." />
+				<CustomBehavior File="CollectThings" CollectUntil="NoTargetsInArea" ObjectId="185033" MobId1="20614" MobId2="20601" MobId3="20609" MobId4="21057"
+        CollectItemId="30890" CollectItemCount="1" PostInteractDelay="3500" HuntingGroundRadius="200" X="2815.805" Y="5241.92" Z="264.4405" />
+		</While>
+		<CustomBehavior File="UserSettings" LootMobs="True" />
+	   
+		<If Condition="HasQuest(10867) &amp;&amp; IsQuestCompleted(10867) &amp;&amp; HasQuest(10615)">
+				<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to 'Evergrove'(Turning in Quest = Ruuan Weald)." />
+				<CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="2982.239" Y="5461.508" Z="147.0776" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+					</If>
+				<CustomBehavior File="UserSettings" PullDistance="30" />
+				
+		<TurnIn QuestName="Ruuan Weald" QuestId="10615" TurnInName="Timeon" TurnInId="21782" />
+		<If Condition="!HasQuest(10567) &amp;&amp; !IsQuestCompleted(10567)">
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = Creating the Pendant." />
+		</If>	
+		<PickUp QuestName="Creating the Pendant" QuestId="10567" GiverName="Timeon" GiverId="21782" />
+		<If Condition="!HasQuest(10753) &amp;&amp; !IsQuestCompleted(10753)">
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = Culling the Wild." />
+		</If>	
+		<PickUp QuestName="Culling the Wild" QuestId="10753" GiverName="Faradrella" GiverId="22133" />
+		<If Condition="!HasQuest(10770) &amp;&amp; !IsQuestCompleted(10770) &amp;&amp; !HasQuest(10771) &amp;&amp; !IsQuestCompleted(10771)">
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = Little Embers // From the Ashes." />
+		</If>	
+		<PickUp QuestName="Little Embers" QuestId="10770" GiverName="Mosswood the Ancient" GiverId="22053" />
+		<PickUp QuestName="From the Ashes" QuestId="10771" GiverName="Mosswood the Ancient" GiverId="22053" />
+		<If Condition="!HasQuest(10682) &amp;&amp; !IsQuestCompleted(10682)">
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = Little Embers // From the Ashes." />
+		</If>
+		<PickUp QuestName="A Time for Negotiation..." QuestId="10682" GiverName="Tree Warden Chawn" GiverId="22007" />
+		
+		<If Condition="HasQuest(10867) &amp;&amp; IsQuestCompleted(10867)">
+			<CustomBehavior File="Message" Text="Flying to Mok'Nathal Village (Turning in Quest = There Can Be Only One Response)." LogColor="SpringGreen" />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+               <CustomBehavior File="FlyTo" X="2178.461" Y="4771.948" Z="159.5624" />
+               <CustomBehavior File="ForcedDismount" />
+               <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>	
+		
+		<TurnIn QuestName="There Can Be Only One Response" QuestId="10867" TurnInName="Spiritcaller Dohgar" TurnInId="22312" />
+
+		<If Condition="HasQuest(10753) &amp;&amp; !IsQuestCompleted(10753)" >
+			<CustomBehavior File="Message" Text="Flying to 'Thunderlord Stronghold'." LogColor="SpringGreen" />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+               <CustomBehavior File="FlyTo" X="2449.341" Y="5958.885" Z="160.1475" />
+               <CustomBehavior File="ForcedDismount" />
+               <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>	
+		
+		<If Condition="HasQuest(10753) &amp;&amp; !IsQuestCompleted(10753)" >
+				<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting Hearthstone to Thunderlord Stronghold." />
+				<CustomBehavior File="Hearthstone" MobId="19470" X="2404.13" Y="5950.77" Z="152.11" HearthLocation="3769" />
+            </If>
+			
+		<If Condition="HasQuest(10753) &amp;&amp; !IsQuestCompleted(10753)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Azenius Alert: Vendoring and Mailing items." />
+			<CustomBehavior File="ForceSetVendor" DoRepair="True" DoMail="True" />
+		</If>	
+		
+		<If Condition="HasQuest(10753) &amp;&amp; !IsQuestCompleted(10753)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Hotspot area (Quest = Culling the Wild)." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+               <CustomBehavior File="FlyTo" X="3131.672" Y="5096.806" Z="278.1492" />
+               <CustomBehavior File="ForcedDismount" />
+               <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>	
+		
+		<Objective QuestName="Culling the Wild" QuestId="10753" Type="KillMob" MobId="21123" KillCount="4" />
+		<Objective QuestName="Culling the Wild" QuestId="10753" Type="KillMob" MobId="21124" KillCount="4" />
+		<Objective QuestName="Culling the Wild" QuestId="10753" Type="KillMob" MobId="21300" KillCount="2" />
+		
+		<If Condition="!HasQuest(10810) &amp;&amp; HasItem(31384)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = Damaged Mask." />
+		<PickUp QuestName="Damaged Mask" QuestId="10810" GiverType="Item" GiverName="Damaged Mask" GiverId="31384" />
+		</If>
+		
+		<If Condition="HasQuest(10771) &amp;&amp; !IsQuestComplete(10771)" >
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Hotspot area (Quest = From the Ashes)." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+               <CustomBehavior File="FlyTo" X="3675.124" Y="4944.936" Z="272.1082" />
+               <CustomBehavior File="ForcedDismount" />
+               <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>	
+		
+		<If Condition="HasQuest(10771) &amp;&amp; !IsObjectiveComplete(1, 10771)" >
+			<CustomBehavior File="UseGameObject" ObjectId="185124" NumOfTimes="1" WaitTime="8000" X="3599.833" Y="4958.239" Z="267.8146" />
+		</If>
+		<If Condition="HasQuest(10771) &amp;&amp; !IsObjectiveComplete(2, 10771)" >
+			<CustomBehavior File="UseGameObject" ObjectId="185147" NumOfTimes="1" WaitTime="8000" X="3672.172" Y="4962.03" Z="266.2846" />
+		</If>
+		<If Condition="HasQuest(10771) &amp;&amp; !IsObjectiveComplete(3, 10771)" >
+			<CustomBehavior File="UseGameObject" ObjectId="185148" NumOfTimes="1" WaitTime="8000" X="3740.228" Y="4962.219" Z="276.6982" />
+		</If>
+		
+		<Objective QuestName="Little Embers" QuestId="10770" Type="KillMob" MobId="21021" KillCount="8" />
+
+		<If Condition="HasQuest(10770) &amp;&amp; IsQuestCompleted(10770) &amp;&amp; HasQuest(10810)">
+				<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to 'Evergrove'(Turning in Quest = Damaged Mask)." />
+				<CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="2982.239" Y="5461.508" Z="147.0776" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>
+		
+		<TurnIn QuestName="Damaged Mask" QuestId="10810" TurnInName="O'Mally Zapnabber" TurnInId="22020" />
+		<If Condition="!HasQuest(10812) &amp;&amp; !IsQuestCompleted(10812) &amp;&amp; !HasQuest(10810)">
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking Up Quest = Mystery Mask" />
+		</If>	
+		
+		<PickUp QuestName="Mystery Mask" QuestId="10812" GiverName="O'Mally Zapnabber" GiverId="22020" />
+		<If Condition="HasQuest(10812) &amp;&amp; IsQuestCompleted(10812)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning in Quest = Mystery Mask" />
+		</If>	
+		<TurnIn QuestName="Mystery Mask" QuestId="10812" TurnInName="Wildlord Antelarion" TurnInId="22127" />
+		<!-- <If Condition="!HasQuest(10819) &amp;&amp; !IsQuestCompleted(10819) &amp;&amp; IsQuestCompleted(10812)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = Felsworn Gas Mask" />
+		</If>	
+		<PickUp QuestName="Felsworn Gas Mask" QuestId="10819" GiverName="Wildlord Antelarion" GiverId="22127" /> -->
+		<If Condition="HasQuest(10753) &amp;&amp; IsQuestCompleted(10753) &amp;&amp; HasQuest(10819)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning in Quest = Culling the Wild." />
+		</If>	
+		<TurnIn QuestName="Culling the Wild" QuestId="10753" TurnInName="Faradrella" TurnInId="22133" />
+		<If Condition="HasQuest(10771) &amp;&amp; IsQuestCompleted(10771) &amp;&amp; HasQuest(10819)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning in Quest = From the Ashes // Little Embers." />
+		</If>	
+		<TurnIn QuestName="From the Ashes" QuestId="10771" TurnInName="Mosswood the Ancient" TurnInId="22053" />
+		<TurnIn QuestName="Little Embers" QuestId="10770" TurnInName="Mosswood the Ancient" TurnInId="22053" />
+	
+		<If Condition="HasQuest(10682) &amp;&amp; !IsQuestCompleted(10682)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Hotspot area (Quest = A Time for Negotiation...)." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="2994.668" Y="5667.509" Z="150.8272" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />	
+		</If>	
+		
+		<While Condition="HasQuest(10682) &amp;&amp; !IsQuestCompleted(10682)" >
+		<If Condition="HasQuest(10682) &amp;&amp; !IsQuestCompleted(10682)" >
+			<CustomBehavior File="InteractWith" WaitForNpcs="False" MobId="21981" NumOfTimes="1" GossipOptions="1, 1" CollectionDistance="200" WaitTime="1000" X="2734.665" Y="5428.965" Z="136.7944" />
+		</If>
+		<If Condition="HasQuest(10682) &amp;&amp; !IsQuestCompleted(10682)" >
+			<CustomBehavior File="InteractWith" WaitForNpcs="False" MobId="21981" NumOfTimes="1" GossipOptions="1, 1" CollectionDistance="200" WaitTime="1000" X="2922.638" Y="5554.461" Z="145.8868" />
+		</If>
+		<If Condition="HasQuest(10682) &amp;&amp; !IsQuestCompleted(10682)" >
+			<CustomBehavior File="InteractWith" WaitForNpcs="False" MobId="21981" NumOfTimes="1" GossipOptions="1, 1" CollectionDistance="200" WaitTime="1000" X="3042.033" Y="5704.419" Z="145.0355" />
+		</If>
+		<If Condition="HasQuest(10682) &amp;&amp; !IsQuestCompleted(10682)" >
+			<CustomBehavior File="InteractWith" WaitForNpcs="False" MobId="21981" NumOfTimes="1" GossipOptions="1, 1" CollectionDistance="200" WaitTime="1000" X="3098.775" Y="5629.465" Z="144.3432" />
+		</If>
+		<If Condition="HasQuest(10682) &amp;&amp; !IsQuestCompleted(10682)" >
+			<CustomBehavior File="InteractWith" WaitForNpcs="False" MobId="21981" NumOfTimes="1" GossipOptions="1, 1" CollectionDistance="200" WaitTime="1000" X="3130.064" Y="5584.586" Z="145.6864" />
+		</If>
+		<If Condition="HasQuest(10682) &amp;&amp; !IsQuestCompleted(10682)" >
+			<CustomBehavior File="InteractWith" WaitForNpcs="False" MobId="21981" NumOfTimes="1" GossipOptions="1, 1" CollectionDistance="200" WaitTime="1000" X="3221.434" Y="5465.011" Z="146.9836" />
+		</If>
+		<If Condition="HasQuest(10682) &amp;&amp; !IsQuestCompleted(10682)" >
+			<CustomBehavior File="InteractWith" WaitForNpcs="False" MobId="21981" NumOfTimes="1" GossipOptions="1, 1" CollectionDistance="200" WaitTime="1000" X="3455.056" Y="5428.922" Z="143.1626" />
+		</If>
+		<If Condition="HasQuest(10682) &amp;&amp; !IsQuestCompleted(10682)" >
+			<CustomBehavior File="InteractWith" WaitForNpcs="False" MobId="21981" NumOfTimes="1" GossipOptions="1, 1" CollectionDistance="200" WaitTime="1000" X="3393.098" Y="5400.512" Z="148.3481" />
+		</If>
+		
+		<If Condition="HasQuest(10682) &amp;&amp; IsQuestCompleted(10682)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning in Quest = A Time for Negotiation..." />
+		</If>
+		</While>
+		
+		<If Condition="HasQuest(10682) &amp;&amp; IsQuestCompleted(10682)" >
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="2979.074" Y="5487.497" Z="143.4842" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />	
+				</If>
+			<CustomBehavior File="UserSettings" PullDistance="30" />
+		
+		<TurnIn QuestName="A Time for Negotiation..." QuestId="10682" TurnInName="Tree Warden Chawn" TurnInId="22007" />
+	
+		<If Condition="!HasQuest(10713) &amp;&amp; !IsQuestCompleted(10713)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = ....and a Time for Action // Poaching from Poachers" />
+		</If>
+		<PickUp QuestName="...and a Time for Action" QuestId="10713" GiverName="Tree Warden Chawn" GiverId="22007" />
+		<PickUp QuestName="Poaching from Poachers" QuestId="10717" GiverName="Samia Inkling" GiverId="21983" />
+	
+		<If Condition="HasQuest(10717) &amp;&amp; !IsQuestCompleted(10717)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Moving to Hotspot area (Quest = ....and a Time for Action // Poaching from Poachers)." />
+		</If>
+	
+		<Objective QuestName="...and a Time for Action" QuestId="10713" Type="KillMob" MobId="21810" KillCount="10" />
+		<Objective QuestName="Poaching from Poachers" QuestId="10717" Type="CollectItem" ItemId="31119" CollectCount="5" />
+	
+		<If Condition="!HasQuest(10719) &amp;&amp; HasItem(31120)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = Did You Get The Note?" />
+		<PickUp QuestName="Did You Get The Note?" QuestId="10719" GiverType="Item" GiverName="Damaged Mask" GiverId="31120" />
+		</If>
+		
+		<If Condition="HasQuest(10717) &amp;&amp; !IsQuestCompleted(10717)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning in Quest = Poaching from Poachers." />
+		</If>	
+		<TurnIn QuestName="Poaching from Poachers" QuestId="10717" TurnInName="Samia Inkling" TurnInId="21983" />
+	
+		<If Condition="HasQuest(10713) &amp;&amp; !IsQuestCompleted(10713)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning in Quest = ...and a Time for Action // Did You Get The Note?" />
+		</If>	
+		<TurnIn QuestName="...and a Time for Action" QuestId="10713" TurnInName="Tree Warden Chawn" TurnInId="22007" />
+		<TurnIn QuestName="Did You Get The Note?" QuestId="10719" TurnInName="Tree Warden Chawn" TurnInId="22007" />
+	
+		<!-- <If Condition="!HasQuest(10747) &amp;&amp; !IsQuestCompleted(10747)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = Whelps of the Wyrmcult // Wyrmskull Watcher." />
+		</If>	
+	
+		<PickUp QuestName="Whelps of the Wyrmcult" QuestId="10747" GiverName="Samia Inkling" GiverId="21983" />	-->
+		<PickUp QuestName="Wyrmskull Watcher" QuestId="10894" GiverName="Tree Warden Chawn" GiverId="22007" />
+	
+		<!-- Disabling this till we get a CB that disables plugins (Results in skipping 2 quests)
+		<If Condition="!HasItem(31366) &amp;&amp; HasQuest(10819)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Azenius Alert: Whoops! Fel Sworn Mask destroyed! Picking up a new one." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="2982.239" Y="5461.508" Z="147.0776" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+			<CustomBehavior File="InteractWith" NpcId="22127" GossipOptions="1, 1"	/>
+		</If>
+		
+		<If Condition="!HasItem(31366) &amp;&amp; HasQuest(10820)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Azenius Alert: Whoops! Fel Sworn Mask destroyed! Picking up a new one." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="2982.239" Y="5461.508" Z="147.0776" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+			<CustomBehavior File="InteractWith" NpcId="22127" GossipOptions="1, 1"	/>
+		</If>
+	
+		<If Condition="HasItem(31366) &amp;&amp; HasQuest(10819)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Hotspot area (Quest = Felsworn Gas Mask)." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="2958.507" Y="4948.211" Z="266.6151" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />	
+			<CustomBehavior File="EquipItem" ItemId="31366" Slot="HeadSlot" />
+			<CustomBehavior File="UserDialog" Text="You must disable the Auto-Equip Plugin if you have it to continue this quest! Please disable the plugin! If you do not have this plugin or you have it disabled press continue and HB will resume. If no action is taken, HB will automatically shut down. If you have Auto-Equip plugin and it IS ENABLED, please follow these steps:
+			1. Press Stop Bot.
+			2. Click plugins, and make sure there is no checkmark next to Auto-Equip.
+			3. Hit Recompile All, wait for it to finish and then close the Plugins window.
+			4. Exit out of Honorbuddy completely! Shut Honorbuddy down completely!
+			5. Restart Honorbuddy.
+			6. Press Start.
+			7. This same dialog will REAPPEAR! If you have followed the above steps, and Auto-Equip is disabled, then you may press continue.
+			
+			
+			WARNING: PRESSING CONTINUE WITH AUTO-EQUIP PLUGIN ENABLED WILL SEND THE BOT INTO A FURY INDUCED BLOODY MASSACRING RAMPAGING GRIND OF THE DEMONS YOU SEE BEFORE YOU! NOT GOOD! YOU DO NOT WANT THAT! Believe me... I know this... I've see this..." Title="AZENIUS ALERT" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" StopOnContinue="false" ExpiryTime="180" ExpiryAction="InputEnabled_BotStop" />
+		</If>	
+		
+		<If Condition="HasItem(31366) &amp;&amp; HasQuest(10820)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Hotspot area (Quest = Felsworn Gas Mask)." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="2958.507" Y="4948.211" Z="266.6151" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />	
+			<CustomBehavior File="EquipItem" ItemId="31366" Slot="HeadSlot" />
+			<CustomBehavior File="UserDialog" Text="You must disable the Auto-Equip Plugin if you have it to continue this quest! Please disable the plugin! If you do not have this plugin or you have it disabled press continue and HB will resume. If no action is taken, HB will automatically shut down. If you have Auto-Equip plugin and it IS ENABLED, please follow these steps:
+			1. Press Stop Bot.
+			2. Click plugins, and make sure there is no checkmark next to Auto-Equip.
+			3. Hit Recompile All, wait for it to finish and then close the Plugins window.
+			4. Exit out of Honorbuddy completely! Shut Honorbuddy down completely!
+			5. Restart Honorbuddy.
+			6. Press Start.
+			7. This same dialog will REAPPEAR! If you have followed the above steps, and Auto-Equip is disabled, then you may press continue.
+			
+			
+			WARNING: PRESSING CONTINUE WITH AUTO-EQUIP PLUGIN ENABLED WILL SEND THE BOT INTO A FURY INDUCED BLOODY MASSACRING RAMPAGING GRIND OF THE DEMONS YOU SEE BEFORE YOU! NOT GOOD! YOU DO NOT WANT THAT! Believe me... I know this... I've see this..." Title="AZENIUS ALERT" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" StopOnContinue="false" ExpiryTime="180" ExpiryAction="InputEnabled_BotStop" />
+		</If>	
+		
+		<If Condition="HasQuest(10819) &amp;&amp; HasItem(31366)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning in Quest = Felsworn Gas Mask." />
+			<TurnIn QuestName="Felsworn Gas Mask" QuestId="10819" TurnInName="Legion Communicator" TurnInId="185165" />
+		</If>
+		
+	
+	
+		<If Condition="!HasQuest(10819) &amp;&amp; HasItem(31366) &amp;&amp; !HasQuest(10820)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = Deceive thy Enemy" />
+			<PickUp QuestName="Deceive thy Enemy" QuestId="10820" GiverName="Legion Communicator" GiverId="185165" />
+		</If>
+	
+		<Objective QuestName="Deceive thy Enemy" QuestId="10820" Type="KillMob" MobId="19961" KillCount="4" />
+		<Objective QuestName="Deceive thy Enemy" QuestId="10820" Type="KillMob" MobId="19960" KillCount="4" />
+		
+		<If Condition="HasQuest(10820) &amp;&amp; HasItem(31366)" >
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning in Quest = Deceive thy Enemy" />
+		<TurnIn QuestName="Deceive thy Enemy" QuestId="10820" TurnInName="Legion Communicator" TurnInId="185165" />
+		<CustomBehavior File="UserDialog" Text="Hello again! You may now re-enable Auto-Equip if you wish to do so. If no action is taken, the bot will auto-resume when the time expires(30 Seconds.)" Title="AZENIUS ALERT" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" StopOnContinue="false" ExpiryTime="30" ExpiryAction="InputEnabled_Continue" />
+		</If> -->
+	
+		<While Condition="HasQuest(10567) &amp;&amp; !IsQuestCompleted(10567)">
+		<If Condition="HasQuest(10567) &amp;&amp; !IsQuestCompleted(10567)">
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Hotspot area (Quest = Creating the Pendant)." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="3315.969" Y="5313.77" Z="179.6535" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />	
+		</If>			
+		
+		<Objective QuestName="Creating the Pendant" QuestId="10567" Type="CollectItem" ItemId="30704" CollectCount="6" />
+		
+		<While Condition="HasItem(30704) &amp;&amp; HasQuest(10567) &amp;&amp; !IsQuestCompleted(10567)" > 
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Using Item (Quest = Creating the Pendant)." />
+			<UseItem QuestId="10567" ItemId="30704" NumOfTimes="1" X="3219.048" Y="5347.058" Z="144.5372" />
+			<CustomBehavior File="WaitTimer" WaitTime="5000" />
+			<CustomBehavior File="CollectThings" CollectUntil="NoTargetsInArea" MobId1="21767" CollectItemId="30706" CollectItemCount="1" PostInteractDelay="3500" HuntingGroundRadius="200" X="3219.048" Y="5347.058" Z="144.5372" />
+		</While>
+		</While>
+			
+		<If Condition="HasQuest(10714) &amp;&amp; !IsQuestCompleted(10714)" > 
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Hotspot area (Quest = On Spirit's Wings)." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="3313.976" Y="5744.908" Z="-10.33777" />
+            <CustomBehavior File="ForcedDismount" />
+		</If>
+		
+		<While Condition="HasQuest(10714) &amp;&amp; !IsQuestCompleted(10714)">
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+			<RunTo X="3297.47" Y="5724.776" Z="-8.683793" />
+			<CustomBehavior File="UseItemTargetLocation" NumOfTimes="1" ItemId="31128" WaitTime="10000" UseType="PointToPoint" ClickToX="3281.616" ClickToY="5705.746" ClickToZ="-5.366309" /> />
+			<RunTo X="3315.841" Y="5742.46" Z="-10.3383" />
+		</While>
+		
+		<If Condition="HasQuest(10714) &amp;&amp; IsQuestCompleted(10714)" >
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Hearthing to Thunderlord Stronghold (Quest Turn in= On Spirit's Wings)." />
+			<CustomBehavior File="RunMacro" Macro="/use hearthstone" NumOfTimes="1" WaitTime="15000"/>
+		</If>	
+		<CustomBehavior File="UserSettings" PullDistance="30" />
+		
+		<TurnIn QuestName="On Spirit's Wings" QuestId="10714" TurnInName="Rexxar" TurnInId="21984" /> 
+		<If Condition="HasQuest(10714) &amp;&amp; IsQuestCompleted(10714)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = Baron Sablemane." />
+		</If>
+		<PickUp QuestName="Baron Sablemane" QuestId="10783" GiverName="Rexxar" GiverId="21984" />
+	
+		<If Condition="HasQuest(10567) &amp;&amp; IsQuestCompleted(10567)" >
+				<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to 'Evergrove'(Turning in Quest = Creating the Pendant)." />
+				<CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="2982.239" Y="5461.508" Z="147.0776" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>
+	
+		<TurnIn QuestName="Creating the Pendant" QuestId="10567" TurnInName="Timeon" TurnInId="21782" />
+	
+		<If Condition="!HasQuest(10607) &amp;&amp; !IsQuestCompleted(10607)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = Whispers of the Raven God." />
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning in Quest = Baron Sablemane." />
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = Into the Churning Gulch." />
+		</If>
+		
+		<PickUp QuestName="Whispers of the Raven God" QuestId="10607" GiverName="Timeon" GiverId="21782" />
+		<TurnIn QuestName="Baron Sablemane" QuestId="10783" TurnInName="Baron Sablemane" TurnInId="22103" />
+		<PickUp QuestName="Into the Churning Gulch" QuestId="10715" GiverName="Baron Sablemane" GiverId="22103" />
+		<If Condition="HasQuest(10715) &amp;&amp; !IsQuestCompleted(10715)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Hotspot area (Quest = Into the Churning Gulch)." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="2803.903" Y="6220.214" Z="11.98852" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>
+		
+		<Objective QuestName="Into the Churning Gulch" QuestId="10715" Type="CollectItem" ItemId="31132" CollectCount="7" />
+		
+		<If Condition="HasQuest(10715) &amp;&amp; IsQuestCompleted(10715)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Circle of Blood (Turning in Quest = Into the Churning Gulch)." />
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = Baron Sablemane's Poison." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="2921.019" Y="5973.807" Z="11.74947" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>	
+		<TurnIn QuestName="Into the Churning Gulch" QuestId="10715" TurnInName="Baron Sablemane" TurnInId="22103" />
+		<PickUp QuestName="Baron Sablemane's Poison" QuestId="10749" GiverName="Baron Sablemane" GiverId="22103" />
+
+		<If Condition="HasQuest(10749) &amp;&amp; IsQuestCompleted(10749)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Thunderlord Stronghold (Turning in Quest = Baron Sablemane's Poison)." />
+			<!-- <CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = The Smallest Creatures." /> -->
+            <CustomBehavior File="FlyTo" X="2356.445" Y="6036.783" Z="141.3971" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>	
+		
+		<TurnIn QuestName="Baron Sablemane's Poison" QuestId="10749" TurnInName="Rexxar" TurnInId="21984" />
+		<!-- <PickUp QuestName="The Smallest Creatures" QuestId="10720" GiverName="Rexxar" GiverId="21984" /> -->
+		
+		<If Condition="HasQuest(10720) &amp;&amp; !IsQuestCompleted(10720)" >
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = Crush the Bloodmaul Camp." />
+		</If>
+		
+		<PickUp QuestName="Crush the Bloodmaul Camp" QuestId="10784" GiverName="Tor'chunk Twoclaws" GiverId="21147" />
+		
+		<If Condition="HasQuest(10784) &amp;&amp; !IsQuestCompleted(10784)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Hotspot (Quest = Crush the Bloodmaul Camp.)" />
+            <CustomBehavior File="FlyTo" X="3467.295" Y="5797.42" Z="8.896783" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>	
+		
+		<Objective QuestName="Crush the Bloodmaul Camp" QuestId="10784" Type="KillMob" MobId="19993" KillCount="10" />
+		<Objective QuestName="Crush the Bloodmaul Camp" QuestId="10784" Type="KillMob" MobId="19994" KillCount="5" />
+		
+		<!-- //This quest needs special love // The Smallest Creatures //
+		<If Condition="HasQuest(10784) &amp;&amp; IsQuestCompleted(10784)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Use Item Location (Quest = The Smallest Creatures)" />
+            <CustomBehavior File="FlyTo" X="3345.574" Y="5774.482" Z="-6.925958" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>	
+		
+		<If Condition="HasQuest(10720) &amp;&amp; !IsQuestCompleted(10720)" >
+		<CustomBehavior File="UserDialog" Text="Attention! If you are using a class/spec that uses a pet, you must disable use of your pet in your cc to continue this quest. This quest will not work if the CC is set to use your classes pet. Please stop the bot, disable pet use then restart the bot. This dialog will reappear. Just press continue." Title="AZENIUS ALERT" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="3" StopOnContinue="false" ExpiryTime="30" ExpiryAction="InputEnabled_BotStop" />
+			<UseItem ItemId="31141" QuestId="10720" NumOfTimes="1" X="3351.216" Y="5780.081" Z="-8.23575" />
+		</If> 
+		
+		//For the time being, all quests succeeding this quest in the chain will be disabled until issues with "The Smallest Creatures" have been resolved. //
+		
+		<TurnIn QuestName="The Smallest Creatures" QuestId="10720" TurnInName="Rexxar" TurninId="21984" />
+		<PickUp QuestName="A Boaring Time for Grulloc" QuestId="10721" GiverName="Rexxar" GiverId="21984" />
+		<Objective QuestName="A Boaring Time for Grulloc" QuestId="10721" Type="CollectItem" ItemId="31349" CollectCount="1" />
+		<TurnIn QuestName="A Boaring Time for Grulloc" QuestId="10721" TurnInName="Baron Sablemane" TurnInId="22103" />
+		
+		<If Condition="HasQuest(10721) &amp;&amp; !IsQuestCompleted(10721)" >
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Hotspot(Quest = A Boaring Time for Grulloc)." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="2719.398" Y="5562.679" Z="4.872413" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+			<UseItem ItemId="31350" QuestId="10721" X="2658.595" Y="5547.37" Z="0.2700516" />
+			<Objective QuestName="A Boaring Time for Grulloc" QuestId="10721" Type="CollectItem" ItemId="31349" CollectCount="1" />
+			<CustomBehavior File="RunLikeHell" AllowCombat="False" X="2632.321" Y="5574.127" Z="0.9355083" />
+			</If>	
+			
+		<If Condition="HasQuest(10721) &amp;&amp; IsQuestCompleted(10721)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Circle of Blood (Turning in Quest = A Boaring Time for Grulloc)." />
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = It's a Trap!" />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="2918.392" Y="5957.337" Z="3.162585" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>
+		
+		<TurnIn QuestName="A Boaring Time for Grulloc" QuestId="10721" TurnInName="Baron Sablemane" TurnInId="22103" />
+		<PickUp QuestName="It's a Trap!" QuestId="10785" GiverName="Baron Sablemane" GiverId="22103" />
+		<If Condition="HasQuest(10785) &amp;&amp; IsQuestCompleted(10785)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Hearthing to Thunderlord Stronghold (Quest Turn in= It's a Trap!)" />
+			<CustomBehavior File="RunMacro" Macro="/use hearthstone" NumOfTimes="1" WaitTime="15000"/>
+		</If>	
+
+		<TurnIn QuestName="It's a Trap!" QuestId="10785" TurnInName="Rexxar" TurnInId="21984" />
+		<PickUp QuestName="Gorgrom the Dragon-Eater" QuestId="10723" GiverName="Rexxar" GiverId="21984" />
+		<PickUp QuestName="Slaughter at Boulder'mok" QuestId="10786" GiverName="Tor'chunk Twoclaws" GiverId="21147" />
+		<If Condition="HasQuest(10786) &amp;&amp; !IsQuestCompleted(10786)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Turn in Quest = Wyrmskull Watcher." />
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = Longtail is the Lynchpin." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="3089.004" Y="6086.396" Z="135.4002" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>
+		<TurnIn QuestName="Wyrmskull Watcher" QuestId="10894" TurnInName="Watcher Moonshade" TurnInId="22386" />
+		<PickUp QuestName="Longtail is the Lynchpin" QuestId="10893" GiverName="Watcher Moonshade" GiverId="22386" />
+		<Objective QuestName="Longtail is the Lynchpin" QuestId="10893" Type="KillMob" MobId="22396" KillCount="1" />
+		<TurnIn QuestName="Longtail is the Lynchpin" QuestId="10893" TurnInName="Watcher Moonshade" TurnInId="22386" />
+
+
+	
+		<Objective QuestName="Slaughter at Boulder'mok" QuestId="10786" Type="KillMob" MobId="21046" KillCount="5" />
+		<Objective QuestName="Slaughter at Boulder'mok" QuestId="10786" Type="KillMob" MobId="21047" KillCount="3" />
+		<TurnIn QuestName="Slaughter at Boulder'mok" QuestId="10786" TurnInName="Tor'chunk Twoclaws" TurnInId="21147" />
+
+
+		<Objective QuestName="Gorgrom the Dragon-Eater" QuestId="10723" Type="KillMob" MobId="22434" KillCount="3" />
+		<Objective QuestName="Gorgrom the Dragon-Eater" QuestId="10723" Type="CollectItem" ItemId="31752" CollectCount="1" />
+		<Objective QuestName="Gorgrom the Dragon-Eater" QuestId="10723" Type="CollectItem" ItemId="31754" CollectCount="3" />
+		<TurnIn QuestName="Gorgrom the Dragon-Eater" QuestId="10723" TurnInName="Rexxar" TurnInId="21984" />
+		-->
+		
+		<If Condition="HasQuest(10784) &amp;&amp; IsQuestCompleted(10784)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Thunderlord Stronghold (Turn in Quest = Crush the Bloodmaul Camp)" />
+            <CustomBehavior File="FlyTo" X="2292.932" Y="6027.665" Z="147.1592" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+		<TurnIn QuestName="Crush the Bloodmaul Camp" QuestId="10784" TurnInName="Tor'chunk Twoclaws" TurnInId="21147" />
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Turn in Quest = Wyrmskull Watcher." />
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = Longtail is the Lynchpin." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="3089.004" Y="6086.396" Z="135.4002" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>
+		
+		<TurnIn QuestName="Wyrmskull Watcher" QuestId="10894" TurnInName="Watcher Moonshade" TurnInId="22386" />
+		<PickUp QuestName="Longtail is the Lynchpin" QuestId="10893" GiverName="Watcher Moonshade" GiverId="22386" />
+		
+		<If Condition="HasQuest(10893) &amp;&amp; !IsQuestCompleted(10893)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Moving to Hotspot (Quest = Longtail is the Lynchpin)." />
+		</If>
+		
+		<Objective QuestName="Longtail is the Lynchpin" QuestId="10893" Type="KillMob" MobId="22396" KillCount="1" />
+		
+		<If Condition="HasQuest(10893) &amp;&amp; IsQuestCompleted(10893)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning in Quest = Longtail is the Lynchpin." />
+			<!-- <CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = Meeting at The Blackwing Coven." /> -->
+		</If>
+		
+		<TurnIn QuestName="Longtail is the Lynchpin" QuestId="10893" TurnInName="Watcher Moonshade" TurnInId="22386" />
+		<!-- <PickUp QuestName="Meeting at The Blackwing Coven" QuestId="10722" GiverName="Watcher Moonshade" GiverId="22386" /> -->
+		
+		<If Condition="HasQuest(10607) &amp;&amp; !IsQuestCompleted(10607)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Hotspot (Quest = Whispers of the Raven God)." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="3688.956" Y="6663.185" Z="143.3056" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+		
+		</If>	
+			
+		<While Condition="HasQuest(10607) &amp;&amp; !IsObjectiveComplete(3, 10607)">
+			<While Condition="HasQuest(10607) &amp;&amp; !IsObjectiveComplete(3, 10607) &amp;&amp; !Me.HasAura(&quot;Understanding Ravenspeech&quot;)">
+				<CustomBehavior File="InteractWith" WaitForNpcs="False" MobId1="19988" MobId2="19989" MobId3="19990" NumOfTimes="1" X="3626.142" Y="6625.97" Z="130.4682" />
+			</While>
+			
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+			<CustomBehavior File="FlyTo" X="3732.601" Y="6640.996" Z="133.6455" />
+			<CustomBehavior File="ForcedDismount" />
+			<CustomBehavior File="UserSettings" PullDistance="30" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="False" ObjectType="GameObject" MobId="184968" NumOfTimes="1" X="3732.601" Y="6640.996" Z="133.6455" />
+			
+		</While>
+		
+		<While Condition="HasQuest(10607) &amp;&amp; !IsObjectiveComplete(1, 10607)">
+			<While Condition="HasQuest(10607) &amp;&amp; !IsObjectiveComplete(1, 10607) &amp;&amp; !Me.HasAura(&quot;Understanding Ravenspeech&quot;)">
+				<CustomBehavior File="InteractWith" WaitForNpcs="False" MobId1="19988" MobId2="19989" MobId3="19990" NumOfTimes="1" X="3626.142" Y="6625.97" Z="130.4682" />
+			</While>
+			
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+			<CustomBehavior File="FlyTo" X="3772.378" Y="6639.089" Z="149.3352" />
+			<CustomBehavior File="ForcedDismount" />
+			<CustomBehavior File="UserSettings" PullDistance="30" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="False" ObjectType="GameObject" MobId="184950" NumOfTimes="1" X="3787.168" Y="6724.605" Z="169.6738" />
+			
+		</While>
+		
+		<While Condition="HasQuest(10607) &amp;&amp; !IsObjectiveComplete(2, 10607)">
+			<While Condition="HasQuest(10607) &amp;&amp; !IsObjectiveComplete(2, 10607) &amp;&amp; !Me.HasAura(&quot;Understanding Ravenspeech&quot;)">
+				<CustomBehavior File="InteractWith" WaitForNpcs="False" MobId1="19988" MobId2="19989" MobId3="19990" NumOfTimes="1" X="3626.142" Y="6625.97" Z="130.4682" />
+			</While>
+			
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+			<CustomBehavior File="FlyTo" X="3639.643" Y="6512.203" Z="165.6888" />
+			<CustomBehavior File="ForcedDismount" />
+			<CustomBehavior File="UserSettings" PullDistance="30" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="False" ObjectType="GameObject" MobId="184967" NumOfTimes="1" X="3625.232" Y="6543.237" Z="155.0126" />
+			
+		</While>
+		
+		<While Condition="HasQuest(10607) &amp;&amp; !IsObjectiveComplete(4, 10607)">
+			<While Condition="HasQuest(10607) &amp;&amp; !IsObjectiveComplete(4, 10607) &amp;&amp; !Me.HasAura(&quot;Understanding Ravenspeech&quot;)">
+				<CustomBehavior File="InteractWith" WaitForNpcs="False" MobId1="19988" MobId2="19989" MobId3="19990" NumOfTimes="1" X="3626.142" Y="6625.97" Z="130.4682" />
+			</While>
+			
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+			<CustomBehavior File="FlyTo" X="3584.923" Y="6660.626" Z="128.7213" />
+			<CustomBehavior File="ForcedDismount" />
+			<CustomBehavior File="UserSettings" PullDistance="30" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="False" ObjectType="GameObject" MobId="184969" NumOfTimes="1" X="3584.923" Y="6660.626" Z="128.7213" />
+			
+		</While>
+		
+		<If Condition="HasItem(31489)">
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = The Truth Unorbed." />
+			<PickUp QuestName="The Truth Unorbed" QuestId="10825" GiverType="Item" GiverName="Orb of the Grishna" GiverId="31489" />
+		</If>
+		
+		<If Condition="!HasQuest(10825) &amp;&amp; !IsQuestCompleted(10825) &amp;&amp; !HasItem(31489)">
+			<CustomBehavior File="CollectThings" CollectUntil="RequiredCountReached" CollectItemId="31489" CollectItemCount="1" MobId1="19988" MobId2="19989" MobId3="19990">
+					<Hotspot X="3596.488" Y="6657.572" Z="128.8867" />
+					<Hotspot X="3642.625" Y="6613.757" Z="131.5917" />
+					<Hotspot X="3700.985" Y="6693.757" Z="133.4649" />
+					<Hotspot X="3755.811" Y="6710.48" Z="137.1413" />
+					<Hotspot X="3767.358" Y="6639.585" Z="149.2537" />
+				</CustomBehavior>
+			</If>
+		
+		<If Condition="HasItem(31489)">
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking up Quest = The Truth Unorbed." />
+			<PickUp QuestName="The Truth Unorbed" QuestId="10825" GiverType="Item" GiverName="Orb of the Grishna" GiverId="31489" />
+		</If>
+		
+		<!-- Disabling this till I get a better look at it
+		<If Condition="HasQuest(10747) &amp;&amp; !IsQuestCompleted(10747)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Hotspot (Quest = Whelps of the Wyrmcult)." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="3294.398" Y="7140.425" Z="168.204" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>
+		
+		<While Condition="HasQuest(10747) &amp;&amp; !IsQuestCompleted(10747)">
+			<While Condition="HasQuest(10747) &amp;&amp; !IsQuestCompleted(10747) &amp;&amp; HasItem(31129)">
+				<CustomBehavior File="UseItemOn" ItemId="31129" NumOfTimes="1" MobId="21387" MobState="Alive" WaitTime="5000" Range="18" X="3172.636" Y="7104.211" Z="177.4997" CollectionDistance="200" />
+			</While>
+		<If Condition="HasQuest(10747) &amp;&amp; !IsQuestCompleted(10747)">
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Abandoning quest due to failure (Quest = Whelps of the Wyrmcult)." />
+			<CustomBehavior File="AbandonQuest" QuestId="10747" Type="Incomplete" />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="2979.715" Y="5487.398" Z="143.5424" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+			
+			<PickUp QuestName="Whelps of the Wyrmcult" QuestId="10747" GiverName="Samia Inkling" GiverId="21983" />
+			
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Hotspot (Quest = Whelps of the Wyrmcult)." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="3294.398" Y="7140.425" Z="168.204" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+				</If>
+				</While>
+
+		<While Condition="HasQuest(10722) &amp;&amp; !IsQuestCompleted(10722)">
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Collect Items (Quest = Meeting at the BlackWing Coven)." />
+		<If Condition="HasQuest(10722) &amp;&amp; !IsQuestCompleted(10722)">
+			<CustomBehavior File="CollectThings" MobId1="21637" MobId2="21382" CollectUntil="RequiredCountReached" CollectItemCount="5" CollectItemId="31121" HuntingGroundRadius="200">
+				<Hotspot X="3273.127" Y="7129.704" Z="169.8153" />
+				<Hotspot X="3202.619" Y="7115.569" Z="173.9065" />
+			</CustomBehavior>
+		</If>
+		<If Condition="HasQuest(10722) &amp;&amp; !IsQuestCompleted(10722)" >
+			<CustomBehavior File="UserSettings" PullDistance="1" HarvestMinerals="False" HarvestHerbs="False" />
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Using Item (Quest = Meeting at the BlackWing Coven)." />	
+			<UseItem QuestId="10722" ItemId="31121" NumOfTimes="1" WaitTime="5000" X="3059.844" Y="7103.222" Z="153.0973" />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+			<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Going to interrogate that bitch (Quest = Meeting at the BlackWing Coven)." />
+			<CustomBehavior File="InteractWith" MobId="22019" NumOfTimes="1" GossipOptions="1, 1, 1, 1, 1, 1, 1" />
+			<CustomBehavior File="WaitTimer" WaitTime="3000" />
+		</If>
+		</While> -->
+		
+		<If Condition="HasQuest(10607) &amp;&amp; IsQuestCompleted(10607)" >
+				<CustomBehavior File="UserSettings" PullDistance="1" />
+				<CustomBehavior File="FlyTo" X="2979.715" Y="5487.398" Z="143.5424" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="UserSettings" PullDistance="30" />
+			<!-- <CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Turn in Quest = Whelps of the Wyrmcult." /> -->
+			<!-- <CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Turn in Quest = Meeting at the Blackwing Coven." /> -->
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Turn in Quest = The Truth Unorbed." />
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Turn in Quest = Whispers of the Raven God." />
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking Up Quest = Maxnar Must Die!" />
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking Up Quest = Treebole Must Know." />
+		</If>
+		
+		<TurnIn QuestName="The Truth Unorbed" QuestId="10825" TurnInName="Tree Warden Chawn" TurnInId="22007" />
+		<TurnIn QuestName="Whispers of the Raven God" QuestId="10607" TurnInName="Timeon" TurnInId="21782" />
+		<PickUp QuestName="Treebole Must Know" QuestId="10829" GiverName="Tree Warden Chawn" GiverId="22007" />
+		
+		<If Condition="HasQuest(10829)">
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Turn in Quest = Treebole Must Know." />
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Picking Up Quest = Excorcising the Trees." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="3564.771" Y="6855.813" Z="139.6106" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+		</If>
+		
+		<TurnIn QuestName="Treebole Must Know" QuestId="10829" TurnInName="Treebole" TurnInId="22215" />
+		<PickUp QuestName="Exorcising the Trees" QuestId="10830" GiverName="Treebole" GiverId="22215" />
+		
+		<If Condition="HasQuest(10830) &amp;&amp; !IsQuestCompleted(10830)" >
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Hotspot (Quest = Excorcising the Trees)." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="3685.785" Y="6712.243" Z="133.886" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Moving to Hotspot (Quest = Excorcising the Trees)." />
+		</If>
+		
+		<If Condition="HasQuest(10830) &amp;&amp; !IsQuestCompleted(10830)" >
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Collecting Things (Quest = Excorcising the Trees)." />
+			<CustomBehavior File="CollectThings" ObjectId="182941" CollectItemId="31495" CollectUntil="RequiredCountReached" CollectItemCount="5" />
+		</If>
+		
+		<If Condition="HasQuest(10830) &amp;&amp; !IsQuestCompleted(10830)" >
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to Hotspot (Quest = Excorcising the Trees)." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="3348.094" Y="6790.287" Z="169.0068" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Moving to Hotspot (Quest = Excorcising the Trees)." />
+		</If>
+		
+		<If Condition="HasQuest(10830) &amp;&amp; !IsQuestCompleted(10830)" >
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Collecting Things (Quest = Excorcising the Trees)." />
+			<CustomBehavior File="CollectThings" MobId="21042" CollectItemId="31517" CollectUntil="RequiredCountReached" CollectItemCount="5">
+					<Hotspot X="3348.094" Y="6790.287" Z="169.0068" />
+					<Hotspot X="3345.172" Y="6891.037" Z="165.37" />
+					<Hotspot X="3329.413" Y="7043.626" Z="161.3391" />
+					<Hotspot X="3665.634" Y="6959.61" Z="143.1514" />
+			</CustomBehavior>
+			<CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(31517)" />
+			<CustomBehavior File="WaitTimer" WaitTime="2000" />
+			<CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(31517)" />
+			<CustomBehavior File="WaitTimer" WaitTime="2000" />
+			<CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(31517)" />
+			<CustomBehavior File="WaitTimer" WaitTime="2000" />
+			<CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(31517)" />
+			<CustomBehavior File="WaitTimer" WaitTime="2000" />
+			<CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(31517)" />
+			<CustomBehavior File="WaitTimer" WaitTime="2000" />
+		</If>
+		
+		<While Condition="HasQuest(10830) &amp;&amp; !IsQuestCompleted(10830)" >
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Using Item(Quest = Excorcising the Trees)." />
+			<CustomBehavior File="CombatUseItemOn" MobId="21326" ItemId="31518" MobHpPercentLeft="99" NumOfTimes="1" X="3665.634" Y="6959.61" Z="143.1514" />
+			<CustomBehavior File="WaitTimer" WaitTime="2000" />
+		</While>
+		
+		<If Condition="HasQuest(10830) &amp;&amp; IsQuestCompleted(10830)">
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning In Quest = Excorcising the Trees." />
+		</If>
+		
+		<If Condition="HasQuest(10830) &amp;&amp; IsQuestCompleted(10830)">
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning in Quest = Excorcising the Trees." />
+			<CustomBehavior File="UserSettings" PullDistance="1" />
+            <CustomBehavior File="FlyTo" X="3564.771" Y="6855.813" Z="139.6106" />
+            <CustomBehavior File="ForcedDismount" />
+            <CustomBehavior File="UserSettings" PullDistance="30" />
+				</If>
+		
+		<TurnIn QuestName="Exorcising the Trees" QuestId="10830" TurnInName="Treebole" TurnInId="22215" />
+		
+		<!-- <If Condition="HasQuest(10748) &amp;&amp; !IsQuestComplete(10748)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Moving to Hotspot (Quest = Maxnar Must Die!)" />
+		</If>
+		<Objective QuestName="Maxnar Must Die!" QuestId="10748" Type="KillMob" MobId="21389" KillCount="1" />
+		<If Condition="HasQuest(10748) &amp;&amp; !IsQuestComplete(10748)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning in Quest = Maxnar Must Die!" />
+		</If>
+		
+		<If Condition="HasQuest(10748) &amp;&amp; IsQuestCompleted(10748)">
+				<CustomBehavior File="Message" LogColor="SpringGreen" Text="Flying to 'Evergrove'(Turning in Quest = Maxnar Must Die!)" />
+				<CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="2982.239" Y="5461.508" Z="147.0776" />
+                <CustomBehavior File="ForcedDismount" />
+                <CustomBehavior File="UserSettings" PullDistance="30" />
+			</If>
+		
+	<TurnIn QuestName="Maxnar Must Die!" QuestId="10748" TurnInName="Tree Warden Chawn" TurnInId="22007" /> -->
+	
+		<!--<If Condition="HasQuest(10830) &amp;&amp; !IsQuestCompleted(10830)" >
+			<CustomBehavior File="Message" LogColor="SpringGreen" Text="Moving to Hotspot (Quest = Excorcising the Trees)." />
+			<CustomBehavior File="UseGameObject" ObjectId="182941" NumOfTimes="1" X="3666.613" Y="6580.48" Z="133.7848" />
+			<CustomBehavior File="UseGameObject" ObjectId="182941" NumOfTimes="1" X="3617.442" Y="6604.649" Z="133.0417" />
+			<CustomBehavior File="UseGameObject" ObjectId="182941" NumOfTimes="1" X="3754.305" Y="6584.915" Z="145.2585" />
+			<CustomBehavior File="UseGameObject" ObjectId="182941" NumOfTimes="1" X="3742.366" Y="6559.892" Z="180.3627" />
+			<CustomBehavior File="UseGameObject" ObjectId="182941" NumOfTimes="1" X="3733.588" Y="6547.555" Z="180.4276" />
+			<CustomBehavior File="UseGameObject" ObjectId="182941" NumOfTimes="1" X="3649.878" Y="6679.616" Z="174.7522" />
+			<TurnIn QuestName="Exorcising the Trees" QuestId="10830" TurnInName="Treebole" TurnInId="22215" />
+		</If>
+		
+		<If Condition="HasQuest(10384) &amp;&amp; IsQuestCompleted(10384)">
+				<CustomBehavior File="UserSettings" PullDistance="1" />
+				<CustomBehavior File="FlyTo" X="4017.812" Y="2319.489" Z="114.355" />
+				<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="UserSettings" PullDistance="30" />
+					</If>
+				<CustomBehavior File="UserSettings" PullDistance="30" /> -->
+
+		
+		<CustomBehavior File="LoadProfile" Profile="Netherstorm.xml" />
+
+</QuestOrder>
+
+</HBProfile>

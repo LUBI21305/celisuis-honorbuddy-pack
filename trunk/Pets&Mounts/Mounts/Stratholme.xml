@@ -1,0 +1,53 @@
+<!-- Created by Koalemos -->
+<!-- Must be started on undead side after the second gate is opened -->
+<HBProfile>
+<Name>Stratholme</Name>
+<MinDurability>0</MinDurability>
+<MinFreeBagSlots>0</MinFreeBagSlots>
+<SellGrey>True</SellGrey>
+<SellWhite>True</SellWhite>
+<SellGreen>False</SellGreen>
+<MinLevel>50</MinLevel>
+<MaxLevel>85</MaxLevel>
+<ProtectedItems>
+</ProtectedItems>
+<SubProfile>
+<Name>The Shattered Halls</Name>
+<MinLevel>50</MinLevel>
+<MaxLevel>85</MaxLevel>
+<Factions>16 24 90 21</Factions>
+<AvoidMobs>
+<AvoidMob Name="Magistrate Barthilas" Entry="10435" />
+</AvoidMobs>
+<TargetElites>True</TargetElites> 
+<Blackspots>
+<Blackspot X="4053.833" Y="-3525.104" Z="121.9191" Radius="11.96724" />
+</Blackspots>
+<GrindArea>
+<RandomizeHotspots>False</RandomizeHotspots>
+<MaximumHotspotTime>2000</MaximumHotspotTime>
+<Hotspots>
+<!-- First Zigg -->
+<Hotspot X="3839.872" Y="-3500.402" Z="144.2095" />
+<!-- Second Zigg -->
+<Hotspot X="4058.743" Y="-3666.896" Z="135.3361" />
+<!-- Thrid Zigg -->
+<Hotspot X="3847.524" Y="-3748.69" Z="147.9377" />
+<!-- Left Side Slaughterhouse -->
+<Hotspot X="3986.954" Y="-3402.563" Z="118.5219" />
+<!-- Center Slaighterhouse -->
+<Hotspot X="4044.072" Y="-3432.581" Z="118.1904" />
+<!-- Right Side Slaughterhouse -->
+<Hotspot X="4088.553" Y="-3396.157" Z="115.6533" />
+<!-- Baron's Outside Door - Be patient as adds come if you don't sneak in the door -->
+<Hotspot X="4033.72" Y="-3390.177" Z="119.7397" />
+<!-- Baron's Room -->
+<Hotspot X="4032.391" Y="-3347.392" Z="115.0594" />
+<!-- Back to Gate to start over -->
+<Hotspot X="3781.992" Y="-3594.986" Z="144.7269" />
+</Hotspots>
+</GrindArea>
+<Vendors>
+</Vendors>
+</SubProfile>
+</HBProfile>

@@ -1,0 +1,46 @@
+<HBProfile>
+  <Name>Tiny Emerald Whelpling Farm - Swamp of Sorrows - Alliance</Name> 
+  <MinDurability>0.3</MinDurability> 
+  <MinFreeBagSlots>2</MinFreeBagSlots> 
+  <SellGrey>True</SellGrey> 
+  <SellWhite>True</SellWhite> 
+  <SellGreen>True</SellGreen> 
+  <SellBlue>False</SellBlue> 
+  <SellPurple>False</SellPurple> 
+  <MinLevel>20</MinLevel> 
+  <MaxLevel>81</MaxLevel> 
+
+  <ProtectedItems>
+  <Item>8498</Item>  
+  </ProtectedItems>
+
+  <ForceMail>
+  <Item>8498</Item> 
+  </ForceMail>
+  
+  <SubProfile>
+  <MinLevel>20</MinLevel> 
+  <MaxLevel>81</MaxLevel> 
+
+  <Vendors>
+  <Vendor Name="Strumner Flintheel" Entry="5508" Type="Repair" X="-10951.9" Y="-3455.43" Z="66.74023" />
+  </Vendors>
+  <Mailboxes>
+  <Mailbox X="-10997.01" Y="-3387.558" Z="62.13238" />
+  </Mailboxes>
+  <GrindArea>
+  <Factions>50</Factions>
+  <TargetMinLevel>20</TargetMinLevel>
+  <TargetMaxLevel>70</TargetMaxLevel>
+  <RandomizeHotspots>false</RandomizeHotspots>
+  <MaximumHotspotTime>60000</MaximumHotspotTime>
+  <Hotspots>
+  <Hotspot X="-10480.52" Y="-2605.948" Z="22.49564" />
+  <Hotspot X="-10504.97" Y="-2523.081" Z="21.61982" />
+  <Hotspot X="-10576" Y="-2496.224" Z="23.32001" />
+  <Hotspot X="-10574.65" Y="-2592.132" Z="23.63299" />
+  <Hotspot X="-10660.36" Y="-2527.108" Z="26.83402" />
+  </Hotspots>
+  </GrindArea>
+  </SubProfile>
+  </HBProfile>

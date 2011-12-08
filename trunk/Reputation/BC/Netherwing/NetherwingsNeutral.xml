@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HBProfile>
+   <!--
+      PROFILE EXPECTATIONS:
+         * When using this profile, be certain to set the HonorBuddy bot to (select only one):
+                ( ) Grinding / Mixed
+                (*) Questing
+                ( ) PvP
+   
+         * This profile is appropriate for (check all that apply):
+                [X] Alliance   [ ] Achievement
+                [X] Horde      [ ] Farming
+                               [ ] Leveling
+                               [ ] PvP
+                               [X] Questing
+                               [X] Reputation
+                               [ ] Seasonal
+   
+   
+         * An explanation of <ForceMail> and <ProtectedItems> usage is here...
+               http://www.buddyforum.de/mediawiki/index.php?title=HonorBuddy:_About_ProtectedItems_and_ForceMail
+   
+         * DO NOT INCLUDE a <ForceMail> element in a profile!
+           Instead, each user should populate his <hb_install_dir>/ForceMail.xml file.
+           The Buddy Wiki provides a robust sample <ForceMail> element here...
+               http://www.buddyforum.de/mediawiki/index.php?title=Honorbuddy:_A_prototypical_ForceMail_Element
+  
+         * DO NOT INCLUDE a <ProtectedItems> element in a profile!
+           Instead, each user should populate his <hb_install_dir>/Protected Items.xml file.
+           The Buddy Wiki provides a robust sample <ProtectedItems> element here...
+               http://www.buddyforum.de/mediawiki/index.php?title=Honorbuddy:_A_prototypical_ProtectedItems_Element -->
+   
+  
+  <Name>Netherwing Quests Neutral</Name>
+  <MinLevel>1</MinLevel>
+  <MaxLevel>90</MaxLevel>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>2</MinFreeBagSlots>
+  <MailGrey>False</MailGrey>
+  <MailWhite>False</MailWhite>
+  <MailGreen>False</MailGreen>
+  <MailBlue>False</MailBlue>
+  <MailPurple>False</MailPurple>
+  <SellGrey>False</SellGrey>
+  <SellWhite>False</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+  <TargetElites>False</TargetElites>
+
+	<Vendors>
+		<!-- Netherwing Vendor -->
+		<Vendor Name="Gug" Entry="23144" Type="Repair" X="-5119.803" Y="624.7665" Z="86.76037" />
+	</Vendors>
+
+ 
+	<QuestOrder>
+	<!-- *****************   Pickup Quests    *********************** -->
+	<PickUp QuestName="A Slow Death" GiverName="Yarzill the Merc" QuestId="11020" GiverId="23141" />
+	<PickUp QuestName="The Not-So-Friendly Skies..." GiverName="Yarzill the Merc" QuestId="11035" GiverId="23141" />
+	<!-- A Slow Death (level 70) -->
+	<!-- Yarzill the Merc at Dragonmaw Base Camp in Shadowmoon Valley wants you to use Yarzill's Mutton in conjunction with Fel Glands to poison 12 Dragonmaw Peon Camps. -->
+	<!-- Classes: Any -->
+	<!-- Races: Any -->
+	<!-- http://www.wowhead.com/quest=11020 -->
+	
+	<If Condition="HasQuest(11020) &amp;&amp; !IsQuestCompleted(11020)">
+		<CustomBehavior File="FlyTo" X="-3896.194" Y="1066.923" Z="24.52164" />	
+		<CustomBehavior File="RunMacro" Macro="/dismount" NumOfTimes="1" WaitTime="3000" />
+		<Objective QuestName="A Slow Death" QuestId="11020" Type="Collect" CollectCount="12" ItemId="32502" />	
+		<RunTo QuestId="11020" X="-3896.194" Y="1066.923" Z="24.52164" />
+		<CustomBehavior File="FlyTo" X="-4978.365" Y="619.4327" Z="80.55907" />	
+		<CustomBehavior File="RunMacro" Macro="/dismount" NumOfTimes="1" WaitTime="3000" />
+	</If>
+	
+	<!-- A Slow Death (level 70) -->
+	<!-- Yarzill the Merc at Dragonmaw Base Camp in Shadowmoon Valley wants you to use Yarzill's Mutton in conjunction with Fel Glands to poison 12 Dragonmaw Peon Camps. -->
+	<!-- Classes: Any -->
+	<!-- Races: Any -->
+	<!-- http://www.wowhead.com/quest=11020 -->
+	
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5010.754" Y="686.3812" Z="81.8564" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4968.176" Y="698.4598" Z="83.81073" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4908.556" Y="675.0245" Z="74.24344" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4966.106" Y="519.7523" Z="80.05357" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4974.983" Y="629.9418" Z="79.77267" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4978.574" Y="561.8534" Z="79.24133" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4969.38" Y="524.2421" Z="80.37807" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4878.883" Y="505.6697" Z="62.25325" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4872.274" Y="430.8166" Z="65.38007" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4905.761" Y="361.6161" Z="77.78465" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4978.82" Y="327.9359" Z="83.5665" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5001.896" Y="282.4083" Z="82.99264" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4967.442" Y="232.231" Z="79.3214" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5005.077" Y="189.0898" Z="80.48486" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4924.515" Y="227.6679" Z="64.64442" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4937.237" Y="115.5782" Z="55.83635" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4982.552" Y="48.85173" Z="77.00683" />
+	</If>
+
+
+
+	<!-- The Not-So-Friendly Skies... (level 70) -->
+	<!-- Yarzill the Merc at Dragonmaw Base Camp in Shadowmoon Valley wants you to recover 10 Netherwing Relics. -->
+	<!-- Classes: Any -->
+	<!-- Races: Any -->
+	<!-- http://www.wowhead.com/quest=11035 -->
+    <If Condition="HasQuest(11035) &amp;&amp; !IsQuestCompleted(11035)">
+		<SetGrindArea>
+			<GrindArea>	   
+				<TargetMinLevel>69</TargetMinLevel>
+				<TargetMaxLevel>71</TargetMaxLevel>	   
+				<Factions>93</Factions>	   
+				<LootRadius>50</LootRadius> <!-- optional -->
+				<MaxDistance>20</MaxDistance> <!-- optional -->
+				<Hotspots>
+					<Hotspot X="-4922.27" Y="37.01746" Z="61.80995" />    
+				</Hotspots>
+			</GrindArea>
+		</SetGrindArea>
+		<GrindTo Condition="IsQuestCompleted(11035)"/>
+	</If>
+	
+	<!-- A Slow Death (level 70) -->
+	<!-- Yarzill the Merc at Dragonmaw Base Camp in Shadowmoon Valley wants you to use Yarzill's Mutton in conjunction with Fel Glands to poison 12 Dragonmaw Peon Camps. -->
+	<!-- Classes: Any -->
+	<!-- Races: Any -->
+	<!-- http://www.wowhead.com/quest=11020 -->
+	
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5125.716" Y="39.86" Z="78.26057" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5199.067" Y="153.6665" Z="69.96707" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5225.339" Y="266.6502" Z="70.2494" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5286.773" Y="247.6511" Z="66.36698" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5268.694" Y="299.6546" Z="73.18431" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5260.567" Y="343.4733" Z="70.3596" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5219.692" Y="386.0021" Z="74.73689" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5182.219" Y="403.8638" Z="73.13785" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5133.319" Y="469.475" Z="78.03437" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5238.182" Y="516.4229" Z="58.9273" />
+	</If>
+	
+    <If Condition="HasQuest(11035) &amp;&amp; IsQuestCompleted(11035)">
+	<TurnIn QuestName="The Not-So-Friendly Skies..." TurnInName="Yarzill the Merc" QuestId="11035" TurnInId="23141" />
+	</If>
+	<If Condition="HasQuest(11020) &amp;&amp; IsQuestCompleted(11020)">
+	<TurnIn QuestName="A Slow Death" TurnInName="Yarzill the Merc" QuestId="11020" TurnInId="23141" />
+	</If>
+ 
+	</QuestOrder>
+  
+</HBProfile>

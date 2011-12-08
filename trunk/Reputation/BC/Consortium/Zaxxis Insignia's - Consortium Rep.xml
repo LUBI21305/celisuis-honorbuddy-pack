@@ -1,0 +1,59 @@
+ <HBProfile>
+   <Name>Zaxxis Insignia's - Consortium Rep</Name>
+   <MinLevel>70</MinLevel>
+   <MaxLevel>86</MaxLevel>
+   
+   <MinDurability>0.3</MinDurability>
+   <MinFreeBagSlots>2</MinFreeBagSlots>
+   
+   <MailGrey>False</MailGrey>
+   <MailWhite>False</MailWhite>
+   <MailGreen>False</MailGreen>
+   <MailBlue>False</MailBlue>
+   <MailPurple>False</MailPurple>
+<ProtectedItems>
+<Item Name="Zaxxis Insignia" Entry="29209" />
+
+</ProtectedItems>   
+   <SellGrey>True</SellGrey>
+   <SellWhite>True</SellWhite>
+   <SellGreen>False</SellGreen>
+   <SellBlue>False</SellBlue>
+   <SellPurple>False</SellPurple>
+
+   
+   <TargetElites>True</TargetElites>	
+   
+   <AvoidMobs>
+   </AvoidMobs>
+   
+   <Blackspots>
+   </Blackspots>
+   
+   <Mailboxes>
+   </Mailboxes>
+   
+   <Vendors>
+   </Vendors>
+   
+   <GrindArea>
+       <TargetMinLevel>60</TargetMinLevel>
+       <TargetMaxLevel>81</TargetMaxLevel>
+       <Factions>16</Factions>
+       <Hotspots>
+	<Hotspot X="2670.066" Y="3799.207" Z="140.5819" />
+        <Hotspot X="2690.761" Y="3752.855" Z="143.3204" />
+        <Hotspot X="2671.53" Y="3746.35" Z="143.8025" />
+        <Hotspot X="2656.426" Y="3721.963" Z="144.418" />
+	<Hotspot X="2628.931" Y="3734.255" Z="144.9411" />
+	<Hotspot X="2657.079" Y="3780.552" Z="143.3453" />
+	<Hotspot X="2648.251" Y="3858.5" Z="138.0113" />
+	<Hotspot X="2594.59" Y="3903.865" Z="136.7295" />
+	<Hotspot X="2544.796" Y="3888.912" Z="138.4569" />
+	<Hotspot X="2534.692" Y="3857.815" Z="138.5662" />
+	<Hotspot X="2502.702" Y="3933.365" Z="125.9217" />
+	<Hotspot X="2492.74" Y="3849.754" Z="128.0334" />
+	<Hotspot X="2529.715" Y="3776.288" Z="136.8581" />
+       </Hotspots>
+   </GrindArea>
+</HBProfile>

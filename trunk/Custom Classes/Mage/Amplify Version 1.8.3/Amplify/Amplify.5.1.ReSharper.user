@@ -1,0 +1,206 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Spells.cs" caret="5351" fromTop="98" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/d:Talents/f:TalentManager.cs" caret="2079" fromTop="25" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:LowLevel.cs" caret="1432" fromTop="21" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Arcane.cs" caret="3633" fromTop="47" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Amplify.PreCombatBuffs.cs" caret="570" fromTop="0" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:AmpConfig.cs" caret="2239" fromTop="11" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/d:Properties/f:AssemblyInfo.cs" caret="296" fromTop="0" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Frost.cs" caret="11254" fromTop="20" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Amplify.Combat.cs" caret="411" fromTop="0" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:AmplifySettings.cs" caret="5371" fromTop="10" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:AmpConfig.Designer.cs" caret="0" fromTop="0" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Amplify.cs" caret="2722" fromTop="0" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Methods.cs" caret="8025" fromTop="23" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Amplify.cs" caret="7339" fromTop="27" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Amplify.cs" caret="7339" fromTop="28" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Amplify.cs" caret="6965" fromTop="22" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Amplify.cs" caret="6660" fromTop="15" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Amplify.cs" caret="7404" fromTop="34" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Amplify.cs" caret="7404" fromTop="25" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Amplify.cs" caret="7404" fromTop="13" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Amplify.cs" caret="6624" fromTop="12" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Amplify.cs" caret="6557" fromTop="8" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Amplify.cs" caret="6360" fromTop="4" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Amplify.cs" caret="6761" fromTop="5" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:AmplifySettings.cs" caret="5371" fromTop="10" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:AmplifySettings.cs" caret="5949" fromTop="10" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:AmpConfig.cs" caret="8887" fromTop="16" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:AmpConfig.cs" caret="2239" fromTop="11" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Frost.cs" caret="5807" fromTop="24" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Frost.cs" caret="6216" fromTop="28" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Frost.cs" caret="6108" fromTop="24" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Frost.cs" caret="9641" fromTop="16" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Frost.cs" caret="10066" fromTop="21" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Frost.cs" caret="8844" fromTop="20" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Amplify.cs" caret="701" fromTop="12" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Methods.cs" caret="8830" fromTop="36" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Methods.cs" caret="6754" fromTop="33" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Methods.cs" caret="6466" fromTop="25" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Methods.cs" caret="8074" fromTop="23" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Methods.cs" caret="7683" fromTop="19" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Methods.cs" caret="7907" fromTop="30" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Methods.cs" caret="8482" fromTop="22" />
+      <File id="A3F3D514-71DE-4712-A2F6-709232110E01/f:Methods.cs" caret="7159" fromTop="15" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="AmplifySettings`0" priority="9" />
+      <Item value="Logging`0" priority="2" />
+      <Item value="MessageBoxOptions`0" priority="0" />
+      <Item value="Log`0" priority="0" />
+      <Item value="IFeatureSupport`0" priority="0" />
+      <Item value="Me" priority="13" />
+      <Item value="ManaGem" priority="0" />
+      <Item value="Form1`0" priority="0" />
+      <Item value="UseManaGem`0" priority="0" />
+      <Item value="Evocation_MP_Percent" priority="0" />
+      <Item value="if" priority="6" />
+      <Item value="color" priority="0" />
+      <Item value="Color`0" priority="0" />
+      <Item value="true" priority="0" />
+      <Item value="else" priority="2" />
+      <Item value="dr" priority="0" />
+      <Item value="DialogResult`0" priority="0" />
+      <Item value="null" priority="1" />
+      <Item value="PrioritySelector`0" priority="0" />
+      <Item value="Styx" priority="2" />
+      <Item value="Thread`0" priority="2" />
+      <Item value="StyxWoW`0" priority="0" />
+      <Item value="IsBattleGround`0" priority="1" />
+      <Item value="RunStatus`0" priority="1" />
+      <Item value="BotEvents`0" priority="0" />
+      <Item value="new" priority="1" />
+      <Item value="Action`0" priority="0" />
+      <Item value="RemoveTargetsFilterDelegate`0" priority="0" />
+      <Item value="FindClostestPlayer`0" priority="0" />
+      <Item value="p" priority="0" />
+      <Item value="Decorator`0" priority="0" />
+      <Item value="LegacySpellManager`0" priority="0" />
+      <Item value="BlinkBack`0" priority="1" />
+      <Item value="Christmas" priority="2" />
+      <Item value="DateTime`0" priority="2" />
+      <Item value="CurrTime" priority="0" />
+      <Item value="date" priority="0" />
+      <Item value="public" priority="0" />
+      <Item value="static" priority="1" />
+      <Item value="private" priority="0" />
+      <Item value="Player" priority="4" />
+      <Item value="isItemInCooldown`0" priority="0" />
+      <Item value="IsFacing" priority="4" />
+      <Item value="IsNotFacing" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Amplify.AmplifySettings">
+      <Item value="Instance" priority="10" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Amplify.AmplifySettings">
+      <Item value="Load`0" priority="1" />
+      <Item value="IcyVeinSettings" priority="0" />
+      <Item value="FlameOrbSelection" priority="1" />
+      <Item value="ArcaneBarrage_StackCount" priority="0" />
+      <Item value="Use_Evocation" priority="1" />
+      <Item value="Evocation_HP_Percent" priority="0" />
+      <Item value="IsConfigured" priority="1" />
+      <Item value="MirrorImagewhenXAdds" priority="0" />
+      <Item value="MirrorImage" priority="1" />
+      <Item value="TimeWarp" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBoxIcon">
+      <Item value="Question" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Styx.WoWInternals.WoWObjects.LocalPlayer">
+      <Item value="CurrentTarget" priority="4" />
+      <Item value="ActiveAuras" priority="1" />
+      <Item value="ClearTarget`0" priority="0" />
+      <Item value="Location" priority="0" />
+      <Item value="IsFacing`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Styx.WoWInternals.WoWObjects.WoWUnit">
+      <Item value="ActiveAuras" priority="1" />
+      <Item value="HealthPercent" priority="1" />
+      <Item value="Face`0" priority="0" />
+      <Item value="Dead" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.Dictionary`2">
+      <Item value="ContainsKey`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Styx.Logic.Combat.WoWAura">
+      <Item value="StackCount" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Styx.Helpers.Logging">
+      <Item value="Write`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Color">
+      <Item value="Red" priority="1" />
+      <Item value="DarkRed" priority="0" />
+      <Item value="Green" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DialogResult">
+      <Item value="No" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Styx.Logic.Combat.SpellManager">
+      <Item value="CanCast`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread">
+      <Item value="Sleep`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Styx.StyxWoW">
+      <Item value="SleepForLagDuration`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@TreeSharp.RunStatus">
+      <Item value="Failure" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TreeSharp.Action">
+      <Item value="Equals`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Styx.Logic.Combat.LegacySpellManager">
+      <Item value="ClickRemoteLocation`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="1" />
+      <Item value="Parse`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="Date" priority="2" />
+      <Item value="Equals`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Styx.WoWInternals.WoWObjects.WoWPlayer">
+      <Item value="IsAlive" priority="0" />
+      <Item value="IsHostile" priority="0" />
+      <Item value="Location" priority="0" />
+      <Item value="Distance" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add`0" priority="1" />
+      <Item value="Count" priority="3" />
+      <Item value="RemoveAll`0" priority="0" />
+      <Item value="Clear`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString`0" priority="1" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

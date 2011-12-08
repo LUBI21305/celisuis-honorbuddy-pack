@@ -1,0 +1,1116 @@
+<?xml version="1.0" encoding="Windows-1251"?>
+
+<HBProfile>
+	<Name>The Azenius Project [Goblin]</Name>
+	<MinLevel>1</MinLevel>
+	<MaxLevel>85</MaxLevel>
+	<MinDurability>0.4</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+	<TargetElites>False</TargetElites>
+	<AvoidMobs>
+
+	</AvoidMobs>
+	<Blackspots>
+		<Blackspot X="-8350.902" Y="1337.265" Z="91.66667" Radius="1.074424" />
+		<Blackspot X="-8434.805" Y="1334.567" Z="102.1435" Radius="1.10963" />
+	</Blackspots>
+   
+	<Mailboxes>
+        <Mailbox X="581.7218" Y="3133.704" Z="0.1080193" />
+	</Mailboxes>
+	<Vendors>
+		<Vendor Name="Chawg" Entry="36465" Type="Repair" X="860.3108" Y="2762.559" Z="117.0627" />
+        <!-- Kezan -->
+             <Vendor Name="Sister Goldskimmer" Entry="34692" Type="Train" TrainClass="Priest" X="-8425.401" Y="1347.615" Z="105.1465" />
+             <Vendor Name="Bamm Megabomb" Entry="34673" Type="Train" TrainClass="Hunter" X="-8429.455" Y="1311.641" Z="103.5002" />
+             <Vendor Name="Warrior-Matic NX-01" Entry="34697" Type="Train" TrainClass="Warrior" X="-8431.764" Y="1313.502" Z="103.0257" />
+             <Vendor Name="Maxx Avalanche" Entry="34695" Type="Train" TrainClass="Shaman" X="-8415.516" Y="1321.444" Z="103.8445" />
+             <Vendor Name="Slinky Sharpshiv" Entry="34693" Type="Train" TrainClass="Rogue" X="-8421.146" Y="1330.831" Z="102.2126" />
+             <Vendor Name="Evol Fingers" Entry="34696" Type="Train" TrainClass="Warlock" X="-8399.56" Y="1346.439" Z="103.0947" />
+             <Vendor Name="Fizz Lighter" Entry="34689" Type="Train" TrainClass="Mage" X="-8394.614" Y="1325.67" Z="103.0017" />
+        <!-- Town-In-A-Box -->
+        <!-- Town-In-A-Box Trainers -->
+             <Vendor Name="Sister Goldskimmer" Entry="38516" Type="Train" TrainClass="Priest" X="913.257" Y="2325.391" Z="5.240649" />
+             <Vendor Name="Evol Fingers" Entry="38513" Type="Train" TrainClass="Warlock" X="906.5364" Y="2329.74" Z="5.032614" />
+             <Vendor Name="Warrior-Matic NX-01" Entry="38518" Type="Train" TrainClass="Warrior" X="925.368" Y="2327.158" Z="5.169485" />
+             <Vendor Name="Bamm Megabomb" Entry="38122" Type="Train" TrainClass="Hunter" X="928.8629" Y="2340.479" Z="4.952684" />
+             <Vendor Name="Fizz Lighter" Entry="38514" Type="Train" TrainClass="Mage" X="920.6493" Y="2346.359" Z="4.786614" />
+             <Vendor Name="Maxx Avalanche" Entry="38515" Type="Train" TrainClass="Shaman" X="916.4254" Y="2347.446" Z="4.804841" />
+        <!-- Town-In-A-Box Vendors -->
+             <Vendor Name="Sally Salvager Sandscrew" Entry="38511" Type="Repair" X="907.3195" Y="2344.273" Z="5.315078" />
+             <Vendor Name="Grimy Greasefingers" Entry="42473" Type="Repair" X="913.408" Y="2354.651" Z="5.357584" />
+        <!-- Warchief's Lookout -->
+        <Vendor Name="Chawg" Entry="39063" Type="Repair" X="1607" Y="2734.594" Z="83.6583" />
+	<!-- Shipwreck Shore -->
+		<Vendor Name="Sally Salvager Sandscrew" Entry="36430" Type="Repair" X="590.0712" Y="3110.927" Z="2.89465" />
+		<Vendor Name="Warrior-Matic NX-01" Entry="35807" Type="Train" TrainClass="Warrior" X="588.559" Y="3089.471" Z="3.786797" />
+		<Vendor Name="Evol Fingers" Entry="35778" Type="Train" TrainClass="Warlock" X="604.0243" Y="3100.273" Z="7.024487" />
+		<Vendor Name="Sister Goldskimmer" Entry="35805" Type="Train" TrainClass="Priest" X="637.7257" Y="3133.108" Z="1.590197" />
+		<Vendor Name="Maxx Avalanche" Entry="35786" Type="Train" TrainClass="Shaman" X="644.816" Y="3126.258" Z="2.492275" />
+		<Vendor Name="Fizz Lighter" Entry="35780" Type="Train" TrainClass="Mage" X="646.3004" Y="3132.264" Z="1.694103" />
+		<Vendor Name="Bamm Megabomb" Entry="35758" Type="Train" TrainClass="Hunter" X="640.7864" Y="3121.731" Z="2.863209" />
+    </Vendors>
+
+	<QuestOrder>
+
+	<CustomBehavior File="UserSettings" LootMobs="True" UseMount="True" PullDistance="30" />
+		<CustomBehavior File="UserSettings" LootMobs="True" TrainNewSkills="False" LearnFlightPaths="True" UseFlightPaths="False" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Azenius Questing Profiles (Goblin Profile Loaded)." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Compiling Quests." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning off auto-train." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting UseFlightPaths to false." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting LearnFlightPaths to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting LootMobs to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting UseMount to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting PullDistance to 30." />
+		
+	<PickUp QuestName="Taking Care of Business" QuestId="14138" GiverName="Sassy Hardwrench" GiverId="34668" />
+	<TurnIn QuestName="Taking Care of Business" QuestId="14138" TurnInName="Foreman Dampwick" TurnInId="34872" />
+	<PickUp QuestName="Trouble in the Mines" QuestId="14075" GiverName="Foreman Dampwick" GiverId="34872" />
+	<PickUp QuestName="Good Help is Hard to Find" QuestId="14069" GiverName="Foreman Dampwick" GiverId="34872" />
+
+	<While Condition="HasQuest(14069) &amp;&amp; !IsQuestCompleted(14069)" >
+               <CustomBehavior File="InteractWith" MobId="34830" GossipOptions="1" X="-8459.16" Y="1227.759" Z="47.72153" />
+	</While>
+        <Objective QuestName="Trouble in the Mines" QuestId="14075" Type="KillMob" MobId="34865" KillCount="6" />
+
+        <TurnIn QuestName="Trouble in the Mines" QuestId="14075" TurnInName="Foreman Dampwick" TurnInId="34872" />
+        <TurnIn QuestName="Good Help is Hard to Find" QuestId="14069" TurnInName="Foreman Dampwick" TurnInId="34872" />
+
+        <PickUp QuestName="Kaja'Cola" QuestId="25473" GiverName="Foreman Dampwick" GiverId="34872" />
+        <TurnIn QuestName="Kaja'Cola" QuestId="25473" TurnInName="Sassy Hardwrench" TurnInId="34668" />
+        <PickUp QuestName="Megs in Marketing" QuestId="28349" GiverName="Sassy Hardwrench" GiverId="34668" />
+        <TurnIn QuestName="Megs in Marketing" QuestId="28349" TurnInName="Megs Dreadshredder" TurnInId="34874" />
+
+	<While Condition="HasQuest(14071) &amp;&amp; !IsQuestCompleted(14071)" >
+        <CustomBehavior File="RunMacro" Macro="/use Keys to the Hot Rod" NumOfTimes="1" WaitTime="3000"/> 
+        <RunTo X="-8507.509" Y="1344.598" Z="102.3405" />
+        <RunTo X="-8178.9" Y="1319.401" Z="28.18403" />
+        <RunTo X="-8068.384" Y="1481.035" Z="9.576641" />
+        <RunTo X="-8418.943" Y="1339.286" Z="102.4966" />
+        <CustomBehavior File="RunMacro" Macro="/dismount\n/cancelaura Hot Rod" NumOfTimes="1" WaitTime="3000"/> 
+        </While>
+
+        <PickUp QuestName="Rolling with my Homies" QuestId="14071" GiverName="Megs Dreadshredder" GiverId="34874" />
+        <TurnIn QuestName="Rolling with my Homies" QuestId="14071" TurnInName="Megs Dreadshredder" TurnInId="34874" />
+        <PickUp QuestName="Report for Tryouts" QuestId="24567" GiverName="Megs Dreadshredder" GiverId="34874" />
+
+        	<If Condition="Me.Gender == WoWGender.Male">
+		<PickUp QuestName="Off to the Bank" QuestId="26712" GiverName="Candy Cane" GiverId="35053" />
+	</If>
+	<If Condition="Me.Gender == WoWGender.Female">
+		<PickUp QuestName="Off to the Bank" QuestId="26711" GiverName="Chip Endale" GiverId="35054" />
+	</If>
+
+        <PickUp QuestName="Do it Yourself" QuestId="14070" GiverName="Sassy Hardwrench" GiverId="34668" />
+        <TurnIn QuestName="Report for Tryouts" QuestId="24567" TurnInName="Coach Crosscheck" TurnInId="37106" />
+        <PickUp QuestName="The Replacements" QuestId="24488" GiverName="Coach Crosscheck" GiverId="37106" />
+        <Objective QuestName="The Replacements" QuestId="24488" Type="CollectItem" ItemId="49752" CollectCount="6" />
+        <TurnIn QuestName="The Replacements" QuestId="24488" TurnInName="Coach Crosscheck" TurnInId="37106" />
+
+        <PickUp QuestName="Necessary Roughness" QuestId="24502" GiverName="Coach Crosscheck" GiverId="37106" />
+
+	<While Condition="HasQuest(24502) &amp;&amp; !IsQuestCompleted(24502)" >
+        <CustomBehavior File="MountVehOnly" VehicleMountId="48526" X="-8251.315" Y="1482.794" Z="41.42033" />
+        <CustomBehavior File="WaitTimer" WaitTime="10000" />
+        <CustomBehavior File="RunMacro" Macro="/click VehicleMenuBarActionButton1" NumOfTimes="25" WaitTime="500" />
+        </While>
+
+        <If Condition="IsQuestCompleted(24502) &amp;&amp; HasQuest(24502)">
+             <CustomBehavior File="CompleteLogQuest" QuestId="24502" />
+	     <CustomBehavior File="WaitTimer" WaitTime="2500" />
+        </If>
+
+        <If Condition="Me.Level &lt;= 3">
+        <CustomBehavior File="RunMacro" Macro="/script VehicleExit();" NumOfTimes="1" WaitTime="500" />
+        <CustomBehavior File="RunMacro" Macro="/script VehicleExit();" NumOfTimes="1" WaitTime="500" />
+        <CustomBehavior File="RunMacro" Macro="/script VehicleExit();" NumOfTimes="1" WaitTime="500" />
+        <CustomBehavior File="RunMacro" Macro="/script VehicleExit();" NumOfTimes="1" WaitTime="500" />
+        <CustomBehavior File="RunMacro" Macro="/script VehicleExit();" NumOfTimes="1" WaitTime="500" />
+        <CustomBehavior File="RunMacro" Macro="/script VehicleExit();" NumOfTimes="1" WaitTime="500" />
+        </If>
+
+        <If Condition="Me.Level &lt;= 3">
+        <CustomBehavior File="InteractWith" MobId="37106" NumOfTimes="1" CollectionDistance="200" GossipOptions="1" WaitTime="1000" X="-8250.009" Y="1469.979" Z="42.80819" />
+        <CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" NumOfTimes="1" WaitTime="1000" />
+        <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" NumOfTimes="1" WaitTime="2000" />
+        </If>
+
+	<If Condition="Me.Level &lt;= 3">
+        <CustomBehavior File="MountVehOnly" VehicleMountId="48526" X="-8251.315" Y="1482.794" Z="41.42033" />
+        </If>
+
+		<If Condition="Me.Level &lt;= 3">
+			<CustomBehavior File="RunMacro" Macro="/click VehicleMenuBarActionButton1" NumOfTimes="20" WaitTime="500" />
+			<CustomBehavior File="WaitTimer" WaitTime="15000" />
+		</If>
+
+        <If Condition="Me.Level &lt;= 3">
+        <CustomBehavior File="InteractWith" MobId="37106" NumOfTimes="1" CollectionDistance="200" GossipOptions="1" WaitTime="1000" X="-8250.009" Y="1469.979" Z="42.80819" />
+        <CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" NumOfTimes="1" WaitTime="1000" />
+        <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" NumOfTimes="1" WaitTime="2000" />
+        <CustomBehavior File="RunMacro" Macro="/script GetQuestReward(1)" NumOfTimes="1" WaitTime="2000" />
+        </If>
+
+        <Objective QuestName="Do it Yourself" QuestId="14070" Type="KillMob" MobId="34835" KillCount="1" />
+        <Objective QuestName="Do it Yourself" QuestId="14070" Type="KillMob" MobId="34878" KillCount="1" />
+        <Objective QuestName="Do it Yourself" QuestId="14070" Type="KillMob" MobId="34877" KillCount="1" />
+        <Objective QuestName="Do it Yourself" QuestId="14070" Type="KillMob" MobId="34876" KillCount="1" />
+
+	<If Condition="HasQuest(26712) &amp;&amp; IsQuestCompleted(26712) &amp;&amp; Me.Gender == WoWGender.Male" >
+	<CustomBehavior File="RunMacro" Macro="/use Keys to the Hot Rod" NumOfTimes="1" WaitTime="3000"/>
+        <RunTo X="-8336.28" Y="1724.852" Z="51.38902" />
+        <CustomBehavior File="RunMacro" Macro="/dismount\n/cancelaura Hot Rod" NumOfTimes="1" WaitTime="3000"/>
+	<TurnIn QuestName="Off to the Bank" QuestId="26712" TurnInName="FBoK Bank Teller" TurnInId="35120" />
+        </If>
+	<If Condition="HasQuest(26711) &amp;&amp; IsQuestCompleted(26711) &amp;&amp; Me.Gender == WoWGender.Female">
+	<CustomBehavior File="RunMacro" Macro="/use Keys to the Hot Rod" NumOfTimes="1" WaitTime="3000"/>
+	<RunTo X="-8336.28" Y="1724.852" Z="51.38902" />
+        <CustomBehavior File="RunMacro" Macro="/dismount\n/cancelaura Hot Rod" NumOfTimes="1" WaitTime="3000"/>
+	<TurnIn QuestName="Off to the Bank" QuestId="26711" TurnInName="FBoK Bank Teller" TurnInId="35120" />
+	</If>
+
+	<If Condition="HasQuest(14109) &amp;&amp; !IsQuestCompleted(14109)" >
+        <RunTo X="-8339.082" Y="1725.481" Z="50.74213" />
+        <CustomBehavior File="RunMacro" Macro="/use Keys to the Hot Rod" NumOfTimes="1" WaitTime="3000"/>
+        <RunTo X="-8227.921" Y="1620.18" Z="34.33059" />
+        <CustomBehavior File="InteractWith" MobId="35128" GossipOptions="1" X="-8227.921" Y="1620.18" Z="34.33059" />
+
+        <RunTo X="-8142.5" Y="1656.257" Z="16.56961" />
+        <CustomBehavior File="InteractWith" MobId="35126" GossipOptions="1" X="-8142.5" Y="1656.257" Z="16.56961" />
+
+        <RunTo X="-8144.767" Y="1581.728" Z="16.97628" />
+        <CustomBehavior File="InteractWith" MobId="35130" GossipOptions="1" X="-8144.767" Y="1581.728" Z="16.97628" />
+        </If>
+
+	<If Condition="HasQuest(14110) &amp;&amp; !IsQuestCompleted(14110)" >
+        <RunTo X="-8339.082" Y="1725.481" Z="50.74213" />
+        <CustomBehavior File="RunMacro" Macro="/use Keys to the Hot Rod" NumOfTimes="1" WaitTime="3000"/>
+        <RunTo X="-8227.921" Y="1620.18" Z="34.33059" />
+        <CustomBehavior File="InteractWith" MobId="35128" GossipOptions="1" X="-8227.921" Y="1620.18" Z="34.33059" />
+
+        <RunTo X="-8142.5" Y="1656.257" Z="16.56961" />
+        <CustomBehavior File="InteractWith" MobId="35126" GossipOptions="1" X="-8142.5" Y="1656.257" Z="16.56961" />
+
+        <RunTo X="-8144.767" Y="1581.728" Z="16.97628" />
+        <CustomBehavior File="InteractWith" MobId="35130" GossipOptions="1" X="-8144.767" Y="1581.728" Z="16.97628" />
+        </If>
+
+	<If Condition="HasQuest(24520) &amp;&amp; IsQuestCompleted(24520)" >
+        <RunTo X="-8423.826" Y="1332.26" Z="102.8929" />
+        <CustomBehavior File="RunMacro" Macro="/dismount\n/cancelaura Hot Rod" NumOfTimes="1" WaitTime="3000"/>
+        </If>
+        <TurnIn QuestName="Give Sassy the News" QuestId="24520" TurnInName="Sassy Hardwrench" TurnInId="34668" />
+        <TurnIn QuestName="Do it Yourself" QuestId="14070" TurnInName="Sassy Hardwrench" TurnInId="34668" />
+
+	<If Condition="HasQuest(24520) &amp;&amp; IsQuestCompleted(24520)" >
+        <RunTo X="-8422.971" Y="1341.642" Z="103.0714" />
+        <CustomBehavior File="RunMacro" Macro="/dismount\n/cancelaura Hot Rod" NumOfTimes="1" WaitTime="3000"/>
+
+        <TurnIn QuestName="The New You" QuestId="14110" TurnInName="Chip Endale" TurnInId="35054" />
+        </If>
+
+	<If Condition="HasQuest(14109) &amp;&amp; IsQuestCompleted(14109)" >
+        <TurnIn QuestName="The New You" QuestId="14109" TurnInName="Candy Cane" TurnInId="35053" />
+        </If>
+
+	<If Condition="HasQuest(14110) &amp;&amp; IsQuestCompleted(14110)" >
+        <TurnIn QuestName="The New You" QuestId="14110" TurnInName="Chip Endale" TurnInId="35054" />
+        </If>
+
+	<If Condition="Me.Class == WoWClass.Hunter &amp;&amp; !IsQuestCompleted(14007)">
+		<PickUp QuestName="Steady Shot" QuestId="14007" GiverName="Bamm Megabomb" GiverId="34673" />
+	</If>
+
+	<If Condition="Me.Class == WoWClass.Warrior &amp;&amp; !IsQuestCompleted(14013)">
+                <PickUp QuestName="Charge" QuestId="14013" GiverName="Warrior-Matic NX-01" GiverId="34697" />
+	</If>
+
+	<If Condition="Me.Class == WoWClass.Rogue &amp;&amp; !IsQuestCompleted(14010)">
+		<PickUp QuestName="Eviscerate" QuestId="14010" GiverName="Slinky Sharpshiv" GiverId="34693" />
+	</If>
+
+	<If Condition="Me.Class == WoWClass.Priest &amp;&amp; !IsQuestCompleted(14009)">
+                <PickUp QuestName="Flash Heal" QuestId="14009" GiverName="Sister Goldskimmer" GiverId="34692" />
+	</If>
+
+	<If Condition="Me.Class == WoWClass.Mage &amp;&amp; !IsQuestCompleted(14008)">
+		<PickUp QuestName="Arcane Missiles" QuestId="14008" GiverName="Fizz Lighter" GiverId="34689" />
+	</If>
+
+	<If Condition="Me.Class == WoWClass.Warlock &amp;&amp; !IsQuestCompleted(14012)">
+		<PickUp QuestName="Immolate" QuestId="14012" GiverName="Evol Fingers" GiverId="34696" />
+	</If>
+
+	<If Condition="Me.Class == WoWClass.Shaman &amp;&amp; !IsQuestCompleted(14011)">
+                <PickUp QuestName="Primal Strike" QuestId="14011" GiverName="Maxx Avalanche" GiverId="34695" />
+	</If>
+
+        <If Condition="Me.Class == WoWClass.Hunter &amp;&amp; !IsQuestCompleted(14007)">
+
+        <If Condition="!HasSpell(56641)">
+			<CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="False" />
+		</If>
+                <RunTo X="-8425.35" Y="1309.568" Z="102.204" />
+		<CustomBehavior File="CastSpellOn" QuestId="14007" SpellId="56641" MobId="48304" NumOfTimes="3" HpLeftAmount="100" MinRange="5" Range="8" X="-8425.35" Y="1309.568" Z="102.204" />
+                <TurnIn QuestName="Steady Shot" QuestId="14007" TurnInName="Bamm Megabomb" TurnInId="34673" />
+	</If>
+
+	<If Condition="Me.Class == WoWClass.Warlock &amp;&amp; !IsQuestCompleted(14012)">
+
+        <If Condition="!HasSpell(348)">
+			<CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="False" />
+		</If>
+                <RunTo X="-8425.769" Y="1308.763" Z="102.1502" />
+		<CustomBehavior File="CastSpellOn" QuestId="14012" SpellId="348" MobId="48304" NumOfTimes="3" HpLeftAmount="100" MinRange="1" Range="8" X="-8425.769" Y="1308.763" Z="102.1502" />
+                <TurnIn QuestName="Immolate" QuestId="14012" TurnInName="Evol Fingers" TurnInId="34696" />
+	</If>
+
+	<If Condition="Me.Class == WoWClass.Priest &amp;&amp; !IsQuestCompleted(14009)">
+
+        <If Condition="!HasSpell(2061)">
+			<CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="False" />
+		</If>
+                <RunTo X="-8424.56" Y="1340.475" Z="102.4138" />
+		<CustomBehavior File="CastSpellOn" QuestId="14009" SpellId="2061" MobId="48305" NumOfTimes="3" HpLeftAmount="100" MinRange="1" Range="8" X="-8423.528" Y="1339.518" Z="102.4472" />
+                <TurnIn QuestName="Flash Heal" QuestId="14009" TurnInName="Sister Goldskimmer" TurnInId="34692" />
+	</If>
+
+	<If Condition="Me.Class == WoWClass.Warrior &amp;&amp; !IsQuestCompleted(14013)">
+
+        <If Condition="!HasSpell(100)">
+			<CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="False" />
+		</If>
+                <RunTo X="-8420.174" Y="1324.266" Z="102.047" />
+                <CustomBehavior File="RunMacro" Macro="/target Training Dummy" NumOfTimes="1" WaitTime="1000"/>
+		<CustomBehavior File="CastSpellOn" QuestId="14013" SpellId="100" MobId="48304" NumOfTimes="3" HpLeftAmount="100" MinRange="8" Range="9" X="-8428.364" Y="1307.997" Z="102.2801" />
+                <TurnIn QuestName="Charge" QuestId="14013" TurnInName="Warrior-Matic NX-01" TurnInId="34697" />
+	</If>
+
+	<If Condition="Me.Class == WoWClass.Mage &amp;&amp; !IsQuestCompleted(14008)">
+
+		<If Condition="!HasSpell(5143)">
+			<CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="False" />
+		</If>
+
+		<While Condition="HasQuest(14008) &amp;&amp; !IsQuestCompleted(14008)">
+                        <RunTo X="-8420.174" Y="1324.266" Z="102.047" />
+			<CustomBehavior File="CastSpellOn" SpellId="133" MobId="48304" NumOfTimes="1" HpLeftAmount="100" MinRange="5" Range="30" X="-8429.373" Y="1307.108" Z="102.3734" />
+			<CustomBehavior File="CastSpellOn" SpellId="5143" MobId="48304" NumOfTimes="1" HpLeftAmount="100" MinRange="5" Range="30" X="-8429.373" Y="1307.108" Z="102.3734" />
+		</While>
+
+		<TurnIn QuestName="Arcane Missiles" QuestId="14008" TurnInName="Fizz Lighter" TurnInId="34689" />
+	</If>
+
+	<If Condition="Me.Class == WoWClass.Shaman &amp;&amp; !IsQuestCompleted(14011)">
+
+        <If Condition="!HasSpell(73899)">
+			<CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="False" />
+		</If>
+                <RunTo X="-8428.082" Y="1308.033" Z="102.265" />
+		<CustomBehavior File="CastSpellOn" QuestId="14011" SpellId="73899" MobId="48304" NumOfTimes="2" HpLeftAmount="100" MinRange="2" Range="3" X="-8428.082" Y="1308.033" Z="102.265" />
+		<TurnIn QuestName="Primal Strike" QuestId="14011" TurnInName="Maxx Avalanche" TurnInId="34695" />
+	</If>
+
+	<If Condition="Me.Class == WoWClass.Rogue &amp;&amp; !IsQuestCompleted(14010)">
+
+	<If Condition="!HasSpell(2098)">
+			<CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="False" />
+		</If>
+	<While Condition="((HasQuest(14010)) &amp;&amp; (!IsQuestCompleted(14010))">
+			<CustomBehavior File="CastSpellOn" QuestId="14010" SpellId="1752" NpcId="48304" NumOfTimes="1" HpLeftAmount="100" MinRange="2" Range="3" X="-8429.476" Y="1307.031" Z="102.3791" />
+			<CustomBehavior File="CastSpellOn" QuestId="14010" SpellId="2098" NpcId="48304" NumOfTimes="1" HpLeftAmount="100" MinRange="2" Range="3" X="-8429.476" Y="1307.031" Z="102.3791" />
+	</While>
+
+		<TurnIn QuestName="Eviscerate" QuestId="14010" TurnInName="Slinky Sharpshiv" TurnInId="34693" />
+                </If>
+
+	<If Condition="Me.Gender == WoWGender.Male &amp;&amp; !IsQuestCompleted(14113)">
+        <PickUp QuestName="Life of the Party" QuestId="14113" GiverName="Candy Cane" GiverId="35053" />
+        </If>
+
+	<If Condition="Me.Gender == WoWGender.Female &amp;&amp; !IsQuestCompleted(14153)">
+        <PickUp QuestName="Life of the Party" QuestId="14153" GiverName="Chip Endale" GiverId="35054" />
+        </If>
+
+	<While Condition="Me.Gender == WoWGender.Male &amp;&amp; !IsQuestCompleted(14113)">
+                        <RunTo X="-8450.199" Y="1315.695" Z="101.9318" />
+			<CustomBehavior File="RunMacro" Macro="/target Kezan Partygoer\n/click VehicleMenuBarActionButton1\n/click VehicleMenuBarActionButton2\n/click VehicleMenuBarActionButton3\n/click VehicleMenuBarActionButton4\n/click VehicleMenuBarActionButton5" NumOfTimes="1" WaitTime="2000" />
+                        <RunTo X="-8451.939" Y="1313.858" Z="101.9876" />
+			<CustomBehavior File="RunMacro" Macro="/target Kezan Partygoer\n/click VehicleMenuBarActionButton1\n/click VehicleMenuBarActionButton2\n/click VehicleMenuBarActionButton3\n/click VehicleMenuBarActionButton4\n/click VehicleMenuBarActionButton5" NumOfTimes="1" WaitTime="2000" />
+                        <RunTo X="-8457.572" Y="1323.346" Z="101.6966" />
+			<CustomBehavior File="RunMacro" Macro="/target Kezan Partygoer\n/click VehicleMenuBarActionButton1\n/click VehicleMenuBarActionButton2\n/click VehicleMenuBarActionButton3\n/click VehicleMenuBarActionButton4\n/click VehicleMenuBarActionButton5" NumOfTimes="1" WaitTime="2000" />
+                        <RunTo X="-8454.809" Y="1324.961" Z="101.6966" />
+			<CustomBehavior File="RunMacro" Macro="/target Kezan Partygoer\n/click VehicleMenuBarActionButton1\n/click VehicleMenuBarActionButton2\n/click VehicleMenuBarActionButton3\n/click VehicleMenuBarActionButton4\n/click VehicleMenuBarActionButton5" NumOfTimes="1" WaitTime="2000" />
+                        <RunTo X="-8457.823" Y="1326.272" Z="101.6966" />
+			<CustomBehavior File="RunMacro" Macro="/target Kezan Partygoer\n/click VehicleMenuBarActionButton1\n/click VehicleMenuBarActionButton2\n/click VehicleMenuBarActionButton3\n/click VehicleMenuBarActionButton4\n/click VehicleMenuBarActionButton5" NumOfTimes="1" WaitTime="2000" />
+	</While>
+
+	<While Condition="Me.Gender == WoWGender.Female &amp;&amp; !IsQuestCompleted(14153)">
+                        <RunTo X="-8450.199" Y="1315.695" Z="101.9318" />
+			<CustomBehavior File="RunMacro" Macro="/target Kezan Partygoer\n/click VehicleMenuBarActionButton1\n/click VehicleMenuBarActionButton2\n/click VehicleMenuBarActionButton3\n/click VehicleMenuBarActionButton4\n/click VehicleMenuBarActionButton5" NumOfTimes="1" WaitTime="2000" />
+                        <RunTo X="-8451.939" Y="1313.858" Z="101.9876" />
+			<CustomBehavior File="RunMacro" Macro="/target Kezan Partygoer\n/click VehicleMenuBarActionButton1\n/click VehicleMenuBarActionButton2\n/click VehicleMenuBarActionButton3\n/click VehicleMenuBarActionButton4\n/click VehicleMenuBarActionButton5" NumOfTimes="1" WaitTime="2000" />
+                        <RunTo X="-8457.572" Y="1323.346" Z="101.6966" />
+			<CustomBehavior File="RunMacro" Macro="/target Kezan Partygoer\n/click VehicleMenuBarActionButton1\n/click VehicleMenuBarActionButton2\n/click VehicleMenuBarActionButton3\n/click VehicleMenuBarActionButton4\n/click VehicleMenuBarActionButton5" NumOfTimes="1" WaitTime="2000" />
+                        <RunTo X="-8454.809" Y="1324.961" Z="101.6966" />
+			<CustomBehavior File="RunMacro" Macro="/target Kezan Partygoer\n/click VehicleMenuBarActionButton1\n/click VehicleMenuBarActionButton2\n/click VehicleMenuBarActionButton3\n/click VehicleMenuBarActionButton4\n/click VehicleMenuBarActionButton5" NumOfTimes="1" WaitTime="2000" />
+                        <RunTo X="-8457.823" Y="1326.272" Z="101.6966" />
+			<CustomBehavior File="RunMacro" Macro="/target Kezan Partygoer\n/click VehicleMenuBarActionButton1\n/click VehicleMenuBarActionButton2\n/click VehicleMenuBarActionButton3\n/click VehicleMenuBarActionButton4\n/click VehicleMenuBarActionButton5" NumOfTimes="1" WaitTime="2000" />
+	</While>
+
+	<If Condition="Me.Gender == WoWGender.Male &amp;&amp; IsQuestCompleted(14113)">
+        <TurnIn QuestName="Life of the Party" QuestId="14113" TurnInName="Sassy Hardwrench" TurnInId="34668" />
+        </If>
+
+	<If Condition="Me.Gender == WoWGender.Female &amp;&amp; IsQuestCompleted(14153)">
+        <TurnIn QuestName="Life of the Party" QuestId="14153" TurnInName="Sassy Hardwrench" TurnInId="34668" />
+        </If>
+
+        <PickUp QuestName="Pirate Party Crashers" QuestId="14115" GiverName="Sassy Hardwrench" GiverId="34668" />
+		
+			<If Condition="HasQuest(14115) &amp;&amp; !IsQuestCompleted(14115)">
+               <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" NumOfTimes="1" WaitTime="1000" />
+        </If>
+		
+        <Objective QuestName="Pirate Party Crashers" QuestId="14115" Type="KillMob" MobId="35200" KillCount="12" />
+        <TurnIn QuestName="Pirate Party Crashers" QuestId="14115" TurnInName="Sassy Hardwrench" TurnInId="34668" />
+
+        <PickUp QuestName="The Uninvited Guest" QuestId="14116" GiverName="Sassy Hardwrench" GiverId="34668" />
+
+	<If Condition="HasQuest(14116)">
+		<CustomBehavior File="RunMacro" Macro="/script CloseGossip()" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="RunMacro" Macro="/script CloseGossip()" NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="RunMacro" Macro="/script CloseGossip()" NumOfTimes="1" WaitTime="1000" />
+	</If>
+
+        <TurnIn QuestName="The Uninvited Guest" QuestId="14116" TurnInName="Trade Prince Gallywix" TurnInId="35222" />
+
+        <PickUp QuestName="A Bazillion Macaroons?!" QuestId="14120" GiverName="Trade Prince Gallywix" GiverId="35222" />
+        <TurnIn QuestName="A Bazillion Macaroons?!" QuestId="14120" TurnInName="Sassy Hardwrench" TurnInId="34668" />
+
+        <PickUp QuestName="The Great Bank Heist" QuestId="14122" GiverName="Sassy Hardwrench" GiverId="34668" />
+        <PickUp QuestName="Waltz Right In" QuestId="14123" GiverName="Slinky Sharpshiv" GiverId="34693" />
+        <PickUp QuestName="Robbing Hoods" QuestId="14121" GiverName="Megs Dreadshredder" GiverId="34874" />
+        <PickUp QuestName="Liberate the Kaja'mite" QuestId="14124" GiverName="Foreman Dampwick" GiverId="34872" />
+
+	<While Condition="HasQuest(14121) &amp;&amp; !IsQuestCompleted(14121)">
+        <CustomBehavior File="RunMacro" Macro="/use Keys to the Hot Rod" NumOfTimes="1" WaitTime="3000"/>
+        <RunTo X="-8286.624" Y="1494.845" Z="44.59602" />
+        <RunTo X="-8237.239" Y="1515.105" Z="41.51669" />
+        <RunTo X="-8225.819" Y="1471.564" Z="40.35838" />
+        <RunTo X="-8251.495" Y="1443.06" Z="40.43899" />
+        <RunTo X="-8272.96" Y="1438.4" Z="40.21431" />
+        <RunTo X="-8343.568" Y="1476.553" Z="47.97122" />
+        <RunTo X="-8350.316" Y="1503.835" Z="46.90404" />
+        <RunTo X="-8319.97" Y="1524.182" Z="47.80765" />
+        <RunTo X="-8299.634" Y="1536.602" Z="47.53886" />
+        <RunTo X="-8265.631" Y="1538.303" Z="41.61053" />
+        <RunTo X="-8224.915" Y="1586.855" Z="34.19228" />
+        <RunTo X="-8191.793" Y="1555.909" Z="29.59147" />
+        <RunTo X="-8171.084" Y="1592.704" Z="24.46298" />
+        <RunTo X="-8144.131" Y="1574.809" Z="16.65084" />
+        <RunTo X="-8117.083" Y="1647.292" Z="12.35804" />
+        <RunTo X="-8119.437" Y="1638.228" Z="13.18067" />
+        <RunTo X="-8137.517" Y="1633.758" Z="15.66668" />
+        <RunTo X="-8139.65" Y="1647.726" Z="16.2516" />
+        </While>
+		
+		<If Condition="HasQuest(14121) &amp;&amp; IsQuestCompleted(14121)">
+        <RunTo X="-8434.148" Y="1319.711" Z="102.6651" />
+        <CustomBehavior File="RunMacro" Macro="/dismount\n/cancelaura Hot Rod" NumOfTimes="1" WaitTime="3000"/>
+        </If>
+
+        <TurnIn QuestName="Robbing Hoods" QuestId="14121" TurnInName="Megs Dreadshredder" TurnInId="34874" />
+
+	<If Condition="HasQuest(14122) &amp;&amp; !IsQuestCompleted(14122)">
+        <CustomBehavior File="14122" QuestId="14122" />
+		<CustomBehavior File="WaitTimer" WaitTime="5000"/>
+        <CustomBehavior File="Misc\RunLua" Lua="VehicleExit()" NumOfTimes="1" />
+        </If>
+
+	<If Condition="HasQuest(14122) &amp;&amp; IsQuestCompleted(14122)">
+        <CustomBehavior File="Misc\RunLua" Lua="VehicleExit()" NumOfTimes="1" />
+        </If>
+		
+		<!-- <If Condition="HasQuest(14124) &amp;&amp; !IsQuestCompleted(14124)">
+		<RunTo X="-8331.557" Y="1724.688" Z="50.7444" />
+        <CustomBehavior File="RunMacro" Macro="/use Keys to the Hot Rod" NumOfTimes="1" WaitTime="3000"/>
+        <RunTo X="-8402.836" Y="1327.175" Z="102.0162" />
+        <CustomBehavior File="RunMacro" Macro="/dismount\n/cancelaura Hot Rod" NumOfTimes="1" WaitTime="3000"/>
+		</If> -->
+	<If Condition="HasQuest(14124)">
+	<While Condition="HasQuest(14124) &amp;&amp; !IsQuestCompleted(14124)">
+               <CustomBehavior File="UseItemTargetLocation" MobId="195488" WaitTime="2000" UseType="ToObject" ItemId="48768" X="-8459.507" Y="1194.974" Z="41.87293"/>
+               <CustomBehavior File="InteractWithExisting" QuestId="14124" ObjectType="Gameobject" MobId="195492" NumOfTimes="3" CollectionDistance="400" X="-8434.374" Y="1182.328" Z="40.6811" />
+			      <!-- <CustomBehavior File="UseGameObject" ObjectId="195492" NumOfTimes="1" X="-8459.507" Y="1194.974" Z="41.87293" /> -->
+			     <!-- <CustomBehavior File="UseGameObject" ObjectId="195492" NumOfTimes="1" X="-8459.507" Y="1194.974" Z="41.87293" /> -->
+			</While>
+		</If>
+        <TurnIn QuestName="Liberate the Kaja'mite" QuestId="14124" TurnInName="Foreman Dampwick" TurnInId="34872" />
+        <TurnIn QuestName="The Great Bank Heist" QuestId="14122" TurnInName="Sassy Hardwrench" TurnInId="34668" />
+
+	<If Condition="HasQuest(14123) &amp;&amp; !IsQuestCompleted(14123)">
+        <CustomBehavior File="RunMacro" Macro="/use Keys to the Hot Rod" NumOfTimes="1" WaitTime="3000"/>
+        <RunTo X="-8098.036" Y="1801.897" Z="33.56861" />
+        <CustomBehavior File="RunMacro" Macro="/dismount\n/cancelaura Hot Rod" NumOfTimes="1" WaitTime="3000"/>
+		</If>
+
+        <While Condition="HasQuest(14123) &amp;&amp; !IsQuestCompleted(14123)">
+               <RunTo X="-8008.113" Y="1871.806" Z="52.51689" />
+               <CustomBehavior File="MyCTM" X="-8007.16" Y="1860.119" Z="53.19646" />
+               <CustomBehavior File="UseGameObject" ObjectId="195518" NumOfTimes="1" X="-8007.16" Y="1860.119" Z="53.19646" />
+               <CustomBehavior File="MyCTM" X="-8008.458" Y="1872.485" Z="52.51696" />
+               <RunTo X="-8048.021" Y="1941.68" Z="52.514" />
+               <CustomBehavior File="MyCTM" X="-8048.034" Y="1953.809" Z="52.89133" />
+               <CustomBehavior File="UseGameObject" ObjectId="195516" NumOfTimes="1" X="-8048.034" Y="1953.809" Z="52.89133" />
+               <CustomBehavior File="MyCTM" X="-8048.021" Y="1941.68" Z="52.514" />
+               <RunTo X="-8120.249" Y="1890.825" Z="54.50999" />
+               <CustomBehavior File="MyCTM" X="-8145.297" Y="1889.881" Z="56.42877" />
+               <CustomBehavior File="MyCTM" X="-8145.628" Y="1903.036" Z="56.20745" />
+               <CustomBehavior File="MyCTM" X="-8152.974" Y="1902.847" Z="56.4409" />
+               <CustomBehavior File="MyCTM" X="-8152.742" Y="1888.241" Z="65.74997" />
+               <CustomBehavior File="MyCTM" X="-8143.803" Y="1889.381" Z="68.61727" />
+               <CustomBehavior File="MyCTM" X="-8144.826" Y="1903.139" Z="69.18838" />
+               <CustomBehavior File="UseGameObject" ObjectId="195515" NumOfTimes="1" X="-8144.826" Y="1903.139" Z="69.18838" />
+        </While>
+
+        <If Condition="IsQuestCompleted(14123) &amp;&amp; HasQuest(14123)">
+        <CustomBehavior File="RunMacro" Macro="/use hearthstone" NumOfTimes="1" WaitTime="15000"/> 
+        </If>
+        <TurnIn QuestName="Waltz Right In" QuestId="14123" TurnInName="Slinky Sharpshiv" TurnInId="34693" />
+        <PickUp QuestName="447" QuestId="14125" GiverName="Sassy Hardwrench" GiverId="34668" />
+
+        <While Condition="!IsQuestCompleted(14125) &amp;&amp; HasQuest(14125)">
+        <Objective QuestName="447" QuestId="14125" Type="UseObject" ObjectId="201735" UseCount="1" />
+        <Objective QuestName="447" QuestId="14125" Type="UseObject" ObjectId="201733" UseCount="1" />
+        <Objective QuestName="447" QuestId="14125" Type="UseObject" ObjectId="201734" UseCount="1" />
+        <RunTo X="-8422.35" Y="1326.755" Z="101.9444" />
+        <CustomBehavior File="UseGameObject" ObjectId="201736" NumOfTimes="1" X="-8422.35" Y="1326.755" Z="101.9444" />
+        <CustomBehavior File="WaitTimer" WaitTime="20000" />
+        </While>
+        <TurnIn QuestName="447" QuestId="14125" TurnInName="Claims Adjuster" TurnInId="37602" />
+        <PickUp QuestName="Life Savings" QuestId="14126" GiverName="Sassy Hardwrench" GiverId="34668" />
+
+        <If Condition="IsQuestCompleted(14126) &amp;&amp; HasQuest(14126)">
+	<CustomBehavior File="InteractWith" MobId="34668" GossipOptions="1" X="-8424.914" Y="1323.542" Z="101.9954" />
+        </If>
+        <TurnIn QuestName="Life Savings" QuestId="14126" TurnInName="Trade Prince Gallywix" TurnInId="35222" />
+
+	<While Condition="Me.ZoneId == 4737">
+	       <CustomBehavior File="WaitTimer" WaitTime="200000"/>
+	</While>
+	
+        <If Condition="Me.Level &lt;= 6">
+        <RunTo X="534.4167" Y="3269.31" Z="-1.08557" />
+        <CustomBehavior File="InteractWith" MobId="36600" NumOfTimes="1" CollectionDistance="200" GossipOptions="1" WaitTime="1000" X="-8250.009" Y="1469.979" Z="42.80819" />
+        <CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" NumOfTimes="1" WaitTime="1000" />
+        <CustomBehavior File="RunMacro" Macro="/script AcceptQuest()" />
+        </If>
+
+        	<While Condition="!IsQuestCompleted(14474) &amp;&amp; HasQuest(14474)">
+        		<CustomBehavior File="InteractWithExisting" QuestId="14474" ObjectType="Gameobject" MobId="195188" NumOfTimes="1" CollectionDistance="400" X="508.2383" Y="3316.46" Z="-1.144703" />
+		</While>
+
+        	<While Condition="!IsQuestCompleted(14001) &amp;&amp; HasQuest(14001)">
+        		<CustomBehavior File="InteractWithExisting" QuestId="14001" ObjectType="Gameobject" MobId="195188" NumOfTimes="1" CollectionDistance="400" X="508.2383" Y="3316.46" Z="-1.144703" />
+		</While>
+
+        	<If Condition="HasQuest(14474)">
+        		<TurnIn QuestName="Goblin Escape Pods" QuestId="14474" TurnInName="Sassy Hardwrench" TurnInId="35650" />
+		</If>
+
+        	<If Condition="HasQuest(14001)">
+        		<TurnIn QuestName="Goblin Escape Pods" QuestId="14001" TurnInName="Sassy Hardwrench" TurnInId="35650" />
+		</If>
+
+        <PickUp QuestName="Get Our Stuff Back!" QuestId="14014" GiverName="Sassy Hardwrench" GiverId="35650" />
+        <PickUp QuestName="It's Our Problem Now" QuestId="14473" GiverName="Maxx Avalanche" GiverId="35786" />
+        <PickUp QuestName="Monkey Business" QuestId="14019" GiverName="Bamm Megabomb" GiverId="35758" />
+
+        <Objective QuestName="It's Our Problem Now" QuestId="14473" Type="KillMob" MobId="36740" KillCount="6" />
+
+        <While Condition="!IsQuestCompleted(14019) &amp;&amp; HasQuest(14019)">
+        <CustomBehavior File="UseItemOn" NpcState="Alive" ItemId="49028" MobId="34699" Range="5" CollectionDistance="400" WaitTime="1000" X="708.1447" Y="3133.286" Z="4.95172" />
+	</While>
+        <Objective QuestName="Get Our Stuff Back!" QuestId="14014" Type="CollectItem" ItemId="46828" CollectCount="8" />
+	<If Condition="HasQuest(14014) &amp;&amp; IsQuestCompleted(14014)">
+		<CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="True" />
+	</If>
+        <TurnIn QuestName="It's Our Problem Now" QuestId="14473" TurnInName="Maxx Avalanche" TurnInId="35786" />
+        <TurnIn QuestName="Monkey Business" QuestId="14019" TurnInName="Bamm Megabomb" TurnInId="35758" />
+        <TurnIn QuestName="Get Our Stuff Back!" QuestId="14014" TurnInName="Sassy Hardwrench" TurnInId="35650" />
+        <PickUp QuestName="Help Wanted" QuestId="14248" GiverName="Sassy Hardwrench" GiverId="35650" />
+        <TurnIn QuestName="Help Wanted" QuestId="14248" TurnInName="Foreman Dampwick" TurnInId="35769" />
+        <PickUp QuestName="Miner Troubles" QuestId="14021" GiverName="Foreman Dampwick" GiverId="35769" />
+        <PickUp QuestName="Capturing the Unknown" QuestId="14031" GiverName="Foreman Dampwick" GiverId="35769" />
+
+        <If Condition="!IsQuestCompleted(14021) &amp;&amp; HasQuest(14021)">
+        <CustomBehavior File="Escort" QuestId="14021" MobId="35813" X="494.2088" Y="2974.072" Z="7.745457" />
+	</If>
+        <PickUp QuestName="Orcs Can Write?" QuestId="14233" GiverName="Dead Orc Scout" GiverId="35837" />
+
+        <While Condition="!IsQuestCompleted(14031) &amp;&amp; HasQuest(14031)">
+        <UseItem ItemId="49887" QuestName="Capturing the Unknown" QuestId="14031" WaitTime="5000" X="652.2789" Y="2967.491" Z="1.870504" />
+        <UseItem ItemId="49887" QuestName="Capturing the Unknown" QuestId="14031" WaitTime="5000" X="615.1664" Y="2855.021" Z="-7.110401" />
+        <UseItem ItemId="49887" QuestName="Capturing the Unknown" QuestId="14031" WaitTime="5000" X="573.6661" Y="2914.491" Z="-7.466587" />
+        <UseItem ItemId="49887" QuestName="Capturing the Unknown" QuestId="14031" WaitTime="5000" X="569.7349" Y="2945.514" Z="-0.2589488" />
+	</While>
+        <TurnIn QuestName="Miner Troubles" QuestId="14021" TurnInName="Foreman Dampwick" TurnInId="35769" />
+        <TurnIn QuestName="Capturing the Unknown" QuestId="14031" TurnInName="Sassy Hardwrench" TurnInId="35650" />
+        <TurnIn QuestName="Orcs Can Write?" QuestId="14233" TurnInName="Sassy Hardwrench" TurnInId="35650" />
+        <PickUp QuestName="The Enemy of My Enemy" QuestId="14234" GiverName="Sassy Hardwrench" GiverId="35650" />
+        <TurnIn QuestName="The Enemy of My Enemy" QuestId="14234" TurnInName="Aggra" TurnInId="35875" />
+        <PickUp QuestName="The Vicious Vale" QuestId="14235" GiverName="Aggra" GiverId="35875" />
+
+        <If Condition="IsQuestCompleted(14235) &amp;&amp; HasQuest(14235)">
+        <CustomBehavior File="UserSettings" QuestId="14235" PullDistance="1" />
+	</If>
+        <TurnIn QuestName="The Vicious Vale" QuestId="14235" TurnInName="Kilag Gorefang" TurnInId="35893" />
+        <PickUp QuestName="Weed Whacker" QuestId="14236" GiverName="Kilag Gorefang" GiverId="35893" />
+
+	<While Condition="HasQuest(14236) &amp;&amp; !IsQuestCompleted(14236)">
+        <!-- Plugin Kicks-in -->
+        </While>
+        <TurnIn QuestName="Weed Whacker" QuestId="14236" TurnInName="Kilag Gorefang" TurnInId="35893" />
+        <PickUp QuestName="Back to Aggra" QuestId="14303" GiverName="Kilag Gorefang" GiverId="35893" />
+        <TurnIn QuestName="Back to Aggra" QuestId="14303" TurnInName="Aggra" TurnInId="35875" />
+        <PickUp QuestName="Forward Movement" QuestId="14237" GiverName="Aggra" GiverId="35875" />
+	<If Condition="HasQuest(14237)">
+		<CustomBehavior File="UserSettings" PullDistance="25" />
+	</If>
+        <TurnIn QuestName="Forward Movement" QuestId="14237" TurnInName="Kilag Gorefang" TurnInId="35917" />
+
+	<PickUp QuestName="Infrared = Infradead" QuestId="14238" GiverName="Kilag Gorefang" GiverId="35917" />
+	<If Condition="HasQuest(14238) &amp;&amp; !IsQuestCompleted(14238)">
+	<If Condition="!Me.HasAura(&quot;Infrared Heat Focals&quot;)">
+	    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(49611)" />
+	</If>
+        </If>
+        <Objective QuestName="Infrared = Infradead" QuestId="14238" Type="KillMob" MobId="36092" KillCount="10" />
+        <TurnIn QuestName="Infrared = Infradead" QuestId="14238" TurnInName="Kilag Gorefang" TurnInId="35917" />
+        <PickUp QuestName="To the Cliffs" QuestId="14240" GiverName="Kilag Gorefang" GiverId="35917" />
+
+	<If Condition="HasQuest(14240) &amp;&amp; IsQuestCompleted(14240)">
+        <CustomBehavior File="WaitTimer" WaitTime="52000"/>
+        </If>
+        <TurnIn QuestName="To the Cliffs" QuestId="14240" TurnInName="Scout Brax" TurnInId="36112" />
+        <PickUp QuestName="Get to the Gyrochoppa!" QuestId="14241" GiverName="Scout Brax" GiverId="36112" />
+		
+		<If Condition="!IsQuestCompleted(14241) &amp;&amp; HasQuest(14241)">
+        <CustomBehavior File="RunMacro" Macro="/use hearthstone" NumOfTimes="1" WaitTime="15000"/> 
+        </If>
+		
+		<If Condition="HasQuest(14241) &amp;&amp; !IsQuestCompleted(14241)">
+        <CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="True" />
+        </If>
+		
+        <Objective QuestName="Get to the Gyrochoppa!" QuestId="14241" Type="CollectItem" ItemId="49424" CollectCount="1" />
+	<If Condition="HasQuest(14241) &amp;&amp; IsQuestCompleted(14241)">
+		<CustomBehavior File="UserSettings" PullDistance="1" />
+	</If>
+        <TurnIn QuestName="Get to the Gyrochoppa!" QuestId="14241" TurnInName="Gyrochoppa" TurnInId="36127" />
+        <PickUp QuestName="Precious Cargo" QuestId="14242" GiverName="Gyrochoppa" GiverId="36127" />
+	
+	<If Condition="HasQuest(14242) &amp;&amp; !IsQuestCompleted(14242)">
+	<CustomBehavior File="UserSettings" PullDistance="25" />
+        <CustomBehavior File="WaitTimer" WaitTime="22000"/>
+        </If>
+		
+	<If Condition="HasQuest(14242) &amp;&amp; !IsQuestCompleted(14242)">
+			<RunTo X="984.9762" Y="3844.692" Z="8.283706" />
+			<RunTo X="981.9351" Y="3840.231" Z="3.230956" />
+	</If>
+	
+        <TurnIn QuestName="Precious Cargo" QuestId="14242" TurnInName="Thrall" TurnInId="36145" />
+        <PickUp QuestName="Meet Me Up Top" QuestId="14326" GiverName="Thrall" GiverId="36145" />
+        <TurnIn QuestName="Meet Me Up Top" QuestId="14326" TurnInName="Thrall" TurnInId="36161" />
+        <PickUp QuestName="Warchief's Revenge" QuestId="14243" GiverName="Thrall" GiverId="36161" />
+
+Ё	<While Condition="HasQuest(14243) &amp;&amp; !IsQuestCompleted(14243)">
+        <CustomBehavior File="NoControlVehicle" QuestId="14243" TargetId1="36176" NumOfTimes="1" AttackButton="1" MaxRange="100" WaitTime="1500"/>
+        </While>
+
+        <TurnIn QuestName="Warchief's Revenge" QuestId="14243" TurnInName="Thrall" TurnInId="36188" />
+        <PickUp QuestName="Farewell, For Now" QuestId="14445" GiverName="Thrall" GiverId="36188" />
+        <TurnIn QuestName="Farewell, For Now" QuestId="14445" TurnInName="Sassy Hardwrench" TurnInId="36425" />
+                <PickUp QuestName="Up, Up and Away!" QuestId="14244" GiverName="Sassy Hardwrench" GiverId="36425" />
+
+Ё	<If Condition="HasQuest(14244) &amp;&amp; !IsQuestCompleted(14244)">
+        <CustomBehavior File="InteractWith" MobId="196439" ObjectType="Gameobject" GossipOptions="1" NumOfTimes="1" X="871.2141" Y="2744.498" Z="122.4857" />
+        </If>
+        <TurnIn QuestName="Up, Up and Away!" QuestId="14244" TurnInName="Foreman Dampwick" TurnInId="36470" />
+        <PickUp QuestName="It's a Town-In-A-Box" QuestId="14245" GiverName="Foreman Dampwick" GiverId="36470" />
+
+Ё	<If Condition="HasQuest(14245) &amp;&amp; !IsQuestCompleted(14245)">
+        <CustomBehavior File="UseGameObject" ObjectId="201938" NumOfTimes="1" X="914.052" Y="2331.31" Z="11.11272" />
+        </If>
+        <TurnIn QuestName="It's a Town-In-A-Box" QuestId="14245" TurnInName="Foreman Dampwick" TurnInId="36471" />
+
+        <!-- This is the MobId, not QuestId -->
+        <While Condition="HasQuestAvailable(36471)" >
+               <CustomBehavior File="InteractWith"  MobId="36471" NumOfTimes="1" CollectionDistance="200" WaitTime="1000" X="930.9238" Y="2335.248" Z="4.900446" />
+               <CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" NumOfTimes="1" WaitTime="1000" />
+               <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" NumOfTimes="1" WaitTime="1000" />
+               <CustomBehavior File="WaitTimer" WaitTime="3000"/>
+        </While>
+
+Ё	<If Condition="HasQuest(27139) &amp;&amp; IsQuestCompleted(27139)">
+        <CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="True" />
+        </If>
+        <TurnIn QuestName="Hobart Needs You" QuestId="27139" TurnInName="Hobart Grapplehammer" TurnInId="38120" />
+        <PickUp QuestName="Cluster Cluck" QuestId="24671" GiverName="Hobart Grapplehammer" GiverId="38120" />
+	<If Condition="HasQuest(24671) &amp;&amp; !IsQuestCompleted(24671)">
+		<CustomBehavior File="MyCTM" X="951.9019" Y="2334.696" Z="5.941116" />
+Ё		<While Condition="HasQuest(24671) &amp;&amp; !IsQuestCompleted(24671)">
+        		<CustomBehavior File="InteractWithExisting" QuestId="24671" ObjectType="Npc" MobId="38111" NumOfTimes="1" CollectionDistance="400" X="911.7561" Y="2288.823" Z="12.22349" />
+        	</While>
+        	<TurnIn QuestName="Cluster Cluck" QuestId="24671" TurnInName="Hobart Grapplehammer" TurnInId="38120" />
+        	<PickUp QuestName="Trading Up" QuestId="24741" GiverName="Bamm Megabomb" GiverId="38122" />
+	</If>
+
+Ё	<While Condition="HasQuest(24741) &amp;&amp; !IsQuestCompleted(24741)">
+        <CustomBehavior File="UserSettings" PullDistance="1" />
+        <CustomBehavior File="UseItemOn" ItemId="50232" MobId="201972" Range="1" NumOfTimes="1" MobType="Gameobject" WaitTime="1000" X="899.449" Y="2108.49" Z="86.45847" />
+        <CustomBehavior File="WaitTimer" WaitTime="10000"/>
+        <CustomBehavior File="InteractWithExisting" QuestId="24741" ObjectType="Gameobject" MobId="201974" NumOfTimes="1" CollectionDistance="400" X="899.449" Y="2108.49" Z="86.45847" />
+        </While>
+	<If Condition="HasQuest(24741) &amp;&amp; IsQuestCompleted(24741)">
+		<CustomBehavior File="UserSettings" PullDistance="25" />
+	</If>
+        <TurnIn QuestName="Trading Up" QuestId="24741" TurnInName="Bamm Megabomb" TurnInId="38122" />
+
+        <PickUp QuestName="The Biggest Egg Ever" QuestId="24744" GiverName="Hobart Grapplehammer" GiverId="38120" />
+        <Objective QuestName="The Biggest Egg Ever" QuestId="24744" Type="CollectItem" ItemId="50261" CollectCount="1" />
+        <TurnIn QuestName="The Biggest Egg Ever" QuestId="24744" TurnInName="Hobart Grapplehammer" TurnInId="38120" />
+        <PickUp QuestName="Who's Top of the Food Chain Now?" QuestId="24816" GiverName="Hobart Grapplehammer" GiverId="38120" />
+
+Ё	<If Condition="HasQuest(24816) &amp;&amp; !IsQuestCompleted(24816)">
+        <RunTo X="943.1496" Y="2323.135" Z="5.022757" />
+        <RunTo X="954.7031" Y="2338.045" Z="6.05608" />
+        </If>
+        <Objective QuestName="Who's Top of the Food Chain Now?" QuestId="24816" Type="CollectItem" ItemId="50381" CollectCount="5" />
+
+Ё	<If Condition="HasQuest(24816) &amp;&amp; IsQuestCompleted(24816)">
+        <RunTo X="942.5923" Y="2324.221" Z="5.022127" />
+        </If>
+
+        <TurnIn QuestName="Who's Top of the Food Chain Now?" QuestId="24816" TurnInName="Assistant Greely" TurnInId="38124" />
+        <PickUp QuestName="A Goblin in Shark's Clothing" QuestId="24817" GiverName="Assistant Greely" GiverId="38124" />
+
+Ё	<While Condition="HasQuest(24817) &amp;&amp; !IsQuestCompleted(24817)">
+        <CustomBehavior File="24817" QuestId="24817" />
+        </While>
+	<If Condition="HasQuest(24817) &amp;&amp; IsQuestCompleted(24817)">
+		<RunTo X="954.2035" Y="2339.973" Z="6.032028" />
+	</If>
+        <TurnIn QuestName="A Goblin in Shark's Clothing" QuestId="24817" TurnInName="Hobart Grapplehammer" TurnInId="38120" />
+        <PickUp QuestName="Invasion Imminent!" QuestId="24856" GiverName="Hobart Grapplehammer" GiverId="38120" />
+
+Ё	<If Condition="HasQuest(24856) &amp;&amp; IsQuestCompleted(24856)">
+        <RunTo X="944.3986" Y="2314.068" Z="5.372748" />
+        </If>
+
+        <TurnIn QuestName="Invasion Imminent!" QuestId="24856" TurnInName="Megs Dreadshredder" TurnInId="38432" />
+        
+        <PickUp QuestName="Bilgewater Cartel Represent" QuestId="24858" GiverName="Megs Dreadshredder" GiverId="38432" />
+        <PickUp QuestName="Naga Hide" QuestId="24859" GiverName="Brett Coins McQuid" GiverId="38381" />
+
+Ё	<While Condition="HasQuest(24858) &amp;&amp; !IsQuestCompleted(24858)">
+        <CustomBehavior File="InteractWithExisting" QuestId="24858" ObjectType="Gameobject" MobId="202133" NumOfTimes="1" CollectionDistance="400" X="499.465" Y="2083.857" Z="2.786991" />
+        </While>
+        <Objective QuestName="Naga Hide" QuestId="24859" Type="CollectItem" ItemId="50437" CollectCount="5" />
+        <TurnIn QuestName="Naga Hide" QuestId="24859" TurnInName="Brett Coins McQuid" TurnInId="38381" />
+        <TurnIn QuestName="Bilgewater Cartel Represent" QuestId="24858" TurnInName="Megs Dreadshredder" TurnInId="38432" />
+        <PickUp QuestName="Irresistible Pool Pony" QuestId="24864" GiverName="Megs Dreadshredder" GiverId="38432" />
+
+Ё	<If Condition="HasQuest(24864) &amp;&amp; !IsQuestCompleted(24864)">
+        <RunTo X="464.5927" Y="1775.177" Z="-1.144701" />
+        <CustomBehavior File="WaitTimer" WaitTime="2000" />
+        <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(50602)" />
+        <CustomBehavior File="WaitTimer" WaitTime="2000" />
+        </If>
+Ё	<While Condition="HasQuest(24864) &amp;&amp; !IsQuestCompleted(24864)">
+		<CustomBehavior File="CollectThings" QuestId="24864" CollectUntil="QuestComplete" MobId1="44589" MobId2="44590" MobId3="44591" MobId4="38412" MobId5="44579" MobId6="44578" MobId7="44570" X="370.1018" Y="1714.603" Z="-48.97816" />
+        </While>
+	<If Condition="HasQuest(24864) &amp;&amp; IsQuestCompleted(24864)">
+		<CustomBehavior File="MyCTM" X="464.5927" Y="1775.177" Z="-1.144701" />
+	</If>
+        <TurnIn QuestName="Irresistible Pool Pony" QuestId="24864" TurnInName="Megs Dreadshredder" TurnInId="38432" />
+        <PickUp QuestName="Surrender or Else!" QuestId="24868" GiverName="Megs Dreadshredder" GiverId="38432" />
+        <If Condition="!IsQuestCompleted(24868) &amp;&amp; HasQuest(24868)">
+        <CustomBehavior File="UserSettings" PullDistance="1" />
+        <CustomBehavior File="Escort" QuestId="24868" MobId="38455" X="681.178" Y="2023.404" Z="49.6368" />
+	</If>
+        <TurnIn QuestName="Surrender or Else!" QuestId="24868" TurnInName="Megs Dreadshredder" TurnInId="38432" />
+        <PickUp QuestName="Get Back to Town" QuestId="24897" GiverName="Megs Dreadshredder" GiverId="38432" />
+
+Ё	<If Condition="HasQuest(24897) &amp;&amp; IsQuestCompleted(24897)">
+	<CustomBehavior File="UserSettings" PullDistance="25" />
+        <CustomBehavior File="RunMacro" Macro="/use hearthstone" NumOfTimes="1" WaitTime="15000"/>
+        <RunTo X="911.6236" Y="2346.602" Z="4.928307" />
+        </If>
+        <TurnIn QuestName="Get Back to Town" QuestId="24897" TurnInName="Sassy Hardwrench" TurnInId="38387" />
+        <PickUp QuestName="Town-In-A-Box: Under Attack" QuestId="24901" GiverName="Sassy Hardwrench" GiverId="38387" />
+
+Ё	<If Condition="HasQuest(24901) &amp;&amp; !IsQuestCompleted(24901)">
+        <RunTo X="919.8045" Y="2323.112" Z="5.622293" />
+        <CustomBehavior File="InteractWith" MobId="38526" ObjectType="Npc" NumOfTimes="1" CollectionDistance="200" WaitTime="1000" X="919.8045" Y="2323.112" Z="5.622293" />
+        </If>
+
+Ё	<While Condition="HasQuest(24901) &amp;&amp; !IsQuestCompleted(24901)">
+        <CustomBehavior File="RunMacro" Macro="/click VehicleMenuBarActionButton1" NumOfTimes="1" WaitTime="1500" />
+        </While>
+
+Ё	<If Condition="HasQuest(24901) &amp;&amp; IsQuestCompleted(24901)">
+        <CustomBehavior File="RunMacro" Macro="/script VehicleExit" NumOfTimes="1" WaitTime="1500" />
+        </If>
+        <TurnIn QuestName="Town-In-A-Box: Under Attack" QuestId="24901" TurnInName="Sassy Hardwrench" TurnInId="38387" />Ё
+        <PickUp QuestName="Oomlot Village" QuestId="24924" GiverName="Sassy Hardwrench" GiverId="38387" />
+        <TurnIn QuestName="Oomlot Village" QuestId="24924" TurnInName="Izzy" TurnInId="38647" />
+        <PickUp QuestName="Free the Captives" QuestId="24925" GiverName="Izzy" GiverId="38647" />
+        <PickUp QuestName="Send a Message" QuestId="24929" GiverName="Izzy" GiverId="38647" />
+        <Objective QuestName="Send a Message" QuestId="24929" Type="KillMob" MobId="38696" KillCount="1" />
+        <Objective QuestName="Free the Captives" QuestId="24925" Type="KillMob" MobId="38644" KillCount="5" />
+
+        <TurnIn QuestName="Free the Captives" QuestId="24925" TurnInName="Izzy" TurnInId="38647" />
+        <TurnIn QuestName="Send a Message" QuestId="24929" TurnInName="Izzy" TurnInId="38647" />
+        <PickUp QuestName="Oomlot Dealt With" QuestId="24937" GiverName="Izzy" GiverId="38647" />
+        <TurnIn QuestName="Oomlot Dealt With" QuestId="24937" TurnInName="Sassy Hardwrench" TurnInId="38387" />
+        <PickUp QuestName="Up the Volcano" QuestId="24940" GiverName="Sassy Hardwrench" GiverId="38387" />
+	<If Condition="HasQuest(24940) &amp;&amp; IsQuestCompleted(24940)">
+		<CustomBehavior File="RunLikeHell" NumOfTimes="1" AllowCombat="false">
+		<Hotspot X="1468.048" Y="2047.686" Z="225.4878" />
+		</CustomBehavior>
+	</If>
+        <TurnIn QuestName="Up the Volcano" QuestId="24940" TurnInName="Coach Crosscheck" TurnInId="38738" />
+        <PickUp QuestName="Zombies vs. Super Booster Rocket Boots" QuestId="24942" GiverName="Coach Crosscheck" GiverId="38738" />
+        <PickUp QuestName="Three Little Pygmies" QuestId="24945" GiverName="Foreman Dampwick" GiverId="36471" />
+        <PickUp QuestName="Rockin' Powder" QuestId="24946" GiverName="Assistant Greely" GiverId="38124" />
+
+	<If Condition="HasQuest(24942) &amp;&amp; !IsQuestCompleted(24942)">
+	<If Condition="!Me.HasAura(&quot;Super Booster Rocket Boots&quot;)">
+	<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(52013)" />
+	<CustomBehavior File="UserSettings" PullDistance="1" />
+	</If>
+	<CustomBehavior File="RunLikeHell" QuestId="24942" NumOfTimes="1" AllowCombat="false" >
+        <Hotspot X="1496.219" Y="1873.623" Z="259.4699" />
+        <!-- Hotspot X="1491.04" Y="1783.543" Z="284.2244" -->
+        <Hotspot X="1566.189" Y="1757.505" Z="275.4805" />
+        <Hotspot X="1589.836" Y="1704.399" Z="285.2041" />
+        <Hotspot X="1510.952" Y="1649.889" Z="283.1752" />
+        <Hotspot X="1426.591" Y="1643.767" Z="286.1481" />
+	<Hotspot X="1382.829" Y="1562.254" Z="299.127" />
+	<Hotspot X="1369.807" Y="1575.308" Z="301.0181" />
+	<Hotspot X="1415.432" Y="1672.077" Z="292.4164" />
+	<Hotspot X="1327.076" Y="1663.356" Z="315.7903" />
+	<Hotspot X="1376.421" Y="1634.403" Z="298.5344" />
+	</CustomBehavior>
+        </If>
+
+
+	<CustomBehavior File="RunLikeHell" QuestId="24945" AllowCombat="false" >
+        <Hotspot X="1374.576" Y="1488.297" Z="309.3693" />
+	</CustomBehavior>
+
+	<If Condition="Me.HasAura(&quot;Super Booster Rocket Boots&quot;)">
+	<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(52013)" />
+	</If>
+
+        <Objective QuestName="Three Little Pygmies" QuestId="24945" Type="KillMob" MobId="38810" KillCount="1" />
+        <Objective QuestName="Rockin' Powder" QuestId="24946" Type="CollectItem" ItemId="52024" CollectCount="5" />
+ 
+	<If Condition="!Me.HasAura(&quot;Super Booster Rocket Boots&quot;)">
+	<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(52013)" />
+        <CustomBehavior File="RunLikeHell" QuestId="24945" AllowCombat="false" >
+        <Hotspot X="1417.368" Y="1747.97" Z="294.8723" />
+	</CustomBehavior>
+	</If>
+
+        <If Condition="Me.HasAura(&quot;Super Booster Rocket Boots&quot;)">
+	<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(52013)" />
+	</If>
+
+        <Objective QuestName="Three Little Pygmies" QuestId="24945" Type="KillMob" MobId="38809" KillCount="1" />
+
+	<If Condition="!Me.HasAura(&quot;Super Booster Rocket Boots&quot;)">
+	<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(52013)" />
+        <CustomBehavior File="RunLikeHell" QuestId="24945" AllowCombat="false" >
+        <Hotspot X="1622.839" Y="1662.284" Z="293.6593" />
+	</CustomBehavior>
+	</If>
+
+        <If Condition="Me.HasAura(&quot;Super Booster Rocket Boots&quot;)">
+	<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(52013)" />
+	</If>
+
+        <Objective QuestName="Three Little Pygmies" QuestId="24945" Type="KillMob" MobId="38808" KillCount="1" />
+
+	<If Condition="HasQuest(24942) &amp;&amp; IsQuestCompleted(24942)">
+	<If Condition="!Me.HasAura(&quot;Super Booster Rocket Boots&quot;)">
+	<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(52013)" />
+        <CustomBehavior File="RunLikeHell" AllowCombat="false" >
+        <Hotspot X="1466.228" Y="2042.614" Z="230.9357" />
+	</CustomBehavior>
+	</If>
+        </If>
+
+        <If Condition="Me.HasAura(&quot;Super Booster Rocket Boots&quot;)">
+	<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(52013)" />
+	<CustomBehavior File="UserSettings" PullDistance="25" />
+	</If>
+
+        <TurnIn QuestName="Zombies vs. Super Booster Rocket Boots" QuestId="24942" TurnInName="Coach Crosscheck" TurnInId="38738" />
+        <TurnIn QuestName="Three Little Pygmies" QuestId="24945" TurnInName="Foreman Dampwick" TurnInId="36471" />
+        <TurnIn QuestName="Rockin' Powder" QuestId="24946" TurnInName="Assistant Greely" TurnInId="38124" />
+        <PickUp QuestName="Rocket Boot Boost" QuestId="24952" GiverName="Coach Crosscheck" GiverId="38738" />
+
+	<If Condition="HasQuest(24952) &amp;&amp; !IsQuestCompleted(24952)">
+	<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(52032)" />
+        <CustomBehavior File="WaitTimer" WaitTime="20000" />
+	</If>
+        <TurnIn QuestName="Rocket Boot Boost" QuestId="24952" TurnInName="Hobart Grapplehammer" TurnInId="38120" />
+        <PickUp QuestName="Children of a Turtle God" QuestId="24954" GiverName="Hobart Grapplehammer" GiverId="38120" />
+        <Objective QuestName="Children of a Turtle God" QuestId="24954" Type="CollectItem" ItemId="52035" CollectCount="5" />
+        <TurnIn QuestName="Children of a Turtle God" QuestId="24954" TurnInName="Hobart Grapplehammer" TurnInId="38120" />
+        <PickUp QuestName="Volcanoth!" QuestId="24958" GiverName="Hobart Grapplehammer" GiverId="38120" />
+
+	<If Condition="HasQuest(24958) &amp;&amp; !IsQuestCompleted(24958)">
+        <RunTo X="1310.695" Y="1185.528" Z="121.1607" />
+	</If>
+
+        <While Condition="HasQuest(24958) &amp;&amp; !IsQuestCompleted(24958)">
+        <!-- Plugin Kicks-in -->
+        </While>
+
+        <TurnIn QuestName="Volcanoth!" QuestId="24958" TurnInName="Sassy Hardwrench" TurnInId="38928" />
+        <PickUp QuestName="Old Friends" QuestId="25023" GiverName="Sassy Hardwrench" GiverId="38928" />
+
+        <If Condition="HasQuest(25023) &amp;&amp; IsQuestCompleted(25023)">
+        <CustomBehavior File="WaitTimer" WaitTime="100000" />
+        </If>
+        <TurnIn QuestName="Old Friends" QuestId="25023" TurnInName="Thrall" TurnInId="38935" />
+        <PickUp QuestName="Repel the Paratroopers" QuestId="25024" GiverName="Thrall" GiverId="38935" />
+        <PickUp QuestName="The Heads of the SI:7" QuestId="25093" GiverName="Aggra" GiverId="39065" />
+        <PickUp QuestName="Mine Disposal, the Goblin Way" QuestId="25058" GiverName="Sassy Hardwrench" GiverId="38387" />
+
+	<If Condition="HasQuest(25093) &amp;&amp; !IsQuestCompleted(25093)">
+        <CustomBehavior File="RunLikeHell" QuestId="25093" AllowCombat="false" >
+        <Hotspot X="1605.385" Y="2944.13" Z="0.0481968" />
+	</CustomBehavior>
+	</If>
+
+        <Objective QuestName="The Heads of the SI:7" QuestId="25093" Type="CollectItem" ItemId="52346" CollectCount="1" />
+
+	<If Condition="HasQuest(25093) &amp;&amp; !IsQuestCompleted(25093)">
+        <CustomBehavior File="RunLikeHell" QuestId="25093" AllowCombat="false" >
+        <Hotspot X="1830.623" Y="3000.86" Z="0.6154068" />
+	</CustomBehavior>
+	</If>
+
+        <Objective QuestName="The Heads of the SI:7" QuestId="25093" Type="CollectItem" ItemId="52349" CollectCount="1" />
+
+	<If Condition="HasQuest(25093) &amp;&amp; !IsQuestCompleted(25093)">
+        <CustomBehavior File="RunLikeHell" QuestId="25093" AllowCombat="false" >
+        <Hotspot X="1830.623" Y="3000.86" Z="0.6154068" />
+	</CustomBehavior>
+	</If>
+
+        <Objective QuestName="The Heads of the SI:7" QuestId="25093" Type="CollectItem" ItemId="52347" CollectCount="1" />
+
+	<If Condition="HasQuest(25093) &amp;&amp; !IsQuestCompleted(25093)">
+        <CustomBehavior File="RunLikeHell" QuestId="25093" AllowCombat="false" >
+        <Hotspot X="2017.225" Y="2884.197" Z="0.786847" />
+	</CustomBehavior>
+	</If>
+
+        <Objective QuestName="Repel the Paratroopers" QuestId="25024" Type="KillMob" MobId="39042" KillCount="10" />
+
+	<While Condition="HasQuest(25058) &amp;&amp; !IsQuestCompleted(25058)">
+	<CustomBehavior File="UseItemTargetLocation" ItemId="52280" MobId="202472" Range="30" UseType="ToObject" WaitTime="3000" X="1785.145" Y="2922.805" Z="6.375556" />
+	</While>
+        <TurnIn QuestName="Mine Disposal, the Goblin Way" QuestId="25058" TurnInName="Sassy Hardwrench" TurnInId="38387" />
+        <TurnIn QuestName="Repel the Paratroopers" QuestId="25024" TurnInName="Thrall" TurnInId="38935" />
+        <TurnIn QuestName="The Heads of the SI:7" QuestId="25093" TurnInName="Aggra" TurnInId="39065" />
+        <PickUp QuestName="The Pride of Kezan" QuestId="25066" GiverName="Sassy Hardwrench" GiverId="38387" />
+
+	<If Condition="HasQuest(25066) &amp;&amp; !IsQuestCompleted(25066)">
+        <CustomBehavior File="25066" />
+	</If>
+        <TurnIn QuestName="The Pride of Kezan" QuestId="25066" TurnInName="Sassy Hardwrench" TurnInId="38387" />
+        <PickUp QuestName="The Warchief Wants You" QuestId="25098" GiverName="Sassy Hardwrench" GiverId="38387" />
+	<TurnIn QuestName="The Warchief Wants You" QuestId="25098" TurnInName="Thrall" TurnInId="38935" />
+	<PickUp QuestName="Borrow Bastia" QuestId="25099" GiverName="Thrall" GiverId="38935" />
+	<TurnIn QuestName="Borrow Bastia" QuestId="25099" TurnInName="Kilag Gorefang" TurnInId="39066" />
+	<PickUp QuestName="Let's Ride" QuestId="25100" GiverName="Kilag Gorefang" GiverId="39066" />
+	<While Condition="Me.HasAura(&quot;Riding Bastia&quot;)">
+	<CustomBehavior File="WaitTimer" WaitTime="10000" />
+	</While>
+	<TurnIn QuestName="Let's Ride" QuestId="25100" TurnInName="Slinky Sharpshiv" TurnInId="38517" />
+	<PickUp QuestName="The Gallywix Labor Mine" QuestId="25109" GiverName="Slinky Sharpshiv" GiverId="38517" />
+	<If Condition="HasQuest(25109)">
+	<CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="False" />
+	<CustomBehavior File="WaitTimer" WaitTime="1000" />
+	</If>
+	<TurnIn QuestName="The Gallywix Labor Mine" QuestId="25109" TurnInName="Assistant Greely" TurnInId="38124" />
+	<PickUp QuestName="Kaja'Cola Gives You IDEAS! (TM)" QuestId="25110" GiverName="Assistant Greely" GiverId="38124" />
+	<Objective QuestName="Kaja'Cola Gives You IDEAS! (TM)" QuestId="25110" Type="CollectItem" ItemId="52483" CollectCount="1" />
+	<TurnIn QuestName="Kaja'Cola Gives You IDEAS! (TM)" QuestId="25110" TurnInName="Assistant Greely" TurnInId="38124" />
+
+		<If Condition="Me.Level &lt;= 10">
+	<CustomBehavior File="WaitTimer" WaitTime="10000" />
+	</If>
+	
+	<If Condition="Me.Level &lt;= 11">
+	<CustomBehavior File="WaitTimer" WaitTime="10000" />
+	</If>
+	
+	<PickUp QuestName="Morale Boost" QuestId="25122" GiverName="Assistant Greely" GiverId="39199" />
+	<PickUp QuestName="Throw It On the Ground!" QuestId="25123" GiverName="Assistant Greely" GiverId="39199" />
+
+        <Objective QuestName="Morale Boost" QuestId="25122" Type="CollectItem" ItemId="52484" CollectCount="20" />
+
+	<While Condition="HasQuest(25122) &amp;&amp; !IsQuestCompleted(25122)">
+	<CustomBehavior File="UseItemOn" NpcState="Alive" QuestId="25122" ItemId="52484" Range="15" MobId="38745" NumOfTimes="6" X="1795.279" Y="1922.784" Z="172.6141" WaitTime="15000" />
+        <CustomBehavior File="UseItemOn" NpcState="Alive" QuestId="25122" ItemId="52484" Range="15" MobId="38441" NumOfTimes="1" X="1763.078" Y="1810.266" Z="171.6499" />
+	<CustomBehavior File="UseItemOn" NpcState="Alive" QuestId="25122" ItemId="52484" Range="15" MobId="38647" NumOfTimes="1" X="1826.609" Y="1809.67" Z="173.2442" />	
+        <CustomBehavior File="UseItemOn" NpcState="Alive" QuestId="25122" ItemId="52484" Range="15" MobId="38746" NumOfTimes="1" X="1913.413" Y="1807.932" Z="170.1177" />
+	</While>
+	
+		<TurnIn QuestName="Morale Boost" QuestId="25122" TurnInName="Assistant Greely" TurnInId="39199" />
+       
+	   <While Condition="HasQuest(25123) &amp;&amp; !IsQuestCompleted(25123)">
+	<If Condition="HasQuest(25123) &amp;&amp; !IsQuestCompleted(25123)">
+        <CustomBehavior File="InteractWith" MobId="39194" NumOfTimes="1" ObjectType="Npc" X="1906.112" Y="1841.133" Z="172.8115" />
+	</If>
+
+	<If Condition="HasQuest(25123) &amp;&amp; !IsQuestCompleted(25123)">
+        <CustomBehavior File="UserSettings" PullDistance="1" />
+        <CustomBehavior File="InteractWithExisting" QuestId="25123" ObjectType="Gameobject" MobId="202574" NumOfTimes="1" CollectionDistance="400" X="1920.335" Y="1864.401" Z="173.3432" />
+	</If>
+
+	<If Condition="HasQuest(25123) &amp;&amp; !IsQuestCompleted(25123)">
+        <CustomBehavior File="UserSettings" PullDistance="1" />
+	<CustomBehavior File="UseItemOn" ItemId="52481" Range="10" MobId="39194" NumOfTimes="1" X="1920.335" Y="1864.401" Z="173.3432" />
+	</If>
+	</While>
+	<If Condition="HasQuest(25123) &amp;&amp; IsQuestCompleted(25123)">
+		<CustomBehavior File="UserSettings" PullDistance="25" />
+	</If>
+	<TurnIn QuestName="Throw It On the Ground!" QuestId="25123" TurnInName="Assistant Greely" TurnInId="39199" />	
+	<PickUp QuestName="Light at the End of the Tunnel" QuestId="25125" GiverName="Assistant Greely" GiverId="39199" />
+	<TurnIn QuestName="Light at the End of the Tunnel" QuestId="25125" TurnInName="Mine Cart" TurnInId="39341" />
+	<PickUp QuestName="Wild Mine Cart Ride" QuestId="25184" GiverName="Mine Cart" GiverId="39341" />
+	<While Condition="Me.HasAura(&quot;Riding Mine Cart&quot;)">
+	<CustomBehavior File="WaitTimer" WaitTime="10000" />
+	</While>
+	<TurnIn QuestName="Wild Mine Cart Ride" QuestId="25184" TurnInName="Assistant Greely" TurnInId="38124" />
+	<PickUp QuestName="Shredder Shutdown" QuestId="25200" GiverName="Assistant Greely" GiverId="38124" />
+	<PickUp QuestName="The Ultimate Footbomb Uniform" QuestId="25201" GiverName="Coach Crosscheck" GiverId="38738" />
+        <Objective QuestName="Shredder Shutdown" QuestId="25200" Type="KillMob" MobId="39354" KillCount="8" />
+        <Objective QuestName="The Ultimate Footbomb Uniform" QuestId="25201" Type="CollectItem" ItemId="52530" CollectCount="8" />
+
+	<TurnIn QuestName="Shredder Shutdown" QuestId="25200" TurnInName="Assistant Greely" TurnInId="38124" />
+	<TurnIn QuestName="The Ultimate Footbomb Uniform" QuestId="25201" TurnInName="Coach Crosscheck" TurnInId="38738" />
+	<PickUp QuestName="Release the Valves" QuestId="25204" GiverName="Assistant Greely" GiverId="38124" />
+	<If Condition="Me.Gender == WoWGender.Male">
+	<PickUp QuestName="What Kind of Name is Chip, Anyway?" QuestId="25203" GiverName="Ace" GiverId="38441" />
+	</If>
+	<If Condition="Me.Gender == WoWGender.Female">
+	<PickUp QuestName="The Fastest Way to His Heart" QuestId="25202" GiverName="Izzy" GiverId="38647" />
+	</If>
+
+	<Objective QuestName="Release the Valves" QuestId="25204" Type="UseObject" ObjectId="202609" UseCount="1" />
+	<Objective QuestName="Release the Valves" QuestId="25204" Type="UseObject" ObjectId="202610" UseCount="1" />
+	<Objective QuestName="Release the Valves" QuestId="25204" Type="UseObject" ObjectId="202611" UseCount="1" />
+	<Objective QuestName="Release the Valves" QuestId="25204" Type="UseObject" ObjectId="202612" UseCount="1" />
+	<If Condition="Me.Gender == WoWGender.Male">
+                <Objective QuestName="What Kind of Name is Chip, Anyway?" QuestId="25203" Type="KillMob" MobId="39363" KillCount="1" />		
+	</If>
+	<If Condition="Me.Gender == WoWGender.Female">
+		<Objective QuestName="The Fastest Way to His Heart" QuestId="25202" Type="CollectItem" ItemId="52531" CollectCount="1" />
+	</If>
+	<TurnIn QuestName="Release the Valves" QuestId="25204" TurnInType="Object" TurnInName="Platform Control Panel" TurnInId="202613" X="2486.886" Y="2062.732" Z="14.84005" />
+	<PickUp QuestName="Good-bye, Sweet Oil" QuestId="25207" GiverType="Object" GiverName="Platform Control Pane" GiverId="202613" X="2486.886" Y="2062.732" Z="14.84005" />
+        <If Condition="HasQuest(25207) &amp;&amp; !IsQuestCompleted(25207)">
+	<CustomBehavior File="UseGameObject" QuestId="25207" ObjectId="205061" NumOfTimes="1" X="2487.508" Y="2065.495" Z="14.85919" />
+	</If>
+	<If Condition="Me.Gender == WoWGender.Male">
+	<TurnIn QuestName="What Kind of Name is Chip, Anyway?" QuestId="25203" TurnInName="Ace" TurnInId="38441" />
+	</If>
+	<If Condition="Me.Gender == WoWGender.Female">
+	<TurnIn QuestName="The Fastest Way to His Heart" QuestId="25202" TurnInName="Izzy" TurnInId="38647" />
+	</If>
+
+	<TurnIn QuestName="Good-bye, Sweet Oil" QuestId="25207" TurnInName="Assistant Greely" TurnInId="38124" />
+	<PickUp QuestName="The Slave Pits" QuestId="25213" GiverName="Assistant Greely" GiverId="38124" />
+	<While Condition="Me.HasAura(&quot;Footbomb Uniform&quot;)">
+	<CustomBehavior File="WaitTimer" WaitTime="10000" />
+        </While>
+        <TurnIn QuestName="The Slave Pits" QuestId="25213" TurnInName="Sassy Hardwrench" TurnInId="38387" />
+	<PickUp QuestName="Escape Velocity" QuestId="25214" GiverName="Hobart Grapplehammer" GiverId="38120" />
+	<If Condition="Me.Gender == WoWGender.Male">
+		<PickUp QuestName="She Loves Me, She Loves Me NOT!" QuestId="25243" GiverName="Sassy Hardwrench" GiverId="38387" />
+		<Objective QuestName="She Loves Me, She Loves Me NOT!" QuestId="25243" Type="CollectItem" ItemId="52559" CollectCount="1" />
+	</If>
+	<If Condition="Me.Gender == WoWGender.Female">
+		<PickUp QuestName="What Kind of Name is Candy, Anyway?" QuestId="25244" GiverName="Sassy Hardwrench" GiverId="38387" />
+		<Objective QuestName="What Kind of Name is Candy, Anyway?" QuestId="25244" Type="KillMob" MobId="39426" KillCount="1" />
+	</If>
+	<While Condition="HasQuest(25214) &amp;&amp; !IsQuestCompleted(25214)">
+		<CustomBehavior File="InteractWith" QuestId="25214" NumOfTimes="1" MobId="39456" WaitTime="7000" ObjectType="Npc" X="2097.615" Y="2609.609" Z="2.211801" />
+	</While>
+	<If Condition="Me.Gender == WoWGender.Male">
+		<TurnIn QuestName="She Loves Me, She Loves Me NOT!" QuestId="25243" TurnInName="Sassy Hardwrench" TurnInId="38387" />
+	</If>
+	<If Condition="Me.Gender == WoWGender.Female">
+		<TurnIn QuestName="The Fastest Way to His Heart" QuestId="25202" TurnInName="Izzy" TurnInId="38647" />
+	</If>
+	<TurnIn QuestName="Escape Velocity" QuestId="25214" TurnInName="Hobart Grapplehammer" TurnInId="38120" />
+	<If Condition="Me.Gender == WoWGender.Male">
+		<TurnIn QuestName="She Loves Me, She Loves Me NOT!" QuestId="25243" TurnInName="Sassy Hardwrench" TurnInId="38387" />
+	</If>
+	<If Condition="Me.Gender == WoWGender.Female">
+		<TurnIn QuestName="What Kind of Name is Candy, Anyway?" QuestId="25244" TurnInName="Sassy Hardwrench" TurnInId="38387" />
+	</If>
+	<PickUp QuestName="Final Confrontation" QuestId="25251" GiverName="Sassy Hardwrench" GiverId="38387" />
+	<If Condition="HasQuest(25251) &amp;&amp; !IsQuestCompleted(25251)">
+		<CustomBehavior File="25251"/>
+	</If>
+	<TurnIn QuestName="Final Confrontation" QuestId="25251" TurnInName="Sassy Hardwrench" TurnInId="38387" />
+	<PickUp QuestName="Victory!" QuestId="25265" GiverName="Sassy Hardwrench" GiverId="38387" />
+	<TurnIn QuestName="Victory!" QuestId="25265" TurnInName="Thrall" TurnInId="38935" />
+	<PickUp QuestName="Warchief's Emissary" QuestId="25266" GiverName="Thrall" GiverId="38935" />
+	<If Condition="HasQuest(25266) &amp;&amp; IsQuestCompleted(25266)">
+                <CustomBehavior File="InteractWith" MobId="38387" NumOfTimes="1" ObjectType="Npc" X="2387.172" Y="2461.831" Z="11.41774" GossipOptions="1,1,1,1" WaitTime="5000" />
+	</If>
+	<TurnIn QuestName="Warchief's Emissary" QuestId="25266" TurnInName="Kor'kron Loyalist" TurnInId="39609" />
+	<PickUp QuestName="Message for Garrosh" QuestId="25267" GiverName="Kor'kron Loyalist" GiverId="39609" />
+	<If Condition="HasQuest(25267)">
+			<CustomBehavior File="WaitTimer" WaitTime="60000"/>
+	</If>
+
+	<TurnIn QuestName="Message for Garrosh" QuestId="25267" TurnInName="Message for Garrosh" TurnInId="39605" />
+        <PickUp QuestName="Warchiefs command: Northern Barrens" QuestId="28494" GiverType="Object" GiverName="Warchief's Command Board" GiverId="206109" X="1597.307" Y="-4371.851" Z="21.16051" />
+	<PickUp QuestName="Conscript of the Horde" QuestId="840" GiverName="Takrin Pathseeker" GiverId="3336" />
+
+		<CustomBehavior File="LoadProfile" Profile="Northern Barrens 12-20+.xml" />
+
+<!--         <CustomBehavior File="RunMacro" Macro="/click VehicleMenuBarActionButton1" NumOfTimes="25" WaitTime="500" /> -->
+		<!-- <CustomBehavior File="RunMacro" Macro="/click VehicleMenuBarActionButton1" NumOfTimes="1" WaitTime="1500" /> -->
+       <!-- <CustomBehavior File="RunMacro" Macro="/use Keys to the Hot Rod" NumOfTimes="1" WaitTime="3000"/> -->
+	</QuestOrder>
+</HBProfile>

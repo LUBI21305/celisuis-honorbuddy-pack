@@ -1,0 +1,80 @@
+<HBProfile>
+ <Name>Disgusting Oozeling Farm</Name> 
+  <MinDurability>0.4</MinDurability> 
+  <MinFreeBagSlots>3</MinFreeBagSlots> 
+   <SellGrey>True</SellGrey> 
+   <SellWhite>True</SellWhite> 
+   <SellGreen>False</SellGreen> 
+   <SellBlue>False</SellBlue> 
+   <SellPurple>False</SellPurple> 
+    <MinLevel>52</MinLevel> 
+    <MaxLevel>86</MaxLevel>
+
+ <ProtectedItems>
+  <!-- Disgusting Oozeling -->
+   <Item>20769</Item>
+  <!-- Oozing Bag -->
+   <Item>20768</Item>
+  </ProtectedItems>
+
+ <ForceMail>
+  <!-- Disgusting Oozeling -->
+   <Item>20769</Item>
+  <!-- Oozing Bag -->
+   <Item>20768</Item>
+ </ForceMail>
+
+<SubProfile>
+ <Name>Disgusting Oozeling</Name>
+  <MinLevel>50</MinLevel>
+  <MaxLevel>86</MaxLevel>
+
+ <Vendors>
+  <Vendor Name="Hartash" Entry="981" Type="Repair" X="-10399.47" Y="-3270.429" Z="21.75108" />
+ </Vendors>
+
+ <Mailboxes>
+  <Mailbox X="-10460.77" Y="-3265.355" Z="20.17933" />
+ </Mailboxes>
+
+ <AvoidMobs>
+  <Mob Name="Sorrow Screecher" Entry="48249" />
+  <Mob Name="Swamp Moth" Entry="50000" />
+  <Mob Name="Sorrow Spinner" Entry="858" />
+  <Mob Name="Sorrow Venomspitter" Entry="48248" />
+  <Mob Name="Huge Toad" Entry="6653" />
+  <Mob Name="Parrot" Entry="9600" />
+ </AvoidMobs>
+
+ <GrindArea>
+  <Factions>7</Factions>
+    <TargetMinLevel>50</TargetMinLevel>
+    <TargetMaxLevel>60</TargetMaxLevel>
+     <RandomizeHotspots>false</RandomizeHotspots>
+     <MaximumHotspotTime>60000</MaximumHotspotTime>
+
+  <Hotspots>
+   <!-- The Shifting Mire -->
+    <Hotspot X="-10180.4" Y="-2907.091" Z="17.44384" />
+    <Hotspot X="-10129.68" Y="-2930.649" Z="21.89979" />
+    <Hotspot X="-10102.15" Y="-3009.325" Z="17.28834" />
+    <Hotspot X="-10177.29" Y="-3042.652" Z="17.35997" />
+    <Hotspot X="-10225.4" Y="-2942.97" Z="17.18716" />
+    <Hotspot X="-10309.13" Y="-2935.996" Z="20.5586" />
+    <Hotspot X="-10422.93" Y="-2844.564" Z="17.51214" />
+    <Hotspot X="-10467.85" Y="-2916.64" Z="17.37426" />
+    <Hotspot X="-10397.71" Y="-3039.022" Z="19.51948" />
+    <Hotspot X="-10306.2" Y="-3024.739" Z="17.3754" />
+    <Hotspot X="-10211.08" Y="-3031.657" Z="19.67151" />
+    <Hotspot X="-10097.99" Y="-3014.292" Z="19.43964" />
+    <Hotspot X="-10122.62" Y="-2937.313" Z="20.51124" />
+  </Hotspots>
+
+  <BlackSpots>
+   <!-- The Harborage -->
+    <Blackspot X="-10154.24" Y="-2843.779" Z="21.24385" Radius="125" />
+  </BlackSpots>
+
+  </GrindArea>
+ </SubProfile>
+</HBProfile>

@@ -1,0 +1,74 @@
+﻿<HBProfile>
+  <Name>Dark Herring / Sea Turtle - Horde</Name>
+  <MinLevel>1</MinLevel>
+  <MaxLevel>86</MaxLevel>
+  <SellGrey>True</SellGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+  <GrindArea>
+    <TargetMinLevel>0</TargetMinLevel>
+    <TargetMaxLevel>0</TargetMaxLevel>
+    <MaxDistance>30</MaxDistance>
+    <Hotspots>
+      <Hotspot x="2377.77612" y="-4124.278" z="220.64743" />
+      <Hotspot x="2320.12134" y="-4219.47656" z="220.80365" />
+      <Hotspot x="2213.52539" y="-4127.631" z="219.920761" />
+      <Hotspot x="2169.94849" y="-4066.624" z="222.234482" />
+      <Hotspot x="2149.166" y="-3962.04028" z="221.090042" />
+      <Hotspot x="2175.98584" y="-3868.18652" z="220.2688" />
+      <Hotspot x="2251.74048" y="-3819.91382" z="219.142044" />
+      <Hotspot x="2323.47314" y="-3752.86865" z="221.0227" />
+      <Hotspot x="2162.57422" y="-3894.99731" z="221.817764" />
+      <Hotspot x="2147.82715" y="-4023.72046" z="222.429657" />
+      <Hotspot x="2253.07935" y="-4179.262" z="220.36644" />
+      <Hotspot x="2364.36377" y="-4196.029" z="220.3904" />
+    </Hotspots>
+  </GrindArea>
+  <Mailboxes>
+    <Mailbox x="2676.61" y="-4381.53" z="283.961" />
+  </Mailboxes>
+  <Vendors>
+    <Vendor id="24033" name="Bori Wintertotem" type="Food" x="2683.85" y="-4389.32" z="284.363" />
+    <Vendor id="24028" name="Talu Frosthoof" type="Repair" x="2672.99" y="-4306.45" z="290.997" />
+  </Vendors>
+  <ProtectedItems>
+    <Item id="19970" name="Arcanite Fishing Pole" />
+    <Item id="6367" name="Big Iron Fishing Pole" />
+    <Item id="12225" name="Blump Family Fishing Pole" />
+    <Item id="45991" name="Bone Fishing Pole" />
+    <Item id="6366" name="Darkwood Fishing Pole" />
+    <Item id="3567" name="Dwarven Fishing Pole" />
+    <Item id="6256" name="Fishing Pole" />
+    <Item id="4598" name="Goblin Fishing Pole" />
+    <Item id="45992" name="Jeweled Fishing Pole" />
+    <Item id="44050" name="Mastercraft Kalu'ak Fishing Pole" />
+    <Item id="45858" name="Nat's Lucky Fishing Pole" />
+    <Item id="25978" name="Seth's Graphite Fishing Pole" />
+    <Item id="6365" name="Strong Fishing Pole" />
+    <Item id="41810" name="Fangtooth Herring" />
+    <Item id="40199" name="Pygmy Suckerfish" />
+    <Item id="37705" name="Crystallized Water" />
+    <Item id="44475" name="Reinforced Crate" />
+    <Item id="50289" name="Blacktip Shark" />
+    <Item id="44703" name="Dark Herring" />
+    <Item id="44505" name="Dustbringer" />
+    <Item id="46109" name="Sea Turtle" />
+    <Item id="41808" name="Bonescale Snapper" />
+    <Item id="41809" name="Glacial Salmon" />
+    <Item id="8227" name="Elixir of Water Walking" />
+    <Item id="8827" name="Elixir of Water Walking" />
+    <Item id="33820" name="Weather-Beaten Fishing Hat" />
+  </ProtectedItems>
+  <ForceMail>
+    <Item id="41810" name="Fangtooth Herring" />
+    <Item id="40199" name="Pygmy Suckerfish" />
+    <Item id="37705" name="Crystallized Water" />
+    <Item id="44475" name="Reinforced Crate" />
+    <Item id="50289" name="Blacktip Shark" />
+    <Item id="44505" name="Dustbringer" />
+    <Item id="41808" name="Bonescale Snapper" />
+    <Item id="41809" name="Glacial Salmon" />
+  </ForceMail>
+</HBProfile>

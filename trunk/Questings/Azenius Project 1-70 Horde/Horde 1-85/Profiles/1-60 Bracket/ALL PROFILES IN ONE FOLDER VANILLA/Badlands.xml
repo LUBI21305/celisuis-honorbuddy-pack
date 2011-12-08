@@ -1,0 +1,387 @@
+<HBProfile>
+	<Name>Azenius Project [Badlands] 39-44</Name>
+	<MinLevel>1</MinLevel>
+	<MaxLevel>85</MaxLevel>
+	<MinDurability>0.4</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+	<TargetElites>False</TargetElites>
+	<AvoidMobs>
+    <Mob Name="Lead Prospector Durdin" Entry="46760" />
+	<Mob Name="Sigrun Ironhew" Entry="2860" />
+	<Mob Name="Kand Sandseeker" Entry="46762" />
+	<Mob Name="Olga Runesworn" Entry="46761" />
+	<Mob Name="Prospector Ryedol" Entry="2910" />
+	<Mob Name="Gavran Goodspade" Entry="46659" />
+	<Mob Name="Vernon Farcavern" Entry="48090" />
+	<Mob Name="Enraged Gryphon" Entry="9526" />
+	<Mob Name="Nancy Skybrew" Entry="44409" />
+	<Mob Name="Dustwind Overseer" Entry="51538" />
+	</AvoidMobs>
+	<Blackspots>
+
+	</Blackspots>
+   
+	<Mailboxes>
+	<Mailbox X="-6598.892" Y="-3929.135" Z="379.4215" /> <!-- Fuselight -->
+	<Mailbox X="-6738.339" Y="-2460.436" Z="272.7918" /> <!-- New Kargath -->
+	</Mailboxes>
+	<Vendors>
+	
+		<!-- Fuselight -->
+		<!-- Fuselight Vendors -->
+		<Vendor Name="Artie Steelbolt" Entry="48057" Type="Repair" X="-6600.45" Y="-3898.99" Z="379.1214" />
+        <!-- Fuselight Trainers -->
+		<!-- None -->
+
+		<!-- New Kargath -->
+		<!-- New Kargath Vendors -->
+		<Vendor Name="Sranda" Entry="1407" Type="Repair" X="-6715.02" Y="-2437.07" Z="272.7705" />
+        <!-- New Kargath Trainers -->
+		<!-- None -->
+
+    </Vendors>
+  
+  <Quest Id="27895" Name="Tiger Their Hunt Continues">
+	<Objective Type="KillMob" MobId="46938" KillCount="1">
+		<Hotspots>
+			<Hotspot X="-6846.58" Y="-2421.167" Z="273.3739" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
+	<QuestOrder>
+	
+	<CustomBehavior File="UserSettings" LootMobs="True" UseMount="True" PullDistance="30" />
+		<CustomBehavior File="UserSettings" LootMobs="True" TrainNewSkills="False" LearnFlightPaths="True" UseFlightPaths="False" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Azenius Questing Profiles (Eastern Kingdoms = Badlands Profile Loaded)." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Compiling Quests." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning off auto-train." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting UseFlightPaths to false." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting LearnFlightPaths to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting LootMobs to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting UseMount to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting PullDistance to 30." />
+
+<TurnIn QuestName="Fuselight, Ho!" TurnInName="Eddie Flofizzle" QuestId="27762" TurnInId="46650" X="-6651.38" Y="-4746.83" Z="8.326457" />
+		<PickUp QuestName="To Fuselight Proper" GiverName="Eddie Flofizzle" QuestId="27763" GiverId="46650" X="-6651.38" Y="-4746.83" Z="8.326457" />
+			<If Condition="HasQuest(27763)">
+				<RunTo X="-6521.097" Y="-4610.497" Z="27.95792" />
+				<CustomBehavior File="MyCTM" X="-6518.669" Y="-4604.811" Z="29.21797" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			</If>
+
+		<TurnIn QuestName="To Fuselight Proper" TurnInName="Dolph Blastus" QuestId="27763" TurnInId="46652" X="-6639.79" Y="-3900.45" Z="379.2939" />
+		<PickUp QuestName="Easily Swayed" GiverName="Dolph Blastus" QuestId="27774" GiverId="46652" />
+		<PickUp QuestName="When the Going Gets Tough, Cheat" GiverName="Garyanne Fleezlebop" QuestId="27775" GiverId="46653" />
+			<Objective QuestName="When the Going Gets Tough, Cheat" QuestId="27775" Type="Collect" CollectCount="1" ItemId="62396" />
+			<Objective QuestName="Easily Swayed" QuestId="27774" Type="KillMob" MobId="46695" KillCount="9" />
+		<TurnIn QuestName="When the Going Gets Tough, Cheat" TurnInName="Garyanne Fleezlebop" QuestId="27775" TurnInId="46653" />
+		<PickUp QuestName="It's Goat Time, Baby" GiverName="Garyanne Fleezlebop" QuestId="27776" GiverId="46653" />
+		<TurnIn QuestName="Easily Swayed" TurnInName="Dolph Blastus" QuestId="27774" TurnInId="46652" />
+		<PickUp QuestName="A Strange Request" GiverName="Dolph Blastus" QuestId="27764" GiverId="46652" />
+			<While Condition="HasQuest(27776) &amp;&amp; !IsQuestCompleted(27776)">
+			<CustomBehavior File="UserSettings" UseMount="False" />
+			<CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="UseItemOn" QuestId="27776" MobId="46393" ItemId="62397" NumOfTimes="12" WaitTime="3000" X="-6606.835" Y="-3917.877" Z="379.0245" />
+			</While>
+			<CustomBehavior File="UserSettings" UseMount="True" />
+		<TurnIn QuestName="It's Goat Time, Baby" TurnInName="Garyanne Fleezlebop" QuestId="27776" TurnInId="46653" />
+		<TurnIn QuestName="A Strange Request" TurnInName="Rhea" QuestId="27764" TurnInId="46654" />
+		<PickUp QuestName="First Sample: Wild Eggs" GiverName="Rhea" QuestId="27765" GiverId="46654" />
+		<PickUp QuestName="Second Sample: Whelps" GiverName="Rhea" QuestId="27766" GiverId="46654" />
+			<Objective QuestName="First Sample: Wild Eggs" QuestId="27765" Type="Collect" CollectCount="6" ItemId="62388" />
+			<Objective QuestName="Second Sample: Whelps" QuestId="27766" Type="Collect" CollectCount="10" ItemId="62390" />
+		<TurnIn QuestName="First Sample: Wild Eggs" TurnInName="Rhea" QuestId="27765" TurnInId="46654" />
+		<TurnIn QuestName="Second Sample: Whelps" TurnInName="Rhea" QuestId="27766" TurnInId="46654" />
+		<PickUp QuestName="Lifting the Veil" GiverName="Rhea" QuestId="27770" GiverId="46654" />
+			<If Condition="(HasQuest(27770))" >
+				<CustomBehavior File="WaitTimer" WaitTime="5000"/>
+			</If>
+		<TurnIn QuestName="Lifting the Veil" TurnInName="Rhea" QuestId="27770" TurnInId="46654" />
+		<PickUp QuestName="Third Sample: Implanted Eggs" GiverName="Rhea" QuestId="27771" GiverId="46654" />
+		
+			<Objective QuestName="Third Sample: Implanted Eggs" QuestId="27771" Type="Collect" CollectCount="3" ItemId="62393" />
+			<CustomBehavior File="RunMacro" Macro="/cleartarget" />
+		<TurnIn QuestName="Third Sample: Implanted Eggs" TurnInName="Rhea" QuestId="27771" TurnInId="46654" />
+		<PickUp QuestName="Rhea Revealed" GiverName="Rhea" QuestId="27769" GiverId="46654" />
+			<If Condition="(HasQuest(27769))" >
+				<CustomBehavior File="WaitTimer" WaitTime="5000"/>
+			</If>
+		<TurnIn QuestName="Rhea Revealed" QuestId="27769" TurnInName="" TurnInId="46655" X="-6991.14" Y="-3944.46" Z="263.8891" />
+		<PickUp QuestName="The Venerable Doctor Blam" GiverName="Rheastrasza" QuestId="27772" GiverId="46655" X="-6991.14" Y="-3944.46" Z="263.8891" />
+			<PickUp QuestName="Forcible Acquisition" QuestId="27878" GiverName="Aoren Sunglow" GiverId="46758" />
+			<PickUp QuestName="The Morons' League" QuestId="27877" GiverName="Lidia Sunglow" GiverId="46759" />
+			<TurnIn QuestName="The Venerable Doctor Blam" QuestId="27772" TurnInName="Dr. Hieronymus Blam" TurnInId="46664" />
+		<PickUp QuestName="Troggish Troubles" QuestId="27789" GiverName="Dr. Hieronymus Blam" GiverId="46664" />
+			<If Condition="HasQuest(27789) &amp;&amp; !IsQuestCompleted(27789)" >
+				<CustomBehavior File="MountVehOnly" VehicleMountId="46707" X="-7117.157" Y="-3320.59" Z="242.8091" />
+			</If>
+			<While Condition="HasQuest(27789) &amp;&amp; !IsQuestCompleted(27789)" >
+				<CustomBehavior File="WaitTimer" WaitTime="60000" />
+			</While>
+		<TurnIn QuestName="Troggish Troubles" TurnInName="Dr. Hieronymus Blam" QuestId="27789" TurnInId="46664" />	
+		<PickUp QuestName="Bloodwatcher Point" QuestId="27881" GiverName="Dr. Hieronymus Blam" GiverId="46664" />
+        <TurnIn QuestName="Bloodwatcher Point" QuestId="27881" TurnInName="High Examiner Tae'thelan Bloodwatcher" TurnInId="46757" />
+		<PickUp QuestName="It's Not About History, It's About Power" QuestId="27882" GiverName="High Examiner Tae'thelan Bloodwatcher" GiverId="46757" />
+		
+		<Objective QuestName="It's Not About History, It's About Power" QuestId="27882" Type="CollectItem" ItemId="62594" CollectCount="1" />
+		<Objective QuestName="It's Not About History, It's About Power" QuestId="27882" Type="CollectItem" ItemId="62595" CollectCount="1" />
+		<Objective QuestName="It's Not About History, It's About Power" QuestId="27882" Type="CollectItem" ItemId="62596" CollectCount="1" />
+		<Objective QuestName="It's Not About History, It's About Power" QuestId="27882" Type="CollectItem" ItemId="62597" CollectCount="1" />
+		
+		<If Condition="HasQuest(27878) &amp;&amp; !IsQuestCompleted(27878)" >
+		<RunTo X="-6713.72" Y="-3380.312" Z="241.6797" />
+		<RunTo X="-6566.964" Y="-3249.949" Z="242.6954" />
+		</If>
+			
+		<Objective QuestName="Forcible Acquisition" QuestId="27878" Type="CollectItem" ItemId="62509" CollectCount="1" />
+		<Objective QuestName="The Morons' League" QuestId="27877" Type="CollectItem" ItemId="62650" CollectCount="15" />
+		
+		<If Condition="HasQuest(27882) &amp;&amp; IsQuestCompleted(27882)" >
+		<RunTo X="-6728.67" Y="-3328.372" Z="244.5923" />
+		</If>
+
+		<TurnIn QuestName="It's Not About History, It's About Power" QuestId="27882" TurnInName="High Examiner Tae'thelan Bloodwatcher" TurnInId="46757" />
+		<PickUp QuestName="The Sentinel's Pawn" QuestId="27884" GiverName="High Examiner Tae'thelan Bloodwatcher" GiverId="46757" />
+		<PickUp QuestName="The Warden's Pawn" QuestId="27883" GiverName="High Examiner Tae'thelan Bloodwatcher" GiverId="46757" />
+		<TurnIn QuestName="Forcible Acquisition" QuestId="27878" TurnInName="Aoren Sunglow" TurnInId="46758" />
+		<TurnIn QuestName="The Morons' League" QuestId="27877" TurnInName="Lidia Sunglow" TurnInId="46759" />
+		<TurnIn QuestName="The Sentinel's Pawn" QuestId="27884" TurnInName="Marble Slab" TurnInId="206336" />
+		<PickUp QuestName="The Sentinel's Game" QuestId="27886" GiverName="Marble Slab" GiverId="206336" X="-6895.743" Y="-3376.919" Z="202.282" />
+		
+		<If Condition="HasQuest(27886) &amp;&amp; !IsQuestCompleted(27886)">
+		<RunTo X="-6895.635" Y="-3393.639" Z="202.2835" />
+        <CustomBehavior File="BasicInteractWith" MobId="46395" />
+		<CustomBehavior File="WaitTimer" WaitTime="2500" />
+		<CustomBehavior File="BasicInteractWith" MobId="46395" />
+		<RunTo X="-6901.996" Y="-3378.454" Z="202.2849" />
+		<CustomBehavior File="BasicInteractWith" MobId="46395" />
+		<RunTo X="-6911.675" Y="-3404.213" Z="202.2837" />
+        <CustomBehavior File="BasicInteractWith" MobId="46395" />
+		<CustomBehavior File="WaitTimer" WaitTime="2500" />
+		<CustomBehavior File="BasicInteractWith" MobId="46395" />
+		<RunTo X="-6923.949" Y="-3387.036" Z="202.2837" />
+		<CustomBehavior File="BasicInteractWith" MobId="46395" />
+		<RunTo X="-6933.997" Y="-3399.535" Z="202.2837" />
+		<CustomBehavior File="BasicInteractWith" MobId="46395" />
+		<CustomBehavior File="WaitTimer" WaitTime="2500" />
+		<CustomBehavior File="BasicInteractWith" MobId="46395" />
+		<RunTo X="-6940.715" Y="-3378.752" Z="202.2837" />
+        <CustomBehavior File="BasicInteractWith" MobId="46395" />
+		<CustomBehavior File="WaitTimer" WaitTime="2500" />
+		<CustomBehavior File="BasicInteractWith" MobId="46395" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+	
+		<If Condition="IsQuestCompleted(27886) &amp;&amp; HasQuest(27886)">
+        <CustomBehavior File="CompleteLogQuest" QuestId="27886" />
+	    <CustomBehavior File="WaitTimer" WaitTime="2500" />
+        <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+		<TurnIn QuestName="The Warden's Pawn" QuestId="27883" TurnInName="Stone Slab" TurnInId="206335" />
+		<PickUp QuestName="The Warden's Game" QuestId="27885" GiverName="Stone Slab" GiverId="206335" X="-6967.493" Y="-3448.221" Z="200.8956" />
+		
+		<While Condition="HasQuest(27885) &amp;&amp; !IsQuestCompleted(27885)" >
+		<CustomBehavior File="WaitTimer" WaitTime="60000" />
+		</While>
+		
+		<If Condition="IsQuestCompleted(27885) &amp;&amp; HasQuest(27885)">
+        <CustomBehavior File="CompleteLogQuest" QuestId="27885" />
+	    <CustomBehavior File="WaitTimer" WaitTime="2500" />
+        <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+		
+		<While Condition="!IsQuestCompleted(27887) &amp;&amp; HasQuest(27887)">
+		<CustomBehavior File="InteractWith" MobId="46768" NumOfTimes="1" ObjectType="Npc" GossipOptions="1" WaitTime="10000" X="-6936.878" Y="-3446.827" Z="197.6489" />
+		<CustomBehavior File="InteractWith" MobId="46769" NumOfTimes="1" ObjectType="Npc" GossipOptions="1" WaitTime="10000" X="-6936.878" Y="-3446.827" Z="197.6489" />
+        </While>
+		
+		<If Condition="IsQuestCompleted(27887) &amp;&amp; HasQuest(27887)">
+        <CustomBehavior File="CompleteLogQuest" QuestId="27887" />
+	    <CustomBehavior File="WaitTimer" WaitTime="2500" />
+        <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+		<TurnIn QuestName="The Titans' Trove" QuestId="27913" TurnInName="Throve of the Watchers" TurnInId="206374" X="-6942.25" Y="-3444.84" Z="197.6484" />
+		<PickUp QuestName="Return to Blam" QuestId="27888" GiverName="Trove of the Watchers" GiverId="206374" X="-6942.25" Y="-3444.84" Z="197.6484" />
+		<TurnIn QuestName="Return to Blam" QuestId="27888" TurnInName="Dr. Hieronymus Blam" TurnInId="46664" />
+		<PickUp QuestName="New Kargath" QuestId="27889" GiverName="Dr. Hieronymus Blam" GiverId="46664" />
+		
+        <!-- QUEST 27713, QUEST 27714 AND QUEST 27715 NEEDS CODING -->
+		
+		<PickUp QuestName="Survival of the Fattest" QuestId="27879" GiverName="Aidan Summerwind" GiverId="46660" />
+		<TurnIn QuestName="New Kargath" QuestId="27889" TurnInName="Rhea" TurnInId="46654" />
+		<PickUp QuestName="The Bad Dogs" QuestId="27890" GiverName="Rhea" GiverId="46654" />
+		<PickUp QuestName="To the Aid of the Thorium Brotherhood" QuestId="28512" GiverName="Aidan Summerwind" GiverId="46660" />
+		
+		<If Condition="HasQuest(28512)">
+            <CustomBehavior File="Hearthstone" MobId="9356" X="-6727.633" Y="-2464.182" Z="274.5775" HearthLocation="5565" />  
+        </If>
+		<TurnIn QuestName="The Bad Dogs" QuestId="27890" TurnInName="Amakkar" TurnInId="47011" />
+		
+		<If Condition="!IsQuestCompleted(27891) &amp;&amp; !HasQuest(27891)">
+		<CustomBehavior File="InteractWith"  MobId="47011" NumOfTimes="1" CollectionDistance="200" WaitTime="1000" X="-6732.679" Y="-2481.298" Z="274.525" />
+        <CustomBehavior File="Misc\RunLua" Lua="AcceptQuest();" WaitTime="1000" />
+        <CustomBehavior File="WaitTimer" WaitTime="10000"/>
+		</If>
+		
+	<!--	<If Condition="!IsQuestCompleted(27892) &amp;&amp; !HasQuest(27892)">
+		<RunTo X="-6728.615" Y="-2480.195" Z="274.1812" />
+		<CustomBehavior File="BasicInteractWith"  MobId="47018" />
+        <CustomBehavior File="WaitTimer" WaitTime="4000"/>
+		</If> -->
+		
+		<If Condition="!IsQuestCompleted(27892) &amp;&amp; !HasQuest(27892)">
+		<RunTo X="-6728.615" Y="-2480.195" Z="274.1812" />
+		<CustomBehavior File="BasicInteractWith"  MobId="47024" />
+        <CustomBehavior File="Misc\RunLua" Lua="AcceptQuest();" WaitTime="1000" />
+        <CustomBehavior File="WaitTimer" WaitTime="2000"/>
+		</If>
+		
+		<If Condition="!IsQuestCompleted(27893) &amp;&amp; !HasQuest(27893)">
+		<RunTo X="-6728.615" Y="-2480.195" Z="274.1812" />
+		<CustomBehavior File="BasicInteractWith"  MobId="47022" />
+        <CustomBehavior File="Misc\RunLua" Lua="AcceptQuest();" WaitTime="1000" />
+        <CustomBehavior File="WaitTimer" WaitTime="2000"/>
+		</If>
+		
+		<If Condition="IsQuestCompleted(27892) &amp;&amp; HasQuest(27892)">
+		<CustomBehavior File="BasicInteractWith"  MobId="47024" />
+        <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" NumOfTimes="1" WaitTime="2000" />
+        <CustomBehavior File="WaitTimer" WaitTime="2000"/>
+		</If>
+		
+		<If Condition="IsQuestCompleted(27893) &amp;&amp; HasQuest(27893)">
+		<CustomBehavior File="BasicInteractWith"  MobId="47022" />
+        <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" NumOfTimes="1" WaitTime="2000" />
+        <CustomBehavior File="WaitTimer" WaitTime="2000"/>
+		</If>
+		
+		<If Condition="IsQuestCompleted(27891) &amp;&amp; HasQuest(27891)">
+		<CustomBehavior File="BasicInteractWith"  MobId="47021" />
+        <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" NumOfTimes="1" WaitTime="2000" />
+        <CustomBehavior File="WaitTimer" WaitTime="2000"/>
+		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest();" WaitTime="1000" />
+		</If>
+		
+		<Objective QuestName="The Wrath of a Dragonflight" QuestId="27894" Type="KillMob" MobId="46859" KillCount="1" />
+		<Objective QuestName="The Wrath of a Dragonflight" QuestId="27894" Type="KillMob" MobId="46915" KillCount="4" />
+		
+		<If Condition="IsQuestCompleted(27894) &amp;&amp; HasQuest(27894)">
+        <CustomBehavior File="CompleteLogQuest" QuestId="27894" />
+	    <CustomBehavior File="WaitTimer" WaitTime="2500" />
+        <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+		<PickUp QuestName="Half-Ton Holdouts" QuestId="27880" GiverName="Gorn" GiverId="1068" />
+
+		<If Condition="!IsQuestCompleted(27895) &amp;&amp; HasQuest(27895)">
+            <RunTo X="-6827.484" Y="-2428.248" Z="272.9971" />
+			<CustomBehavior File="MyCTM" X="-6847.082" Y="-2421.5" Z="273.3746" />
+			<CustomBehavior File="MyCTM" X="-6857.45" Y="-2427.06" Z="273.3745" />
+			<CustomBehavior File="MyCTM" X="-6863.238" Y="-2416.516" Z="273.3746" />
+			
+			<CustomBehavior File="MyCTM" X="-6857.45" Y="-2427.06" Z="273.3745" />
+			<CustomBehavior File="MyCTM" X="-6847.082" Y="-2421.5" Z="273.3746" />
+			<RunTo X="-6827.484" Y="-2428.248" Z="272.9971" />
+			<Objective QuestName="Their Hunt Continues" QuestId="27895" Type="KillMob" MobId="46938" KillCount="1" />
+        </If>
+		
+		<Objective QuestName="Their Hunt Continues" QuestId="27895" Type="KillMob" MobId="46938" KillCount="1" />
+		
+		<If Condition="!IsQuestCompleted(27895) &amp;&amp; HasQuest(27895)">
+            <RunTo X="-6726.1" Y="-2357.542" Z="353.1286" />
+			<CustomBehavior File="MyCTM" X="-6723.563" Y="-2371.429" Z="354.7752" />
+			<CustomBehavior File="MyCTM" X="-6728.775" Y="-2372.051" Z="354.7773" />
+			<CustomBehavior File="MyCTM" X="-6728.04" Y="-2382.775" Z="357.7819" />
+			<CustomBehavior File="MyCTM" X="-6714.698" Y="-2380.841" Z="363.0899" />
+			<CustomBehavior File="MyCTM" X="-6716.886" Y="-2366.528" Z="368.2312" />
+			<CustomBehavior File="MyCTM" X="-6732.148" Y="-2368.499" Z="374.5056" />
+			<CustomBehavior File="MyCTM" X="-6731.254" Y="-2376.757" Z="377.4117" />
+			<CustomBehavior File="MyCTM" X="-6708.516" Y="-2373.284" Z="386.055" />
+			<CustomBehavior File="MyCTM" X="-6722.813" Y="-2363.74" Z="386.0549" />
+			<CustomBehavior File="MyCTM" X="-6739.441" Y="-2377.146" Z="386.0554" />
+			<CustomBehavior File="MyCTM" X="-6722.813" Y="-2363.74" Z="386.0549" />
+			<CustomBehavior File="MyCTM" X="-6707.233" Y="-2350.514" Z="353.1487" />
+			<Objective QuestName="Their Hunt Continues" QuestId="27895" Type="KillMob" MobId="46860" KillCount="1" />
+        </If>
+		
+		<Objective QuestName="Their Hunt Continues" QuestId="27895" Type="KillMob" MobId="46860" KillCount="1" />
+		<Objective QuestName="Their Hunt Continues" QuestId="27895" Type="KillMob" MobId="46917" KillCount="6" />
+		
+		<If Condition="IsQuestCompleted(27895) &amp;&amp; HasQuest(27895)">
+        <CustomBehavior File="CompleteLogQuest" QuestId="27895" />
+	    <CustomBehavior File="WaitTimer" WaitTime="2500" />
+        <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+		
+				<If Condition="HasQuest(27896)">
+            <CustomBehavior File="UserSettings" LootMobs="False" />
+			<CustomBehavior File="UserSettings" UseMount="False" />
+        </If>
+		
+		<Objective QuestName="The Sorrow and the Fury" QuestId="27896" Type="KillMob" MobId="46916" KillCount="12" />
+		
+		<While Condition="!IsQuestCompleted(27896) &amp;&amp;HasQuest(27896)">
+            <RunTo X="-6604.709" Y="-2157.277" Z="301.7289" />
+			<CustomBehavior File="WaitTimer" WaitTime="60000" />
+        </While>
+		
+		<If Condition="IsQuestCompleted(27896) &amp;&amp; HasQuest(27896)">
+        <CustomBehavior File="CompleteLogQuest" QuestId="27896" />
+	    <CustomBehavior File="WaitTimer" WaitTime="2500" />
+        <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+		<TurnIn QuestName="The Hidden Clutch" QuestId="27897" TurnInName="Rhea" TurnInId="46654" />
+		<PickUp QuestName="Rheastrasza's Gift" QuestId="27898" GiverName="Rhea" GiverId="46654" />
+		
+		<While Condition="!IsQuestCompleted(27898) &amp;&amp; HasQuest(27898)">
+	    <CustomBehavior File="WaitTimer" WaitTime="30000" />
+        </While>
+		
+		<If Condition="IsQuestCompleted(27898) &amp;&amp; HasQuest(27898)">
+        <CustomBehavior File="CompleteLogQuest" QuestId="27898" />
+	    <CustomBehavior File="WaitTimer" WaitTime="2500" />
+        <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+		
+		<CustomBehavior File="UserSettings" LootMobs="True" />
+		<CustomBehavior File="UserSettings" UseMount="True" />
+		
+        <TurnIn QuestName="Devastation" QuestId="27930" TurnInName="Rhea's Final Note" TurnInId="206504" X="-6472.72" Y="-2479.629" Z="306.2342" />
+		
+        <If Condition="!IsQuestCompleted(27859)">
+		<RunTo X="-6477.786" Y="-2455.962" Z="306.739" />
+		<CustomBehavior File="BasicInteractWith"  MobId="46664" />
+        <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" NumOfTimes="1" WaitTime="2000" />
+        <CustomBehavior File="WaitTimer" WaitTime="2000"/>
+		</If>
+
+		<If Condition="HasQuest(27880)">
+        <CustomBehavior File="RunMacro" Macro="/use hearthstone" NumOfTimes="1" WaitTime="15000"/>
+		</If>
+		<Objective QuestName="Survival of the Fattest" QuestId="27879" Type="CollectItem" ItemId="62544" CollectCount="6" />
+		<Objective QuestName="Survival of the Fattest" QuestId="27879" Type="CollectItem" ItemId="62547" CollectCount="10" />
+		<Objective QuestName="Half-Ton Holdouts" QuestId="27880" Type="KillMob" MobId="2717" KillCount="12" />
+		
+		<TurnIn QuestName="Survival of the Fattest" QuestId="27879" TurnInName="Aidan Summerwind" TurnInId="46660" />
+		<TurnIn QuestName="Half-Ton Holdouts" QuestId="27880" TurnInName="Gorn" TurnInId="1068" />
+		
+
+		<CustomBehavior File="LoadProfile" Profile="Searing Gorge.xml" />
+
+		<!-- <CustomBehavior File="RunMacro" Macro="/click VehicleMenuBarActionButton1" NumOfTimes="1" WaitTime="1500" /> -->
+       <!-- <CustomBehavior File="RunMacro" Macro="/use Keys to the Hot Rod" NumOfTimes="1" WaitTime="3000"/> -->
+	</QuestOrder>
+</HBProfile>
