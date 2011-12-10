@@ -1,0 +1,93 @@
+<HBProfile>
+	<Name>[A - Farm]Embersilk Cloth - Deepholm[N1Y]V1.1</Name>
+	<!--This profile will farm Stone Trogg Ambusher for [Embersilk Cloth]'s in Deepholm.
+	Point on map for this farming will be the bottom-left corner at "Stonehearth"-->
+		
+	<MinLevel>80</MinLevel>
+	<MaxLevel>86</MaxLevel>
+	
+	<MinDurability>0.1</MinDurability>
+	<MinFreeBagSlots>1</MinFreeBagSlots>
+	
+	<SellGrey>True</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+	
+	<MailGrey>True</MailGrey>
+	<MailWhite>True</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>  
+	
+	<ProtectedItems>
+		<Item>53010</Item><!--Embersilk Cloth entered here only.  Please populate your HB ProtectedItems list with Class specifics-->
+	</ProtectedItems>
+	
+	<!--Mailbox and Vendor at Temple of Earth-->
+	<Vendors>
+		<Vendor Name="Dugsley Deepdelver" Entry="45294" Type="Repair" X="1052.99" Y="636.936" Z="-45.87071" />	
+	</Vendors>
+	
+	<Mailboxes>
+		<Mailbox X="1050.438" Y="635.0461" Z="-45.78476" />
+	</Mailboxes>
+	
+		
+	<GrindArea>
+	
+	
+       <TargetMinLevel>80</TargetMinLevel>
+       <TargetMaxLevel>83</TargetMaxLevel>
+       <Factions>2102</Factions>
+	   <PullDistance>40</PullDistance>
+       <MaxDistance>40</MaxDistance>
+	   
+		<Hotspots>
+			<Hotspot X="419.6242" Y="1807.644" Z="351.8653" />
+			<Hotspot X="386.0368" Y="1803.625" Z="353.2948" />
+			<Hotspot X="372.6896" Y="1784.73" Z="356.1846" />
+			<Hotspot X="356.4617" Y="1754.518" Z="356.29" />
+			<Hotspot X="326.9233" Y="1726.393" Z="353.9598" />
+			<Hotspot X="318.2301" Y="1692.516" Z="349.7261" />
+			<Hotspot X="300.6817" Y="1659.601" Z="349.4375" />
+			<Hotspot X="261.3441" Y="1645.922" Z="344.9734" />
+			<Hotspot X="205.462" Y="1650.541" Z="342.711" />
+			<Hotspot X="212.5984" Y="1598.722" Z="339.093" />
+			<Hotspot X="247.3483" Y="1593.536" Z="345.0859" />
+			<Hotspot X="261.7361" Y="1563.378" Z="344.4338" />
+			<Hotspot X="279.765" Y="1528.816" Z="345.7889" />
+			<Hotspot X="253.6839" Y="1494.642" Z="342.7796" />
+			<Hotspot X="304.9539" Y="1478.323" Z="348.2952" />
+			<Hotspot X="306.6794" Y="1437.666" Z="346.8318" />
+			<Hotspot X="350.9591" Y="1442.757" Z="351.5932" />
+			<Hotspot X="378.9717" Y="1423.677" Z="347.3614" />
+			<Hotspot X="386.088" Y="1467.653" Z="350.8123" />
+			<Hotspot X="418.2009" Y="1476.973" Z="350.9853" />
+			<Hotspot X="441.1145" Y="1460.81" Z="347.6334" />
+			<Hotspot X="474.5928" Y="1457.833" Z="341.3468" />
+			<Hotspot X="474.3521" Y="1496.096" Z="345.7648" />
+			<Hotspot X="507.7274" Y="1507.64" Z="343.0366" />
+			<Hotspot X="487.3884" Y="1539.61" Z="349.8136" />
+			<Hotspot X="462.1423" Y="1556.507" Z="357.074" />
+			<Hotspot X="439.7328" Y="1554.058" Z="360.2528" />
+			<Hotspot X="405.153" Y="1535.109" Z="354.7315" />
+			<Hotspot X="377.5756" Y="1570.893" Z="354.4804" />
+			<Hotspot X="335.9047" Y="1564.781" Z="349.0659" />
+			<Hotspot X="346.3571" Y="1601.656" Z="354.2486" />
+			<Hotspot X="321.407" Y="1617.602" Z="351.1054" />
+			<Hotspot X="335.755" Y="1641.612" Z="352.1389" />
+			<Hotspot X="334.9476" Y="1680.592" Z="352.4242" />
+			<Hotspot X="350.6436" Y="1735.836" Z="355.79" />
+			<Hotspot X="374.9287" Y="1769.635" Z="359.3025" />
+		</Hotspots>
+	   
+		<Blackspots>
+		
+		</Blackspots>
+	
+   </GrindArea>
+	
+	
+</HBProfile>

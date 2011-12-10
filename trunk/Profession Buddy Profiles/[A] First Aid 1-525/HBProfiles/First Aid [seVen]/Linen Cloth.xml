@@ -1,0 +1,28 @@
+<HBProfile>
+  <SubProfile>
+    <Name>Linen Cloth</Name>
+    <MinLevel>0</MinLevel>
+    <MaxLevel>86</MaxLevel>
+  <MinDurability>0.2</MinDurability>
+  <MinFreeBagSlots>0</MinFreeBagSlots>
+
+    <GrindArea>
+
+<Vendors>
+<Vendor Name="William MacGregor" Entry="1668" Type="Repair" X="-10653.31" Y="996.5868" Z="32.87416" />
+</Vendors>
+
+      <Factions>20</Factions>
+      <RandomizeHotspots>true</RandomizeHotspots>
+      <Hotspots>
+		<Hotspot X="-11082.1" Y="662.9174" Z="34.98976" />
+		<Hotspot X="-10978.46" Y="888.47" Z="36.46814" />
+		<Hotspot X="-11143.06" Y="900.6619" Z="39.35752" />
+      </Hotspots>
+    </GrindArea>
+
+  </SubProfile>
+
+</HBProfile>
+
+

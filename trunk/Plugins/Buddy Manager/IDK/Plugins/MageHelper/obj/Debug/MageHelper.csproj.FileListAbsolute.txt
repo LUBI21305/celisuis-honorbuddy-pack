@@ -1,0 +1,4 @@
+C:\Users\TheFatP4nda\Desktop\HB-Retry\Plugins\MageHelper\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\TheFatP4nda\Desktop\HB-Retry\Plugins\MageHelper\obj\Debug\MageHelper.UI.resources
+C:\Users\TheFatP4nda\Desktop\HB-Retry\Plugins\MageHelper\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\TheFatP4nda\Desktop\HB-Retry\Plugins\MageHelper\obj\Debug\GenerateResource.write.1.tlog

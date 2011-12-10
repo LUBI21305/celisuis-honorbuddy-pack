@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AutoEquipSetDefaults>
+  <Char Guid="500000002978601" Set="Druid-Feral-Bear" />
+  <Char Guid="5000000027F50B3" Set="Priest-Discipline" />
+  <Char Guid="500000003799B98" Set="Shaman-Enhancement" />
+  <Char Guid="50000000381CD40" Set="Paladin-Retribution" />
+  <Char Guid="500000003829C4F" Set="Warrior-Fury" />
+  <Char Guid="5000000038389D5" Set="Priest-Shadow" />
+  <Char Guid="50000000384358A" Set="Priest-Shadow" />
+  <Char Guid="500000003845C70" Set="Priest-Shadow" />
+  <Char Guid="500000003848C4D" Set="Warrior-Fury" />
+  <Char Guid="50000000386F084" Set="Rogue-Combat" />
+  <Char Guid="500000003878211" Set="Warrior-Fury" />
+  <Char Guid="600000003F5D0DA" Set="Shaman-Elemental" />
+</AutoEquipSetDefaults>

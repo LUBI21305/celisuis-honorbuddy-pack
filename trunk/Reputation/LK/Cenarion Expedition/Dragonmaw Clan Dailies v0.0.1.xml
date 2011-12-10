@@ -1,0 +1,168 @@
+<HBProfile>
+<Name>Dragonmaw Clan Dailies by TubaJedi v0.0.1</Name>
+    <MinLevel>80</MinLevel>
+    <MaxLevel>88</MaxLevel>
+	
+<Blackspots>
+</Blackspots>
+
+
+<Mailboxes>
+</Mailboxes>
+<QuestOrder>
+<If Condition="CanFly()" >
+
+
+
+
+<If Condition="Me.MapId == 1"> 
+	<CustomBehavior File="FlyTo" X="2031.378" Y="-4379.735" Z="98.04695" Name="Twilight Highlands Portal"/>
+	<CustomBehavior File="RunMacro" Macro="/dismount" />
+	<CustomBehavior File="UseGameObject" ObjectId="207686" NumOfTimes="1" X="2029.233" Y="-4379.827" Z="97.9757" />
+	<RunTo X="-4032.648" Y="-6351.626" Z="37.31437" Name="prepare for flight to DM" />
+</If>
+<If Condition="(Me.ZoneId == 4922) &amp;&amp; (!HasQuest(28872))">
+	<RunTo X="-4032.648" Y="-6351.626" Z="37.31437" Name="prepare for flight to Bloodgultch" />
+	<CustomBehavior File="FlyTo" X="-3687.772" Y="-5342.361" Z="36.43282" Name="Bloodgultch" />
+</If>
+
+			<PickUp QuestName="Hook 'em High" QuestId="28874" GiverName="Harkkan" GiverId="46318" />
+			<PickUp QuestName="Total War" QuestId="28872" GiverName="Harkkan" GiverId="46318" />
+			<PickUp QuestName="Another Maw to Feed" QuestId="28873" GiverName="Griff" GiverId="46319" />
+			<PickUp QuestName="Bring Down the High Shaman" QuestId="28875" GiverName="Grot Deathblow" GiverId="49387" />
+			<PickUp QuestName="Crushing the Wildhammer" QuestId="28871" GiverName="Malkar" GiverId="50622" />
+
+
+			<Objective QuestName="Crushing the Wildhammer" QuestId="28871" Type="CollectItem" ItemId="62325" CollectCount="8" />
+			
+			<If Condition="HasQuest(28874) &amp;&amp; !IsQuestCompleted(28874)">
+				<CustomBehavior File="FlyTo" X="-3553.525" Y="-5212.168" Z="31.75073" Name="get a new target for Hook 'em High" />
+				<CustomBehavior File="RunMacro" Macro="/dismount" />
+				<UseItem ItemId="62775" QuestName="Hook 'em High" QuestId="28874" TargetID="47186" TargetType="Npc" X="-3553.525" Y="-5212.168" Z="31.75073" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000"/>
+				<CustomBehavior File="FlyTo" X="-3685.22" Y="-5121.405" Z="34.96016" Name="get a new target for Hook 'em High" />
+				<CustomBehavior File="RunMacro" Macro="/dismount" />
+				<UseItem ItemId="62775" QuestName="Hook 'em High" QuestId="28874" TargetID="47186" TargetType="Npc" X="-3685.22" Y="-5121.405" Z="34.96016" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000"/>
+				<CustomBehavior File="FlyTo" X="-3553.525" Y="-5212.168" Z="31.75073" Name="get a new target for Hook 'em High" />
+				<CustomBehavior File="RunMacro" Macro="/dismount" />
+				<UseItem ItemId="62775" QuestName="Hook 'em High" QuestId="28874" TargetID="47186" TargetType="Npc" X="-3553.525" Y="-5212.168" Z="31.75073" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000"/>
+				<CustomBehavior File="FlyTo" X="-3685.22" Y="-5121.405" Z="34.96016" Name="get a new target for Hook 'em High" />
+				<CustomBehavior File="RunMacro" Macro="/dismount" />
+				<UseItem ItemId="62775" QuestName="Hook 'em High" QuestId="28874" TargetID="47186" TargetType="Npc" X="-3685.22" Y="-5121.405" Z="34.96016" />
+				<CustomBehavior File="WaitTimer" WaitTime="3000"/>
+			</If>
+			<!--Just in case we haven't completed the quest successfully, we'll run it again-->
+				<If Condition="HasQuest(28874) &amp;&amp; !IsQuestCompleted(28874)">
+					<CustomBehavior File="FlyTo" X="-3553.525" Y="-5212.168" Z="31.75073" Name="get a new target for Hook 'em High" />
+					<CustomBehavior File="RunMacro" Macro="/dismount" />
+					<UseItem ItemId="62775" QuestName="Hook 'em High" QuestId="28874" TargetID="47186" TargetType="Npc" X="-3553.525" Y="-5212.168" Z="31.75073" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000"/>
+					<CustomBehavior File="FlyTo" X="-3685.22" Y="-5121.405" Z="34.96016" Name="get a new target for Hook 'em High" />
+					<CustomBehavior File="RunMacro" Macro="/dismount" />
+					<UseItem ItemId="62775" QuestName="Hook 'em High" QuestId="28874" TargetID="47186" TargetType="Npc" X="-3685.22" Y="-5121.405" Z="34.96016" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000"/>
+					<CustomBehavior File="FlyTo" X="-3553.525" Y="-5212.168" Z="31.75073" Name="get a new target for Hook 'em High" />
+					<CustomBehavior File="RunMacro" Macro="/dismount" />
+					<UseItem ItemId="62775" QuestName="Hook 'em High" QuestId="28874" TargetID="47186" TargetType="Npc" X="-3553.525" Y="-5212.168" Z="31.75073" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000"/>
+					<CustomBehavior File="FlyTo" X="-3685.22" Y="-5121.405" Z="34.96016" Name="get a new target for Hook 'em High" />
+					<CustomBehavior File="RunMacro" Macro="/dismount" />
+					<UseItem ItemId="62775" QuestName="Hook 'em High" QuestId="28874" TargetID="47186" TargetType="Npc" X="-3685.22" Y="-5121.405" Z="34.96016" />
+					<CustomBehavior File="WaitTimer" WaitTime="3000"/>
+				</If>
+			<!--Just in case we haven't completed the quest successfully, we'll run it again-->
+					<If Condition="HasQuest(28874) &amp;&amp; !IsQuestCompleted(28874)">
+						<CustomBehavior File="FlyTo" X="-3553.525" Y="-5212.168" Z="31.75073" Name="get a new target for Hook 'em High" />
+						<CustomBehavior File="RunMacro" Macro="/dismount" />
+						<UseItem ItemId="62775" QuestName="Hook 'em High" QuestId="28874" TargetID="47186" TargetType="Npc" X="-3553.525" Y="-5212.168" Z="31.75073" />
+						<CustomBehavior File="WaitTimer" WaitTime="3000"/>
+						<CustomBehavior File="FlyTo" X="-3685.22" Y="-5121.405" Z="34.96016" Name="get a new target for Hook 'em High" />
+						<CustomBehavior File="RunMacro" Macro="/dismount" />
+						<UseItem ItemId="62775" QuestName="Hook 'em High" QuestId="28874" TargetID="47186" TargetType="Npc" X="-3685.22" Y="-5121.405" Z="34.96016" />
+					</If>
+			<!--Just in case we haven't completed the quest successfully, we'll run it again-->
+						<If Condition="HasQuest(28874) &amp;&amp; !IsQuestCompleted(28874)">
+							<CustomBehavior File="FlyTo" X="-3553.525" Y="-5212.168" Z="31.75073" Name="get a new target for Hook 'em High" />
+							<CustomBehavior File="RunMacro" Macro="/dismount" />
+							<UseItem ItemId="62775" QuestName="Hook 'em High" QuestId="28874" TargetID="47186" TargetType="Npc" X="-3553.525" Y="-5212.168" Z="31.75073" />
+							<CustomBehavior File="WaitTimer" WaitTime="3000"/>
+							<CustomBehavior File="FlyTo" X="-3685.22" Y="-5121.405" Z="34.96016" Name="get a new target for Hook 'em High" />
+							<CustomBehavior File="RunMacro" Macro="/dismount" />
+							<UseItem ItemId="62775" QuestName="Hook 'em High" QuestId="28874" TargetID="47186" TargetType="Npc" X="-3685.22" Y="-5121.405" Z="34.96016" />
+						</If>		
+			<!--Just in case we haven't completed the quest successfully, we'll run it again-->
+							<If Condition="HasQuest(28874) &amp;&amp; !IsQuestCompleted(28874)">
+								<CustomBehavior File="FlyTo" X="-3553.525" Y="-5212.168" Z="31.75073" Name="get a new target for Hook 'em High" />
+								<CustomBehavior File="RunMacro" Macro="/dismount" />
+								<UseItem ItemId="62775" QuestName="Hook 'em High" QuestId="28874" TargetID="47186" TargetType="Npc" X="-3553.525" Y="-5212.168" Z="31.75073" />
+								<CustomBehavior File="WaitTimer" WaitTime="3000"/>
+								<CustomBehavior File="FlyTo" X="-3685.22" Y="-5121.405" Z="34.96016" Name="get a new target for Hook 'em High" />
+								<CustomBehavior File="RunMacro" Macro="/dismount" />
+								<UseItem ItemId="62775" QuestName="Hook 'em High" QuestId="28874" TargetID="47186" TargetType="Npc" X="-3685.22" Y="-5121.405" Z="34.96016" />
+							</If>
+			<!--Just in case we haven't completed the quest successfully, we'll run it again-->
+								<If Condition="HasQuest(28874) &amp;&amp; !IsQuestCompleted(28874)">
+									<CustomBehavior File="FlyTo" X="-3553.525" Y="-5212.168" Z="31.75073" Name="get a new target for Hook 'em High" />
+									<CustomBehavior File="RunMacro" Macro="/dismount" />
+									<UseItem ItemId="62775" QuestName="Hook 'em High" QuestId="28874" TargetID="47186" TargetType="Npc" X="-3553.525" Y="-5212.168" Z="31.75073" />
+									<CustomBehavior File="WaitTimer" WaitTime="3000"/>
+									<CustomBehavior File="FlyTo" X="-3685.22" Y="-5121.405" Z="34.96016" Name="get a new target for Hook 'em High" />
+									<CustomBehavior File="RunMacro" Macro="/dismount" />
+									<UseItem ItemId="62775" QuestName="Hook 'em High" QuestId="28874" TargetID="47186" TargetType="Npc" X="-3685.22" Y="-5121.405" Z="34.96016" />
+								</If>							
+			<Objective QuestName="Bring Down the High Shaman" QuestId="28875" Type="KillMob" MobId="46885" KillCount="1" />
+			<Objective QuestName="Another Maw to Feed" QuestId="28873" Type="CollectItem" ItemId="62324" CollectCount="10" />
+			<If Condition="HasQuest(28872)">
+						<CustomBehavior File="UseGameObject" NumOfTimes="1" ObjectId="206195" X="-3320.754" Y="-4854.981" Z="110.619" />
+						<CustomBehavior File="WaitTimer" WaitTime="4000"/>
+						<CustomBehavior File="UseGameObject" NumOfTimes="1" ObjectId="206195" X="-3465.527" Y="-5021.506" Z="66.73082" />
+						<CustomBehavior File="WaitTimer" WaitTime="4000"/>
+						<CustomBehavior File="UseGameObject" NumOfTimes="1" ObjectId="206195" X="-3666.123" Y="-4819.602" Z="80.95425" />
+						<CustomBehavior File="WaitTimer" WaitTime="4000"/>
+						<CustomBehavior File="UseGameObject" NumOfTimes="1" ObjectId="206195" X="-3320.754" Y="-4854.981" Z="110.619" />
+						<CustomBehavior File="WaitTimer" WaitTime="4000"/>
+						<CustomBehavior File="UseGameObject" NumOfTimes="1" ObjectId="206195" X="-3465.527" Y="-5021.506" Z="66.73082" />
+						<CustomBehavior File="WaitTimer" WaitTime="4000"/>
+						<CustomBehavior File="UseGameObject" NumOfTimes="1" ObjectId="206195" X="-3666.123" Y="-4819.602" Z="80.95425" />
+						<CustomBehavior File="WaitTimer" WaitTime="4000"/>
+						<CustomBehavior File="UseGameObject" NumOfTimes="1" ObjectId="206195" X="-3320.754" Y="-4854.981" Z="110.619" />
+						<CustomBehavior File="WaitTimer" WaitTime="4000"/>
+						<CustomBehavior File="UseGameObject" NumOfTimes="1" ObjectId="206195" X="-3465.527" Y="-5021.506" Z="66.73082" />
+						<CustomBehavior File="WaitTimer" WaitTime="4000"/>
+						<CustomBehavior File="UseGameObject" NumOfTimes="1" ObjectId="206195" X="-3666.123" Y="-4819.602" Z="80.95425" />
+						<CustomBehavior File="WaitTimer" WaitTime="4000"/>
+						<CustomBehavior File="UseGameObject" NumOfTimes="1" ObjectId="206195" X="-3320.754" Y="-4854.981" Z="110.619" />
+			</If>
+			<CustomBehavior File="FlyTo" X="-3687.772" Y="-5342.361" Z="36.43282" Name="turn in your dailies!" />
+			<TurnIn QuestName="Total War" QuestId="28872" TurnInName="Harkkan" TurnInId="46318" />
+			<TurnIn QuestName="Hook 'em High" QuestId="28874" TurnInName="Harkkan" TurnInId="46318" />
+			<TurnIn QuestName="Another Maw to Feed" QuestId="28873" TurnInName="Griff" TurnInId="46319" />
+			<TurnIn QuestName="Bring Down the High Shaman" QuestId="28875" TurnInName="Grot Deathblow" TurnInId="49387" />
+			<TurnIn QuestName="Crushing the Wildhammer" QuestId="28871" TurnInName="Malkar" TurnInId="50622" />
+
+
+<Else>
+
+
+
+
+
+
+</Else>
+</If>
+</QuestOrder>
+
+<!--Quest Override-->
+<Quest Id="28875" Name="Bring Down the High Shaman">
+	<Objective Type="KillMob" MobId="46885" KillCount="1">
+		<Hotspots>
+			<Hotspot X="-3321.19" Y="-4859.95" Z="110.6209" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
+
+</HBProfile>
+

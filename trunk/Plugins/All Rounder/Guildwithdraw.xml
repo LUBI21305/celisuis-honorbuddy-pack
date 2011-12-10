@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+  <Option Value="Herbs" Set="false" />
+  <Option Value="Ores" Set="false" />
+  <Option Value="Gems" Set="false" />
+  <Option Value="Inks" Set="false" />
+  <Option Value="Eternals" Set="false" />
+  <Option Value="Leather" Set="false" />
+  <Option Value="Lockboxes" Set="false" />
+  <Option Value="Darkmoonmats" Set="False" />
+  <Option Value="Fortunemats" Set="False" />
+</Settings> 

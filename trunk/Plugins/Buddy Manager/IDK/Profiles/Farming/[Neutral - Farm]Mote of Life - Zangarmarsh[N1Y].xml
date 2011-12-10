@@ -1,0 +1,59 @@
+<HBProfile>
+	<Name>[N - Farm]Mote of Life - Zangarmarsh[N1Y] V1.2</Name>
+	<!--This profile will farm Withered Bog Lords & Withered Giants for [Mote of Life]'s in Zangarmarsh.
+	Point on map for this farming will be the top-right corner at "The Dire Mire"-->
+		
+	<MinDurability>0.1</MinDurability>
+	<MinFreeBagSlots>1</MinFreeBagSlots>
+	
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+	
+	<MailGrey>True</MailGrey>
+	<MailWhite>True</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple> 
+	
+	<!--Mailbox and Vendor at Cenarion Refuge 2:25:06-->
+	<Vendors>
+		<Vendor Name="Fedryen Swiftspear" Entry="17904" Type="Repair" X="-198.9696" Y="5490.686" Z="21.84627" />
+	</Vendors>
+	
+	<Mailboxes>
+		<Mailbox X="-199.7883" Y="5506.232" Z="22.36918" />
+	</Mailboxes>
+	
+	<Blackspots>
+		
+	</Blackspots>
+	
+	
+	<GrindArea>
+	
+       <TargetMinLevel>59</TargetMinLevel>
+       <TargetMaxLevel>63</TargetMaxLevel>
+       <Factions>1706</Factions>
+	   <PullDistance>30</PullDistance>
+       <MaxDistance>30</MaxDistance>
+	   
+       <Hotspots>
+	    <Hotspot X="427.1611" Y="5325.906" Z="-1.101547" />
+		<Hotspot X="570.8999" Y="5166.357" Z="15.54874" />
+		<Hotspot X="830.818" Y="5380.06" Z="-0.6838824" />
+		<Hotspot X="737.8613" Y="5517.387" Z="-0.345204" />
+		<Hotspot X="569.7" Y="5498.469" Z="-0.2285299" />
+		<Hotspot X="654.0142" Y="5445.919" Z="-27.06464" />
+		<Hotspot X="751.6715" Y="5402.605" Z="-22.16705" />
+		<Hotspot X="629.4265" Y="5271.503" Z="-20.87291" />
+		<Hotspot X="538.9019" Y="5311.47" Z="-20.72614" />
+		<Hotspot X="620.2328" Y="5390.557" Z="-24.96332" />
+		<Hotspot X="483.567" Y="5420.159" Z="1.658528" />
+       </Hotspots>
+   </GrindArea>
+	
+	
+</HBProfile>

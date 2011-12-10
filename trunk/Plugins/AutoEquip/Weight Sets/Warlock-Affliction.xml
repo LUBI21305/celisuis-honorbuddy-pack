@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WeightSet Class="Warlock" Spec="Affliction">
+  <HitRating>100</HitRating>
+  <SpellPower>72</SpellPower>
+  <HasteRating>61</HasteRating>
+  <CriticalStrikeRating>38</CriticalStrikeRating>
+  <Spirit>34</Spirit>
+  <Intellect>15</Intellect>
+</WeightSet>

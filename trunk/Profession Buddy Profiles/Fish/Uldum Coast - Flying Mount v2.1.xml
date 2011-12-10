@@ -1,0 +1,95 @@
+<HBProfile>
+	<Name>Uldum Coast - Flying Mount v2.1 by Cicro</Name>
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>1</MinFreeBagSlots>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+	<ProtectedItems>
+		<Item name="Fishing Pole" entry="6256" />
+		<Item name="Mastercraft Kalu'ak Fishing Pole" entry="44050" />
+		<Item name="Arcanite Fishing Pole" entry="19970" />
+		<Item name="Bone Fishing Pole" entry="45991" />
+		<Item name="Jeweled Fishing Pole" entry="45992" />
+		<Item name="Nat's Lucky Fishing Pole" entry="45858" />
+		<Item name="Seth's Graphite Fishing Pole" entry="25978" />
+		<Item name="Big Iron Fishing Pole" entry="6367" />
+		<Item name="Blump Family Fishing Pole" entry="12225" />
+		<Item name="Darkwood Fishing Pole" entry="6366" />
+		<Item name="Jonathan's Fishing Pole" entry="52678" />
+		<Item name="Strong Fishing Pole" entry="6365" />
+		<Item name="Staats' Fishing Pole" entry="46337" />
+	</ProtectedItems>
+	<SubProfile>
+		<Name>Uldum Coast</Name>
+		<MinLevel>1</MinLevel>
+		<MaxLevel>87</MaxLevel>
+		<TargetMinLevel>87</TargetMinLevel>
+		<Factions>7 </Factions>
+		<Hotspots>
+<Hotspot X="-10606.19" Y="1624.715" Z="13.20204" />
+<Hotspot X="-10754.74" Y="1420.044" Z="11.67584" />
+<Hotspot X="-10849.89" Y="1157.932" Z="14.93198" />
+<Hotspot X="-10931.12" Y="951.8854" Z="14.58188" />
+<Hotspot X="-10983.23" Y="805.1501" Z="10.5044" />
+<Hotspot X="-10941.89" Y="636.2661" Z="7.58129" />
+<Hotspot X="-11023.5" Y="316.0737" Z="15.17888" />
+<Hotspot X="-11141.76" Y="-53.35892" Z="20.2568" />
+<Hotspot X="-11468.27" Y="-280.2419" Z="10.69842" />
+<Hotspot X="-11719.82" Y="-422.0687" Z="18.86837" />
+<Hotspot X="-11784.81" Y="-490.3263" Z="12.26395" />
+<Hotspot X="-11727.37" Y="-755.762" Z="10.3977" />
+<Hotspot X="-11623.52" Y="-1133.651" Z="10.99995" />
+<Hotspot X="-11542.32" Y="-1344.618" Z="11.99354" />
+<Hotspot X="-11401.89" Y="-1425.193" Z="14.66178" />
+<Hotspot X="-11284.73" Y="-1752.054" Z="11.90979" />
+<Hotspot X="-11255.62" Y="-2022.978" Z="14.56061" />
+<Hotspot X="-11161.36" Y="-2204.09" Z="16.75232" />
+<Hotspot X="-10935.92" Y="-2408.773" Z="14.19305" />
+<Hotspot X="-10819.46" Y="-2602.042" Z="17.23746" />
+<Hotspot X="-10670.61" Y="-2723.826" Z="17.92246" />
+<Hotspot X="-10601.57" Y="-2818.49" Z="22.46863" />
+<Hotspot X="-10266.07" Y="-2887.656" Z="14.16671" />
+<Hotspot X="-10019.92" Y="-2890.217" Z="12.89812" />
+<Hotspot X="-9998.535" Y="-2931.964" Z="9.68023" />
+<Hotspot X="-10044.49" Y="-2944.961" Z="4.659244" />
+<Hotspot X="-10332.1" Y="-2884.884" Z="15.47927" />
+<Hotspot X="-10607.02" Y="-2847.784" Z="12.87823" />
+<Hotspot X="-10854.32" Y="-2589.262" Z="13.71887" />
+<Hotspot X="-11185.67" Y="-2173.044" Z="6.523761" />
+<Hotspot X="-11310.51" Y="-1938.514" Z="7.214031" />
+<Hotspot X="-11357.79" Y="-1648.712" Z="12.12777" />
+<Hotspot X="-11365.88" Y="-1536.13" Z="20.30378" />
+<Hotspot X="-11541.84" Y="-1294.132" Z="10.82187" />
+<Hotspot X="-11634.09" Y="-1037.171" Z="11.89134" />
+<Hotspot X="-11774.31" Y="-542.7114" Z="17.17103" />
+<Hotspot X="-11731.05" Y="-398.5272" Z="15.14673" />
+<Hotspot X="-11505.78" Y="-315.2939" Z="8.849405" />
+<Hotspot X="-11184.4" Y="-87.20543" Z="13.16679" />
+<Hotspot X="-10991.58" Y="383.1504" Z="9.474663" />
+<Hotspot X="-10910.01" Y="924.9245" Z="28.43792" />
+<Hotspot X="-10800.78" Y="1296.919" Z="9.884186" />
+<Hotspot X="-10687.68" Y="1516.38" Z="8.221848" />
+<Hotspot X="-10685.92" Y="1591.164" Z="5.889286" />
+<Hotspot X="-10647.11" Y="1621.567" Z="5.266482" />
+
+		</Hotspots>
+		<Vendors>
+			
+		</Vendors>
+		<Blackspots>
+<Blackspot X="-10842.8" Y="823.7722" Z="17.23475" Radius="43.4744" />
+<Blackspot X="-10855.54" Y="897.5404" Z="17.821" Radius="39.01522" />
+<Blackspot X="-10812.96" Y="1038.76" Z="15.67553" Radius="38.68669" />	
+		</Blackspots>
+		<AvoidMobs>
+	
+		</AvoidMobs>
+		<Mailboxes>
+		</Mailboxes>
+	</SubProfile>
+</HBProfile>

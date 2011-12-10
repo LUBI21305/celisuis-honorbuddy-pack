@@ -1,0 +1,56 @@
+<HBProfile>
+  <Name>Tiny Crimson Whelpling Farm - Alliance</Name> 
+  <MinDurability>0.3</MinDurability> 
+  <MinFreeBagSlots>2</MinFreeBagSlots> 
+  <SellGrey>True</SellGrey> 
+  <SellWhite>True</SellWhite> 
+  <SellGreen>True</SellGreen> 
+  <SellBlue>False</SellBlue> 
+  <SellPurple>False</SellPurple> 
+  <MinLevel>20</MinLevel> 
+  <MaxLevel>81</MaxLevel> 
+
+  <ProtectedItems>
+  <Item>8499</Item>  
+  </ProtectedItems>
+
+  <ForceMail>
+  <Item>8499</Item> 
+  </ForceMail>
+  
+  <SubProfile>
+  <MinLevel>20</MinLevel> 
+  <MaxLevel>81</MaxLevel> 
+
+  <Vendors>
+  <Vendor Name="Kixxle" Entry="8305" Type="Repair" X="-3188.032" Y="-2465.57" Z="9.562594" />
+  </Vendors>
+  <Mailboxes>
+  <Mailbox X="-3793.057" Y="-837.8155" Z="9.654932" />
+  </Mailboxes>
+  <GrindArea>
+  <Factions>60</Factions>
+  <TargetMinLevel>20</TargetMinLevel>
+  <TargetMaxLevel>70</TargetMaxLevel>
+  <RandomizeHotspots>false</RandomizeHotspots>
+  <MaximumHotspotTime>60000</MaximumHotspotTime>
+  <Hotspots>
+  <Hotspot X="-3024.241" Y="-2960.257" Z="34.32164" />
+  <Hotspot X="-3110.802" Y="-3024.113" Z="30.69574" />
+  <Hotspot X="-3209.483" Y="-3059.093" Z="22.79262" />
+  <Hotspot X="-3296.187" Y="-3113.839" Z="21.45119" />
+  <Hotspot X="-3373.764" Y="-3197.175" Z="23.55765" />
+  <Hotspot X="-3365.668" Y="-3267.382" Z="23.09655" />
+  <Hotspot X="-3465.939" Y="-3329.723" Z="25.16107" />
+  <Hotspot X="-3521.82" Y="-3248.412" Z="27.00592" />
+  <Hotspot X="-3617.365" Y="-3159.706" Z="21.16079" />
+  <Hotspot X="-3572.181" Y="-3055.21" Z="19.79382" />
+  <Hotspot X="-3483.513" Y="-3129.833" Z="21.7799" />
+  <Hotspot X="-3396.14" Y="-3108.803" Z="23.56307" />
+  <Hotspot X="-3317.092" Y="-3021.082" Z="25.76043" />
+  <Hotspot X="-3246.877" Y="-2970.895" Z="21.29696" />
+  <Hotspot X="-3131.104" Y="-2863.837" Z="22.14129" />
+  </Hotspots>
+  </GrindArea>
+  </SubProfile>
+  </HBProfile>

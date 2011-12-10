@@ -1,0 +1,52 @@
+<HBProfile>
+  <Name>Dark Whelpling Farm - Badlands - Alliance</Name> 
+  <MinDurability>0.3</MinDurability> 
+  <MinFreeBagSlots>2</MinFreeBagSlots> 
+  <SellGrey>True</SellGrey> 
+  <SellWhite>True</SellWhite> 
+  <SellGreen>True</SellGreen> 
+  <SellBlue>False</SellBlue> 
+  <SellPurple>False</SellPurple> 
+  <MinLevel>20</MinLevel> 
+  <MaxLevel>81</MaxLevel> 
+
+  <ProtectedItems>
+  <Item>10822</Item>  
+  </ProtectedItems>
+
+  <ForceMail>
+  <Item>10822</Item> 
+  </ForceMail>
+  
+  <SubProfile>
+  <MinLevel>20</MinLevel> 
+  <MaxLevel>81</MaxLevel> 
+
+  <Vendors>
+  <Vendor Name="Morhan Coppertongue" Entry="167" Type="Repair" X="-5343.68" Y="-2932.134" Z="324.3613" />
+  </Vendors>
+  <Mailboxes>
+  <Mailbox X="-5364.416" Y="-2953.619" Z="323.8567" />
+  </Mailboxes>
+  <GrindArea>
+  <Factions>16</Factions>
+  <TargetMinLevel>20</TargetMinLevel>
+  <TargetMaxLevel>70</TargetMaxLevel>
+  <RandomizeHotspots>false</RandomizeHotspots>
+  <MaximumHotspotTime>60000</MaximumHotspotTime>
+  <Hotspots>
+  <Hotspot X="-6439.822" Y="-3985.952" Z="264.2094" />
+  <Hotspot X="-6428.003" Y="-4098.959" Z="263.8891" />
+  <Hotspot X="-6365.07" Y="-4199.649" Z="286.149" />
+  <Hotspot X="-6539.043" Y="-4134.205" Z="266.5482" />
+  <Hotspot X="-6849.13" Y="-4085.099" Z="264.975" />
+  <Hotspot X="-6941.162" Y="-4047.433" Z="264.9174" />
+  <Hotspot X="-6976.967" Y="-3948.382" Z="263.8932" />
+  <Hotspot X="-6979.832" Y="-3874.175" Z="284.6595" />
+  <Hotspot X="-6855.422" Y="-3900.329" Z="264.3336" />
+  <Hotspot X="-6739.547" Y="-3879.489" Z="264.3406" />
+  <Hotspot X="-6761.92" Y="-3775.667" Z="257.2448" />
+  </Hotspots>
+  </GrindArea>
+  </SubProfile>
+  </HBProfile>

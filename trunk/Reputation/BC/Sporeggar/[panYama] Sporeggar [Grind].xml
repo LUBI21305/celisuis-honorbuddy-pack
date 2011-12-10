@@ -1,0 +1,122 @@
+   <!--
+      PROFILE README:
+         * When using this profile, be certain to set the HonorBuddy bot to (select only one):
+                [*] Grinding
+                [ ] Questing
+                [ ] PvP
+   
+         * This profile is appropriate for:
+                [ ] Leveling
+                [ ] PvP
+				[ ] Questing
+				[*] Reputation
+		
+		
+		PROFILE FEATURES:
+         * An estimate of approx. 20-24 hours to get to Exalted.
+		 
+		 * A faction pure for it's achievement and fewer lower level items.
+		 
+		 * A Achievement for getting Exalted with Sporeggar.
+            
+			
+		PROFILE WARNINGS:
+         * DO NOT run this profile as a Questing bot or any other then Grinding bot. Using something else will result in errors.
+  
+         * DO NOT post bugs that are NOT related to this profile by any means, they will get ignored. Bugs that are ment for this profile will be listed and fixed, so the profile
+		 can be updated to run smoothly.
+		 
+		 
+		 PROFILE CHANGELOG:
+		 * v2.0 Profile Overhaul
+			Date: December 28th
+			* Since WoW has change so has HB, since it was such a mess, I rewritten this whole profile.
+			
+    -->
+<HBProfile>
+		<Name>panYama's Sporeggar</Name>
+		
+		<!-- General Configuration -->
+		<MinDurability>0.4</MinDurability> 
+		<MinFreeBagSlots>4</MinFreeBagSlots>
+		<MinLevel>75</MinLevel>
+		<MaxLevel>86</MaxLevel>
+		
+		<!-- Vendor Configuration -->
+		<SellGrey>True</SellGrey>
+		<SellWhite>True</SellWhite>
+		<SellGreen>True</SellGreen>
+		<SellBlue>False</SellBlue>
+		<SellPurple>False</SellPurple>
+		
+		 <!-- Mail Configuration -->
+		<MailWhite>True</MailWhite>
+		<MailGreen>True</MailGreen>
+		<MailBlue>True</MailBlue>
+		<MailPurple>True</MailPurple>
+				
+		<!-- Mailbox Configuration -->
+		<Mailboxes>
+			 <Mailbox X="-199.2443" Y="5506.583" Z="22.34307"/>
+		</Mailboxes>
+		
+		<!-- Protected Items Configuration -->
+		<ProtectedItems>    
+			<!-- Unidentified Plant Parts -->
+			<Item>24401</Item> 
+		</ProtectedItems>
+		
+		<!-- EliteMob Configuration -->
+		<TargetElites>False</TargetElites>
+		
+		<!-- AvoidMob Configuration -->
+		<AvoidMobs>
+			<AvoidMob Name="Marshfang Ripper" Entry="18130"/>
+			<AvoidMob Name="Mire Hydra" Entry="18213"/>
+			<AvoidMob Name="Umbraglow Stinger" Entry="18132"/>
+		</AvoidMobs>
+
+		<!-- Vendor Configuration -->
+		<Vendors>
+			<!-- Type: Repair -->
+			<Vendor Name="Fedryen Swiftspear" Entry="17904" Type="Repair" X="-198.9696" Y="5490.686" Z="21.84634" />
+		</Vendors>
+		
+		<!-- Grind Configuration -->
+	   <GrindArea>
+		   <TargetMinLevel>58</TargetMinLevel>
+		   <TargetMaxLevel>86</TargetMaxLevel>
+		   <Factions>1693 1706</Factions>
+		   <MaxDistance>80</MaxDistance>
+		   <RandomizeHotspots>False</RandomizeHotspots>
+			   <Hotspots>
+					<Hotspot X="-1094.021" Y="5645.46" Z="59.95831" />
+					<Hotspot X="-1129.497" Y="5600.233" Z="57.7212" />
+					<Hotspot X="-1127.344" Y="5718.515" Z="59.5988" />
+					<Hotspot X="-1219.793" Y="5744.529" Z="43.50552" />
+					<Hotspot X="-1277.16" Y="5739.321" Z="39.39637" />
+					<Hotspot X="-1335.372" Y="5775.056" Z="26.86222" />
+					<Hotspot X="-1369.137" Y="5813.879" Z="22.74031" />
+					<Hotspot X="-1322.293" Y="5856.868" Z="7.595173" />
+					<Hotspot X="-1310.056" Y="5816.208" Z="7.903936" />
+					<Hotspot X="-1273.748" Y="5779.431" Z="0.5730476" />
+					<Hotspot X="-1234.832" Y="5805.619" Z="2.603701" />
+					<Hotspot X="-1213.07" Y="5839.897" Z="5.187965" />
+					<Hotspot X="-1333.96" Y="5904.731" Z="11.77437" />
+					<Hotspot X="-1286.669" Y="5848.642" Z="39.51878" />
+					<Hotspot X="-1263.79" Y="5821.677" Z="47.5572" />
+					<Hotspot X="-1218.8" Y="5872.8" Z="34.23288" />
+					<Hotspot X="-1183.994" Y="5866.325" Z="34.63786" />
+					<Hotspot X="-1184.792" Y="5825.335" Z="42.08503" />
+					<Hotspot X="-1208.314" Y="5784.878" Z="53.92137" />
+			   </Hotspots>
+		</GrindArea>	
+		
+		<!-- Blackspot Configuration -->
+		<BlackSpots>
+			<Blackspot X="-1306.964" Y="5814.738" Z="7.769367" Radius="6" />
+			<Blackspot X="-1321.814" Y="5893.729" Z="17.37862" Radius="3.012232" />
+			<Blackspot X="-1095.005" Y="5647.398" Z="59.89494" Radius="5.272533" />
+		</BlackSpots>
+		
+</HBProfile>

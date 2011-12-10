@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Professionbuddy>
+  <CustomAction Code="Log(&quot;Leveling to 350&quot;);" />
+  <If Condition="TreeRoot.Current.Name != &quot;Grind Bot&quot;" IgnoreCanRun="True">
+    <CustomAction Code="SwitchToBot (&quot;Grind Bot&quot;);" />
+  </If>
+  <!--Selling to vendor at Falcon Watch-->
+  <If Condition="Me.FreeNormalBagSlots &lt; 2" IgnoreCanRun="True">
+    <FlyToAction Dismount="True" X="-624.134" Y="4090.534" Z="91.57267" />
+    <SellItemAction NpcEntry="18998" X="-624.134" Y="4090.534" Z="91.57267" ItemID="" Count="0" SellItemType="Greys" />
+    <SellItemAction NpcEntry="18998" X="-624.134" Y="4090.534" Z="91.57267" ItemID="" Count="0" SellItemType="Greens" />
+    <MailItemAction Entry="" AutoFindMailBox="True" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+  </If>
+  <!--Leveling to 350-->
+  <If Condition="Me.FreeNormalBagSlots &gt; 2" IgnoreCanRun="True">
+    <If Condition="Me.MapId == 530" IgnoreCanRun="True">
+      <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 300 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &lt; 310" IgnoreCanRun="False">
+        <FlyToAction Dismount="True" X="91.9228" Y="2968.335" Z="21.3499" />
+        <CustomAction Code="Log(&quot;Loading Profile 300-310&quot;);" />
+        <LoadProfileAction Path="HBProfiles\Skinning\300-310.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 310 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &lt; 330" IgnoreCanRun="False">
+        <FlyToAction Dismount="True" X="-1104.299" Y="3313.543" Z="84.91367" />
+        <CustomAction Code="Log(&quot;Loading Profile 310-330&quot;);" />
+        <LoadProfileAction Path="HBProfiles\Skinning\310-330.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 330 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &lt; 350" IgnoreCanRun="False">
+        <FlyToAction Dismount="True" X="-1576.478" Y="7233.288" Z="9.299377" />
+        <CustomAction Code="Log(&quot;Loading Profile 330-350&quot;);" />
+        <LoadProfileAction Path="HBProfiles\Skinning\330-350.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 350" IgnoreCanRun="False">
+        <CustomAction Code="Log(&quot;Loading Main Profile &quot;);" />
+        <LoadProfileAction Path="[H] Skinning  1-525.xml" ProfileType="Professionbuddy" />
+      </If>
+    </If>
+  </If>
+</Professionbuddy>

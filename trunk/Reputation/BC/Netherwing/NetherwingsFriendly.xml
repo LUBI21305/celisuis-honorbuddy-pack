@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HBProfile>
+   <!--
+      PROFILE EXPECTATIONS:
+         * When using this profile, be certain to set the HonorBuddy bot to (select only one):
+                ( ) Grinding / Mixed
+                (*) Questing
+                ( ) PvP
+   
+         * This profile is appropriate for (check all that apply):
+                [X] Alliance   [ ] Achievement
+                [X] Horde      [ ] Farming
+                               [ ] Leveling
+                               [ ] PvP
+                               [X] Questing
+                               [X] Reputation
+                               [ ] Seasonal
+   
+   
+         * An explanation of <ForceMail> and <ProtectedItems> usage is here...
+               http://www.buddyforum.de/mediawiki/index.php?title=HonorBuddy:_About_ProtectedItems_and_ForceMail
+   
+         * DO NOT INCLUDE a <ForceMail> element in a profile!
+           Instead, each user should populate his <hb_install_dir>/ForceMail.xml file.
+           The Buddy Wiki provides a robust sample <ForceMail> element here...
+               http://www.buddyforum.de/mediawiki/index.php?title=Honorbuddy:_A_prototypical_ForceMail_Element
+  
+         * DO NOT INCLUDE a <ProtectedItems> element in a profile!
+           Instead, each user should populate his <hb_install_dir>/Protected Items.xml file.
+           The Buddy Wiki provides a robust sample <ProtectedItems> element here...
+               http://www.buddyforum.de/mediawiki/index.php?title=Honorbuddy:_A_prototypical_ProtectedItems_Element -->
+   
+  
+  <Name>Netherwing Quests Friendly</Name>
+  <MinLevel>1</MinLevel>
+  <MaxLevel>90</MaxLevel>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>2</MinFreeBagSlots>
+  <MailGrey>False</MailGrey>
+  <MailWhite>False</MailWhite>
+  <MailGreen>False</MailGreen>
+  <MailBlue>False</MailBlue>
+  <MailPurple>False</MailPurple>
+  <SellGrey>False</SellGrey>
+  <SellWhite>False</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+  <TargetElites>False</TargetElites>
+
+	<Vendors>
+		<!-- Netherwing Vendor -->
+		<Vendor Name="Gug" Entry="23144" Type="Repair" X="-5119.803" Y="624.7665" Z="86.76037" />
+	</Vendors>
+
+  <!-- Quest Overrides -->
+	<Quest Id="11076" Name="Picking Up The Pieces...">
+		<CollectFrom>
+		</CollectFrom>
+    <Objective Type="CollectItem" ItemId="32723" CollectCount="15">
+      <Hotspots>
+		<Hotspot X="-5170.111" Y="761.993" Z="47.34391" />
+		<Hotspot X="-5145.279" Y="659.9875" Z="80.66531" />
+		<Hotspot X="-5071.269" Y="646.6928" Z="31.90821" />
+		<Hotspot X="-5011.128" Y="564.74" Z="22.11518" />
+		<Hotspot X="-5009.448" Y="442.7136" Z="17.29026" />
+		<Hotspot X="-5024.177" Y="367.9192" Z="1.222125" />
+      </Hotspots>
+    </Objective>
+  </Quest>  
+  	
+  <Quest Id="11077" Name="Dragons are the Least of Our Problems">
+    <Objective Type="KillMob" MobId="23169" KillCount="15">
+      <Hotspots>
+		<Hotspot X="-5052.894" Y="311.0496" Z="-6.57598" />
+		<Hotspot X="-5063.3" Y="331.8142" Z="6.009248" />
+		<Hotspot X="-4990.319" Y="278.2662" Z="-4.887864" />
+		<Hotspot X="-4940.084" Y="453.4734" Z="1.062986" />
+		<Hotspot X="-4989.935" Y="652.5052" Z="23.59564" />
+      </Hotspots>
+    </Objective>
+    <Objective Type="KillMob" MobId="23326" KillCount="5">
+      <Hotspots>
+		<Hotspot X="-5052.894" Y="311.0496" Z="-6.57598" />
+		<Hotspot X="-5063.3" Y="331.8142" Z="6.009248" />
+		<Hotspot X="-4990.319" Y="278.2662" Z="-4.887864" />
+		<Hotspot X="-4940.084" Y="453.4734" Z="1.062986" />
+		<Hotspot X="-4989.935" Y="652.5052" Z="23.59564" />
+      </Hotspots>
+    </Objective>	
+  </Quest> 
+  
+  <Quest Id="11015" Name="Netherwing Crystals">
+    <Objective Type="CollectItem" ItemId="32427" CollectCount="30">
+      <CollectFrom>
+        <Mob Name="Nethermine Ravager" Id="23326" />
+		<Mob Name="Nethermine Flayer" Id="23169" />
+      </CollectFrom>
+      <Hotspots>
+		<Hotspot X="-5052.894" Y="311.0496" Z="-6.57598" />
+		<Hotspot X="-5063.3" Y="331.8142" Z="6.009248" />
+		<Hotspot X="-4990.319" Y="278.2662" Z="-4.887864" />
+		<Hotspot X="-4940.084" Y="453.4734" Z="1.062986" />
+		<Hotspot X="-4989.935" Y="652.5052" Z="23.59564" />
+      </Hotspots>
+    </Objective>
+  </Quest>  
+   
+	<QuestOrder>
+	<!-- *****************   Pickup Quests    *********************** -->
+	<PickUp QuestName="A Slow Death" GiverName="Yarzill the Merc" QuestId="11020" GiverId="23141" />
+	<PickUp QuestName="The Not-So-Friendly Skies..." GiverName="Yarzill the Merc" QuestId="11035" GiverId="23141" />
+	<PickUp QuestName="Netherwing Crystals" GiverName="Taskmaster Varkule Dragonbreath" QuestId="11015" GiverId="23140" />
+	<!-- A Slow Death (level 70) -->
+	<!-- Yarzill the Merc at Dragonmaw Base Camp in Shadowmoon Valley wants you to use Yarzill's Mutton in conjunction with Fel Glands to poison 12 Dragonmaw Peon Camps. -->
+	<!-- Classes: Any -->
+	<!-- Races: Any -->
+	<!-- http://www.wowhead.com/quest=11020 -->
+	
+	<If Condition="HasQuest(11020) &amp;&amp; !IsQuestCompleted(11020)">
+		<CustomBehavior File="FlyTo" X="-3896.194" Y="1066.923" Z="24.52164" />	
+		<CustomBehavior File="RunMacro" Macro="/dismount" NumOfTimes="1" WaitTime="3000" />
+		<Objective QuestName="A Slow Death" QuestId="11020" Type="Collect" CollectCount="12" ItemId="32502" />	
+		<RunTo QuestId="11020" X="-3896.194" Y="1066.923" Z="24.52164" />
+		<CustomBehavior File="FlyTo" X="-4978.365" Y="619.4327" Z="80.55907" />	
+		<CustomBehavior File="RunMacro" Macro="/dismount" NumOfTimes="1" WaitTime="3000" />
+	</If>
+	
+	<!-- A Slow Death (level 70) -->
+	<!-- Yarzill the Merc at Dragonmaw Base Camp in Shadowmoon Valley wants you to use Yarzill's Mutton in conjunction with Fel Glands to poison 12 Dragonmaw Peon Camps. -->
+	<!-- Classes: Any -->
+	<!-- Races: Any -->
+	<!-- http://www.wowhead.com/quest=11020 -->
+	
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5010.754" Y="686.3812" Z="81.8564" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4968.176" Y="698.4598" Z="83.81073" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4966.106" Y="519.7523" Z="80.05357" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4969.38" Y="524.2421" Z="80.37807" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4878.883" Y="505.6697" Z="62.25325" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4905.761" Y="361.6161" Z="77.78465" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5001.896" Y="282.4083" Z="82.99264" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5005.077" Y="189.0898" Z="80.48486" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4924.515" Y="227.6679" Z="64.64442" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4937.237" Y="115.5782" Z="55.83635" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-4982.552" Y="48.85173" Z="77.00683" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	</If>
+
+
+	<!-- The Not-So-Friendly Skies... (level 70) -->
+	<!-- Yarzill the Merc at Dragonmaw Base Camp in Shadowmoon Valley wants you to recover 10 Netherwing Relics. -->
+	<!-- Classes: Any -->
+	<!-- Races: Any -->
+	<!-- http://www.wowhead.com/quest=11035 -->
+    <If Condition="HasQuest(11035) &amp;&amp; !IsQuestCompleted(11035)">
+		<SetGrindArea>
+			<GrindArea>	   
+				<TargetMinLevel>69</TargetMinLevel>
+				<TargetMaxLevel>71</TargetMaxLevel>	   
+				<Factions>93</Factions>	   
+				<LootRadius>50</LootRadius> <!-- optional -->
+				<MaxDistance>20</MaxDistance> <!-- optional -->
+				<Hotspots>
+					<Hotspot X="-4922.27" Y="37.01746" Z="61.80995" />    
+				</Hotspots>
+			</GrindArea>
+		</SetGrindArea>
+		<GrindTo Condition="IsQuestCompleted(11035)"/>
+	</If>
+	
+	<!-- A Slow Death (level 70) -->
+	<!-- Yarzill the Merc at Dragonmaw Base Camp in Shadowmoon Valley wants you to use Yarzill's Mutton in conjunction with Fel Glands to poison 12 Dragonmaw Peon Camps. -->
+	<!-- Classes: Any -->
+	<!-- Races: Any -->
+	<!-- http://www.wowhead.com/quest=11020 -->
+	
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5125.716" Y="39.86" Z="78.26057" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5199.067" Y="153.6665" Z="69.96707" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5225.339" Y="266.6502" Z="70.2494" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5286.773" Y="247.6511" Z="66.36698" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5268.694" Y="299.6546" Z="73.18431" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5260.567" Y="343.4733" Z="70.3596" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5219.692" Y="386.0021" Z="74.73689" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5182.219" Y="403.8638" Z="73.13785" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5133.319" Y="469.475" Z="78.03437" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	</If>
+	<If Condition="HasItem(32502) &amp;&amp; !IsQuestCompleted(11020)">
+		<UseItem ItemId="32503" QuestName="A Slow Death" QuestId="11020" TargetID="22252" TargetType="Npc" X="-5238.182" Y="516.4229" Z="58.9273" />
+		<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	</If>
+	
+	
+	<!-- Picking Up The Pieces... (level 70) -->
+	<!-- The Mistress of the Mines at the Netherwing Mines in Shadowmoon Valley wants you to recover 15 Nethermine Cargo crates. -->
+	<!-- Classes: Any -->
+	<!-- Races: Any -->
+	<!-- http://www.wowhead.com/quest=11076 -->
+	<PickUp QuestName="Picking Up The Pieces..." GiverName="Mistress of the Mines" QuestId="11076" GiverId="23149" />
+	<PickUp QuestName="Dragons are the Least of Our Problems" GiverName="Dragonmaw Foreman" QuestId="11077" GiverId="23376" />
+
+    <If Condition="HasQuest(11076) &amp;&amp; !IsQuestCompleted(11076)">
+		<!-- Nethermine Cargo -->
+		<Objective QuestName="Picking Up The Pieces..." QuestId="11076" Type="Collect" CollectCount="15" ItemId="32723" />
+	</If>
+
+	<!-- Dragons are the Least of Our Problems (level 70) -->
+	<!-- The Dragonmaw Foreman at the Netherwing Mines in Shadowmoon Valley wants you to kill 15 Nethermine Flayers and 5 Nethermine Ravagers. -->
+	<!-- Classes: Any -->
+	<!-- Races: Any -->
+	<!-- http://www.wowhead.com/quest=11077 -->
+    <If Condition="HasQuest(11077) &amp;&amp; !IsQuestCompleted(11077)">
+		<!-- Nethermine Flayer -->
+		<Objective QuestName="Dragons are the Least of Our Problems" QuestId="11077" Type="KillMob" KillCount="15" MobId="23169" />
+		<!-- Nethermine Ravager -->
+		<Objective QuestName="Dragons are the Least of Our Problems" QuestId="11077" Type="KillMob" KillCount="5" MobId="23326" />
+	</If>
+	
+	<!-- Netherwing Crystals (level 70) -->
+	<!-- Taskmaster Varkule Dragonbreath at Dragonmaw Base Camp in Shadowmoon Valley wants you to bring him 30 Netherwing Crystals. -->
+	<!-- Classes: Any -->
+	<!-- Races: Any -->
+	<!-- http://www.wowhead.com/quest=11015 -->
+    <If Condition="HasQuest(11015) &amp;&amp; !IsQuestCompleted(11015)">
+	<!-- Netherwing Crystal -->
+	<Objective QuestName="Netherwing Crystals" QuestId="11015" Type="Collect" CollectCount="30" ItemId="32427" />
+	</If>
+
+	<If Condition="HasQuest(11077) &amp;&amp; IsQuestCompleted(11077)">
+	<TurnIn QuestName="Dragons are the Least of Our Problems" TurnInName="Dragonmaw Foreman" QuestId="11077" TurnInId="23376" />
+	</If>
+    <If Condition="HasQuest(11076) &amp;&amp; IsQuestCompleted(11076)">
+	<TurnIn QuestName="Picking Up The Pieces..." TurnInName="Mistress of the Mines" QuestId="11076" TurnInId="23149" />
+	</If>	
+
+	<!-- *****************   TurnIn Quests    *********************** -->
+    <If Condition="HasQuest(11035) &amp;&amp; IsQuestCompleted(11035)">
+	<TurnIn QuestName="The Not-So-Friendly Skies..." TurnInName="Yarzill the Merc" QuestId="11035" TurnInId="23141" />
+	</If>
+	<If Condition="HasQuest(11020) &amp;&amp; IsQuestCompleted(11020)">
+	<TurnIn QuestName="A Slow Death" TurnInName="Yarzill the Merc" QuestId="11020" TurnInId="23141" />
+	</If>
+
+    <If Condition="HasQuest(11015) &amp;&amp; IsQuestCompleted(11015)">
+	<TurnIn QuestName="Netherwing Crystals" TurnInName="Taskmaster Varkule Dragonbreath" QuestId="11015" TurnInId="23140" />
+	</If>
+
+	</QuestOrder>
+  
+</HBProfile>

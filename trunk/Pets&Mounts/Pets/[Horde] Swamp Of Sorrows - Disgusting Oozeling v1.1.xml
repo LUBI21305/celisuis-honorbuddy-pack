@@ -1,0 +1,70 @@
+<HBProfile>
+	<Name>[Horde] Swamp Of Sorrows - Disgusting Oozeling v1.1 by Cicro</Name>
+	<MinDurability>0.4</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+	<ProtectedItems>
+		<Item name="Oozing Bag" entry="20768" />
+		<Item name="Disgusting Oozeling" entry="20769" />
+
+	</ProtectedItems>
+	<SubProfile>
+		<Name>Swamp Of Sorrows,  - Disgusting Oozeling</Name>
+		<MinLevel>1</MinLevel>
+		<MaxLevel>87</MaxLevel>
+		<TargetMinLevel>20</TargetMinLevel>
+		<Factions>7</Factions>
+		<Hotspots>
+
+<Hotspot X="-10341.56" Y="-2755.442" Z="20.48433" />
+<Hotspot X="-10297.42" Y="-2773.388" Z="20.20369" />
+<Hotspot X="-10270.37" Y="-2793.668" Z="19.9244" />
+<Hotspot X="-10213.98" Y="-2807.676" Z="20.9138" />
+<Hotspot X="-10190.04" Y="-2863.328" Z="20.17918" />
+<Hotspot X="-10220.15" Y="-2912.396" Z="19.63343" />
+<Hotspot X="-10236.61" Y="-2915.131" Z="21.90375" />
+<Hotspot X="-10261.97" Y="-2913.036" Z="20.96489" />
+<Hotspot X="-10289.9" Y="-2914.793" Z="19.1046" />
+<Hotspot X="-10319.5" Y="-2909.5" Z="18.62819" />
+<Hotspot X="-10333.51" Y="-2981.817" Z="19.00677" />
+<Hotspot X="-10323.84" Y="-2990.625" Z="20.50019" />
+<Hotspot X="-10279.56" Y="-3024.032" Z="18.71129" />
+<Hotspot X="-10252.73" Y="-3024.721" Z="20.0514" />
+<Hotspot X="-10213.67" Y="-3012.511" Z="18.31479" />
+<Hotspot X="-10168.12" Y="-3029.277" Z="19.33238" />
+<Hotspot X="-10122.29" Y="-3008.653" Z="18.51315" />
+<Hotspot X="-10112.96" Y="-2992.836" Z="19.56242" />
+<Hotspot X="-10130.18" Y="-2964.622" Z="18.68054" />
+<Hotspot X="-10153.92" Y="-2947.14" Z="22.94232" />
+<Hotspot X="-10173.58" Y="-2921.182" Z="20.57376" />
+<Hotspot X="-10200.07" Y="-2923.009" Z="19.58389" />
+<Hotspot X="-10242.08" Y="-2912.5" Z="22.13475" />
+<Hotspot X="-10288.71" Y="-2914.721" Z="19.4261" />
+<Hotspot X="-10344.49" Y="-2908.402" Z="20.44834" />
+<Hotspot X="-10360.87" Y="-2885.367" Z="19.97912" />
+<Hotspot X="-10405.83" Y="-2828.895" Z="21.03481" />
+<Hotspot X="-10398.58" Y="-2795.365" Z="19.625" />
+<Hotspot X="-10366.35" Y="-2769.235" Z="20.92283" />
+
+		</Hotspots>
+		<Vendors>
+<Vendor Name="Thralosh" Entry="984" Type="Repair" X="-10406.85" Y="-3256.554" Z="21.9769" />
+		</Vendors>
+		<Blackspots>
+<Blackspot X="-10199.8" Y="-2896.847" Z="19.00195" Radius="12.73365" />
+<Blackspot X="-10333.23" Y="-2918.868" Z="18.55221" Radius="8.951863" />
+<Blackspot X="-10146.4" Y="-2943.53" Z="19.59692" Radius="11.45593" />
+		</Blackspots>
+		<AvoidMobs>
+
+		</AvoidMobs>
+		<Mailboxes>
+		</Mailboxes>
+	</SubProfile>
+</HBProfile>

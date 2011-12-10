@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WeightSet Class="DeathKnight" Spec="Blood" Misc="DPS">
+  <DPS>500</DPS>
+  <Stamina>100</Stamina>
+  <Agility>69</Agility>
+  <DodgeRating>50</DodgeRating>
+  <ParryRating>43</ParryRating>
+  <ExprtiseRating>38</ExprtiseRating>
+  <Strength>31</Strength>
+  <CriticalStrikeRating>22</CriticalStrikeRating>
+  <Armor>29</Armor>
+  <HasteRating>16</HasteRating>
+  <HitRating>16</HitRating>  
+</WeightSet>

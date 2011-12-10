@@ -1,0 +1,61 @@
+<HBProfile>
+   <Name>LiquidFire Volatile Air</Name>
+   <MinLevel>78</MinLevel>
+   <MaxLevel>86</MaxLevel>
+   
+   <MinDurability>0.3</MinDurability>
+   <MinFreeBagSlots>2</MinFreeBagSlots>
+   
+   <MailGrey>False</MailGrey>
+   <MailWhite>False</MailWhite>
+   <MailGreen>False</MailGreen>
+   <MailBlue>True</MailBlue>
+   <MailPurple>True</MailPurple>
+   
+   <SellGrey>True</SellGrey>
+   <SellWhite>True</SellWhite>
+   <SellGreen>False</SellGreen>
+   <SellBlue>False</SellBlue>
+   <SellPurple>False</SellPurple>
+   
+   <TargetElites>False</TargetElites>	
+   
+   <ProtectedItems>
+   <!-- Highborne Scroll -->
+   <Item Name="Highborne Scroll" Entry="63127" />
+   </ProtectedItems> 
+   
+   <Blackspots>
+   </Blackspots>
+   
+   <Vendors>
+		<Vendor Name="Blacksmith Abasi" Entry="48617" Type="Repair" X="-9404.68" Y="-906.438" Z="112.5407" />
+   </Vendors>
+   
+   <ContinentID>1</ContinentID>
+   
+   <Mailboxes>
+   
+   </Mailboxes>
+   
+   
+   
+   <GrindArea>
+       <TargetMinLevel>78</TargetMinLevel>
+       <TargetMaxLevel>85</TargetMaxLevel>
+       <Factions>834</Factions>
+		<Hotspots>
+		<Hotspot X="-9961.33" Y="110.2028" Z="67.49682" />
+		<Hotspot X="-9800.601" Y="86.35172" Z="67.59739" />
+		<Hotspot X="-9666.678" Y="-67.56307" Z="91.5911" />
+		<Hotspot X="-9543.403" Y="-20.04491" Z="109.8923" />
+		<Hotspot X="-9630.322" Y="-221.7835" Z="99.83855" />
+		<Hotspot X="-9888.667" Y="-106.175" Z="76.22713" />
+		<Hotspot X="-9853.822" Y="-44.0189" Z="59.42504" />
+		<Hotspot X="-9708.158" Y="-136.189" Z="82.13863" />
+		<Hotspot X="-9809.002" Y="22.1629" Z="67.15798" />
+		<Hotspot X="-9962.018" Y="-3.134239" Z="59.49758" />
+		</Hotspots>
+   </GrindArea>
+   
+</HBProfile>

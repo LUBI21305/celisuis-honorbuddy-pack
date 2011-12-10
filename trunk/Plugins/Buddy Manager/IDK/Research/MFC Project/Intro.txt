@@ -1,0 +1,10 @@
+This folder will contain the txt's for my "Mysterious Fortune Card" Research thread/project.
+
+The thread: 
+
+
+
+I am only adding this to the SVN because it's easier to keep track of.
+
+
+-Panda.

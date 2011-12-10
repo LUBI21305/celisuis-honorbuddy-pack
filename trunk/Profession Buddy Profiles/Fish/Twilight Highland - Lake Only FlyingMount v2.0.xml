@@ -1,0 +1,60 @@
+<HBProfile>
+	<Name>Twilight Higland - Lake Only Flying Mount by Cicro</Name>
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>1</MinFreeBagSlots>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+	<ProtectedItems>
+		<Item name="Fishing Pole" entry="6256" />
+		<Item name="Mastercraft Kalu'ak Fishing Pole" entry="44050" />
+		<Item name="Arcanite Fishing Pole" entry="19970" />
+		<Item name="Bone Fishing Pole" entry="45991" />
+		<Item name="Jeweled Fishing Pole" entry="45992" />
+		<Item name="Nat's Lucky Fishing Pole" entry="45858" />
+		<Item name="Seth's Graphite Fishing Pole" entry="25978" />
+		<Item name="Big Iron Fishing Pole" entry="6367" />
+		<Item name="Blump Family Fishing Pole" entry="12225" />
+		<Item name="Darkwood Fishing Pole" entry="6366" />
+		<Item name="Jonathan's Fishing Pole" entry="52678" />
+		<Item name="Strong Fishing Pole" entry="6365" />
+		<Item name="Staats' Fishing Pole" entry="46337" />
+	</ProtectedItems>
+	<SubProfile>
+		<Name>CrystalsongForest Flying Mount</Name>
+		<MinLevel>1</MinLevel>
+		<MaxLevel>87</MaxLevel>
+		<TargetMinLevel>87</TargetMinLevel>
+		<Factions>7 </Factions>
+		<Hotspots>
+
+<Hotspot X="-4277.162" Y="-4037.792" Z="328.5909" />
+<Hotspot X="-4320.675" Y="-3872.133" Z="325.6284" />
+<Hotspot X="-4422.86" Y="-3838.189" Z="326.1777" />
+<Hotspot X="-4471.186" Y="-3882.53" Z="324.2634" />
+<Hotspot X="-4504.569" Y="-4054.677" Z="323.6148" />
+<Hotspot X="-4493.533" Y="-4098.451" Z="322.9283" />
+<Hotspot X="-4420.604" Y="-4160.602" Z="323.0326" />
+<Hotspot X="-4313.382" Y="-4322.361" Z="327.7398" />
+<Hotspot X="-4225.277" Y="-4326.843" Z="326.7619" />
+<Hotspot X="-4142.155" Y="-4237.142" Z="327.5996" />
+<Hotspot X="-4175.981" Y="-4143.045" Z="326.521" />
+
+		</Hotspots>
+		<Vendors>
+
+		</Vendors>
+		<Blackspots>
+
+		</Blackspots>
+		<AvoidMobs>
+
+		</AvoidMobs>
+		<Mailboxes>
+		</Mailboxes>
+	</SubProfile>
+</HBProfile>

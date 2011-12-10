@@ -1,0 +1,1555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Professionbuddy ChildrenCount="41">
+  <Comment Text="10 Linen Cloth" />
+  <Comment Text="80 Wool Cloth" />
+  <Comment Text="20 Medium Leather" />
+  <Comment Text="20 Mageweave Cloth" />
+  <Comment Text="30 Runecloth" />
+  <Comment Text="8 Frostweave Cloth" />
+  <Comment Text="40 Volatile Air" />
+  <Comment Text="Up to 116 Volatile Earth" />
+  <Comment Text="Up to 17 Volatile Fire" />
+  <Comment Text="Up to 2 Dream Emerald" />
+  <CustomAction Code="Log(System.Drawing.Color.DarkOliveGreen,&quot;Inrego's Engineering and Mining 1-525 Profile v0.6.&quot;);" />
+  <Settings Type="Boolean" DefaultValue="false" Name="HS to SW" Summary="Will HS to SW when needed if it's on other continents." />
+  <Settings Type="Boolean" DefaultValue="false" Name="AH Items" Summary="If true, it'll AH the stuff it's done with. Else it'll sell to vendor." />
+  <Settings Type="Boolean" DefaultValue="true" Name="AH Rare Ores" Summary="Put rare ores on AH. (Silver, Gold, Truesilver etc)" />
+  <Settings Type="Boolean" DefaultValue="true" Name="AH Gems" Summary="Will put gems on AH if true. This it to be able to AH gems while still vendoring all the other stuff." />
+  <Settings Type="Boolean" DefaultValue="false" Name="Mats in Bank" Summary="Change to true if you already collected the AH-bought mats and put them in the bank." />
+  <Settings Type="Int32" DefaultValue="0" Name="Force Sell" Summary="Will force selling to clean up bags before starting bot. 0 = No 1 = Yes" />
+  <CustomAction Code="var2 = (int)Settings[&quot;Force Sell&quot;];" />
+  <If Condition="TreeRoot.Current.Name != &quot;Gatherbuddy2&quot;" IgnoreCanRun="True" ChildrenCount="1">
+    <CustomAction Code="SwitchToBot(&quot;Gatherbuddy2&quot;);" />
+  </If>
+  <If Condition="!HasRecipe(2657)" IgnoreCanRun="True" ChildrenCount="2">
+    <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I don't know mining. Going to learn it&quot;); " />
+    <CallSubRoutine SubRoutineName="Train Mining" />
+  </If>
+  <If Condition="!HasRecipe(3918)" IgnoreCanRun="True" ChildrenCount="2">
+    <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I don't know engineering. Going to learn it&quot;); " />
+    <CallSubRoutine SubRoutineName="Train Engineering" />
+  </If>
+  <SubRoutine SubRoutineName="Train Mining" ChildrenCount="2">
+    <If Condition="Me.IsAlliance" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="Me.MapId == 0" IgnoreCanRun="True" ChildrenCount="3">
+        <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need to train mining. Going to train in Stormwind.&quot;); " />
+        <FlyToAction Dismount="True" X="-8420.825" Y="671.7414" Z="94.90906" />
+        <TrainSkillAction NpcEntry="5513" X="-8433.48" Y="688.922" Z="96.31895" />
+      </If>
+      <If Condition="Me.MapId == 530" IgnoreCanRun="True" ChildrenCount="2">
+        <If Condition="DistanceTo(-2128.097, 5367.216, 54.85246) &lt; DistanceTo(-717.8062, 2611.669, 91.01138)" IgnoreCanRun="True" ChildrenCount="3">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need to train mining. Going to train in Shattrath.&quot;); " />
+          <If Condition="Me.GetReputationLevelWith(934) &gt;= Styx.WoWUnitReaction.Neutral" IgnoreCanRun="True" ChildrenCount="3">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I can train at The Scryers.&quot;); " />
+            <FlyToAction Dismount="True" X="-2136.584" Y="5391.087" Z="53.61874" />
+            <TrainSkillAction NpcEntry="33640" X="-2128.097" Y="5367.216" Z="54.85246" />
+          </If>
+          <If Condition="Me.GetReputationLevelWith(934) &lt; Styx.WoWUnitReaction.Neutral" IgnoreCanRun="True" ChildrenCount="3">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I can train at The Aldor.&quot;); " />
+            <FlyToAction Dismount="True" X="-1873.463" Y="5672.609" Z="127.3176" />
+            <TrainSkillAction NpcEntry="33682" X="-1897.437" Y="5664.319" Z="128.5058" />
+          </If>
+        </If>
+        <If Condition="DistanceTo(-2128.097, 5367.216, 54.85246) &gt; DistanceTo(-717.8062, 2611.669, 91.01138)" IgnoreCanRun="True" ChildrenCount="3">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need to train mining. Going to train in Honor Hold.&quot;); " />
+          <FlyToAction Dismount="True" X="-709.1304" Y="2620.629" Z="89.70367" />
+          <TrainSkillAction NpcEntry="18779" X="-717.8062" Y="2611.669" Z="91.01138" />
+        </If>
+      </If>
+      <If Condition="Me.MapId == 571" IgnoreCanRun="True" ChildrenCount="2">
+        <If Condition="DistanceTo(2356.646, 5258.935, 7.79472) &lt; DistanceTo(537.7875, -5020.13, 10.54113)" IgnoreCanRun="True" ChildrenCount="3">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need to train mining. Going to train in Valiance Keep (Borean Tundra).&quot;); " />
+          <FlyToAction Dismount="True" X="2353.015" Y="5254.983" Z="7.639418" />
+          <TrainSkillAction NpcEntry="26999" X="2356.646" Y="5258.935" Z="7.79472" />
+        </If>
+        <If Condition="DistanceTo(537.7875, -5020.13, 10.54113) &lt; DistanceTo(2356.646, 5258.935, 7.79472)" IgnoreCanRun="True" ChildrenCount="3">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need to train mining. Going to train in Valgarde (Howling Fjord).&quot;); " />
+          <FlyToAction Dismount="True" X="543.6001" Y="-5011.833" Z="10.53406" />
+          <TrainSkillAction NpcEntry="26912" X="537.7875" Y="-5020.13" Z="10.54113" />
+        </If>
+      </If>
+    </If>
+    <If Condition="Me.IsHorde" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="Me.MapId == 1" IgnoreCanRun="True" ChildrenCount="3">
+        <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need to train mining. Going to train in Orgrimmar.&quot;); " />
+        <FlyToAction Dismount="True" X="2072.713" Y="-4767.96" Z="27.47264" />
+        <TrainSkillAction NpcEntry="3357" X="2081.978" Y="-4764.085" Z="27.92588" />
+      </If>
+      <If Condition="Me.MapId == 530" IgnoreCanRun="True" ChildrenCount="2">
+        <If Condition="DistanceTo(-2128.097, 5367.216, 54.85246) &lt; DistanceTo(182.3492, 2674.738, 88.64578)" IgnoreCanRun="True" ChildrenCount="3">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need to train mining. Going to train in Shattrath.&quot;); " />
+          <If Condition="Me.GetReputationLevelWith(934) &gt;= Styx.WoWUnitReaction.Neutral" IgnoreCanRun="True" ChildrenCount="3">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I can train at The Scryers.&quot;); " />
+            <FlyToAction Dismount="True" X="-2136.584" Y="5391.087" Z="53.61874" />
+            <TrainSkillAction NpcEntry="33640" X="-2128.097" Y="5367.216" Z="54.85246" />
+          </If>
+          <If Condition="Me.GetReputationLevelWith(934) &lt; Styx.WoWUnitReaction.Neutral" IgnoreCanRun="True" ChildrenCount="3">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I can train at The Aldor.&quot;); " />
+            <FlyToAction Dismount="True" X="-1873.463" Y="5672.609" Z="127.3176" />
+            <TrainSkillAction NpcEntry="33682" X="-1897.437" Y="5664.319" Z="128.5058" />
+          </If>
+        </If>
+        <If Condition="DistanceTo(-2128.097, 5367.216, 54.85246) &gt; DistanceTo(182.3492, 2674.738, 88.64578)" IgnoreCanRun="True" ChildrenCount="3">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need to train mining. Going to train in Thrallmar.&quot;); " />
+          <FlyToAction Dismount="True" X="182.3492" Y="2674.738" Z="88.64578" />
+          <TrainSkillAction NpcEntry="18747" X="186.7552" Y="2676.357" Z="88.89063" />
+        </If>
+      </If>
+      <If Condition="Me.MapId == 571" IgnoreCanRun="True" ChildrenCount="2">
+        <If Condition="DistanceTo(2356.646, 5258.935, 7.79472) &lt; DistanceTo(537.7875, -5020.13, 10.54113)" IgnoreCanRun="True" ChildrenCount="3">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need to train mining. Going to train in Valiance Keep (Borean Tundra).&quot;); " />
+          <FlyToAction Dismount="True" X="2353.015" Y="5254.983" Z="7.639418" />
+          <TrainSkillAction NpcEntry="26999" X="2356.646" Y="5258.935" Z="7.79472" />
+        </If>
+        <If Condition="DistanceTo(537.7875, -5020.13, 10.54113) &lt; DistanceTo(2356.646, 5258.935, 7.79472)" IgnoreCanRun="True" ChildrenCount="3">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need to train mining. Going to train in Valgarde (Howling Fjord).&quot;); " />
+          <FlyToAction Dismount="True" X="543.6001" Y="-5011.833" Z="10.53406" />
+          <TrainSkillAction NpcEntry="26912" X="537.7875" Y="-5020.13" Z="10.54113" />
+        </If>
+      </If>
+    </If>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="Train Engineering" ChildrenCount="3">
+    <If Condition="Me.IsAlliance" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="Me.MapId == 0" IgnoreCanRun="True" ChildrenCount="3">
+        <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need to train Engineering. Going to train in Stormwind.&quot;); " />
+        <FlyToAction Dismount="True" X="-8369.603" Y="629.4828" Z="95.10226" />
+        <TrainSkillAction NpcEntry="5518" X="-8366.05" Y="630.964" Z="95.14172" />
+      </If>
+      <If Condition="Me.MapId == 530" IgnoreCanRun="True" ChildrenCount="2">
+        <If Condition="DistanceTo(-2041.607, 5562.554, 54.42871) &lt; DistanceTo(-777.6002, 2661.832, 108.1687)" IgnoreCanRun="True" ChildrenCount="3">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need to train Engineering. Going to train in Shattrath.&quot;); " />
+          <If Condition="Me.GetReputationLevelWith(934) &gt;= Styx.WoWUnitReaction.Neutral" IgnoreCanRun="True" ChildrenCount="3">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I can train at The Scryers.&quot;); " />
+            <FlyToAction Dismount="True" X="-2042.074" Y="5586.06" Z="53.24827" />
+            <TrainSkillAction NpcEntry="33634" X="-2041.607" Y="5562.554" Z="54.42871" />
+          </If>
+          <If Condition="Me.GetReputationLevelWith(934) &lt; Styx.WoWUnitReaction.Neutral" IgnoreCanRun="True" ChildrenCount="3">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I can train at The Aldor.&quot;); " />
+            <FlyToAction Dismount="True" X="-1730.625" Y="5655.265" Z="127.8707" />
+            <TrainSkillAction NpcEntry="33677" X="-1751.019" Y="5641.995" Z="129.0673" />
+          </If>
+        </If>
+        <If Condition="DistanceTo(-2041.607, 5562.554, 54.42871) &gt; DistanceTo(-777.6002, 2661.832, 108.1687)" IgnoreCanRun="True" ChildrenCount="3">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need to train Engineering. Going to train in Honor Hold.&quot;); " />
+          <FlyToAction Dismount="True" X="-772.2239" Y="2662.313" Z="107.6486" />
+          <TrainSkillAction NpcEntry="18775" X="-777.6002" Y="2661.832" Z="108.1687" />
+        </If>
+      </If>
+      <If Condition="Me.MapId == 571" IgnoreCanRun="True" ChildrenCount="2">
+        <If Condition="DistanceTo(2121.901, 5242.179, 19.44633) &lt; DistanceTo(5923.706, 732.8438, 642.1354)" IgnoreCanRun="True" ChildrenCount="3">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need to train Engineering. Going to train in Valiance Keep (Borean Tundra).&quot;); " />
+          <FlyToAction Dismount="True" X="2124.089" Y="5248.252" Z="19.44652" />
+          <TrainSkillAction NpcEntry="26991" X="2121.901" Y="5242.179" Z="19.44633" />
+        </If>
+        <If Condition="DistanceTo(534.0389, -5006.6, 10.53343) &lt; DistanceTo(2121.901, 5242.179, 19.44633)" IgnoreCanRun="True" ChildrenCount="3">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need to train Engineering. Going to train in Valgarde (Howling Fjord).&quot;); " />
+          <FlyToAction Dismount="True" X="543.6001" Y="-5011.833" Z="10.53406" />
+          <TrainSkillAction NpcEntry="26907" X="534.0389" Y="-5006.6" Z="10.53343" />
+        </If>
+      </If>
+    </If>
+    <If Condition="Me.IsHorde" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="Me.MapId == 1" IgnoreCanRun="True" ChildrenCount="3">
+        <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need to train Engineering. Going to train in Orgrimmar.&quot;); " />
+        <FlyToAction Dismount="True" X="1837.967" Y="-4504.311" Z="23.35758" />
+        <TrainSkillAction NpcEntry="11017" X="1830.8" Y="-4494.98" Z="23.6008" />
+      </If>
+      <If Condition="Me.MapId == 530" IgnoreCanRun="True" ChildrenCount="2">
+        <If Condition="DistanceTo(-2041.607, 5562.554, 54.42871) &lt; DistanceTo(156.996, 2707.137, 88.14684)" IgnoreCanRun="True" ChildrenCount="3">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need to train Engineering. Going to train in Shattrath.&quot;); " />
+          <If Condition="Me.GetReputationLevelWith(934) &gt;= Styx.WoWUnitReaction.Neutral" IgnoreCanRun="True" ChildrenCount="3">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I can train at The Scryers.&quot;); " />
+            <FlyToAction Dismount="True" X="-2042.074" Y="5586.06" Z="53.24827" />
+            <TrainSkillAction NpcEntry="33634" X="-2041.607" Y="5562.554" Z="54.42871" />
+          </If>
+          <If Condition="Me.GetReputationLevelWith(934) &lt; Styx.WoWUnitReaction.Neutral" IgnoreCanRun="True" ChildrenCount="3">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I can train at The Aldor.&quot;); " />
+            <FlyToAction Dismount="True" X="-1730.625" Y="5655.265" Z="127.8707" />
+            <TrainSkillAction NpcEntry="33677" X="-1751.019" Y="5641.995" Z="129.0673" />
+          </If>
+        </If>
+        <If Condition="DistanceTo(-2041.607, 5562.554, 54.42871) &gt; DistanceTo(156.996, 2707.137, 88.14684)" IgnoreCanRun="True" ChildrenCount="3">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need to train Engineering. Going to train in Thrallmar.&quot;); " />
+          <FlyToAction Dismount="True" X="156.996" Y="2707.137" Z="88.14684" />
+          <TrainSkillAction NpcEntry="18752" X="154.9931" Y="2710.45" Z="88.07852" />
+        </If>
+      </If>
+      <If Condition="Me.MapId == 571" IgnoreCanRun="True" ChildrenCount="2">
+        <If Condition="DistanceTo(2121.901, 5242.179, 19.44633) &lt; DistanceTo(5923.706, 732.8438, 642.1354)" IgnoreCanRun="True" ChildrenCount="3">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need to train Engineering. Going to train in Valiance Keep (Borean Tundra).&quot;); " />
+          <FlyToAction Dismount="True" X="2124.089" Y="5248.252" Z="19.44652" />
+          <TrainSkillAction NpcEntry="26991" X="2121.901" Y="5242.179" Z="19.44633" />
+        </If>
+        <If Condition="DistanceTo(534.0389, -5006.6, 10.53343) &lt; DistanceTo(2121.901, 5242.179, 19.44633)" IgnoreCanRun="True" ChildrenCount="3">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need to train Engineering. Going to train in Valgarde (Howling Fjord).&quot;); " />
+          <FlyToAction Dismount="True" X="543.6001" Y="-5011.833" Z="10.53406" />
+          <TrainSkillAction NpcEntry="26907" X="534.0389" Y="-5006.6" Z="10.53343" />
+        </If>
+      </If>
+    </If>
+    <If Condition="Mining.Level &gt;= (Mining.MaxLevel - 25) &amp;&amp; Mining.MaxLevel != 525" IgnoreCanRun="True" ChildrenCount="2">
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Am able to train mining, might aswell do it now that we're here anyways.&quot;); " />
+      <CallSubRoutine SubRoutineName="Train Mining" />
+    </If>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="Create Stuff" ChildrenCount="18">
+    <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Going to smelt/create stuff.&quot;); " />
+    <If Condition="Me.IsAlliance" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="Me.MapId == 0" IgnoreCanRun="True" ChildrenCount="3">
+        <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Going back to Stormwind forge to create stuff.&quot;); " />
+        <FlyToAction Dismount="True" X="-8428.339" Y="621.5685" Z="95.55919" />
+        <CustomAction Code="CTM(-8427.01, 619.7388, 95.55588);" />
+      </If>
+      <If Condition="Me.MapId == 530" IgnoreCanRun="True" ChildrenCount="3">
+        <If Condition="DistanceTo(-710.452, 2602.714, 90.99529) &lt; DistanceTo(-1845.239, 5230.618, -38.04417) &amp;&amp; DistanceTo(-710.452, 2602.714, 90.99529) &lt; DistanceTo(-2525.101, 7353.73, 9.283875)" IgnoreCanRun="True" ChildrenCount="3">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Going to Honor Hold forge to create stuff.&quot;); " />
+          <FlyToAction Dismount="True" X="-710.0403" Y="2618.279" Z="89.70143" />
+          <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-710.452" Y="2602.714" Z="90.99529" />
+        </If>
+        <If Condition="DistanceTo(-1845.239, 5230.618, -38.04417) &lt; DistanceTo(-716.8497, 2601.38, 91.01057) &amp;&amp; DistanceTo(-1845.239, 5230.618, -38.04417) &lt; DistanceTo(-2525.101, 7353.73, 9.283875)" IgnoreCanRun="True" ChildrenCount="3">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Going to Shattrath forge to create stuff.&quot;); " />
+          <FlyToAction Dismount="True" X="-1867.974" Y="5227.964" Z="-40.20899" />
+          <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-1845.741" Y="5229.517" Z="-38.04527" />
+        </If>
+        <If Condition="DistanceTo(-2525.101, 7353.73, 9.283875) &lt; DistanceTo(-716.8497, 2601.38, 91.01057) &amp;&amp; DistanceTo(-2525.101, 7353.73, 9.283875) &lt; DistanceTo(-1845.239, 5230.618, -38.04417)" IgnoreCanRun="True" ChildrenCount="2">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Going to Telaar forge to create stuff.&quot;); " />
+          <FlyToAction Dismount="True" X="-2525.101" Y="7353.73" Z="9.283875" />
+        </If>
+      </If>
+      <If Condition="Me.MapId == 571" IgnoreCanRun="True" ChildrenCount="2">
+        <If Condition="DistanceTo(547.9492, -4998.987, 10.58067) &lt; DistanceTo(2339.054, 5267.597, 7.639768)" IgnoreCanRun="True" ChildrenCount="2">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Going to Valgarde forge (Howling Fjord) to create stuff.&quot;); " />
+          <FlyToAction Dismount="True" X="547.9492" Y="-4998.987" Z="10.58067" />
+        </If>
+        <If Condition="DistanceTo(2339.054, 5267.597, 7.639768) &lt; DistanceTo(547.9492, -4998.987, 10.58067)" IgnoreCanRun="True" ChildrenCount="2">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Going to Valiance Keep forge (Borean Tundra) to create stuff.&quot;); " />
+          <FlyToAction Dismount="True" X="2339.054" Y="5267.597" Z="7.639768" />
+        </If>
+      </If>
+    </If>
+    <If Condition="Me.IsHorde" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="Me.MapId == 1" IgnoreCanRun="True" ChildrenCount="3">
+        <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Going back to Orgrimmar forge to create stuff.&quot;); " />
+        <If Condition="DistanceTo(1836.402, -4504.993, 23.35497) &gt; 10" IgnoreCanRun="True" ChildrenCount="1">
+          <FlyToAction Dismount="True" X="1836.402" Y="-4504.993" Z="23.35497" />
+        </If>
+        <CustomAction Code="CTM(1828.748, -4488.203, 23.60083);" />
+      </If>
+      <If Condition="Me.MapId == 530" IgnoreCanRun="True" ChildrenCount="3">
+        <If Condition="DistanceTo(-710.452, 2602.714, 90.99529) &lt; DistanceTo(-1845.239, 5230.618, -38.04417) &amp;&amp; DistanceTo(-710.452, 2602.714, 90.99529) &lt; DistanceTo(-2525.101, 7353.73, 9.283875)" IgnoreCanRun="True" ChildrenCount="3">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Going to Honor Hold forge to create stuff.&quot;); " />
+          <FlyToAction Dismount="True" X="-710.0403" Y="2618.279" Z="89.70143" />
+          <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-710.452" Y="2602.714" Z="90.99529" />
+        </If>
+        <If Condition="DistanceTo(-1845.239, 5230.618, -38.04417) &lt; DistanceTo(-716.8497, 2601.38, 91.01057) &amp;&amp; DistanceTo(-1845.239, 5230.618, -38.04417) &lt; DistanceTo(-2525.101, 7353.73, 9.283875)" IgnoreCanRun="True" ChildrenCount="3">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Going to Shattrath forge to create stuff.&quot;); " />
+          <FlyToAction Dismount="True" X="-1867.974" Y="5227.964" Z="-40.20899" />
+          <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-1845.741" Y="5229.517" Z="-38.04527" />
+        </If>
+        <If Condition="DistanceTo(-2525.101, 7353.73, 9.283875) &lt; DistanceTo(-716.8497, 2601.38, 91.01057) &amp;&amp; DistanceTo(-2525.101, 7353.73, 9.283875) &lt; DistanceTo(-1845.239, 5230.618, -38.04417)" IgnoreCanRun="True" ChildrenCount="2">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Going to Telaar forge to create stuff.&quot;); " />
+          <FlyToAction Dismount="True" X="-2525.101" Y="7353.73" Z="9.283875" />
+        </If>
+      </If>
+      <If Condition="Me.MapId == 571" IgnoreCanRun="True" ChildrenCount="2">
+        <If Condition="DistanceTo(547.9492, -4998.987, 10.58067) &lt; DistanceTo(2339.054, 5267.597, 7.639768)" IgnoreCanRun="True" ChildrenCount="2">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Going to Valgarde forge (Howling Fjord) to create stuff.&quot;); " />
+          <FlyToAction Dismount="True" X="547.9492" Y="-4998.987" Z="10.58067" />
+        </If>
+        <If Condition="DistanceTo(2339.054, 5267.597, 7.639768) &lt; DistanceTo(547.9492, -4998.987, 10.58067)" IgnoreCanRun="True" ChildrenCount="2">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Going to Valiance Keep forge (Borean Tundra) to create stuff.&quot;); " />
+          <FlyToAction Dismount="True" X="2339.054" Y="5267.597" Z="7.639768" />
+        </If>
+      </If>
+    </If>
+    <WaitAction Condition="false" Timeout="2000" />
+    <If Condition="InbagCount (2770) &gt;= 1" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe(2657)" IgnoreCanRun="True" ChildrenCount="2">
+        <CallSubRoutine SubRoutineName="Train Mining" />
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+      </If>
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Smelting Copper Ores.&quot;); " />
+      <CastSpellAction Entry="2657" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </If>
+    <If Condition="InbagCount (2771) &gt;= 1" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe(3304)" IgnoreCanRun="True" ChildrenCount="2">
+        <CallSubRoutine SubRoutineName="Train Mining" />
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+      </If>
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Smelting Tin Ores.&quot;); " />
+      <CastSpellAction Entry="3304" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </If>
+    <If Condition="InbagCount (2772) &gt;= 1" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe(3307)" IgnoreCanRun="True" ChildrenCount="2">
+        <CallSubRoutine SubRoutineName="Train Mining" />
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+      </If>
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Smelting Iron Ores.&quot;); " />
+      <CastSpellAction Entry="3307" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </If>
+    <If Condition="InbagCount (3858) &gt;= 1" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe(10097)" IgnoreCanRun="True" ChildrenCount="2">
+        <CallSubRoutine SubRoutineName="Train Mining" />
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+      </If>
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Smelting Mithril Ores.&quot;); " />
+      <CastSpellAction Entry="10097" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </If>
+    <If Condition="InbagCount (10620) &gt;= 1" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe(16153)" IgnoreCanRun="True" ChildrenCount="2">
+        <CallSubRoutine SubRoutineName="Train Mining" />
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+      </If>
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Smelting Thorium Ores.&quot;); " />
+      <CastSpellAction Entry="16153" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </If>
+    <If Condition="InbagCount (23424) &gt;= 2" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe(29356)" IgnoreCanRun="True" ChildrenCount="2">
+        <CallSubRoutine SubRoutineName="Train Mining" />
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+      </If>
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Smelting Fel Iron Ores.&quot;); " />
+      <CastSpellAction Entry="29356" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </If>
+    <If Condition="InbagCount (23425) &gt;= 2" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe(29358)" IgnoreCanRun="True" ChildrenCount="2">
+        <CallSubRoutine SubRoutineName="Train Mining" />
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+      </If>
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Smelting Adamantite Ores.&quot;); " />
+      <CastSpellAction Entry="29358" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </If>
+    <If Condition="InbagCount (23427) &gt;= 2" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe(29359)" IgnoreCanRun="True" ChildrenCount="2">
+        <CallSubRoutine SubRoutineName="Train Mining" />
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+      </If>
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Smelting Eternium Ores.&quot;); " />
+      <CastSpellAction Entry="29359" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </If>
+    <If Condition="InbagCount (23426) &gt;= 2" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe(29361)" IgnoreCanRun="True" ChildrenCount="2">
+        <CallSubRoutine SubRoutineName="Train Mining" />
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+      </If>
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Smelting Khorium Ores.&quot;); " />
+      <CastSpellAction Entry="29361" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </If>
+    <If Condition="InbagCount (36909) &gt;= 1" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe(49252)" IgnoreCanRun="True" ChildrenCount="2">
+        <CallSubRoutine SubRoutineName="Train Mining" />
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+      </If>
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Smelting Cobalt Ores.&quot;); " />
+      <CastSpellAction Entry="49252" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </If>
+    <If Condition="InbagCount (36912) &gt;= 2" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe(49258)" IgnoreCanRun="True" ChildrenCount="2">
+        <CallSubRoutine SubRoutineName="Train Mining" />
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+      </If>
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Smelting Saronite Ores.&quot;); " />
+      <CastSpellAction Entry="49258" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </If>
+    <If Condition="InbagCount (53038) &gt;= 2" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe(84038)" IgnoreCanRun="True" ChildrenCount="2">
+        <CallSubRoutine SubRoutineName="Train Mining" />
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+      </If>
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Smelting Obsidium Ores.&quot;); " />
+      <CastSpellAction Entry="84038" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </If>
+    <If Condition="InbagCount (52185) &gt;= 2" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe(74530)" IgnoreCanRun="True" ChildrenCount="2">
+        <CallSubRoutine SubRoutineName="Train Mining" />
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+      </If>
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Smelting Elementium Ores.&quot;); " />
+      <CastSpellAction Entry="74530" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </If>
+    <If Condition="InbagCount (52183) &gt;= 2" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe(74529)" IgnoreCanRun="True" ChildrenCount="2">
+        <CallSubRoutine SubRoutineName="Train Mining" />
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+      </If>
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Smelting Pyrite Ores.&quot;); " />
+      <CastSpellAction Entry="74529" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </If>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="Selling" ChildrenCount="24">
+    <If Condition="Engineering.Level &gt;= 350 &amp;&amp; Engineering.Level &lt; 425 &amp;&amp; (InbagCount (2770) &gt;= 1 || InbagCount (2771) &gt;= 1 || InbagCount (2772) &gt;= 1 || InbagCount (3858) &gt;= 1 || InbagCount (10620) &gt;= 1 || InbagCount (23424) &gt;= 2 || InbagCount (23425) &gt;= 2 || InbagCount (23427) &gt;= 2 || InbagCount (23426) &gt;= 2 || InbagCount (36909) &gt;= 1 || InbagCount (36912) &gt;= 2 || InbagCount (53038) &gt;= 2 || InbagCount (52185) &gt;= 2 || InbagCount (52183) &gt;= 2)" IgnoreCanRun="True" ChildrenCount="3">
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Bags almost full. I'll find someplace to smelt ores before selling stuff.&quot;); " />
+      <CallSubRoutine SubRoutineName="Create Stuff" />
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Omw to AH.&quot;); " />
+    </If>
+    <If Condition="Engineering.Level &lt; 300" IgnoreCanRun="True" ChildrenCount="1">
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Bags almost full. Gonna go sell stuff&quot;); " />
+    </If>
+    <If Condition="Me.IsAlliance &amp;&amp; Me.MapId == 0" IgnoreCanRun="True" ChildrenCount="2">
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Flying to Stormwind.&quot;); " />
+      <FlyToAction Dismount="True" X="-8360.604" Y="641.2958" Z="95.25739" />
+    </If>
+    <If Condition="Me.IsHorde &amp;&amp; Me.MapId == 1" IgnoreCanRun="True" ChildrenCount="2">
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Flying to Orgrimmar.&quot;); " />
+      <FlyToAction Dismount="True" X="2026.762" Y="-4679.891" Z="28.31924" />
+    </If>
+    <If Condition="(bool)Settings[&quot;AH Items&quot;]" IgnoreCanRun="True" ChildrenCount="14">
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Putting ores and bars etc on AH.&quot;); " />
+      <If Condition="InbagCount (10498) &gt;= 1 || InbagCount (40772) &gt;= 1" IgnoreCanRun="True" ChildrenCount="1">
+        <SellItemOnAhAction ItemID="2772,3575" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      </If>
+      <If Condition="Engineering.Level &gt;= 30" IgnoreCanRun="True" ChildrenCount="1">
+        <SellItemOnAhAction ItemID="2835" MinBuyout="0g10s0c" MaxBuyout="0g80s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="False" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="-8368.86" Y="678.417" Z="98.65343" PostIfBelowMinBuyout="True" />
+      </If>
+      <If Condition="Engineering.Level &gt;= 100" IgnoreCanRun="True" ChildrenCount="1">
+        <SellItemOnAhAction ItemID="2836,2771,2840,3576,2770,2589" MinBuyout="0g10s0c" MaxBuyout="1g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      </If>
+      <If Condition="Engineering.Level &gt;= 175" IgnoreCanRun="True" ChildrenCount="1">
+        <SellItemOnAhAction ItemID="2592,2841,2838" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      </If>
+      <If Condition="Engineering.Level &gt;= 250" IgnoreCanRun="True" ChildrenCount="1">
+        <SellItemOnAhAction ItemID="10560,3858,3860,10561,7912" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      </If>
+      <If Condition="Engineering.Level &gt;= 300" IgnoreCanRun="True" ChildrenCount="1">
+        <SellItemOnAhAction ItemID="12359,15994,14047,10620,16000,12365" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      </If>
+      <If Condition="Engineering.Level &gt;= 350" IgnoreCanRun="True" ChildrenCount="1">
+        <SellItemOnAhAction ItemID="23445,23424,23425,23446,23783,23782,22573,22452,21884,22574" MinBuyout="0g10s0c" MaxBuyout="8g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      </If>
+      <If Condition="Engineering.Level &gt;= 425" IgnoreCanRun="True" ChildrenCount="1">
+        <SellItemOnAhAction ItemID="36909,36916,36912,36913,37702,36860,37705,35622,37703,35627,37700,35623,37701" MinBuyout="0g10s0c" MaxBuyout="8g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      </If>
+      <If Condition="(InbagCount (2838) + InbagCount (3945)) &gt;= 80 &amp;&amp; Engineering.Level &lt; 175" IgnoreCanRun="False" ChildrenCount="8">
+        <SellItemOnAhAction ItemID="2838" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Amount" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="2838" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Amount" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="2838" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Amount" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="2838" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Amount" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="2838" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Amount" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="2838" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Amount" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="2838" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Amount" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="2838" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Amount" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      </If>
+      <If Condition="(InbagCount (7912) + InbagCount (12585)) &gt;= 140 &amp;&amp; Engineering.Level &gt;= 250" IgnoreCanRun="False" ChildrenCount="11">
+        <SellItemOnAhAction ItemID="7912" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Amount" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="7912" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Amount" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="7912" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Amount" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="7912" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Amount" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="7912" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Amount" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="7912" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Amount" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="7912" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Amount" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="7912" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Amount" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="7912" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Amount" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="7912" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Amount" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="7912" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="1" StackSize="20" AmountType="Amount" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      </If>
+      <SellItemOnAhAction ItemID="44739" MinBuyout="0g10s0c" MaxBuyout="35g0s0c" RunTime="_24_Hours" Amount="10" StackSize="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      <SellItemOnAhAction ItemID="40865" MinBuyout="0g10s0c" MaxBuyout="250g0s0c" RunTime="_24_Hours" Amount="10" StackSize="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      <SellItemOnAhAction ItemID="9262" MinBuyout="0g10s0c" MaxBuyout="2g0s0c" RunTime="_24_Hours" Amount="10" StackSize="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+    </If>
+    <If Condition="(bool)Settings[&quot;AH Gems&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Putting gems on AH.&quot;); " />
+      <SellItemOnAhAction ItemID="0" MinBuyout="0g10s0c" MaxBuyout="5g0s0c" RunTime="_24_Hours" Amount="10" StackSize="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+    </If>
+    <If Condition="(bool)Settings[&quot;AH Rare Ores&quot;]" IgnoreCanRun="True" ChildrenCount="9">
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Putting rare ores on AH.&quot;); " />
+      <SellItemOnAhAction ItemID="7911" MinBuyout="0g10s0c" MaxBuyout="4g50s0c" RunTime="_24_Hours" Amount="10" StackSize="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      <SellItemOnAhAction ItemID="2776" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      <SellItemOnAhAction ItemID="2775" MinBuyout="0g10s0c" MaxBuyout="3g0s0c" RunTime="_24_Hours" Amount="10" StackSize="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      <SellItemOnAhAction ItemID="23426" MinBuyout="0g10s0c" MaxBuyout="5g50s0c" RunTime="_24_Hours" Amount="10" StackSize="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      <SellItemOnAhAction ItemID="23449" MinBuyout="0g10s0c" MaxBuyout="10g0s0c" RunTime="_24_Hours" Amount="10" StackSize="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      <SellItemOnAhAction ItemID="23427" MinBuyout="0g10s0c" MaxBuyout="5g50s0c" RunTime="_24_Hours" Amount="10" StackSize="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      <SellItemOnAhAction ItemID="23447" MinBuyout="0g10s0c" MaxBuyout="5g50s0c" RunTime="_24_Hours" Amount="10" StackSize="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      <SellItemOnAhAction ItemID="36910,41163" MinBuyout="0g10s0c" MaxBuyout="5g50s0c" RunTime="_24_Hours" Amount="10" StackSize="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+    </If>
+    <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Selling all the crap I don't need.&quot;); " />
+    <If Condition="Me.IsAlliance" IgnoreCanRun="True" ChildrenCount="1">
+      <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-8368.995" Y="630.0342" Z="95.10596" />
+    </If>
+    <If Condition="Me.IsHorde" IgnoreCanRun="True" ChildrenCount="1">
+      <FlyToAction Dismount="True" X="2005.425" Y="-4665.099" Z="28.49271" />
+    </If>
+    <If Condition="InbagCount (10498) &gt;= 1 || InbagCount (40772) &gt;= 1" IgnoreCanRun="True" ChildrenCount="1">
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="2772,3575" Count="10" SellItemType="Specific" />
+    </If>
+    <If Condition="Engineering.Level &gt;= 30" IgnoreCanRun="True" ChildrenCount="1">
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="2835" Count="10" SellItemType="Specific" />
+    </If>
+    <If Condition="Engineering.Level &gt;= 75" IgnoreCanRun="True" ChildrenCount="1">
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="2880" Count="10" SellItemType="Specific" />
+    </If>
+    <If Condition="Engineering.Level &gt;= 100" IgnoreCanRun="True" ChildrenCount="1">
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="2836,4364,2589" Count="50" SellItemType="Specific" />
+    </If>
+    <If Condition="Engineering.Level &gt;= 125" IgnoreCanRun="True" ChildrenCount="1">
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="2770,2840,2771,4359" Count="50" SellItemType="Specific" />
+    </If>
+    <If Condition="Engineering.Level &gt;= 175" IgnoreCanRun="True" ChildrenCount="1">
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="4384,2838,4382,4377,2592,4375,2841,3945,3576" Count="10" SellItemType="Specific" />
+    </If>
+    <If Condition="Engineering.Level &gt;= 250" IgnoreCanRun="True" ChildrenCount="1">
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="10560,10560,10505,3860,7912,10559,3858,10562,10561" Count="50" SellItemType="Specific" />
+    </If>
+    <If Condition="Engineering.Level &gt;= 300" IgnoreCanRun="True" ChildrenCount="1">
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="12359,10620,12365,15992,14047,15994,16000" Count="50" SellItemType="Specific" />
+    </If>
+    <If Condition="Engineering.Level &gt;= 350" IgnoreCanRun="True" ChildrenCount="1">
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="23426,23449,23427,23445,23447,23424,23425,23446,23783,23782,22573,22452,21884,22574,23737,23736,23781" Count="50" SellItemType="Specific" />
+    </If>
+    <If Condition="Engineering.Level &gt;= 425" IgnoreCanRun="True" ChildrenCount="1">
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="41119,36909,36916,36912,36913,37702,36860,37705,35622,37703,35627,36910,41163,39681,39690,39682,40536,39683,42546,37700,35623,40865,44739,37701" Count="50" SellItemType="Specific" />
+    </If>
+    <If Condition="(InbagCount (2838) + InbagCount (3945)) &gt;= 80 &amp;&amp; Engineering.Level &lt; 175" IgnoreCanRun="False" ChildrenCount="7">
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="2838" Count="1" SellItemType="Specific" />
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="2838" Count="1" SellItemType="Specific" />
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="2838" Count="1" SellItemType="Specific" />
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="2838" Count="1" SellItemType="Specific" />
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="2838" Count="1" SellItemType="Specific" />
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="2838" Count="1" SellItemType="Specific" />
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="2838" Count="1" SellItemType="Specific" />
+    </If>
+    <If Condition="(InbagCount (7912) + InbagCount (12585)) &gt;= 140 &amp;&amp; Engineering.Level &gt;= 250" IgnoreCanRun="False" ChildrenCount="8">
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="7912" Count="1" SellItemType="Specific" />
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="7912" Count="1" SellItemType="Specific" />
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="7912" Count="1" SellItemType="Specific" />
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="7912" Count="1" SellItemType="Specific" />
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="7912" Count="1" SellItemType="Specific" />
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="7912" Count="1" SellItemType="Specific" />
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="7912" Count="1" SellItemType="Specific" />
+      <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="7912" Count="1" SellItemType="Specific" />
+    </If>
+    <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="0" Count="0" SellItemType="Greens" />
+    <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="4361,9262,2508,6712,4365,4357" Count="50" SellItemType="Specific" />
+  </SubRoutine>
+  <SubRoutine SubRoutineName="Outlands to home" ChildrenCount="2">
+    <If Condition="(bool)Settings[&quot;HS to SW&quot;]" IgnoreCanRun="True" ChildrenCount="4">
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Using HS.&quot;); " />
+      <CustomAction Code="Lua.DoString(&quot;UseItemByName(6948)&quot;);" />
+      <If Condition="Me.IsAlliance" IgnoreCanRun="True" ChildrenCount="1">
+        <WaitAction Condition="Me.MapId == 0" Timeout="20000" />
+      </If>
+      <If Condition="Me.IsHorde" IgnoreCanRun="True" ChildrenCount="1">
+        <WaitAction Condition="Me.MapId == 1" Timeout="20000" />
+      </If>
+    </If>
+    <If Condition="Me.MapId == 530" IgnoreCanRun="True" ChildrenCount="3">
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;HS is disabled or failed. Flying back to EK.&quot;); " />
+      <If Condition="Me.IsAlliance" IgnoreCanRun="True" ChildrenCount="3">
+        <FlyToAction Dismount="False" X="-337.0845" Y="967.6913" Z="54.28448" />
+        <InteractionAction Entry="195139" InteractDelay="0" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+        <WaitAction Condition="Me.MapId == 0" Timeout="25000" />
+      </If>
+      <If Condition="Me.IsHorde" IgnoreCanRun="True" ChildrenCount="3">
+        <FlyToAction Dismount="False" X="-162.6743" Y="969.2266" Z="54.27982" />
+        <InteractionAction Entry="195140" InteractDelay="0" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+        <WaitAction Condition="Me.MapId == 1" Timeout="25000" />
+      </If>
+    </If>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="SW to Outlands" ChildrenCount="7">
+    <If Condition="InbagCount (16000) &gt;= 1" IgnoreCanRun="True" ChildrenCount="1">
+      <CallSubRoutine SubRoutineName="Selling" />
+    </If>
+    <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Flying to Outlands.&quot;); " />
+    <If Condition="Me.IsAlliance" IgnoreCanRun="True" ChildrenCount="2">
+      <FlyToAction Dismount="False" X="-8984.83" Y="863.0924" Z="124.4113" />
+      <InteractionAction Entry="195141" InteractDelay="2000" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+    </If>
+    <If Condition="Me.IsHorde" IgnoreCanRun="True" ChildrenCount="3">
+      <FlyToAction Dismount="True" X="1892.012" Y="-4477.573" Z="23.29592" />
+      <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="1772.543" Y="-4326.88" Z="-8.17215" />
+      <InteractionAction Entry="195142" InteractDelay="2000" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+    </If>
+    <FlyToAction Dismount="False" X="-11895.9" Y="-3206.984" Z="-6.04731" />
+    <CustomAction Code="CTM(-11930.31, -3209.613, -1.836873);" />
+    <WaitAction Condition="Me.MapId == 530" Timeout="25000" />
+  </SubRoutine>
+  <SubRoutine SubRoutineName="Northrend to home" ChildrenCount="2">
+    <If Condition="(bool)Settings[&quot;HS to SW&quot;]" IgnoreCanRun="True" ChildrenCount="3">
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Using HS.&quot;); " />
+      <CustomAction Code="Lua.DoString(&quot;UseItemByName(6948)&quot;);" />
+      <WaitAction Condition="Me.MapId == 0" Timeout="20000" />
+    </If>
+    <If Condition="Me.MapId == 571" IgnoreCanRun="True" ChildrenCount="7">
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Flying to Valiance Keep docks for a boat to SW.&quot;); " />
+      <FlyToAction Dismount="True" X="2232.913" Y="5136.488" Z="5.346051" />
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Waiting for the boat.&quot;); " />
+      <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 190536 ) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 190536 ).Location.Distance(new WoWPoint(2218.391, 5119.589, -0.03939917)) &lt; 3" Timeout="6000000" />
+      <CustomAction Code="CTM(2224.172, 5117.85, 9.493399);" />
+      <WaitAction Condition="Me.MapId == 0" Timeout="650000" />
+      <FlyToAction Dismount="True" X="-8359.511" Y="640.7745" Z="95.25739" />
+    </If>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="SW to Northrend" ChildrenCount="7">
+    <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Flying to SW docks for a boat to Northrend.&quot;); " />
+    <FlyToAction Dismount="True" X="-8290.91" Y="1403.191" Z="4.742715" />
+    <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Waiting for the boat.&quot;); " />
+    <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 190536 ) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 190536 ).Location.Distance(new WoWPoint(-8288.816, 1424.703, -0.01198259)) &lt; 3" Timeout="6000000" />
+    <CustomAction Code="CTM(-8294.051, 1424.353, 9.505318);" />
+    <WaitAction Condition="Me.MapId == 571" Timeout="650000" />
+    <FlyToAction Dismount="True" X="2232.446" Y="5130.741" Z="8.904734" />
+  </SubRoutine>
+  <SubRoutine SubRoutineName="SW to Hyjal" ChildrenCount="4">
+    <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Flying to Hyjal Portal.&quot;); " />
+    <FlyToAction Dismount="True" X="-8210.015" Y="409.0066" Z="117.4663" />
+    <If Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 207692 ) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 207692 ).Location.Distance(new WoWPoint(-8210.015, 409.0066, 117.4663)) &lt; 20" IgnoreCanRun="True" ChildrenCount="2">
+      <InteractionAction Entry="207692" InteractDelay="0" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+      <WaitAction Condition="Me.MapId == 1" Timeout="5000" />
+    </If>
+    <If Condition="Me.MapId == 0" IgnoreCanRun="True" ChildrenCount="7">
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I didn't have the portal (or failed to use it), so I'm gonna take the boat.&quot;); " />
+      <FlyToAction Dismount="True" X="-3860.002" Y="-654.7922" Z="5.301855" />
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Waiting for the boat.&quot;); " />
+      <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 176231 ) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 176231 ).Location.Distance(new WoWPoint(-3872.35, -639.9439, 0.01283023)) &lt; 3" Timeout="6000000" />
+      <CustomAction Code="CTM(-3865.994, -645.5936, 6.105168);" />
+      <WaitAction Condition="Me.MapId == 1" Timeout="650000" />
+      <If Condition="Me.ZoneId != 616" IgnoreCanRun="True" ChildrenCount="1">
+        <FlyToAction Dismount="True" X="3975.913" Y="-4019.797" Z="976.7499" />
+      </If>
+    </If>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="EK to SW" ChildrenCount="3">
+    <If Condition="(bool)Settings[&quot;HS to SW&quot;]" IgnoreCanRun="True" ChildrenCount="3">
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Using HS.&quot;); " />
+      <CustomAction Code="Lua.DoString(&quot;UseItemByName(6948)&quot;);" />
+      <WaitAction Condition="Me.MapId == 0" Timeout="20000" />
+    </If>
+    <If Condition="Me.ZoneId == 616" IgnoreCanRun="True" ChildrenCount="2">
+      <FlyToAction Dismount="True" X="5543.583" Y="-3591.35" Z="1568.02" />
+      <If Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 209080 ) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 209080 ).Location.Distance(new WoWPoint(5543.583, -3591.35, 1568.02)) &lt; 20" IgnoreCanRun="True" ChildrenCount="2">
+        <InteractionAction Entry="209080" InteractDelay="0" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+        <WaitAction Condition="Me.MapId == 0" Timeout="5000" />
+      </If>
+    </If>
+    <If Condition="Me.MapId == 1" IgnoreCanRun="True" ChildrenCount="6">
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Either HS is disabled or it failed. Anyways, I'm flying to the boat.&quot;); " />
+      <FlyToAction Dismount="True" X="-4004.245" Y="-4728.441" Z="4.5875" />
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Waiting for the boat.&quot;); " />
+      <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 176231 ) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 176231 ).Location.Distance(new WoWPoint(-4016.39, -4740.588, -0.04994059)) &lt; 3" Timeout="6000000" />
+      <CustomAction Code="CTM(-4007.859, -4734.534, 6.039006);" />
+      <WaitAction Condition="Me.MapId == 0" Timeout="650000" />
+    </If>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="SW to Uldum" ChildrenCount="4">
+    <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Flying to Uldum Portal.&quot;); " />
+    <FlyToAction Dismount="True" X="-8231.306" Y="417.2011" Z="117.4756" />
+    <If Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 207695 ) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 207695 ).Location.Distance(new WoWPoint(-8231.306, 417.2011, 117.4756)) &lt; 20" IgnoreCanRun="True" ChildrenCount="2">
+      <InteractionAction Entry="207695" InteractDelay="0" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+      <WaitAction Condition="Me.MapId == 1" Timeout="5000" />
+    </If>
+    <If Condition="Me.MapId == 0" IgnoreCanRun="True" ChildrenCount="7">
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I didn't have the portal (or failed to use it), so I'm gonna take the boat.&quot;); " />
+      <FlyToAction Dismount="True" X="-3860.002" Y="-654.7922" Z="5.301855" />
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Waiting for the boat.&quot;); " />
+      <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 176231 ) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 176231 ).Location.Distance(new WoWPoint(-3872.35, -639.9439, 0.01283023)) &lt; 3" Timeout="6000000" />
+      <CustomAction Code="CTM(-3865.994, -645.5936, 6.105168);" />
+      <WaitAction Condition="Me.MapId == 1" Timeout="650000" />
+      <If Condition="Me.ZoneId != 5034" IgnoreCanRun="True" ChildrenCount="1">
+        <FlyToAction Dismount="False" X="-8751.999" Y="-1748.68" Z="152.756" />
+      </If>
+    </If>
+  </SubRoutine>
+  <If Condition="(int)var2 == 1" IgnoreCanRun="True" ChildrenCount="2">
+    <CallSubRoutine SubRoutineName="Selling" />
+    <CustomAction Code="var2 = 0;" />
+  </If>
+  <If Condition="InbagCount (10498) == 0 &amp;&amp; InbagCount (40772) == 0 &amp;&amp; (InbagCount (2772) + InbagCount (3575) + InbagCount (3859)) &gt; 4 &amp;&amp; Engineering.Level &gt;= 175 &amp;&amp; Mining.Level &gt;= 125 &amp;&amp; DistanceTo(-8426.352, 620.8148, 95.58047) &lt; 50" IgnoreCanRun="True" ChildrenCount="5">
+    <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Am gonna make a Gyromatic Micro-adjuster as I'll need it later.&quot;); " />
+    <If Condition="!HasRecipe(12590)" IgnoreCanRun="True" ChildrenCount="1">
+      <CallSubRoutine SubRoutineName="Train Engineering" />
+    </If>
+    <If Condition="InbagCount (3859) &lt; 4" IgnoreCanRun="True" ChildrenCount="4">
+      <If Condition="!HasRecipe(3569)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Train Mining" />
+      </If>
+      <BuyItemAction NpcEntry="5512" X="-8432.998" Y="623.7123" Z="95.394" ItemID="3857" Count="4" BuyItemType="SpecificItem" />
+      <CallSubRoutine SubRoutineName="Create Stuff" />
+      <CastSpellAction Entry="3569" Repeat="4" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </If>
+    <CallSubRoutine SubRoutineName="Create Stuff" />
+    <CastSpellAction Entry="12590" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+  </If>
+  <If Condition="InbagCount (2901) == 0 &amp;&amp; InbagCount (40772) == 0" IgnoreCanRun="True" ChildrenCount="3">
+    <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need a mining pick.&quot;); " />
+    <FlyToAction Dismount="True" X="-8420.825" Y="671.7414" Z="94.90906" />
+    <BuyItemAction NpcEntry="5514" X="-8430.177" Y="695.1375" Z="96.31836" ItemID="2901" Count="1" BuyItemType="SpecificItem" />
+  </If>
+  <If Condition="InbagCount (5956) == 0 &amp;&amp; InbagCount (40772) == 0" IgnoreCanRun="True" ChildrenCount="3">
+    <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need a blacksmith hammer.&quot;); " />
+    <FlyToAction Dismount="False" X="-8369.603" Y="629.4828" Z="95.10226" />
+    <BuyItemAction NpcEntry="5519" X="-8366.22" Y="627.099" Z="95.19577" ItemID="5956" Count="1" BuyItemType="SpecificItem" />
+  </If>
+  <While Condition="Mining.Level == Mining.MaxLevel &amp;&amp; HasRecipe(2657) &amp;&amp; Mining.MaxLevel != 525" IgnoreCanRun="True" ChildrenCount="1">
+    <CallSubRoutine SubRoutineName="Train Mining" />
+  </While>
+  <While Condition="Engineering.Level == Engineering.MaxLevel &amp;&amp; HasRecipe(3918)" IgnoreCanRun="True" ChildrenCount="1">
+    <CallSubRoutine SubRoutineName="Train Engineering" />
+  </While>
+  <If Condition="Me.FreeNormalBagSlots &lt; 2" IgnoreCanRun="True" ChildrenCount="1">
+    <CallSubRoutine SubRoutineName="Selling" />
+  </If>
+  <While Condition="(((InbagCount (2770) + InbagCount (2840) + InbagCount (4359) + (InbagCount (4361) * 2)) &gt; 110 &amp;&amp; (InbagCount (2835) + InbagCount (4357)) &gt; 40) &amp;&amp; Engineering.Level &gt;= 1 &amp;&amp; Engineering.Level &lt; 75) || (((InbagCount (2836) + InbagCount (4364)) &gt; 40 &amp;&amp; (InbagCount (2771) + InbagCount (3576) + (InbagCount (2841) * 2) + (InbagCount (6712) * 2)) &gt;= 55 &amp;&amp; (InbagCount (2840) + InbagCount (2770) + (InbagCount (2841) * 2) + (InbagCount (6712) * 2) + InbagCount (4359)) &gt; 115) &amp;&amp; Engineering.Level &gt;= 75 &amp;&amp; Engineering.Level &lt; 125) || (((InbagCount (2838) + InbagCount (4377) + (InbagCount (4384) * 2)) &gt;= 40) &amp;&amp; Engineering.Level &gt;= 125 &amp;&amp; Engineering.Level &lt; 175) || (((InbagCount (7912) + (InbagCount (10505) * 2) + (InbagCount (10560) * 2) + InbagCount (10562)) &gt;= 140) &amp;&amp; ((InbagCount (3858) + InbagCount(3860) + (InbagCount(10559) * 3) + InbagCount(10560) + (InbagCount(10561) * 3) + ((InbagCount(10562) * 7)) / 4) &gt;= 150) &amp;&amp; Engineering.Level &gt;= 175 &amp;&amp; Engineering.Level &lt; 250) || ((InbagCount (12365) + (InbagCount (15992) * 2) &gt;= 60) &amp;&amp; (InbagCount (12359) + InbagCount (10620) + (InbagCount (15994) * 3) + (InbagCount (16000) * 6) &gt;= 190) &amp;&amp; Engineering.Level &gt;= 250 &amp;&amp; Engineering.Level &lt; 300 &amp;&amp; Mining.Level &gt;= 275) || ((InbagCount (23424) + (InbagCount (34060) * 52) + (InbagCount (23445) * 2) + (InbagCount (23783) * 2) + (InbagCount (23782) * 6) + ((InbagCount (23736) * 10) / 4) + ((InbagCount (23737) * 4) / 3)) &gt; 620 &amp;&amp; (InbagCount (23425) + (InbagCount (23446) * 2) + ((InbagCount (23737) * 8) / 3)) &gt; 600 &amp;&amp; (InbagCount (22573) + (InbagCount (22452) * 10)) &gt; 30 &amp;&amp; (InbagCount (22574) + (InbagCount (21884) * 10)) &gt; 15 &amp;&amp; Engineering.Level &gt;= 300 &amp;&amp; Engineering.Level &lt; 350) || (((InbagCount (36909) + InbagCount (36916) + (InbagCount (39681) * 2) + ((InbagCount (39690) * 3) / 2) + (InbagCount (39682) * 4) + (((InbagCount (40536) * 3 * 3) / 2) / 5) + (InbagCount (39683) * 8) + (InbagCount (44739) * 8) + ((InbagCount (44739) * 2) * 2) + (InbagCount (44951) * 1.5) + (InbagCount (40865) * 16) + (InbagCount (40865) * 8) + (InbagCount (40865) * 16)) &gt; 400 &amp;&amp; ((InbagCount (37705) + (InbagCount (35622) * 10) + (InbagCount (39690) * 1.5) + ((InbagCount (40536) * 1.5) / 5) + InbagCount (39683) + InbagCount (44739) + (InbagCount (44951) * 0.5) + (InbagCount (42546) / 4) + (InbagCount (40865) * 2)) &gt; 50 || InbagCount (39681) &gt; 0) &amp;&amp; (InbagCount (37701) + (InbagCount (35624) * 10) + InbagCount (39682) + (InbagCount (40865) * 2)) &gt; 20 &amp;&amp; (InbagCount (36912) + (InbagCount (36913) * 2) + (InbagCount (44951) * 10) + ((InbagCount (42546) * 24) / 8)) &gt; 280) &amp;&amp; Engineering.Level &gt;= 350 &amp;&amp; Engineering.Level &lt; 425) || ((((InbagCount (54849) * 2) + (InbagCount (60224) * 4) + ((InbagCount (67494) * 8) * 20) + (InbagCount (59596) * 50) + (InbagCount (59596) * 50) + (InbagCount (60223) * 52) + (InbagCount (59598) * 8) + (InbagCount (68049) * 2)) &gt; 300 &amp;&amp; (InbagCount (52185) + (InbagCount (52186) * 2) + (InbagCount (60217) * 30) + (InbagCount (53039) * 20) + ((InbagCount (59598) * 20) * 5) + (InbagCount (68049) * 8) + (InbagCount (59594) * 40)) &gt; 600) &amp;&amp; Engineering.Level &gt;= 425 &amp;&amp; Engineering.Level &lt; 525)" IgnoreCanRun="True" ChildrenCount="2">
+    <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Crafting Time!.&quot;); " />
+    <If Condition="Me.FreeNormalBagSlots &gt;= 2" IgnoreCanRun="False" ChildrenCount="16">
+      <Comment Text="1-75" />
+      <If Condition="Engineering.Level &gt;= 1 &amp;&amp; Engineering.Level &lt; 75" IgnoreCanRun="True" ChildrenCount="4">
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+        <If Condition="Engineering.Level &gt;= 1 &amp;&amp; Engineering.Level &lt; 30" IgnoreCanRun="True" ChildrenCount="3">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Blasting Powder&quot;); " />
+          <While Condition="Engineering.Level &lt; 30" IgnoreCanRun="False" ChildrenCount="1">
+            <CastSpellAction Entry="3918" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </While>
+          <CallSubRoutine SubRoutineName="Train Engineering" />
+        </If>
+        <If Condition="Engineering.Level &gt;= 30 &amp;&amp; (InbagCount (4359) + (InbagCount (6712) * 2)) &lt; 60" IgnoreCanRun="False" ChildrenCount="3">
+          <CallSubRoutine SubRoutineName="Create Stuff" />
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Creating 60 Copper Bolts.&quot;); " />
+          <CastSpellAction Entry="3922" Repeat="60" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="Engineering.Level &gt; 55 &amp;&amp; Engineering.Level &lt; 75" IgnoreCanRun="False" ChildrenCount="5">
+          <If Condition="!HasRecipe(3924)" IgnoreCanRun="True" ChildrenCount="1">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+          </If>
+          <While Condition="InbagCount (2880) &lt; (75 - Engineering.Level)" IgnoreCanRun="False" ChildrenCount="3">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need Weak Flux.&quot;); " />
+            <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-8431.899" Y="623.3638" Z="95.43706" />
+            <BuyItemAction NpcEntry="5512" X="0" Y="0" Z="0" ItemID="2880" Count="20" BuyItemType="SpecificItem" />
+          </While>
+          <CallSubRoutine SubRoutineName="Create Stuff" />
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Creating Copper Tubes until my skill is 75.&quot;); " />
+          <While Condition="Engineering.Level &lt; 75" IgnoreCanRun="False" ChildrenCount="1">
+            <CastSpellAction Entry="3924" Repeat="20" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </While>
+        </If>
+      </If>
+      <Comment Text="75-125" />
+      <If Condition="Engineering.Level &gt;= 75 &amp;&amp; Engineering.Level &lt; 125" IgnoreCanRun="True" ChildrenCount="5">
+        <If Condition="InbagCount (40772) &lt; 1 &amp;&amp; InbagCount (6219) &lt; 1" IgnoreCanRun="True" ChildrenCount="3">
+          <If Condition="!HasRecipe(7430)" IgnoreCanRun="True" ChildrenCount="1">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+          </If>
+          <CallSubRoutine SubRoutineName="Create Stuff" />
+          <CastSpellAction Entry="7430" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+        <If Condition="((InbagCount (4365) * 1.5) + InbagCount (4364)) &lt; 40" IgnoreCanRun="True" ChildrenCount="3">
+          <If Condition="!HasRecipe(3929)" IgnoreCanRun="True" ChildrenCount="1">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Creating 40x Coarse Blasting Powder.&quot;); " />
+          <CastSpellAction Entry="3929" Repeat="40" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="Engineering.Level &gt;= 95 &amp;&amp; Engineering.Level &lt; 100" IgnoreCanRun="True" ChildrenCount="3">
+          <If Condition="InbagCount (2589) &lt; ((100 - Engineering.Level) * 1.2) &amp;&amp; (bool)Settings[&quot;Mats in Bank&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Linen Cloth from bank.&quot;); " />
+            <GetItemfromBankAction Entry="2589" Amount="1" Bank="Personal" GetItemfromBankType="SpecificItem" NpcEntry="0" AutoFindBank="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+          </If>
+          <If Condition="InbagCount (2589) &lt; ((100 - Engineering.Level) * 1.2)" IgnoreCanRun="False" ChildrenCount="4">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Going to AH to buy 10x Linen Cloth.&quot;); " />
+            <BuyItemFromAhAction ItemID="2589" MaxBuyout="20g0s0c" Amount="10" ItemListType="Item" AutoFindAh="False" X="-8368.86" Y="678.417" Z="98.65343" BidOnItem="False" />
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking Linen Cloth up from mail.&quot;); " />
+            <GetMailAction ItemID="2589" CheckNewMail="True" GetMailType="Specific" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+          </If>
+          <While Condition="Engineering.Level &lt; 100" IgnoreCanRun="False" ChildrenCount="3">
+            <If Condition="!HasRecipe(3931)" IgnoreCanRun="True" ChildrenCount="1">
+              <CallSubRoutine SubRoutineName="Train Engineering" />
+            </If>
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Crafting Coarse Dynamite until I'm skill 100.&quot;); " />
+            <CastSpellAction Entry="3931" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </While>
+        </If>
+        <If Condition="Engineering.Level &gt;= 100 &amp;&amp; Engineering.Level &lt; 125" IgnoreCanRun="False" ChildrenCount="4">
+          <If Condition="(InbagCount (2841) + (InbagCount (4375) * 2) + (InbagCount (4382) * 2) + (InbagCount (4384) * 4)) &lt; 110" IgnoreCanRun="False" ChildrenCount="3">
+            <If Condition="!HasRecipe(2659)" IgnoreCanRun="True" ChildrenCount="1">
+              <CallSubRoutine SubRoutineName="Train Mining" />
+            </If>
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+            <CastSpellAction Entry="2659" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <While Condition="InbagCount (2880) &lt; 30" IgnoreCanRun="False" ChildrenCount="3">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;I need Weak Flux.&quot;); " />
+            <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-8431.899" Y="623.3638" Z="95.43706" />
+            <BuyItemAction NpcEntry="5512" X="0" Y="0" Z="0" ItemID="2880" Count="30" BuyItemType="SpecificItem" />
+          </While>
+          <If Condition="!HasRecipe(8334)" IgnoreCanRun="True" ChildrenCount="2">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+          </If>
+          <While Condition="Engineering.Level &lt; 125" IgnoreCanRun="False" ChildrenCount="2">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Practice Locks until skill 125.&quot;); " />
+            <CastSpellAction Entry="8334" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </While>
+        </If>
+      </If>
+      <Comment Text="125-175" />
+      <If Condition="Engineering.Level &gt;= 125 &amp;&amp; Engineering.Level &lt; 175" IgnoreCanRun="True" ChildrenCount="12">
+        <If Condition="!HasRecipe(3945)" IgnoreCanRun="True" ChildrenCount="1">
+          <CallSubRoutine SubRoutineName="Train Engineering" />
+        </If>
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+        <If Condition="InbagCount (4377) + (InbagCount (4384) * 2) &lt; 40" IgnoreCanRun="True" ChildrenCount="3">
+          <If Condition="!HasRecipe(3945)" IgnoreCanRun="True" ChildrenCount="1">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making 40 Heavy Blasting Powder.&quot;); " />
+          <CastSpellAction Entry="3945" Repeat="40" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="(InbagCount (2841) + (InbagCount (4375) * 2) + (InbagCount (4382) * 2) + (InbagCount (4384) * 4)) &lt; 110" IgnoreCanRun="False" ChildrenCount="1">
+          <CastSpellAction Entry="2659" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="(InbagCount (2592) + InbagCount (4375) + InbagCount (4382) + (InbagCount(4384) * 4)) &lt; 80 &amp;&amp; (bool)Settings[&quot;Mats in Bank&quot;]" IgnoreCanRun="False" ChildrenCount="2">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Wool Cloth from the bank.&quot;); " />
+          <GetItemfromBankAction Entry="2592" Amount="80" Bank="Personal" GetItemfromBankType="SpecificItem" NpcEntry="0" AutoFindBank="True" X="0" Y="0" Z="0" MinFreeBagSlots="1" />
+        </If>
+        <If Condition="(InbagCount (2592) + InbagCount (4375) + InbagCount (4382) + (InbagCount(4384) * 4)) &lt; 80" IgnoreCanRun="False" ChildrenCount="4">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Buying Wool Cloth from AH.&quot;); " />
+          <BuyItemFromAhAction ItemID="2592" MaxBuyout="5g0s0c" Amount="80" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Wool Cloth from mailbox.&quot;); " />
+          <GetMailAction ItemID="2592" CheckNewMail="True" GetMailType="Specific" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+        </If>
+        <If Condition="(InbagCount (4375) &lt; 20 || Engineering.Level &lt; 150) &amp;&amp; Engineering.Level &lt; 175" IgnoreCanRun="False" ChildrenCount="4">
+          <If Condition="!HasRecipe(3942)" IgnoreCanRun="True" ChildrenCount="1">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+          </If>
+          <CallSubRoutine SubRoutineName="Create Stuff" />
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making 20 Whirring Bronze Gizmo.&quot;); " />
+          <CastSpellAction Entry="3942" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="!HasRecipe(3953) &amp;&amp; Engineering.Level &gt;= 150" IgnoreCanRun="True" ChildrenCount="1">
+          <CallSubRoutine SubRoutineName="Train Engineering" />
+        </If>
+        <If Condition="((InbagCount (2319) + InbagCount (4382) + InbagCount (4383)) &lt; 20) &amp;&amp; Engineering.Level &lt; 175 &amp;&amp; (bool)Settings[&quot;Mats in Bank&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Medium Leather from the bank.&quot;); " />
+          <GetItemfromBankAction Entry="2319" Amount="20" Bank="Personal" GetItemfromBankType="SpecificItem" NpcEntry="0" AutoFindBank="True" X="0" Y="0" Z="0" MinFreeBagSlots="1" />
+        </If>
+        <If Condition="((InbagCount (2319) + InbagCount (4382) + InbagCount (4383)) &lt; 20) &amp;&amp; Engineering.Level &lt; 175" IgnoreCanRun="True" ChildrenCount="5">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Buying Medium Leather from AH.&quot;); " />
+          <BuyItemFromAhAction ItemID="2319" MaxBuyout="5g0s0c" Amount="20" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Medium Leather from mailbox.&quot;); " />
+          <While Condition="InbagCount (2319) &lt; 20" IgnoreCanRun="True" ChildrenCount="2">
+            <WaitAction Condition="false" Timeout="5000" />
+            <GetMailAction ItemID="2319" CheckNewMail="True" GetMailType="Specific" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+          </While>
+          <CallSubRoutine SubRoutineName="Create Stuff" />
+        </If>
+        <If Condition="InbagCount (4382) &lt; 20 &amp;&amp; InbagCount (4384) == 0 &amp;&amp; Engineering.Level &lt; 175" IgnoreCanRun="False" ChildrenCount="2">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making 20 Bronze Framework.&quot;); " />
+          <CastSpellAction Entry="3953" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="Engineering.Level &lt; 175" IgnoreCanRun="False" ChildrenCount="3">
+          <If Condition="!HasRecipe(3955)" IgnoreCanRun="True" ChildrenCount="2">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Explosive Sheep until I'm' skill 175.&quot;); " />
+          <CastSpellAction Entry="3955" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+      </If>
+      <Comment Text="175-250" />
+      <If Condition="Engineering.Level &gt;= 175 &amp;&amp; Engineering.Level &lt; 250" IgnoreCanRun="True" ChildrenCount="11">
+        <If Condition="!HasRecipe(12585)" IgnoreCanRun="True" ChildrenCount="1">
+          <CallSubRoutine SubRoutineName="Train Engineering" />
+        </If>
+        <If Condition="!HasRecipe(10097)" IgnoreCanRun="True" ChildrenCount="1">
+          <CallSubRoutine SubRoutineName="Train Mining" />
+        </If>
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+        <If Condition="InbagCount (10505) &lt; 60" IgnoreCanRun="True" ChildrenCount="1">
+          <If Condition="Engineering.Level &gt;= 175 &amp;&amp; Engineering.Level &lt;= 195" IgnoreCanRun="True" ChildrenCount="3">
+            <If Condition="!HasRecipe(12585)" IgnoreCanRun="True" ChildrenCount="1">
+              <CallSubRoutine SubRoutineName="Train Engineering" />
+            </If>
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making 60 Solid Blasting Powder.&quot;); " />
+            <CastSpellAction Entry="12585" Repeat="60" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+        </If>
+        <If Condition="Engineering.Level &gt;= 195 &amp;&amp; !HasRecipe(12589)" IgnoreCanRun="True" ChildrenCount="1">
+          <CallSubRoutine SubRoutineName="Train Engineering" />
+        </If>
+        <If Condition="Engineering.Level &gt;= 195 &amp;&amp; Engineering.Level &lt; 200 &amp;&amp; HasRecipe(12589)" IgnoreCanRun="False" ChildrenCount="3">
+          <CallSubRoutine SubRoutineName="Create Stuff" />
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Creating Mithril Tubes until skill 200.&quot;); " />
+          <CastSpellAction Entry="12589" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="Engineering.Level &gt;= 200 &amp;&amp; !HasRecipe(12591)" IgnoreCanRun="True" ChildrenCount="1">
+          <CallSubRoutine SubRoutineName="Train Engineering" />
+        </If>
+        <If Condition="(((InbagCount (10560) + (InbagCount (10562) / 4)) &lt; 20) &amp;&amp; Engineering.Level &lt; 250) || (Engineering.Level &gt;= 200 &amp;&amp; Engineering.Level &lt; 215)" IgnoreCanRun="True" ChildrenCount="4">
+          <If Condition="((InbagCount (4338) + InbagCount (10560) + (InbagCount (10562) / 4)) &lt; 20) &amp;&amp; Engineering.Level &lt; 250 &amp;&amp; (bool)Settings[&quot;Mats in Bank&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Mageweave Cloth from the bank.&quot;); " />
+            <GetItemfromBankAction Entry="4338" Amount="20" Bank="Personal" GetItemfromBankType="SpecificItem" NpcEntry="0" AutoFindBank="True" X="0" Y="0" Z="0" MinFreeBagSlots="1" />
+          </If>
+          <If Condition="((InbagCount (4338) + InbagCount (10560) + (InbagCount (10562) / 4)) &lt; 20) &amp;&amp; Engineering.Level &lt; 250" IgnoreCanRun="True" ChildrenCount="4">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Buying Mageweave Cloth from AH.&quot;); " />
+            <BuyItemFromAhAction ItemID="4338" MaxBuyout="5g0s0c" Amount="20" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Mageweave Cloth from mailbox.&quot;); " />
+            <While Condition="InbagCount (4338) &lt; 20" IgnoreCanRun="True" ChildrenCount="2">
+              <GetMailAction ItemID="4338" CheckNewMail="True" GetMailType="Specific" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+              <WaitAction Condition="false" Timeout="5000" />
+            </While>
+          </If>
+          <CallSubRoutine SubRoutineName="Create Stuff" />
+          <If Condition="((InbagCount (4338) + InbagCount (10560) + (InbagCount (10562) / 4)) &gt;= 20) &amp;&amp; Engineering.Level &lt; 250" IgnoreCanRun="False" ChildrenCount="3">
+            <If Condition="!HasRecipe(12591)" IgnoreCanRun="True" ChildrenCount="2">
+              <CallSubRoutine SubRoutineName="Train Engineering" />
+              <CallSubRoutine SubRoutineName="Create Stuff" />
+            </If>
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Creating 20 x Unstable Trigger.&quot;); " />
+            <CastSpellAction Entry="12591" Repeat="20" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+        </If>
+        <If Condition="Engineering.Level &gt;= 215 &amp;&amp; !HasRecipe(12599)" IgnoreCanRun="True" ChildrenCount="1">
+          <CallSubRoutine SubRoutineName="Train Engineering" />
+        </If>
+        <If Condition="Engineering.Level &gt;= 215 &amp;&amp; Engineering.Level &lt; 235" IgnoreCanRun="False" ChildrenCount="2">
+          <CallSubRoutine SubRoutineName="Create Stuff" />
+          <CastSpellAction Entry="12599" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="Engineering.Level &gt;= 235 &amp;&amp; Engineering.Level &lt; 250" IgnoreCanRun="True" ChildrenCount="4">
+          <If Condition="!HasRecipe(12619)" IgnoreCanRun="True" ChildrenCount="2">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Hi-Explosive Bombs.&quot;); " />
+          <CastSpellAction Entry="12619" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          <CallSubRoutine SubRoutineName="Selling" />
+        </If>
+      </If>
+      <Comment Text="250-300" />
+      <If Condition="Engineering.Level &gt;= 250 &amp;&amp; Engineering.Level &lt; 300" IgnoreCanRun="True" ChildrenCount="6">
+        <If Condition="(InbagCount (12365) + (InbagCount (15992) * 2) &gt;= 60) &amp;&amp; (InbagCount (12359) + InbagCount (10620) + (InbagCount (15994) * 3) + (InbagCount (16000) * 6) &gt;= 190) &amp;&amp; Engineering.Level &gt;= 250 &amp;&amp; Engineering.Level &lt; 300 &amp;&amp; Mining.Level &gt;= 300" IgnoreCanRun="True" ChildrenCount="0" />
+        <If Condition="!HasRecipe(16153)" IgnoreCanRun="True" ChildrenCount="1">
+          <CallSubRoutine SubRoutineName="Train Mining" />
+        </If>
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+        <If Condition="Engineering.Level &gt;= 250 &amp;&amp; Engineering.Level &lt; 260" IgnoreCanRun="False" ChildrenCount="3">
+          <If Condition="!HasRecipe(19788)" IgnoreCanRun="True" ChildrenCount="1">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Dense Blasting Powder until skill 260.&quot;); " />
+          <CastSpellAction Entry="19788" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="Engineering.Level &gt;= 260 &amp;&amp; Engineering.Level &lt; 286" IgnoreCanRun="False" ChildrenCount="6">
+          <If Condition="((InbagCount (14047) + InbagCount (15994)) &lt; 30) &amp;&amp; (bool)Settings[&quot;Mats in Bank&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Runecloth from the bank.&quot;); " />
+            <GetItemfromBankAction Entry="14047" Amount="30" Bank="Personal" GetItemfromBankType="SpecificItem" NpcEntry="0" AutoFindBank="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+          </If>
+          <If Condition="((InbagCount (14047) + InbagCount (15994)) &lt; 30)" IgnoreCanRun="True" ChildrenCount="4">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Buying Runecloth from AH.&quot;); " />
+            <BuyItemFromAhAction ItemID="14047" MaxBuyout="5g0s0c" Amount="30" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Runecloth from mailbox.&quot;); " />
+            <While Condition="InbagCount (14047) &lt; 30" IgnoreCanRun="True" ChildrenCount="2">
+              <GetMailAction ItemID="14047" CheckNewMail="True" GetMailType="Specific" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+              <WaitAction Condition="false" Timeout="5000" />
+            </While>
+          </If>
+          <If Condition="!HasRecipe(19791)" IgnoreCanRun="True" ChildrenCount="1">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+          </If>
+          <CallSubRoutine SubRoutineName="Create Stuff" />
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Creating Thorium Widgets until engineering skill 286.&quot;); " />
+          <CastSpellAction Entry="19791" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="Engineering.Level &gt;= 286 &amp;&amp; Engineering.Level &lt; 300" IgnoreCanRun="False" ChildrenCount="4">
+          <If Condition="!HasRecipe(19795)" IgnoreCanRun="True" ChildrenCount="1">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+          </If>
+          <CallSubRoutine SubRoutineName="Create Stuff" />
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Creating Thorium Tubes until engineering skill 300.&quot;); " />
+          <CastSpellAction Entry="19795" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+      </If>
+      <Comment Text="300-350" />
+      <If Condition="Engineering.Level &gt;= 300 &amp;&amp; Engineering.Level &lt; 350" IgnoreCanRun="True" ChildrenCount="9">
+        <If Condition="Me.MapId == 0" IgnoreCanRun="True" ChildrenCount="1">
+          <CallSubRoutine SubRoutineName="SW to Outlands" />
+        </If>
+        <If Condition="!HasRecipe(29359)" IgnoreCanRun="True" ChildrenCount="1">
+          <CallSubRoutine SubRoutineName="Train Mining" />
+        </If>
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+        <If Condition="(InbagCount (23783) + (InbagCount (23736) / 2) + (InbagCount (23737) * 2 / 3) + (InbagCount (34060) * 20)) &lt; 220" IgnoreCanRun="False" ChildrenCount="3">
+          <If Condition="!HasRecipe(30305)" IgnoreCanRun="True" ChildrenCount="2">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Handful of Fel Iron Botls until I have 220&quot;); " />
+          <CastSpellAction Entry="30305" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="(InbagCount (23782) + (InbagCount (23736) / 4) + (InbagCount (34060) * 2)) &lt; 27" IgnoreCanRun="False" ChildrenCount="3">
+          <If Condition="!HasRecipe(30304)" IgnoreCanRun="True" ChildrenCount="2">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Fel Iron Casings until I have 27&quot;); " />
+          <CastSpellAction Entry="30304" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="(InbagCount (23781) + (InbagCount (23736) / 4) + (InbagCount (23737) / 3) + (InbagCount (34060) * 20)) &lt; 100" IgnoreCanRun="True" ChildrenCount="6">
+          <If Condition="(InbagCount (22574) + (InbagCount (23781) / 4)) &lt; 25" IgnoreCanRun="False" ChildrenCount="3">
+            <If Condition="Me.FreeNormalBagSlots &lt; 5" IgnoreCanRun="True" ChildrenCount="2">
+              <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Need some bag space, so vendoring the ores/bars I don't need.&quot;); " />
+              <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="23426,23425,23424,23447" Count="10" SellItemType="Specific" />
+            </If>
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Sundering Primal Fires into Mote of Fire&quot;); " />
+            <CastSpellAction Entry="35751" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="(InbagCount (22573) + (InbagCount (23781) / 2)) &lt; 50" IgnoreCanRun="False" ChildrenCount="3">
+            <If Condition="Me.FreeNormalBagSlots &lt; 7" IgnoreCanRun="True" ChildrenCount="2">
+              <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Need some bag space, so vendoring the ores/bars I don't need.&quot;); " />
+              <SellItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="23426,23425,23424,23447" Count="10" SellItemType="Specific" />
+            </If>
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Shattering Primal Earths into Mote of Earth&quot;); " />
+            <CastSpellAction Entry="35750" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <WaitAction Condition="false" Timeout="2000" />
+          <If Condition="!HasRecipe(30303)" IgnoreCanRun="True" ChildrenCount="1">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making blasting powder for all the motes&quot;); " />
+          <CastSpellAction Entry="30303" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="InbagCount (34060) &lt; 1" IgnoreCanRun="True" ChildrenCount="6">
+          <If Condition="!HasRecipe(44155)" IgnoreCanRun="True" ChildrenCount="2">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Flying to Shattrath to get stuff for helicopter. The vendor in HH is located badly.&quot;); " />
+          <FlyToAction Dismount="True" X="-2086.694" Y="5306.954" Z="-37.32336" />
+          <BuyItemAction NpcEntry="19663" X="-2092.571" Y="5308.671" Z="-37.32317" ItemID="11291" Count="8" BuyItemType="SpecificItem" />
+          <CallSubRoutine SubRoutineName="Create Stuff" />
+          <CastSpellAction Entry="44155" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="Engineering.Level &gt;= 315 &amp;&amp; Engineering.Level &lt; 330" IgnoreCanRun="False" ChildrenCount="3">
+          <If Condition="!HasRecipe(30310)" IgnoreCanRun="True" ChildrenCount="2">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Fel Iron Bombs until I'm skill 330.&quot;); " />
+          <CastSpellAction Entry="30310" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="Engineering.Level &gt;= 330 &amp;&amp; Engineering.Level &lt; 350" IgnoreCanRun="True" ChildrenCount="3">
+          <If Condition="!HasRecipe(30311)" IgnoreCanRun="True" ChildrenCount="2">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Adamantite Grenades until I'm skill 350.&quot;); " />
+          <CastSpellAction Entry="30311" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+      </If>
+      <Comment Text="350-425" />
+      <If Condition="Engineering.Level &gt;= 350 &amp;&amp; Engineering.Level &lt; 425" IgnoreCanRun="True" ChildrenCount="10">
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+        <If Condition="(InbagCount (39681) + (InbagCount (44739) * 2) + (InbagCount (40865) * 8)) &lt; 50" IgnoreCanRun="False" ChildrenCount="3">
+          <If Condition="!HasRecipe(56349)" IgnoreCanRun="True" ChildrenCount="2">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Handful of Cobalt Bolts until I have at least 50&quot;); " />
+          <CastSpellAction Entry="56349" Repeat="40" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="(InbagCount (39690) + ((InbagCount (40536) * 3) / 5) + InbagCount (44951)) &lt; 40" IgnoreCanRun="True" ChildrenCount="3">
+          <If Condition="!HasRecipe(53281)" IgnoreCanRun="True" ChildrenCount="1">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Volatile Blasting Triggers until I have at least 40&quot;); " />
+          <While Condition="(InbagCount (39690) + ((InbagCount (40536) * 3) / 5) + InbagCount (44951)) &lt; 40" IgnoreCanRun="True" ChildrenCount="2">
+            <If Condition="InbagCount (37705) &lt; 1" IgnoreCanRun="True" ChildrenCount="4">
+              <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Eternals into Crystallized as I need them like this :)&quot;); " />
+              <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Eternal Water&quot;), 0);" />
+              <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Debug.&quot;); " />
+              <WaitAction Condition="false" Timeout="2000" />
+            </If>
+            <CastSpellAction Entry="53281" Repeat="40" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </While>
+        </If>
+        <If Condition="(InbagCount (39682) + (InbagCount (40865) * 2)) &lt; 10 &amp;&amp; Engineering.Level &gt;= 375" IgnoreCanRun="True" ChildrenCount="4">
+          <If Condition="!HasRecipe(56464)" IgnoreCanRun="True" ChildrenCount="2">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+          </If>
+          <If Condition="(InbagCount (37701) + InbagCount (40865) + InbagCount (39682)) &lt; 10" IgnoreCanRun="False" ChildrenCount="2">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Eternals into Crystallized as I need them like this :)&quot;); " />
+            <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Eternal Earth&quot;), 0);" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Overcharged Capacitors until I have at least 10&quot;); " />
+          <CastSpellAction Entry="56464" Repeat="10" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="Engineering.Level &lt; 390" IgnoreCanRun="True" ChildrenCount="4">
+          <If Condition="!HasRecipe(56463)" IgnoreCanRun="False" ChildrenCount="2">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+          </If>
+          <If Condition="InbagCount (33470) &lt; 8" IgnoreCanRun="True" ChildrenCount="5">
+            <If Condition="Me.MapId == 571" IgnoreCanRun="True" ChildrenCount="1">
+              <CallSubRoutine SubRoutineName="Northrend to home" />
+            </If>
+            <FlyToAction Dismount="True" X="-8359.511" Y="640.7745" Z="95.25739" />
+            <If Condition="((InbagCount (40536) / 5) + InbagCount (33470)) &lt; 8 &amp;&amp; (bool)Settings[&quot;Mats in Bank&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+              <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Frostweave Cloth from the bank.&quot;); " />
+              <GetItemfromBankAction Entry="33470" Amount="8" Bank="Personal" GetItemfromBankType="SpecificItem" NpcEntry="0" AutoFindBank="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+            </If>
+            <If Condition="((InbagCount (40536) / 5) + InbagCount (33470)) &lt; 8" IgnoreCanRun="True" ChildrenCount="5">
+              <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Buying Frostweave Cloth from AH.&quot;); " />
+              <BuyItemFromAhAction ItemID="33470" MaxBuyout="5g0s0c" Amount="8" ItemListType="Item" AutoFindAh="False" X="-8368.86" Y="678.417" Z="98.65343" BidOnItem="False" />
+              <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Frostweave Cloth from mailbox.&quot;); " />
+              <While Condition="InbagCount (33470) &lt; 8" IgnoreCanRun="True" ChildrenCount="2">
+                <GetMailAction ItemID="33470" CheckNewMail="True" GetMailType="Specific" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+                <WaitAction Condition="false" Timeout="5000" />
+              </While>
+              <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Explosive Decoys until I'm skill 490.&quot;); " />
+            </If>
+            <If Condition="Me.MapId == 0" IgnoreCanRun="True" ChildrenCount="1">
+              <CallSubRoutine SubRoutineName="SW to Northrend" />
+            </If>
+          </If>
+          <CallSubRoutine SubRoutineName="Create Stuff" />
+          <CastSpellAction Entry="56463" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="Engineering.Level &gt;= 390 &amp;&amp; (InbagCount (39683) + InbagCount (44739) + InbagCount (40865)) &lt; 15" IgnoreCanRun="False" ChildrenCount="4">
+          <If Condition="!HasRecipe(56471)" IgnoreCanRun="True" ChildrenCount="2">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+          </If>
+          <If Condition="(InbagCount (37705) + InbagCount (39683) + InbagCount (44739) + InbagCount (40865)) &lt; 15" IgnoreCanRun="False" ChildrenCount="4">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Eternals into Crystallized as I need them like this :)&quot;); " />
+            <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Eternal Water&quot;), 0);" />
+            <WaitAction Condition="false" Timeout="1000" />
+            <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Eternal Water&quot;), 0);" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Froststeel Tubes until I have at least 15&quot;); " />
+          <CastSpellAction Entry="56471" Repeat="15" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="Engineering.Level &gt;= 401 &amp;&amp; Engineering.Level &lt; 405" IgnoreCanRun="False" ChildrenCount="3">
+          <If Condition="!HasRecipe(61471)" IgnoreCanRun="True" ChildrenCount="2">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Diamond-cut Refractor Scopes until I am at least skill 405&quot;); " />
+          <CastSpellAction Entry="61471" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="Engineering.Level &gt;= 405 &amp;&amp; Engineering.Level &lt; 415" IgnoreCanRun="False" ChildrenCount="3">
+          <If Condition="!HasRecipe(56468)" IgnoreCanRun="True" ChildrenCount="2">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Box of Bombs until I am at least skill 415. DO NOT OPEN THESE!!&quot;); " />
+          <CastSpellAction Entry="56468" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="Engineering.Level &gt;= 415 &amp;&amp; Engineering.Level &lt; 420" IgnoreCanRun="False" ChildrenCount="3">
+          <If Condition="!HasRecipe(56477)" IgnoreCanRun="True" ChildrenCount="2">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Mana Injector Kits until I am at least skill 420&quot;); " />
+          <While Condition="Engineering.Level &lt; 420" IgnoreCanRun="True" ChildrenCount="2">
+            <If Condition="InbagCount (37705) &lt; 1" IgnoreCanRun="False" ChildrenCount="2">
+              <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Eternals into Crystallized as I need them like this :)&quot;); " />
+              <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Eternal Water&quot;), 0);" />
+            </If>
+            <CastSpellAction Entry="56477" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </While>
+        </If>
+        <If Condition="Engineering.Level &gt;= 420" IgnoreCanRun="True" ChildrenCount="3">
+          <If Condition="!HasRecipe(56467)" IgnoreCanRun="True" ChildrenCount="2">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Noise Machines until I am at least skill 425&quot;); " />
+          <CastSpellAction Entry="56467" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+      </If>
+      <Comment Text="425-525" />
+      <If Condition="Engineering.Level &gt;= 425 &amp;&amp; Engineering.Level &lt; 525" IgnoreCanRun="True" ChildrenCount="23">
+        <If Condition="Me.MapId == 571" IgnoreCanRun="True" ChildrenCount="1">
+          <CallSubRoutine SubRoutineName="Northrend to home" />
+        </If>
+        <If Condition="InbagCount (40865) &gt;= 1" IgnoreCanRun="True" ChildrenCount="1">
+          <CallSubRoutine SubRoutineName="Selling" />
+        </If>
+        <If Condition="Me.MapId == 1" IgnoreCanRun="True" ChildrenCount="1">
+          <CallSubRoutine SubRoutineName="EK to SW" />
+        </If>
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+        <If Condition="(InbagCount (60224) + (InbagCount (67494) * 6) + (InbagCount (59596) * 10) + (InbagCount (60223) * 8) + InbagCount (68049)) &lt; 55 || Engineering.Level &lt; 442" IgnoreCanRun="False" ChildrenCount="3">
+          <If Condition="!HasRecipe(84403)" IgnoreCanRun="True" ChildrenCount="2">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Handfuls of Obsidium Bolts until I have at least 55.&quot;); " />
+          <CastSpellAction Entry="84403" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <WaitAction Condition="false" Timeout="2000" />
+        <If Condition="InbagCount (67494) &lt; 1" IgnoreCanRun="True" ChildrenCount="3">
+          <If Condition="!HasRecipe(95703)" IgnoreCanRun="True" ChildrenCount="2">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making am Electrostatic Condenser.&quot;); " />
+          <CastSpellAction Entry="95703" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <WaitAction Condition="false" Timeout="2000" />
+        <If Condition="Engineering.Level &gt;= 445 &amp;&amp; Engineering.Level &lt; 460" IgnoreCanRun="False" ChildrenCount="5">
+          <If Condition="(InbagCount (52328) + InbagCount (67749) + (InbagCount (60223) * 4) + (InbagCount (59598) * 2)) &lt; 40 &amp;&amp; (bool)Settings[&quot;Mats in Bank&quot;]" IgnoreCanRun="False" ChildrenCount="2">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Volatile Air from the bank.&quot;); " />
+            <GetItemfromBankAction Entry="52328" Amount="40" Bank="Personal" GetItemfromBankType="SpecificItem" NpcEntry="0" AutoFindBank="True" X="0" Y="0" Z="0" MinFreeBagSlots="1" />
+          </If>
+          <If Condition="(InbagCount (52328) + InbagCount (67749) + (InbagCount (60223) * 4) + (InbagCount (59598) * 2)) &lt; 40" IgnoreCanRun="False" ChildrenCount="3">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Buying Volatile Air from AH.&quot;); " />
+            <BuyItemFromAhAction ItemID="52328" MaxBuyout="30g0s0c" Amount="40" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+            <While Condition="(InbagCount (52328) + InbagCount (67749) + (InbagCount (60223) * 4) + (InbagCount (59598) * 2)) &lt; 40" IgnoreCanRun="True" ChildrenCount="3">
+              <WaitAction Condition="HasNewMail" Timeout="30000" />
+              <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Volatile Air from mailbox.&quot;); " />
+              <GetMailAction ItemID="52328" CheckNewMail="True" GetMailType="Specific" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+            </While>
+          </If>
+          <If Condition="!HasRecipe(94748)" IgnoreCanRun="True" ChildrenCount="2">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Electrified Ethers until I'm skill 460.&quot;); " />
+          <CastSpellAction Entry="94748" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <WaitAction Condition="false" Timeout="2000" />
+        <If Condition="Engineering.Level &gt;= 460 &amp;&amp; Engineering.Level &lt; 470" IgnoreCanRun="False" ChildrenCount="3">
+          <If Condition="!HasRecipe(84410)" IgnoreCanRun="True" ChildrenCount="2">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Catch Removal Kits until I'm skill 470.&quot;); " />
+          <CastSpellAction Entry="84410" Repeat="2" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <WaitAction Condition="false" Timeout="2000" />
+        <If Condition="Engineering.Level &gt;= 470 &amp;&amp; Engineering.Level &lt; 475" IgnoreCanRun="True" ChildrenCount="3">
+          <If Condition="!HasRecipe(84411)" IgnoreCanRun="True" ChildrenCount="2">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+            <CallSubRoutine SubRoutineName="Create Stuff" />
+          </If>
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making a High-Powered Bolt Gun.&quot;); " />
+          <CastSpellAction Entry="84411" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <WaitAction Condition="false" Timeout="2000" />
+        <If Condition="Engineering.Level &gt;= 475 &amp;&amp; Engineering.Level &lt; 495" IgnoreCanRun="False" ChildrenCount="6">
+          <If Condition="(InbagCount (52327) + (InbagCount (60217) * 12)) &lt; 48 &amp;&amp; (bool)Settings[&quot;Mats in Bank&quot;]" IgnoreCanRun="False" ChildrenCount="2">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Volatile Earth from the bank.&quot;); " />
+            <GetItemfromBankAction Entry="52327" Amount="48" Bank="Personal" GetItemfromBankType="SpecificItem" NpcEntry="0" AutoFindBank="True" X="0" Y="0" Z="0" MinFreeBagSlots="1" />
+          </If>
+          <While Condition="(InbagCount (52327) + (InbagCount (60217) * 12)) &lt; 48" IgnoreCanRun="True" ChildrenCount="3">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Buying Volatile Earth from AH.&quot;); " />
+            <BuyItemFromAhAction ItemID="52327" MaxBuyout="30g0s0c" Amount="48" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+            <While Condition="(InbagCount (52327) + (InbagCount (60217) * 12)) &lt; 48" IgnoreCanRun="True" ChildrenCount="3">
+              <WaitAction Condition="HasNewMail" Timeout="30000" />
+              <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Volatile Earth from mailbox.&quot;); " />
+              <GetMailAction ItemID="52327" CheckNewMail="True" GetMailType="Specific" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+            </While>
+          </While>
+          <If Condition="!HasRecipe(84416)" IgnoreCanRun="True" ChildrenCount="1">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+          </If>
+          <CallSubRoutine SubRoutineName="Create Stuff" />
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Elementium Toolboxes until I'm skill 495.&quot;); " />
+          <CastSpellAction Entry="84416" Repeat="4" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <WaitAction Condition="false" Timeout="2000" />
+        <If Condition="(InbagCount (53039) + (InbagCount (59598) * 5) + (InbagCount (59594) * 2)) &lt; 17" IgnoreCanRun="False" ChildrenCount="5">
+          <If Condition="(InbagCount (52327) + (InbagCount (53039) * 4) + (InbagCount (59598) * 20) + (InbagCount (59594) * 8)) &lt; 68 &amp;&amp; (bool)Settings[&quot;Mats in Bank&quot;]" IgnoreCanRun="False" ChildrenCount="2">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Volatile Earth from the bank.&quot;); " />
+            <GetItemfromBankAction Entry="52327" Amount="68" Bank="Personal" GetItemfromBankType="SpecificItem" NpcEntry="0" AutoFindBank="True" X="0" Y="0" Z="0" MinFreeBagSlots="1" />
+          </If>
+          <While Condition="(InbagCount (52327) + (InbagCount (53039) * 4) + (InbagCount (59598) * 20) + (InbagCount (59594) * 8)) &lt; 68" IgnoreCanRun="True" ChildrenCount="3">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Buying Volatile Earth from AH.&quot;); " />
+            <BuyItemFromAhAction ItemID="52327" MaxBuyout="30g0s0c" Amount="48" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+            <While Condition="(InbagCount (52327) + (InbagCount (60217) * 12)) &lt; 48" IgnoreCanRun="True" ChildrenCount="3">
+              <WaitAction Condition="HasNewMail" Timeout="30000" />
+              <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Volatile Earth from mailbox.&quot;); " />
+              <GetMailAction ItemID="52327" CheckNewMail="True" GetMailType="Specific" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+            </While>
+          </While>
+          <CallSubRoutine SubRoutineName="Create Stuff" />
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Smelting Hard Elementium Bars until I have 17.&quot;); " />
+          <CastSpellAction Entry="74537" Repeat="17" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <WaitAction Condition="false" Timeout="2000" />
+        <If Condition="Engineering.Level &gt;= 495 &amp;&amp; Engineering.Level &lt; 510" IgnoreCanRun="False" ChildrenCount="4">
+          <If Condition="!HasRecipe(84420)" IgnoreCanRun="True" ChildrenCount="1">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+          </If>
+          <CallSubRoutine SubRoutineName="Create Stuff" />
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Finely-Tuned Throat Needlers until I'm skill 510.&quot;); " />
+          <CastSpellAction Entry="84420" Repeat="3" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <WaitAction Condition="false" Timeout="2000" />
+        <If Condition="Engineering.Level &gt;= 510 &amp;&amp; Engineering.Level &lt; 521" IgnoreCanRun="False" ChildrenCount="6">
+          <If Condition="(InbagCount (52325) + (InbagCount (68049) / 2)) &lt; 17 &amp;&amp; (bool)Settings[&quot;Mats in Bank&quot;]" IgnoreCanRun="False" ChildrenCount="2">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Volatile Fire from the bank.&quot;); " />
+            <GetItemfromBankAction Entry="52325" Amount="17" Bank="Personal" GetItemfromBankType="SpecificItem" NpcEntry="0" AutoFindBank="True" X="0" Y="0" Z="0" MinFreeBagSlots="1" />
+          </If>
+          <If Condition="(InbagCount (52325) + (InbagCount (68049) / 2)) &lt; 17" IgnoreCanRun="False" ChildrenCount="3">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Buying Volatile Fire from AH.&quot;); " />
+            <BuyItemFromAhAction ItemID="52325" MaxBuyout="60g0s0c" Amount="17" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+            <While Condition="(InbagCount (52325) + (InbagCount (68049) / 2)) &lt; 17" IgnoreCanRun="True" ChildrenCount="3">
+              <WaitAction Condition="HasNewMail" Timeout="30000" />
+              <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Volatile Fire from mailbox.&quot;); " />
+              <GetMailAction ItemID="52325" CheckNewMail="True" GetMailType="Specific" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+            </While>
+          </If>
+          <If Condition="!HasRecipe(84430)" IgnoreCanRun="True" ChildrenCount="1">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+          </If>
+          <CallSubRoutine SubRoutineName="Create Stuff" />
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making Heat-Treated Spinning Lure until I'm at least skill 521.&quot;); " />
+          <CastSpellAction Entry="84430" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <WaitAction Condition="false" Timeout="2000" />
+        <If Condition="Engineering.Level &gt;= 521 &amp;&amp; Engineering.Level &lt; 525" IgnoreCanRun="True" ChildrenCount="8">
+          <If Condition="InbagCount (52192) &lt; 2 &amp;&amp; (bool)Settings[&quot;Mats in Bank&quot;]" IgnoreCanRun="False" ChildrenCount="2">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Dream Emeralds from the bank.&quot;); " />
+            <GetItemfromBankAction Entry="52192" Amount="2" Bank="Personal" GetItemfromBankType="SpecificItem" NpcEntry="0" AutoFindBank="True" X="0" Y="0" Z="0" MinFreeBagSlots="1" />
+          </If>
+          <If Condition="InbagCount (52192) &lt; 2" IgnoreCanRun="False" ChildrenCount="3">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Buying Dream Emeralds from AH.&quot;); " />
+            <BuyItemFromAhAction ItemID="52192" MaxBuyout="80g0s0c" Amount="2" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+            <While Condition="InbagCount (52192) &lt; 2" IgnoreCanRun="True" ChildrenCount="3">
+              <WaitAction Condition="HasNewMail" Timeout="30000" />
+              <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Dream Emeralds from mailbox.&quot;); " />
+              <GetMailAction ItemID="52192" CheckNewMail="True" GetMailType="Specific" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+            </While>
+          </If>
+          <If Condition="!HasRecipe(84428)" IgnoreCanRun="True" ChildrenCount="1">
+            <CallSubRoutine SubRoutineName="Train Engineering" />
+          </If>
+          <CallSubRoutine SubRoutineName="Create Stuff" />
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Making a Gnomish X-Ray Scope, this should get me to max level, WOOP!!.&quot;); " />
+          <CastSpellAction Entry="84428" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          <CallSubRoutine SubRoutineName="Train Engineering" />
+          <If Condition="Engineering.Level == 525" IgnoreCanRun="True" ChildrenCount="1">
+            <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/exit&quot;), 0);" />
+          </If>
+        </If>
+      </If>
+    </If>
+  </While>
+  <If Condition="(((InbagCount (2770) + InbagCount (2840) + InbagCount (4359) + (InbagCount (4361) * 2)) &lt; 110 || (InbagCount (2835) + InbagCount (4357)) &lt; 40) &amp;&amp; (Engineering.Level &gt;= 1 &amp;&amp; Engineering.Level &lt; 75)) || (((InbagCount (2836) + InbagCount (4364)) &lt; 40 || (InbagCount (2771) + InbagCount (3576) + (InbagCount (2841) * 2) + (InbagCount (6712) * 2)) &lt; 55 || (InbagCount (2840) + InbagCount (2770) + (InbagCount (2841) * 2) + (InbagCount (6712) * 2) + InbagCount (4359)) &lt; 115) &amp;&amp; (Engineering.Level &gt;= 75 &amp;&amp; Engineering.Level &lt; 125)) || (((InbagCount (2838) + InbagCount (4377) + (InbagCount (4384) * 2)) &lt; 40) &amp;&amp; Engineering.Level &gt;= 125 &amp;&amp; Engineering.Level &lt; 175) || (((InbagCount (7912) + (InbagCount (10505) * 2) + InbagCount (10560) + InbagCount (10562)) &lt; 140) || ((InbagCount (3858) + InbagCount(3860) + (InbagCount(10559) * 3) + InbagCount(10560) + (InbagCount(10561) * 3) + ((InbagCount(10562) * 7) / 4)) &lt; 150) &amp;&amp; Engineering.Level &gt;= 175 &amp;&amp; Engineering.Level &lt; 250) || (((InbagCount (12365) + (InbagCount (15992) * 2) &lt; 60) || (InbagCount (12359) + InbagCount (10620) + (InbagCount (15994) * 3) + (InbagCount (16000) * 6) &lt; 190) || Mining.Level &lt; 275) &amp;&amp; Engineering.Level &gt;= 250 &amp;&amp; Engineering.Level &lt; 300) || (((InbagCount (23424) + (InbagCount (34060) * 52) + (InbagCount (23445) * 2) + (InbagCount (23783) * 2) + (InbagCount (23782) * 6) + ((InbagCount (23736) * 10) / 4) + ((InbagCount (23737) * 4) / 3)) &lt; 620 || (InbagCount (23425) + (InbagCount (23446) * 2) + ((InbagCount (23737) * 8) / 3)) &lt; 600 || (InbagCount (22573) + (InbagCount (22452) * 10)) &lt; 30 || (InbagCount (22574) + (InbagCount (21884) * 10)) &lt; 15) &amp;&amp; Engineering.Level &gt;= 300 &amp;&amp; Engineering.Level &lt; 350 &amp;&amp; Me.MapId == 530) || (((InbagCount (36909) + InbagCount (36916) + (InbagCount (39681) * 2) + ((InbagCount (39690) * 3) / 2) + (InbagCount (39682) * 4) + (((InbagCount (40536) * 3 * 3) / 2) / 5) + (InbagCount (39683) * 8) + (InbagCount (44739) * 8) + ((InbagCount (44739) * 2) * 2) + (InbagCount (44951) * 1.5) + (InbagCount (40865) * 16) + (InbagCount (40865) * 8) + (InbagCount (40865) * 16)) &lt; 400 || ((InbagCount (37705) + (InbagCount (35622) * 10) + (InbagCount (39690) * 1.5) + ((InbagCount (40536) * 1.5) / 5) + InbagCount (39683) + InbagCount (44739) + (InbagCount (44951) * 0.5) + (InbagCount (42546) / 4) + (InbagCount (40865) * 2)) &lt; 50 &amp;&amp; InbagCount (39681) == 0) || (InbagCount (37701) + (InbagCount (35624) * 10) + InbagCount (39682) + (InbagCount (40865) * 2)) &lt; 20 || (InbagCount (36912) + (InbagCount (36913) * 2) + (InbagCount (44951) * 10) + ((InbagCount (42546) * 24) / 8)) &lt; 280) &amp;&amp; (Engineering.Level &gt;= 350 &amp;&amp; Engineering.Level &lt; 425)) || (((InbagCount (53038) + (InbagCount (54849) * 2) + (InbagCount (60224) * 4) + ((InbagCount (67494) * 8) * 20) + (InbagCount (59596) * 50) + (InbagCount (59596) * 50) + (InbagCount (60223) * 52) + (InbagCount (59598) * 8) + (InbagCount (68049) * 2)) &lt; 300 || Mining.Level &lt; 525) &amp;&amp; (Engineering.Level &gt;= 425 &amp;&amp; Engineering.Level &lt; 525)) || ((((InbagCount (54849) * 2) + (InbagCount (60224) * 4) + ((InbagCount (67494) * 8) * 20) + (InbagCount (59596) * 50) + (InbagCount (59596) * 50) + (InbagCount (60223) * 52) + (InbagCount (59598) * 8) + (InbagCount (68049) * 2)) &gt; 300 &amp;&amp; InbagCount (53038) &lt; 2 &amp;&amp; (InbagCount (52185) + (InbagCount (52186) * 2) + (InbagCount (60217) * 30) + (InbagCount (53039) * 20) + ((InbagCount (59598) * 20) * 5) + (InbagCount (68049) * 8) + (InbagCount (59594) * 40)) &lt; 600) &amp;&amp; (Engineering.Level &gt;= 425 &amp;&amp; Engineering.Level &lt; 525))" IgnoreCanRun="True" ChildrenCount="17">
+    <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Farming Time!.&quot;); " />
+    <Comment Text="1-75" />
+    <If Condition="Engineering.Level &gt;= 1 &amp;&amp; Engineering.Level &lt; 75" IgnoreCanRun="True" ChildrenCount="2">
+      <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Loading profile: Mining 1-50 until I have 110 Copper Ores and 40 Rough Stones&quot;); " />
+      <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Alliance\(GB2 1-75)(Elwynn.Alliance)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+    </If>
+    <Comment Text="75-125" />
+    <If Condition="Engineering.Level &gt;= 75 &amp;&amp; Engineering.Level &lt; 125" IgnoreCanRun="True" ChildrenCount="2">
+      <If Condition="Mining.Level &lt; 50" IgnoreCanRun="True" ChildrenCount="2">
+        <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Loading profile: Mining 1-50 until my skill is 50.&quot;); " />
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Alliance\(GB2 1-75)(Elwynn.Alliance)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="Mining.Level &gt;= 50" IgnoreCanRun="True" ChildrenCount="2">
+        <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Loading profile: Mining 50-100 until I have 65 tin ores.&quot;); " />
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Alliance\(GB2 120-160)(StranglethornJungle.Alliance)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+    </If>
+    <Comment Text="125-175" />
+    <If Condition="Engineering.Level &gt;= 125 &amp;&amp; Engineering.Level &lt; 175" IgnoreCanRun="True" ChildrenCount="2">
+      <If Condition="Mining.Level &lt; 100" IgnoreCanRun="True" ChildrenCount="2">
+        <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Loading profile: Mining 50-100 until I'm skill 100 in mining.&quot;); " />
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Alliance\(GB2 120-160)(StranglethornJungle.Alliance)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="Mining.Level &gt;= 100" IgnoreCanRun="True" ChildrenCount="2">
+        <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Loading profile: Mining 100-150 until I have 40 Heavy Stones.&quot;); " />
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Alliance\(GB2 160-175)(TheCapeOfStranglethorn.Alliance)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+    </If>
+    <Comment Text="175-250" />
+    <If Condition="Engineering.Level &gt;= 175 &amp;&amp; Engineering.Level &lt; 250" IgnoreCanRun="True" ChildrenCount="2">
+      <If Condition="Mining.Level &lt; 150" IgnoreCanRun="True" ChildrenCount="2">
+        <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Loading profile: Mining 100-150 until I have 150 in mining.&quot;); " />
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Alliance\(GB2 160-175)(TheCapeOfStranglethorn.Alliance)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="Mining.Level &gt;= 150" IgnoreCanRun="True" ChildrenCount="2">
+        <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Loading profile: Mining 150-200 until I have 150 Mithril Ores and 140 Solid Stones.&quot;); " />
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Alliance\(GB2 175-235)(Badlands.Alliance)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+    </If>
+    <Comment Text="250-300" />
+    <If Condition="Engineering.Level &gt;= 250 &amp;&amp; Engineering.Level &lt; 300" IgnoreCanRun="True" ChildrenCount="2">
+      <If Condition="Mining.Level &lt; 200" IgnoreCanRun="True" ChildrenCount="2">
+        <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Loading profile: Mining 150-200 until I have 200 skill in mining.&quot;); " />
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Alliance\(GB2 175-235)(Badlands.Alliance)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="Mining.Level &gt;= 200" IgnoreCanRun="True" ChildrenCount="2">
+        <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Loading profile: Mining 200-300 until I have 190 Thorium Ores and 60 Dense Stones.&quot;); " />
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Alliance\(GB2 255-300)(SwampOfSorrows.Alliance)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+    </If>
+    <Comment Text="300-350" />
+    <If Condition="Engineering.Level &gt;= 300 &amp;&amp; Engineering.Level &lt; 350" IgnoreCanRun="True" ChildrenCount="8">
+      <If Condition="Me.MapId == 0" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="SW to Outlands" />
+      </If>
+      <While Condition="InbagCount (22573) &gt;= 10" IgnoreCanRun="True" ChildrenCount="1">
+        <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Mote of Earth&quot;), 0);" />
+      </While>
+      <While Condition="InbagCount (22574) &gt;= 10" IgnoreCanRun="True" ChildrenCount="1">
+        <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Mote of Fire&quot;), 0);" />
+      </While>
+      <While Condition="InbagCount (37700) &gt;= 10" IgnoreCanRun="True" ChildrenCount="1">
+        <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Mote of Air&quot;), 0);" />
+      </While>
+      <While Condition="Me.FreeNormalBagSlots &lt; 4" IgnoreCanRun="True" ChildrenCount="4">
+        <If Condition="!HasRecipe(29358) &amp;&amp; !HasRecipe(29359)" IgnoreCanRun="True" ChildrenCount="6">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Bags are almost full. Learning to smelt adamantite so I can smelt all my ores to free up space.&quot;); " />
+          <CallSubRoutine SubRoutineName="Train Mining" />
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Going to smelt ores.&quot;); " />
+          <CallSubRoutine SubRoutineName="Create Stuff" />
+          <CastSpellAction Entry="29356" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          <CastSpellAction Entry="29358" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="HasRecipe(29358) &amp;&amp; !HasRecipe(29359)" IgnoreCanRun="True" ChildrenCount="4">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Bags are almost full. Gonna smelt my ores to free up space&quot;); " />
+          <CallSubRoutine SubRoutineName="Create Stuff" />
+          <CastSpellAction Entry="29356" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          <CastSpellAction Entry="29358" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="!HasRecipe(29359) &amp;&amp; Mining.Level &gt;= 350" IgnoreCanRun="True" ChildrenCount="7">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Bags are almost full. Learning to smelt eternium so I can smelt all my ores to free up space.&quot;); " />
+          <CallSubRoutine SubRoutineName="Train Mining" />
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Going to smelt ores.&quot;); " />
+          <CallSubRoutine SubRoutineName="Create Stuff" />
+          <CastSpellAction Entry="29356" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          <CastSpellAction Entry="29358" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          <CastSpellAction Entry="29359" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="HasRecipe(29359)" IgnoreCanRun="True" ChildrenCount="5">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Bags are almost full. Gonna smelt my ores to free up space&quot;); " />
+          <CallSubRoutine SubRoutineName="Create Stuff" />
+          <CastSpellAction Entry="29356" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          <CastSpellAction Entry="29358" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          <CastSpellAction Entry="29359" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+      </While>
+      <If Condition="(Mining.Level &gt;= 275 &amp;&amp; Mining.Level &lt; 325)" IgnoreCanRun="True" ChildrenCount="2">
+        <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Loading profile: Mining 300-325 until my mining skill is 325.&quot;); " />
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Neutral\(GB2 300-350)(Outlands.Neutral)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="Mining.Level &gt;= 325 &amp;&amp; (InbagCount (23425) + (InbagCount (23446) * 2)) &lt; 600" IgnoreCanRun="True" ChildrenCount="2">
+        <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Loading profile: Mining 325-350 until I have 600 Adamantite Ores. Remember, bars count for 2!&quot;); " />
+        <LoadProfileAction Path="Adamantite farm.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="(InbagCount (23425) + (InbagCount (23446) * 2)) &gt;= 600" IgnoreCanRun="True" ChildrenCount="2">
+        <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Loading profile: Mining 300-325 until I have 620 Fel Iron Ores. Remember, bars count for 2!&quot;); " />
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Neutral\(GB2 300-350)(Outlands.Neutral)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+    </If>
+    <Comment Text="350-425" />
+    <If Condition="Engineering.Level &gt;= 350 &amp;&amp; Engineering.Level &lt; 425" IgnoreCanRun="True" ChildrenCount="7">
+      <If Condition="Me.MapId == 530" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Outlands to home" />
+      </If>
+      <If Condition="Me.MapId == 0" IgnoreCanRun="True" ChildrenCount="5">
+        <If Condition="InbagCount (23737) &gt;= 1" IgnoreCanRun="True" ChildrenCount="1">
+          <CallSubRoutine SubRoutineName="Selling" />
+        </If>
+        <If Condition="((InbagCount (40536) / 5) + InbagCount (33470)) &lt; 8 &amp;&amp; (bool)Settings[&quot;Mats in Bank&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Frostweave Cloth from the bank.&quot;); " />
+          <GetItemfromBankAction Entry="33470" Amount="8" Bank="Personal" GetItemfromBankType="SpecificItem" NpcEntry="0" AutoFindBank="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+        </If>
+        <If Condition="((InbagCount (40536) / 5) + InbagCount (33470)) &lt; 8" IgnoreCanRun="True" ChildrenCount="4">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Debug: Buying Frostweave Cloth from AH.&quot;); " />
+          <BuyItemFromAhAction ItemID="33470" MaxBuyout="5g0s0c" Amount="8" ItemListType="Item" AutoFindAh="False" X="-8368.86" Y="678.417" Z="98.65343" BidOnItem="False" />
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Picking up Frostweave Cloth from mailbox.&quot;); " />
+          <While Condition="InbagCount (33470) &lt; 8" IgnoreCanRun="True" ChildrenCount="2">
+            <GetMailAction ItemID="33470" CheckNewMail="True" GetMailType="Specific" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+            <WaitAction Condition="false" Timeout="5000" />
+          </While>
+        </If>
+        <If Condition="InbagCount (34060) &gt;= 1" IgnoreCanRun="True" ChildrenCount="1">
+          <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Flying Machine&quot;), 0);" />
+        </If>
+        <CallSubRoutine SubRoutineName="SW to Northrend" />
+      </If>
+      <While Condition="InbagCount (37705) &gt;= 10" IgnoreCanRun="True" ChildrenCount="1">
+        <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Crystallized Water&quot;), 0);" />
+      </While>
+      <While Condition="InbagCount (37701) &gt;= 10" IgnoreCanRun="True" ChildrenCount="1">
+        <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Crystallized Earth&quot;), 0);" />
+      </While>
+      <While Condition="InbagCount (37703) &gt;= 10" IgnoreCanRun="True" ChildrenCount="1">
+        <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Crystallized Shadow&quot;), 0);" />
+      </While>
+      <If Condition="(InbagCount (36909) + InbagCount (36916) + (InbagCount (39681) * 2) + ((InbagCount (39690) * 3) / 2) + (InbagCount (39682) * 4) + (((InbagCount (40536) * 3 * 3) / 2) / 5) + (InbagCount (39683) * 8) + (InbagCount (44739) * 8) + ((InbagCount (44739) * 2) * 2) + (InbagCount (44951) * 1.5) + (InbagCount (40865) * 16) + (InbagCount (40865) * 8) + (InbagCount (40865) * 16)) &lt; 400 || (InbagCount (37705) + (InbagCount (35622) * 10) + (InbagCount (39690) * 1.5) + ((InbagCount (40536) * 1.5) / 5) + InbagCount (39683) + InbagCount (44739) + (InbagCount (44951) * 0.5) + (InbagCount (42546) / 4) + (InbagCount (40865) * 2)) &lt; 50" IgnoreCanRun="True" ChildrenCount="2">
+        <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Loading profile: Mining 350-400 until I have 400 Cobalt Ores and 5 Eternal Water.&quot;); " />
+        <LoadProfileAction Path="[GB2] Zuabros' Borean Tundra Miner 1.0b.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="(InbagCount (36912) + (InbagCount (36913) * 2) + (InbagCount (44951) * 10) + ((InbagCount (42546) * 24) / 8)) &lt; 280" IgnoreCanRun="True" ChildrenCount="2">
+        <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Loading profile: Mining 400-450 until I have 280 Adamantite Ores and and 2 Eternal Earth.&quot;); " />
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Neutral\(GB2 400-450)(SholazarBasin.Neutral)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+    </If>
+    <Comment Text="425-525" />
+    <If Condition="Engineering.Level &gt;= 425 &amp;&amp; Engineering.Level &lt; 525" IgnoreCanRun="True" ChildrenCount="6">
+      <If Condition="Me.MapId == 571" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Northrend to home" />
+      </If>
+      <While Condition="InbagCount (44951) &gt;= 1" IgnoreCanRun="False" ChildrenCount="25">
+        <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Box of Bombs&quot;), 0);" />
+        <WaitAction Condition="false" Timeout="1000" />
+        <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Box of Bombs&quot;), 0);" />
+        <WaitAction Condition="false" Timeout="1000" />
+        <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Box of Bombs&quot;), 0);" />
+        <WaitAction Condition="false" Timeout="1000" />
+        <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Box of Bombs&quot;), 0);" />
+        <WaitAction Condition="false" Timeout="1000" />
+        <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Box of Bombs&quot;), 0);" />
+        <WaitAction Condition="false" Timeout="1000" />
+        <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Box of Bombs&quot;), 0);" />
+        <WaitAction Condition="false" Timeout="1000" />
+        <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Box of Bombs&quot;), 0);" />
+        <WaitAction Condition="false" Timeout="1000" />
+        <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Box of Bombs&quot;), 0);" />
+        <WaitAction Condition="false" Timeout="1000" />
+        <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Box of Bombs&quot;), 0);" />
+        <WaitAction Condition="false" Timeout="1000" />
+        <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Box of Bombs&quot;), 0);" />
+        <WaitAction Condition="false" Timeout="1000" />
+        <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Box of Bombs&quot;), 0);" />
+        <WaitAction Condition="false" Timeout="1000" />
+        <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Box of Bombs&quot;), 0);" />
+        <WaitAction Condition="false" Timeout="1000" />
+        <CustomAction Code="Lua.DoString(string.Format(&quot;RunMacroText(\&quot;{0}\&quot;)&quot;, &quot;/use Box of Bombs&quot;), 0);" />
+      </While>
+      <If Condition="InbagCount (40865) &gt;= 1" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Selling" />
+      </If>
+      <If Condition="(InbagCount (53038) + (InbagCount (54849) * 2) + (InbagCount (60224) * 4) + ((InbagCount (67494) * 8) * 20) + (InbagCount (59596) * 50) + (InbagCount (59596) * 50) + (InbagCount (60223) * 52) + (InbagCount (59598) * 8) + (InbagCount (68049) * 2)) &lt; 300 || Mining.Level &lt; 525" IgnoreCanRun="True" ChildrenCount="3">
+        <If Condition="Me.MapId == 0" IgnoreCanRun="True" ChildrenCount="1">
+          <CallSubRoutine SubRoutineName="SW to Hyjal" />
+        </If>
+        <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Loading profile: Mining 450-475 until I have 300 Obsidium Ores&quot;); " />
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Neutral\(GB2 450-475)(Hyjal.Neutral)Herb&amp;Mining-herb.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="(InbagCount (53038) + (InbagCount (54849) * 2) + (InbagCount (60224) * 4) + ((InbagCount (67494) * 8) * 20) + (InbagCount (59596) * 50) + (InbagCount (59596) * 50) + (InbagCount (60223) * 52) + (InbagCount (59598) * 8) + (InbagCount (68049) * 2)) &gt; 300 &amp;&amp; Mining.Level &gt;= 525 &amp;&amp; InbagCount (53038) &gt;= 2" IgnoreCanRun="True" ChildrenCount="2">
+        <If Condition="Me.MapId == 1" IgnoreCanRun="True" ChildrenCount="1">
+          <CallSubRoutine SubRoutineName="EK to SW" />
+        </If>
+        <CallSubRoutine SubRoutineName="Create Stuff" />
+      </If>
+      <If Condition="((InbagCount (54849) * 2) + (InbagCount (60224) * 4) + ((InbagCount (67494) * 8) * 20) + (InbagCount (59596) * 50) + (InbagCount (59596) * 50) + (InbagCount (60223) * 52) + (InbagCount (59598) * 8) + (InbagCount (68049) * 2)) &gt; 300 &amp;&amp; InbagCount (53038) &lt; 2 &amp;&amp; (InbagCount (52185) + (InbagCount (52186) * 2) + (InbagCount (60217) * 30) + (InbagCount (53039) * 20) + ((InbagCount (59598) * 20) * 5) + (InbagCount (68049) * 8) + (InbagCount (59594) * 40)) &lt; 600" IgnoreCanRun="True" ChildrenCount="4">
+        <If Condition="Me.MapId == 0" IgnoreCanRun="True" ChildrenCount="1">
+          <CallSubRoutine SubRoutineName="SW to Uldum" />
+        </If>
+        <If Condition="Me.FreeNormalBagSlots &lt; 4" IgnoreCanRun="True" ChildrenCount="4">
+          <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Bags are almost full, smelting ores to free up some space.&quot;); " />
+          <FlyToAction Dismount="True" X="-9405.792" Y="-914.2648" Z="112.5413" />
+          <If Condition="InbagCount (52185) &gt;= 20" IgnoreCanRun="True" ChildrenCount="2">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Smelting Elementium Ores.&quot;); " />
+            <CastSpellAction Entry="74530" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="InbagCount (52183) &gt;= 20" IgnoreCanRun="True" ChildrenCount="2">
+            <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Smelting Pyrite Ores.&quot;); " />
+            <CastSpellAction Entry="74529" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+        </If>
+        <CustomAction Code="Log(System.Drawing.Color.YellowGreen,&quot;Loading profile: Mining 475-525 until I have 600 Elementium Ores&quot;); " />
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Neutral\(GB2 475-525)(Uldum.Neutral)Herb&amp;Mining-herb.xml" ProfileType="Honorbuddy" />
+      </If>
+    </If>
+  </If>
+</Professionbuddy>

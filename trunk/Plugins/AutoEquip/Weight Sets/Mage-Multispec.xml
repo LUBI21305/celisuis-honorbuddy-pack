@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WeightSet Class="Mage" Spec="Multispec">
+  <HitRating>100</HitRating>
+  <HasteRating>50</HasteRating>
+  <SpellPower>46</SpellPower>
+  <CriticalStrikeRating>20</CriticalStrikeRating>
+  <Intellect>13</Intellect>
+  <Spirit>8</Spirit>
+</WeightSet>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WeightSet Class="DeathKnight" Spec="Blood" Misc="Tank">
+  <DPS>5</DPS>
+  <Stamina>1</Stamina>
+  <DefenseRating>0.90</DefenseRating>
+  <Agility>0.69</Agility>
+  <DodgeRating>0.5</DodgeRating>
+  <ParryRating>0.43</ParryRating>
+  <ExpertiseRating>0.38</ExpertiseRating>
+  <Strength>0.31</Strength>
+  <ArmorPenetrationRating>0.26</ArmorPenetrationRating>
+  <CriticalStrikeRating>0.22</CriticalStrikeRating>
+  <Armor>0.18</Armor>
+  <HitRating>0.16</HitRating>
+  <HasteRating>0.16</HasteRating>
+  <AttackPower>0.08</AttackPower>
+</WeightSet>

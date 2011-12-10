@@ -1,0 +1,77 @@
+Update 07/12/11
+
+Updated All Current Profiles - Now works with Current Version of Honorbuddy
+Added Increased Profession Profiles
+Added Fireland Dailies Profiles
+Added Fishing Profiles
+Added Reputation Profiles
+Updated Quest Behaviours
+Updated Plugins
+Added Grinding and Farming Profiles
+Added Quest Profiles - More Stable
+
+
+
+
+__________________________________________________________________________________________________________
+
+UPDATE 22/06/11
+
+Professions
+Zak's Horde Herbalism 1-525
+[GB2] Vashj'ir Megaroute Min + Herb 0.1.1b
+[GB2] Zuabros' Uldum Herbalism Only 1.2
+[GB2] Zuabros' Uldum Min+Herb 1.5
+[GB2] Zuabros' Uldum Mining Only 1.2
+[GB2] Zuabros' Vash'ir Min+Herb 0.2b
+[GB2][H]Vashj'jir Herbalism v0.0.1 HUGE RUN
+Gatherbuddy - Twilight Highlands v2.0HORDE
+GB2_Mount Hyjal v3.5
+GB2_twilight herb + mining
+GB2_Twilight Highlands v2.0Horde
+GB2_Uldum
+Killertypos - Mt Hyjal herbmine
+Nazstyles Mt Hyjal herbmine
+Uldum Herbs and Mines( Long) 1.2
+Uldum HerbsMines 1.2 (1)
+Znuff-TwilightHighlands-TwilightJasmine-RoutesBuddy
+
+Pets'n'mounts
+Aeonaxx - Small Round GB2
+Camel Figurine Small Route GB2
+Camel Figurine
+Mysterious Camel Figurine GB2
+Northrend Mega Farm
+Poseidus - Bielaran Ridge GB2
+Poseidus - Glimmerdeep Gorge GB2
+Poseidus - Quel Dormir
+Poseidus - Thelserat Temple - GB2
+Poseidus - Underlight Canyon GB2
+Sea Turtle
+Stratholme
+Captured Firefly
+Disgusting Oozeling
+Parrot Cage
+Parrot Cage - No Boat
+Swamp of Sorrows - Disgusting Oozeling
+Tiny Emerald Whelpling
+Tiny Crimson Whelpling
+Dark Whelpling
+Azure Whelpling
+
+Questings
+1-68 horde by raphus
+[N - Quest] Mount Hyjal 80-82 by Bobby53 v090
+[H - Quest] 10-60 (LowHangingFruit) 1.5.9
+[H - Quest].58-68.Outland.v2.2.2
+[Fly-H] Northrend 70-80 v0.7d
+[Fly H - Quest] 70-80 Northrend by Eddie4 Beta0.6
+
+Reputations
+[panYama] Consorptium [Grind]
+Zaxxis Insignia's - Consortium Rep
+The Mag'har Reputation Farm
+Kurenai and mag'har reputation Nagrand v2
+Netherwing neutral-revered pack
+[panYama] Shat'ari Skyguard [Grind]
+[panYama] Sporeggar [Grind]

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WeightSet Class="Hunter" Spec="Beastmastery">
+  <DPS>213</DPS>
+  <HitRating>100</HitRating>
+  <Agility>58</Agility>
+  <CriticalStrikeRating>57</CriticalStrikeRating>
+  <Intellect>37</Intellect>
+  <HasteRating>21</HasteRating>
+</WeightSet>

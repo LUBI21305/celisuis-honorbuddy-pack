@@ -1,0 +1,50 @@
+<HBProfile creator="TheKing" version="2.0">
+
+	<Name>[H] Skinning 1-525</Name>
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>5</MinFreeBagSlots>
+
+	<MinLevel>1</MinLevel>
+	<MaxLevel>86</MaxLevel>
+   
+	<MailGrey>False</MailGrey>
+	<MailWhite>True</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+   
+	<SubProfile>
+		<Name>Taking Zep! made by: TheKinG</Name>
+		<MinLevel>1</MinLevel>
+		<MaxLevel>86</MaxLevel>
+		
+		<Vendors>
+
+		</Vendors>
+		
+		<Mailboxes>
+
+		</Mailboxes>
+				
+		<QuestOrder>
+		
+		    <!-- Taking Zep to Borean Tundra -->
+			<CustomBehavior File="FlyTo" X="1741.373" Y="-4276.539" Z="133.0727" DestName="Transport Terrace" />
+			<CustomBehavior File="UseTransport" 
+					TransportId="186238" 
+					WaitAtX="1762.369" WaitAtY="-4283.39" WaitAtZ="133.1072" 
+					TransportStartX="1775.066" TransportStartY="-4299.745" TransportStartZ="151.0326"
+					TransportEndX="2837.908" TransportEndY="6187.443" TransportEndZ="140.1648"
+					GetOffX="2836.355" GetOffY="6184.612" GetOffZ="121.9381"
+					StandOnX="1768.292" StandOnY="-4290.189" StandOnZ="133.1834" />
+					
+		</QuestOrder>
+	</SubProfile>
+</HBProfile>	

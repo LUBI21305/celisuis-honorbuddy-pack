@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Professionbuddy>
+  <CustomAction Code="Log(&quot;Leveling to 440&quot;);" />
+  <If Condition="TreeRoot.Current.Name != &quot;Grind Bot&quot;" IgnoreCanRun="True">
+    <CustomAction Code="SwitchToBot (&quot;Grind Bot&quot;);" />
+  </If>
+  <!--Train Skinning and Leatherworking-->
+  <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue == 350 || Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue == 440" IgnoreCanRun="True">
+    <CallSubRoutine SubRoutineName="Train Skinning" />
+  </If>
+  <SubRoutine SubRoutineName="Train Skinning">
+    <If Condition="Me.MapId == 1" IgnoreCanRun="True">
+      <FlyToAction Dismount="True" X="1815.319" Y="-4364.262" Z="103.4046" />
+      <CustomAction Code="Log(&quot;Training Skinning&quot;);" />
+      <TrainSkillAction NpcEntry="7088" X="1852.908" Y="-4570.059" Z="24.98218" />
+    </If>
+    <If Condition="Me.MapId == 530" IgnoreCanRun="True">
+      <FlyToAction Dismount="True" X="151.239" Y="2633.32" Z="86.54367" />
+      <CustomAction Code="Log(&quot;Training Skinning&quot;);" />
+      <TrainSkillAction NpcEntry="18755" X="151.239" Y="2633.32" Z="86.54367" />
+    </If>
+    <If Condition="Me.MapId == 571" IgnoreCanRun="True">
+      <FlyToAction Dismount="True" X="3435.079" Y="4105.765" Z="15.99857" />
+      <CustomAction Code="Log(&quot;Training Skinning&quot;);" />
+      <TrainSkillAction NpcEntry="26986" X="3455.75" Y="4178.839" Z="17.19355" />
+    </If>
+  </SubRoutine>
+  <!--Selling to vendor in Bor'gorok Outpost-->
+  <If Condition="Me.FreeNormalBagSlots &lt; 2" IgnoreCanRun="True">
+    <FlyToAction Dismount="True" X="4496.818" Y="5728.918" Z="80.7347" />
+    <SellItemAction NpcEntry="27067" X="4510.52" Y="5703.353" Z="81.54079" ItemID="" Count="0" SellItemType="Greys" />
+    <SellItemAction NpcEntry="27067" X="4510.52" Y="5703.353" Z="81.54079" ItemID="" Count="0" SellItemType="Greens" />
+    <MailItemAction Entry="" AutoFindMailBox="True" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+  </If>
+  <!--Leveling to 440-->
+  <If Condition="Me.FreeNormalBagSlots &gt; 2" IgnoreCanRun="True">
+    <If Condition="Me.MapId == 571" IgnoreCanRun="True">
+      <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 350 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &lt; 395" IgnoreCanRun="False">
+        <FlyToAction Dismount="True" X="3011.288" Y="5955.021" Z="107.4061" />
+        <CustomAction Code="Log(&quot;Loading Profile 350-395&quot;);" />
+        <LoadProfileAction Path="HBProfiles\Skinning\350-395.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 395 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &lt; 440" IgnoreCanRun="False">
+        <FlyToAction Dismount="True" X="5062.398" Y="4489.371" Z="-98.60401" />
+        <CustomAction Code="Log(&quot;Loading Profile 350-395&quot;);" />
+        <LoadProfileAction Path="HBProfiles\Skinning\395-440.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 440" IgnoreCanRun="False">
+        <CustomAction Code="Log(&quot;Loading Main Profile &quot;);" />
+        <LoadProfileAction Path="[H] Skinning  1-525.xml" ProfileType="Professionbuddy" />
+      </If>
+    </If>
+  </If>
+</Professionbuddy>

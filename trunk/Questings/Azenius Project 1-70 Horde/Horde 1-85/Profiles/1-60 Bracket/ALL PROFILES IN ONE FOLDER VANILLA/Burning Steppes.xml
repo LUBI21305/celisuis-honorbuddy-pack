@@ -1,0 +1,454 @@
+<HBProfile>
+	<Name>Azenius Project [Burning Steppes] 39-44</Name>
+	<MinLevel>1</MinLevel>
+	<MaxLevel>85</MaxLevel>
+	<MinDurability>0.4</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+	<TargetElites>False</TargetElites>
+	<AvoidMobs>
+    		<Mob Name="Lead Prospector Durdin" Entry="46760" />
+		<Mob Name="Sigrun Ironhew" Entry="2860" />
+		<Mob Name="Kand Sandseeker" Entry="46762" />
+		<Mob Name="Olga Runesworn" Entry="46761" />
+		<Mob Name="Prospector Ryedol" Entry="2910" />
+		<Mob Name="Gavran Goodspade" Entry="46659" />
+		<Mob Name="Vernon Farcavern" Entry="48090" />
+		<Mob Name="Enraged Gryphon" Entry="9526" />
+		<Mob Name="Nancy Skybrew" Entry="44409" />
+		<Mob Name="Dustwind Overseer" Entry="51538" />
+		<Mob Name="Midsummer Celebrant" Entry="16781" />
+	</AvoidMobs>
+	<Blackspots>
+	<Blackspot X="-7918.415" Y="-1855.503" Z="135.2174" Radius="5.432003" /> <!-- Thanks to Bengan12 -->
+	</Blackspots>
+   
+	<Mailboxes>
+
+	</Mailboxes>
+	<Vendors>
+	
+	<!-- There is absolutely no repair NPC for hordes in this zone, so stupid. -->
+	
+	<!-- Iron Summit -->
+	<!-- Iron Summit Vendors -->
+	<Vendor Name="Fergus Gravelsmash" Entry="47937" Type="Repair" X="-7093.68" Y="-1268.31" Z="270.485" />
+    <!-- Iron Summit Trainers -->
+	<!-- None -->
+
+	<!-- Flame Crest -->
+	<!-- Flame Crest Vendors -->
+	<Vendor Name="Gruna" Entry="3708" Type="Food" X="-7492.08" Y="-2170.92" Z="165.4149" />
+    <!-- Flame Crest Trainers -->
+	<!-- None -->
+
+    </Vendors>
+  
+	<Quest Id="28455" Name="Glory Amidst Chaos">
+		<Objective Type="KillMob" MobId="48316" KillCount="1">
+			<Hotspots>
+				<Hotspot X="-7836.37" Y="-2561.36" Z="126.2175" />
+			</Hotspots>
+		</Objective>
+		<Objective Type="KillMob" MobId="48314" KillCount="1">
+			<Hotspots>
+				<Hotspot X="-7887.5" Y="-2660.91" Z="220.2099" />
+			</Hotspots>
+		</Objective>
+		<Objective Type="KillMob" MobId="48312" KillCount="1">
+			<Hotspots>
+				<Hotspot X="-7977.76" Y="-2676.08" Z="156.9002" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+
+	<QuestOrder>
+
+	<CustomBehavior File="UserSettings" LootMobs="True" UseMount="True" PullDistance="30" />
+		<CustomBehavior File="UserSettings" LootMobs="True" TrainNewSkills="False" LearnFlightPaths="True" UseFlightPaths="False" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Azenius Questing Profiles (Eastern Kingdoms = Burning Steppes Profile Loaded)." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Compiling Quests." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning off auto-train." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting UseFlightPaths to false." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting LearnFlightPaths to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting LootMobs to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting UseMount to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting PullDistance to 30." />
+		
+	<PickUp QuestName="Done Nothing Wrong" QuestId="28417" GiverName="Mouton Flamestar" GiverId="47779" />
+	<PickUp QuestName="Burning Vengeance" QuestId="28418" GiverName="Ariok" GiverId="48559" />
+	
+	<While Condition="HasQuest(28417) &amp;&amp; !IsQuestCompleted(28417)" >
+		   <CustomBehavior File="InteractWith" QuestId="28417" MobId="47814" NumOfTimes="1" CollectionDistance="200" X="-8412.123" Y="-1150.458" Z="188.6649" />
+		   <CustomBehavior File="InteractWith" QuestId="28417" MobId="47820" NumOfTimes="1" CollectionDistance="200" X="-8412.123" Y="-1150.458" Z="188.6649" />
+		   <CustomBehavior File="InteractWith" QuestId="28417" MobId="47821" NumOfTimes="1" CollectionDistance="200" X="-8412.123" Y="-1150.458" Z="188.6649" />
+		   <CustomBehavior File="InteractWith" QuestId="28417" MobId="47822" NumOfTimes="1" CollectionDistance="200" X="-8412.123" Y="-1150.458" Z="188.6649" />
+	</While>
+	<Objective QuestName="Burning Vengeance" QuestId="28418" Type="KillMob" MobId="47782" KillCount="5" />
+	<Objective QuestName="Burning Vengeance" QuestId="28418" Type="KillMob" MobId="7049" KillCount="5" />
+	
+	<TurnIn QuestName="Burning Vengeance" QuestId="28418" TurnInName="Ariok" TurnInId="48559" />
+	<PickUp QuestName="Stocking Up" QuestId="28419" GiverName="Ariok" GiverId="48559" />
+	<PickUp QuestName="A Future Project" QuestId="28420" GiverName="Ariok" GiverId="48559" />
+	<PickUp QuestName="Mud Hunter" QuestId="28421" GiverName="Ariok" GiverId="48559" />
+	<TurnIn QuestName="Done Nothing Wrong" QuestId="28417" TurnInName="Mouton Flamestar" TurnInId="47779" />
+	
+	<Objective QuestName="Mud Hunter" QuestId="28421" Type="CollectItem" ItemId="63124" CollectCount="9" />
+	<Objective QuestName="A Future Project" QuestId="28420" Type="CollectItem" ItemId="63136" CollectCount="11" />
+	<Objective QuestName="Stocking Up" QuestId="28419" Type="CollectItem" ItemId="63135" CollectCount="5" />
+	
+	<TurnIn QuestName="Stocking Up" QuestId="28419" TurnInName="Ariok" TurnInId="48559" />
+	<TurnIn QuestName="A Future Project" QuestId="28420" TurnInName="Ariok" TurnInId="48559" />
+	<TurnIn QuestName="Mud Hunter" QuestId="28421" TurnInName="Ariok" TurnInId="48559" />
+	<PickUp QuestName="The Sand, the Cider, and the Orb" QuestId="28422" GiverName="Ariok" GiverId="48559" />
+	<TurnIn QuestName="The Sand, the Cider, and the Orb" QuestId="28422" TurnInName="Gorzeeki Wildeyes" TurnInId="14437" />
+	<PickUp QuestName="Shadow Boxing" QuestId="28424" GiverName="Gorzeeki Wildeyes" GiverId="14437" />
+	<PickUp QuestName="Warlocks Have the Neatest Stuff" QuestId="28423" GiverName="Gorzeeki Wildeyes" GiverId="14437" />
+	
+	<Objective QuestName="Shadow Boxing" QuestId="28424" Type="KillMob" MobId="47805" KillCount="1" />
+	<Objective QuestName="Warlocks Have the Neatest Stuff" QuestId="28423" Type="CollectItem" ItemId="63132" CollectCount="1" />
+	<Objective QuestName="Warlocks Have the Neatest Stuff" QuestId="28423" Type="CollectItem" ItemId="63133" CollectCount="1" />
+	<Objective QuestName="Warlocks Have the Neatest Stuff" QuestId="28423" Type="CollectItem" ItemId="63134" CollectCount="1" />
+	
+	<TurnIn QuestName="Warlocks Have the Neatest Stuff" QuestId="28423" TurnInName="Gorzeeki Wildeyes" TurnInId="14437" />
+	<TurnIn QuestName="Shadow Boxing" QuestId="28424" TurnInName="Gorzeeki Wildeyes" TurnInId="14437" />
+	<PickUp QuestName="Return to Ariok" QuestId="28425" GiverName="Gorzeeki Wildeyes" GiverId="14437" />
+	<TurnIn QuestName="Return to Ariok" QuestId="28425" TurnInName="Ariok" TurnInId="48559" />
+	<PickUp QuestName="Chiselgrip, the Heart of the Steppes" QuestId="28426" GiverName="Ariok" GiverId="48559" />
+	
+	<Objective QuestName="Chiselgrip, the Heart of the Steppes" QuestId="28426" Type="KillMob" MobId="7025" KillCount="15" />
+
+	<TurnIn QuestName="Chiselgrip, the Heart of the Steppes" QuestId="28426" TurnInName="Stebben Oreknuckle" TurnInId="48033" />
+	<PickUp QuestName="Prove Yer Allegiance" QuestId="28225" GiverName="Stebben Oreknuckle" GiverId="48033" />
+	<PickUp QuestName="Scrapped Golems" QuestId="28226" GiverName="Stebben Oreknuckle" GiverId="48033" />
+	<PickUp QuestName="A Needle in a Hellhole" QuestId="28427" GiverName="Eitrigg" GiverId="48568" />
+    <TurnIn QuestName="A Needle in a Hellhole" QuestId="28427" TurnInName="Thelaron Direneedle" TurnInId="48001" />
+	
+		 <If Condition="Me.IsHorde" >
+	  <If Condition="Me.Race == WoWRace.Tauren">
+		<PickUp QuestName="A Perfect Costume" QuestId="28429" GiverName="Thelaron Direneedle" GiverId="48001" />
+			<While Condition="HasQuest(28429) &amp;&amp; !IsQuestCompleted(28429)" >
+				<CustomBehavior File="InteractWith" QuestId="28429" ObjectType="Gameobject" MobId="206947" GossipOptions="1, 4, 1, 3" NumOfTimes="1" WaitTime="1000" CollectionDistance="50" X="-7954.528" Y="-1898.745" Z="131.9331" />
+				<CustomBehavior File="InteractWith"  MobId="48001" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="50" X="-7954.528" Y="-1898.745" Z="131.9331" />
+			</While>
+		<TurnIn QuestName="A Perfect Costume" QuestId="28429" TurnInName="Eitrigg" TurnInId="48568" />
+	  </If>
+	  <If Condition="Me.Race == WoWRace.Orc || Me.Race == WoWRace.Undead">
+		<PickUp QuestName="A Perfect Costume" QuestId="28428" GiverName="Thelaron Direneedle" GiverId="48001" />
+			<While Condition="HasQuest(28428) &amp;&amp; !IsQuestCompleted(28428)" >
+				<CustomBehavior File="InteractWith" QuestId="28428" ObjectType="Gameobject" MobId="206947" GossipOptions="1, 2, 4, 2" NumOfTimes="1" WaitTime="1000" CollectionDistance="50" X="-7954.528" Y="-1898.745" Z="131.9331" />
+				<CustomBehavior File="InteractWith"  MobId="48001" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="50" X="-7954.528" Y="-1898.745" Z="131.9331" />
+			</While>
+		<TurnIn QuestName="A Perfect Costume" QuestId="28428" TurnInName="Eitrigg" TurnInId="48568" />
+	  </If>
+	  <If Condition="Me.Race == WoWRace.Goblin">
+		<PickUp QuestName="A Perfect Costume" QuestId="28430" GiverName="Thelaron Direneedle" GiverId="48001" />
+			<While Condition="HasQuest(28430) &amp;&amp; !IsQuestCompleted(28430)" >
+				<CustomBehavior File="InteractWith" QuestId="28430" ObjectType="Gameobject" MobId="206947" GossipOptions="1, 1, 3, 4" NumOfTimes="1" WaitTime="1000" CollectionDistance="50" X="-7954.528" Y="-1898.745" Z="131.9331" />
+				<CustomBehavior File="InteractWith"  MobId="48001" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="50" X="-7954.528" Y="-1898.745" Z="131.9331" />
+			</While>
+		<TurnIn QuestName="A Perfect Costume" QuestId="28430" TurnInName="Eitrigg" TurnInId="48568" />
+	  </If>
+	  <If Condition="Me.Race == WoWRace.Troll || Me.Race == WoWRace.BloodElf">
+		<PickUp QuestName="A Perfect Costume" QuestId="28431" GiverName="Thelaron Direneedle" GiverId="48001" />
+			<While Condition="HasQuest(28431) &amp;&amp; !IsQuestCompleted(28431)" >
+				<CustomBehavior File="InteractWith" QuestId="28431" ObjectType="Gameobject" MobId="206947" GossipOptions="1, 3, 2, 1" NumOfTimes="1" WaitTime="1000" CollectionDistance="50" X="-7954.528" Y="-1898.745" Z="131.9331" />
+				<CustomBehavior File="InteractWith"  MobId="48001" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="50" X="-7954.528" Y="-1898.745" Z="131.9331" />
+			</While>
+		<TurnIn QuestName="A Perfect Costume" QuestId="28431" TurnInName="Eitrigg" TurnInId="48568" />
+	  </If>
+	 </If>
+	<PickUp QuestName="Into the Black Tooth Hovel" QuestId="28432" GiverName="Eitrigg" GiverId="48568" />
+	
+	<If Condition="HasQuest(28432)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(63357)" />
+		<CustomBehavior File="WaitTimer" WaitTime="6000"/>
+	</If>
+	<TurnIn QuestName="Into the Black Tooth Hovel" QuestId="28432" TurnInName="Quartermaster Kaoshin" TurnInId="48085" />
+	<PickUp QuestName="Grunt Work" QuestId="28433" GiverName="Quartermaster Kaoshin" GiverId="48085" />
+	<PickUp QuestName="Strategic Cuts" QuestId="28434" GiverName="Worgmistress Othana" GiverId="48085" />
+	
+	<While Condition="HasQuest(28434) &amp;&amp; !IsQuestCompleted(28434)" >
+		   <RunTo X="-8085.793" Y="-1891.123" Z="134.5224" />
+<CustomBehavior File="MyCTM" X="-8086.332" Y="-1890.312" Z="135.0112" />
+<CustomBehavior File="MyCTM" X="-8094.709" Y="-1890.587" Z="137.8829" />
+<CustomBehavior File="MyCTM" X="-8092.421" Y="-1896.671" Z="139.8839" />
+<CustomBehavior File="MyCTM" X="-8087.883" Y="-1896.998" Z="141.2646" />
+<CustomBehavior File="MyCTM" X="-8085.015" Y="-1893.182" Z="142.6958" />
+<CustomBehavior File="MyCTM" X="-8085.738" Y="-1889.639" Z="143.704" />
+<CustomBehavior File="MyCTM" X="-8088.994" Y="-1887.815" Z="144.7934" />
+<CustomBehavior File="MyCTM" X="-8093.914" Y="-1890.102" Z="146.4607" />
+<CustomBehavior File="MyCTM" X="-8092.377" Y="-1896.314" Z="147.939" />
+<CustomBehavior File="MyCTM" X="-8087.34" Y="-1897.317" Z="148.6702" />
+<CustomBehavior File="MyCTM" X="-8084.883" Y="-1892.95" Z="150.1149" />
+<CustomBehavior File="MyCTM" X="-8086.775" Y="-1888.687" Z="151.4993" />
+<CustomBehavior File="MyCTM" X="-8091.852" Y="-1888.064" Z="153.0222" />
+<CustomBehavior File="MyCTM" X="-8094.501" Y="-1890.546" Z="154.0471" />
+<CustomBehavior File="MyCTM" X="-8094.085" Y="-1894.652" Z="155.259" />
+<CustomBehavior File="MyCTM" X="-8091.349" Y="-1897.198" Z="156.4247" />
+<CustomBehavior File="MyCTM" X="-8086.714" Y="-1896.156" Z="157.8771" />
+<CustomBehavior File="MyCTM" X="-8085.028" Y="-1892.314" Z="159.0822" />
+<CustomBehavior File="MyCTM" X="-8088.007" Y="-1889.107" Z="160.5827" />
+<CustomBehavior File="MyCTM" X="-8092.852" Y="-1889.49" Z="161.4974" />
+<CustomBehavior File="MyCTM" X="-8093.992" Y="-1893.02" Z="162.0315" />
+<CustomBehavior File="MyCTM" X="-8091.902" Y="-1896.172" Z="163.4394" />
+<CustomBehavior File="MyCTM" X="-8087.371" Y="-1895.918" Z="165.0207" />
+<CustomBehavior File="MyCTM" X="-8085.519" Y="-1893.301" Z="166.1353" />
+<CustomBehavior File="MyCTM" X="-8086.88" Y="-1890.15" Z="167.2986" />
+<CustomBehavior File="MyCTM" X="-8090.246" Y="-1888.926" Z="168.7275" />
+<CustomBehavior File="MyCTM" X="-8092.995" Y="-1891.009" Z="170.1594" />
+<CustomBehavior File="MyCTM" X="-8092.538" Y="-1894.592" Z="171.7176" />
+<CustomBehavior File="MyCTM" X="-8089.593" Y="-1895.724" Z="173.1568" />
+<CustomBehavior File="MyCTM" X="-8086.759" Y="-1894.079" Z="174.585" />
+<CustomBehavior File="MyCTM" X="-8086.922" Y="-1890.882" Z="175.995" />
+<CustomBehavior File="MyCTM" X="-8089.896" Y="-1888.826" Z="177.4682" />
+<CustomBehavior File="MyCTM" X="-8093.254" Y="-1890.169" Z="178.4485" />
+<CustomBehavior File="MyCTM" X="-8094.233" Y="-1893.54" Z="179.9377" />
+<CustomBehavior File="MyCTM" X="-8092.623" Y="-1896.882" Z="181.0004" />
+<CustomBehavior File="MyCTM" X="-8088.966" Y="-1898.531" Z="181.9447" />
+<CustomBehavior File="MyCTM" X="-8084.987" Y="-1896.028" Z="182.4926" />
+<CustomBehavior File="MyCTM" X="-8088.938" Y="-1886.761" Z="182.4963" />
+                <CustomBehavior File="UseItemOn" QuestId="28434" MobId="48100" ItemId="63350" NumOfTimes="1" WaitTime="1000" Range="5" CollectionDistance="50" X="-8088.02" Y="-1882.75" Z="183.0007" />
+				<CustomBehavior File="MyCTM" X="-8088.02" Y="-1882.75" Z="183.0007" />
+                <CustomBehavior File="MyCTM" X="-8083.442" Y="-1853.955" Z="141.226" />
+				<CustomBehavior File="UseItemOn" QuestId="28434" MobId="48099" ItemId="63350" NumOfTimes="1" WaitTime="1000" Range="5" CollectionDistance="50" X="-8158.81" Y="-1697.208" Z="137.2372" />
+				<CustomBehavior File="UseItemOn" QuestId="28434" MobId="9176" ItemId="63350" NumOfTimes="1" WaitTime="1000" Range="5" CollectionDistance="150" X="-8246.148" Y="-1790.647" Z="147.6901" />
+	</While>
+	
+	<If Condition="HasQuest(28434) &amp;&amp; IsQuestCompleted(28434)" >
+		<CustomBehavior File="CompleteLogQuest" QuestId="28434" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000"/>
+	</If>
+	<Objective QuestName="Grunt Work" QuestId="28433" Type="UseObject" ObjectId="206977" UseCount="7" />
+	
+	<TurnIn QuestName="Grunt Work" QuestId="28433" TurnInName="Quartermaster Kaoshin" TurnInId="48085" />
+	<PickUp QuestName="The Kodocaller's Horn" QuestId="28435" GiverName="Quartermaster Kaoshin" GiverId="48085" />
+	
+	<While Condition="HasQuest(28435) &amp;&amp; !IsQuestCompleted(28435)" >
+			<CustomBehavior File="UseItemOn" QuestId="28435" MobId="48111" ItemId="63356" NumOfTimes="1" WaitTime="6000" Range="5" CollectionDistance="150" X="-8256.083" Y="-1887.544" Z="144.1933" />
+	</While>
+	
+	<If Condition="HasQuest(28435) &amp;&amp; IsQuestCompleted(28435)" >
+		<CustomBehavior File="CompleteLogQuest" QuestId="28435" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000"/>
+	</If>
+	<TurnIn QuestName="Taking the Horn For Ourselves" QuestId="28436" TurnInName="Eitrigg" TurnInId="48568" />
+	
+	<If Condition="HasQuest(28226) &amp;&amp; !IsQuestCompleted(28226)" >
+			<RunTo X="-7756.146" Y="-1911.55" Z="133.724" />
+	</If>
+	
+	<While Condition="HasQuest(28226) &amp;&amp; !IsQuestCompleted(28226)" >
+		<CustomBehavior File="CollectThings" CollectUntil="NoTargetsInArea" HuntingGroundRadius="200" QuestId="28226" MobId="7039" ObjectId1="206971" ObjectId2="206974" ObjectId3="206972" ObjectId4="206973" CollectItemId="63334" CollectItemCount="1" X="-7756.146" Y="-1911.55" Z="133.724">
+			<Hotspot X="-7783.963" Y="-2255.447" Z="133.4594" />
+			<Hotspot X="-7796.048" Y="-2088.646" Z="132.4892" />
+			<Hotspot X="-7793.692" Y="-1889.025" Z="136.4116" />
+		</CustomBehavior>
+		<CustomBehavior File="CollectThings" CollectUntil="NoTargetsInArea" HuntingGroundRadius="200" QuestId="28226" MobId="7039" ObjectId1="206971" ObjectId2="206974" ObjectId3="206972" ObjectId4="206973" CollectItemId="63333" CollectItemCount="3" X="-7756.146" Y="-1911.55" Z="133.724">
+			<Hotspot X="-7783.963" Y="-2255.447" Z="133.4594" />
+			<Hotspot X="-7796.048" Y="-2088.646" Z="132.4892" />
+			<Hotspot X="-7793.692" Y="-1889.025" Z="136.4116" />
+		</CustomBehavior>
+		<CustomBehavior File="CollectThings" CollectUntil="NoTargetsInArea" HuntingGroundRadius="200" QuestId="28226" MobId="7039" ObjectId1="206971" ObjectId2="206974" ObjectId3="206972" ObjectId4="206973" CollectItemId="63336" CollectItemCount="3" X="-7756.146" Y="-1911.55" Z="133.724">
+			<Hotspot X="-7783.963" Y="-2255.447" Z="133.4594" />
+			<Hotspot X="-7796.048" Y="-2088.646" Z="132.4892" />
+			<Hotspot X="-7793.692" Y="-1889.025" Z="136.4116" />
+		</CustomBehavior>
+		<CustomBehavior File="CollectThings" CollectUntil="NoTargetsInArea" HuntingGroundRadius="200" QuestId="28226" MobId="7039" ObjectId1="206971" ObjectId2="206974" ObjectId3="206972" ObjectId4="206973" CollectItemId="63335" CollectItemCount="3" X="-7756.146" Y="-1911.55" Z="133.724">
+			<Hotspot X="-7783.963" Y="-2255.447" Z="133.4594" />
+			<Hotspot X="-7796.048" Y="-2088.646" Z="132.4892" />
+			<Hotspot X="-7793.692" Y="-1889.025" Z="136.4116" />
+		</CustomBehavior>
+	</While>
+	
+	<Objective QuestName="Prove Yer Allegiance" QuestId="28225" Type="KillMob" MobId="7038" KillCount="10" />
+	
+	<TurnIn QuestName="Prove Yer Allegiance" QuestId="28225" TurnInName="Stebben Oreknuckle" TurnInId="48033" />
+	<TurnIn QuestName="Scrapped Golems" QuestId="28226" TurnInName="Stebben Oreknuckle" TurnInId="48033" />
+	<PickUp QuestName="Golem Training" QuestId="28227" GiverName="Stebben Oreknuckle" GiverId="48033" />
+	
+	<While Condition="HasQuest(28227) &amp;&amp; !IsQuestCompleted(28227)">
+		<CustomBehavior File="InteractWith" QuestId="28227" MobId="48037" GossipOptions="1" NumOfTimes="1" CollectionDistance="500" X="-7915.47" Y="-1923.167" Z="132.5379" />
+	</While>
+	<TurnIn QuestName="Golem Training" QuestId="28227" TurnInName="Stebben Oreknuckle" TurnInId="48033" />
+	<PickUp QuestName="General Thorg'izog" QuestId="28437" GiverName="Eitrigg" GiverId="48568" />
+	
+	<If Condition="HasQuest(28437)" >
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(63357)" />
+		<CustomBehavior File="WaitTimer" WaitTime="6000"/>
+		<RunTo X="-7976.115" Y="-1855.43" Z="133.0014" />
+	</If>
+	<TurnIn QuestName="General Thorg'izog" QuestId="28437" TurnInName="General Thorg'izog" TurnInId="48133" />
+	<PickUp QuestName="Trial by Magma" QuestId="28438" GiverName="General Thorg'izog" GiverId="48133" />
+	
+	<If Condition="HasQuest(28438) &amp;&amp; !IsQuestCompleted(28438)">
+		<CustomBehavior File="InteractWith" QuestId="28438" MobId="48159" GossipOptions="1" NumOfTimes="1" CollectionDistance="500" X="-7686.76" Y="-1436.34" Z="140.935" />
+		<RunTo X="-7697.974" Y="-1442.076" Z="139.7874" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000" />
+	</If>
+	<TurnIn QuestName="Trial by Magma" QuestId="28438" TurnInName="General Thorg'izog" TurnInId="48133" />
+	<PickUp QuestName="I Am the Law and I Am the Lash" QuestId="28439" GiverName="General Thorg'izog" GiverId="48133" />
+	
+	<While Condition="HasQuest(28440) &amp;&amp; !IsQuestCompleted(28440)">
+	<CustomBehavior File="UserSettings" LootMobs="False" />
+	<If Condition="!Me.HasAura(&quot;Firegut Ogre Disguise&quot;)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(63357)" />
+		<CustomBehavior File="WaitTimer" WaitTime="6000"/>
+	</If>
+				<CustomBehavior File="UseItemOn" QuestId="28440" MobId="48201" ItemId="63390" NpcState="Alive" NumOfTimes="10" WaitTime="0" Range="2" CollectionDistance="150" X="-7738.637" Y="-1554.516" Z="133.2113" />
+				<CustomBehavior File="UseItemOn" QuestId="28440" MobId="48201" ItemId="63390" NpcState="Alive" NumOfTimes="10" WaitTime="0" Range="2" CollectionDistance="150" X="-7738.637" Y="-1554.516" Z="133.2113" />
+				<CustomBehavior File="UseItemOn" QuestId="28440" MobId="48201" ItemId="63390" NpcState="Alive" NumOfTimes="10" WaitTime="0" Range="2" CollectionDistance="150" X="-7738.637" Y="-1554.516" Z="133.2113" />
+	</While>
+	
+	<If Condition="IsQuestCompleted(28440) &amp;&amp; HasQuest(28440)">
+        <CustomBehavior File="CompleteLogQuest" QuestId="28440" />
+	    <CustomBehavior File="WaitTimer" WaitTime="2500" />
+        <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+    </If>
+	
+	<While Condition="HasQuest(28439) &amp;&amp; !IsQuestCompleted(28439)">
+	<CustomBehavior File="UserSettings" LootMobs="False" />
+				<CustomBehavior File="UseItemOn" QuestId="28439" MobId="7025" ItemId="63390" NpcState="Alive" NumOfTimes="20" WaitTime="200" Range="2" CollectionDistance="150" X="-7738.637" Y="-1554.516" Z="133.2113" />
+	</While>
+	
+	<While Condition="HasQuest(28439) &amp;&amp; IsQuestCompleted(28439)">
+	<CustomBehavior File="UserSettings" LootMobs="False" />
+	<If Condition="!Me.HasAura(&quot;Firegut Ogre Disguise&quot;)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(63357)" />
+		<CustomBehavior File="WaitTimer" WaitTime="6000"/>
+	</If>
+			<TurnIn QuestName="I Am the Law and I Am the Lash" QuestId="28439" TurnInName="General Thorg'izog" TurnInId="48133" />
+	</While>
+	
+	<If Condition="HasQuest(28441) &amp;&amp; IsQuestCompleted(28441)">
+    	<RunTo X="-7976.115" Y="-1855.43" Z="133.0014" />
+	</If>
+	<TurnIn QuestName="Enough Damage For One Day" QuestId="28441" TurnInName="Eitrigg" TurnInId="48568" />
+	<CustomBehavior File="UserSettings" LootMobs="True" />
+	<PickUp QuestName="Flame Crest" QuestId="28442" GiverName="Eitrigg" GiverId="48568" />
+    	<TurnIn QuestName="Flame Crest" QuestId="28442" TurnInName="Kibler" TurnInId="10260" />
+	<PickUp QuestName="Not Fireflies, Flameflies" QuestId="28491" GiverName="Kibler" GiverId="10260" />
+	<PickUp QuestName="Blackened Ashes" QuestId="28443" GiverName="Eitrigg" GiverId="48569" X="-7501.119" Y="-2187.692" Z="165.6207" />
+	<PickUp QuestName="Latent Demons of the Land" QuestId="28444" GiverName="Eitrigg" GiverId="48569" X="-7501.119" Y="-2187.692" Z="165.6207" />
+	<PickUp QuestName="A Heap of Delicious Worg" QuestId="28445" GiverName="Eitrigg" GiverId="48569" X="-7501.119" Y="-2187.692" Z="165.6207" />
+
+	<If Condition="HasQuest(28444) &amp;&amp; !IsQuestCompleted(28444)" >
+		<RunTo X="-7639.671" Y="-2177.866" Z="135.3506" />
+	</If>
+
+	<While Condition="HasQuest(28444) &amp;&amp; !IsQuestCompleted(28444)" >
+		<CustomBehavior File="CollectThings" CollectUntil="NoTargetsInArea" HuntingGroundRadius="200" QuestId="28444" MobId1="9776" MobId2="9779" MobId3="9778" MobId4="48649" CollectItemId="63423" CollectItemCount="18" X="-7639.671" Y="-2177.866" Z="135.3506" />
+	</While>
+			
+	<While Condition="HasQuest(28491) &amp;&amp; !IsQuestCompleted(28491)" >
+		  <CustomBehavior File="InteractWith" QuestId="28491" MobId="48671" NumOfTimes="9" CollectionDistance="500" WaitTime="1000" X="-7616.189" Y="-2187.413" Z="131.775" />
+	</While>
+	
+	<Objective QuestName="Blackened Ashes" QuestId="28443" Type="CollectItem" ItemId="63421" CollectCount="9" />
+	
+	<While Condition="HasQuest(28445) &amp;&amp; !IsQuestCompleted(28445)" >
+			<CustomBehavior File="UseItemOn" QuestId="28445" MobId="9697" ItemId="63427" NumOfTimes="20" WaitTime="3000" Range="2" CollectionDistance="500" X="-7607.982" Y="-2604.164" Z="134.412" />
+			<Objective QuestName="A Heap of Delicious Worg" QuestId="28445" Type="CollectItem" ItemId="63427" CollectCount="1" />
+	</While>
+	<TurnIn QuestName="Blackened Ashes" QuestId="28443" TurnInName="Eitrigg" TurnInId="48569" />
+	<TurnIn QuestName="Latent Demons of the Land" QuestId="28444" TurnInName="Eitrigg" TurnInId="48569" />
+	<TurnIn QuestName="A Heap of Delicious Worg" QuestId="28445" TurnInName="Eitrigg" TurnInId="48569" />
+	<PickUp QuestName="Blood Tour" QuestId="28446" GiverName="Ariok" GiverId="48565" />
+	
+	<If Condition="HasQuest(28446) &amp;&amp; !IsQuestCompleted(28446)" >
+			<CustomBehavior File="WaitTimer" WaitTime="10000"/>
+	</If>
+	<PickUp QuestName="A Deal With a Dragon" QuestId="28448" GiverName="Ariok" GiverId="48567" X="-7501.5" Y="-2187.999" Z="165.6187" />
+	<PickUp QuestName="Draconic Vanguard" QuestId="28447" GiverName="Ariok" GiverId="48567" X="-7501.5" Y="-2187.999" Z="165.6187" />
+	<TurnIn QuestName="Not Fireflies, Flameflies" QuestId="28491" TurnInName="Kibler" TurnInId="10260" />
+	
+	<If Condition="HasItem(66080)">
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(66080)" />
+	</If>
+	<PickUp QuestName="The Bogpaddle Bullet" QuestId="28570" GiverName="Kibler" GiverId="10260" />
+	
+	<Objective QuestName="Draconic Vanguard" QuestId="28447" Type="KillMob" MobId="48288" KillCount="1" />
+	<Objective QuestName="Draconic Vanguard" QuestId="28447" Type="KillMob" MobId="48291" KillCount="1" />
+	
+	<TurnIn QuestName="A Deal With a Dragon" QuestId="28448" TurnInName="Acride" TurnInId="48292" />
+	
+	<Objective QuestName="Draconic Vanguard" QuestId="28447" Type="KillMob" MobId="48289" KillCount="1" />
+	<Objective QuestName="Draconic Vanguard" QuestId="28447" Type="KillMob" MobId="48287" KillCount="1" />
+	
+	<TurnIn QuestName="Draconic Vanguard" QuestId="28447" TurnInName="Ariok" TurnInId="48567" />
+	
+	<Objective QuestName="Blood Tour" QuestId="28446" Type="KillMob" MobId="7040" KillCount="25" />
+	
+	<TurnIn QuestName="Blood Tour" QuestId="28446" TurnInName="Ariok" TurnInId="48567" />
+	
+	<If Condition="HasQuest(28449)">
+			<CustomBehavior File="WaitTimer" WaitTime="5000"/>
+	</If>
+	<TurnIn QuestName="Placing the Pawns" QuestId="28449" TurnInName="Eitrigg" TurnInId="48569" X="-7501.5" Y="-2187.999" Z="165.6187" />
+	<PickUp QuestName="A Delivery for Thorg'izog" QuestId="28450" GiverName="Eitrigg" GiverId="48569" X="-7501.5" Y="-2187.999" Z="165.6187" />
+	<PickUp QuestName="A Delivery for Neeralak" QuestId="28451" GiverName="Eitrigg" GiverId="48569" X="-7501.5" Y="-2187.999" Z="165.6187" />
+	<PickUp QuestName="A Delivery for Xi'lun" QuestId="28452" GiverName="Eitrigg" GiverId="48569" X="-7501.5" Y="-2187.999" Z="165.6187" />
+	
+	<If Condition="HasQuest(28450)">
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(63357)" />
+		<CustomBehavior File="WaitTimer" WaitTime="6000"/>
+	</If>
+	
+	<TurnIn QuestName="A Delivery for Neeralak" QuestId="28451" TurnInName="Dragon-Lord Neeralak" TurnInId="48314" X="-7976.816" Y="-2677.976" Z="156.8443" />
+	<TurnIn QuestName="A Delivery for Xi'lun" QuestId="28452" TurnInName="High Warlock Xi'lun" TurnInId="48312" X="-7887.638" Y="-2658.309" Z="220.1871" />
+	<TurnIn QuestName="A Delivery for Thorg'izog" QuestId="28450" TurnInName="General Thorg'izog" TurnInId="48316" X="-7837.523" Y="-2560.471" Z="126.2269" />
+	
+	<If Condition="!HasQuest(28453)">
+		<CustomBehavior File="WaitTimer" WaitTime="6000"/>
+	</If>
+	<TurnIn QuestName="Locked and Loaded" QuestId="28453" TurnInName="Eitrigg" TurnInId="48569" X="-7501.5" Y="-2187.999" Z="165.6187" />
+	<PickUp QuestName="Assault on Dreadmaul Rock" QuestId="28454" GiverName="Ariok" GiverId="48565" X="-7501.5" Y="-2187.999" Z="165.6187" />
+	
+	<If Condition="HasQuest(28454) &amp;&amp; !IsQuestCompleted(28454)">
+		<CustomBehavior File="WaitTimer" WaitTime="130000" />
+	</If>
+	
+	<While Condition="HasQuest(28454) &amp;&amp; !IsQuestCompleted(28454)">
+		<CustomBehavior File="28454" />
+	</While>
+	
+	<If Condition="HasQuest(28454) &amp;&amp; IsQuestCompleted(28454)">
+		<CustomBehavior File="MyCTM" X="-7494.887" Y="-2179.337" Z="165.574" />
+		<CustomBehavior File="WaitTimer" WaitTime="30000" />
+	</If>s
+	<TurnIn QuestName="Assault on Dreadmaul Rock" QuestId="28454" TurnInName="Eitrigg" TurnInId="48569" X="-7500.868" Y="-2188.138" Z="165.642" />
+	<PickUp QuestName="Glory Amidst Chaos" QuestId="28455" GiverName="Eitrigg" GiverId="48569" X="-7500.868" Y="-2188.138" Z="165.642" />
+
+	<Objective QuestName="Glory Amidst Chaos" QuestId="28455" Type="KillMob" MobId="48312" KillCount="1" />
+	<Objective QuestName="Glory Amidst Chaos" QuestId="28455" Type="KillMob" MobId="48314" KillCount="1" />
+	<Objective QuestName="Glory Amidst Chaos" QuestId="28455" Type="KillMob" MobId="48316" KillCount="1" />
+	
+	<TurnIn QuestName="Glory Amidst Chaos" QuestId="28455" TurnInName="Eitrigg" TurnInId="48569" X="-7500.868" Y="-2188.138" Z="165.642" />
+	<PickUp QuestName="The Spoils of War" QuestId="28456" GiverName="Eitrigg" GiverId="48569" X="-7500.868" Y="-2188.138" Z="165.642" />
+	<TurnIn QuestName="The Spoils of War" QuestId="28456" TurnInName="Crate of Left Over Supplies" TurnInId="207125" />
+	
+		<If Condition="HasQuest(28570) &amp;&amp; IsQuestCompleted(28570)">
+		    <RunTo X="-8220.585" Y="-2932.182" Z="152.3546" />
+			<CustomBehavior File="BasicInteractWith" MobId="48948" />
+			<CustomBehavior File="WaitTimer" WaitTime="1500" />
+			<CustomBehavior File="RunMacro" Macro="/script SelectGossipOption(1)" NumOfTimes="1" WaitTime="1000" />
+			<CustomBehavior File="WaitTimer" WaitTime="80000" />
+	</If>
+	<TurnIn QuestName="The Bogpaddle Bullet" QuestId="28570" TurnInName="Trade Baron Silversnap" TurnInId="45786" />
+
+	<CustomBehavior File="LoadProfile" Profile="Swamp of Sorrows.xml" />
+
+	</QuestOrder>
+</HBProfile>

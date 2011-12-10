@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Professionbuddy ChildrenCount="11">
+  <Comment Text="" />
+  <Comment Text="THIS PROFILE CREATED BY I3ig Al" />
+  <Comment Text="DO NOT COPY OOR SHARE WITHOUT GIVING CREDIT!" />
+  <Comment Text="" />
+  <CustomAction Code=" var1 = true; " />
+  <CustomAction Code=" var2 = true; " />
+  <CustomAction Code=" var3= true; " />
+  <Comment Text="" />
+  <If Condition=" Inscription.Level==525 " IgnoreCanRun="True" ChildrenCount="1">
+    <While Condition=" ( bool ) var1 == true " IgnoreCanRun="True" ChildrenCount="10">
+      <StackItemsAction />
+      <If Condition=" MailCount &gt; 0 " IgnoreCanRun="True" ChildrenCount="2">
+        <Comment Text="Collects mail up to 5 bagslots free" />
+        <If Condition=" Me.FreeBagSlots &gt; 5 " IgnoreCanRun="False" ChildrenCount="1">
+          <GetMailAction Entry="0" GetMailType="AllItems" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+        </If>
+      </If>
+      <StackItemsAction />
+      <DisenchantAction ActionType="Mill" ItemTarget="All" ItemQuality="Uncommon" ItemId="0" />
+      <If Condition=" Me.FreeBagSlots &gt; 2 " IgnoreCanRun="False" ChildrenCount="20">
+        <Comment Text="Common Ink Making Begin" />
+        <If Condition=" InbagCount ( 39334 ) &gt; 1 " IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="53462" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition=" InbagCount ( 39338 ) &gt; 1 " IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="57704" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition=" InbagCount ( 39339 ) &gt; 1 " IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="57707" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition=" InbagCount ( 39340 ) &gt; 1 " IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="57709" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition=" InbagCount ( 39341 ) &gt; 1 " IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="57711" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition=" InbagCount ( 39342 ) &gt; 1 " IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="57713" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition=" InbagCount ( 39343 ) &gt; 1 " IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="57715" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition=" InbagCount ( 61979 ) &gt; 1 " IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="86004" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <Comment Text="Common Ink Making End" />
+        <Comment Text="Uncommmon Ink Making Begin" />
+        <If Condition=" InbagCount ( 43103 ) &gt; 0 " IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="57703" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition=" InbagCount ( 43104 ) &gt; 0 " IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="57706" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition=" InbagCount ( 43105 ) &gt; 0 " IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="57708" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition=" InbagCount ( 43106 ) &gt; 0 " IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="57710" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition=" InbagCount ( 43107 ) &gt; 0 " IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="57712" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition=" InbagCount ( 43108 ) &gt; 0 " IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="57714" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition=" InbagCount ( 43109 ) &gt; 1 " IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="57716" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition=" InbagCount ( 61980 ) &gt; 1 " IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="86005" Repeat="1" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <Comment Text="Uncommon Ink Making End" />
+      </If>
+      <Comment Text="Mail Inks to Alt designated in Bot Settings" />
+      <MailItemAction Entry="0" AutoFindMailBox="True" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Parts" X="0" Y="0" Z="0" />
+      <Comment Text="End of While Loop, will restart if still has mail" />
+      <If Condition=" MailCount &gt; 0 " IgnoreCanRun="True" ChildrenCount="1">
+        <CustomAction Code=" var1 = true; " />
+      </If>
+      <If Condition=" MailCount == 0 " IgnoreCanRun="True" ChildrenCount="1">
+        <CustomAction Code=" var1 = false; " />
+      </If>
+    </While>
+  </If>
+  <If Condition=" Jewelcrafting.Level == 525 " IgnoreCanRun="True" ChildrenCount="1">
+    <While Condition=" ( bool ) var2 == true " IgnoreCanRun="True" ChildrenCount="7">
+      <StackItemsAction />
+      <If Condition=" MailCount &gt; 0 " IgnoreCanRun="True" ChildrenCount="2">
+        <Comment Text="Collects mail up to 5 bagslots free" />
+        <If Condition=" Me.FreeBagSlots &gt; 5 " IgnoreCanRun="False" ChildrenCount="1">
+          <GetMailAction Entry="0" GetMailType="AllItems" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+        </If>
+      </If>
+      <StackItemsAction />
+      <DisenchantAction ActionType="Prospect" ItemTarget="All" ItemQuality="Uncommon" ItemId="0" />
+      <PutItemInBankAction Amount="0" Entry="0" NpcEntry="0" GuildTab="0" AutoFindBank="True" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" Bank="Personal" X="0" Y="0" Z="0" />
+      <If Condition=" MailCount &gt; 0 " IgnoreCanRun="True" ChildrenCount="1">
+        <CustomAction Code=" var2 = true; " />
+      </If>
+      <If Condition=" MailCount == 0 " IgnoreCanRun="True" ChildrenCount="1">
+        <CustomAction Code=" var2 = false; " />
+      </If>
+    </While>
+  </If>
+  <If Condition=" Enchanting.Level == 525 " IgnoreCanRun="True" ChildrenCount="1">
+    <While Condition=" ( bool ) var3 == true " IgnoreCanRun="True" ChildrenCount="14">
+      <StackItemsAction />
+      <If Condition=" MailCount &gt; 0 " IgnoreCanRun="True" ChildrenCount="1">
+        <If Condition=" Me.FreeBagSlots &gt; 5 " IgnoreCanRun="False" ChildrenCount="1">
+          <GetMailAction Entry="0" GetMailType="AllItems" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+        </If>
+      </If>
+      <StackItemsAction />
+      <DisenchantAction ActionType="Disenchant" ItemTarget="All" ItemQuality="Uncommon" ItemId="0" />
+      <If Condition=" InbagCount ( 16202 ) &gt; 2 " IgnoreCanRun="False" ChildrenCount="1">
+        <CastSpellAction Entry="20039" Repeat="1" RepeatType="Craftable" CastOnItem="True" ItemId="16202" ItemType="None" />
+      </If>
+      <PutItemInBankAction Amount="0" Entry="52555" NpcEntry="0" GuildTab="0" AutoFindBank="True" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Enchanting" Bank="Personal" X="0" Y="0" Z="0" />
+      <Comment Text="Essence Combining Begin" />
+      <If Condition=" InbagCount ( 22447 ) &gt; 2 " IgnoreCanRun="False" ChildrenCount="1">
+        <CastSpellAction Entry="32977" Repeat="1" RepeatType="Craftable" CastOnItem="True" ItemId="22447" ItemType="None" />
+      </If>
+      <If Condition=" InbagCount ( 34056 ) &gt; 2 " IgnoreCanRun="False" ChildrenCount="1">
+        <CastSpellAction Entry="44123" Repeat="1" RepeatType="Craftable" CastOnItem="True" ItemId="34056" ItemType="None" />
+      </If>
+      <If Condition=" InbagCount ( 52718 ) &gt; 2 " IgnoreCanRun="False" ChildrenCount="1">
+        <CastSpellAction Entry="74186" Repeat="1" RepeatType="Craftable" CastOnItem="True" ItemId="52718" ItemType="None" />
+      </If>
+      <Comment Text="Essence Combining End" />
+      <PutItemInBankAction Amount="0" Entry="52719" NpcEntry="0" GuildTab="0" AutoFindBank="True" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Bank="Personal" X="0" Y="0" Z="0" />
+      <If Condition=" MailCount &gt; 0 " IgnoreCanRun="True" ChildrenCount="1">
+        <CustomAction Code=" var3 = true; " />
+      </If>
+      <If Condition=" MailCount == 0 " IgnoreCanRun="True" ChildrenCount="1">
+        <CustomAction Code=" var3 = false; " />
+      </If>
+    </While>
+  </If>
+</Professionbuddy>

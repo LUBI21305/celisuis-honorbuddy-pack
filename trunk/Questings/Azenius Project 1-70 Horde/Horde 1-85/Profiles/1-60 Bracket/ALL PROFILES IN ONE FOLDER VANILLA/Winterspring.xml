@@ -1,0 +1,468 @@
+<HBProfile>
+	<Name>Azenius Project [Winterspring] 54-58</Name>
+	<MinLevel>1</MinLevel>
+	<MaxLevel>85</MaxLevel>
+	<MinDurability>0.4</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+	<TargetElites>False</TargetElites>
+	<AvoidMobs>
+    <Mob Name="Lead Prospector Durdin" Entry="46760" />
+	<Mob Name="Sigrun Ironhew" Entry="2860" />
+	<Mob Name="Kand Sandseeker" Entry="46762" />
+	<Mob Name="Olga Runesworn" Entry="46761" />
+	<Mob Name="Prospector Ryedol" Entry="2910" />
+	<Mob Name="Gavran Goodspade" Entry="46659" />
+	<Mob Name="Vernon Farcavern" Entry="48090" />
+	<Mob Name="Enraged Gryphon" Entry="9526" />
+	<Mob Name="Nancy Skybrew" Entry="44409" />
+	<Mob Name="Dustwind Overseer" Entry="51538" />
+	<Mob Name="Midsummer Celebrant" Entry="16781" />
+	</AvoidMobs>
+	<Blackspots>
+
+	</Blackspots>
+   
+	<Mailboxes>
+    <Mailbox X="6706.437" Y="-4668.181" Z="721.5952" /> <!-- Everlook -->
+	</Mailboxes>
+	<Vendors>
+        <!-- Everlook Trainers -->
+        <!-- None -->
+        <!-- Everlook Vendors -->
+        <Vendor Name="Nixxrak" Entry="11182" Type="Repair" X="6740.854" Y="-4691.69" Z="721.3702" />
+		<Vendor Name="Himmik" Entry="11187" Type="Food" X="6679.623" Y="-4670.889" Z="721.7151" />
+        <!-- Random Vendors Throughout the Zone -->
+		<Vendor Name="Trapper Kiefer" Entry="50094" Type="Repair" X="7636.76" Y="-4429.5" Z="623.8745" />
+		<Vendor Name="Daleohm" Entry="50129" Type="Repair" X="6176.922" Y="-4564.302" Z="713.3448" />
+    </Vendors>
+
+	<Quest Id="28537" Name="In Pursuit of Shades">
+	<Objective Type="CollectItem" ItemId="64463" CollectCount="1">
+		<CollectFrom>
+		<Mob Name="Shade of the Spiritspeaker" Entry="48678" />
+		</CollectFrom>
+		<Hotspots>
+		<Hotspot X="6186.803" Y="-4109.546" Z="747.6465" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
+ 	<Quest Id="28632" Name="Fresh From The Hills">
+		<Objective Type="CollectItem" ItemId="64662" CollectCount="7">
+			<CollectFrom>
+				<Mob Name="Solid Ice" Entry="49233" />
+			</CollectFrom>
+			<Hotspots>
+			<Hotspot X="6589.364" Y="-5372.433" Z="757.6806" />
+			<Hotspot X="6762.849" Y="-5281.175" Z="746.0135" />
+			<Hotspot X="6753.312" Y="-5353.128" Z="767.1155" />
+			<Hotspot X="6586.935" Y="-5284.274" Z="752.4771" />
+			</Hotspots>
+		</Objective>
+	</Quest>
+	
+	<Quest Id="28637" Name="A Taste for Bear">
+	<Objective Type="KillMob" MobId="7444" KillCount="15">
+		<Hotspots>
+		<Hotspot X="7519.828" Y="-4312.7" Z="635.5027" />
+		<Hotspot X="7593.042" Y="-4497.191" Z="613.6959" />
+		<Hotspot X="6429.25" Y="-2915.277" Z="576.7595" />
+		<Hotspot X="6494.711" Y="-3003.309" Z="584.7078" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
+	<QuestOrder>
+	
+	<CustomBehavior File="UserSettings" LootMobs="True" UseMount="True" PullDistance="30" />
+		<CustomBehavior File="UserSettings" LootMobs="True" TrainNewSkills="False" LearnFlightPaths="True" UseFlightPaths="False" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Azenius Questing Profiles (Eastern Kingdoms = Winterspring Profile Loaded)." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Compiling Quests." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning off auto-train." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting UseFlightPaths to false." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting LearnFlightPaths to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting LootMobs to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting UseMount to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting PullDistance to 30." />
+		
+	<PickUp QuestName="Delivery for Donova" QuestId="28524" GiverName="Salfa" GiverId="11556" />
+	<PickUp QuestName="Winterfall Activity" QuestId="28522" GiverName="Salfa" GiverId="11556" />
+	<TurnIn QuestName="Delivery for Donova" QuestId="28524" TurnInName="Donova Snowden" TurnInId="9298" />
+	<PickUp QuestName="Threat of the Winterfall" QuestId="28460" GiverName="Donova Snowden" GiverId="9298" />
+	<PickUp QuestName="Falling to Corruption" QuestId="28464" GiverName="Donova Snowden" GiverId="9298" />
+	<PickUp QuestName="Doin' De E'ko Magic" QuestId="28540" GiverName="Witch Doctor Mau'ari" GiverId="10307" />
+
+	<Objective QuestName="Doin' De E'ko Magic" QuestId="28540" Type="CollectItem" ItemId="64465" CollectCount="1" />
+	
+	<TurnIn QuestName="Doin' De E'ko Magic" QuestId="28540" TurnInName="Witch Doctor Mau'ari" TurnInId="10307" />
+	<TurnIn QuestName="Falling to Corruption" QuestId="28464" TurnInName="Winterfall Cauldron" TurnInId="207179" TurnInType="Object" X="6839.376" Y="-2495.074" Z="560.2396" />
+	<PickUp QuestName="Mystery Goo" QuestId="28467" GiverName="Winterfall Cauldron" GiverId="207179" GiverType="Object" X="6839.376" Y="-2495.074" Z="560.2396" />
+	
+	<Objective QuestName="Threat of the Winterfall" QuestId="28460" Type="KillMob" MobId="48586" KillCount="15" />
+	<Objective QuestName="Winterfall Activity" QuestId="28522" Type="CollectItem" ItemId="21383" CollectCount="10" />
+	
+			            <If Condition="!IsQuestCompleted(28656)" >
+                    <SetGrindArea>
+                        <GrindArea>
+                            <Factions>82</Factions>
+                            <Hotspots>
+                                <Hotspot X="6677.018" Y="-2482.957" Z="536.9391" />
+							    <Hotspot X="6802.352" Y="-2439.621" Z="552.2875" />
+								<Hotspot X="6733.201" Y="-2660.256" Z="537.3159" />
+                            </Hotspots>
+                        </GrindArea>
+                    </SetGrindArea>
+                <GrindTo Condition="HasQuest(28656)" GoalText="Grinding till we get the quest Strange Life Forces." />
+		        </If>
+	<TurnIn QuestName="Winterfall Activity" QuestId="28522" TurnInName="Salfa" TurnInId="11556" />
+	<TurnIn QuestName="Threat of the Winterfall" QuestId="28460" TurnInName="Donova Snowden" TurnInId="9298" />
+	<TurnIn QuestName="Mystery Goo" QuestId="28467" TurnInName="Donova Snowden" TurnInId="9298" />
+	<PickUp QuestName="Scalding Signs" QuestId="28530" GiverName="Donova Snowden" GiverId="9298" />
+	<PickUp QuestName="Winterfall Runners" QuestId="28469" GiverName="Donova Snowden" GiverId="9298" />
+	<TurnIn QuestName="Strange Life Forces" QuestId="28656" TurnInName="Witch Doctor Mau'ari" TurnInId="10307" />
+	
+	<Objective QuestName="Scalding Signs" QuestId="28530" Type="CollectItem" ItemId="64449" CollectCount="7" />
+	<Objective QuestName="Winterfall Runners" QuestId="28469" Type="CollectItem" ItemId="12829" CollectCount="1" />
+	
+	<TurnIn QuestName="Winterfall Runners" QuestId="28469" TurnInName="Donova Snowden" TurnInId="9298" />
+	<PickUp QuestName="High Chief Winterfall" QuestId="28470" GiverName="Donova Snowden" GiverId="9298" />
+	<TurnIn QuestName="Scalding Signs" QuestId="28530" TurnInName="Donova Snowden" TurnInId="9298" />
+	
+	<If Condition="HasQuest(28470)">
+            <CustomBehavior File="UserSettings" LootMobs="true" />
+    </If>
+	<Objective QuestName="High Chief Winterfall" QuestId="28470" Type="KillMob" MobId="10738" KillCount="1" />
+	
+	<TurnIn QuestName="High Chief Winterfall" QuestId="28470" TurnInName="Donova Snowden" TurnInId="9298" />
+	<PickUp QuestName="The Final Piece" QuestId="28471" GiverName="Crudely-Written Log" GiverId="12842" GiverType="Item" />
+	<TurnIn QuestName="The Final Piece" QuestId="28471" TurnInName="Donova Snowden" TurnInId="9298" />
+	<PickUp QuestName="Words of the High Chief" QuestId="28472" GiverName="Donova Snowden" GiverId="9298" />
+	<TurnIn QuestName="Words of the High Chief" QuestId="28472" TurnInName="Kelek Skykeeper" TurnInId="10920" />
+	<PickUp QuestName="The Ruins of Kel'Theril" QuestId="28479" GiverName="Kelek Skykeeper" GiverId="10920" />
+	<TurnIn QuestName="The Ruins of Kel'Theril" QuestId="28479" TurnInName="Kaldorei Spirit" TurnInId="48658" />
+	<PickUp QuestName="Pride of the Highborne" QuestId="28513" GiverName="Kaldorei Spirit" GiverId="48658" />
+	
+	<Objective QuestName="Pride of the Highborne" QuestId="28513" Type="KillMob" MobId="7523" KillCount="8" />
+	
+	<TurnIn QuestName="Pride of the Highborne" QuestId="28513" TurnInName="Kaldorei Spirit" TurnInId="48658" />
+	<PickUp QuestName="Descendants of the Highborne" QuestId="28534" GiverName="Kaldorei Spirit" GiverId="48658" />
+	<TurnIn QuestName="Descendants of the Highborne" QuestId="28534" TurnInName="Quel'dorei Spirit" TurnInId="48659" />
+	<PickUp QuestName="Legacy of the High Elves" QuestId="28518" GiverName="Quel'dorei Spirit" GiverId="48659" />
+	
+	<Objective QuestName="Legacy of the High Elves" QuestId="28518" Type="CollectItem" ItemId="64441" CollectCount="1" />
+	
+	<TurnIn QuestName="Legacy of the High Elves" QuestId="28518" TurnInName="Quel'dorei Spirit" TurnInId="48659" />
+	<PickUp QuestName="Descendants of the High Elves" QuestId="28535" GiverName="Quel'dorei Spirit" GiverId="48659" />
+	<TurnIn QuestName="Descendants of the High Elves" QuestId="28535" TurnInName="Sin'dorei Spirit" TurnInId="48660" />
+	<PickUp QuestName="Pain of the Blood Elves" QuestId="28519" GiverName="Sin'dorei Spirit" GiverId="48660" />
+	
+	<Objective QuestName="Pain of the Blood Elves" QuestId="28519" Type="KillMob" MobId="48664" KillCount="7" />
+	
+	<TurnIn QuestName="Pain of the Blood Elves" QuestId="28519" TurnInName="Sin'dorei Spirit" TurnInId="48660" />
+	<PickUp QuestName="The Curse of Zin-Malor" QuestId="28536" GiverName="Sin'dorei Spirit" GiverId="48660" />
+	<TurnIn QuestName="The Curse of Zin-Malor" QuestId="28536" TurnInName="Kelek Skykeeper" TurnInId="10920" />
+	<PickUp QuestName="In Pursuit of Shades" QuestId="28537" GiverName="Kelek Skykeeper" GiverId="10920" />
+	
+	<If Condition="HasQuest(28537)">
+            <CustomBehavior File="UserSettings" PullDistance="1" />
+			<RunTo X="6218.006" Y="-4139.863" Z="727.7" />
+    </If>
+	<CustomBehavior File="UserSettings" PullDistance="30" />
+	<Objective QuestName="In Pursuit of Shades" QuestId="28537" Type="CollectItem" ItemId="64463" CollectCount="1" />
+	
+	<TurnIn QuestName="In Pursuit of Shades" QuestId="28537" TurnInName="Kelek Skykeeper" TurnInId="10920" />
+	<PickUp QuestName="Trailing the Spiritspeaker" QuestId="28848" GiverName="Kelek Skykeeper" GiverId="10920" />
+	
+	<If Condition="HasQuest(28848)">
+            <CustomBehavior File="ForceSetVendor" VendorType="Repair" />
+    </If>
+	<TurnIn QuestName="Trailing the Spiritspeaker" QuestId="28848" TurnInName="Nymn" TurnInId="50366" />
+	<PickUp QuestName="Hammer Time" QuestId="28609" GiverName="Lilith the Lithe" GiverId="11191" />
+	
+	<If Condition="HasQuest(28609)">
+         	<CustomBehavior File="Hearthstone" MobId="11118" X="6695.151" Y="-4673.041" Z="721.5677" HearthLocation="2255" />
+    </If>
+	<TurnIn QuestName="Hammer Time" QuestId="28609" TurnInName="Deez Rocksnitch" TurnInId="48965" />
+	<PickUp QuestName="Rubble Trouble" QuestId="28610" GiverName="Deez Rocksnitch" GiverId="48965" />
+	
+	<If Condition="HasQuest(28610) &amp;&amp; !IsQuestCompleted(28610)">
+            <RunTo X="6439.971" Y="-4510.497" Z="735.8711" />  
+    </If>
+	
+	<Objective QuestName="Rubble Trouble" QuestId="28610" Type="CollectItem" ItemId="64586" CollectCount="6" />
+	
+	<TurnIn QuestName="Rubble Trouble" QuestId="28610" TurnInName="Deez Rocksnitch" TurnInId="48965" />
+	<PickUp QuestName="Boulder Delivery" QuestId="28618" GiverName="Deez Rocksnitch" GiverId="48965" />
+	<TurnIn QuestName="Boulder Delivery" QuestId="28618" TurnInName="Lilith the Lithe" TurnInId="11191" />
+	<PickUp QuestName="Kilram's Boast" QuestId="28624" GiverName="Kilram" GiverId="11192" />
+	<TurnIn QuestName="Kilram's Boast" QuestId="28624" TurnInName="Deez Rocksnitch" TurnInId="48965" />
+	<PickUp QuestName="Chop Chop" QuestId="28625" GiverName="Deez Rocksnitch" GiverId="48965" />
+	
+	<Objective QuestName="Chop Chop" QuestId="28625" Type="CollectItem" ItemId="64587" CollectCount="10" />
+	
+	<TurnIn QuestName="Chop Chop" QuestId="28625" TurnInName="Deez Rocksnitch" TurnInId="48965" />
+	<PickUp QuestName="Tree Delivery" QuestId="28626" GiverName="Deez Rocksnitch" GiverId="48965" />
+	<TurnIn QuestName="Tree Delivery" QuestId="28626" TurnInName="Kilram" TurnInId="11192" />
+	<PickUp QuestName="Seril's Boast" QuestId="28627" GiverName="Seril Scourgebane" GiverId="11193" />
+	<TurnIn QuestName="Seril's Boast" QuestId="28627" TurnInName="Deez Rocksnitch" TurnInId="48965" />
+	<PickUp QuestName="Fresh From The Hills" QuestId="28632" GiverName="Deez Rocksnitch" GiverId="48965" />
+	<PickUp QuestName="Are We There, Yeti?" QuestId="28629" GiverName="Umi Rumplesnicker" GiverId="10305" />
+	<PickUp QuestName="The Perfect Horns" QuestId="28631" GiverName="Umi Rumplesnicker" GiverId="10305" />
+	<PickUp QuestName="Echo Three" QuestId="28630" GiverName="Umi Rumplesnicker" GiverId="10305" />
+	<TurnIn QuestName="Echo Three" QuestId="28630" TurnInName="Echo Three" TurnInId="207291" />
+
+	<!--48916 -->
+	<Objective QuestName="The Perfect Horns" QuestId="28631" Type="CollectItem" ItemId="64664" CollectCount="1" />
+	<Objective QuestName="Fresh From The Hills" QuestId="28632" Type="CollectItem" ItemId="64662" CollectCount="7" />
+	<Objective QuestName="Are We There, Yeti?" QuestId="28629" Type="CollectItem" ItemId="12366" CollectCount="10" />
+	
+	<If Condition="HasQuest(28629)">
+            <CustomBehavior File="RunMacro" Macro="/use hearthstone" NumOfTimes="1" WaitTime="15000"/>
+	</If>
+	<TurnIn QuestName="The Perfect Horns" QuestId="28631" TurnInName="Umi Rumplesnicker" TurnInId="10305" />
+	<TurnIn QuestName="Are We There, Yeti?" QuestId="28629" TurnInName="Umi Rumplesnicker" TurnInId="10305" />
+	<PickUp QuestName="Yetiphobia" QuestId="28722" GiverName="Umi Rumplesnicker" GiverId="10305" />
+	<TurnIn QuestName="Fresh From The Hills" QuestId="28632" TurnInName="Deez Rocksnitch" TurnInId="48965" />
+	<PickUp QuestName="Ice Delivery" QuestId="28628" GiverName="Deez Rocksnitch" GiverId="48965" />
+	<TurnIn QuestName="Ice Delivery" QuestId="28628" TurnInName="Seril Scourgebane" TurnInId="11193" />
+	
+	<If Condition="HasQuest(28722) &amp;&amp; !IsQuestCompleted(28722)">
+	<UseItem ItemId="12928" QuestName="Yetiphobia QuestId" QuestId="28722" X="6709.01" Y="-4684.686" Z="721.9752" />
+	</If>
+	<TurnIn QuestName="Yetiphobia" QuestId="28722" TurnInName="Umi Rumplesnicker" TurnInId="10305" />
+	<PickUp QuestName="Starfall Village" QuestId="28674" GiverName="Deez Rocksnitch" GiverId="48965" />
+	<PickUp QuestName="The Pursuit of Umbranse" QuestId="28847" GiverName="Nymn" GiverId="50366" />
+	
+	<If Condition="HasQuest(28674)">
+            <CustomBehavior File="ForceSetVendor" VendorType="Repair" />
+    </If>
+	
+	<TurnIn QuestName="Starfall Village" QuestId="28674" TurnInName="Wynd Nightchaser" TurnInId="11079" />
+	<PickUp QuestName="Exterminators at Work" QuestId="28676" GiverName="Wynd Nightchaser" GiverId="11079" />
+	<PickUp QuestName="Out of Harm's Way" QuestId="28701" GiverName="Wynd Nightchaser" GiverId="11079" />
+	<TurnIn QuestName="Exterminators at Work" QuestId="28676" TurnInName="Rinno Curtainfire" TurnInId="49407" />
+	<PickUp QuestName="Step Into My Barrow" QuestId="28703" GiverName="Rinno Curtainfire" GiverId="49407" />
+	<PickUp QuestName="Spray it Forward" QuestId="28706" GiverName="Rinno Curtainfire" GiverId="49407" />
+	<TurnIn QuestName="Spray it Forward" QuestId="28706" TurnInName="Remma Curtainfire" TurnInId="49399" />
+	<PickUp QuestName="Spray it Again" QuestId="28707" GiverName="Remma Curtainfire" GiverId="49399" />
+	<TurnIn QuestName="Spray it Again" QuestId="28707" TurnInName="Marcy Curtainfire" TurnInId="49400" />
+	<PickUp QuestName="Spray it One More Time" QuestId="28710" GiverName="Marcy Curtainfire" GiverId="49400" />
+	<TurnIn QuestName="Spray it One More Time" QuestId="28710" TurnInName="Sana Curtainfire" TurnInId="49402" />
+	<PickUp QuestName="Where There's Smoke, There's Delicious Meat" QuestId="28718" GiverName="Sana Curtainfire" GiverId="49402" />
+	
+	<Objective QuestName="Out of Harm's Way" QuestId="28701" Type="CollectItem" ItemId="64675" CollectCount="5" />
+	<Objective QuestName="Step Into My Barrow" QuestId="28703" Type="KillMob" MobId="49346" KillCount="10" />
+	<Objective QuestName="Step Into My Barrow" QuestId="28703" Type="KillMob" MobId="49347" KillCount="5" />
+	
+	<TurnIn QuestName="Step Into My Barrow" QuestId="28703" TurnInName="Rinno Curtainfire" TurnInId="49407" />
+	<TurnIn QuestName="Out of Harm's Way" QuestId="28701" TurnInName="Wynd Nightchaser" TurnInId="11079" />
+	<TurnIn QuestName="Where There's Smoke, There's Delicious Meat" QuestId="28718" TurnInName="Jez Goodgrub" TurnInId="49396" />
+	<PickUp QuestName="You Gotta Have Eggs" QuestId="28828" GiverName="Jez Goodgrub" GiverId="49396" />
+	<PickUp QuestName="A Taste for Bear" QuestId="28637" GiverName="Francis Morcott" GiverId="49436" />
+	<PickUp QuestName="Fresh Frostsabers" QuestId="28640" GiverName="Jez Goodgrub" GiverId="49396" />
+	<PickUp QuestName="The Owls Have It" QuestId="28638" GiverName="Jeb Guthrie" GiverId="49537" />
+	
+	<Objective QuestName="You Gotta Have Eggs" QuestId="28828" Type="CollectItem" ItemId="65890" CollectCount="40" />
+	<Objective QuestName="Fresh Frostsabers" QuestId="28640" Type="KillMob" MobId="7431" KillCount="15" />
+	
+	<If Condition="HasQuest(28640) &amp;&amp; IsQuestCompleted(28640)" >
+		<CustomBehavior File="CompleteLogQuest" QuestId="28640" />
+		<CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000"/>
+	</If>
+	<Objective QuestName="Pride of the Dinner Table" QuestId="28641" Type="KillMob" MobId="7434" KillCount="15" />
+	
+	<If Condition="HasQuest(28641) &amp;&amp; IsQuestCompleted(28641)" >
+		<CustomBehavior File="CompleteLogQuest" QuestId="28641" />
+		<CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000"/>
+	</If>
+	<Objective QuestName="Shy-Rotam" QuestId="28742" Type="KillMob" MobId="10737" KillCount="1" />
+	<Objective QuestName="A Taste for Bear" QuestId="28637" Type="KillMob" MobId="7444" KillCount="15" />
+	
+	<If Condition="HasQuest(28637) &amp;&amp; IsQuestCompleted(28637)" >
+		<CustomBehavior File="CompleteLogQuest" QuestId="28637" />
+		<CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000"/>
+	</If>
+	<Objective QuestName="The Owls Have It" QuestId="28638" Type="KillMob" MobId="7455" KillCount="15" />
+	
+	<If Condition="HasQuest(28638) &amp;&amp; IsQuestCompleted(28638)" >
+		<CustomBehavior File="CompleteLogQuest" QuestId="28638" />
+		<CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000"/>
+	</If>
+	<Objective QuestName="Screechy Keen" QuestId="28745" Type="KillMob" MobId="7456" KillCount="15" />
+	
+	<If Condition="HasQuest(28745) &amp;&amp; IsQuestCompleted(28745)" >
+		<CustomBehavior File="CompleteLogQuest" QuestId="28745" />
+		<CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000"/>
+	</If>
+	<Objective QuestName="A Bird of Legend" QuestId="28782" Type="KillMob" MobId="50044" KillCount="1" />
+	<Objective QuestName="A Little Gamy" QuestId="28719" Type="KillMob" MobId="7443" KillCount="15" />
+	
+	<If Condition="HasQuest(28719) &amp;&amp; IsQuestCompleted(28719)" >
+		<CustomBehavior File="CompleteLogQuest" QuestId="28719" />
+		<CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000"/>
+	</If>
+	<Objective QuestName="Ursius" QuestId="28639" Type="KillMob" MobId="10806" KillCount="1" />
+	
+	<TurnIn QuestName="A Bird of Legend" QuestId="28782" TurnInName="Jeb Guthrie" TurnInId="49537" />
+	<TurnIn QuestName="Shy-Rotam" QuestId="28742" TurnInName="Jez Goodgrub" TurnInId="49396" />
+	<TurnIn QuestName="You Gotta Have Eggs" QuestId="28828" TurnInName="Jez Goodgrub" TurnInId="49396" />
+	<TurnIn QuestName="Ursius" QuestId="28639" TurnInName="Francis Morcott" TurnInId="49436" />
+	
+	<If Condition="HasQuest(28847)">
+			<RunTo X="7629.059" Y="-4422.968" Z="623.8439" />
+            <CustomBehavior File="RunMacro" Macro="/use hearthstone" NumOfTimes="1" WaitTime="15000"/>
+	</If>
+	<TurnIn QuestName="The Pursuit of Umbranse" QuestId="28847" TurnInName="Haleh" TurnInId="10929" />
+	<PickUp QuestName="Altered Beasts" QuestId="28837" GiverName="Haleh" GiverId="10929" />
+	<Objective QuestName="Altered Beasts" QuestId="28837" Type="CollectItem" ItemId="66052" CollectCount="5" />
+	<TurnIn QuestName="Altered Beasts" QuestId="28837" TurnInName="Haleh" TurnInId="10929" />
+	<PickUp QuestName="The Owlbeasts' Defense" QuestId="28838" GiverName="Haleh" GiverId="10929" />
+	<Objective QuestName="The Owlbeasts' Defense" QuestId="28838" Type="CollectItem" ItemId="65902" CollectCount="1" />
+	
+	<If Condition="HasQuest(28838) &amp;&amp; IsQuestCompleted(28838)" >
+		<CustomBehavior File="CompleteLogQuest" QuestId="28838" />
+		<CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000"/>
+	</If>
+	<PickUp QuestName="Magic Prehistoric" QuestId="28839" GiverName="Haleh" GiverId="10929" />
+	<PickUp QuestName="Razor Beak and Antlers Pointy" QuestId="28829" GiverName="Jadrag the Slicer" GiverId="50263" />
+
+	<While Condition="HasQuest(28839) &amp;&amp; !IsQuestCompleted(28839)">
+		<CustomBehavior File="InteractWith" QuestId="28839" ObjectType="GameObject" MobId="207421" NumOfTimes="1" CollectionDistance="10" X="5763.891" Y="-4992.519" Z="809.2988" />
+		<CustomBehavior File="InteractWith" QuestId="28839" ObjectType="GameObject" MobId="207423" NumOfTimes="1" CollectionDistance="10" X="5612.038" Y="-5027.156" Z="808.2819" />
+		<CustomBehavior File="InteractWith" QuestId="28839" ObjectType="GameObject" MobId="207422" NumOfTimes="1" CollectionDistance="10" X="5472.006" Y="-4976.554" Z="850.4271"  />
+	</While>
+	
+	<If Condition="HasQuest(28839) &amp;&amp; IsQuestCompleted(28839)" >
+		<CustomBehavior File="CompleteLogQuest" QuestId="28839" />
+		<CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000"/>
+	</If>
+	<Objective QuestName="Razor Beak and Antlers Pointy" QuestId="28829" Type="KillMob" MobId="7452" KillCount="12" />
+	
+	<TurnIn QuestName="Razor Beak and Antlers Pointy" QuestId="28829" TurnInName="Jadrag the Slicer" TurnInId="50263" />
+	<PickUp QuestName="Chips off the Old Block" QuestId="28830" GiverName="Jadrag the Slicer" GiverId="50263" />
+	<PickUp QuestName="Damn You, Frostilicus" QuestId="28831" GiverName="Jadrag the Slicer" GiverId="50263" />
+	
+	<Objective QuestName="Damn You, Frostilicus" QuestId="28831" Type="KillMob" MobId="50251" KillCount="1" />
+	<Objective QuestName="Winterwater" QuestId="28840" Type="CollectItem" ItemId="65903" CollectCount="7" />
+	<Objective QuestName="Chips off the Old Block" QuestId="28830" Type="KillMob" MobId="50258" KillCount="8" />
+	
+	<TurnIn QuestName="Chips off the Old Block" QuestId="28830" TurnInName="Jadrag the Slicer" TurnInId="50263" />
+	<TurnIn QuestName="Damn You, Frostilicus" QuestId="28831" TurnInName="Jadrag the Slicer" TurnInId="50263" />
+	<TurnIn QuestName="Winterwater" QuestId="28840" TurnInName="Haleh" TurnInId="10929" />
+	<PickUp QuestName="Umbranse's Deliverance" QuestId="28842" GiverName="Haleh" GiverId="10929" />
+	<PickUp QuestName="The Arcane Storm Within" QuestId="28841" GiverName="Haleh" GiverId="10929" />
+	
+	<While Condition="HasQuest(28841) &amp;&amp; !IsQuestCompleted(28841)" >
+		   <CustomBehavior File="UseItemOn" QuestId="28841" MobId="50291" ItemId="66060" NumOfTimes="5" WaitTime="1000" Range="5" CollectionDistance="500" X="6169.613" Y="-4236.852" Z="652.482" />
+	</While>
+	<Objective QuestName="Umbranse's Deliverance" QuestId="28842" Type="KillMob" MobId="50325" KillCount="1" />
+	
+	<If Condition="HasQuest(28842) &amp;&amp; IsQuestCompleted(28842)">
+        <CustomBehavior File="WaitTimer" WaitTime="2000" />
+        <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(66061)" />
+        <CustomBehavior File="WaitTimer" WaitTime="8000" />
+     </If>
+		
+	<TurnIn QuestName="Umbranse's Deliverance" QuestId="28842" TurnInName="Haleh" TurnInId="10929" />
+	<TurnIn QuestName="The Arcane Storm Within" QuestId="28841" TurnInName="Haleh" TurnInId="10929" />
+	
+	<If Condition="IsQuestCompleted(28842) &amp;&amp; Me.ZoneId == 618">
+	    <RunTo X="6174.498" Y="-4563.842" Z="713.3448" />
+            <CustomBehavior File="RunMacro" Macro="/use hearthstone" NumOfTimes="1" WaitTime="15000"/>
+			<RunTo X="6726.742" Y="-4656.875" Z="720.8079" />
+			<CustomBehavior File="RunMacro" Macro="/dance" NumOfTimes="1" WaitTime="15000"/>
+			<CustomBehavior File="Message" Text="All done! Congratulations to level 58-59! Stay tuned for Outlands!" />
+	</If>
+	
+	<If Condition="Me.ZoneId == 618">
+                <CustomBehavior File="UseTaxi" DestName="Orgrimmar" MobId="11139" X="6815.121" Y="-4610.124" Z="710.6699" />
+	</If>
+	
+	<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 75 &amp;&amp; Me.Silver &gt;= 5000" >
+				<CustomBehavior File="Message" Text="Training riding skill/s." LogColor="SpringGreen" />
+
+				<CustomBehavior File="ForceTrainRiding" MobId="44919" X="1799.54" Y="-4357.09" Z="102.4016" />
+	</If>
+	
+	<If Condition="Me.Level &lt;= 59">
+		<CustomBehavior File="Message" Text="You must be level 60 or higher to run the Outlands profiles." LogColor="SpringGreen" />
+		<CustomBehavior File="UserDialog" SoundCue="Exclamation" StopOnContinue="True" SoundCueInterval="1" Title="Get to Level 60." Text="You must be level 60 or higher to run the Outlands profiles." />
+	</If>
+	
+	<If Condition="Me.Silver &lt;= 24900 &amp;&amp; Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 150">
+		<CustomBehavior File="Message" Text="You do not have the necessary amount of money to train 'Expert Riding', to run the Outlands profiles you must be able to use flying mounts." LogColor="SpringGreen" />
+		<CustomBehavior File="UserDialog" SoundCue="Exclamation" StopOnContinue="True" SoundCueInterval="1" Title="Get more Money." Text="You do not have the necessary amount of money to train 'Expert Riding', to run the Outlands profiles you must be able to use flying mounts." />
+	</If>
+	
+	<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 150 &amp;&amp; Me.Level &gt;= 60 &amp;&amp; Me.Silver &gt;= 25000">
+				<CustomBehavior File="Message" Text="Training riding skill/s." LogColor="SpringGreen" />
+
+				<CustomBehavior File="ForceTrainRiding" MobId="44919" X="1799.54" Y="-4357.09" Z="102.4016" />
+				
+				<If Condition="!HasItem(25475)">
+					<CustomBehavior File="InteractWith" MobId="44918" BuyItemId="25475" X="1806.94" Y="-4340.67" Z="102.0501" />
+				</If>
+				
+				<If Condition="HasItem(25475)">
+					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(25475)" WaitTime="1000" />
+				</If>
+	</If>
+	
+	<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 225 &amp;&amp; Me.ZoneId == 1637">
+		<RunTo X="1728.964" Y="-4398.926" Z="35.34357" />
+		<RunTo X="1709.332" Y="-4314.855" Z="31.323" />
+		<RunTo X="1710.818" Y="-4288.288" Z="29.2624" />
+		<RunTo X="1735.325" Y="-4277.867" Z="17.63633" />
+		<RunTo X="1740.138" Y="-4295.042" Z="15.21025" />
+		<RunTo X="1772.643" Y="-4327.143" Z="-8.181529" />
+			<CustomBehavior File="InteractWith" ObjectType="GameObject" MobId="195142" NumOfTimes="1" CollectionDistance="200" WaitTime="1000" X="1772.643" Y="-4327.143" Z="-8.181529" />
+	</If>
+
+	<!-- <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 225 &amp;&amp; Me.ZoneId == 1637"> 
+		<CustomBehavior File="UseTaxi" DestName="Ratchet, Northern Barrens" MobId="3310" X="1799.95" Y="-4370.14" Z="102.6429" />
+	</If>
+	
+	<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 225 &amp;&amp; Me.ZoneId == 17">
+		<CustomBehavior File="UseTransport" TransportId="20808" 
+			GetOffX="-14284.59" GetOffY="558.7435" GetOffZ="8.686213"
+			TransportEndX="-14277.75" TransportEndY="582.8661" TransportEndZ="-0.02752725" 
+			TransportStartX="-1005.613" TransportStartY="-0.04462894" TransportStartZ="109.2562" 
+			WaitAtX="-995.2404" WaitAtY="-3827.688" WaitAtZ="5.642219" />
+		</If>
+	
+	<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 225 &amp;&amp; Me.ZoneId == 5287"> 
+		<CustomBehavior File="UseTaxi" DestName="Stonard, Swamp of Sorrows" MobId="2858" X="-14448.56" Y="506.129" Z="26.27016" />
+	</If>
+	
+	<TurnIn QuestName="Okrilla and the Blasted Lands" QuestId="28553" TurnInName="Okrilla" TurnInId="41124" /> -->
+	
+	<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 225 &amp;&amp; Me.ZoneId == 4">
+		<RunTo X="-11886.91" Y="-3205.851" Z="-15.42418" />
+		<CustomBehavior File="GoThruPortal" X="-11904.83" Y="-3208.021" Z="-14.85348" />
+	</If>
+	
+	<CustomBehavior File="LoadProfile" Profile="Hellfire Peninsula.xml" />
+	
+	</QuestOrder>
+</HBProfile>

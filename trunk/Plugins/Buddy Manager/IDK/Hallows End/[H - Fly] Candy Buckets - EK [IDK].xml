@@ -1,0 +1,805 @@
+<HBProfile>
+
+	<MinDurability>0.1</MinDurability>
+
+
+	<Blackspots>
+	</Blackspots>
+	<AvoidMobs>
+	</AvoidMobs>
+	
+	
+	<QuestOrder>
+	
+	
+	<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="2" ExpiryTime="6" ExpiryAction="InputEnabled_Continue" Text="If you have a Hallowed Helm - it will be deleted on purpose" />
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<While Condition="(HasItem(33292))" >
+	<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="Get the Hallowed Helm out of your bank and delete it please!" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</While>
+				
+	
+			<!-- Outside UC -->
+			<If Condition="Me.ZoneId != 3968" >
+	<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="This starts outside UC - press continue to fly there now if you are in Eastern Kingdoms" />
+				<CustomBehavior File="FlyTo" DestName="Undercity" X="1886.376" Y="236.4364" Z="57.90359" />
+				<CustomBehavior File="ForcedDismount" />
+			</If>
+
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+
+				
+				<!-- Tirisfal Glades, Brill -->
+				<CustomBehavior File="FlyTo" DestName="Tirisfal Glades, Brill" X="2260.874" Y="287.6914" Z="33.3797" />
+				<CustomBehavior File="ForcedDismount" />
+
+				<CustomBehavior File="InteractWith" MobId="190066" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" WaitTime="1000" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="2260.874" Y="287.6914" Z="33.3797" />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				
+				<!-- Tirisfal Glades, The Bulwark -->
+				<CustomBehavior File="FlyTo" DestName="Tirisfal Glades, The Bulwark" X="1677.598" Y="-714.269" Z="58.89039" />
+				<CustomBehavior File="ForcedDismount" />
+
+				<CustomBehavior File="InteractWith" MobId="208149" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" WaitTime="1000" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="1677.598" Y="-714.269" Z="58.89039" />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+
+				<!-- Silverpine Forest, Forsaken Rear Guard -->
+				<CustomBehavior File="FlyTo" DestName="Silverpine Forest, Forsaken Rear Guard" X="1074.243" Y="1580.913" Z="27.73073" />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="208146" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="1074.243" Y="1580.913" Z="27.73073" />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				
+				
+				<!-- Silverpine Forest, The Sepulcher -->
+				<CustomBehavior File="FlyTo" DestName="Silverpine Forest, The Sepulcher" X="483.45" Y="1520.593" Z="133.1494" />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="190074" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="483.45" Y="1520.593" Z="133.1494" />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				
+				<!-- Hillsbrad Foothills, Tarren Mill -->
+				<CustomBehavior File="FlyTo" DestName="Hillsbrad Foothills, Tarren Mill" X="-38.23497" Y="-946.0353" Z="54.28238" />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="190078" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="-38.23497" Y="-946.0353" Z="54.28238" />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+
+				
+				<!-- Hillsbrad Foothills, Eastpoint Tower -->
+				<CustomBehavior File="FlyTo" DestName="Hillsbrad Foothills, Eastpoint Tower" X="-572.1671" Y="-1083.49" Z="61.66709" />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="208145" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="-572.1671" Y="-1083.49" Z="61.66709" />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				
+				
+				<!-- Western Plaguelands, Andorhal -->
+				<CustomBehavior File="FlyTo" DestName="Western Plaguelands, Andorhal" X="1535.444" Y="-1635.236" Z="67.89111" />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="208156" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="1535.444" Y="-1635.236" Z="67.89111" />
+				
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				
+				<!--In case it decided it can't fly that way-->
+				<CustomBehavior File="FlyTo" DestName="Eastern Plaguelands, Light's Hope Chapel" X="1882.42" Y="-2463.139" Z="155.9633" />
+				<CustomBehavior File="FlyTo" DestName="Eastern Plaguelands, Light's Hope Chapel" X="1967.965" Y="-3107.792" Z="238.9989"  />
+				<CustomBehavior File="FlyTo" DestName="Eastern Plaguelands, Light's Hope Chapel" X="2263.471" Y="-4445.702" Z="187.0749"  />
+	
+				<!-- Eastern Plaguelands, Light's Hope Chapel -->
+				<CustomBehavior File="FlyTo" DestName="Eastern Plaguelands, Light's Hope Chapel" X="2278.749" Y="-5318.261" Z="88.4849"  />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="190108" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="2278.749" Y="-5318.261" Z="88.4849"  />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+	
+				<!-- Cannot fly in Ghostlands/Eversong Woods... Please do these yourself :( -->
+				
+				<!-- The Hinterlands, Hiri'watha Research Station -->
+				<CustomBehavior File="FlyTo" DestName="The Hinterlands, Hiri'watha Research Station" X="-22.99381" Y="-2810.433" Z="121.9154" />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="208148" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="-22.99381" Y="-2810.433" Z="121.9154" />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+	
+				
+				<!-- The Hinterlands, Revantusk Village -->
+				<CustomBehavior File="FlyTo" DestName="The Hinterlands, Revantusk Village" X="-590.7684" Y="-4612.392" Z="9.48407" />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="190089" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="-590.7684" Y="-4612.392" Z="9.48407" />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				
+				<!-- Arathi Highlands, Hammerfall -->
+				<CustomBehavior File="FlyTo" DestName="Arathi Highlands, Hammerfall" X="-936.4828" Y="-3523.434" Z="70.9346" />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="190082" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="-936.4828" Y="-3523.434" Z="70.9346" />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				
+				<!-- Twilight Highlands, The Krazzworks -->
+				<CustomBehavior File="FlyTo" DestName="Twilight Highlands, The Krazzworks" X="-2753.567" Y="-6410.439" Z="242.2767" />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="208153" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="-2753.567" Y="-6410.439" Z="242.2767" />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				
+				<!-- Twilight Highlands, Bloodgulch -->
+				<CustomBehavior File="FlyTo" DestName="Twilight Highlands, Bloodgulch" X="-3672.384" Y="-5280.747" Z="41.54298" />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="208150" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="-3672.384" Y="-5280.747" Z="41.54298" />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				
+				<!-- Twilight Highlands, Dragonmaw Port -->
+			<If Condition="(IsQuestCompleted(26784))" >
+				<CustomBehavior File="FlyTo" DestName="Twilight Highlands, Dragonmaw Port" X="-4040.135" Y="-6385.357" Z="37.86663" />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="208152" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="-4040.135" Y="-6385.357" Z="37.86663" />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+			</If>
+				
+				<!-- Twilight Highlands, Crushblow -->
+				<CustomBehavior File="FlyTo" DestName="Twilight Highlands, Crushblow" X="-4833.374" Y="-4819.253" Z="196.0432" />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="208151" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="-4833.374" Y="-4819.253" Z="196.0432" />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				
+				<!-- Badlands, Fuselight -->
+				<CustomBehavior File="FlyTo" DestName="Badlands, Fuselight" X="-6603.203" Y="-3925.668" Z="379.1076" />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="208137" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="-6603.203" Y="-3925.668" Z="379.1076" />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				
+				
+				<!-- Badlands, New Kargath -->
+				<CustomBehavior File="FlyTo" DestName="Badlands, New Kargath" X="-6728.842" Y="-2446.534" Z="272.7745" />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="208143" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="-6728.842" Y="-2446.534" Z="272.7745" />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				
+				<!-- Searing Gorge, Iron Summit -->
+				<CustomBehavior File="FlyTo" DestName="Searing Gorge, Iron Summit" X="-7121.243" Y="-1201.581" Z="304.0552" />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="208138" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="-7121.243" Y="-1201.581" Z="304.0552" />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				
+				<!-- Swamp of Sorrows, Bogpaddle -->
+				<CustomBehavior File="FlyTo" DestName="Swamp of Sorrows, Bogpaddle" X="-9793.58" Y="-3879.698" Z="24.30521" />
+				<CustomBehavior File="FlyTo" DestName="Swamp of Sorrows, Bogpaddle" X="-9764.458" Y="-3880.255" Z="21.99823" />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="208139" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="-9776.159" Y="-3880.444" Z="22.81866"  />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+	
+				<!-- Swamp of Sorrows, Stonard -->
+				<CustomBehavior File="FlyTo" DestName="Swamp of Sorrows, Stonard" X="-10456.11" Y="-3263.503" Z="20.17881" />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="190086" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="-10456.11" Y="-3263.503" Z="20.17881" />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+	
+				<!-- Northern Stranglethorn, Grom'gol Base Camp -->
+				<CustomBehavior File="FlyTo" DestName="Northern Stranglethorn, Grom'gol Base Camp" X="-12411.92" Y="227.012" Z="1.038346" />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="190084" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="-12411.92" Y="227.012" Z="1.038346" />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				
+				<!-- The Cape of Stranglethorn, Hardwrench Hideaway -->
+				<CustomBehavior File="FlyTo" DestName="The Cape of Stranglethorn, Hardwrench Hideaway" X="-13250.63" Y="724.5165" Z="3.158353" />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="208147" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="-13250.63" Y="724.5165" Z="3.158353" />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+	
+				<!-- The Cape of Stranglethorn, Booty Bay -->
+				<CustomBehavior File="FlyTo" DestName="The Cape of Stranglethorn, Booty Bay" X="-14441.21" Y="469.8108" Z="15.32929" />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="190103" ObjectType="Gameobject"/>
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="-14441.21" Y="469.8108" Z="15.32929" />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+	
+				<!-- Blasted Lands, Dreadmaul Hold -->
+				<CustomBehavior File="FlyTo" DestName="Blasted Lands, Dreadmaul Hold" X="-10905.66" Y="-2707.413" Z="7.684304" />
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="208144" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo X="-10905.66" Y="-2707.413" Z="7.684304" />
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Skeleton Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Skeleton Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				
+				<CustomBehavior File="FlyTo" DestName="The Dark Portal - Blasted Lands" X="-11887.02" Y="-3206.734" Z="-15.41126" />
+
+				<!-- through the BC portal we go! -->
+				<RunTo X="-11903.13" Y="-3208.053" Z="-14.81489" />
+				<CustomBehavior File="MyCTM" X="-11913.86" Y="-3209.951" Z="-14.66572" />
+				<CustomBehavior File="WaitTimer" WaitTime="5000" />
+				
+		<CustomBehavior File="LoadProfile" ProfileName="[H - Fly] Candy Buckets - BC [IDK]" /> 
+		
+	<!--
+				<CustomBehavior File="FlyTo" DestName="" 
+				<CustomBehavior File="ForcedDismount" />
+				
+				<CustomBehavior File="InteractWith" MobId="" ObjectType="Gameobject" />
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />	
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37586)" WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				<RunTo 
+				<If Condition="(Me.HasAura(&quot;Ghost Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Ghost Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Bat Costume&quot;))" >
+					<CustomBehavior File="RunMacro" Macro="/cancelaura Bat Costume" />	
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+				<If Condition="(Me.HasAura(&quot;Trick&quot;))" >
+					<CustomBehavior File="WaitTimer" WaitTime="60000" GoalText="Waiting for Trick to expire {TimeRemaining}" />
+				</If>
+				<If Condition="(HasItem(33292))" >
+					<CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,'Hallowed Helm') then PickupContainerItem(bag,slot); DeleteCursorItem(); end; end; end" />
+					<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Waiting for bot {TimeRemaining}" />
+				</If>
+	
+	-->
+	
+	
+	
+	</QuestOrder>
+</HBProfile>

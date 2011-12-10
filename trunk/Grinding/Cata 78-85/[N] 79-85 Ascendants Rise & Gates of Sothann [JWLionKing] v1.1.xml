@@ -1,0 +1,58 @@
+﻿<HBProfile>
+  <MinDurability>0.20</MinDurability>
+  <MinFreeBagSlots>1</MinFreeBagSlots>
+  <MinLevel>79</MinLevel>
+  <MaxLevel>86</MaxLevel>
+  <SellGrey>FALSE</SellGrey>
+  <MailWhite>FALSE</MailWhite>
+  <MailGreen>FALSE</MailGreen>
+  <MailBlue>FALSE</MailBlue>
+  <MailPurple>FALSE</MailPurple>
+  <TargetElites>False</TargetElites>
+  <SubProfile>
+    <Name>[N] 79-85 Ascendants Rise and Gates of Sothann [JWLionKing]</Name>
+    <MinLevel>79</MinLevel>
+    <MaxLevel>86</MaxLevel>
+    <GrindArea>
+      <Factions>14 2253 2232 2146</Factions>
+      <RandomizeHotspots>false</RandomizeHotspots>
+      <MaximumHotspotTime>0</MaximumHotspotTime>
+      <Hotspots>
+
+	<Hotspot X="3798.27" Y="-3402.928" Z="1020.856" />
+	<Hotspot X="3856.968" Y="-3470.726" Z="1022.26" />
+	<Hotspot X="3933.706" Y="-3365.578" Z="1011.08" />
+	<Hotspot X="3935.29" Y="-3447.561" Z="1012.53" />
+	<Hotspot X="3994.212" Y="-3510.679" Z="1011.076" />
+	<Hotspot X="4131.926" Y="-3509.694" Z="1013.5" />
+	<Hotspot X="4164.835" Y="-3473.932" Z="1013.338" />
+	<Hotspot X="4186.435" Y="-3410.09" Z="1013.511" />
+	<Hotspot X="4216.207" Y="-3398.202" Z="1019.503" />
+
+
+	<Hotspot X="4243.921" Y="-3889.387" Z="979.2958" />
+	<Hotspot X="4259.524" Y="-3973.951" Z="975.0742" />
+	<Hotspot X="4236.348" Y="-4144.989" Z="983.4333" />
+	<Hotspot X="4302.766" Y="-4058.724" Z="977.3616" />
+	<Hotspot X="4329.828" Y="-4047.017" Z="979.1329" />
+	<Hotspot X="4300.295" Y="-3930.574" Z="975.9109" />
+	<Hotspot X="4369.615" Y="-3802.294" Z="974.8102" />
+	<Hotspot X="4356.075" Y="-3757.062" Z="987.7058" />
+	<Hotspot X="4284.375" Y="-3776.719" Z="984.239" />
+	<Hotspot X="4242.124" Y="-3843.013" Z="975.8972" />
+
+      </Hotspots>
+	
+    </GrindArea>
+
+     <Blackspots>
+	<Blackspot X="3897.477" Y="-3425.412" Z="1012.418" Radius="10.64971" />
+	<Blackspot X="4266.093" Y="-3366.241" Z="1019.89" Radius="28.69328" />
+     </Blackspots>
+
+     <Avoidmobs>
+	<Mob Name="Azralon the Gatekeeper" Entry="40814" />
+     </Avoidmobs>
+  
+</SubProfile>
+</HBProfile>

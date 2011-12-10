@@ -1,0 +1,60 @@
+<HBProfile>
+	<Name>Uldum Oasis of Vair'sar Flying Mount</Name>
+	<MinDurability>0.4</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+	<ProtectedItems>
+		<Item name="Fishing Pole" entry="6256" />
+	</ProtectedItems>
+	<SubProfile>
+		<Name>Uldum Oasis of Vair'sar Flying Mount</Name>
+		<MinLevel>1</MinLevel>
+		<MaxLevel>87</MaxLevel>
+		<TargetMinLevel>87</TargetMinLevel>
+		<Factions>7 </Factions>
+		<Hotspots>
+<Hotspot X="-9121.16" Y="525.806" Z="152.6979" />
+<Hotspot X="-8972.759" Y="553.828" Z="152.3688" />
+<Hotspot X="-8849.899" Y="575.7059" Z="153.3489" />
+<Hotspot X="-8775.446" Y="610.4823" Z="153.9942" />
+<Hotspot X="-8562.863" Y="644.3794" Z="155.6891" />
+<Hotspot X="-8537.33" Y="636.8046" Z="155.9001" />
+<Hotspot X="-8508.408" Y="601.4045" Z="156.2722" />
+<Hotspot X="-8503.95" Y="572.9525" Z="156.4998" />
+<Hotspot X="-8533.553" Y="387.4222" Z="157.9763" />
+<Hotspot X="-8516.621" Y="284.3773" Z="158.8034" />
+<Hotspot X="-8481.765" Y="208.1537" Z="159.4693" />
+<Hotspot X="-8484.188" Y="191.3348" Z="158.4249" />
+<Hotspot X="-8497.65" Y="187.2935" Z="156.6913" />
+<Hotspot X="-8521.685" Y="212.2729" Z="155.9616" />
+<Hotspot X="-8543.927" Y="369.6254" Z="155.0325" />
+<Hotspot X="-8562.168" Y="510.1305" Z="154.2906" />
+<Hotspot X="-8591.159" Y="554.2336" Z="154.0093" />
+<Hotspot X="-8659.836" Y="593.93" Z="153.593" />
+<Hotspot X="-8746.418" Y="590.732" Z="153.6441" />
+<Hotspot X="-8883.585" Y="565.9757" Z="153.7101" />
+<Hotspot X="-9020.428" Y="554.0315" Z="156.0086" />
+<Hotspot X="-9140.141" Y="507.1973" Z="155.3637" />
+<Hotspot X="-9170.575" Y="505.2593" Z="155.3637" />
+<Hotspot X="-9178.387" Y="524.5506" Z="153.6015" />
+<Hotspot X="-9170.297" Y="530.4362" Z="153.3602" />
+		</Hotspots>
+		<Vendors>
+			
+		</Vendors>
+		<Blackspots>
+
+		</Blackspots>
+		<AvoidMobs>
+
+		</AvoidMobs>
+		<Mailboxes>
+		</Mailboxes>
+	</SubProfile>
+</HBProfile>

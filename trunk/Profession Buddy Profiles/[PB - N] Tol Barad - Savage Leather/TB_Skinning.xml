@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Professionbuddy>
+  <!--         seVen <3-->
+  <!--- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!---->
+  <!---->
+  <!--Some Important Settings-->
+  <!--- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <CustomAction Code="CharacterSettings.Instance.FindVendorsAutomatically = false;" />
+  <CustomAction Code="CharacterSettings.Instance.PullDistance = 100;" />
+  <CustomAction Code="CharacterSettings.Instance.LootMobs = true;" />
+  <CustomAction Code="CharacterSettings.Instance.SkinMobs = true;" />
+  <!--- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!---->
+  <!--Moving to Tol Barad-->
+  <!--- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <CallSubRoutine SubRoutineName="Traveling to Tol Barad" />
+  <SubRoutine SubRoutineName="Traveling to Tol Barad">
+    <If Condition="Me.MapId != 732 &amp;&amp; Me.IsHorde" IgnoreCanRun="True">
+      <FlyToAction Dismount="True" X="2040.681" Y="-4340.183" Z="95.4894" />
+      <MoveToAction MoveType="Location" Pathing="ClickToMove" Entry="0" X="2032.424" Y="-4332.101" Z="95.47142" />
+      <InteractionAction Entry="206595" InteractDelay="0" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+      <WaitAction Condition="Me.ZoneId == 5389" Timeout="12000" />
+      <If Condition="Me.ZoneId == 5389" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Load Profile H" />
+      </If>
+    </If>
+    <If Condition="Me.MapId != 732 &amp;&amp; Me.IsAlliance" IgnoreCanRun="True">
+      <FlyToAction Dismount="True" X="-8208.197" Y="446.4519" Z="117.9884" />
+      <CustomAction Code="Log(&quot;Moving to Tol Barad&quot;);" />
+      <InteractionAction Entry="206594" InteractDelay="0" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+      <WaitAction Condition="Me.ZoneId == 5389" Timeout="10000" />
+      <If Condition="Me.ZoneId == 5389" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Load Profile A" />
+      </If>
+    </If>
+  </SubRoutine>
+  <!--- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!---->
+  <!---->
+  <!--Some fancy While loops-->
+  <!--- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <While Condition="Me.FreeNormalBagSlots &lt;= 1" IgnoreCanRun="True">
+    <CallSubRoutine SubRoutineName="Repair and Sell" />
+  </While>
+  <While Condition="InbagCount(67495) &gt;= 1" IgnoreCanRun="True">
+    <CustomAction Code="Log(&quot;Opening Extra Loot&quot;);" />
+    <CustomAction Code="Lua.DoString(&quot;UseItemByName(\&quot;Strange Bloated Stomach\&quot;)&quot;);" />
+    <WaitAction Condition="false" Timeout="500" />
+  </While>
+  <!--- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!---->
+  <!---->
+  <!--Sub Routines-->
+  <!--- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <SubRoutine SubRoutineName="Repair and Sell">
+    <If Condition="Me.IsHorde" IgnoreCanRun="True">
+      <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-568.1771" Y="1379.677" Z="25.16883" />
+      <InteractionAction Entry="208226" InteractDelay="0" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+      <WaitAction Condition="Me.ZoneId == 1637" Timeout="12000" />
+      <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="2004.331" Y="-4366.994" Z="94.37107" />
+      <MailItemAction Entry="" AutoFindMailBox="False" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Leather" X="2004.331" Y="-4366.994" Z="94.37107" />
+      <MailItemAction Entry="" AutoFindMailBox="False" UseCategory="True" Category="Recipe" SubCategoryType="WoWItemRecipeClass" SubCategory="None" X="2004.331" Y="-4366.994" Z="94.37107" />
+      <WaitAction Condition="false" Timeout="500" />
+      <CallSubRoutine SubRoutineName="Traveling to Tol Barad" />
+    </If>
+    <If Condition="Me.IsAlliance" IgnoreCanRun="True">
+      <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-344.4966" Y="1034.234" Z="22.0901" />
+      <InteractionAction Entry="208227" InteractDelay="150" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+      <WaitAction Condition="Me.ZoneId == 1519" Timeout="12000" />
+      <FlyToAction Dismount="True" X="-8350.281" Y="645.2254" Z="95.50043" />
+      <MailItemAction Entry="" AutoFindMailBox="True" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Leather" X="0" Y="0" Z="0" />
+      <MailItemAction Entry="" AutoFindMailBox="True" UseCategory="True" Category="Recipe" SubCategoryType="WoWItemRecipeClass" SubCategory="None" X="0" Y="0" Z="0" />
+      <WaitAction Condition="false" Timeout="500" />
+      <CallSubRoutine SubRoutineName="Traveling to Tol Barad" />
+    </If>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="Load Profile H">
+    <LoadProfileAction Path="HBProfiles\Tol Barad Skinning [seVen]\TB Skin B.xml" ProfileType="Honorbuddy" />
+  </SubRoutine>
+  <SubRoutine SubRoutineName="Load Profile A">
+    <LoadProfileAction Path="HBProfiles\Tol Barad Skinning [seVen]\TB Skin.xml" ProfileType="Honorbuddy" />
+  </SubRoutine>
+  <!--- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+</Professionbuddy>

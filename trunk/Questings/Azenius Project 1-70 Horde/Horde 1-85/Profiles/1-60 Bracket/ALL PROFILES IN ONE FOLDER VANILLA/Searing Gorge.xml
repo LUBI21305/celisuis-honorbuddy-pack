@@ -1,0 +1,356 @@
+<HBProfile>
+	<Name>Azenius Project [Searing Gorge] 47-49</Name>
+	<MinLevel>1</MinLevel>
+	<MaxLevel>85</MaxLevel>
+	<MinDurability>0.4</MinDurability>
+	<MinFreeBagSlots>2</MinFreeBagSlots>
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+	<TargetElites>False</TargetElites>
+	<AvoidMobs>
+    <Mob Name="Lead Prospector Durdin" Entry="46760" />
+	<Mob Name="Sigrun Ironhew" Entry="2860" />
+	<Mob Name="Kand Sandseeker" Entry="46762" />
+	<Mob Name="Olga Runesworn" Entry="46761" />
+	<Mob Name="Prospector Ryedol" Entry="2910" />
+	<Mob Name="Gavran Goodspade" Entry="46659" />
+	<Mob Name="Vernon Farcavern" Entry="48090" />
+	<Mob Name="Enraged Gryphon" Entry="9526" />
+	<Mob Name="Nancy Skybrew" Entry="44409" />
+	<Mob Name="Dustwind Overseer" Entry="51538" />
+	</AvoidMobs>
+	<Blackspots>
+
+	</Blackspots>
+   
+	<Mailboxes>
+	<Mailbox X="-7112.238" Y="-1199.937" Z="306.9844" /> <!-- Iron Summit -->
+	</Mailboxes>
+	<Vendors>
+	
+	<!-- Thorium Advance -->
+	<!-- Thorium Advance Vendors -->
+	<Vendor Name="Burrian Coalpart" Entry="47267" Type="Repair" X="-6892.43" Y="-1851.08" Z="250.6842" />
+    <!-- Thorium Advance Trainers -->
+	<!-- None -->
+	
+	<!-- Iron Summit -->
+	<!-- Iron Summit Vendors -->
+	<Vendor Name="Fergus Gravelsmash" Entry="47937" Type="Repair" X="-7093.68" Y="-1268.31" Z="270.485" />
+    <!-- Iron Summit Trainers -->
+	<!-- None -->
+	
+	<!-- Thorium Point -->
+	<!-- Thorium Point Vendors -->
+	<Vendor Name="Master Smith Burninate" Entry="14624" Type="Food" X="-6526.64" Y="-1185.78" Z="309.2666" />
+    <!-- Thorium Point Trainers -->
+	<!-- None -->
+
+    </Vendors>
+
+	<QuestOrder>
+	
+	<CustomBehavior File="UserSettings" LootMobs="True" UseMount="True" PullDistance="30" />
+		<CustomBehavior File="UserSettings" LootMobs="True" TrainNewSkills="False" LearnFlightPaths="True" UseFlightPaths="False" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Azenius Questing Profiles (Eastern Kingdoms = Searing Gorge Profile Loaded)." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Compiling Quests." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning off auto-train." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting UseFlightPaths to false." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting LearnFlightPaths to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting LootMobs to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting UseMount to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting PullDistance to 30." />
+		
+	<PickUp QuestName="Lunk's Task" QuestId="27956" GiverName="Lunk" GiverId="47269" />
+	<TurnIn QuestName="To the Aid of the Thorium Brotherhood" QuestId="28512" TurnInName="Jack Rockleg" TurnInId="47266" />
+	<PickUp QuestName="A New Master... But Who?" QuestId="27963" GiverName="Jack Rockleg" GiverId="47266" />
+	<PickUp QuestName="The Fewer, the Better" QuestId="27960" GiverName="Burrian Coalpart" GiverId="47267" />
+	
+	<Objective QuestName="A New Master... But Who?" QuestId="27963" Type="CollectItem" ItemId="62807" CollectCount="1" />
+	<Objective QuestName="The Fewer, the Better" QuestId="27960" Type="KillMob" MobId="5839" KillCount="10" />
+	<Objective QuestName="Lunk's Task" QuestId="27956" Type="CollectItem" ItemId="62805" CollectCount="15" />
+	
+	<TurnIn QuestName="The Fewer, the Better" QuestId="27960" TurnInName="Burrian Coalpart" TurnInId="47267" />
+	<PickUp QuestName="Out of Place" QuestId="27961" GiverName="Burrian Coalpart" GiverId="47267" />
+	<PickUp QuestName="A Lumbering Relic" QuestId="27962" GiverName="Burrian Coalpart" GiverId="47267" />
+	<TurnIn QuestName="A New Master... But Who?" QuestId="27963" TurnInName="Jack Rockleg" TurnInId="47266" />
+	<PickUp QuestName="Dig-Boss Dinwhisker" QuestId="27964" GiverName="Jack Rockleg" GiverId="47266" />
+	<TurnIn QuestName="Lunk's Task" QuestId="27956" TurnInName="Lunk" TurnInId="47269" />
+	<If Condition="!IsQuestCompleted(27957)" >
+		<CustomBehavior File="InteractWith"  MobId="47269" NumOfTimes="1" CollectionDistance="50" X="-6892.199" Y="-1862.685" Z="251.5745" />
+		<CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" NumOfTimes="1" WaitTime="1000" />
+	</If>
+	<PickUp QuestName="A Proper Antivenom" QuestId="27958" GiverName="Prisanne Dustcropper" GiverId="47268" />
+	
+	<Objective QuestName="A Lumbering Relic" QuestId="27962" Type="Collect" CollectCount="1" ItemId="10005" />
+	
+	<If Condition="!IsQuestCompleted(27959)" >
+	<If Condition="!HasQuest(27959)" >
+		<RunTo X="-7118.795" Y="-1656.014" Z="240.4969" />
+		<RunTo X="-7177.793" Y="-1649.785" Z="241.6435" />
+	</If>
+	<PickUp QuestName="Lunk's Adventure: Spider Rider" QuestId="27959" GiverName="Lunk" GiverId="47280" X="-7162.569" Y="-1651.656" Z="241.5327" />
+	</If>
+	
+	<While Condition="HasQuest(27961) &amp;&amp; !IsQuestCompleted(27961)" >
+		   <CustomBehavior File="InteractWith" QuestId="27961" MobId="47278" NumOfTimes="5" CollectionDistance="200" X="-7130.782" Y="-1620.822" Z="248.2088" />
+	</While>
+	
+	<If Condition="HasQuest(27959) &amp;&amp; !IsQuestCompleted(27959)" >
+					<SetGrindArea>		
+						<GrindArea>
+							<Factions>2111</Factions>
+							<Hotspots> 
+								<Hotspot X="-7118.795" Y="-1656.014" Z="240.4969" />
+								<Hotspot X="-7177.793" Y="-1649.785" Z="241.6435" />
+								<Hotspot X="-7170.636" Y="-1577.615" Z="242.8672" />
+								<Hotspot X="-7115.614" Y="-1526.508" Z="242.4033" />
+								<Hotspot X="-7070.343" Y="-1557.823" Z="244.5819" />
+							</Hotspots>
+						</GrindArea>
+					</SetGrindArea>		
+				<GrindTo Condition="IsQuestCompleted(27959)" Name="Grinding till quest Lunk's Adventure, Spider Rider: Is Completed " />
+			</If>
+			
+	<If Condition="HasQuest(27959) &amp;&amp; IsQuestCompleted(27959)" >
+		<CustomBehavior File="CompleteLogQuest" QuestId="27959" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000"/>
+	</If>
+	
+		<While Condition="HasQuest(27961) &amp;&amp; !IsQuestCompleted(27961)" >
+		   <CustomBehavior File="InteractWith" QuestId="27961" MobId="47278" NumOfTimes="4" CollectionDistance="200" X="-7130.782" Y="-1620.822" Z="248.2088" />
+	    </While>
+	
+		<Objective QuestName="A Proper Antivenom" QuestId="27958" Type="CollectItem" ItemId="62809" CollectCount="14" />
+
+
+		<While Condition="HasQuest(27964) &amp;&amp; !IsQuestCompleted(27964)" >
+		<RunTo X="-6722.39" Y="-1616.648" Z="194.4211" />
+		<CustomBehavior File="CollectThings" CollectUntil="NoTargetsInArea" HuntingGroundRadius="200" QuestId="27964" MobId1="47271" MobId2="47276" MobId3="47275" ObjectId="206573" CollectItemId="62806" CollectItemCount="1" X="-6747.57" Y="-1620.466" Z="191.8174" />
+		</While>
+		
+		<TurnIn QuestName="Out of Place" TurnInName="Burrian Coalpart" QuestId="27961" TurnInId="47267" />
+		<TurnIn QuestName="A Lumbering Relic" TurnInName="Burrian Coalpart" QuestId="27962" TurnInId="47267" />
+		<TurnIn QuestName="A Proper Antivenom" QuestId="27958" TurnInName="Prisanne Dustcropper" TurnInId="47268" />
+		
+		<TurnIn QuestName="Dig-Boss Dinwhisker" TurnInName="Jack Rockleg" QuestId="27964" TurnInId="47266" />
+		<PickUp QuestName="Thorium Point: The Seat of the Brotherhood" GiverName="Jack Rockleg" QuestId="27965" GiverId="47266" />
+		<TurnIn QuestName="Thorium Point: The Seat of the Brotherhood" TurnInName="Overseer Oilfist" QuestId="27965" TurnInId="14625" />
+		<PickUp QuestName="Rasha'krak" GiverName="Overseer Oilfist" QuestId="28099" GiverId="14625" />
+		<PickUp QuestName="The Spiders Have to Go" GiverName="Lookout Captain Lolo Longstriker" QuestId="27980" GiverId="14634" />
+		<PickUp QuestName="Curse These Fat Fingers" GiverName="Hansel Heavyhands" QuestId="27976" GiverId="14627" />
+		<PickUp QuestName="Recon Essentials" GiverName="Taskmaster Scrange" QuestId="27977" GiverId="14626" />
+		<PickUp QuestName="Heat That Just Don't Quit" QuestId="27981" GiverName="Hansel Heavyhands" GiverId="14627" />
+		
+		<If Condition="!IsQuestCompleted(27983)" >
+		<If Condition="!HasQuest(27983)" >
+			<RunTo X="-6829.454" Y="-1217.675" Z="240.01" />
+			<RunTo X="-6849.125" Y="-1160.504" Z="240.3592" />
+		</If>
+		<PickUp QuestName="Lunk's Adventure: Crazy Little Dwarfs" QuestId="27983" GiverName="Lunk" GiverId="47332" X="-6699.24" Y="-1253.608" Z="240.8367" />
+		</If>
+		
+		<!-- CombatUseItemOn decides to be very weird and doesn't let the CC do anything -->
+		<While Condition="HasQuest(27981) &amp;&amp; !IsQuestCompleted(27981)" >
+			   <CustomBehavior File="UserSettings" PullDistance="1" />
+			   <CustomBehavior File="RunMacro" Macro="/petpassive" NumOfTimes="1" WaitTime="1" />
+			   <CustomBehavior File="CombatUseItemOn" QuestId="27981" MobId1="5850" MobId2="5852" MobId3="5855" ItemId="62826" NumOfTimes="1" Range="10" WaitTime="10000" MobHpPercentLeft="99" CollectionDistance="500" X="-6643.576" Y="-1263.033" Z="254.7512" />
+		</While>
+		<CustomBehavior File="UserSettings" PullDistance="30" />
+		<CustomBehavior File="RunMacro" Macro="/petassist" NumOfTimes="1" WaitTime="1" />
+		<Objective QuestName="Rasha'krak" QuestId="28099" Type="Collect" CollectCount="1" ItemId="63028" />
+		<Objective QuestName="Recon Essentials" QuestId="27977" Type="Collect" CollectCount="1" ItemId="18959" />
+		<Objective QuestName="Recon Essentials" QuestId="27977" Type="Collect" CollectCount="1" ItemId="18960" />
+		<Objective QuestName="Curse These Fat Fingers" QuestId="27976" Type="KillMob" KillCount="12" MobId="5854" />
+		<CustomBehavior File="UserSettings" PullDistance="1" />
+		
+		<If Condition="HasQuest(27983) &amp;&amp; !IsQuestCompleted(27983)" >
+			   <CustomBehavior File="UserSettings" PullDistance="1" />
+		</If>
+		<If Condition="HasQuest(27983) &amp;&amp; !IsQuestCompleted(27983)" >
+					<SetGrindArea>		
+						<GrindArea>
+							<Factions>54 91</Factions>
+							<Hotspots> 
+								<Hotspot X="-6829.454" Y="-1217.675" Z="240.01" />
+								<Hotspot X="-6849.125" Y="-1160.504" Z="240.3592" />
+							</Hotspots>
+						</GrindArea>
+					</SetGrindArea>		
+				<GrindTo Condition="(IsQuestCompleted(27983))" Name="Grinding until Lunk has sat on 7 dwarfs ;)" />
+			</If>
+			<CustomBehavior File="UserSettings" PullDistance="30" />
+			<If Condition="HasQuest(27983) &amp;&amp; IsQuestCompleted(27983)" >
+				<CustomBehavior File="CompleteLogQuest" QuestId="27983" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000"/>
+			</If>
+			<Objective QuestName="The Spiders Have to Go" QuestId="27980" Type="KillMob" MobId="5857" KillCount="9" />
+		<TurnIn QuestName="Rasha'krak" TurnInName="Overseer Oilfist" QuestId="28099" TurnInId="14625" />
+		<TurnIn QuestName="The Spiders Have to Go" TurnInName="Lookout Captain Lolo Longstriker" QuestId="27980" TurnInId="14634" />
+		<TurnIn QuestName="Recon Essentials" TurnInName="Taskmaster Scrange" QuestId="27977" TurnInId="14626" />
+		<TurnIn QuestName="Curse These Fat Fingers" TurnInName="Hansel Heavyhands" QuestId="27976" TurnInId="14627" />
+		<TurnIn QuestName="Heat That Just Don't Quit" QuestId="27981" TurnInName="Hansel Heavyhands" TurnInId="14627" />
+		<PickUp QuestName="Dark Ministry" GiverName="Hansel Heavyhands" QuestId="27979" GiverId="14627" />
+		<PickUp QuestName="Twilight Collars" QuestId="27982" GiverName="Taskmaster Scrange" GiverId="14626" />
+		<PickUp QuestName="Lunthistle's Tale" QuestId="27984" GiverName="Zamael Lunthistle" GiverId="8436" X="-6491.598" Y="-985.1914" Z="335.4585" />>
+			<If Condition="HasQuest(27984) &amp;&amp; !IsQuestCompleted(27984)" >
+				<CustomBehavior File="UserSettings" PullDistance="35" />
+				<CustomBehavior File="InteractWith" QuestId="27984" MobId="8436" NumOfTimes="1" GossipOptions="1, 1, 1" WaitTime="1000" CollectionDistance="50" X="-6491.598" Y="-985.1914" Z="335.4585" />
+			</If>
+	<TurnIn QuestName="Lunthistle's Tale" QuestId="27984" TurnInName="Zamael Lunthistle" TurnInId="8436" />
+		<PickUp QuestName="Prayer to Elune" QuestId="27985" GiverName="Zamael Lunthistle" GiverId="8436" />
+			<Objective QuestName="Prayer to Elune" QuestId="27985" Type="CollectItem" ItemId="10458" CollectCount="1" />
+			<If Condition="((HasQuest(27985)) &amp;&amp; (IsQuestCompleted(27985)))" >
+				<CustomBehavior File="CompleteLogQuest" QuestId="27985" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000"/>
+			</If>
+			<If Condition="((HasQuest(27979)) &amp;&amp; (!IsQuestCompleted(27979)))" >
+				<Objective QuestName="Dark Ministry" QuestId="27979" Type="CollectItem" ItemId="62824" CollectCount="1" />
+				<Objective QuestName="Dark Ministry" QuestId="27979" Type="CollectItem" ItemId="62825" CollectCount="1" />
+				<Objective QuestName="Dark Ministry" QuestId="27979" Type="CollectItem" ItemId="62823" CollectCount="1" />		
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(62825)" />
+			</If>
+			<Objective QuestName="Twilight Collars" QuestId="27982" Type="CollectItem" ItemId="62822" CollectCount="20" />
+		<TurnIn QuestName="Twilight Collars" QuestId="27982" TurnInName="Master Smith Burninate" TurnInId="14624" />	
+		<TurnIn QuestName="Dark Ministry" TurnInName="Hansel Heavyhands" QuestId="27979" TurnInId="14627" />
+		<PickUp QuestName="In the Hall of the Mountain-Lord" GiverName="Hansel Heavyhands" QuestId="27986" GiverId="14627" />
+		
+		<If Condition="HasQuest(27986)">
+            <CustomBehavior File="Hearthstone" MobId="47942" X="-7082.35" Y="-1212.82" Z="323.8922" HearthLocation="5628" />  
+        </If>
+		
+		<TurnIn QuestName="In the Hall of the Mountain-Lord" TurnInName="Mountain-Lord Rendan" QuestId="27986" TurnInId="47393" />
+		<PickUp QuestName="Siege!" GiverName="Mountain-Lord Rendan" QuestId="28028" GiverId="47393" />
+		<PickUp QuestName="They Build a Better Bullet" GiverName="Mountain-Lord Rendan" QuestId="28030" GiverId="47393" />
+		<PickUp QuestName="The Mysteries of the Fire-Gizzard" GiverName="Agnes Flimshale" QuestId="28032" GiverId="47440" />
+		<PickUp QuestName="Set Them Ablaze!" GiverName="Mountain-Lord Rendan" QuestId="28029" GiverId="47393" />
+			<Objective QuestName="Set Them Ablaze!" QuestId="28029" Type="UseObject" ObjectId="149032" UseCount="1" />
+			<Objective QuestName="Set Them Ablaze!" QuestId="28029" Type="UseObject" ObjectId="149025" UseCount="1" />
+			<Objective QuestName="Set Them Ablaze!" QuestId="28029" Type="UseObject" ObjectId="149030" UseCount="1" />
+			<Objective QuestName="Set Them Ablaze!" QuestId="28029" Type="UseObject" ObjectId="149031" UseCount="1" />
+			<Objective QuestName="They Build a Better Bullet" QuestId="28030" Type="Collect" CollectCount="200" ItemId="62916" />
+			<Objective QuestName="Siege!" QuestId="28028" Type="KillMob" KillCount="9" MobId="8338" />
+			<Objective QuestName="The Mysteries of the Fire-Gizzard" QuestId="28032" Type="Collect" CollectCount="6" ItemId="62914" />
+		<TurnIn QuestName="Set Them Ablaze!" TurnInName="Mountain-Lord Rendan" QuestId="28029" TurnInId="47393" />
+		<TurnIn QuestName="They Build a Better Bullet" TurnInName="Mountain-Lord Rendan" QuestId="28030" TurnInId="47393" />
+		<TurnIn QuestName="Siege!" TurnInName="Mountain-Lord Rendan" QuestId="28028" TurnInId="47393" />
+		<PickUp QuestName="Deceit" GiverName="Mountain-Lord Rendan" QuestId="28033" GiverId="47393" />
+		<TurnIn QuestName="The Mysteries of the Fire-Gizzard" TurnInName="Agnes Flimshale" QuestId="28032" TurnInId="47440" />
+		<TurnIn QuestName="Deceit" TurnInName="Lunk" QuestId="28033" TurnInId="47429" />
+		<PickUp QuestName="Lunk's Adventure: Rendan's Weakness" QuestId="28034" GiverName="Lunk" GiverId="47429" />
+			<If Condition="((HasQuest(28034)) &amp;&amp; (!IsQuestCompleted(28034)))" >
+				<CustomBehavior File="InteractWith" QuestId="28034" MobId="47434" NumOfTimes="3" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="-7114.98" Y="-1230.371" Z="289.8732" />
+			</If>
+		<TurnIn QuestName="Lunk's Adventure: Rendan's Weakness" QuestId="28034" TurnInName="Mountain-Lord Rendan" TurnInId="47393" />
+		<PickUp QuestName="The Mountain-Lord's Support" QuestId="28035" GiverName="Mountain-Lord Rendan" GiverId="47393" />
+		<TurnIn QuestName="The Mountain-Lord's Support" QuestId="28035" TurnInName="Overseer Oilfist" TurnInId="14625" />
+	    <PickUp QuestName="Operation: Stir the Cauldron" QuestId="28052" GiverName="Overseer Oilfist" GiverId="14625" />
+		
+		<If Condition="HasQuest(28052) &amp;&amp; !IsQuestCompleted(28052)" >
+			<CustomBehavior File="InteractWith" QuestId="28052" MobId="3305" NumOfTimes="1" GossipOptions="2" WaitTime="1000" CollectionDistance="50" X="-6559.31" Y="-1100.25" Z="310.2886" />
+		</If>
+		
+		<While Condition="HasQuest(28052) &amp;&amp; !IsQuestCompleted(28052)" >
+			   <CustomBehavior File="NoControlVehicle" NumOfTimes="1" TargetId1="47470" AttackButton="1" MaxRange="100" WaitTime="1000"/>
+		</While>
+		<TurnIn QuestName="Operation: Stir the Cauldron" QuestId="28052" TurnInName="Mountain-Lord Rendan" TurnInId="47393" />
+		<PickUp QuestName="Slavery is Bad" QuestId="28054" GiverName="Mountain-Lord Rendan" GiverId="47393" />
+		<PickUp QuestName="Sweet, Horrible Freedom" QuestId="28055" GiverName="Mountain-Lord Rendan" GiverId="47393" />
+		<PickUp QuestName="Rise, Obsidion" QuestId="28056" GiverName="Mountain-Lord Rendan" GiverId="47393" />
+		
+		<If Condition="HasQuest(28055) &amp;&amp; !IsQuestCompleted(28055)" >
+			<CustomBehavior File="InteractWith" QuestId="28055" MobId="161536" NumOfTimes="1" ObjectType="Gameobject" WaitTime="1000" CollectionDistance="50" X="-6759.87" Y="-1167.367" Z="187.1138" />
+			<RunTo X="-6695.036" Y="-1164.182" Z="184.4239" />
+		</If>
+		
+		<While Condition="HasQuest(28055) &amp;&amp; !IsQuestCompleted(28055)" >
+			<CustomBehavior File="InteractWith" QuestId="28055" MobId="5843" NumOfTimes="1" GossipOptions="1" MobState="Alive" WaitTime="1000" CollectionDistance="75" X="-6695.036" Y="-1164.182" Z="184.4239" />
+			<RunTo X="-6695.036" Y="-1164.182" Z="184.4239" />
+		</While>
+		
+		<While Condition="HasQuest(28056) &amp;&amp; !IsQuestCompleted(28056)" >
+			   <CustomBehavior File="InteractWith" QuestId="28056" MobId="148498" NumOfTimes="1" GossipOptions="1" ObjectType="Gameobject" WaitTime="1000" CollectionDistance="75" X="-6480.612" Y="-1243.107" Z="180.1561" />
+		</While>
+		
+		<Objective QuestName="Rise, Obsidion" QuestId="28056" Type="KillMob" MobId="8400" KillCount="1" />
+        <Objective QuestName="Rise, Obsidion" QuestId="28056" Type="KillMob" MobId="8391" KillCount="1" />
+		
+		<TurnIn QuestName="Slavery is Bad" QuestId="28054" TurnInName="Evonice Sootsmoker" TurnInId="14628" />
+		<TurnIn QuestName="Sweet, Horrible Freedom" QuestId="28055" TurnInName="Evonice Sootsmoker" TurnInId="14628" />
+		<TurnIn QuestName="Rise, Obsidion" QuestId="28056" TurnInName="Evonice Sootsmoker" TurnInId="14628" />
+		<PickUp QuestName="Kill 'em With Sleep Deprivation" QuestId="28057" GiverName="Evonice Sootsmoker" GiverId="14628" />
+		
+		<Objective QuestName="Kill 'em With Sleep Deprivation" QuestId="28057" Type="CollectItem" ItemId="18943" CollectCount="16" />
+		
+		<TurnIn QuestName="Kill 'em With Sleep Deprivation" QuestId="28057" TurnInName="Taskmaster Scrange" TurnInId="14626" />
+		<PickUp QuestName="Twisted Twilight Ties" QuestId="28060" GiverName="Taskmaster Scrange" GiverId="14626" />
+		
+		<If Condition="HasQuest(28060) &amp;&amp; !IsQuestCompleted(28060)" >
+			   <CustomBehavior File="InteractWith" QuestId="28060" MobId="14627" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="75" X="-6616.621" Y="-1267.458" Z="208.7439" />
+			   <RunTo X="-6627.513" Y="-1268.434" Z="209.1801" />
+		</If>
+		<Objective QuestName="Twisted Twilight Ties" QuestId="28060" Type="KillMob" MobId="14621" KillCount="1" />
+		
+		<If Condition="HasQuest(28060) &amp;&amp; IsQuestCompleted(28060)" >
+			<RunTo X="-6726.653" Y="-1390.969" Z="211.5343" />
+			<CustomBehavior File="MyCTM" X="-6712.552" Y="-1404.018" Z="182.5703" />
+		</If>
+		<TurnIn QuestName="Twisted Twilight Ties" QuestId="28060" TurnInName="Overseer Oilfist" TurnInId="14625" />
+		<PickUp QuestName="Minions of Calcinder" QuestId="28061" GiverName="Overseer Oilfist" GiverId="14625" />
+		<PickUp QuestName="From Whence He Came" QuestId="28062" GiverName="Overseer Oilfist" GiverId="14625" />
+		
+		<Objective QuestName="Minions of Calcinder" QuestId="28061" Type="KillMob" MobId="47463" KillCount="6" />
+		
+		<If Condition="IsQuestCompleted(28061) &amp;&amp; HasQuest(28061)">
+			<CustomBehavior File="CompleteLogQuest" QuestId="28061" />
+			<CustomBehavior File="WaitTimer" WaitTime="2500" />
+			<CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+		
+		<While Condition="HasQuest(28062) &amp;&amp; !IsQuestCompleted(28062)" >
+			   <RunTo X="-6506.148" Y="-1301.345" Z="138.4471" />
+			   <CustomBehavior File="CombatUseItemOn" QuestId="28062" MobId1="47462" ItemId="62925" NumOfTimes="1" Range="10" WaitTime="1000" MobHpPercentLeft="40" CollectionDistance="500" X="-6506.148" Y="-1301.345" Z="138.4471" />
+		</While>
+		
+		<If Condition="IsQuestCompleted(28062) &amp;&amp; HasQuest(28062)">
+            <CustomBehavior File="CompleteLogQuest" QuestId="28062" />
+			<CustomBehavior File="WaitTimer" WaitTime="2500" />
+			<CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+		
+		<If Condition="HasQuest(28064)">
+            <CustomBehavior File="RunMacro" Macro="/use hearthstone" NumOfTimes="1" WaitTime="15000"/>
+		</If>
+		
+		<If Condition="HasQuest(28064)">
+			   <RunTo X="-6487.553" Y="-1191.728" Z="325.3993" />
+			   <CustomBehavior File="BasicInteractWith" MobId="47429" />
+			   <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" NumOfTimes="1" WaitTime="2000" />
+		</If>
+		<TurnIn QuestName="Welcome to the Brotherhood" QuestId="28064" TurnInName="Overseer Oilfist" TurnInId="14625" />
+		<PickUp QuestName="Mouton Flamestar" QuestId="28515" GiverName="Overseer Oilfist" GiverId="14625" />
+		
+		<If Condition="HasQuest(28515)">
+            <RunTo X="-6714.452" Y="-956.3749" Z="250.5239" />
+		</If>
+		<TurnIn QuestName="Mouton Flamestar" QuestId="28515" TurnInName="Mouton Flamestar" TurnInId="47779" />
+		
+		<CustomBehavior File="LoadProfile" ProfileName="Burning Steppes.xml" />
+		
+<!-- Switching to Burning Steppes Profile -->
+
+		<!-- <CustomBehavior File="RunMacro" Macro="/click VehicleMenuBarActionButton1" NumOfTimes="1" WaitTime="1500" /> -->
+       <!-- <CustomBehavior File="RunMacro" Macro="/use Keys to the Hot Rod" NumOfTimes="1" WaitTime="3000"/> -->
+	</QuestOrder>
+</HBProfile>

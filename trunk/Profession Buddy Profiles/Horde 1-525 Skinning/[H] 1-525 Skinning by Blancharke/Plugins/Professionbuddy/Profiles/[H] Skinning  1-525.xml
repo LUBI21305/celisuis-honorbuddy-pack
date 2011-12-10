@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Professionbuddy>
+  <CustomAction Code="Log(&quot;Horde Skinning 1-525 Loaded&quot;);" />
+  <!--Type of Bot to use-->
+  <If Condition="TreeRoot.Current.Name != &quot;Grind Bot&quot;" IgnoreCanRun="True">
+    <CustomAction Code="SwitchToBot (&quot;Grind Bot&quot;);" />
+  </If>
+  <!--Train Skinning and Leatherworking-->
+  <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &lt; 1" IgnoreCanRun="True">
+    <CustomAction Code="Log(&quot;Training Skinning&quot;);" />
+    <TrainSkillAction NpcEntry="7088" X="1852.908" Y="-4570.059" Z="24.98218" />
+  </If>
+  <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue == 65 || Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue == 150 || Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue == 225 || Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue == 300 || Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue == 350" IgnoreCanRun="True">
+    <CallSubRoutine SubRoutineName="Train Skinning" />
+  </If>
+  <SubRoutine SubRoutineName="Train Skinning">
+    <If Condition="Me.MapId == 1" IgnoreCanRun="True">
+      <FlyToAction Dismount="True" X="1815.319" Y="-4364.262" Z="103.4046" />
+      <CustomAction Code="Log(&quot;Training Skinning&quot;);" />
+      <TrainSkillAction NpcEntry="7088" X="1852.908" Y="-4570.059" Z="24.98218" />
+    </If>
+    <If Condition="Me.MapId == 530" IgnoreCanRun="True">
+      <FlyToAction Dismount="True" X="151.239" Y="2633.32" Z="86.54367" />
+      <CustomAction Code="Log(&quot;Training Skinning&quot;);" />
+      <TrainSkillAction NpcEntry="18755" X="151.239" Y="2633.32" Z="86.54367" />
+    </If>
+    <If Condition="Me.MapId == 571" IgnoreCanRun="True">
+      <FlyToAction Dismount="True" X="3435.079" Y="4105.765" Z="15.99857" />
+      <CustomAction Code="Log(&quot;Training Skinning&quot;);" />
+      <TrainSkillAction NpcEntry="26986" X="3455.75" Y="4178.839" Z="17.19355" />
+    </If>
+  </SubRoutine>
+  <!--*** Travel conditions ***-->
+  <!--*** Travel Actions ***-->
+  <!--Take Portal to Blasted Lands-->
+  <If Condition="Me.MapId == 1 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 300 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &lt;=349" IgnoreCanRun="True">
+    <CustomAction Code="Log(&quot;Moving to Outlands Portal&quot;);" />
+    <If Condition="Me.IsHorde" IgnoreCanRun="True">
+      <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="1772.264" Y="-4326.736" Z="-8.17979" />
+      <InteractionAction Entry="195142" InteractDelay="0" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+      <WaitAction Condition="Me.MapId == 1" Timeout="25000" />
+    </If>
+  </If>
+  <!--Go through The Dark Portal-->
+  <If Condition="Me.MapId == 0 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 300 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &lt;=349" IgnoreCanRun="True">
+    <CustomAction Code="Log(&quot;Go through the Dark Portal&quot;);" />
+    <If Condition="Me.IsHorde" IgnoreCanRun="True">
+      <FlyToAction Dismount="True" X="-11893.37" Y="-3206.692" Z="-14.69513" />
+      <CustomAction Code="CTM (-11930.31,-3209.613,-1.836873);" />
+      <WaitAction Condition="Me.MapId == 530" Timeout="25000" />
+    </If>
+  </If>
+  <!--Take Portal to Orgrimmar-->
+  <If Condition="Me.MapId == 530 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 350" IgnoreCanRun="True">
+    <CustomAction Code="Log(&quot;Using Portal back to Orgrimmar&quot;);" />
+    <If Condition="Me.IsHorde" IgnoreCanRun="True">
+      <FlyToAction Dismount="True" X="-1829.331" Y="5361.543" Z="-12.42777" />
+      <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-1897.387" Y="5393.36" Z="-12.42777" />
+      <InteractionAction Entry="183323" InteractDelay="200" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+      <WaitAction Condition="Me.MapId == 1" Timeout="25000" />
+    </If>
+  </If>
+  <!--Take Zeppelin to Northrend-->
+  <If Condition="Me.MapId == 1 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 350 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &lt;=439" IgnoreCanRun="True">
+    <FlyToAction Dismount="True" X="1763.047" Y="-4283.249" Z="133.1071" />
+    <CustomAction Code="Log(&quot;Waiting for Zeppelin&quot;);" />
+    <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 186238 ) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 186238 ).Location.Distance(new WoWPoint(1775.066, -42999.75, 151.0326)) &lt; 3" Timeout="650000" />
+    <CustomAction Code="CTM(1768.292, -4290.189, 133.1834);" />
+    <WaitAction Condition="Me.MapId == 571" Timeout="650000" />
+  </If>
+  <!--Take Zeppelin to Orgrimmar-->
+  <If Condition="Me.MapId == 571 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 440" IgnoreCanRun="True">
+    <If Condition="Me.IsHorde" IgnoreCanRun="True">
+      <FlyToAction Dismount="True" X="2928.642" Y="6088.206" Z="144.6709" />
+      <FlyToAction Dismount="True" X="2835.211" Y="6184.501" Z="121.8625" />
+      <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 186238 ) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 186238 ).Location.Distance(new WoWPoint(2837.908, 6187.443, 140.1648)) &lt; 3" Timeout="600000" />
+      <CustomAction Code="CTM (2842.167, 6190.77, 122.2655);" />
+      <WaitAction Condition="Me.MapId == 1" Timeout="600000" />
+    </If>
+  </If>
+  <!--Buy Skinning Knife-->
+  <If Condition="InbagCount (7005) == 0" IgnoreCanRun="True">
+    <BuyItemAction NpcEntry="3366" X="1856.972" Y="-4555.948" Z="24.98115" ItemID="7005" Count="1" BuyItemType="SpecificItem" BuyAdditively="True" />
+  </If>
+  <!--Skinning Profiles-->
+  <While Condition="Me.FreeNormalBagSlots &gt; 2" IgnoreCanRun="True">
+    <If Condition="Me.MapId == 1" IgnoreCanRun="True">
+      <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 1 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &lt; 65" IgnoreCanRun="False">
+        <CustomAction Code="Log(&quot;Loading Profile 1-65&quot;);" />
+        <LoadProfileAction Path="[H] Skinning Durotar.xml" ProfileType="Professionbuddy" />
+      </If>
+      <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 65 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &lt; 110" IgnoreCanRun="False">
+        <CustomAction Code="Log(&quot;Loading Profile 65-110&quot;);" />
+        <LoadProfileAction Path="[H] Skinning Northern Barrens.xml" ProfileType="Professionbuddy" />
+      </If>
+      <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 110 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &lt; 185" IgnoreCanRun="False">
+        <CustomAction Code="Log(&quot;Loading Profile 110-185&quot;);" />
+        <LoadProfileAction Path="[H] Skinning Ashenvale.xml" ProfileType="Professionbuddy" />
+      </If>
+      <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 185 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &lt; 205" IgnoreCanRun="False">
+        <CustomAction Code="Log(&quot;Loading Profile 185-205&quot;);" />
+        <LoadProfileAction Path="[H] Skinning Dustwallow Marsh.xml" ProfileType="Professionbuddy" />
+      </If>
+      <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 205 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &lt; 265" IgnoreCanRun="False">
+        <CustomAction Code="Log(&quot;Loading Profile 205-265&quot;);" />
+        <LoadProfileAction Path="[H] Skinning Thousand Needles.xml" ProfileType="Professionbuddy" />
+      </If>
+      <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 265 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &lt; 300" IgnoreCanRun="False">
+        <CustomAction Code="Log(&quot;Loading Profile 265-300&quot;);" />
+        <LoadProfileAction Path="[H] Skinning Un'Goro Crater.xml" ProfileType="Professionbuddy" />
+      </If>
+      <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 440 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &lt; 525" IgnoreCanRun="False">
+        <CustomAction Code="Log(&quot;Loading Profile 440-525&quot;);" />
+        <LoadProfileAction Path="[H] Skinning Hyjal.xml" ProfileType="Professionbuddy" />
+      </If>
+    </If>
+    <If Condition="Me.MapId == 530" IgnoreCanRun="True">
+      <If Condition="Me.IsHorde" IgnoreCanRun="True">
+        <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 300 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &lt; 350" IgnoreCanRun="False">
+          <CustomAction Code="Log(&quot;Loading Profile 300-350&quot;);" />
+          <LoadProfileAction Path="[H] Skinning Outlands.xml" ProfileType="Professionbuddy" />
+        </If>
+      </If>
+    </If>
+    <If Condition="Me.MapId == 571" IgnoreCanRun="True">
+      <If Condition="Me.IsHorde" IgnoreCanRun="True">
+        <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 350 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &lt; 440" IgnoreCanRun="False">
+          <CustomAction Code="Log(&quot;Loading Profile 350-440&quot;);" />
+          <LoadProfileAction Path="[H] Skinning Northrend.xml" ProfileType="Professionbuddy" />
+        </If>
+      </If>
+    </If>
+  </While>
+</Professionbuddy>

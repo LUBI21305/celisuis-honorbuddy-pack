@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WeightSet Class="Shaman" Spec="Elemental">
+  <HitRating>100</HitRating>
+  <SpellPower>60</SpellPower>
+  <HasteRating>56</HasteRating>
+  <CriticalStrikeRating>40</CriticalStrikeRating>
+  <Intellect>11</Intellect>
+</WeightSet>

@@ -1,0 +1,47 @@
+<HBProfile>
+  <Name>Azure Whelpling Farm - Horde</Name> 
+  <MinDurability>0.3</MinDurability> 
+  <MinFreeBagSlots>2</MinFreeBagSlots> 
+  <SellGrey>True</SellGrey> 
+  <SellWhite>True</SellWhite> 
+  <SellGreen>True</SellGreen> 
+  <SellBlue>False</SellBlue> 
+  <SellPurple>False</SellPurple> 
+  <MinLevel>40</MinLevel> 
+  <MaxLevel>81</MaxLevel> 
+
+  <ProtectedItems>
+  <Item>34535</Item>  
+  </ProtectedItems>
+
+  <ForceMail>
+  <Item>34535</Item> 
+  </ForceMail>
+  
+  <SubProfile>
+  <MinLevel>40</MinLevel> 
+  <MaxLevel>81</MaxLevel> 
+
+  <TargetElites>True</TargetElites>
+  <Vendors>
+  <Vendor Name="Gruul Darkblade" Entry="10361" Type="Repair" X="3614.143" Y="-4403.952" Z="114.3851" />
+  </Vendors>
+  <GrindArea>
+  <Factions>60</Factions>
+  <TargetMinLevel>35</TargetMinLevel>
+  <TargetMaxLevel>70</TargetMaxLevel>
+  <RandomizeHotspots>false</RandomizeHotspots>
+  <MaximumHotspotTime>60000</MaximumHotspotTime>
+  <Hotspots>
+  <Hotspot X="2874.731" Y="-5142.719" Z="115.4497" />
+  <Hotspot X="2789.229" Y="-5254.481" Z="111.9695" />
+  <Hotspot X="2761.498" Y="-5154.963" Z="104.275" />
+  <Hotspot X="2615.281" Y="-5186.997" Z="105.9604" />
+  <Hotspot X="2492.376" Y="-5267.188" Z="115.658" />
+  <Hotspot X="2556.129" Y="-5456.329" Z="117.0183" />
+  <Hotspot X="2702.335" Y="-5443.634" Z="113.9913" />
+  <Hotspot X="2786.516" Y="-5429.874" Z="99.85943" />
+  </Hotspots>
+  </GrindArea>
+  </SubProfile>
+  </HBProfile>

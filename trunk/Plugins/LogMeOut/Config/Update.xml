@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<update>
+  <version>1.1.1</version>
+  <content>
+    <!-- fichiers racines -->
+    <file>LogMeOut.cs</file>
+    <file>LogMeOutRef.cs</file>
+    <file>LogMeOutSettings.cs</file>
+    <!-- Classes -->
+    <file>Classes\PeopleAroundMe.cs</file>
+    <file>Classes\Updater.cs</file>
+    <!-- Forms -->
+    <file>Forms\frmSettings.cs</file>
+    <file>Forms\frmSettings.Designer.cs</file>
+    <file>Forms\frmTimer.cs</file>
+    <file>Forms\frmTimer.Designer.cs</file>
+    <!-- Sons -->
+    <file>Sounds\beep.wav</file>
+  </content>
+</update>

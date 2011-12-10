@@ -1,0 +1,11 @@
+Cangelog
+
+Da testare
+	Selfinterrupt
+	Hand of freedom
+	Nuovo light of dawn
+	PVPDispel=>PVEDispel
+Da fare
+	Messaggio mana e vita all'uscita dal combat
+	Blacklist temporane sulle unità a più di 40yard
+	Turn evil

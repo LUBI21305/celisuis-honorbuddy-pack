@@ -1,0 +1,957 @@
+<HBProfile>
+   <Name>The Azenius Project[Stranglethorn]</Name>
+   <MinLevel>1</MinLevel>
+   <MaxLevel>86</MaxLevel>
+   <MinDurability>0.4</MinDurability>
+   <MinFreeBagSlots>2</MinFreeBagSlots>
+    
+   <MailGrey>False</MailGrey>
+   <MailWhite>False</MailWhite>
+   <MailGreen>False</MailGreen>
+   <MailBlue>True</MailBlue>
+   <MailPurple>True</MailPurple>
+   
+   <SellGrey>True</SellGrey>
+   <SellWhite>True</SellWhite>
+   <SellGreen>True</SellGreen>
+   <SellBlue>False</SellBlue>
+   <SellPurple>False</SellPurple>
+   
+   <TargetElites>False</TargetElites>
+
+   <ContinentID>0</ContinentID> <!-- Eastern Kingdoms -->
+   
+   <Mailboxes>
+        <Mailbox X="-12389.22" Y="147.5781" Z="2.629356" /> <!-- Grom'gol Base Camp -->
+		<Mailbox X="-13241.41" Y="718.1185" Z="3.156183" /> <!-- Hardwrench Hideaway -->
+		<Mailbox X="-14418.97" Y="516.5168" Z="4.996043" /> <!-- Booty Bay -->
+   </Mailboxes>
+                                                                                                                
+ <!-- Vendors and trainers -->
+   <Vendors> 
+ <!-- Grom'gol Base Camp Vendors -->
+ <Vendor Name="Hragran" Entry="1147" Type="Repair" X="-12410.24" Y="203.675" Z="2.093892" />
+ <Vendor Name="Innkeeper Thulbek" Entry="5814" Type="Food" X="-12434.42" Y="211.5588" Z="2.364655" />
+ <!-- Grom'gol Base Camp Trainers-->
+ <!-- None -->
+
+ <!-- Booty Bay Vendors-->
+ <Vendor Name="Jutak" Entry="2843" Type="Repair" X="-14467.77" Y="468.375" Z="15.02453" />
+ <Vendor Name="Innkeeper Skindle" Entry="6807" Type="Food" X="-14457.73" Y="495.3478" Z="15.12675" />
+ <!-- Booty Bay Trainers-->
+ <!-- None -->
+
+ <!-- Bambala Vendors -->
+ <Vendor Name="Durango" Entry="44183" Type="Food" X="-12078.17" Y="-845.6406" Z="49.02157" />
+ <!-- Bambala Trainers -->
+ <!-- None -->
+
+ <!-- Nessingwary's Expedition Vendors -->
+ <Vendor Name="Jaquilina Dramet" Entry="2483" Type="Repair" X="-11650.59" Y="-47.65972" Z="16.23889" />
+ <!-- Nessingwary's Expedition Trainers -->
+ <!-- None -->
+ 
+ <!-- Hardwrench Hideaway -->
+ <!-- Hardwrench Vendors -->
+ <Vendor Name="Smity Hammerhead" Entry="44195" Type="Repair" X="-13305.7" Y="718.273" Z="3.80287" />
+ <!-- Hardwrench Hideaway Trainers -->
+ <!-- None -->
+       </Vendors>
+
+	<AvoidMobs>
+	<Mob Name="Colin Swifthammer" Entry="43043" />
+	<Mob Name="Dask The Flask Gobfizzle" Entry="44099" />
+	<Mob Name="Linzi Hewstrike" Entry="44083" />
+	<Mob Name="Bronwyn Hewstrike" Entry="44082" />
+	<Mob Name="Hambone" Entry="44106" />
+	<Mob Name="Goris" Entry="44100" />
+	<Mob Name="Digsite Defender" Entry="51534" />
+	<Mob Name="Wulfred Harrys" Entry="44018" />
+	<Mob Name="Priestess Thaalia" Entry="44017" />
+	<Mob Name="Livingston Marshal" Entry="44019" />
+	<Mob Name="Daniel Roberts" Entry="44181" />
+	<Mob Name="Robert Rhodes" Entry="43042" />
+	<Mob Name="Ghaliri" Entry="44021" />
+	<Mob Name="Fort Livingston Guard" Entry="51533" />
+	<Mob Name="Airwyn Bantamflax" Entry="44112" />
+	<Mob Name="Gyll" Entry="2859" />
+	<Mob Name="Midsummer Celebrant" Entry="16781" />
+	<Mob Name="Northern Stranglethorn Flame Warden" Entry="51574" />
+	</AvoidMobs>
+   
+	<Blackspots>
+	</Blackspots>
+
+<Quest Id="186" Name="Tiger Stalking">
+	<Objective Type="KillMob" MobId="682" KillCount="10">
+		<Hotspots>
+			<Hotspot X="-11770.38" Y="-718.5701" Z="36.26526" />
+			<Hotspot X="-11823.3" Y="-619.6588" Z="13.84648" />
+			<Hotspot X="-11817.74" Y="-759.6834" Z="36.6208" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
+<Quest Id="187" Name="Tiger Prowess">
+	<Objective Type="KillMob" MobId="1085" KillCount="5">
+		<Hotspots>
+			<Hotspot X="-12634.5" Y="-130.6712" Z="17.26192" />
+			<Hotspot X="-12598.65" Y="-305.0582" Z="14.87826" />
+			<Hotspot X="-12637.59" Y="-345.9797" Z="16.77923" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
+<Quest Id="26399" Name="The Mosh'Ogg Bounty">
+	<Objective Type="CollectItem" ItemId="58205" CollectCount="1">
+		<CollectFrom>
+		</CollectFrom>
+		<Hotspots>
+			<Hotspot X="-12489.73" Y="-1020.832" Z="60.8354" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
+<Quest Id="26590" Name="The Holy Water of Clarity">
+	<Objective Type="CollectItem" ItemId="58811" CollectCount="1">
+		<CollectFrom>
+		</CollectFrom>
+		<Hotspots>
+			<Hotspot X="-13805.89" Y="376.5003" Z="93.64215" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="197" Name="Raptor Mastery">
+	<Objective Type="CollectItem" ItemId="3877" CollectCount="1">
+		<CollectFrom>
+		</CollectFrom>
+		<Hotspots>
+			<Hotspot X="-12550.27" Y="-613.2497" Z="38.73083" />
+			<Hotspot X="-12721.79" Y="-918.4562" Z="65.03397" />
+			<Hotspot X="-12756.92" Y="-654.9299" Z="66.10641" />
+			<Hotspot X="-12546.69" Y="-884.1469" Z="45.51962" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="26433" Name="The Holy Water of Clarity">
+	<Objective Type="CollectItem" ItemId="58811" CollectCount="1">
+		<CollectFrom>
+		</CollectFrom>
+		<Hotspots>
+			<Hotspot X="-13805.89" Y="376.5003" Z="93.64215" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="26595" Name="Kill-Collect">
+	<Objective Type="CollectItem" ItemId="3924" CollectCount="1">
+		<CollectFrom>
+		</CollectFrom>
+		<Hotspots>
+		</Hotspots>
+	</Objective>
+	<Objective Type="CollectItem" ItemId="59034" CollectCount="1">
+		<CollectFrom>
+			<Mob Name="Freewheelin' Juntz Fitztittle" Entry="43376" />
+		</CollectFrom>
+		<Hotspots>
+		</Hotspots>
+	</Objective>
+	<Objective Type="CollectItem" ItemId="59035" CollectCount="1">
+		<CollectFrom>
+		</CollectFrom>
+		<Hotspots>
+		</Hotspots>
+	</Objective>
+</Quest>
+
+<Quest Id="26612" Name="Details of the Attack">
+	<Objective Type="CollectItem" ItemId="3920" CollectCount="1">
+		<CollectFrom>
+		</CollectFrom>
+		<Hotspots>
+			<Hotspot X="-14624.99" Y="329.9579" Z="3.787209" />
+			<Hotspot X="-14700.06" Y="451.5564" Z="0.4997839" />
+			<Hotspot X="-14695.19" Y="498.2215" Z="2.423791" />
+		</Hotspots>
+	</Objective>
+	<Objective Type="CollectItem" ItemId="59145" CollectCount="1">
+		<CollectFrom>
+		</CollectFrom>
+		<Hotspots>
+			<Hotspot X="-14624.99" Y="329.9579" Z="3.787209" />
+			<Hotspot X="-14700.06" Y="451.5564" Z="0.4997839" />
+			<Hotspot X="-14695.19" Y="498.2215" Z="2.423791" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
+<Quest Id="26278" Name="The Defense of Grom'gol: Raptor Risk">
+	<Objective Type="KillMob" MobId="42620" KillCount="12">
+		<Hotspots>
+			<Hotspot X="-12164.03" Y="251.2472" Z="2.636971" />
+			<Hotspot X="-12200.14" Y="225.7229" Z="5.91985" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
+<Quest Id="197" Name="Raptor Mastery">
+	<Objective Type="CollectItem" ItemId="3877" CollectCount="1">
+		<CollectFrom>
+		</CollectFrom>
+		<Hotspots>
+			<Hotspot X="-12550.27" Y="-613.2497" Z="38.73083" />
+			<Hotspot X="-12721.79" Y="-918.4562" Z="65.03397" />
+			<Hotspot X="-12756.92" Y="-654.9299" Z="66.10641" />
+			<Hotspot X="-12546.69" Y="-884.1469" Z="45.51962" />
+		</Hotspots>
+	</Objective>
+</Quest>
+
+
+   <QuestOrder>
+
+	<CustomBehavior File="UserSettings" LootMobs="True" UseMount="True" PullDistance="30" />
+		<CustomBehavior File="UserSettings" LootMobs="True" TrainNewSkills="False" LearnFlightPaths="True" UseFlightPaths="False" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Azenius Questing Profiles (Eastern Kingdoms = Northern Stranglethorn and the Cape of Stranglethorn Profile Loaded)." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Compiling Quests." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning off auto-train." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting UseFlightPaths to false." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting LearnFlightPaths to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting LootMobs to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting UseMount to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting PullDistance to 30." />
+		
+        <PickUp QuestName="The Defense of Grom'gol Raptor Risk" QuestId="26278" GiverName="Commander Aggro'gosh" GiverId="2464" />
+	        <If Condition="HasQuest(26278)">
+                     <CustomBehavior File="Hearthstone" MobId="5814" X="-12433.09" Y="212.6964" Z="2.366325" HearthLocation="117" />  
+                </If>
+				
+		<While Condition="HasQuest(26278) &amp;&amp; !IsQuestCompleted(26278)">
+			<CustomBehavior File="InteractWith" MobId="42620" NumOfTimes="1" MobState="Alive" GossipOptions="1" WaitTime="1000" X="-12162.01" Y="252.0231" Z="3.001725" />
+		</While>
+		
+		<TurnIn QuestName="The Defense of Grom'gol: Raptor Risk" QuestId="26278" TurnInName="Commander Aggro'gosh" TurnInId="2464" />
+		<PickUp QuestName="The Defense of Grom'gol: Ogre Oppression" QuestId="26279" GiverName="Commander Aggro'gosh" GiverId="2464" />
+		<PickUp QuestName="The Defense of Grom'gol: Murloc Menace" QuestId="26280" GiverName="Commander Aggro'gosh" GiverId="2464" />
+		<TurnIn QuestName="A Lashtail Hatchling" QuestId="26317" TurnInName="Far Seer Mok'thardin" TurnInId="2465" />
+		<PickUp QuestName="I Think She's Hungry" QuestId="26321" GiverName="Far Seer Mok'thardin" GiverId="2465" />
+
+		<Objective QuestName="The Defense of Grom'gol: Ogre Oppression" QuestId="26279" Type="KillMob" MobId="1142" KillCount="4" />
+		<Objective QuestName="The Defense of Grom'gol: Ogre Oppression" QuestId="26279" Type="KillMob" MobId="1144" KillCount="4" />
+
+	        <If Condition="HasItem(58491)">
+                     <PickUp QuestName="Mosh'Ogg Handiwork" QuestId="26407" GiverType="Item" GiverId="58491" />
+                </If>
+	        <If Condition="HasItem(58492)">
+                     <Turnin QuestName="Mosh'Ogg Handiwork" QuestId="26407" TurnInName="Far Seer Mok'thardin" TurnInId="2465" />
+                </If>
+
+<CustomBehavior File="KillUntilComplete" QuestId="26280" MobId="4459" MobId2="4461" X="-12149.38" Y="15.04358" Z="-4.144033" />
+<CustomBehavior File="KillUntilComplete" QuestId="26321" MobId="4459" MobId2="4461" X="-12149.38" Y="15.04358" Z="-4.144033" />
+
+<TurnIn QuestName="The Defense of Grom'gol: Ogre Oppression" QuestId="26279" TurnInName="Commander Aggro'gosh" TurnInId="2464" />
+<TurnIn QuestName="The Defense of Grom'gol: Murloc Menace" QuestId="26280" TurnInName="Commander Aggro'gosh" TurnInId="2464" />
+<PickUp QuestName="The Defense of Grom'gol: Trollish Thievery" QuestId="26281" GiverName="Commander Aggro'gosh" GiverId="2464" />
+<TurnIn QuestName="I Think She's Hungry" QuestId="26321" TurnInName="Far Seer Mok'thardin" TurnInId="2465" />
+<PickUp QuestName="Bloodscalp Insight" QuestId="9436" GiverName="Nemeth Hawkeye" GiverId="17094" />
+<PickUp QuestName="Hunt for Yenniku" QuestId="26298" GiverName="Nimboya" GiverId="2497" />
+
+	        <If Condition="HasQuest(26298) &amp;&amp; !HasQuest(26323)">
+                     <RunTo X="-12034.35" Y="362.146" Z="0.8401338" />
+                     <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(58165)" /> 
+                     <CustomBehavior File="WaitTimer" WaitTime="3000" /> 
+                </If>
+<PickUp QuestName="Favored Skull" QuestId="26323" GiverName="Lashtail Hatchling" GiverId="42736" />
+
+<Objective QuestName="The Defense of Grom'gol: Trollish Thievery" QuestId="26281" Type="CollectItem" ItemId="58083" CollectCount="1" />
+<Objective QuestName="Hunt for Yenniku" QuestId="26298" Type="CollectItem" ItemId="3901" CollectCount="6" />
+<Objective QuestName="Bloodscalp Insight" QuestId="9436" Type="CollectItem" ItemId="23679" CollectCount="1" />
+
+<TurnIn QuestName="Hunt for Yenniku" QuestId="26298" TurnInName="Nimboya" TurnInId="2497" />
+<PickUp QuestName="Headhunting" QuestId="26299" GiverName="Nimboya" GiverId="2497" />
+<TurnIn QuestName="Favored Skull" QuestId="26323" TurnInName="Nimboya" TurnInId="2497" />
+<PickUp QuestName="A Nose for This Sort of Thing" QuestId="26325" GiverType="Object" GiverName="Bubbling Cauldron" GiverId="2076" X="-12344.37" Y="167.1293" Z="2.924798" />
+<TurnIn QuestName="Bloodscalp Insight" QuestId="9436" TurnInName="Nemeth Hawkeye" TurnInId="17094" />
+<PickUp QuestName="An Unusual Patron" QuestId="9457" GiverName="Nemeth Hawkeye" GiverId="17094" />
+<TurnIn QuestName="The Defense of Grom'gol: Trollish Thievery" QuestId="26281" TurnInName="Commander Aggro'gosh" TurnInId="2464" />
+
+	        <While Condition="HasQuest(9457) &amp;&amp; !IsQuestCompleted(9457)">
+                     <RunTo X="-12132.27" Y="956.0555" Z="4.561652" />
+                     <CustomBehavior File="WaitTimer" WaitTime="2000" />
+                     <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(23680)" /> 
+                     <CustomBehavior File="WaitTimer" WaitTime="5000" /> 
+                </While>
+<Objective QuestName="An Unusual Patron" QuestId="9457" Type="CollectItem" ItemId="23681" CollectCount="1" />
+
+	        <If Condition="HasQuest(26325) &amp;&amp; !IsQuestCompleted(26325)">
+                     <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(58165)" /> 
+                     <CustomBehavior File="WaitTimer" WaitTime="3000" /> 
+                </If>
+
+<Objective QuestName="Headhunting" QuestId="26299" Type="CollectItem" ItemId="1532" CollectCount="25" />
+<Objective QuestName="A Nose for This Sort of Thing" QuestId="26325" Type="CollectItem" ItemId="58171" CollectCount="8" />
+
+<If Condition="IsQuestCompleted(26325) &amp;&amp; HasQuest(26325)">
+             <CustomBehavior File="RunMacro" Macro="/use hearthstone" NumOfTimes="1" WaitTime="15000"/>
+	</If>
+<TurnIn QuestName="An Unusual Patron" QuestId="9457" TurnInName="Nemeth Hawkeye" TurnInId="17094" />
+<PickUp QuestName="The Hunt" QuestId="26340" GiverName="Nemeth Hawkeye" GiverId="17094" />
+<TurnIn QuestName="A Nose for This Sort of Thing" QuestId="26325" GiverType="Object" TurnInName="Bubbling Cauldron" TurnInId="2076" X="-12344.37" Y="167.1293" Z="2.924798" />
+<TurnIn QuestName="Headhunting" QuestId="26299" TurnInName="Nimboya" TurnInId="2497" />
+<PickUp QuestName="Nezzliok Will Know" QuestId="26300" GiverName="Nimboya" GiverId="2497" />
+<PickUp QuestName="Who's a Big Troll?" QuestId="26330" GiverType="Object" GiverName="Bubbling Cauldron" GiverId="2076" X="-12344.37" Y="167.1293" Z="2.924798" />
+<PickUp QuestName="Population Con-Troll" QuestId="26338" GiverName="Far Seer Mok'thardin" GiverId="2465" />
+<TurnIn QuestName="The Hunt" QuestId="26340" TurnInName="Barnil Stonepot" TurnInId="716" />
+<PickUp QuestName="Welcome to the Jungle" QuestId="583" GiverName="Barnil Stonepot" GiverId="716" />
+<PickUp QuestName="Supply and Demand" QuestId="26343" GiverName="Drizzlik" GiverId="2495" />
+<TurnIn QuestName="Welcome to the Jungle" QuestId="583" TurnInName="Hemet Nesingwary Jr." TurnInId="715" />
+<PickUp QuestName="Raptor Hunting" QuestId="194" GiverName="Hemet Nesingwary Jr." GiverId="715" />
+<PickUp QuestName="Panther Hunting" QuestId="190" GiverName="Sir S. J. Erlgadin" GiverId="718" />
+<PickUp QuestName="Tiger Hunting" QuestId="185" GiverName="Ajeck Rouack" GiverId="717" />
+<PickUp QuestName="The Green Hills of Stranglethorn" QuestId="26269" GiverName="Barnil Stonepot" GiverId="716" />
+
+<Objective QuestName="Supply and Demand" QuestId="26343" Type="CollectItem" ItemId="4053" CollectCount="2" />
+<Objective QuestName="The Green Hills of Stranglethorn" QuestId="26269" Type="CollectItem" ItemId="57990" CollectCount="1" />
+
+<TurnIn QuestName="The Green Hills of Stranglethorn" QuestId="26269" TurnInName="Barnil Stonepot" TurnInId="716" />
+<TurnIn QuestName="Supply and Demand" QuestId="26343" TurnInName="Drizzlik" TurnInId="2495" />
+<PickUp QuestName="Some Assembly Required" QuestId="26344" GiverName="Drizzlik" GiverId="2495" />
+<Objective QuestName="Tiger Hunting" QuestId="185" Type="KillMob" MobId="681" KillCount="10" />
+
+        <If Condition="IsQuestCompleted(185) &amp;&amp; HasQuest(185)">
+             <CustomBehavior File="CompleteLogQuest" QuestId="185" />
+	     <CustomBehavior File="WaitTimer" WaitTime="2500" />
+             <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+<Objective QuestName="Panther Hunting" QuestId="190" Type="KillMob" MobId="683" KillCount="10" />
+
+        <If Condition="IsQuestCompleted(190) &amp;&amp; HasQuest(190)">
+             <CustomBehavior File="CompleteLogQuest" QuestId="190" />
+	     <CustomBehavior File="WaitTimer" WaitTime="2500" />
+             <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+<Objective QuestName="Tiger Stalking" QuestId="186" Type="KillMob" MobId="682" KillCount="10" />
+
+        <If Condition="IsQuestCompleted(186) &amp;&amp; HasQuest(186)">
+             <CustomBehavior File="CompleteLogQuest" QuestId="186" />
+	     <CustomBehavior File="WaitTimer" WaitTime="2500" />
+             <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+<Objective QuestName="Some Assembly Required" QuestId="26344" Type="CollectItem" ItemId="4104" CollectCount="5" />
+<TurnIn QuestName="Some Assembly Required" QuestId="26344" TurnInName="Drizzlik" TurnInId="2495" />
+<PickUp QuestName="Excelsior" QuestId="26345" GiverName="Drizzlik" GiverId="2495" />
+
+<Objective QuestName="Tiger Prowess" QuestId="187" Type="KillMob" MobId="1085" KillCount="5" />
+
+        <If Condition="IsQuestCompleted(187) &amp;&amp; HasQuest(187)">
+             <CustomBehavior File="CompleteLogQuest" QuestId="187" />
+	     <CustomBehavior File="WaitTimer" WaitTime="2500" />
+             <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+<Objective QuestName="Tiger Mastery" QuestId="188" Type="CollectItem" ItemId="3879" CollectCount="1" />
+<Objective QuestName="Panther Stalking" QuestId="191" Type="KillMob" MobId="736" KillCount="10" />
+
+        <If Condition="IsQuestCompleted(191) &amp;&amp; HasQuest(191)">
+             <CustomBehavior File="CompleteLogQuest" QuestId="191" />
+	     <CustomBehavior File="WaitTimer" WaitTime="2500" />
+             <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+<Objective QuestName="Raptor Hunting" QuestId="194" Type="KillMob" MobId="685" KillCount="10" />
+
+        <If Condition="IsQuestCompleted(194) &amp;&amp; HasQuest(194)">
+             <CustomBehavior File="CompleteLogQuest" QuestId="194" />
+	     <CustomBehavior File="WaitTimer" WaitTime="2500" />
+             <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+<Objective QuestName="Nezzliok Will Know" QuestId="26300" Type="CollectItem" ItemId="3905" CollectCount="1" />
+<Objective QuestName="Who's a Big Troll?" QuestId="26330" Type="CollectItem" ItemId="58179" CollectCount="1" />
+<Objective QuestName="Population Con-Troll" QuestId="26338" Type="KillMob" MobId="701" KillCount="7" />
+<Objective QuestName="Population Con-Troll" QuestId="26338" Type="KillMob" MobId="588" KillCount="7" />
+<Objective QuestName="Population Con-Troll" QuestId="26338" Type="KillMob" MobId="595" KillCount="7" />
+<Objective QuestName="Population Con-Troll" QuestId="26338" Type="KillMob" MobId="699" KillCount="1" />
+
+<TurnIn QuestName="Tiger Mastery" QuestId="188" TurnInName="Ajeck Rouack" TurnInId="717" />
+
+<Objective QuestName="Raptor Stalking" QuestId="195" Type="KillMob" MobId="686" KillCount="10" />
+
+        <If Condition="IsQuestCompleted(195) &amp;&amp; HasQuest(195)">
+             <CustomBehavior File="CompleteLogQuest" QuestId="195" />
+	         <CustomBehavior File="WaitTimer" WaitTime="2500" />
+             <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+<TurnIn QuestName="Nezzliok Will Know" QuestId="26300" GiverType="Object" TurnInName="Bubbling Cauldron" TurnInId="2076" X="-12344.37" Y="167.1293" Z="2.924798" />
+<TurnIn QuestName="Who's a Big Troll?" QuestId="26330" GiverType="Object" TurnInName="Bubbling Cauldron" TurnInId="2076" X="-12344.37" Y="167.1293" Z="2.924798" />
+<PickUp QuestName="Speaking with Nezzliok" QuestId="26301" GiverType="Object" GiverName="Bubbling Cauldron" GiverId="2076" X="-12344.37" Y="167.1293" Z="2.924798" />
+<PickUp QuestName="Skullsplitter Mojo" QuestId="26332" GiverType="Object" GiverName="Bubbling Cauldron" GiverId="2076" X="-12344.37" Y="167.1293" Z="2.924798" />
+<TurnIn QuestName="Population Con-Troll" QuestId="26338" TurnInName="Far Seer Mok'thardin" TurnInId="2465" />
+
+<Objective QuestName="Excelsior" QuestId="26345" Type="CollectItem" ItemId="4105" CollectCount="1" />
+<Objective QuestName="Raptor Prowess" QuestId="196" Type="KillMob" MobId="687" KillCount="10" />
+
+        <If Condition="IsQuestCompleted(196) &amp;&amp; HasQuest(196)">
+             <CustomBehavior File="CompleteLogQuest" QuestId="196" />
+	     <CustomBehavior File="WaitTimer" WaitTime="2500" />
+             <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+<Objective QuestName="Panther Prowess" QuestId="192" Type="KillMob" MobId="684" KillCount="5" />
+
+        <If Condition="IsQuestCompleted(192) &amp;&amp; HasQuest(192)">
+             <CustomBehavior File="CompleteLogQuest" QuestId="192" />
+	     <CustomBehavior File="WaitTimer" WaitTime="2500" />
+             <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+<Objective QuestName="Panther Mastery" QuestId="193" Type="CollectItem" ItemId="3876" CollectCount="1" />
+<Objective QuestName="Raptor Mastery" QuestId="197" Type="CollectItem" ItemId="3877" CollectCount="1" />
+<Objective QuestName="Speaking with Nezzliok" QuestId="26301" Type="CollectItem" ItemId="3906" CollectCount="1" />
+<Objective QuestName="Speaking with Nezzliok" QuestId="26301" Type="CollectItem" ItemId="3907" CollectCount="1" />
+<Objective QuestName="Skullsplitter Mojo" QuestId="26332" Type="CollectItem" ItemId="58201" CollectCount="6" />
+
+<If Condition="IsQuestCompleted(26332) &amp;&amp; HasQuest(26332)">
+             <CustomBehavior File="RunMacro" Macro="/use hearthstone" NumOfTimes="1" WaitTime="15000"/>
+	</If>
+<TurnIn QuestName="Skullsplitter Mojo" QuestId="26332" GiverType="Object" TurnInName="Bubbling Cauldron" TurnInId="2076" X="-12344.37" Y="167.1293" Z="2.924798" />
+<TurnIn QuestName="Speaking with Nezzliok" QuestId="26301" GiverType="Object" TurnInName="Bubbling Cauldron" TurnInId="2076" X="-12344.37" Y="167.1293" Z="2.924798" />
+<PickUp QuestName="Chasing Yenniku's Fate" QuestId="26302" GiverType="Object" GiverName="Bubbling Cauldron" GiverId="2076" X="-12344.37" Y="167.1293" Z="2.924798" />
+<PickUp QuestName="Bloodlord Mandokir" QuestId="26334" GiverName="Bloodlord Mandokir" GiverId="42790" />
+<TurnIn QuestName="Bloodlord Mandokir" QuestId="26334" TurnInName="Bloodlord Mandokir" TurnInId="42790" />
+<PickUp QuestName="Priestess Hu'rala" QuestId="26350" GiverName="Nimboya" GiverId="2497" />
+<TurnIn QuestName="Raptor Mastery" QuestId="197" TurnInName="Hemet Nesingwary Jr." TurnInId="715" />
+<TurnIn QuestName="Excelsior" QuestId="26345" TurnInName="Drizzlik" TurnInId="2495" />
+<TurnIn QuestName="Panther Mastery" QuestId="193" TurnInName="Sir S. J. Erlgadin" TurnInId="718" />
+<PickUp QuestName="Big Game Hunter" QuestId="208" GiverName="Hemet Nesingwary Jr." GiverId="715" />
+<TurnIn QuestName="Priestess Hu'rala" QuestId="26350" TurnInName="Priestess Hu'rala" TurnInId="42812" />
+<PickUp QuestName="Mind Vision" QuestId="26351" GiverName="Priestess Hu'rala" GiverId="42812" />
+<PickUp QuestName="Above My Pay Grade" QuestId="26404" GiverName="Skeezy Whillzap" GiverId="42814" />
+<TurnIn QuestName="Chasing Yenniku's Fate" QuestId="26302" TurnInName="Kin'weelay" TurnInId="2519" />
+<PickUp QuestName="The Mind's Eye" QuestId="26303" GiverName="Kin'weelay" GiverId="2519" />
+
+<Objective QuestName="The Mind's Eye" QuestId="26303" Type="CollectItem" ItemId="3616" CollectCount="1" />
+<Objective QuestName="Mind Vision" QuestId="26351" Type="CollectItem" ItemId="3863" CollectCount="5" />
+
+<TurnIn QuestName="The Mind's Eye" QuestId="26303" TurnInName="Kin'weelay" TurnInId="2519" />
+<PickUp QuestName="Saving Yenniku" QuestId="26305" GiverName="Kin'weelay" GiverId="2519" />
+<TurnIn QuestName="Mind Vision" QuestId="26351" TurnInName="Priestess Hu'rala" TurnInId="42812" />
+<PickUp QuestName="See Raptor" QuestId="26359" GiverName="Priestess Hu'rala" GiverId="42812" />
+
+<If Condition="!IsQuestCompleted(26359) &amp;&amp; HasQuest(26359)">
+<CustomBehavior File="InteractWith" MobId="42812" NumOfTimes="1" ObjectType="Npc" GossipOptions="1" WaitTime="1000" X="-12082.77" Y="-856.1685" Z="51.24273" />
+<CustomBehavior File="WaitTimer" WaitTime="6000" />
+</If>
+
+<While Condition="Me.HasAura(&quot;Zul'Gurub Mind Vision&quot;)">
+<CustomBehavior File="WaitTimer" WaitTime="10000" />
+</While>
+<TurnIn QuestName="See Raptor" QuestId="26359" TurnInName="Priestess Hu'rala" TurnInId="42812" />
+<PickUp QuestName="Mind Control" QuestId="26360" GiverName="Priestess Hu'rala" GiverId="42812" />
+<PickUp QuestName="Zul'Mamwe Mambo" QuestId="26405" GiverName="Surkhan" GiverId="42811" />
+<PickUp QuestName="Nighttime in the Jungle" QuestId="26304" GiverName="Kil'karil" GiverId="42813" />
+
+<If Condition="HasQuest(26360) &amp;&amp; !IsQuestCompleted(26360)">
+      <RunTo X="-13014.78" Y="-791.6956" Z="70.32858" />
+</If>
+
+<Objective QuestName="Mind Control" QuestId="26360" Type="CollectItem" ItemId="58225" CollectCount="1" />
+
+<If Condition="HasQuest(26305) &amp;&amp; !IsQuestCompleted(26305)">
+	  <CustomBehavior File="UserSettings" LootMobs="False" />
+      <RunTo X="-13046.3" Y="-632.4467" Z="53.32409" />
+      <CustomBehavior File="MyCTM" X="-13067.46" Y="-615.4251" Z="54.11698" />
+	  <CustomBehavior File="WaitTimer" WaitTime="180000" />
+</If>
+
+<If Condition="IsQuestCompleted(26305) &amp;&amp; HasQuest(26305)">
+        <CustomBehavior File="MyCTM" X="-13046.43" Y="-632.7319" Z="53.31514" />
+</If>
+<If Condition="HasQuest(26305) &amp;&amp; IsQuestCompleted(26305)">
+	<RunTo X="-12960.14" Y="-756.3875" Z="56.87518" />
+	<CustomBehavior File="UserSettings" LootMobs="True" />
+</If>
+<While Condition="!IsQuestCompleted(26304) &amp;&amp; HasQuest(26304)">
+        <CustomBehavior File="InteractWithExisting" QuestId="26304" ObjectType="Gameobject" MobId="204247" NumOfTimes="1" CollectionDistance="400" X="-12921.1" Y="-720.3618" Z="51.61203" />
+</While>
+<Objective QuestName="Zul'Mamwe Mambo" QuestId="26405" Type="KillMob" MobId="43024" KillCount="16" />
+
+<If Condition="HasQuest(26405) &amp;&amp; IsQuestCompleted(26405)">
+      <CustomBehavior File="RunMacro" Macro="/use hearthstone" NumOfTimes="1" WaitTime="15000"/>
+</If>
+<TurnIn QuestName="Saving Yenniku" QuestId="26305" TurnInName="Nimboya" TurnInId="2497" />
+
+<Objective QuestName="Big Game Hunter" QuestId="208" Type="CollectItem" ItemId="3880" CollectCount="1" />
+
+<TurnIn QuestName="Mind Control" QuestId="26360" TurnInName="Priestess Hu'rala" TurnInId="42812" />
+<!--
+PickUp QuestName="Be Raptor" QuestId="26362" GiverName="Priestess Hu'rala" GiverId="42812" />
+
+<If Condition="!IsQuestCompleted(26362) &amp;&amp; HasQuest(26362)">
+<CustomBehavior File="InteractWith" MobId="42812" NumOfTimes="1" ObjectType="Npc" GossipOptions="1" WaitTime="1000" X="-12082.77" Y="-856.1685" Z="51.24273" />
+<CustomBehavior File="WaitTimer" WaitTime="6000" />
+</If>
+
+<CustomBehavior File="Be Raptor" QuestId="26362" />
+
+<TurnIn QuestName="Be Raptor" QuestId="26362" TurnInName="Priestess Hu'rala" TurnInId="42812" />
+
+<PickUp QuestName="Surkhan" QuestId="26386" GiverName="Priestess Hu'rala" GiverId="42812" />
+<TurnIn QuestName="Surkhan" QuestId="26386" TurnInName="Surkhan" TurnInId="42811" />
+-->
+<TurnIn QuestName="Zul'Mamwe Mambo" QuestId="26405" TurnInName="Surkhan" TurnInId="42811" />
+<TurnIn QuestName="Nighttime in the Jungle" QuestId="26304" TurnInName="Kil'karil" TurnInId="42813" />
+ <PickUp QuestName="The Mosh'Ogg Bounty" QuestId="26399" GiverName="Skeezy Whillzap" GiverId="42814" />
+ <Objective QuestName="The Mosh'Ogg Bounty" QuestId="26399" Type="CollectItem" ItemId="58205" CollectCount="1" />
+
+ <TurnIn QuestName="The Mosh'Ogg Bounty" QuestId="26399" TurnInName="Skeezy Whillzap" TurnInId="42814" />
+<PickUp QuestName="The Universal Key" QuestId="26400" GiverName="Skeezy Whillzap" GiverId="42814" />
+<PickUp QuestName="Cozzles Plan" QuestId="26352" GiverName="Kil'Karil" GiverId="42813" />
+<PickUp QuestName="Venture Company Mining" QuestId="26403" GiverName="Skeezy Whillzap" GiverId="42814" />
+<Objective QuestName="Venture Company Mining" QuestId="26403" Type="CollectItem" ItemId="4106" CollectCount="5" />
+<While Condition="HasQuest(26352) &amp;&amp; !IsQuestCompleted(26352)">
+	<Objective QuestName="Cozzles Plan" QuestId="26352" Type="CollectItem" ItemId="5851" CollectCount="1" />
+	<Objective QuestName="Cozzles Plan" QuestId="26352" Type="CollectItem" ItemId="5852" CollectCount="1" />
+</While>
+
+<While Condition="HasQuest(26400) &amp;&amp; !IsQuestCompleted(26400)">
+	<CustomBehavior File="InteractWith" MobId="43003" NumOfTimes="1" ObjectType="Npc" GossipOptions="1" WaitTime="1000" X="-12007.42" Y="-554.2401" Z="11.76802" />
+</While>
+
+<TurnIn QuestName="The Universal Key" QuestId="26400" TurnInName="Skeezy Whillzap" TurnInId="42814" />
+<TurnIn QuestName="Cozzles Plan" QuestId="26352" TurnInName="Kil'Karil" TurnInId="42813" />
+<TurnIn QuestName="Venture Company Mining" QuestId="26403" TurnInName="Skeezy Whillzap" TurnInId="42814" />
+<TurnIn QuestName="Big Game Hunter" QuestId="208" TurnInName="Hemet Nesingwary Jr." TurnInId="715" />
+
+<If Condition="IsQuestCompleted(26404) &amp;&amp; HasQuest(26404)">
+<RunTo X="-12089.68" Y="-815.739" Z="42.31661" />
+<CustomBehavior File="ForcedDismount" />
+<CustomBehavior File="InteractWith" MobId="43052" NumOfTimes="1" ObjectType="Npc" GossipOptions="1" WaitTime="1000" X="-12089.68" Y="-815.739" Z="42.31661" />
+</If>
+<TurnIn QuestName="Above My Pay Grade" QuestId="26404" TurnInName="Sassy Hardwrench" TurnInId="43095" />
+<PickUp QuestName="Akiris by the Bundle" QuestId="26487" GiverName="Sassy Hardwrench" GiverId="43095" />
+<PickUp QuestName="If They're Just Going to Leave Them Lying Around..." QuestId="26450" GiverName="Sassy Hardwrench" GiverId="43095" />
+<While Condition="!HasQuest(26590) &amp;&amp; !HasQuest(26433) &amp;&amp; !IsQuestCompleted(26433) &amp;&amp; !IsQuestCompleted(26590)">
+	<CustomBehavior File="InteractWith" MobId="43096" NumOfTimes="1" ObjectType="Npc" WaitTime="1000" X="-13285.73" Y="775.164" Z="2.997583" />
+	<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" NumOfTimes="1" WaitTime="2000" />
+	<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" NumOfTimes="1" WaitTime="1000" />
+</While>
+<If Condition="HasQuest(26450)">
+	<CustomBehavior File="Hearthstone" MobId="44190" X="-13232.24" Y="724.2483" Z="3.357067" HearthLocation="1739" />
+</If>
+<If Condition="HasQuest(26590)">
+	<Objective QuestName="The Holy Water of Clarity" QuestId="26590" Type="CollectItem" ItemId="58811" CollectCount="1" />
+</If>
+<If Condition="HasQuest(26433)">
+	<Objective QuestName="The Holy Water of Clarity" QuestId="26433" Type="CollectItem" ItemId="58811" CollectCount="1" />
+</If>
+<Objective QuestName="Akiris by the Bundle" QuestId="26487" Type="CollectItem" ItemId="4029" CollectCount="6" />
+<Objective QuestName="If They're Just Going to Leave Them Lying Around..." QuestId="26450" Type="CollectItem" ItemId="58877" CollectCount="6" />
+
+<TurnIn QuestName="Akiris by the Bundle" QuestId="26487" TurnInName="Sassy Hardwrench" TurnInId="43095" />
+<TurnIn QuestName="If They're Just Going to Leave Them Lying Around..." QuestId="26450" TurnInName="Sassy Hardwrench" TurnInId="43095" />
+<PickUp QuestName="There's Somebody Out There Who Wants It" QuestId="26493" GiverName="Sassy Hardwrench" GiverId="43095" />
+<If Condition="HasQuest(26590)">
+	<TurnIn QuestName="The Holy Water of Clarity" QuestId="26590" TurnInName="Flem Gizzix" TurnInId="43096" />
+</If>
+<If Condition="HasQuest(26433)">
+	<TurnIn QuestName="The Holy Water of Clarity" QuestId="26433" TurnInName="Flem Gizzix" TurnInId="43096" />
+</If>
+<PickUp QuestName="Primal Reagents of Power" QuestId="26434" GiverName="Flem Gizzix" GiverId="43096" />
+<PickUp QuestName="Diffractory Chromascope" QuestId="26592" GiverName="Flem Gizzix" GiverId="43096" />
+
+<Objective QuestName="Diffractory Chromascope" QuestId="26592" Type="CollectItem" ItemId="59032" CollectCount="1" />
+<Objective QuestName="Diffractory Chromascope" QuestId="26592" Type="CollectItem" ItemId="59031" CollectCount="1" />
+<Objective QuestName="There's Somebody Out There Who Wants It" QuestId="26493" Type="CollectItem" ItemId="58880" CollectCount="7" />
+<Objective QuestName="Primal Reagents of Power" QuestId="26434" Type="CollectItem" ItemId="58812" CollectCount="4" />
+<Objective QuestName="Primal Reagents of Power" QuestId="26434" Type="CollectItem" ItemId="58813" CollectCount="4" />
+
+<If Condition="IsQuestCompleted(26434) &amp;&amp; HasQuest(26434)">
+             <CustomBehavior File="RunMacro" Macro="/use hearthstone" NumOfTimes="1" WaitTime="15000"/>
+	</If>
+<TurnIn QuestName="There's Somebody Out There Who Wants It" QuestId="26493" TurnInName="Sassy Hardwrench" TurnInId="43095" />
+<PickUp QuestName="Mixmaster Jasper" QuestId="26494" GiverName="Sassy Hardwrench" GiverId="43095" />
+<PickUp QuestName="Chabal" QuestId="26495" GiverName="Sassy Hardwrench" GiverId="43095" />
+<TurnIn QuestName="Mixmaster Jasper" QuestId="26494" TurnInName="Mixmaster Jasper" TurnInId="43097" />
+<PickUp QuestName="Zanzil's Secret" QuestId="26533" GiverName="Mixmaster Jasper" GiverId="43097" />
+<TurnIn QuestName="Chabal" QuestId="26495" TurnInName="Chabal" TurnInId="43098" />
+<PickUp QuestName="Backdoor Dealings" QuestId="26550" GiverName="Chabal" GiverId="43098" />
+<TurnIn QuestName="Primal Reagents of Power" QuestId="26434" TurnInName="Flem Gizzix" TurnInId="43096" />
+<TurnIn QuestName="Diffractory Chromascope" QuestId="26592" TurnInName="Flem Gizzix" TurnInId="43096" />
+<PickUp QuestName="I'm A Huge Liar and a Fraud" QuestId="26435" GiverName="Flem Gizzix" GiverId="43096" />
+
+<If Condition="!IsQuestCompleted(26550) &amp;&amp; HasQuest(26550)">
+<CustomBehavior File="InteractWith" MobId="204361" NumOfTimes="1" ObjectType="Gameobject" GossipOptions="1" WaitTime="1000" X="-13343.19" Y="-30.43895" Z="22.38012" />
+<CustomBehavior File="WaitTimer" WaitTime="85000" /> 
+</If>
+<Objective QuestName="Zanzil's Secret" QuestId="26533" Type="CollectItem" ItemId="4016" CollectCount="5" />
+<TurnIn QuestName="Zanzil's Secret" QuestId="26533" TurnInName="Mixmaster Jasper" TurnInId="43097" />
+<PickUp QuestName="Let's See What You've Got, Zanzil" QuestId="26534" GiverName="Mixmaster Jasper" GiverId="43097" />
+<TurnIn QuestName="Backdoor Dealings" QuestId="26550" TurnInName="Chabal" TurnInId="43098" />
+<PickUp QuestName="Eliminate the Outcast" QuestId="26551" GiverName="Chabal" GiverId="43098" />
+
+<If Condition="!IsQuestCompleted(26534) &amp;&amp; HasQuest(26534)">
+<CustomBehavior File="InteractWith" MobId="43203" NumOfTimes="1" ObjectType="Npc" GossipOptions="1" WaitTime="1000" X="-13309.32" Y="693.0573" Z="3.977566" />
+<CustomBehavior File="WaitTimer" WaitTime="5000" />
+<CustomBehavior File="InteractWith" MobId="43204" NumOfTimes="1" ObjectType="Npc" GossipOptions="1" WaitTime="1000" X="-13314.2" Y="693.356" Z="3.984316" />
+<CustomBehavior File="WaitTimer" WaitTime="5000" />
+<CustomBehavior File="InteractWith" MobId="43205" NumOfTimes="1" ObjectType="Npc" GossipOptions="1" WaitTime="1000" X="-13314.7" Y="698.424" Z="3.968367" />
+<CustomBehavior File="WaitTimer" WaitTime="5000" />
+</If>
+<TurnIn QuestName="Let's See What You've Got, Zanzil" QuestId="26534" TurnInName="Mixmaster Jasper" TurnInId="43097" />
+<PickUp QuestName="Recipe for Disaster" QuestId="26535" GiverName="Mixmaster Jasper" GiverId="43097" />
+
+<Objective QuestName="Eliminate the Outcast" QuestId="26551" Type="KillMob" MobId="43245" KillCount="1" />
+
+        <If Condition="IsQuestCompleted(26551) &amp;&amp; HasQuest(26551)">
+             <CustomBehavior File="CompleteLogQuest" QuestId="26551" />
+	         <CustomBehavior File="WaitTimer" WaitTime="2500" />
+             <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+<Objective QuestName="Recipe for Disaster" QuestId="26535" Type="CollectItem" ItemId="58901" CollectCount="1" />
+
+<If Condition="!IsQuestCompleted(26552) &amp;&amp; HasQuest(26552)">
+<CustomBehavior File="InteractWith" MobId="204372" NumOfTimes="1" ObjectType="Gameobject" GossipOptions="1" WaitTime="5000" X="-13681.02" Y="-306.339" Z="8.12207" />
+</If>
+
+        <If Condition="IsQuestCompleted(26552) &amp;&amp; HasQuest(26552)">
+		<While Condition="HasQuest(26552) &amp;&amp; IsQuestCompleted(26552)">
+             	<CustomBehavior File="CompleteLogQuest" QuestId="26552" />
+		</While>
+	         <CustomBehavior File="WaitTimer" WaitTime="2500" />
+             <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+			<If Condition="HasQuest(26553) &amp;&amp; !IsQuestCompleted(26553)">
+                     <CustomBehavior File="UserSettings" PullDistance="1" />
+		</If>
+       <Objective QuestName="High Priestess Jeklik" QuestId="26553" Type="KillMob" MobId="43257" KillCount="1" />
+
+        <If Condition="IsQuestCompleted(26553) &amp;&amp; HasQuest(26553)">
+             <CustomBehavior File="CompleteLogQuest" QuestId="26553" />
+	         <CustomBehavior File="WaitTimer" WaitTime="2500" />
+             <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+		
+		<If Condition="!IsQuestCompleted(26554) &amp;&amp; HasQuest(26554)">
+<CustomBehavior File="InteractWith" MobId="204386" NumOfTimes="1" ObjectType="Gameobject" GossipOptions="1" WaitTime="1000" X="-12228.33" Y="-1451.609" Z="130.7485" />
+</If>
+		
+		        <If Condition="IsQuestCompleted(26554) &amp;&amp; HasQuest(26554)">
+             <CustomBehavior File="CompleteLogQuest" QuestId="26554" />
+	         <CustomBehavior File="WaitTimer" WaitTime="2500" />
+             <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+		<Objective QuestName="High Priest Venoxis" QuestId="26555" Type="KillMob" MobId="43323" KillCount="1" />
+		<TurnIn QuestName="Recipe for Disaster" QuestId="26535" TurnInName="Mixmaster Jasper" TurnInId="43097" />
+		<TurnIn QuestName="High Priest Venoxis" QuestId="26555" TurnInName="Chabal" TurnInId="43098" />
+		<PickUp QuestName="The Captain's Chest" QuestId="26599" GiverName="Captain Hecklebury Smotts" GiverId="2500" />
+		<PickUp QuestName="Stranglethorn Fever" QuestId="26597" GiverName="Fin Fizracket" GiverId="2486" />
+		<PickUp QuestName="Scaring Shaky" QuestId="26593" GiverName="Sea Wolf MacKinley" GiverId="2501" />
+		<TurnIn QuestName="I'm A Huge Liar and a Fraud" QuestId="26435" TurnInName="Garley Lightrider" TurnInId="43849" />
+		<CustomBehavior File="UserSettings" PullDistance="30" />
+			        <If Condition="HasQuest(26593)">
+                     <CustomBehavior File="Hearthstone" MobId="6807" X="-14457.73" Y="495.3478" Z="15.12667" HearthLocation="35" />  
+                </If>
+		<Objective QuestName="The Captain's Chest" QuestId="26599" Type="CollectItem" ItemId="3932" CollectCount="1" />
+		
+		<PickUp QuestName="Message in a Bottle" QuestId="26603" GiverType="Object" GiverName="Half-Buried Bottle" GiverId="204406" X="-14238.73" Y="-32.93382" Z="2.491179" />
+		
+		            <If Condition="(!IsQuestCompleted(26597))" >
+                    <SetGrindArea>
+                        <GrindArea>
+                            <Factions>103</Factions>
+                            <Hotspots>
+                               <Hotspot X="-13841.83" Y="11.99828" Z="17.48693" />
+							   <Hotspot X="-13888.16" Y="51.90727" Z="12.67221" />
+							   <Hotspot X="-13949.15" Y="102.3743" Z="16.44753" />
+                            </Hotspots>
+                        </GrindArea>
+                    </SetGrindArea>
+                <GrindTo Condition="(HasItem(2799))" GoalText="Grinding for Gorilla Fang." />
+		        </If>
+		  <If Condition="HasQuest(26597) &amp;&amp; !IsQuestCompleted(26597)">
+                <CustomBehavior File="InteractWith"  MobId="1449" NumOfTimes="1" CollectionDistance="200" WaitTime="1000" X="-13738.46" Y="-29.74349" Z="44.553" />
+                <CustomBehavior File="Misc\RunLua" Lua="CompleteQuest();" WaitTime="1000" />
+                <CustomBehavior File="WaitTimer" WaitTime="2000"/>
+                <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" NumOfTimes="1" WaitTime="2000" />  
+				<RunTo X="-13752.53" Y="-19.34455" Z="44.16756" />
+                <CustomBehavior File="WaitTimer" WaitTime="100000"/>
+            </If>
+		
+		<Objective QuestName="Scaring Shaky" QuestId="26593" Type="CollectItem" ItemId="3919" CollectCount="5" />
+		
+		<TurnIn QuestName="Scaring Shaky" QuestId="26593" TurnInName="Shaky Phillipe" TurnInId="2502" />
+		<PickUp QuestName="Return to MacKinley" QuestId="26594" GiverName="Shaky Phillipe" GiverId="2502" />
+		<TurnIn QuestName="The Captain's Chest" QuestId="26599" TurnInName="Captain Hecklebury Smotts" TurnInId="2500" />
+		<PickUp QuestName="A Giant's Feast" QuestId="26600" GiverName="Captain Hecklebury Smotts" GiverId="2500" />
+		
+				<If Condition="!IsQuestCompleted(26600) &amp;&amp; !HasItem(59036)">
+<CustomBehavior File="InteractWith" MobId="2664" NumOfTimes="1" ObjectType="Npc" BuyItemId="59036" WaitTime="1000" X="-14331.23" Y="419.2986" Z="6.625996" />
+</If>
+		
+		<TurnIn QuestName="Stranglethorn Fever" QuestId="26597" TurnInName="Fin Fizracket" TurnInId="2486" />
+		<TurnIn QuestName="Return to MacKinley" QuestId="26594" TurnInName="Sea Wolf MacKinley" TurnInId="2501" />
+		<PickUp QuestName="Kill-Collect" QuestId="26595" GiverName="Sea Wolf MacKinley" GiverId="2501" />
+		
+				<If Condition="!IsQuestCompleted(26600) &amp;&amp; !HasItem(59037)">
+<CustomBehavior File="InteractWith" MobId="2491" NumOfTimes="1" ObjectType="Npc" GossipOptions="1" BuyItemId="59037" WaitTime="1000" X="-14331.23" Y="419.2986" Z="6.625996" />
+</If>
+<TurnIn QuestName="A Giant's Feast" QuestId="26600" TurnInName="Captain Hecklebury Smotts" TurnInId="2500" />
+<PickUp QuestName="A Dish Best Served Huge" QuestId="26602" GiverName="Captain Hecklebury Smotts" GiverId="2500" />
+<TurnIn QuestName="Message in a Bottle" QuestId="26603" TurnInName="Princess Poobah" TurnInId="2634" />
+<PickUp QuestName="Protecting Her Royal Highness Poobah" QuestId="26604" GiverName="Princess Poobah" GiverId="2634" />
+
+<Objective QuestName="Protecting Her Royal Highness Poobah" QuestId="26604" Type="KillMob" MobId="2522" KillCount="5" />
+
+<TurnIn QuestName="Protecting Her Royal Highness Poobah" QuestId="26604" TurnInName="Princess Poobah" TurnInId="2634" />
+<PickUp QuestName="Grubby Little Paws" QuestId="26605" GiverName="Princess Poobah" GiverId="2634" />
+
+<Objective QuestName="Grubby Little Paws" QuestId="26605" Type="CollectItem" ItemId="59057" CollectCount="1" />
+<Objective QuestName="Grubby Little Paws" QuestId="26605" Type="CollectItem" ItemId="59058" CollectCount="1" />
+<Objective QuestName="Grubby Little Paws" QuestId="26605" Type="CollectItem" ItemId="59059" CollectCount="1" />
+<Objective QuestName="Grubby Little Paws" QuestId="26605" Type="CollectItem" ItemId="59060" CollectCount="1" />
+
+<TurnIn QuestName="Grubby Little Paws" QuestId="26605" TurnInName="Princess Poobah" TurnInId="2634" />
+<PickUp QuestName="Mukla's Demise" QuestId="26606" GiverName="Princess Poobah" GiverId="2634" />
+
+<Objective QuestName="Mukla's Demise" QuestId="26606" Type="CollectItem" ItemId="4103" CollectCount="1" />
+
+<TurnIn QuestName="Mukla's Demise" QuestId="26606" TurnInName="Princess Poobah" TurnInId="2634" />
+
+				<While Condition="!IsQuestCompleted(26602) &amp;&amp; HasQuest(26602)">
+<CustomBehavior File="InteractWith" MobId="2289" NumOfTimes="1" ObjectType="Gameobject" GossipOptions="1" WaitTime="1000" X="-14653.45" Y="149.3614" Z="2.940605" />
+<CustomBehavior File="WaitTimer" WaitTime="20000"/>
+<RunTo X="-14653.45" Y="149.3614" Z="2.940605" />
+</While>
+<!--<Objective QuestName="A Dish Best Served Huge" QuestId="26602" Type="KillMob" MobId="1494" KillCount="1" /> -->
+
+				<If Condition="!IsQuestCompleted(26595) &amp;&amp; HasQuest(26595)">
+<CustomBehavior File="InteractWith" MobId="43376" NumOfTimes="1" ObjectType="Npc" GossipOptions="1" WaitTime="1000" X="-14033.54" Y="-127.1671" Z="2.436461" />
+</If>
+<Objective QuestName="Kill-Collect" QuestId="26595" Type="CollectItem" ItemId="3924" CollectCount="1" />
+<Objective QuestName="Kill-Collect" QuestId="26595" Type="CollectItem" ItemId="59035" CollectCount="1" />
+
+  <If Condition="IsQuestCompleted(26595) &amp;&amp; HasQuest(26595)">
+        <CustomBehavior File="RunMacro" Macro="/use hearthstone" NumOfTimes="1" WaitTime="15000"/>
+              </If>
+<TurnIn QuestName="Kill-Collect" QuestId="26595" TurnInName="Sea Wolf MacKinley" TurnInId="2501" />
+<PickUp QuestName="The Bloodsail Buccaneers" QuestId="26609" GiverName="First Mate Crazz" GiverId="2490" />
+<TurnIn QuestName="A Dish Best Served Huge" QuestId="26602" TurnInName="Captain Hecklebury Smotts" TurnInId="2500" />
+<PickUp QuestName="Mok'rash the Cleaver" QuestId="26601" GiverName="Captain Hecklebury Smotts" GiverId="2500" />
+
+<Objective QuestName="Mok'rash the Cleaver" QuestId="26601" Type="KillMob" MobId="1493" KillCount="1" />
+<TurnIn QuestName="The Bloodsail Buccaneers" QuestId="26609" TurnInName="Bloodsail Correspondence" TurnInId="2083" />
+<PickUp QuestName="Bloodsail Treachery" QuestId="26610" GiverName="Bloodsail Correspondence" GiverId="2083" />
+  <If Condition="HasQuest(26610)">
+        <CustomBehavior File="WaitTimer" WaitTime="120000"/>
+		<PickUp QuestName="An Old Sea Dog" QuestId="26617" GiverType="Item" GiverId="59143" />
+              </If>
+<TurnIn QuestName="Mok'rash the Cleaver" QuestId="26601" TurnInName="Captain Hecklebury Smotts" TurnInId="2500" />
+<TurnIn QuestName="Bloodsail Treachery" QuestId="26610" TurnInName="First Mate Crazz" TurnInId="2490" />
+<PickUp QuestName="The Baron Must Be Told" QuestId="26611" GiverName="First Mate Crazz" GiverId="2490" />
+<TurnIn QuestName="An Old Sea Dog" QuestId="26617" TurnInName="Fleet Master Seahorn" TurnInId="2487" />
+<TurnIn QuestName="The Baron Must Be Told" QuestId="26611" TurnInName="Baron Revilgaz" TurnInId="2496" />
+<PickUp QuestName="Details of the Attack" QuestId="26612" GiverName="Baron Revilgaz" GiverId="2496" />
+<PickUp QuestName="Up to Snuff" QuestId="26613" GiverName="Deeg" GiverId="2488" />
+<PickUp QuestName="Keep An Eye Out" QuestId="26614" GiverName="Dizzy One-Eye" GiverId="2493" />
+
+
+<Objective QuestName="Details of the Attack" QuestId="26612" Type="CollectItem" ItemId="3920" CollectCount="1" />
+<Objective QuestName="Details of the Attack" QuestId="26612" Type="CollectItem" ItemId="59145" CollectCount="1" />
+<Objective QuestName="Details of the Attack" QuestId="26612" Type="KillMob" MobId="1565" KillCount="8" />
+<Objective QuestName="Details of the Attack" QuestId="26612" Type="KillMob" MobId="1653" KillCount="8" />
+<Objective QuestName="Keep An Eye Out" QuestId="26614" Type="CollectItem" ItemId="3897" CollectCount="1" />
+<Objective QuestName="Up to Snuff" QuestId="26613" Type="CollectItem" ItemId="3910" CollectCount="15" />
+
+<TurnIn QuestName="Keep An Eye Out" QuestId="26614" TurnInName="Dizzy One-Eye" TurnInId="2493" />
+<TurnIn QuestName="Up to Snuff" QuestId="26613" TurnInName="Deeg" TurnInId="2488" />
+<TurnIn QuestName="Details of the Attack" QuestId="26612" TurnInName="Baron Revilgaz" TurnInId="2496" />
+<PickUp QuestName="Getting In With the Bloodsail" QuestId="26624" GiverName="Baron Revilgaz" GiverId="2496" />
+<TurnIn QuestName="Getting In With the Bloodsail" QuestId="26624" TurnInName="Yancey Grillsen" TurnInId="43504" />
+<PickUp QuestName="Seeing Where Your Loyalties Lie" QuestId="26629" GiverName="Yancey Grillsen" GiverId="43504" />
+            <If Condition="(HasQuest(26629))" >
+        <PickUp QuestName="Looks Like a Tauren Pirate to Me" QuestId="26630" GiverName="Fleet Master Seahorn" GiverId="2487" />
+            <If Condition="((HasQuest(26630)) &amp;&amp; (!IsQuestCompleted(26630)))" >
+                  <CustomBehavior File="InteractWith" MobId="43505" NumOfTimes="1" ObjectType="Npc" GossipOptions="1,1" WaitTime="1000" X="-14402.9" Y="399.231" Z="27.93369" />
+                   <CustomBehavior File="InteractWith" MobId="2663" NumOfTimes="1" ObjectType="Npc" GossipOptions="1" WaitTime="1000" X="-14334.84" Y="425.6806" Z="6.627903" />
+                    <CustomBehavior File="InteractWith" MobId="2487" NumOfTimes="1" ObjectType="Npc" GossipOptions="1,1" WaitTime="1000" X="-14444.69" Y="486.8163" Z="28.67016" />
+                <CustomBehavior File="WaitTimer" WaitTime="10000"/>
+            </If>
+        <TurnIn QuestName="Looks Like a Tauren Pirate to Me" QuestId="26630" TurnInName="Fleet Master Seahorn" TurnInId="2487" X="-14441.88" Y="487.5457" Z="28.74435" />
+            </If>
+        <TurnIn QuestName="Seeing Where Your Loyalties Lie" QuestId="26629" TurnInName="Yancey Grillsen" TurnInId="43504" />  
+
+<PickUp QuestName="Your First Day as a Pirate" QuestId="26631" GiverName="Yancey Grillsen" GiverId="43504" />
+<TurnIn QuestName="Your First Day as a Pirate" QuestId="26631" TurnInName="Captain Keelhaul" TurnInId="2548" />
+<PickUp QuestName="Swabbing Duty" QuestId="26633" GiverName="Captain Keelhaul" GiverId="2548" />
+
+				<While Condition="!IsQuestCompleted(26633) &amp;&amp; HasQuest(26633)">
+<CustomBehavior File="InteractWith" MobId="2545" NumOfTimes="1" ObjectType="Npc" GossipOptions="1,1" WaitTime="1000" X="-14955.25" Y="355.8767" Z="12.71557" />
+<CustomBehavior File="WaitTimer" WaitTime="2000" />
+<CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="500" />
+</While>
+<PickUp QuestName="Cannonball Swim" QuestId="26635" GiverName="Pretty Boy Duncan" GiverId="2545" />
+<PickUp QuestName="The Bane of Many A Pirate" QuestId="26634" GiverName="Garr Salthoof" GiverId="2549" />
+<TurnIn QuestName="Swabbing Duty" QuestId="26633" TurnInName="Captain Keelhaul" TurnInId="2548" />
+
+				<If Condition="!IsQuestCompleted(26635) &amp;&amp; HasQuest(26635)">
+					<RunTo X="-14984.56" Y="300.3037" Z="-0.7739683"  />
+</If>
+
+				<CustomBehavior File="CollectThings" CollectUntil="QuestComplete" QuestId="26635" ObjectId="204433" CollectItemId="59151" CollectItemCount="6" HuntingGroundRadius="200" X="-15063.42" Y="292.184" Z="-38.84092" />
+
+				<If Condition="IsQuestCompleted(26635) &amp;&amp; HasQuest(26635)">
+<CustomBehavior File="MyCTM" X="-14983.26" Y="300.9532" Z="0.04260615" />
+</If>
+
+<Objective QuestName="The Bane of Many A Pirate" QuestId="26634" Type="CollectItem" ItemId="59150" CollectCount="5" />
+<TurnIn QuestName="Cannonball Swim" QuestId="26635" TurnInName="Pretty Boy Duncan" TurnInId="2545" />
+<TurnIn QuestName="The Bane of Many A Pirate" QuestId="26634" TurnInName="Garr Salthoof" TurnInId="2549" />
+<PickUp QuestName="Attracting Attention" QuestId="26644" GiverName="Captain Keelhaul" GiverId="2548" />
+<TurnIn QuestName="Attracting Attention" QuestId="26644" TurnInName="Fleet Master Firallon" TurnInId="2546" />
+<PickUp QuestName="Ol' Blasty" QuestId="26647" GiverName="Ironpatch" GiverId="2547" />
+
+<If Condition="HasQuest(26647) &amp;&amp; !IsQuestCompleted(26647)">
+ <RunTo X="-14982.22" Y="255.8151" Z="13.88686" />
+ <CustomBehavior File="ForcedDismount" />
+ <CustomBehavior File="MountVehOnly" VehicleMountId="43562" X="-14987.99" Y="255.9323" Z="13.66914" />
+        </If>
+	<While Condition="HasQuest(26647) &amp;&amp; !IsQuestCompleted(26647)">
+	    <CustomBehavior File="Message" QuestId="26647" Text="Works but takes a little extra time. Just let it run." />
+        <CustomBehavior File="Vehicles\CannonControl" QuestId="26647" MaxAngle="0.12758938205361" MinAngle="0.12758938205361" Buttons="1,2,3" ExitButton="4" VehicleId="43562"/>
+        </While>
+
+	<If Condition="HasQuest(26647) &amp;&amp; IsQuestCompleted(26647)">
+<CustomBehavior File="RunMacro" Macro="/script VehicleExit()" NumOfTimes="1" WaitTime="500" />
+        </If>
+<PickUp QuestName="Our Mortal Enemies" QuestId="26648" GiverName="Dead-Eye Drederick McGumm" GiverId="43556" />
+<TurnIn QuestName="Ol' Blasty" QuestId="26647" TurnInName="Ironpatch" TurnInId="2547" />		
+<PickUp QuestName="Drive-By Piracy" QuestId="26649" GiverName="Ironpatch" GiverId="2547" />
+		<If Condition="HasQuest(26649) &amp;&amp; !IsQuestCompleted(26649)">
+		        <CustomBehavior File="26649" />
+		</If>
+<TurnIn QuestName="Drive-By Piracy" QuestId="26649" TurnInName="Ironpatch" TurnInId="2547" />
+
+	        <If Condition="HasQuest(26648) &amp;&amp; !IsQuestCompleted(26648)">
+                     <RunTo X="-14690.79" Y="-142.1026" Z="3.995951" />
+                     <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(59226)" /> 
+                     <CustomBehavior File="WaitTimer" WaitTime="3000" /> 
+                </If>
+<Objective QuestName="Our Mortal Enemies" QuestId="26648" Type="KillMob" MobId="43553" KillCount="15" />
+
+		        <If Condition="IsQuestCompleted(26648) &amp;&amp; HasQuest(26648)">
+             <CustomBehavior File="CompleteLogQuest" QuestId="26648" />
+	         <CustomBehavior File="WaitTimer" WaitTime="2500" />
+             <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+<PickUp QuestName="The Damsel's Luck" QuestId="26650" GiverName="Fleet Master Firallon" GiverId="2546" />
+<TurnIn QuestName="The Damsel's Luck" QuestId="26650" TurnInName="Captain Stillwater's Charts" TurnInId="204450" />
+<PickUp QuestName="The Brashtide Crew" QuestId="26662" GiverType="Object" GiverName="Captain Stillwater's Charts" GiverId="204450" X="-14923.49" Y="124.1539" Z="7.520402" />
+<PickUp QuestName="Sinking From Within" QuestId="26663" GiverType="Object" GiverName="Captain Stillwater's Charts" GiverId="204450" X="-14923.49" Y="124.1539" Z="7.520402" />
+<PickUp QuestName="Making Mutiny" QuestId="26664" GiverType="Object" GiverName="Captain Stillwater's Charts" GiverId="204450" X="-14923.49" Y="124.1539" Z="7.520402" />
+
+
+<If Condition="!IsQuestCompleted(26662) &amp;&amp; HasQuest(26662)">
+<CustomBehavior File="InteractWith" MobId="43659" NumOfTimes="1" ObjectType="Npc" GossipOptions="1" WaitTime="1000" X="-14921.05" Y="85.38889" Z="7.526334" />
+<CustomBehavior File="WaitTimer" WaitTime="2000" />
+
+</If>
+
+<If Condition="!IsQuestCompleted(26662) &amp;&amp; HasQuest(26662)">
+<CustomBehavior File="InteractWith" MobId="43636" NumOfTimes="5" ObjectType="Npc" GossipOptions="1" WaitTime="1000" X="-14921.31" Y="106.8584" Z="0.1997081" />
+<CustomBehavior File="InteractWith" MobId="204454" NumOfTimes="1" ObjectType="Gameobject" GossipOptions="1" WaitTime="1000" X="-14924.76" Y="111.9943" Z="0.1992751" />
+<CustomBehavior File="InteractWith" MobId="43660" NumOfTimes="1" ObjectType="Npc" GossipOptions="1" WaitTime="1000" X="-14995.92" Y="264.099" Z="0.6008537" />
+<CustomBehavior File="InteractWith" MobId="43636" NumOfTimes="5" ObjectType="Npc" GossipOptions="1" WaitTime="1000" X="-14995.92" Y="264.099" Z="0.6008537" />
+<CustomBehavior File="InteractWith" MobId="204455" NumOfTimes="1" ObjectType="Gameobject" GossipOptions="1" WaitTime="1000" X="-14984.54" Y="262.139" Z="0.6358693" />
+<CustomBehavior File="InteractWith" MobId="43661" NumOfTimes="1" ObjectType="Npc" GossipOptions="1" WaitTime="1000" X="-14970.16" Y="354.441" Z="7.545511" />
+<CustomBehavior File="InteractWith" MobId="204456" NumOfTimes="1" ObjectType="Gameobject" GossipOptions="1" WaitTime="1000" X="-14957.29" Y="344.1744" Z="0.2207163" />
+</If>
+
+<If Condition="!IsQuestCompleted(26664) &amp;&amp; HasQuest(26664)">
+<CustomBehavior File="InteractWith" MobId="43636" NumOfTimes="5" ObjectType="Npc" GossipOptions="1" WaitTime="1000" X="-14995.92" Y="264.099" Z="0.6008537" />
+</If>
+
+		        <If Condition="IsQuestCompleted(26662) &amp;&amp; HasQuest(26662)">
+             <CustomBehavior File="CompleteLogQuest" QuestId="26662" />
+	         <CustomBehavior File="WaitTimer" WaitTime="2500" />
+             <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+		
+				<If Condition="IsQuestCompleted(26663) &amp;&amp; HasQuest(26663)">
+             <CustomBehavior File="CompleteLogQuest" QuestId="26663" />
+	         <CustomBehavior File="WaitTimer" WaitTime="2500" />
+             <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+		
+				<If Condition="IsQuestCompleted(26664) &amp;&amp; HasQuest(26664)">
+             <CustomBehavior File="CompleteLogQuest" QuestId="26664" />
+	         <CustomBehavior File="WaitTimer" WaitTime="2500" />
+             <CustomBehavior File="RunMacro" Macro="/script AcceptQuest() " NumOfTimes="1" WaitTime="1000" />
+        </If>
+
+		<If Condition="IsQuestCompleted(26665) &amp;&amp; HasQuest(26665)">
+             <CustomBehavior File="RunMacro" Macro="/use hearthstone" NumOfTimes="1" WaitTime="15000"/>
+	</If>
+<TurnIn QuestName="Call of Booty" QuestId="26665" TurnInName="Baron Revilgaz" TurnInId="2496" />
+<PickUp QuestName="Doublerum" QuestId="26678" GiverName="Baron Revilgaz" GiverId="2496" />
+<TurnIn QuestName="Doublerum" QuestId="26678" TurnInName="Barrel of Doublerum" TurnInId="204578" />
+<PickUp QuestName="Return to Revilgaz" QuestId="26679" GiverType="Object" GiverName="Barrel of Doublerum" GiverId="204578" X="-14445.69" Y="502.0314" Z="21.76695" />
+<TurnIn QuestName="Return to Revilgaz" QuestId="26679" TurnInName="Baron Revilgaz" TurnInId="2496" />
+<PickUp QuestName="Prepare for Takeoff" QuestId="26695" GiverName="Baron Revilgaz" GiverId="2496" />
+<PickUp QuestName="Seeking Seahorn" QuestId="26698" GiverName="Baron Revilgaz" GiverId="2496" />
+<TurnIn QuestName="Seeking Seahorn" QuestId="26698" TurnInName="Fleet Master Seahorn" TurnInId="2487" />
+
+<Objective QuestName="Prepare for Takeoff" QuestId="26695" Type="CollectItem" ItemId="59524" CollectCount="1" />
+
+<TurnIn QuestName="Prepare for Takeoff" QuestId="26695" TurnInName="Baron Revilgaz" TurnInId="2496" />
+<PickUp QuestName="The Final Voyage of the Brashtide" QuestId="26697" GiverName="Baron Revilgaz" GiverId="2496" />
+
+<If Condition="!IsQuestCompleted(26697) &amp;&amp; HasQuest(26697)">
+<CustomBehavior File="InteractWith" MobId="2858" NumOfTimes="1" ObjectType="Npc" GossipOptions="2" WaitTime="1000" X="-14448.56" Y="506.1285" Z="26.27325" />
+</If>
+
+	<While Condition="HasQuest(26697) &amp;&amp; !IsQuestCompleted(26697)">
+        <CustomBehavior File="NoControlVehicle" NumOfTimes="5" TargetId1="43717" AttackButton="1" MaxRange="100" WaitTime="1500"/>
+		<CustomBehavior File="NoControlVehicle" NumOfTimes="6" TargetId1="43790" AttackButton="1" MaxRange="100" WaitTime="1500"/>
+        </While>
+
+<If Condition="IsQuestCompleted(26697) &amp;&amp; HasQuest(26697)">
+<CustomBehavior File="RunMacro" Macro="/click VehicleMenuBarActionButton3" NumOfTimes="1" WaitTime="15000"/>
+</If>
+<TurnIn QuestName="The Final Voyage of the Brashtide" QuestId="26697" TurnInName="Baron Revilgaz" TurnInId="2496" />
+<PickUp QuestName="Turning the Brashtide" QuestId="26699" GiverName="Fleet Master Seahorn" GiverId="2487" />
+<PickUp QuestName="The Damsel's (Bad) Luck" QuestId="26700" GiverName="Fleet Master Seahorn" GiverId="2487" />
+
+<If Condition="!IsQuestCompleted(26700) &amp;&amp; HasQuest(26700)">
+<CustomBehavior File="InteractWith" MobId="204585" NumOfTimes="1" ObjectType="Gameobject" GossipOptions="1" WaitTime="1000" X="-14437.48" Y="472.0366" Z="15.33382" />
+</If>
+<Objective QuestName="The Damsel's (Bad) Luck" QuestId="26700" Type="KillMob" MobId="43726" KillCount="8" />
+
+<If Condition="IsQuestCompleted(26700) &amp;&amp; HasQuest(26700)">
+<CustomBehavior File="UserSettings" PullDistance="15" />
+<CustomBehavior File="InteractWith" MobId="204586" NumOfTimes="1" ObjectType="Gameobject" GossipOptions="1" WaitTime="1000" X="-14381.94" Y="487.9379" Z="12.98288" />
+</If>
+
+<Objective QuestName="Turning the Brashtide" QuestId="26699" Type="KillMob" MobId="43716" KillCount="10" />
+
+<TurnIn QuestName="The Damsel's (Bad) Luck" QuestId="26700" TurnInName="Baron Revilgaz" TurnInId="2496" X="-14441.39" Y="486.0906" Z="28.74536" />
+<TurnIn QuestName="Turning the Brashtide" QuestId="26699" TurnInName="Baron Revilgaz" TurnInId="2496" />
+<PickUp QuestName="Bloodsail's End" QuestId="26703" GiverName="Baron Revilgaz" GiverId="2496" />
+
+<If Condition="!IsQuestCompleted(26703) &amp;&amp; HasQuest(26703)">
+<CustomBehavior File="InteractWith" MobId="2858" NumOfTimes="1" ObjectType="Npc" GossipOptions="2" WaitTime="1000" X="-14448.56" Y="506.1285" Z="26.27325" />
+</If>
+<Objective QuestName="Bloodsail's End" QuestId="26703" Type="KillMob" MobId="43794" KillCount="1" />
+<TurnIn QuestName="Bloodsail's End" QuestId="26703" TurnInName="Baron Revilgaz" TurnInId="2496" />
+<PickUp QuestName="The Battle for Andorhal" QuestId="28750" GiverName="Arcanist Arman" GiverId="49636" />
+
+<If Condition="IsQuestCompleted(28750) &amp;&amp; HasQuest(28750)">
+<CustomBehavior File="InteractWith" MobId="49636" NumOfTimes="1" ObjectType="Npc" GossipOptions="1" WaitTime="3000" X="-14467.05" Y="460.5764" Z="15.16856" />
+<CustomBehavior File="InteractWith" MobId="49638" NumOfTimes="1" ObjectType="Npc" GossipOptions="1" WaitTime="1000" X="-14467.05" Y="460.5764" Z="15.16856" />
+<CustomBehavior File="UseTaxi" DestName="Undercity" MobId="46004" X="1508.734" Y="-1603.877" Z="64.902" />
+<CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="False" />
+</If>
+<TurnIn QuestName="The Battle for Andorhal" QuestId="28750" TurnInName="Koltira Deathweaver" TurnInId="44452" />
+
+<CustomBehavior File="LoadProfile" ProfileName="Western Plaguelands.xml" />
+ <!-- Switching to Western Plaguelands Profile -->
+    </QuestOrder>
+   </HBProfile>

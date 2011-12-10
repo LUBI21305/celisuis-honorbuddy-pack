@@ -1,0 +1,65 @@
+<HBProfile>
+<Name>mag har reputation</Name> 
+<MinDurability>0.3</MinDurability>
+<MinFreeBagSlots>3</MinFreeBagSlots>
+<SellGrey>True</SellGrey>
+<SellWhite>True</SellWhite>
+<SellGreen>True</SellGreen>
+<SellBlue>False</SellBlue>
+<SellPurple>False</SellPurple>
+<MinLevel>1</MinLevel>
+<MaxLevel>86</MaxLevel>  
+
+<ProtectedItems> 
+<Item>25433</Item>
+<Item>21877</Item>
+<Item>14047</Item>
+</ProtectedItems>
+
+<ForceMail>
+<Item>21877</Item>
+<Item>14047</Item>
+</ForceMail>
+
+<SubProfile>
+<Name>Mag thar rep</Name>
+<MinLevel>70</MinLevel>
+<MaxLevel>81</MaxLevel>
+<Factions>45</Factions>
+<TargetMinLevel>60</TargetMinLevel>
+<TargetMaxLevel>75</TargetMaxLevel> 
+<Vendors>
+<Vendor Name="Osrok the Immovable" Entry="19011" Type="Repair" X="-1332.878" Y="7197.079" Z="34.19102" />
+</Vendors>
+<GrindArea>
+<RandomizeHotspots>false</RandomizeHotspots>
+<MaximumHotspotTime>60000</MaximumHotspotTime>
+<BlackSpots>
+<BlackSpot X="-2453.613" Y="6284.602" Z="31.81706" Radius="8" />
+</BlackSpots>
+<Hotspots>
+<Hotspot X="-760.1181" Y="7582.34" Z="49.60824" />
+<Hotspot X="-787.6485" Y="7591.802" Z="50.08195" />
+<Hotspot X="-807.6921" Y="7614.862" Z="48.02032" />
+<Hotspot X="-821.1055" Y="7647.107" Z="44.18503" />
+<Hotspot X="-807.7242" Y="7673.81" Z="43.96284" />
+<Hotspot X="-795.165" Y="7716.422" Z="48.05851" />
+<Hotspot X="-762.6639" Y="7717.364" Z="47.89234" />
+<Hotspot X="-824.4158" Y="7706.85" Z="38.84218" />
+<Hotspot X="-846.9652" Y="7739.867" Z="34.08098" />
+<Hotspot X="-816.6738" Y="7771.45" Z="37.21371" />
+<Hotspot X="-789.5561" Y="7824.018" Z="37.86005" />
+<Hotspot X="-723.3524" Y="7833.797" Z="53.04695" />
+<Hotspot X="-737.2056" Y="7941.268" Z="59.7793" />
+<Hotspot X="-776.9532" Y="7920.386" Z="60.49036" />
+<Hotspot X="-768.9612" Y="7881.801" Z="52.26881" />
+</Hotspots>
+</GrindArea>
+<AvoidMobs>
+</AvoidMobs>
+<Mailboxes>
+<Mailbox X="-1267.709" Y="7176.601" Z="57.1993" />
+</Mailboxes>
+</SubProfile>
+</HBProfile>
+

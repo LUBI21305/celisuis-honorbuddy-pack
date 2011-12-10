@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WeightSet Class="DeathKnight" Spec="Unholy" Misc="DPS">
+  <Strength>100</Strength>
+  <DPS>100</DPS>
+  <HitRating>25</HitRating>
+  <HasteRating>25</HasteRating>
+  <AttackPower>23</AttackPower>
+  <ExpertiseRating>21</ExpertiseRating>
+  <CriticalStrikeRating>20</CriticalStrikeRating>
+</WeightSet>

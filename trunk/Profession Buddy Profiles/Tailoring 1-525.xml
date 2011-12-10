@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Professionbuddy ChildrenCount="6">
+  <If Condition="!HasRecipe(2963)" IgnoreCanRun="True" ChildrenCount="3">
+    <LoadProfileAction Path="HBProfiles\Blank profile.xml" ProfileType="Honorbuddy" />
+    <CustomAction Code="Log(&quot;I don't know tailoring. Going to learn it&quot;); " />
+    <TrainSkillAction NpcEntry="1346" X="-8938.103" Y="800.7065" Z="90.94195" />
+  </If>
+  <SubRoutine SubRoutineName="Training" ChildrenCount="1">
+    <If Condition="Me.MapId == 0" IgnoreCanRun="True" ChildrenCount="3">
+      <CustomAction Code="Log(&quot;I need to train going to SW to train&quot;);" />
+      <FlyToAction Dismount="True" X="-8938.307" Y="772.6205" Z="89.44582" />
+      <TrainSkillAction NpcEntry="1346" X="-8938.103" Y="800.7065" Z="90.94196" />
+    </If>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="Mail" ChildrenCount="1">
+    <While Condition="HasNewMail || MailCount &gt; 0" IgnoreCanRun="True" ChildrenCount="1">
+      <GetMailAction ItemID="" CheckNewMail="True" GetMailType="AllItems" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+    </While>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="Selling" ChildrenCount="1">
+    <If Condition="Me.MapId == 0" IgnoreCanRun="True" ChildrenCount="3">
+      <CustomAction Code="Log(&quot;Flying to Stormwind to sell stuff i dont need&quot;);" />
+      <FlyToAction Dismount="True" X="-8938.103" Y="800.7065" Z="90.94198" />
+      <If Condition="Tailoring.Level &gt;1 &amp;&amp; Tailoring.Level &lt;= 300" IgnoreCanRun="True" ChildrenCount="11">
+        <SellItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94211" ItemID="7026" Count="25" SellItemType="Specific" />
+        <SellItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94211" ItemID="2580" Count="10" SellItemType="Specific" />
+        <SellItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94211" ItemID="4307" Count="15" SellItemType="Specific" />
+        <SellItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94211" ItemID="2587,4314" Count="0" SellItemType="Specific" />
+        <SellItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94211" ItemID="7046" Count="0" SellItemType="Specific" />
+        <SellItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94211" ItemID="7048" Count="15" SellItemType="Specific" />
+        <SellItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94211" ItemID="7050" Count="10" SellItemType="Specific" />
+        <SellItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94211" ItemID="4334" Count="5" SellItemType="Specific" />
+        <SellItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94211" ItemID="6796" Count="3" SellItemType="Specific" />
+        <SellItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94211" ItemID="7058" Count="20" SellItemType="Specific" />
+        <SellItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94211" ItemID="" Count="0" SellItemType="Greens" />
+      </If>
+    </If>
+  </SubRoutine>
+  <While Condition="Me.FreeNormalBagSlots &lt;= 2" IgnoreCanRun="True" ChildrenCount="2">
+    <CustomAction Code="Log (&quot;Going to sell some stuff for bag room&quot;);" />
+    <CallSubRoutine SubRoutineName="Selling" />
+  </While>
+  <If Condition="Me.FreeNormalBagSlots &gt; 2" IgnoreCanRun="True" ChildrenCount="30">
+    <Comment Text="Tailoring 1-75 Linen" />
+    <If Condition="Tailoring.Level &gt;=1 &amp;&amp; Tailoring.Level &lt; 25" IgnoreCanRun="True" ChildrenCount="2">
+      <If Condition="InbagCount (2589) &lt;= 50" IgnoreCanRun="True" ChildrenCount="2">
+        <BuyItemFromAhAction ItemID="2589" MaxBuyout="20g0s0c" Amount="50" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+      </If>
+      <If Condition="InbagCount(2589) &gt;= 50" IgnoreCanRun="True" ChildrenCount="2">
+        <CustomAction Code="Log(&quot;Making Bolt of Linen&quot;);" />
+        <CastSpellAction Entry="2963" Repeat="25" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;= 25 &amp;&amp; Tailoring.Level &lt; 50" IgnoreCanRun="True" ChildrenCount="2">
+      <If Condition="!HasRecipe(8776)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (2320) &lt; 24" IgnoreCanRun="True" ChildrenCount="3">
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94209" ItemID="2320" Count="25" BuyItemType="SpecificItem" />
+        <CastSpellAction Entry="8776" Repeat="25" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        <CallSubRoutine SubRoutineName="Selling" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;= 50 &amp;&amp; Tailoring.Level &lt; 75" IgnoreCanRun="True" ChildrenCount="2">
+      <If Condition="InbagCount (2589) &lt; 100 &amp;&amp; InbagCount (2996) &lt; 50" IgnoreCanRun="True" ChildrenCount="3">
+        <BuyItemFromAhAction ItemID="2589" MaxBuyout="20g0s0c" Amount="100" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+        <CastSpellAction Entry="2963" Repeat="50" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+      <If Condition="InbagCount (2996) &gt; 50" IgnoreCanRun="True" ChildrenCount="5">
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94261" ItemID="2320" Count="55" BuyItemType="SpecificItem" />
+        <CastSpellAction Entry="3840" Repeat="10" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        <CallSubRoutine SubRoutineName="Training" />
+        <CastSpellAction Entry="2397" Repeat="15" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        <CallSubRoutine SubRoutineName="Selling" />
+      </If>
+    </If>
+    <Comment Text="Tailoring 75-145 Woolen and Silk" />
+    <If Condition="Tailoring.Level &gt;= 75 &amp;&amp; Tailoring.Level &lt; 90" IgnoreCanRun="True" ChildrenCount="2">
+      <If Condition="InbagCount (2592) &lt; 255" IgnoreCanRun="True" ChildrenCount="3">
+        <FlyToAction Dismount="True" X="-8384.601" Y="642.111" Z="94.85635" />
+        <BuyItemFromAhAction ItemID="2592" MaxBuyout="100g0s0c" Amount="255" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+      </If>
+      <If Condition="InbagCount (2592) &gt; 255" IgnoreCanRun="True" ChildrenCount="2">
+        <CustomAction Code="Log(&quot;Making Bolt of Wool&quot;);" />
+        <CastSpellAction Entry="2964" Repeat="255" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;= 90 &amp;&amp; Tailoring.Level &lt; 100" IgnoreCanRun="True" ChildrenCount="2">
+      <If Condition="!HasRecipe (2399)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (2997) &gt; 20" IgnoreCanRun="True" ChildrenCount="6">
+        <CustomAction Code="Log (&quot;Flying to SW for mats&quot;);" />
+        <FlyToAction Dismount="True" X="-8938.997" Y="772.8487" Z="89.54643" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94249" ItemID="2321" Count="10" BuyItemType="SpecificItem" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94249" ItemID="2605" Count="10" BuyItemType="SpecificItem" />
+        <CastSpellAction Entry="2399" Repeat="10" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        <SellItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94249" ItemID="2399" Count="10" SellItemType="Specific" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;= 100 &amp;&amp; Tailoring.Level &lt; 125" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe (2406)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (2592) &lt; 195 " IgnoreCanRun="True" ChildrenCount="4">
+        <FlyToAction Dismount="True" X="-8384.601" Y="642.111" Z="94.85635" />
+        <BuyItemFromAhAction ItemID="2592" MaxBuyout="100g0s0c" Amount="195" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+        <CastSpellAction Entry="2964" Repeat="65" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+      <If Condition="InbagCount (2997) &gt;= 65" IgnoreCanRun="True" ChildrenCount="8">
+        <CustomAction Code="Log (&quot;Flying to SW for mats&quot;);" />
+        <FlyToAction Dismount="True" X="-8938.997" Y="772.8487" Z="89.54643" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94249" ItemID="2321" Count="40" BuyItemType="SpecificItem" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94249" ItemID="4340" Count="10" BuyItemType="SpecificItem" />
+        <BuyItemAction NpcEntry="0" X="0" Y="0" Z="0" ItemID="" Count="0" BuyItemType="Material" />
+        <CastSpellAction Entry="2406" Repeat="10" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        <CallSubRoutine SubRoutineName="Training" />
+        <CastSpellAction Entry="3848" Repeat="15" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;= 125 &amp;&amp; Tailoring.Level &lt; 140" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe (3839)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (4306) &lt; 80" IgnoreCanRun="True" ChildrenCount="3">
+        <FlyToAction Dismount="True" X="-8384.601" Y="642.111" Z="94.85635" />
+        <BuyItemFromAhAction ItemID="4306" MaxBuyout="100g0s0c" Amount="80" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+      </If>
+      <If Condition="InbagCount (4306) &gt;= 80" IgnoreCanRun="True" ChildrenCount="2">
+        <CustomAction Code="Log(&quot;Making Bolt of Silk Cloth&quot;);" />
+        <CastSpellAction Entry="3839" Repeat="20" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;= 140 &amp;&amp; Tailoring.Level &lt; 145" IgnoreCanRun="True" ChildrenCount="2">
+      <If Condition="InbagCount (4305) &lt; 20" IgnoreCanRun="True" ChildrenCount="5">
+        <CustomAction Code="Log(&quot;Buying Mats&quot;);" />
+        <FlyToAction Dismount="True" X="-8384.601" Y="642.111" Z="94.85635" />
+        <BuyItemFromAhAction ItemID="4306" MaxBuyout="100g0s0c" Amount="80" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+        <CastSpellAction Entry="3839" Repeat="20" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+      <If Condition="InbagCount (4305) &gt;= 20" IgnoreCanRun="True" ChildrenCount="6">
+        <If Condition="!HasRecipe (8758)" IgnoreCanRun="True" ChildrenCount="1">
+          <CallSubRoutine SubRoutineName="Training" />
+        </If>
+        <CustomAction Code="Log(&quot;Making Azure Silk Pants&quot;);" />
+        <FlyToAction Dismount="True" X="-8942.841" Y="799.5444" Z="90.94229" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94259" ItemID="6260" Count="10" BuyItemType="SpecificItem" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94259" ItemID="2321" Count="15" BuyItemType="SpecificItem" />
+        <CastSpellAction Entry="8758" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <Comment Text="Tailoring 145-300 Silk, Mage, Runecloth" />
+    <If Condition="Tailoring.Level &gt;= 145 &amp;&amp; Tailoring.Level &lt; 160" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe (8760)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (4305) &lt; 30" IgnoreCanRun="True" ChildrenCount="5">
+        <CustomAction Code="Log(&quot;Buying Mats&quot;);" />
+        <FlyToAction Dismount="True" X="-8384.601" Y="642.111" Z="94.85635" />
+        <BuyItemFromAhAction ItemID="4306" MaxBuyout="100g0s0c" Amount="80" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+        <CastSpellAction Entry="3839" Repeat="20" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+      <If Condition="InbagCount (4305) &gt;= 30" IgnoreCanRun="True" ChildrenCount="5">
+        <CustomAction Code="Log(&quot;Making Azure Silk Hood&quot;);" />
+        <FlyToAction Dismount="True" X="-8942.841" Y="799.5444" Z="90.94229" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94259" ItemID="6260" Count="30" BuyItemType="SpecificItem" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94259" ItemID="2321" Count="15" BuyItemType="SpecificItem" />
+        <CastSpellAction Entry="8760" Repeat="15" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;= 160 &amp;&amp; Tailoring.Level &lt; 170" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe (8762)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (4305) &lt; 30" IgnoreCanRun="True" ChildrenCount="5">
+        <CustomAction Code="Log(&quot;Buying Mats&quot;);" />
+        <FlyToAction Dismount="True" X="-8384.601" Y="642.111" Z="94.85635" />
+        <BuyItemFromAhAction ItemID="4306" MaxBuyout="100g0s0c" Amount="60" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+        <CastSpellAction Entry="3839" Repeat="30" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+      <If Condition="InbagCount (4305) &gt;= 30" IgnoreCanRun="True" ChildrenCount="4">
+        <CustomAction Code="Log(&quot;Making Silkhead Band&quot;);" />
+        <FlyToAction Dismount="True" X="-8942.841" Y="799.5444" Z="90.94229" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94259" ItemID="2321" Count="20" BuyItemType="SpecificItem" />
+        <CastSpellAction Entry="8762" Repeat="10" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;= 170 &amp;&amp; Tailoring.Level &lt; 175" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe (3871)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (4305) &lt; 15" IgnoreCanRun="True" ChildrenCount="5">
+        <CustomAction Code="Log(&quot;Buying Mats&quot;);" />
+        <FlyToAction Dismount="True" X="-8938.103" Y="800.7065" Z="90.94198" />
+        <BuyItemFromAhAction ItemID="4306" MaxBuyout="100g0s0c" Amount="60" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+        <CastSpellAction Entry="3839" Repeat="15" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+      <If Condition="InbagCount (4305) &gt;= 15" IgnoreCanRun="True" ChildrenCount="5">
+        <CustomAction Code="Log(&quot;Making Formal White Shirt&quot;);" />
+        <FlyToAction Dismount="True" X="-8992.269" Y="840.1443" Z="105.6279" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94259" ItemID="2321" Count="5" BuyItemType="SpecificItem" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94259" ItemID="2324" Count="10" BuyItemType="SpecificItem" />
+        <CastSpellAction Entry="3871" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;= 175 &amp;&amp; Tailoring.Level &lt; 182" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe(3865)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (4338) &lt; 40" IgnoreCanRun="True" ChildrenCount="4">
+        <CustomAction Code="Log(&quot;Buying Mats&quot;);" />
+        <FlyToAction Dismount="True" X="-8384.601" Y="642.111" Z="94.85635" />
+        <BuyItemFromAhAction ItemID="4306" MaxBuyout="100g0s0c" Amount="60" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+      </If>
+      <If Condition="InbagCount (4338) &gt;= 40" IgnoreCanRun="True" ChildrenCount="2">
+        <CustomAction Code="Log(&quot;Making Bolt of Mageweave&quot;);" />
+        <CastSpellAction Entry="3865" Repeat="10" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;= 182 &amp;&amp; Tailoring.Level &lt; 185" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe (8489)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (4305) &lt; 9" IgnoreCanRun="True" ChildrenCount="5">
+        <CustomAction Code="Log(&quot;Buying Mats&quot;);" />
+        <FlyToAction Dismount="True" X="-8384.601" Y="642.111" Z="94.85635" />
+        <BuyItemFromAhAction ItemID="4306" MaxBuyout="100g0s0c" Amount="36" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+        <CastSpellAction Entry="3839" Repeat="9" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+      <If Condition="InbagCount (4305) &gt;= 9" IgnoreCanRun="True" ChildrenCount="5">
+        <CustomAction Code="Log(&quot;Making Swashbuckler's Shirt&quot;);" />
+        <FlyToAction Dismount="True" X="-8992.269" Y="840.1443" Z="105.6279" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94259" ItemID="4291" Count="3" BuyItemType="SpecificItem" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94259" ItemID="2604" Count="6" BuyItemType="SpecificItem" />
+        <CastSpellAction Entry="8489" Repeat="3" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;= 185 &amp;&amp; Tailoring.Level &lt; 205" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe (8791)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (4305) &lt; 80 &amp;&amp; InbagCount (2321) &lt; 40 &amp;&amp; InbagCount (2604) &lt; 40" IgnoreCanRun="True" ChildrenCount="5">
+        <CustomAction Code="Log(&quot;Buying Mats&quot;);" />
+        <FlyToAction Dismount="True" X="-8384.601" Y="642.111" Z="94.85635" />
+        <BuyItemFromAhAction ItemID="4306" MaxBuyout="100g0s0c" Amount="320" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+        <CastSpellAction Entry="3839" Repeat="80" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+      <If Condition="InbagCount (4305) &gt;= 80 &amp;&amp; InbagCount (2321) &gt;= 40 &amp;&amp; InbagCount (2604) &gt;= 40" IgnoreCanRun="True" ChildrenCount="5">
+        <CustomAction Code="Log(&quot;Making Crimson Silk Belt&quot;);" />
+        <FlyToAction Dismount="True" X="-8992.269" Y="840.1443" Z="105.6279" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94259" ItemID="2321" Count="40" BuyItemType="SpecificItem" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94259" ItemID="2604" Count="40" BuyItemType="SpecificItem" />
+        <CastSpellAction Entry="8772" Repeat="20" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;= 205 &amp;&amp; Tailoring.Level &lt; 220" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe (12049)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (4339) &lt; 45" IgnoreCanRun="True" ChildrenCount="5">
+        <CustomAction Code="Log(&quot;Buying Mats&quot;);" />
+        <FlyToAction Dismount="True" X="-8384.601" Y="642.111" Z="94.85635" />
+        <BuyItemFromAhAction ItemID="4338" MaxBuyout="100g0s0c" Amount="180" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+        <CastSpellAction Entry="3865" Repeat="45" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+      <If Condition="InbagCount (4339) &gt;= 45 " IgnoreCanRun="True" ChildrenCount="4">
+        <CustomAction Code="Log(&quot;Making Black Mageweave Leggings&quot;);" />
+        <FlyToAction Dismount="True" X="-8992.269" Y="840.1443" Z="105.6279" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94259" ItemID="4291" Count="45" BuyItemType="SpecificItem" />
+        <CastSpellAction Entry="12049" Repeat="15" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;= 220 &amp;&amp; Tailoring.Level &lt; 230" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe (12053)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (4339) &lt; 20" IgnoreCanRun="True" ChildrenCount="5">
+        <CustomAction Code="Log(&quot;Buying Mats&quot;);" />
+        <FlyToAction Dismount="True" X="-8384.601" Y="642.111" Z="94.85635" />
+        <BuyItemFromAhAction ItemID="4338" MaxBuyout="100g0s0c" Amount="80" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+        <CastSpellAction Entry="3865" Repeat="20" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+      <If Condition="InbagCount (4339) &gt;= 20" IgnoreCanRun="True" ChildrenCount="4">
+        <CustomAction Code="Log(&quot;Making Black Mageweave Gloves&quot;);" />
+        <FlyToAction Dismount="True" X="-8992.269" Y="840.1443" Z="105.6279" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94259" ItemID="8343" Count="20" BuyItemType="SpecificItem" />
+        <CastSpellAction Entry="12053" Repeat="10" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;= 230 &amp;&amp; Tailoring.Level &lt; 250" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe (12072)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (4339) &lt; 60" IgnoreCanRun="True" ChildrenCount="5">
+        <CustomAction Code="Log(&quot;Buying Mats&quot;);" />
+        <FlyToAction Dismount="True" X="-8384.601" Y="642.111" Z="94.85635" />
+        <BuyItemFromAhAction ItemID="4338" MaxBuyout="100g0s0c" Amount="240" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+        <CastSpellAction Entry="3865" Repeat="20" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+      <If Condition="InbagCount (4339) &gt;= 60" IgnoreCanRun="True" ChildrenCount="4">
+        <CustomAction Code="Log(&quot;Making Black Mageweave Headband&quot;);" />
+        <FlyToAction Dismount="True" X="-8992.269" Y="840.1443" Z="105.6279" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94259" ItemID="8343" Count="40" BuyItemType="SpecificItem" />
+        <CastSpellAction Entry="12072" Repeat="20" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;= 250 &amp;&amp; Tailoring.Level &lt; 257" IgnoreCanRun="True" ChildrenCount="2">
+      <If Condition="!HasRecipe (18401)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (14048) &lt; 10" IgnoreCanRun="True" ChildrenCount="5">
+        <CustomAction Code="Log(&quot;Buying Mats&quot;);" />
+        <FlyToAction Dismount="True" X="-8384.601" Y="642.111" Z="94.85635" />
+        <BuyItemFromAhAction ItemID="14047" MaxBuyout="100g0s0c" Amount="40" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+        <CastSpellAction Entry="18401" Repeat="10" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;=257 &amp;&amp; Tailoring.Level &lt; 275" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe (18402)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (14048) &lt; 54" IgnoreCanRun="True" ChildrenCount="5">
+        <CustomAction Code="Log(&quot;Buying Mats&quot;);" />
+        <FlyToAction Dismount="True" X="-8384.601" Y="642.111" Z="94.85635" />
+        <BuyItemFromAhAction ItemID="14047" MaxBuyout="100g0s0c" Amount="216" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+        <CastSpellAction Entry="18401" Repeat="54" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+      <If Condition="InbagCount (14048) &gt;= 54" IgnoreCanRun="True" ChildrenCount="4">
+        <CustomAction Code="Log(&quot;Making Runecloth Belt&quot;);" />
+        <FlyToAction Dismount="True" X="-8992.269" Y="840.1443" Z="105.6279" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94259" ItemID="14341" Count="18" BuyItemType="SpecificItem" />
+        <CastSpellAction Entry="18402" Repeat="18" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;= 275 &amp;&amp; Tailoring.Level &lt; 295" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe (18417)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (14048) &lt; 100" IgnoreCanRun="True" ChildrenCount="5">
+        <CustomAction Code="Log(&quot;Buying Mats&quot;);" />
+        <FlyToAction Dismount="True" X="-8384.601" Y="642.111" Z="94.85635" />
+        <BuyItemFromAhAction ItemID="14047" MaxBuyout="100g0s0c" Amount="400" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+        <CastSpellAction Entry="18401" Repeat="100" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+      <If Condition="InbagCount (14048) &gt;= 100" IgnoreCanRun="True" ChildrenCount="4">
+        <CustomAction Code="Log(&quot;Making Runecloth Gloves&quot;);" />
+        <FlyToAction Dismount="True" X="-8992.269" Y="840.1443" Z="105.6279" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94259" ItemID="14341" Count="40" BuyItemType="SpecificItem" />
+        <CastSpellAction Entry="18417" Repeat="20" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;= 295 &amp;&amp; Tailoring.Level &lt; 300" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe(18444)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (14048) &lt; 30" IgnoreCanRun="True" ChildrenCount="5">
+        <CustomAction Code="Log(&quot;Buying Mats&quot;);" />
+        <FlyToAction Dismount="True" X="-8384.601" Y="642.111" Z="94.85635" />
+        <BuyItemFromAhAction ItemID="14047" MaxBuyout="100g0s0c" Amount="120" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+        <CastSpellAction Entry="18401" Repeat="30" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+      <If Condition="InbagCount (14048) &gt;= 30" IgnoreCanRun="True" ChildrenCount="4">
+        <CustomAction Code="Log(&quot;Making Runecloth Headband&quot;);" />
+        <FlyToAction Dismount="True" X="-8992.269" Y="840.1443" Z="105.6279" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94259" ItemID="14341" Count="10" BuyItemType="SpecificItem" />
+        <CastSpellAction Entry="18444" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <Comment Text="Tailoring 300-350" />
+    <If Condition="Tailoring.Level &gt;= 300 &amp;&amp; Tailoring.Level &lt; 315" IgnoreCanRun="True" ChildrenCount="2">
+      <If Condition="!HasRecipe (26745)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (21877) &lt; 75" IgnoreCanRun="True" ChildrenCount="5">
+        <CustomAction Code="Log(&quot;Buying Mats&quot;);" />
+        <FlyToAction Dismount="True" X="-8384.601" Y="642.111" Z="94.85635" />
+        <BuyItemFromAhAction ItemID="21877" MaxBuyout="100g0s0c" Amount="75" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+        <CastSpellAction Entry="26745" Repeat="15" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;= 315 &amp;&amp; Tailoring.Level &lt; 320" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe (26765)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (21840) &lt; 15" IgnoreCanRun="True" ChildrenCount="5">
+        <CustomAction Code="Log(&quot;Buying Mats&quot;);" />
+        <FlyToAction Dismount="True" X="-8384.601" Y="642.111" Z="94.85635" />
+        <BuyItemFromAhAction ItemID="21877" MaxBuyout="100g0s0c" Amount="75" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+        <CastSpellAction Entry="26745" Repeat="15" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+      <If Condition="InbagCount (21840) &gt;= 15" IgnoreCanRun="True" ChildrenCount="4">
+        <CustomAction Code="Log(&quot;Making Neatherweave Belt&quot;);" />
+        <FlyToAction Dismount="True" X="-8992.269" Y="840.1443" Z="105.6279" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94259" ItemID="14341" Count="5" BuyItemType="SpecificItem" />
+        <CastSpellAction Entry="26765" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;= 320 &amp;&amp; Tailoring.Level &lt; 325" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe (26770)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (21840) &lt; 15 &amp;&amp; InbagCount (21887) &lt; 10" IgnoreCanRun="True" ChildrenCount="6">
+        <CustomAction Code="Log(&quot;Buying Mats&quot;);" />
+        <FlyToAction Dismount="True" X="-8384.601" Y="642.111" Z="94.85635" />
+        <BuyItemFromAhAction ItemID="21877" MaxBuyout="100g0s0c" Amount="75" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <BuyItemFromAhAction ItemID="21887" MaxBuyout="100g0s0c" Amount="10" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+        <CastSpellAction Entry="26745" Repeat="15" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+      <If Condition="InbagCount (21840) &gt;= 15 &amp;&amp; InbagCount (21887) &gt;= 10" IgnoreCanRun="True" ChildrenCount="4">
+        <CustomAction Code="Log(&quot;Making Neatherweave Gloves&quot;);" />
+        <FlyToAction Dismount="True" X="-8992.269" Y="840.1443" Z="105.6279" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94259" ItemID="14341" Count="5" BuyItemType="SpecificItem" />
+        <CastSpellAction Entry="26770" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;= 325 &amp;&amp; Tailoring.Level &lt; 335" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe (26771)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (21840) &lt; 60" IgnoreCanRun="True" ChildrenCount="6">
+        <CustomAction Code="Log(&quot;Buying Mats&quot;);" />
+        <FlyToAction Dismount="True" X="-8384.601" Y="642.111" Z="94.85635" />
+        <BuyItemFromAhAction ItemID="21877" MaxBuyout="100g0s0c" Amount="300" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <WaitAction Condition="false" Timeout="5000" />
+        <CallSubRoutine SubRoutineName="Mail" />
+        <CastSpellAction Entry="26745" Repeat="60" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+      <If Condition="InbagCount (21840) &gt;= 60" IgnoreCanRun="True" ChildrenCount="4">
+        <CustomAction Code="Log(&quot;Making Neatherweave Gloves&quot;);" />
+        <FlyToAction Dismount="True" X="-8992.269" Y="840.1443" Z="105.6279" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94259" ItemID="14341" Count="10" BuyItemType="SpecificItem" />
+        <CastSpellAction Entry="26771" Repeat="10" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+    <If Condition="Tailoring.Level &gt;= 335 &amp;&amp; Tailoring.Level &lt; 345" IgnoreCanRun="True" ChildrenCount="3">
+      <If Condition="!HasRecipe (21853)" IgnoreCanRun="True" ChildrenCount="1">
+        <CallSubRoutine SubRoutineName="Training" />
+      </If>
+      <If Condition="InbagCount (21840) &lt; 60" IgnoreCanRun="True" ChildrenCount="6">
+        <CustomAction Code="Log(&quot;Buying Mats&quot;);" />
+        <FlyToAction Dismount="True" X="-8384.601" Y="642.111" Z="94.85635" />
+        <BuyItemFromAhAction ItemID="21877" MaxBuyout="100g0s0c" Amount="300" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <BuyItemFromAhAction ItemID="21887" MaxBuyout="100g0s0c" Amount="20" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" />
+        <CallSubRoutine SubRoutineName="Mail" />
+        <CastSpellAction Entry="26745" Repeat="60" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+      <If Condition="InbagCount (21840) &gt;= 60" IgnoreCanRun="True" ChildrenCount="4">
+        <CustomAction Code="Log(&quot;Making Neatherweave Boots&quot;);" />
+        <FlyToAction Dismount="True" X="-8992.269" Y="840.1443" Z="105.6279" />
+        <BuyItemAction NpcEntry="1347" X="-8942.841" Y="799.5444" Z="90.94259" ItemID="14341" Count="10" BuyItemType="SpecificItem" />
+        <CastSpellAction Entry="21853" Repeat="10" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+      </If>
+    </If>
+  </If>
+</Professionbuddy>

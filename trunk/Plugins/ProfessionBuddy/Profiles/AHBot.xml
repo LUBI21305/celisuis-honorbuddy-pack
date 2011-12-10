@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Professionbuddy>
+  <Settings Type="Boolean" DefaultValue="false" Name="MillHerbs" Summary="if set to true will mill herbs." />
+  <Settings Type="Boolean" DefaultValue="false" Name="Prospect" Summary="if set to true will prospect ore" />
+  <Settings Type="Boolean" DefaultValue="false" Name="Cancel Undercut Auctions" Summary="if set to true if you want to cancel all auctions that are undercutted" />
+  <Settings Type="String" DefaultValue="" Name="InscribeBanker" Summary="Name of your Incriptionist" />
+  <Settings Type="String" DefaultValue="" Name="JCBanker" Summary="Name of your JewelCrafter" />
+  <CustomAction Code="var1 = true;" />
+  <CustomAction Code="var2 = DateTime.Now;" />
+  <!--check for undercut items every 30 to 300 seconds-->
+  <CustomAction Code="var3 = new Random().Next(30, 300);" />
+  <If Condition="(bool)Settings[&quot;Cancel Undercut Auctions&quot;]" IgnoreCanRun="True">
+    <CustomAction Code="Log (&quot;Checking for undercut auctions in {0} seconds&quot;,var3);" />
+  </If>
+  <While Condition="true" IgnoreCanRun="True">
+    <If Condition="((bool)var1) || (HasNewMail || MailCount&gt; 0)" IgnoreCanRun="True">
+      <GetMailAction ItemID="0" CheckNewMail="True" GetMailType="AllItems" AutoFindMailBox="True" X="-8860.81" Y="637.1594" Z="96.19888" MinFreeBagSlots="2" />
+      <WaitAction Condition="false" Timeout="2000" />
+      <SellItemOnAhAction ItemID="0" MinBuyout="6g0s0c" MaxBuyout="200g0s0c" RunTime="_24_Hours" Amount="3" StackSize="1" IgnoreStackSizeBelow="1" AmountType="Amount" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="Glyph" SubCategoryType="WoWItemGlyphClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+      <SellItemOnAhAction ItemID="0" MinBuyout="3g0s0c" MaxBuyout="1000g0s0c" RunTime="_24_Hours" Amount="3" StackSize="1" IgnoreStackSizeBelow="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="Miscellaneous" SubCategoryType="WoWItemMiscClass" SubCategory="Pet" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+      <If Condition="(bool)Settings[&quot;MillHerbs&quot;]" IgnoreCanRun="True">
+        <StackItemsAction />
+        <!--WhipTail-->
+        <SellItemOnAhAction ItemID="52988" MinBuyout="1g25s0c" MaxBuyout="6g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Herb" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+        <!--Twilight Jasmine-->
+        <SellItemOnAhAction ItemID="52987" MinBuyout="1g25s0c" MaxBuyout="6g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Herb" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+        <!--Stormvine-->
+        <SellItemOnAhAction ItemID="52984" MinBuyout="1g25s0c" MaxBuyout="6g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Herb" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+        <!--Heartblossom-->
+        <SellItemOnAhAction ItemID="52986" MinBuyout="1g25s0c" MaxBuyout="6g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Herb" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+        <!--Cinderbloom-->
+        <SellItemOnAhAction ItemID="52983" MinBuyout="1g25s0c" MaxBuyout="6g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Herb" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+        <!--Azshara's Veil-->
+        <SellItemOnAhAction ItemID="52985" MinBuyout="1g25s0c" MaxBuyout="6g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Herb" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+        <!--Mail off all cata herbs that didn't get posted on AH to Inscriptionist-->
+        <If Condition="!string.IsNullOrEmpty((string)Settings[&quot;InscribeBanker&quot;])" IgnoreCanRun="True">
+          <CustomAction Code="var1 = CharacterSettings.Instance.MailRecipient;" />
+          <CustomAction Code="CharacterSettings.Instance.MailRecipient = (string)Settings[&quot;InscribeBanker&quot;];" />
+          <!--WhipTail-->
+          <MailItemAction Entry="52988" AutoFindMailBox="True" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+          <!--Twilight Jasmine-->
+          <MailItemAction Entry="52987" AutoFindMailBox="True" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+          <!--Stormvine-->
+          <MailItemAction Entry="52984" AutoFindMailBox="True" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+          <!--Heartblossom-->
+          <MailItemAction Entry="52986" AutoFindMailBox="True" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+          <!--Cinderbloom-->
+          <MailItemAction Entry="52983" AutoFindMailBox="True" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+          <!--Azshara's Veil-->
+          <MailItemAction Entry="52985" AutoFindMailBox="True" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+          <CustomAction Code="CharacterSettings.Instance.MailRecipient = (string)var1;" />
+        </If>
+        <SellItemOnAhAction ItemID="0" MinBuyout="0g10s0c" MaxBuyout="6g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Herb" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <!--Sell leftover herbs.-->
+      </If>
+      <If Condition="(bool)Settings[&quot;Prospect&quot;]" IgnoreCanRun="True">
+        <!--Obsidium Ore-->
+        <SellItemOnAhAction ItemID="53038" MinBuyout="1g25s0c" MaxBuyout="6g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Herb" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+        <!--Elementium Ore-->
+        <SellItemOnAhAction ItemID="52185" MinBuyout="1g25s0c" MaxBuyout="6g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Herb" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+        <!--Pyrite Ore-->
+        <SellItemOnAhAction ItemID="52183" MinBuyout="3g0s0c" MaxBuyout="6g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Herb" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+        <If Condition="!string.IsNullOrEmpty((string)Settings[&quot;JCBanker&quot;])" IgnoreCanRun="True">
+          <CustomAction Code="var1 = CharacterSettings.Instance.MailRecipient;" />
+          <CustomAction Code="CharacterSettings.Instance.MailRecipient = (string)Settings[&quot;JCBanker&quot;];" />
+          <!--Obsidium Ore-->
+          <MailItemAction Entry="53038" AutoFindMailBox="True" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+          <!--Elementium Ore-->
+          <MailItemAction Entry="52185" AutoFindMailBox="True" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+          <MailItemAction Entry="52183" AutoFindMailBox="True" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+          <!--Pyrite Ore-->
+          <CustomAction Code="CharacterSettings.Instance.MailRecipient = (string)var1;" />
+        </If>
+        <!--Sell leftover ore-->
+        <SellItemOnAhAction ItemID="0" MinBuyout="0g10s0c" MaxBuyout="6g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="MetalStone" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      </If>
+      <!--if we are not canceling undercut auctions than post if competition is below minBuyout-->
+      <If Condition="!(bool)Settings[&quot;Cancel Undercut Auctions&quot;]" IgnoreCanRun="True">
+        <SellItemOnAhAction ItemID="0" MinBuyout="0g10s0c" MaxBuyout="200g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Cloth" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="0" MinBuyout="0g10s0c" MaxBuyout="200g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="0" MinBuyout="0g10s0c" MaxBuyout="100g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="Armor" SubCategoryType="WoWItemArmorClass" SubCategory="Misc" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <!--Pyrium Bar-->
+        <SellItemOnAhAction ItemID="51950" MinBuyout="10g50s0c" MaxBuyout="25g0s0c" RunTime="_24_Hours" Amount="10" StackSize="5" IgnoreStackSizeBelow="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Elemental" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <!--Hardened Elementium Bar-->
+        <SellItemOnAhAction ItemID="53039" MinBuyout="90g0s0c" MaxBuyout="150g0s0c" RunTime="_24_Hours" Amount="10" StackSize="5" IgnoreStackSizeBelow="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Elemental" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <!--Dust of Disappearance-->
+        <SellItemOnAhAction ItemID="60838" MinBuyout="5g0s0c" MaxBuyout="15g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Elemental" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <!--Mysterious Fortune Card]-->
+        <SellItemOnAhAction ItemID="63388" MinBuyout="5g0s0c" MaxBuyout="15g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Elemental" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="0" MinBuyout="5g50s0c" MaxBuyout="20g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Elemental" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="0" MinBuyout="0g10s0c" MaxBuyout="20g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="Consumable" SubCategoryType="WoWItemContainerClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <If Condition="!(bool)Settings[&quot;MillHerbs&quot;]" IgnoreCanRun="True">
+          <SellItemOnAhAction ItemID="0" MinBuyout="0g10s0c" MaxBuyout="6g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Herb" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        </If>
+        <If Condition="!(bool)Settings[&quot;Prospect&quot;]" IgnoreCanRun="True">
+          <SellItemOnAhAction ItemID="0" MinBuyout="0g10s0c" MaxBuyout="12g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="MetalStone" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        </If>
+        <SellItemOnAhAction ItemID="0" MinBuyout="0g10s0c" MaxBuyout="20g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      </If>
+      <!--if we are canceling undercut auctions than don't post if competition is below minBuyout-->
+      <If Condition="(bool)Settings[&quot;Cancel Undercut Auctions&quot;]" IgnoreCanRun="True">
+        <SellItemOnAhAction ItemID="0" MinBuyout="0g10s0c" MaxBuyout="200g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="10" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Cloth" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+        <SellItemOnAhAction ItemID="0" MinBuyout="0g10s0c" MaxBuyout="200g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+        <SellItemOnAhAction ItemID="0" MinBuyout="0g10s0c" MaxBuyout="100g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="Armor" SubCategoryType="WoWItemArmorClass" SubCategory="Misc" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+        <!--Pyrium Bar-->
+        <SellItemOnAhAction ItemID="51950" MinBuyout="10g50s0c" MaxBuyout="25g0s0c" RunTime="_24_Hours" Amount="10" StackSize="5" IgnoreStackSizeBelow="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Elemental" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+        <!--Hardened Elementium Bar-->
+        <SellItemOnAhAction ItemID="53039" MinBuyout="90g0s0c" MaxBuyout="150g0s0c" RunTime="_24_Hours" Amount="10" StackSize="5" IgnoreStackSizeBelow="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Elemental" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+        <!--Dust of Disappearance-->
+        <SellItemOnAhAction ItemID="60838" MinBuyout="5g0s0c" MaxBuyout="15g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Elemental" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+        <!--Mysterious Fortune Card]-->
+        <SellItemOnAhAction ItemID="63388" MinBuyout="5g0s0c" MaxBuyout="15g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Elemental" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+        <SellItemOnAhAction ItemID="0" MinBuyout="5g50s0c" MaxBuyout="20g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="10" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Elemental" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+        <SellItemOnAhAction ItemID="0" MinBuyout="0g10s0c" MaxBuyout="20g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="10" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="Consumable" SubCategoryType="WoWItemContainerClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+        <If Condition="!(bool)Settings[&quot;MillHerbs&quot;]" IgnoreCanRun="True">
+          <SellItemOnAhAction ItemID="0" MinBuyout="0g10s0c" MaxBuyout="6g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="10" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Herb" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+        </If>
+        <If Condition="!(bool)Settings[&quot;Prospect&quot;]" IgnoreCanRun="False">
+          <SellItemOnAhAction ItemID="0" MinBuyout="0g10s0c" MaxBuyout="12g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="10" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="MetalStone" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        </If>
+        <SellItemOnAhAction ItemID="0" MinBuyout="0g10s0c" MaxBuyout="20g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" IgnoreStackSizeBelow="10" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="False" />
+      </If>
+      <CustomAction Code="var1 = false;" />
+    </If>
+    <If Condition="(bool)Settings[&quot;Cancel Undercut Auctions&quot;] &amp;&amp; DateTime.Now.Subtract((DateTime)var2).TotalSeconds &gt;= (int)var3" IgnoreCanRun="True">
+      <CustomAction Code="Log (&quot;Checking for undercut auctions&quot;);" />
+      <CancelAuctionAction ItemID="0" AutoFindAh="True" UseCategory="False" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" MinBuyout="0g0s0c" X="0" Y="0" Z="0" />
+      <CustomAction Code="var2 = DateTime.Now;" />
+      <CustomAction Code="var3 = new Random().Next(30, 300);" />
+      <CustomAction Code="Log (&quot;Checking for undercut auctions in {0} seconds&quot;,var3);" />
+    </If>
+  </While>
+</Professionbuddy>

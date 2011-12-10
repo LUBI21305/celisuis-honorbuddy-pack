@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Professionbuddy ChildrenCount="6">
+  <CustomAction Code="LevelbotSettings.Instance.GroundMountFarmingMode = true;" />
+  <CustomAction Code="CharacterSettings.Instance.LootChests = false;" />
+  <CustomAction Code="CharacterSettings.Instance.LootMobs = false;" />
+  <If Condition="Me.IsAlliance &amp;&amp; Me.MapId != 0" IgnoreCanRun="True" ChildrenCount="2">
+    <CustomAction Code="MessageBox.Show(&quot;Please move to Eastern Kingdoms&quot;);" />
+    <CustomAction Code="TreeRoot.Stop();" />
+  </If>
+  <If Condition="Me.IsHorde &amp;&amp; Me.MapId != 1" IgnoreCanRun="True" ChildrenCount="2">
+    <CustomAction Code="MessageBox.Show(&quot;Please move to Kalimdor&quot;);" />
+    <CustomAction Code="TreeRoot.Stop();" />
+  </If>
+  <While Condition="true" IgnoreCanRun="True" ChildrenCount="6">
+    <If Condition="Herbalism.Level != Herbalism.MaxLevel" IgnoreCanRun="True" ChildrenCount="1">
+      <CustomAction Code="CharacterSettings.Instance.HarvestHerbs = true;" />
+    </If>
+    <If Condition="Herbalism.Level == Herbalism.MaxLevel" IgnoreCanRun="True" ChildrenCount="1">
+      <CustomAction Code="CharacterSettings.Instance.HarvestHerbs = false;" />
+    </If>
+    <If Condition="TreeRoot.Current.Name != &quot;Questing&quot;" IgnoreCanRun="True" ChildrenCount="1">
+      <ChangeBotAction BotName="Questing" />
+    </If>
+    <While Condition="Me.FreeNormalBagSlots &lt;=2" IgnoreCanRun="True" ChildrenCount="4">
+      <If Condition="Me.IsHorde" IgnoreCanRun="True" ChildrenCount="1">
+        <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="2010.681" Y="-4692.224" Z="28.69317" />
+      </If>
+      <While Condition="Me.IsAlliance" IgnoreCanRun="True" ChildrenCount="1">
+        <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-8392.317" Y="626.57" Z="95.29549" />
+      </While>
+      <SellItemOnAhAction ItemID="13463" MinBuyout="0g10s0c" MaxBuyout="80g0s0c" RunTime="_24_Hours" Amount="10" StackSize="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      <SellItemOnAhAction ItemID="13463" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+    </While>
+    <If Condition="Me.IsAlliance" IgnoreCanRun="True" ChildrenCount="6">
+      <LoadProfileAction Path="HBProfiles\(ground 1-300)Herb&amp;Mining\(ground 1-300)(Eastern Kindom.Alliance)Herb.xml" ProfileType="Honorbuddy" />
+      <If Condition="Herbalism.MaxLevel == 0" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="5566" X="-8969.993" Y="779.6597" Z="96.25022" />
+      </If>
+      <If Condition="Herbalism.Level == 75 &amp;&amp; Herbalism.MaxLevel == 75" IgnoreCanRun="True" ChildrenCount="4">
+        <TrainSkillAction NpcEntry="5566" X="-8969.993" Y="779.6597" Z="96.25022" />
+        <GetMailAction ItemID="0" CheckNewMail="True" GetMailType="AllItems" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+        <SellItemOnAhAction ItemID="13463" MinBuyout="0g10s0c" MaxBuyout="80g0s0c" RunTime="_24_Hours" Amount="10" StackSize="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="13463" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      </If>
+      <If Condition="Herbalism.Level &gt;= 125 &amp;&amp; Herbalism.MaxLevel == 150" IgnoreCanRun="True" ChildrenCount="4">
+        <TrainSkillAction NpcEntry="5566" X="-8969.993" Y="779.6597" Z="96.25022" />
+        <GetMailAction ItemID="0" CheckNewMail="True" GetMailType="AllItems" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+        <SellItemOnAhAction ItemID="13463" MinBuyout="0g10s0c" MaxBuyout="80g0s0c" RunTime="_24_Hours" Amount="10" StackSize="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="13463" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      </If>
+      <If Condition="Herbalism.Level &gt;= 200 &amp;&amp; Herbalism.MaxLevel == 225" IgnoreCanRun="True" ChildrenCount="4">
+        <TrainSkillAction NpcEntry="5566" X="-8969.993" Y="779.6597" Z="96.25022" />
+        <GetMailAction ItemID="0" CheckNewMail="True" GetMailType="AllItems" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+        <SellItemOnAhAction ItemID="13463" MinBuyout="0g10s0c" MaxBuyout="80g0s0c" RunTime="_24_Hours" Amount="10" StackSize="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="13463" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      </If>
+      <If Condition="Herbalism.Level &gt;= 300 &amp;&amp; Herbalism.MaxLevel == 300" IgnoreCanRun="True" ChildrenCount="6">
+        <TrainSkillAction NpcEntry="5566" X="-8969.993" Y="779.6597" Z="96.25022" />
+        <GetMailAction ItemID="0" CheckNewMail="True" GetMailType="AllItems" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+        <SellItemOnAhAction ItemID="13463" MinBuyout="0g10s0c" MaxBuyout="80g0s0c" RunTime="_24_Hours" Amount="10" StackSize="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="13463" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <CustomAction Code="Log(&quot;Stopping HB since We are 300 herb/mining&quot;);" />
+        <CustomAction Code=" Lua.DoString(&quot;Logout()&quot;);TreeRoot.Stop();" />
+      </If>
+    </If>
+    <If Condition="Me.IsHorde" IgnoreCanRun="True" ChildrenCount="6">
+      <LoadProfileAction Path="HBProfiles\(ground 1-300)Herb&amp;Mining\(ground 1-300)(Kalimdor.Horde)Herb.xml" ProfileType="Honorbuddy" />
+      <If Condition="Herbalism.MaxLevel == 0" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="46741" X="1902.69" Y="-4450.71" Z="53.4155" />
+      </If>
+      <If Condition="Herbalism.Level &gt;=50 &amp;&amp; Herbalism.MaxLevel == 75" IgnoreCanRun="True" ChildrenCount="4">
+        <TrainSkillAction NpcEntry="46741" X="1902.69" Y="-4450.71" Z="53.4155" />
+        <GetMailAction ItemID="0" CheckNewMail="True" GetMailType="AllItems" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+        <SellItemOnAhAction ItemID="13463" MinBuyout="0g10s0c" MaxBuyout="80g0s0c" RunTime="_24_Hours" Amount="10" StackSize="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="13463" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      </If>
+      <If Condition="Herbalism.Level &gt;= 125 &amp;&amp; Herbalism.MaxLevel == 150" IgnoreCanRun="True" ChildrenCount="4">
+        <TrainSkillAction NpcEntry="46741" X="1902.69" Y="-4450.71" Z="53.4155" />
+        <GetMailAction ItemID="0" CheckNewMail="True" GetMailType="AllItems" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+        <SellItemOnAhAction ItemID="13463" MinBuyout="0g10s0c" MaxBuyout="80g0s0c" RunTime="_24_Hours" Amount="10" StackSize="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="13463" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      </If>
+      <If Condition="Herbalism.Level &gt;= 200 &amp;&amp; Herbalism.MaxLevel == 225" IgnoreCanRun="True" ChildrenCount="4">
+        <TrainSkillAction NpcEntry="46741" X="1902.69" Y="-4450.71" Z="53.4155" />
+        <GetMailAction ItemID="0" CheckNewMail="True" GetMailType="AllItems" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+        <SellItemOnAhAction ItemID="13463" MinBuyout="0g10s0c" MaxBuyout="80g0s0c" RunTime="_24_Hours" Amount="10" StackSize="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="13463" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      </If>
+      <If Condition="Herbalism.Level &gt;= 300 &amp;&amp; Herbalism.MaxLevel == 300" IgnoreCanRun="True" ChildrenCount="6">
+        <TrainSkillAction NpcEntry="46741" X="1902.69" Y="-4450.71" Z="53.4155" />
+        <GetMailAction ItemID="0" CheckNewMail="True" GetMailType="AllItems" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+        <SellItemOnAhAction ItemID="13463" MinBuyout="0g10s0c" MaxBuyout="80g0s0c" RunTime="_24_Hours" Amount="10" StackSize="1" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemID="13463" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <CustomAction Code="Log(&quot;Stopping HB since We are 300 herb/mining&quot;);" />
+        <CustomAction Code=" Lua.DoString(&quot;Logout()&quot;);TreeRoot.Stop();" />
+      </If>
+    </If>
+  </While>
+</Professionbuddy>

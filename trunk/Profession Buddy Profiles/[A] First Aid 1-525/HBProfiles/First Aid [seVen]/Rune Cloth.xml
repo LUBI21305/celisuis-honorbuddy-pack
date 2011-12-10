@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HBProfile>
+  <Name>Rune Cloth</Name>
+  <MinDurability>0.3</MinDurability>
+  <MinFreeBagSlots>2</MinFreeBagSlots>
+  <MinLevel>1</MinLevel>
+  <MaxLevel>86</MaxLevel>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+	
+	<MailWhite>True</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>  
+	<Vendors>
+<Vendor Name="Strumner Flintheel" Entry="5508" Type="Repair" X="-10951.8" Y="-3451.99" Z="66.76159" />
+	</Vendors>
+	
+
+  <GrindArea>
+    <TargetMinLevel>1</TargetMinLevel>
+    <TargetMaxLevel>86</TargetMaxLevel>
+    <Factions>90 45</Factions>
+    <Hotspots>
+<Hotspot X="-11265.11" Y="-2546.014" Z="97.03566" />
+<Hotspot X="-11521.17" Y="-2855.298" Z="7.577067" />
+<Hotspot X="-11213.19" Y="-2888.255" Z="8.947979" />
+<Hotspot X="-11340.49" Y="-2587.129" Z="-13.43273" />
+<Hotspot X="-11481.72" Y="-2640.578" Z="-4.913329" />
+    </Hotspots>
+  </GrindArea>
+
+<Avoidmobs>
+<Mob Name="Felhound" Entry ="6010" />
+<Mob Name="Jarroc Torn-Wing" Entry ="41164" />
+<Mob Name="Oath-Chained Infernal" Entry ="41253" />
+</Avoidmobs>
+
+           <ProtectedItems>
+           <Item name="Linen Cloth" entry="2589" /> 
+           <Item name="Wool Cloth" entry="2592" /> 
+           <Item name="Silk Cloth" entry="4306" /> 
+           <Item name="Mageweave Cloth" entry="4338" /> 
+           <Item name="Runecloth" entry="14047" /> 
+           <Item name="Netherweave Cloth" entry="21877" /> 
+           </ProtectedItems>
+           <ForceMail>
+           <Item name="Wool Cloth" entry="2592" /> 
+           <Item name="Linen Cloth" entry="2589" />
+           <Item name="Silk Cloth" entry="4306" /> 
+           <Item name="Mageweave Cloth" entry="4338" /> 
+           <Item name="Runecloth" entry="14047" /> 
+           <Item name="Netherweave Cloth" entry="21877" /> 
+           </ForceMail>
+</HBProfile>
