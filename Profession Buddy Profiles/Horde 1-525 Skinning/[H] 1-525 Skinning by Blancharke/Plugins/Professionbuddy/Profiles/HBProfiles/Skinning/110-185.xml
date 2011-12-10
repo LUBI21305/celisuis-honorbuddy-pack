@@ -1,0 +1,26 @@
+<HBProfile>
+<MinDurability>0.2</MinDurability> 
+<MinFreeBagSlots>2</MinFreeBagSlots> 
+<SellGrey>True</SellGrey> 
+<SellWhite>false</SellWhite> 
+<SellGreen>True</SellGreen>
+
+<SubProfile>
+<MinLevel>1</MinLevel> 
+<MaxLevel>86</MaxLevel>
+<Factions>38 189</Factions>
+<Hotspots>
+		<Hotspot X="2235.397" Y="-2399.671" Z="100.9656" />
+<Hotspot X="2247.963" Y="-2310.162" Z="107.3225" />
+<Hotspot X="2301.496" Y="-2350.158" Z="116.6326" />
+<Hotspot X="2379.265" Y="-2359.115" Z="134.2096" />
+<Hotspot X="2480.036" Y="-2403.868" Z="153.2941" />
+<Hotspot X="2515.856" Y="-2472.76" Z="164.8789" />
+<Hotspot X="2562.985" Y="-2504.639" Z="167.2314" />
+<Hotspot X="2546.078" Y="-2565.964" Z="161.2294" />
+<Hotspot X="2521.343" Y="-2671.573" Z="149.9477" />
+<Hotspot X="2583.707" Y="-2702.02" Z="141.3635" />
+<Hotspot X="2654.522" Y="-2679.813" Z="139.104" />
+</Hotspots>
+</SubProfile>
+</HBProfile>

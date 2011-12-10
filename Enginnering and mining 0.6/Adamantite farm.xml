@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HBProfile creator="rompa" version="v1.0">
+  <Name>[Alliance] Adamantite [325+]</Name>
+  <MinLevel>1</MinLevel>
+  <MaxLevel>86</MaxLevel>
+  <SellGrey>true</SellGrey>
+  <MailWhite>true</MailWhite>
+  <MailBlue>true</MailBlue>
+  <MailPurple>true</MailPurple>
+  <Mailboxes>
+    <Mailbox x="-2673.14" y="7288.92" z="36.853" />
+  </Mailboxes>
+  <Vendors>
+    <Vendor id="19012" name="Sparik" type="Repair" x="-2541.9" y="7364.77" z="7.03216" />
+  </Vendors>
+    <Hotspots>
+      <Hotspot x="-2167.05127" y="6040.13672" z="findhighest" />
+      <Hotspot x="-2219.13452" y="6245.11035" z="findhighest" />
+      <Hotspot x="-2487.95581" y="6266.94971" z="findhighest" />
+      <Hotspot x="-2533.319" y="6112.38" z="findhighest" />
+      <Hotspot x="-2874.38159" y="6387.91846" z="findhighest" />
+      <Hotspot x="-2716.46118" y="6819.704" z="findhighest" />
+      <Hotspot x="-2860.9436" y="7091.88232" z="findhighest" />
+      <Hotspot x="-2949.99" y="7437.98438" z="findhighest" />
+      <Hotspot x="-2943.27" y="7654.71826" z="findhighest" />
+      <Hotspot x="-2845.82324" y="7768.966" z="findhighest" />
+      <Hotspot x="-2739.98218" y="7950.41748" z="findhighest" />
+      <Hotspot x="-3035.6853" y="8061.307" z="findhighest" />
+      <Hotspot x="-2966.799" y="8283.081" z="findhighest" />
+      <Hotspot x="-2933.197" y="8543.497" z="findhighest" />
+      <Hotspot x="-2871.03271" y="8689.667" z="findhighest" />
+      <Hotspot x="-2662.69946" y="8755.191" z="findhighest" />
+      <Hotspot x="-2590.4563" y="8887.92" z="findhighest" />
+      <Hotspot x="-2473.222" y="8621.854" z="findhighest" />
+      <Hotspot x="-2248.281" y="8245.831" z="findhighest" />
+      <Hotspot x="-2232.82886" y="8522.274" z="findhighest" />
+      <Hotspot x="-2152.116" y="8925.777" z="findhighest" />
+      <Hotspot x="-1959.80835" y="9140.406" z="findhighest" />
+      <Hotspot x="-1599.22485" y="9751.669" z="findhighest" />
+      <Hotspot x="-1468.72974" y="9902.769" z="findhighest" />
+      <Hotspot x="-1345.103" y="9712.177" z="findhighest" />
+      <Hotspot x="-1312.47974" y="9545.625" z="findhighest" />
+      <Hotspot x="-1183.70166" y="9308.675" z="findhighest" />
+      <Hotspot x="-1255.81873" y="9185.048" z="findhighest" />
+      <Hotspot x="-1027.44958" y="9045.967" z="findhighest" />
+      <Hotspot x="-1070.37561" y="8917.189" z="findhighest" />
+      <Hotspot x="-1144.20984" y="8687.106" z="findhighest" />
+      <Hotspot x="-1006.84814" y="8506.817" z="findhighest" />
+      <Hotspot x="-790.5009" y="8578.934" z="findhighest" />
+      <Hotspot x="-821.4091" y="8747.203" z="findhighest" />
+      <Hotspot x="-721.820068" y="8839.922" z="findhighest" />
+      <Hotspot x="-474.554443" y="8824.467" z="findhighest" />
+      <Hotspot x="-742.4276" y="8156.54" z="findhighest" />
+      <Hotspot x="-1037.75842" y="8086.142" z="findhighest" />
+      <Hotspot x="-709.8043" y="7943.628" z="findhighest" />
+      <Hotspot x="-709.8043" y="7677.48828" z="findhighest" />
+      <Hotspot x="-754.449463" y="7299.739" z="findhighest" />
+      <Hotspot x="-646.276855" y="7164.09326" z="findhighest" />
+      <Hotspot x="-965.6413" y="6674.739" z="findhighest" />
+      <Hotspot x="-1250.66943" y="6624.94531" z="findhighest" />
+      <Hotspot x="-1503.07825" y="6315.87256" z="findhighest" />
+      <Hotspot x="-1705.68848" y="6583.72" z="findhighest" />
+      <Hotspot x="-1873.95837" y="6913.39" z="findhighest" />
+      <Hotspot x="-1784.67212" y="7153.77539" z="findhighest" />
+      <Hotspot x="-1592.36658" y="7727.26172" z="findhighest" />
+      <Hotspot x="-1741.75012" y="7947.042" z="findhighest" />
+      <Hotspot x="-1922.03784" y="7790.792" z="findhighest" />
+      <Hotspot x="-2069.70215" y="7571.01172" z="findhighest" />
+      <Hotspot x="-2014.7583" y="7325.476" z="findhighest" />
+      <Hotspot x="-2078.292" y="7050.75" z="findhighest" />
+      <Hotspot x="-2086.87549" y="6753.69971" z="findhighest" />
+      <Hotspot x="-1884.26721" y="6363.93359" z="findhighest" />
+    </Hotspots>
+</HBProfile>

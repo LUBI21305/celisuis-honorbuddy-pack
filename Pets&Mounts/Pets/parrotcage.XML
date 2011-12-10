@@ -1,0 +1,101 @@
+<HBProfile>
+  <Name>Parrot Cage Farm with Boats.</Name> 
+  <MinDurability>0.3</MinDurability> 
+  <MinFreeBagSlots>2</MinFreeBagSlots> 
+  <SellGrey>True</SellGrey> 
+  <SellWhite>True</SellWhite> 
+  <SellGreen>True</SellGreen> 
+  <SellBlue>False</SellBlue> 
+  <SellPurple>False</SellPurple> 
+  <MinLevel>40</MinLevel> 
+  <MaxLevel>81</MaxLevel> 
+
+  <ProtectedItems>
+  <Item>8494</Item> 
+  <Item>1204</Item> 
+  <Item>13068</Item>
+  <Item>2955</Item> 
+  </ProtectedItems>
+
+  <ForceMail>
+  <Item>8494</Item> 
+  <Item>1204</Item> 
+  <Item>13068</Item> 
+  <Item>2955</Item> 
+  </ForceMail>
+  
+  <SubProfile>
+  <MinLevel>40</MinLevel> 
+  <MaxLevel>81</MaxLevel> 
+  <Vendors>
+  <Vendor Name="Haren Kanmae" Entry="2839" Type="Repair" X="-14340.61" Y="414.6042" Z="6.626997" />
+  </Vendors>
+  <Mailboxes>
+  <Mailbox X="-14419.49" Y="515.5349" Z="4.986396" />
+  </Mailboxes>
+  
+  <GrindArea>
+  <Factions>7 119 74</Factions>
+  <TargetMinLevel>35</TargetMinLevel>
+  <TargetMaxLevel>60</TargetMaxLevel>
+  <RandomizeHotspots>false</RandomizeHotspots>
+  <MaximumHotspotTime>60000</MaximumHotspotTime>
+  <Hotspots>   
+<Hotspot X="-13451.32" Y="753.0791" Z="1.402706" />
+<Hotspot X="-13432.48" Y="652.3346" Z="8.643981" />
+<Hotspot X="-13475.29" Y="664.1979" Z="9.462982" />
+<Hotspot X="-13527.04" Y="676.0145" Z="5.456113" />
+<Hotspot X="-13504.66" Y="731.0256" Z="6.131577" />
+<Hotspot X="-13663.69" Y="607.3492" Z="5.500438" />
+<Hotspot X="-13701.19" Y="614.0964" Z="10.48703" />
+<Hotspot X="-13764.12" Y="625.8065" Z="15.39618" />
+<Hotspot X="-13818.2" Y="670.6443" Z="8.674642" />
+<Hotspot X="-13877.58" Y="658.8525" Z="15.28557" />
+<Hotspot X="-13945.43" Y="630.7782" Z="2.710702" />
+<Hotspot X="-13999.31" Y="570.9656" Z="5.059498" />
+<Hotspot X="-14042.29" Y="514.1011" Z="2.588058" />
+<Hotspot X="-14137.01" Y="472.3883" Z="2.511145" />
+<Hotspot X="-14167.78" Y="411.5844" Z="14.44526" />
+<Hotspot X="-14217.92" Y="350.6585" Z="26.60349" />
+<Hotspot X="-14226.83" Y="204.1678" Z="9.26757" />
+<Hotspot X="-14239.25" Y="157.4567" Z="8.247416" />
+<Hotspot X="-14296.89" Y="132.9348" Z="8.555568" />
+<Hotspot X="-14304.05" Y="66.3919" Z="1.460143" />
+<Hotspot X="-14478.23" Y="118.7394" Z="3.447315" />
+<Hotspot X="-14529.79" Y="173.004" Z="2.609206" />
+<Hotspot X="-14603.51" Y="266.9333" Z="1.920429" />
+<Hotspot X="-14591.77" Y="299.3406" Z="3.094811" />
+<Hotspot X="-14620.69" Y="322.5869" Z="3.765117" />
+<Hotspot X="-14642.78" Y="361.4086" Z="3.960407" />
+<Hotspot X="-14687.12" Y="431.0371" Z="1.724744" />
+<Hotspot X="-14692.56" Y="494.6454" Z="2.519108" />
+<Hotspot X="-14725.64" Y="530.1408" Z="2.966304" />
+<Hotspot X="-14736.39" Y="484.7691" Z="3.174988" />
+<!-- Boats section -->
+<Hotspot X="-14965.31" Y="346.5954" Z="13.02794" />
+<Hotspot X="-14938.44" Y="357.7411" Z="12.59637" />
+<Hotspot X="-14952.39" Y="348.4515" Z="7.542027" />
+<Hotspot X="-14930.62" Y="357.5298" Z="7.541636" />
+<Hotspot X="-14970.19" Y="347.113" Z="7.543653" />
+<Hotspot X="-14967.8" Y="344.9727" Z="0.2196049" />
+<Hotspot X="-14942.31" Y="353.7282" Z="0.2040889" />
+<Hotspot X="-15010.38" Y="271.6037" Z="18.25946" />
+<Hotspot X="-15009.79" Y="260.8692" Z="12.97498" />
+<Hotspot X="-14997.69" Y="266.9563" Z="7.92078" />
+<Hotspot X="-15019.08" Y="264.5773" Z="7.921631" />
+<Hotspot X="-14982.85" Y="263.8779" Z="7.920767" />
+<Hotspot X="-14981.2" Y="266.8134" Z="0.6002933" />
+<Hotspot X="-15006.82" Y="265.032" Z="0.5002096" />
+<Hotspot X="-14849.27" Y="68.51608" Z="1.771571" />
+<Hotspot X="-14917.13" Y="83.13325" Z="12.92352" />
+<Hotspot X="-14921.1" Y="113.6479" Z="18.45486" />
+<Hotspot X="-14928.36" Y="106.8628" Z="12.57407" />
+<Hotspot X="-14922.9" Y="94.36472" Z="7.521514" />
+<Hotspot X="-14926.47" Y="115.4437" Z="7.520711" />
+<Hotspot X="-14921.83" Y="81.20802" Z="7.520937" />
+<Hotspot X="-14918.53" Y="78.86021" Z="0.2004937" />
+<Hotspot X="-14921.94" Y="105.6804" Z="0.2001367" />
+  </Hotspots>
+  </GrindArea>
+  </SubProfile>
+  </HBProfile>

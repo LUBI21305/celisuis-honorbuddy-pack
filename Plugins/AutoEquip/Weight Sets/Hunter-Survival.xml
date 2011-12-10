@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WeightSet Class="Hunter" Spec="Survival">
+  <DPS>379</DPS>
+  <HitRating>100</HitRating>
+  <Agility>76</Agility>
+  <CriticalStrikeRating>42</CriticalStrikeRating>
+  <Intellect>35</Intellect>
+  <HasteRating>31</HasteRating>
+</WeightSet>

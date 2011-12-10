@@ -1,0 +1,33 @@
+<HBProfile>
+  <Name>Embersilk Cloth</Name>
+
+
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+
+  <SellGrey>True</SellGrey>
+  <SellWhite>False</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+
+<Vendors>
+<Vendor Name="Kevin Geissler" Entry="48251" Type="Repair" X="-374.3594" Y="1052.682" Z="21.98269" />
+</Vendors>
+<Factions>16 14 22 189 2355</Factions>
+
+<Hotspots>
+<Hotspot X="-29.15676" Y="1151.178" Z="15.55351" />
+<Hotspot X="-38.75781" Y="1653.642" Z="28.10649" />
+<Hotspot X="-195.578" Y="1884.071" Z="2.548615" />
+<Hotspot X="-371.6004" Y="1640.84" Z="20.57671" />
+<Hotspot X="-333.1954" Y="1128.776" Z="22.23422" />
+</Hotspots>
+
+<Blackspots>
+<Blackspot X="-567.1689" Y="1397.575" Z="24.58722" Radius="35.13935" />
+</Blackspots>
+</HBProfile>

@@ -1,0 +1,348 @@
+**************
+3.0 Final Features
+**************
+Empower Rune Weapon can now be cast with adds or when runes are depleted
+Unholy Frenzy is now available and will be cast with Adds
+
+**************
+3.0 Beta 4 Features
+**************
+Unholy Spec is now available for testing. It will start using Festering
+Strike at level 64 if learned.
+Target Filtering should be fixed now. If you dont have a target
+it will search for all targets in the area that are attacking your
+minions such as bloodworms. Also If you are in combat, and you dont 
+have a target it will simply stand there till combat is over to 
+prevent it from picking up several targets at once.
+
+Path of Frost will now be cast only if you are actually in the water.
+Pestilence should work properly again, although I only tested with Blood.
+Raise Dead is no longer cast during pull but rather during combat to prevent
+it from being wasted if the target becomes unreachable or is bugged. This
+does not apply to perma pets.
+Starting rotation should cast Death Coil and Raise Dead again.
+
+**************
+3.0 Beta 3 Features
+**************
+DW Frost Spec now available.
+Mind freeze will no longer check for RP
+Fixed a bug in frost where Howling Blast is attempted
+even if you dont know the spell.
+Added option to choose your presence.
+When casting pillar of frost is SHOULD now properly target
+those affected.
+
+**************
+3.0 Beta 2 Features
+**************
+
+2H frost spec now available.
+Bone shield is now cast whenever not mounted instead of on pull
+Horn of Winter is now cast whenever not mounted instead of on pull
+Removed Rune Strike RP option. It was pretty much useless.
+Lichborn should work now.
+Fixed many of the GUI options
+
+**************
+3.0 Beta 1 Features
+**************
+PvP, RaF, and Combat Assist have been removed for now. They will return
+at a later date.
+
+GUI has been updated and follows the Convalesce style.
+Settings manager has been added. You can now save and load settings.
+All Logic has been updated for Cata. That means all new spells are now
+working and the old spells are removed.
+Blood Tap Added
+Pillar of Frost Added
+Empower Rune Weapon Added
+Rune Strike added as well as an option for reserved Runic Power
+Hungering Cold Added
+Outbreak Added
+New Adds option. You now have the option to choose the total number of
+attacking mobs before the adds logic kicks in. Perfect for High DPS
+DKs capable of taking down a few mobs without the need to pop cooldowns.
+Rotational Logic is updated and will no longer count on a set order but
+rather base it on rune count and applicable dieses.
+New option for Minimum Target Health. Instead of having an option for each
+ability there is now a global option. All offensive cooldowns will be saved
+if the target is below a certain health. This does not apply to healing spells
+or if you get adds.
+Rime can now be used for Icy Touch is desired.
+Free Blood Boil is now detected and will fire when ready.
+Free Death Coll is now detected and will fire when ready.
+Lichborne is added and will be used to heal self in much the same as other
+spells. It will also detect harmfull spells that Lichborne can cure.
+
+
+**************
+2.1 Beta 4 Features
+**************
+Combat assist is now available. Right now there are only 2 modes.
+No assist and level 2. You move for HB and pull and the CC will take
+over for you.
+Fixed a bug in adds detection where it would switch targets.
+Removed self cast from hysteria to prevent target errors.
+
+**************
+2.1 Beta 3ish Features
+**************
+Bug fixes and code cleanup. Also updated for latest version of HB
+
+**************
+2.1 Beta 2 Features
+**************
+
+Added RaF follower Logic. Still needs work.
+Fixed bug in Path of Frost
+Lowered the wait time after Bone Shield is cast
+Removed some of the wait time in pull making it faster.
+Redid some parts of the GuI
+Misc stuff
+
+**************
+2.03 Features
+**************
+
+Fixed the Auto attack bug
+Rewrote some of the pull code to be a bit faster
+Added Chains of Ice to PvP logic. If enabled, Chains of Ice will be cast in
+place of Icy Touch only if the target is not chained.
+Added Path of Frost option when out of combat. (May be buggy)
+Bone Shield and Horn of winter are now cast upon Rez if not mounted. It will also
+be cast during pull if needed. (PvP Only)
+Added option to cast Stangulate in Melee
+Added option to replace Scourge Strike with Death Strike at a desired HP %
+Added Death Pact
+
+**************
+2.02 Features
+**************
+
+Few more tweaks
+
+**************
+2.01 Features
+**************
+
+Updated to work with the latest questing build
+
+
+**************
+2.00 Beta 3 Features
+**************
+New GUI. Take on the same form as Convalesce.
+Tweaked pull a bit. Might help to avoid those long pulls.
+Added "Burn on Adds" option to many abilities.
+Added LifeBlood
+Added Orc Racial Blood Fury
+
+5-xx-10
+
+**************
+2.00 Beta 2 Features
+**************
+Rewrote most of combat logic. Speeding it up slightly.
+New Navigation now fully integrated into the CC.
+Redid Blood Rotations
+Blood : Obliterate has been replaced by Deathstrike.
+Reworked the runners logic. It should stay within 2 yards of target now.
+Updated Adds detection logic, thanks to xxAhzz. Modified for my needs. Should be a bit faster.
+All Save for adds abilities have been reworked. They will now be cast on adds as well as at
+your set HP% Should improve survivability.
+Pull tweaked yet again. Added LoS Check when in range. Should prevent stuck pulls.
+Fixed bug in pull where target wasnt blacklisted when timeout.
+Fixed pet bug where if pet was attacked, player would just stand there. (Thanks Nesox)
+Fixed bug in accidental pulls where player would continue to run after current target. It will
+now stop and switch to the target that is attacking first.
+Added option for Rime rather than the CC check for it all of the time. Should save a few ms.
+
+5-09-10
+
+**************
+2.00 Beta 1 Features
+**************
+Rewrote entire pull code. The logic is much better and faster.
+Added new navigation to pull code to allow move to target to avoid obstacles.
+Fixed bug in Icy Touch where is was double cast after opener.
+Added fall back to pull to avoid standing still till blacklist
+Increased pull timeout to 12 seconds, up from 10.
+Added tag check to pull to prevent pulling tagged targets.
+
+
+5-04-10
+
+**************
+Beta 2 Features (HB2 Support)
+**************
+A simple conversion of 1.00 to support HB2
+
+
+4-08-10
+
+**************
+1.00 Features (Last version supporting HB1)
+**************
+Complete rewrite of Cimmerian. Removed alot of uneeded code to speed things up.
+Redid GuI to flow better.
+Fixed bug in pull where Icy Touch was not cast as backup
+Added Icy touch check so that it will not double cast after opener
+Added Icy touch range option for those frost DK's
+Added range option to Player detector
+Added Arcane Torrent for Blood Elfs
+Added Warstomp for Taurens
+Added Anti-Magic shell for when interupts are not available
+New Fleeing mobs logic. You can now cast Chains, Death Grip, or Dark Command.
+
+
+**************
+0.42 Features
+**************
+Potions now available to use
+
+12-06-09
+
+**************
+0.42 Features
+**************
+
+HB now detects your pet. All the workarounds which cause side effects have been removed.
+
+
+12-02-09
+
+**************
+0.41 Features
+**************
+
+Few tweaks.
+
+12-01-09
+
+**************
+0.40 Features
+**************
+
+Cooldown system fixed. CC tweaked for this. Much faster than before.
+Evade detection added. Will blacklist evades now.
+Fixed bug in adds where pestilence was cast over and over.
+Added target checker. It will make sure the current target is in fact targeting the player if in combat.
+This will help prevent those kites of adds. (May have side effects if pet is being attacked)
+
+Stuck detector reimplimented. (Might need some more testing)
+Added stuck Detector to pull state. Still uses pull timer as well.
+Greatly reduced spam to Screen Log.
+Fixed bug in DRW where it would cast below threshold
+Fixed bug in Raise Dead where it would run cast.
+Tweaked for a pull distance of 39 yards. Makes for safer pulls.
+
+11-30-09
+
+**************
+0.35 Features
+**************
+
+Rewrote entire CC using Convalesce core
+
+Prebuilt Roations : Standard Level 55 , Blood 58, Frost 58, Unholy 58
+
+Removed individual spell settings in favor of prebuilt rotations.
+Redid Rotation to make them simple.
+Drasticaly reduced various combat checks.
+Player Detector refined. Will alert on pull. Can be disabled.
+Added Dark Command as opener. If Deathgrip is on Cooldown it will cast Dark Command
+Added DeathCoil as opener.
+Added IcyTouch as opener.
+Added Adds Detector. Will cast pestilence & Blood Boil when adds are detected without interupting rotation.
+Can be disabled
+
+Added in combat stuck detector (Disabled, some problems)
+Will now detect casters and interupt them using Strangulate, Mind Freeze, or Death Grip.
+Should avoid running pulls now
+Blood tap removed for now.
+DeathStrike removed for now.
+Better range detection. Particularly usefull for teleporting mobs.
+Improved facing. It will check facing on each rotating cast and instantly face.
+Added Hungering Cold to help deal with adds.
+Deathchill will cast with Obliterate as well.
+
+
+
+10-28-09
+
+**************
+0.30 Features
+**************
+
+Added support for navmesh.
+Tweaked pull a bit to work better with flying mounts.
+Added Gargoyle
+Experimental player detector added.
+
+10-03-09
+
+**************
+0.25 Features
+**************
+
+Tagged check. Will check to make sure the target isnt tagged before opening or attacking.
+Added Horn of Winter. Will use right before pull.
+Support for mounts. Cimmerian will dismount before pull.
+Icebound Fortitude added
+Bone Shield added to spell rotation
+Dancing Rune Weopon added. Logic is solid.
+Hysteria added, though not tested. Will not use if health is below 30 percent.
+
+
+
+10-02-09
+
+**************
+0.20 Features
+**************
+
+Spell system rewrote from scratch to make it much more efficient
+Raise dead works and will be cast if corpse dust is available just before pull.
+Much improved pull logic using Death Grip.
+Death Coil now works and will RP dump when its ready rather than at the end of the cycle.
+Rune Tap now checks before each cast rather than at the end of the cycle.
+Facing detector added. If for any reason you are not facing the target while in combat, it will face for you. Also Recast.
+Mark of Blood now works. Set to use at 25 percent health if the target has a greater than 75 percent health
+DeathChill has been added. Not much logic though.
+Vampiric Blood added. Will use it at 15 percent health if the target has a greater than 75 percent health
+Unbreakable Armor added. Will use it at 50 percent health if the target has a greater than 75 percent health
+Frost Strike Added. Same logic as Death Coil
+Rime Logic added. Make sure you have Howling Blast on your bar
+ScourgeStrike Added.
+
+
+9-28-09
+
+**************
+0.15 Features
+**************
+
+
+Mob Blacklist option now included.
+Cimmerian will now reface the target if you are not facing. This helps with multi-pulls.
+Will now disable spells when it cant find them on your action bar.
+Implimented Death Coil. Doesnt work though as HB doesnt support Runic Power atm.
+Eat tested and confirmed to be working.
+Death Strike added. Enabled, so if you are level 55 just enable bloodstrike in the code.
+PullTimer added. If your pull lasts more than 5 seconds it will temp blacklist and move onto another target.
+
+9-26-09
+
+**************
+0.1 Features
+**************
+ 
+
+Stable Abilities
+
+Death Grip
+Icy Touch
+Plague Strike
+Blood Strike
+Rune Tap (Set at 75 percent. To change just edit the line containing RuneTapHealth to what ever value you desire)

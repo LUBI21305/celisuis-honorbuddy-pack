@@ -1,0 +1,121 @@
+<HBProfile>
+<!--The above tag start the file.  Tells HB that this .xml file can be used in HB 
+	EVERYTHING WITHIN THESE TAG ANYWHERE IN THE PROFILE IS WHAT WE CALL COMMENTING
+	HB will ignore anything within these two tags
+	New lines do not matter as long as they are between these tags, this applies to comments only -->
+	<!-- THIS IS A COMMENT -->
+	<!--
+	THIS IS ALSO A COMMENT
+	-->
+
+	
+	
+	<!-- This is the name that will pop up in the HB log like: "Loaded profile - Whatever you set between these tags" -->
+	<Name>Whatever you set between these tags</Name>
+		
+	<!-- MinDurability means at 0.1 (or 10%) durability remaining on your gear it will go and repair
+	     EX:  <MinDurability>0.4</MinDurability> = At 40% remaining durability of gear it will go and repair
+		 Setting this to 0.0 will turn off repairing completely in this profile
+	MinFreeBagSlots means that if only # of bag slots are open, go to Vendor and then Mailbox-->
+	<MinDurability>0.1</MinDurability>
+	<MinFreeBagSlots>4</MinFreeBagSlots>
+	
+	<!-- Change these Sell/Mail tags to true if you want it to sell them
+	All are listed as Item Qualities
+	When mouseing over an item in wow you can see it's quality in the name (the color of the name) (Grey, White, Green, etc Colored in-game name)
+	It is not recommended to put the item quality of the item you are trying to farm as true to sell
+	I have Grey set to sell, all the rest not
+	And everything but grey set to mail by default.
+	-->
+	<SellGrey>True</SellGrey>
+	<SellWhite>False</SellWhite>
+	<SellGreen>False</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>True</MailWhite>
+	<MailGreen>True</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>  
+	
+	
+	<!-- This will be your repair/sell vendor.  Make sure he can actually repair your gear! -->
+	<!-- Best way to get this is to log in, start HB, click on Developer Tools, in WoW select the vendor...
+	     The go back to DevTools window, where it says target info hit the little refresh button to arrows...
+		 Go back into the HB window and copy paste the <Vendor> tag into HB here.-->
+	<Vendors>
+		<Vendor Name="Smith Hauthaa" Entry="25046" Type="Repair" X="12664.15" Y="-6984.873" Z="14.54467" /><!-- Dont leave this as your actual vendor, change it-->
+	</Vendors>
+	
+	<!-- This will be your Mailbox used for, what else, sending mail to your alt
+		 Best way to get this, go stand right next to the mailbox, within clicking to use distance...
+		 Go into the Developer Tools window, and where it says MY LOCATION with 0,0,0 underneath it...
+		 Double-Left-Click the 0,0,0 (dont hit the little refresh button
+		 Go back into the HB window, copy and paste that <Hotspot x= y= z= /> tag
+		 Then change the <Hotspot to <Mailbox and you are good to go -->
+	<Mailboxes>
+		<Mailbox X="12791.98" Y="-6965.993" Z="15.4073"/><!-- Dont leave this as your actual mailbox, change it-->
+	</Mailboxes>
+	
+	
+	<!-- Blackspot work by blacklisting the current 'tile' it is on
+	so if the area you are in is very flat, blackspots may not work at all.
+	HB pathing doesnt 'like' to go through blackspots, but if going around them
+	would take longer than the danger of going through them, it will still go through them.
+	These can be created in the dev tools window.
+	Definition:  A blackspot is basically a circle on the ground ( in very simple terms) that HB doesn't want to walk through (this is not entirely correct)
+	HowToGet: You will create a blackspot using HB, you will click a button twice.
+	Start at the first outer edge of your circle
+	Click once on Generate Blackspot in the Dev Tools window.
+	Move to the completely opposite side of the blackspot circle
+	Click again on Generate Blackspot.
+	The new <Blackspot xyz /> tag is now in your HB window.
+	Copy and paste it in-between the <Blackspots></Blackspots> tags -->
+	<Blackspots>
+		<Blackspot X="12434.82" Y="-7360.931" Z="0.07025005" Radius="14.97882" />
+		<Blackspot X="12384.27" Y="-7372.03" Z="0.05561385" Radius="13.87913" />
+		<Blackspot X="12215.03" Y="-7383.839" Z="-2.137761" Radius="50.15321" />	
+	</Blackspots>
+	
+	
+	<!-- This tag will tell HB where to start when it wants to move to hotspots-->
+	<GrindArea>
+		
+	   <!-- Minimum level of mob to target -->
+       <TargetMinLevel>1</TargetMinLevel>
+	   <!-- Maximum level of mob to target -->
+       <TargetMaxLevel>99</TargetMaxLevel>
+	   <!-- This is the mob type (beast, dragonkin, humanoid)
+	        This can be found in the Dev tools - Target info - Faction!
+			Just copy and paste all necessary factions into here.
+			Seperate multiple factions, 2 kinds of mobs, with a space
+			EX:  <Factions>190 3820 8392 12</Factions> -->
+       <Factions>190</Factions>
+
+	   <!-- These will be the spots where HB runs to if it doesn't have any targets within pulldistance (settings in HB) 
+			Honorbuddy will go in order from top to bottom -->
+       <Hotspots>
+	    <Hotspot X="12545.73" Y="-7342.956" Z="-0.4760413" />
+		<Hotspot X="12536.21" Y="-7408.992" Z="0.6888082" />
+		<Hotspot X="12511.5" Y="-7461.758" Z="0.5231538" />
+		<Hotspot X="12441.38" Y="-7456.43" Z="0.454008" />
+		<Hotspot X="12415.83" Y="-7405.412" Z="0.8710961" />
+		<Hotspot X="12317.83" Y="-7403.396" Z="-0.1901774" />
+       </Hotspots>
+   </GrindArea>
+	
+	<!--
+	This example profile was created by No1KnowsY of the I Don't Know - Dev Team
+	It is provided to you completely free of licensing
+	All information provided in here will help you to undestand what each tag represents...
+	and how to change it to suite your needs.
+	
+	You are free to modifiy this file in any way, or upload it after modifications.
+	Please do not re-upload this exact file and claim you have created it..
+	At least give me a little credit.
+	
+	Please enjoy, and if you like it, well I encourage you to +Rep me on the Forums :)
+	-->
+	
+</HBProfile>

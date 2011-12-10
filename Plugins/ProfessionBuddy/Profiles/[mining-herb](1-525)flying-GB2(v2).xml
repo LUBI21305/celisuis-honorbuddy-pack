@@ -1,0 +1,629 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Professionbuddy ChildrenCount="14">
+  <CustomAction Code="LevelbotSettings.Instance.LootMobs = false;" />
+  <Settings Type="Boolean" DefaultValue="false" Name="Smelt Ore" Summary="If set to true this will smelt ore into bars when doing AH runs" />
+  <Settings Type="Boolean" DefaultValue="true" Name="AH Items" Summary="If set to true this profile will sell items on AH, otherwise it'll mail items to an alt.If mailing items to alt make sure to set the Grind Bot's 'Recipient' field to your alts name." />
+  <If Condition="TreeRoot.Current.Name != &quot;Gatherbuddy2&quot;" IgnoreCanRun="True" ChildrenCount="2">
+    <CustomAction Code="MessageBox.Show(&quot;Please switch bot to Gatherbuddy&quot;);" />
+    <CustomAction Code="TreeRoot.Stop();" />
+  </If>
+  <Settings Type="Boolean" DefaultValue="true" Name="Herb" Summary="Set to true if you want to level herbalism" />
+  <Settings Type="Boolean" DefaultValue="true" Name="Mining" Summary="Set to true if you want to level Mining" />
+  <While Condition="((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level == Mining.MaxLevel) || !((bool)Settings[&quot;Mining&quot;])" IgnoreCanRun="True" ChildrenCount="1">
+    <CustomAction Code="GatherbuddySettings.Instance.GatherMinerals = false;" />
+  </While>
+  <While Condition="(bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level != Mining.MaxLevel " IgnoreCanRun="True" ChildrenCount="1">
+    <CustomAction Code="GatherbuddySettings.Instance.GatherMinerals = true;" />
+  </While>
+  <While Condition="(bool)Settings[&quot;Herb&quot;] &amp;&amp; ((Herbalism.Level == Herbalism.MaxLevel) || !((bool)Settings[&quot;Herb&quot;]))" IgnoreCanRun="True" ChildrenCount="1">
+    <CustomAction Code="GatherbuddySettings.Instance.GatherHerbs = false;" />
+  </While>
+  <While Condition="(bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level != Herbalism.MaxLevel" IgnoreCanRun="True" ChildrenCount="1">
+    <CustomAction Code="GatherbuddySettings.Instance.GatherHerbs = true;" />
+  </While>
+  <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.MaxLevel &lt;=300)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.MaxLevel &lt;= 300)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="3">
+    <While Condition="Me.FreeNormalBagSlots &lt;=4" IgnoreCanRun="True" ChildrenCount="6">
+      <CustomAction Code="Log(&quot;Bags are full, selling&quot;);" />
+      <If Condition="Me.IsAlliance" IgnoreCanRun="True" ChildrenCount="2">
+        <FlyToAction Dismount="True" X="-8969.993" Y="779.6597" Z="96.25022" />
+        <If Condition="(bool)Settings[&quot;Smelt Ore&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+          <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-8423.598" Y="628.4059" Z="95.74567" />
+        </If>
+      </If>
+      <If Condition="Me.IsHorde" IgnoreCanRun="True" ChildrenCount="2">
+        <FlyToAction Dismount="True" X="2059.807" Y="-4765.928" Z="27.56209" />
+        <If Condition="(bool)Settings[&quot;Smelt Ore&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+          <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="2056.055" Y="-4827.51" Z="27.47181" />
+        </If>
+      </If>
+      <If Condition="(bool)Settings[&quot;Smelt Ore&quot;]" IgnoreCanRun="True" ChildrenCount="9">
+        <If Condition="HasRecipe(2657)" IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="2657" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="HasRecipe(3304)" IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="3304" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="HasRecipe(2658)" IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="2658" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="HasRecipe(3307)" IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="3307" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="HasRecipe(3308)" IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="3308" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="HasRecipe(3569)" IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="3569" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="HasRecipe(10097)" IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="10097" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="HasRecipe(10098)" IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="10098" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="HasRecipe(16153)" IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="16153" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+      </If>
+      <If Condition="(bool)Settings[&quot;AH Items&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+        <SellItemOnAhAction ItemName="13466" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.001" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemName="13466" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      </If>
+      <If Condition="!(bool)Settings[&quot;AH Items&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+        <MailItemAction Entry="0" AutoFindMailBox="True" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" />
+        <MailItemAction Entry="0" AutoFindMailBox="True" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <If Condition="Me.IsAlliance" IgnoreCanRun="True" ChildrenCount="11">
+      <If Condition="Me.MapId != 0" IgnoreCanRun="True" ChildrenCount="2">
+        <CustomAction Code="MessageBox.Show(&quot;Please switch to Kalimdor continent&quot;);" />
+        <CustomAction Code="TreeRoot.Stop();" />
+      </If>
+      <If Condition="((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level &lt;65) || ((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &lt; 75)" IgnoreCanRun="True" ChildrenCount="1">
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Alliance\(GB2 1-75)(Elwynn.Alliance)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level &gt;=65)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &gt;=75)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="1">
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Alliance\(GB2 75-120)(Duskwood.Alliance)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level &gt;=65)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &gt;=120)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="1">
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Alliance\(GB2 120-160)(StranglethornJungle.Alliance)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level &gt;=125)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &gt;=160)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="1">
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Alliance\(GB2 160-175)(TheCapeOfStranglethorn.Alliance)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level &gt;=175)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &gt;=200)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="1">
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Alliance\(GB2 175-235)(Badlands.Alliance)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level &gt;=235)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &gt;=260)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="1">
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Alliance\(GB2 235-255)(BlasstedLands.Alliance)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level &gt;=250)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &gt;=260)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="1">
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Alliance\(GB2 255-300)(SwampOfSorrows.Alliance)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+      <While Condition="((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.MaxLevel == 0) || ((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.MaxLevel == 0) || (InbagCount (2901) == 0 &amp;&amp; InbagCount (40772) == 0) " IgnoreCanRun="True" ChildrenCount="4">
+        <FlyToAction Dismount="True" X="-8969.993" Y="779.6597" Z="96.25022" />
+        <If Condition="(bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.MaxLevel == 0" IgnoreCanRun="True" ChildrenCount="1">
+          <TrainSkillAction NpcEntry="5566" X="-8969.993" Y="779.6597" Z="96.25022" />
+        </If>
+        <If Condition="(bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.MaxLevel == 0" IgnoreCanRun="True" ChildrenCount="1">
+          <TrainSkillAction NpcEntry="5513" X="-8433.48" Y="688.922" Z="96.31891" />
+        </If>
+        <If Condition="InbagCount (2901) == 0 &amp;&amp; InbagCount (40772) == 0" IgnoreCanRun="True" ChildrenCount="3">
+          <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-8430.177" Y="695.1375" Z="96.31892" />
+          <InteractionAction Entry="5514" InteractDelay="0" InteractType="NPC" GameObjectType="Mailbox" SpellFocus="Anvil" />
+          <BuyItemAction NpcEntry="0" X="0" Y="0" Z="0" Entry="2901" Count="1" BuyItemType="SpecificItem" />
+        </If>
+      </While>
+      <While Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.MaxLevel-Mining.Level &lt;=25 )|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.MaxLevel - Herbalism.Level &lt;= 25 )|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="7">
+        <FlyToAction Dismount="True" X="-8969.993" Y="779.6597" Z="96.25022" />
+        <If Condition="(bool)Settings[&quot;Herb&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+          <TrainSkillAction NpcEntry="5566" X="-8969.993" Y="779.6597" Z="96.25022" />
+        </If>
+        <If Condition="(bool)Settings[&quot;Mining&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+          <TrainSkillAction NpcEntry="5513" X="-8433.48" Y="688.922" Z="96.31891" />
+        </If>
+        <If Condition="(bool)Settings[&quot;Smelt Ore&quot;]" IgnoreCanRun="True" ChildrenCount="10">
+          <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-8423.598" Y="628.4059" Z="95.74567" />
+          <If Condition="HasRecipe(2657)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="2657" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="HasRecipe(3304)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="3304" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="HasRecipe(2658)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="2658" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="HasRecipe(3307)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="3307" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="HasRecipe(3308)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="3308" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="HasRecipe(3569)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="3569" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="HasRecipe(10097)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="10097" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="HasRecipe(10098)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="10098" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="HasRecipe(16153)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="16153" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+        </If>
+        <GetMailAction Entry="0" GetMailType="AllItems" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+        <If Condition="(bool)Settings[&quot;AH Items&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+          <SellItemOnAhAction ItemName="13466" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.001" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+          <SellItemOnAhAction ItemName="13466" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        </If>
+        <If Condition="!(bool)Settings[&quot;AH Items&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+          <MailItemAction Entry="0" AutoFindMailBox="True" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" />
+          <MailItemAction Entry="0" AutoFindMailBox="True" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+        </If>
+      </While>
+      <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.MaxLevel-Mining.Level &lt;=25 )|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.MaxLevel - Herbalism.Level &lt;= 25 )|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="0" />
+    </If>
+    <If Condition="Me.IsHorde" IgnoreCanRun="True" ChildrenCount="9">
+      <If Condition="Me.MapId != 1" IgnoreCanRun="True" ChildrenCount="2">
+        <CustomAction Code="MessageBox.Show(&quot;Please switch to Eastern Kingdoms continent&quot;);" />
+        <CustomAction Code="TreeRoot.Stop();" />
+      </If>
+      <If Condition="((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level &lt;50) || ((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &lt; 50)" IgnoreCanRun="True" ChildrenCount="1">
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Horde\(GB2 1-50)(Durotar.Horde)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level &gt;=50)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &gt;=50)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="1">
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Horde\(GB2 50-120)(Barrens.Horde)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level &gt;=65)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &gt;=75)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="1">
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Horde\(GB2 120-180)(Ashenvale.Horde)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level &gt;=125)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &gt;=150)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="1">
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Horde\(GB2 180-225)(SouthernBarrens.Horde)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level &gt;=175)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &gt;=225)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="1">
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Horde\(GB2 225-275)(Felwood.Horde)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level &gt;=235)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &gt;=280)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="1">
+        <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Horde\(GB2 270-300)(Winterspring.Horde)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+      </If>
+      <While Condition="((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.MaxLevel == 0) || ((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.MaxLevel == 0) || (InbagCount (2901) == 0 &amp;&amp; InbagCount (40772) == 0) " IgnoreCanRun="True" ChildrenCount="4">
+        <FlyToAction Dismount="True" X="2059.807" Y="-4765.928" Z="27.56209" />
+        <If Condition="(bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.MaxLevel == 0" IgnoreCanRun="True" ChildrenCount="1">
+          <TrainSkillAction NpcEntry="3357" X="2081.978" Y="-4764.085" Z="27.92557" />
+        </If>
+        <If Condition="InbagCount (2901) == 0 &amp;&amp; InbagCount (40772) == 0" IgnoreCanRun="True" ChildrenCount="3">
+          <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="2087.52" Y="-4769.45" Z="27.92924" />
+          <InteractionAction Entry="3358" InteractDelay="0" InteractType="NPC" GameObjectType="Mailbox" SpellFocus="Anvil" />
+          <BuyItemAction NpcEntry="0" X="0" Y="0" Z="0" Entry="2901" Count="1" BuyItemType="SpecificItem" />
+        </If>
+        <If Condition="(bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.MaxLevel == 0" IgnoreCanRun="True" ChildrenCount="1">
+          <TrainSkillAction NpcEntry="46741" X="1902.69" Y="-4450.71" Z="53.4155" />
+        </If>
+      </While>
+      <While Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.MaxLevel-Mining.Level &lt;=25 )|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.MaxLevel - Herbalism.Level &lt;= 25 )|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="7">
+        <FlyToAction Dismount="True" X="2059.807" Y="-4765.928" Z="27.56209" />
+        <If Condition="(bool)Settings[&quot;Mining&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+          <TrainSkillAction NpcEntry="3357" X="2081.978" Y="-4764.085" Z="27.92557" />
+        </If>
+        <If Condition="(bool)Settings[&quot;Smelt Ore&quot;]" IgnoreCanRun="True" ChildrenCount="10">
+          <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="2056.055" Y="-4827.51" Z="27.47181" />
+          <If Condition="HasRecipe(2657)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="2657" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="HasRecipe(3304)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="3304" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="HasRecipe(2658)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="2658" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="HasRecipe(3307)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="3307" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="HasRecipe(3308)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="3308" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="HasRecipe(3569)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="3569" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="HasRecipe(10097)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="10097" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="HasRecipe(10098)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="10098" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="HasRecipe(16153)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="16153" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+        </If>
+        <GetMailAction Entry="0" GetMailType="AllItems" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+        <If Condition="(bool)Settings[&quot;Herb&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+          <TrainSkillAction NpcEntry="46741" X="1902.69" Y="-4450.71" Z="53.4155" />
+        </If>
+        <If Condition="(bool)Settings[&quot;AH Items&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+          <SellItemOnAhAction ItemName="13466" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.001" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+          <SellItemOnAhAction ItemName="13466" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        </If>
+        <If Condition="!(bool)Settings[&quot;AH Items&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+          <MailItemAction Entry="0" AutoFindMailBox="True" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" />
+          <MailItemAction Entry="0" AutoFindMailBox="True" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+        </If>
+      </While>
+    </If>
+  </If>
+  <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.MaxLevel ==375)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.MaxLevel == 375)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="6">
+    <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Neutral\(GB2 300-350)(Outlands.Neutral)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+    <While Condition="Me.FreeNormalBagSlots &lt;=4" IgnoreCanRun="True" ChildrenCount="9">
+      <CustomAction Code="Log(&quot;Bags are full, selling&quot;);" />
+      <FlyToAction Dismount="False" X="-252.0331" Y="965.9687" Z="90.23502" />
+      <CustomAction Code="CTM(-247.3961, 890.3077, 96.21683);" />
+      <WaitAction Condition="Me.MapId == 0" Timeout="25000" />
+      <If Condition="Me.IsAlliance &amp;&amp; Me.MapId == 0" IgnoreCanRun="True" ChildrenCount="2">
+        <FlyToAction Dismount="True" X="-8969.993" Y="779.6597" Z="96.25022" />
+        <If Condition="(bool)Settings[&quot;Smelt Ore&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+          <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-8422.764" Y="629.9615" Z="95.77466" />
+        </If>
+      </If>
+      <If Condition="Me.IsHorde &amp;&amp; Me.MapId == 0" IgnoreCanRun="True" ChildrenCount="2">
+        <FlyToAction Dismount="True" X="1684.71" Y="731.1318" Z="76.04871" />
+        <If Condition="(bool)Settings[&quot;Smelt Ore&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+          <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="1696.235" Y="296.2449" Z="-62.15535" />
+        </If>
+      </If>
+      <If Condition="(bool)Settings[&quot;Smelt Ore&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+        <If Condition="HasRecipe(29356)" IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="29356" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+      </If>
+      <If Condition="(bool)Settings[&quot;AH Items&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+        <SellItemOnAhAction ItemName="13466" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.001" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemName="13466" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      </If>
+      <If Condition="!(bool)Settings[&quot;AH Items&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+        <MailItemAction Entry="0" AutoFindMailBox="True" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" />
+        <MailItemAction Entry="0" AutoFindMailBox="True" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <If Condition="Me.IsHorde &amp;&amp; Me.MapId == 1" IgnoreCanRun="True" ChildrenCount="2">
+      <FlyToAction Dismount="True" X="1662.198" Y="-4132.378" Z="56.96952" />
+      <InteractionAction Entry="195142" InteractDelay="2000" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+    </If>
+    <While Condition="Me.MapId == 0 &amp;&amp; (((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level &lt; 350 || !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &lt; 350)|| !(bool)Settings[&quot;Herb&quot;]))" IgnoreCanRun="True" ChildrenCount="5">
+      <If Condition="Me.IsAlliance" IgnoreCanRun="True" ChildrenCount="2">
+        <FlyToAction Dismount="True" X="-8984.83" Y="863.0924" Z="124.4113" />
+        <InteractionAction Entry="195141" InteractDelay="2000" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+      </If>
+      <If Condition="Me.IsHorde &amp;&amp; DistanceTo(1770.275, 62.06269, -46.32109) &lt; 2000" IgnoreCanRun="True" ChildrenCount="2">
+        <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="1770.275" Y="62.06269" Z="-46.32109" />
+        <InteractionAction Entry="195142" InteractDelay="2000" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+      </If>
+      <FlyToAction Dismount="False" X="-11895.9" Y="-3206.984" Z="-6.04731" />
+      <CustomAction Code="CTM(-11930.31, -3209.613, -1.836873);" />
+      <WaitAction Condition="Me.MapId == 530" Timeout="25000" />
+    </While>
+    <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level &gt;=350)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &gt;=350)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="2">
+      <If Condition="Me.MapId == 530" IgnoreCanRun="True" ChildrenCount="3">
+        <FlyToAction Dismount="False" X="-252.0331" Y="965.9687" Z="90.23502" />
+        <CustomAction Code="CTM(-247.3961, 890.3077, 96.21683);" />
+        <WaitAction Condition="Me.MapId == 0" Timeout="25000" />
+      </If>
+      <If Condition="Me.MapId ==0" IgnoreCanRun="True" ChildrenCount="7">
+        <If Condition="Me.IsAlliance" IgnoreCanRun="True" ChildrenCount="3">
+          <FlyToAction Dismount="True" X="-8969.993" Y="779.6597" Z="96.25022" />
+          <If Condition="(bool)Settings[&quot;Herb&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+            <TrainSkillAction NpcEntry="5566" X="-8969.993" Y="779.6597" Z="96.25022" />
+          </If>
+          <If Condition="(bool)Settings[&quot;Smelt Ore&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+            <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-8422.764" Y="629.9615" Z="95.77466" />
+          </If>
+        </If>
+        <If Condition="Me.IsHorde" IgnoreCanRun="True" ChildrenCount="2">
+          <FlyToAction Dismount="True" X="1688.531" Y="730.3077" Z="73.82889" />
+          <If Condition="(bool)Settings[&quot;Smelt Ore&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+            <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="1696.235" Y="296.2449" Z="-62.15535" />
+          </If>
+        </If>
+        <If Condition="(bool)Settings[&quot;Smelt Ore&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+          <If Condition="HasRecipe(29356)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="29356" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+        </If>
+        <If Condition="(bool)Settings[&quot;AH Items&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+          <SellItemOnAhAction ItemName="13466" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.001" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+          <SellItemOnAhAction ItemName="13466" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        </If>
+        <If Condition="!(bool)Settings[&quot;AH Items&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+          <MailItemAction Entry="0" AutoFindMailBox="True" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" />
+          <MailItemAction Entry="0" AutoFindMailBox="True" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+        </If>
+        <If Condition="Me.IsAlliance" IgnoreCanRun="True" ChildrenCount="1">
+          <If Condition="(bool)Settings[&quot;Mining&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+            <TrainSkillAction NpcEntry="5513" X="-8433.48" Y="688.922" Z="96.31891" />
+          </If>
+        </If>
+        <If Condition="Me.IsHorde" IgnoreCanRun="True" ChildrenCount="2">
+          <If Condition="(bool)Settings[&quot;Herb&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+            <TrainSkillAction NpcEntry="4614" X="1560.8" Y="355.098" Z="-62.16309" />
+          </If>
+          <If Condition="(bool)Settings[&quot;Mining&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+            <TrainSkillAction NpcEntry="4598" X="1638.21" Y="335.638" Z="-62.18319" />
+          </If>
+        </If>
+      </If>
+    </If>
+    <While Condition="Me.MapId == 530" IgnoreCanRun="True" ChildrenCount="2">
+      <If Condition="!Me.IsFlying &amp;&amp; InbagCount(22573) &gt;= 10" IgnoreCanRun="True" ChildrenCount="1">
+        <CustomAction Code="Lua.DoString(&quot;for bag = 0,4 do for slot=1,GetContainerNumSlots(bag) do local id = GetContainerItemID(bag,slot) or 0 if id == 22573 then UseContainerItem(bag,slot) end end end&quot;);" />
+      </If>
+      <If Condition="!Me.IsFlying &amp;&amp; InbagCount(22574) &gt;= 10" IgnoreCanRun="True" ChildrenCount="1">
+        <CustomAction Code="Lua.DoString(&quot;for bag = 0,4 do for slot=1,GetContainerNumSlots(bag) do local id = GetContainerItemID(bag,slot) or 0 if id == 22574 then UseContainerItem(bag,slot) end end end&quot;);" />
+      </If>
+    </While>
+  </If>
+  <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.MaxLevel ==450)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.MaxLevel == 450)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="4">
+    <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level &lt; 400)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &lt; 400)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="1">
+      <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Neutral\(GB2 350-400)(HowlingFjord.Neutral)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+    </If>
+    <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level &gt;= 400)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &gt;= 400)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="1">
+      <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Neutral\(GB2 400-450)(SholazarBasin.Neutral)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+    </If>
+    <While Condition="Me.MapId == 0" IgnoreCanRun="False" ChildrenCount="2">
+      <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level &lt; 450)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &lt; 450)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="2">
+        <If Condition="Me.IsHorde" IgnoreCanRun="True" ChildrenCount="5">
+          <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="1696.929" Y="731.7497" Z="68.85725" />
+          <FlyToAction Dismount="False" X="2062.034" Y="358.3257" Z="82.47099" />
+          <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 181689 ) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 181689 ).Location.Distance(new WoWPoint(2056.493, 381.6347, 100.362)) &lt; 1" Timeout="600000" />
+          <CustomAction Code="CTM(2058.573, 372.6453, 82.5169);" />
+          <WaitAction Condition="Me.MapId == 571" Timeout="600000" />
+        </If>
+        <If Condition="Me.IsAlliance" IgnoreCanRun="True" ChildrenCount="4">
+          <FlyToAction Dismount="False" X="-3689.26" Y="-602.9856" Z="4.345168" />
+          <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 181688 ) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 181688 ).Location.Distance(new WoWPoint(-3674.43, -586.774, 0.04286573)) &lt; 1" Timeout="6000000" />
+          <CustomAction Code="CTM(-3674.097, -593.0407, 9.392573);" />
+          <WaitAction Condition="Me.MapId == 571" Timeout="600000" />
+        </If>
+      </If>
+      <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level ==450)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level == 450)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="8">
+        <If Condition="Me.IsAlliance" IgnoreCanRun="True" ChildrenCount="2">
+          <FlyToAction Dismount="True" X="-5047.012" Y="-800.6297" Z="495.1275" />
+          <If Condition="(bool)Settings[&quot;Smelt Ore&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+            <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-8422.764" Y="629.9615" Z="95.77466" />
+          </If>
+        </If>
+        <If Condition="Me.IsHorde" IgnoreCanRun="True" ChildrenCount="2">
+          <FlyToAction Dismount="True" X="1684.71" Y="731.1318" Z="76.04871" />
+          <If Condition="(bool)Settings[&quot;Smelt Ore&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+            <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="1696.235" Y="296.2449" Z="-62.15535" />
+          </If>
+        </If>
+        <If Condition="(bool)Settings[&quot;Smelt Ore&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+          <If Condition="HasRecipe(49252)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="49252" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="HasRecipe(49258)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="49258" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+        </If>
+        <GetMailAction Entry="0" GetMailType="AllItems" AutoFindMailBox="False" X="-4910.222" Y="-974.5382" Z="501.4499" MinFreeBagSlots="2" />
+        <If Condition="(bool)Settings[&quot;AH Items&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+          <SellItemOnAhAction ItemName="13466" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.001" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+          <SellItemOnAhAction ItemName="13466" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        </If>
+        <If Condition="!(bool)Settings[&quot;AH Items&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+          <MailItemAction Entry="0" AutoFindMailBox="True" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" />
+          <MailItemAction Entry="0" AutoFindMailBox="True" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+        </If>
+        <If Condition="Me.IsAlliance" IgnoreCanRun="True" ChildrenCount="3">
+          <If Condition="(bool)Settings[&quot;Mining&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+            <TrainSkillAction NpcEntry="4254" X="-4707.961" Y="-1108.908" Z="504.4463" />
+          </If>
+          <If Condition="(bool)Settings[&quot;Herb&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+            <TrainSkillAction NpcEntry="5137" X="-4881.243" Y="-1155.519" Z="505.7703" />
+          </If>
+          <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-5047.012" Y="-800.6297" Z="495.1275" />
+        </If>
+        <If Condition="Me.IsHorde" IgnoreCanRun="True" ChildrenCount="2">
+          <If Condition="(bool)Settings[&quot;Herb&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+            <TrainSkillAction NpcEntry="4614" X="1560.8" Y="355.098" Z="-62.16309" />
+          </If>
+          <If Condition="(bool)Settings[&quot;Mining&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+            <TrainSkillAction NpcEntry="4598" X="1638.21" Y="335.638" Z="-62.18319" />
+          </If>
+        </If>
+      </If>
+    </While>
+    <While Condition="Me.MapId == 571" IgnoreCanRun="True" ChildrenCount="6">
+      <While Condition="Me.FreeNormalBagSlots &lt;=4" IgnoreCanRun="True" ChildrenCount="5">
+        <CustomAction Code="Log(&quot;Bags are full, selling&quot;);" />
+        <FlyToAction Dismount="False" X="5899.178" Y="728.0184" Z="639.7087" />
+        <If Condition="(bool)Settings[&quot;Smelt Ore&quot;]" IgnoreCanRun="True" ChildrenCount="3">
+          <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="5924.542" Y="708.256" Z="642.5161" />
+          <If Condition="HasRecipe(49252)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="49252" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="HasRecipe(49258)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="49258" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+        </If>
+        <If Condition="(bool)Settings[&quot;AH Items&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+          <SellItemOnAhAction ItemName="13466" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.001" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+          <SellItemOnAhAction ItemName="13466" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        </If>
+        <If Condition="!(bool)Settings[&quot;AH Items&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+          <MailItemAction Entry="0" AutoFindMailBox="True" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" />
+          <MailItemAction Entry="0" AutoFindMailBox="True" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+        </If>
+      </While>
+      <If Condition="!Me.IsFlying &amp;&amp; InbagCount(37701) &gt;= 10" IgnoreCanRun="True" ChildrenCount="1">
+        <CustomAction Code="Lua.DoString(&quot;for bag = 0,4 do for slot=1,GetContainerNumSlots(bag) do local id = GetContainerItemID(bag,slot) or 0 if id == 37701 then UseContainerItem(bag,slot) end end end&quot;);" />
+      </If>
+      <If Condition="!Me.IsFlying &amp;&amp; InbagCount(37704) &gt;= 10" IgnoreCanRun="True" ChildrenCount="1">
+        <CustomAction Code="Lua.DoString(&quot;for bag = 0,4 do for slot=1,GetContainerNumSlots(bag) do local id = GetContainerItemID(bag,slot) or 0 if id == 37704 then UseContainerItem(bag,slot) end end end&quot;);" />
+      </If>
+      <If Condition="!Me.IsFlying &amp;&amp; InbagCount(37705) &gt;= 10" IgnoreCanRun="True" ChildrenCount="1">
+        <CustomAction Code="Lua.DoString(&quot;for bag = 0,4 do for slot=1,GetContainerNumSlots(bag) do local id = GetContainerItemID(bag,slot) or 0 if id == 37705 then UseContainerItem(bag,slot) end end end&quot;);" />
+      </If>
+      <If Condition="!Me.IsFlying &amp;&amp; InbagCount(37703) &gt;= 10" IgnoreCanRun="True" ChildrenCount="1">
+        <CustomAction Code="Lua.DoString(&quot;for bag = 0,4 do for slot=1,GetContainerNumSlots(bag) do local id = GetContainerItemID(bag,slot) or 0 if id == 37703 then UseContainerItem(bag,slot) end end end&quot;);" />
+      </If>
+      <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level == 450) || !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level == 450) || !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="2">
+        <If Condition="Me.IsHorde" IgnoreCanRun="True" ChildrenCount="4">
+          <FlyToAction Dismount="False" X="1975.358" Y="-6097.989" Z="67.15549" />
+          <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 181689 ) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 181689 ).Location.Distance(new WoWPoint(1989.353, -6082.776, 85.59646)) &lt; 1" Timeout="600000" />
+          <CustomAction Code="CTM (1981.544, -6090.016, 67.76711);" />
+          <WaitAction Condition="Me.MapId == 0" Timeout="600000" />
+        </If>
+        <If Condition="Me.IsAlliance" IgnoreCanRun="True" ChildrenCount="4">
+          <FlyToAction Dismount="False" X="592.7809" Y="-5101.616" Z="5.260392" />
+          <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 181688 ) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 181688 ).Location.Distance(new WoWPoint(584.0139, -5118.855, 0.04847937)) &lt; 1" Timeout="6000000" />
+          <CustomAction Code="CTM(589.7515, -5118.426, 9.554632);" />
+          <WaitAction Condition="Me.MapId == 0" Timeout="600000" />
+        </If>
+      </If>
+    </While>
+  </If>
+  <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.MaxLevel ==525)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.MaxLevel == 525)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="5">
+    <While Condition="Me.FreeNormalBagSlots &lt;=4" IgnoreCanRun="True" ChildrenCount="6">
+      <CustomAction Code="Log(&quot;Bags are full, selling&quot;);" />
+      <If Condition="Me.IsAlliance" IgnoreCanRun="True" ChildrenCount="6">
+        <FlyToAction Dismount="False" X="-3994.829" Y="-4719.628" Z="4.139777" />
+        <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 176231) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 176231).Location.Distance(new WoWPoint(-4016.39, -4740.588, -0.04110325)) &lt; 1" Timeout="6000000" />
+        <CustomAction Code="CTM(-4010.385, -4735.384, 6.06652);" />
+        <WaitAction Condition="Me.MapId == 0" Timeout="600000" />
+        <FlyToAction Dismount="True" X="-5047.012" Y="-800.6297" Z="495.1275" />
+        <If Condition="(bool)Settings[&quot;Smelt Ore&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+          <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-4802.968" Y="-1112.195" Z="498.8074" />
+        </If>
+      </If>
+      <If Condition="Me.IsHorde" IgnoreCanRun="True" ChildrenCount="2">
+        <FlyToAction Dismount="True" X="2059.807" Y="-4765.928" Z="27.56209" />
+        <If Condition="(bool)Settings[&quot;Smelt Ore&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+          <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="2056.055" Y="-4827.51" Z="27.47181" />
+        </If>
+      </If>
+      <If Condition="(bool)Settings[&quot;Smelt Ore&quot;]" IgnoreCanRun="True" ChildrenCount="3">
+        <If Condition="HasRecipe(74530)" IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="74530" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="HasRecipe(74537)" IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="74537" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+        <If Condition="HasRecipe(74529)" IgnoreCanRun="True" ChildrenCount="1">
+          <CastSpellAction Entry="74529" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+        </If>
+      </If>
+      <If Condition="(bool)Settings[&quot;AH Items&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+        <SellItemOnAhAction ItemName="13466" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.001" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemName="13466" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      </If>
+      <If Condition="!(bool)Settings[&quot;AH Items&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+        <MailItemAction Entry="0" AutoFindMailBox="True" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" />
+        <MailItemAction Entry="0" AutoFindMailBox="True" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level &lt; 475)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &lt; 475)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="1">
+      <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Neutral\(GB2 450-475)(Hyjal.Neutral)Herb&amp;Mining-herb.xml" ProfileType="Honorbuddy" />
+    </If>
+    <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level &gt;= 475)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &gt;= 475)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="1">
+      <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Neutral\(GB2 475-525)(Uldum.Neutral)Herb&amp;Mining-herb.xml" ProfileType="Honorbuddy" />
+    </If>
+    <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level == 525)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &gt;= 525)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="6">
+      <If Condition="Me.IsAlliance" IgnoreCanRun="True" ChildrenCount="2">
+        <If Condition="Me.MapId == 1" IgnoreCanRun="True" ChildrenCount="4">
+          <FlyToAction Dismount="False" X="-3994.829" Y="-4719.628" Z="9.139777" />
+          <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 176231) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 176231).Location.Distance(new WoWPoint(-4016.39, -4740.588, -0.04110325)) &lt; 1" Timeout="60000000" />
+          <CustomAction Code="CTM(-4010.385, -4735.384, 5.06652);" />
+          <WaitAction Condition="Me.MapId == 0" Timeout="6000000" />
+        </If>
+        <If Condition="Me.MapId == 0" IgnoreCanRun="True" ChildrenCount="6">
+          <FlyToAction Dismount="True" X="-5047.012" Y="-800.6297" Z="495.1275" />
+          <If Condition="(bool)var1 == true;" IgnoreCanRun="True" ChildrenCount="4">
+            <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-4802.968" Y="-1112.195" Z="498.8074" />
+            <If Condition="HasRecipe(74530)" IgnoreCanRun="True" ChildrenCount="1">
+              <CastSpellAction Entry="74530" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+            </If>
+            <If Condition="HasRecipe(74537)" IgnoreCanRun="True" ChildrenCount="1">
+              <CastSpellAction Entry="74537" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+            </If>
+            <If Condition="HasRecipe(74529)" IgnoreCanRun="True" ChildrenCount="1">
+              <CastSpellAction Entry="74529" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+            </If>
+          </If>
+          <GetMailAction Entry="0" GetMailType="AllItems" AutoFindMailBox="False" X="-4910.222" Y="-974.5382" Z="501.4499" MinFreeBagSlots="2" />
+          <If Condition="(bool)Settings[&quot;Mining&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+            <TrainSkillAction NpcEntry="4254" X="-4707.961" Y="-1108.908" Z="504.4463" />
+          </If>
+          <If Condition="(bool)Settings[&quot;Smelt Ore&quot;]" IgnoreCanRun="True" ChildrenCount="4">
+            <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="2056.055" Y="-4827.51" Z="27.47181" />
+            <If Condition="HasRecipe(74530)" IgnoreCanRun="True" ChildrenCount="1">
+              <CastSpellAction Entry="74530" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+            </If>
+            <If Condition="HasRecipe(74537)" IgnoreCanRun="True" ChildrenCount="1">
+              <CastSpellAction Entry="74537" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+            </If>
+            <If Condition="HasRecipe(74529)" IgnoreCanRun="True" ChildrenCount="1">
+              <CastSpellAction Entry="74529" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+            </If>
+          </If>
+          <If Condition="(bool)Settings[&quot;Herb&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+            <TrainSkillAction NpcEntry="5137" X="-4881.243" Y="-1155.519" Z="505.7703" />
+          </If>
+        </If>
+      </If>
+      <If Condition="Me.IsHorde" IgnoreCanRun="True" ChildrenCount="5">
+        <FlyToAction Dismount="True" X="2059.807" Y="-4765.928" Z="27.56209" />
+        <If Condition="(bool)Settings[&quot;Mining&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+          <TrainSkillAction NpcEntry="3357" X="2081.978" Y="-4764.085" Z="27.92557" />
+        </If>
+        <If Condition="(bool)Settings[&quot;Smelt Ore&quot;]" IgnoreCanRun="True" ChildrenCount="4">
+          <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="2056.055" Y="-4827.51" Z="27.47181" />
+          <If Condition="HasRecipe(74530)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="74530" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="HasRecipe(74537)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="74537" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+          <If Condition="HasRecipe(74529)" IgnoreCanRun="True" ChildrenCount="1">
+            <CastSpellAction Entry="74529" Repeat="5" RepeatType="Craftable" CastOnItem="False" ItemId="0" ItemType="Chest" />
+          </If>
+        </If>
+        <GetMailAction Entry="0" GetMailType="AllItems" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+        <If Condition="(bool)Settings[&quot;Herb&quot;]" IgnoreCanRun="True" ChildrenCount="1">
+          <TrainSkillAction NpcEntry="46741" X="1902.69" Y="-4450.71" Z="53.4155" />
+        </If>
+      </If>
+      <If Condition="(bool)Settings[&quot;AH Items&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+        <SellItemOnAhAction ItemName="13466" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.001" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+        <SellItemOnAhAction ItemName="13466" MinBuyout="0g10s0c" MaxBuyout="4g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.001" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" PostIfBelowMinBuyout="True" />
+      </If>
+      <If Condition="!(bool)Settings[&quot;AH Items&quot;]" IgnoreCanRun="True" ChildrenCount="2">
+        <MailItemAction Entry="0" AutoFindMailBox="True" UseCategory="True" Category="Gem" SubCategoryType="WoWItemGemClass" SubCategory="None" X="0" Y="0" Z="0" />
+        <MailItemAction Entry="0" AutoFindMailBox="True" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+      </If>
+      <CustomAction Code="Log(&quot;Stopping HB since We are 525 herb/mining&quot;);" />
+      <CustomAction Code=" Lua.DoString(&quot;Logout()&quot;);TreeRoot.Stop();" />
+    </If>
+    <While Condition="Me.MapId == 0" IgnoreCanRun="False" ChildrenCount="1">
+      <If Condition="(((bool)Settings[&quot;Mining&quot;] &amp;&amp; Mining.Level &lt; 525)|| !(bool)Settings[&quot;Mining&quot;]) &amp;&amp; (((bool)Settings[&quot;Herb&quot;] &amp;&amp; Herbalism.Level &lt; 525)|| !(bool)Settings[&quot;Herb&quot;])" IgnoreCanRun="True" ChildrenCount="2">
+        <If Condition="Me.IsHorde" IgnoreCanRun="True" ChildrenCount="5">
+          <If Condition="DistanceTo(1696.929, 731.7497, 68.85725) &lt; 500" IgnoreCanRun="True" ChildrenCount="1">
+            <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="1696.929" Y="731.7497" Z="68.85725" />
+          </If>
+          <FlyToAction Dismount="False" X="2067.27" Y="285.2988" Z="97.03257" />
+          <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 164871) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 164871).Location.Distance(new WoWPoint(2062.376, 292.998, 114.973)) &lt; 1" Timeout="6000000" />
+          <CustomAction Code="CTM(2068.119, 295.5195, 97.24951);" />
+          <WaitAction Condition="Me.MapId == 1" Timeout="6000000" />
+        </If>
+        <If Condition="Me.IsAlliance" IgnoreCanRun="True" ChildrenCount="5">
+          <If Condition="DistanceTo(-5047.012, -800.6297, 495.1275) &lt; 500" IgnoreCanRun="True" ChildrenCount="1">
+            <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-5047.012" Y="-800.6297" Z="495.1275" />
+          </If>
+          <FlyToAction Dismount="False" X="-3859.199" Y="-661.5073" Z="10.08274" />
+          <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 176231) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 176231).Location.Distance(new WoWPoint(-3872.35, -639.9439, 0.04815831)) &lt; 1" Timeout="6000000" />
+          <CustomAction Code="CTM(-3866.837, -642.1938, 5.096432);" />
+          <WaitAction Condition="Me.MapId == 1" Timeout="6000000" />
+        </If>
+      </If>
+    </While>
+  </If>
+</Professionbuddy>

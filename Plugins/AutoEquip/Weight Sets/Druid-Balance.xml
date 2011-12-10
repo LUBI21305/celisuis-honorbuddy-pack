@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WeightSet Class="Druid" Spec="Balance">
+  <HitRating>100</HitRating>
+  <SpellPower>66</SpellPower>
+  <HasteRating>54</HasteRating>
+  <CriticalStrikeRating>43</CriticalStrikeRating>
+  <Intellect>22</Intellect>
+  <Spirit>22</Spirit>
+</WeightSet>

@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Professionbuddy>
+  <Settings Type="Boolean" DefaultValue="false" Name="UseAuctionHouse" Summary="Using the Auction House to buy Cloth" />
+  <If Condition="(bool)Settings[&quot;UseAuctionHouse&quot;]" IgnoreCanRun="True">
+    <CustomAction Code="RefreshDataStore();" />
+    <If Condition="FirstAid.Level &lt; 80" IgnoreCanRun="True">
+      <BuyItemFromAhAction ItemID="2589" MaxBuyout="30g0s0c" Amount="170" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" BuyAdditively="False" />
+      <GetMailAction ItemID="2589" CheckNewMail="True" GetMailType="Specific" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+      <If Condition="InbagCount(2589) &lt; 170" IgnoreCanRun="True">
+        <CustomAction Code="Log(Color.Orange, &quot;We don't have enough Linen Cloth - Moving to Farming spot&quot;);" />
+        <CallSubRoutine SubRoutineName="Linen Cloth" />
+      </If>
+      <If Condition="InbagCount(2589) &gt;= 170" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="1 to 80" />
+      </If>
+    </If>
+    <If Condition="FirstAid.Level &gt;= 80 &amp;&amp; FirstAid.Level &lt; 150" IgnoreCanRun="True">
+      <BuyItemFromAhAction ItemID="2592" MaxBuyout="30g0s0c" Amount="180" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" BuyAdditively="False" />
+      <GetMailAction ItemID="2592" CheckNewMail="True" GetMailType="Specific" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+      <If Condition="InbagCount(2592) &lt; 180" IgnoreCanRun="True">
+        <CustomAction Code="Log(Color.Orange, &quot;We don't have enough Wool Cloth - Moving to Farming spot&quot;);" />
+        <CallSubRoutine SubRoutineName="Wool Cloth" />
+      </If>
+      <If Condition="InbagCount(2592) &gt;= 180" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="80 to 150" />
+      </If>
+    </If>
+    <If Condition="FirstAid.Level &gt;= 150 &amp;&amp; FirstAid.Level &lt; 260" IgnoreCanRun="True">
+      <BuyItemFromAhAction ItemID="4306" MaxBuyout="30g0s0c" Amount="150" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" BuyAdditively="False" />
+      <GetMailAction ItemID="4036" CheckNewMail="True" GetMailType="Specific" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+      <WaitAction Condition="false" Timeout="2000" />
+      <BuyItemFromAhAction ItemID="4338" MaxBuyout="30g0s0c" Amount="110" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" BuyAdditively="False" />
+      <GetMailAction ItemID="4338" CheckNewMail="True" GetMailType="Specific" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+      <If Condition="InbagCount(4306) &lt; 150" IgnoreCanRun="True">
+        <CustomAction Code="Log(Color.Orange, &quot;We don't have enough Silk Cloth - Moving to Farming spot&quot;);" />
+        <CallSubRoutine SubRoutineName="Silk Cloth" />
+      </If>
+      <If Condition="InbagCount(4338) &lt; 110" IgnoreCanRun="True">
+        <CustomAction Code="Log(Color.Orange, &quot;We don't have enough Mageweave Cloth - Moving to Farming spot&quot;);" />
+        <CallSubRoutine SubRoutineName="Mageweave Cloth" />
+      </If>
+      <If Condition="InbagCount(4306) &gt;= 150 &amp;&amp; InbagCount(4338) &gt;= 110" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="150 to 260" />
+      </If>
+    </If>
+    <If Condition="FirstAid.Level &gt;= 260 &amp;&amp; FirstAid.Level &lt; 330" IgnoreCanRun="True">
+      <BuyItemFromAhAction ItemID="14047" MaxBuyout="30g0s0c" Amount="210" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" BuyAdditively="False" />
+      <GetMailAction ItemID="14047" CheckNewMail="True" GetMailType="Specific" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+      <If Condition="InbagCount(14047) &lt; 210" IgnoreCanRun="True">
+        <CustomAction Code="Log(Color.Orange, &quot;We don't have enough Runecloth - Moving to Farming spot&quot;);" />
+        <CallSubRoutine SubRoutineName="Rune Cloth" />
+      </If>
+      <If Condition="InbagCount(14047) &gt;= 210" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="260 to 330" />
+      </If>
+    </If>
+    <If Condition="FirstAid.Level &gt;= 330 &amp;&amp; FirstAid.Level &lt; 350" IgnoreCanRun="True">
+      <BuyItemFromAhAction ItemID="21877" MaxBuyout="30g0s0c" Amount="115" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" BuyAdditively="False" />
+      <GetMailAction ItemID="21877" CheckNewMail="True" GetMailType="Specific" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+      <If Condition="InbagCount(21877) &lt; 115" IgnoreCanRun="True">
+        <CustomAction Code="Log(Color.Orange, &quot;We don't have enough Netherweave Cloth - Moving to Farming spot&quot;);" />
+        <CallSubRoutine SubRoutineName="Netherweave Cloth" />
+      </If>
+      <If Condition="InbagCount(21877) &gt;= 115" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="330 to 375" />
+      </If>
+    </If>
+    <If Condition="FirstAid.Level &gt;= 350 &amp;&amp; FirstAid.Level &lt; 425" IgnoreCanRun="True">
+      <BuyItemFromAhAction ItemID="33470" MaxBuyout="30g0s0c" Amount="105" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" BuyAdditively="False" />
+      <GetMailAction ItemID="33470" CheckNewMail="True" GetMailType="Specific" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+      <If Condition="InbagCount(33470) &lt; 120" IgnoreCanRun="True">
+        <CustomAction Code="Log(Color.Orange, &quot;We don't have enough Frostweave Cloth - Moving to Farming spot&quot;);" />
+        <CallSubRoutine SubRoutineName="Frostweave Cloth" />
+      </If>
+      <If Condition="InbagCount(33470) &gt;= 120" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="375 to 425" />
+      </If>
+    </If>
+    <If Condition="FirstAid.Level &gt;= 425 &amp;&amp; FirstAid.Level &lt; 525" IgnoreCanRun="True">
+      <BuyItemFromAhAction ItemID="53010" MaxBuyout="30g0s0c" Amount="260" ItemListType="Item" AutoFindAh="True" X="0" Y="0" Z="0" BidOnItem="False" BuyAdditively="False" />
+      <GetMailAction ItemID="53010" CheckNewMail="True" GetMailType="Specific" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+      <If Condition="InbagCount(53010) &lt; 260" IgnoreCanRun="True">
+        <CustomAction Code="Log(Color.Orange, &quot;We don't have enough Embersilk Cloth - Moving to Farming spot&quot;);" />
+        <CallSubRoutine SubRoutineName="Embersilk Cloth" />
+      </If>
+      <If Condition="InbagCount(53010) &gt;= 206" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="425 to 525" />
+      </If>
+    </If>
+    <If Condition="FirstAid.Level == 525" IgnoreCanRun="True">
+      <CustomAction Code="Log(Color.Orange, &quot;Your First Aid Skill is maxed out, gratz&quot;);" />
+      <CustomAction Code="TreeRoot.Stop();" />
+    </If>
+  </If>
+  <If Condition="(bool)Settings[&quot;UseAuctionHouse&quot;] == false" IgnoreCanRun="True">
+    <LoadProfileAction Path="" ProfileType="Honorbuddy" />
+    <CustomAction Code="RefreshDataStore();" />
+    <If Condition="FirstAid.Level &lt; 80" IgnoreCanRun="True">
+      <If Condition="InbagCount(2589) &lt; 170" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Linen Cloth" />
+      </If>
+      <If Condition="InbagCount(2589) &gt;= 170" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="1 to 80" />
+      </If>
+    </If>
+    <If Condition="FirstAid.Level &gt;= 80 &amp;&amp; FirstAid.Level &lt; 150" IgnoreCanRun="True">
+      <If Condition="InbagCount(2592) &lt; 180" IgnoreCanRun="True">
+        <CustomAction Code="Log(Color.Orange, &quot;We don't have enough Wool Cloth - Moving to Farming spot&quot;);" />
+        <CallSubRoutine SubRoutineName="Wool Cloth" />
+      </If>
+      <If Condition="InbagCount(2592) &gt;= 180" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="80 to 150" />
+      </If>
+    </If>
+    <If Condition="FirstAid.Level &gt;= 150 &amp;&amp; FirstAid.Level &lt; 260" IgnoreCanRun="True">
+      <If Condition="InbagCount(4306) &lt; 150 &amp;&amp; FirstAid.Level &lt; 180" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Silk Cloth" />
+      </If>
+      <If Condition="InbagCount(4306) &gt;= 150 &amp;&amp; FirstAid.Level &lt; 180" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Mageweave Cloth" />
+      </If>
+      <If Condition="InbagCount(4338) &gt;= 110" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="150 to 260" />
+      </If>
+    </If>
+    <If Condition="FirstAid.Level &gt;= 260 &amp;&amp; FirstAid.Level &lt; 330" IgnoreCanRun="True">
+      <If Condition="InbagCount(14047) &lt; 210" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Rune Cloth" />
+      </If>
+      <If Condition="InbagCount(14047) &gt;= 210" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="260 to 330" />
+      </If>
+    </If>
+    <If Condition="FirstAid.Level &gt;= 330 &amp;&amp; FirstAid.Level &lt; 350" IgnoreCanRun="True">
+      <If Condition="InbagCount(21877) &lt; 115" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Netherweave Cloth" />
+      </If>
+      <While Condition="InbagCount(21877) &gt;= 115" IgnoreCanRun="True">
+        <FlyToAction Dismount="False" X="-1952.469" Y="5385.531" Z="-12.42663" />
+        <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-1893.851" Y="5390.362" Z="-12.42817" />
+        <InteractionAction Entry="183325" InteractDelay="0" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+        <WaitAction Condition="Me.ZoneId == 1519" Timeout="12000" />
+        <CustomAction Code="CTM(-9022.146, 892.5498, 29.62106);" />
+        <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-8999.437" Y="862.3895" Z="129.3759" />
+        <CallSubRoutine SubRoutineName="330 to 375" />
+      </While>
+    </If>
+    <If Condition="FirstAid.Level &gt;= 350 &amp;&amp; FirstAid.Level &lt; 425" IgnoreCanRun="True">
+      <If Condition="InbagCount(33470) &lt; 120" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Frostweave Cloth" />
+      </If>
+      <If Condition="InbagCount(33470) &gt;= 120" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="375 to 425" />
+      </If>
+    </If>
+    <If Condition="FirstAid.Level &gt;= 425 &amp;&amp; FirstAid.Level &lt; 525" IgnoreCanRun="True">
+      <If Condition="InbagCount(53010) &lt; 260" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Embersilk Cloth" />
+      </If>
+      <If Condition="InbagCount(53010) &gt;= 206" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="425 to 525" />
+      </If>
+    </If>
+    <If Condition="FirstAid.Level == 525" IgnoreCanRun="True">
+      <CustomAction Code="Log(Color.Orange, &quot;Your First Aid Skill is maxed out, gratz&quot;);" />
+      <CustomAction Code="TreeRoot.Stop();" />
+    </If>
+  </If>
+  <!---->
+  <!--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <SubRoutine SubRoutineName="425 to 525">
+    <CallSubRoutine SubRoutineName="Fly to Training" />
+    <While Condition="FirstAid.Level &lt; 475" IgnoreCanRun="False">
+      <CastSpellAction Entry="74556" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </While>
+    <CallSubRoutine SubRoutineName="Training" />
+    <While Condition="FirstAid.Level != FirstAid.MaxLevel" IgnoreCanRun="False">
+      <CastSpellAction Entry="74557" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </While>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="375 to 425">
+    <CallSubRoutine SubRoutineName="Fly to Training" />
+    <While Condition="FirstAid.Level &lt; 400" IgnoreCanRun="False">
+      <CastSpellAction Entry="45545" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </While>
+    <CallSubRoutine SubRoutineName="Training" />
+    <While Condition="FirstAid.Level &lt; 425" IgnoreCanRun="False">
+      <CastSpellAction Entry="45546" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </While>
+    <CallSubRoutine SubRoutineName="Training" />
+  </SubRoutine>
+  <SubRoutine SubRoutineName="330 to 375">
+    <CallSubRoutine SubRoutineName="Fly to Training" />
+    <While Condition="FirstAid.Level &lt; 345" IgnoreCanRun="False">
+      <CastSpellAction Entry="27032" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </While>
+    <CallSubRoutine SubRoutineName="Training" />
+    <While Condition="FirstAid.Level &lt; 350" IgnoreCanRun="True">
+      <CastSpellAction Entry="27033" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </While>
+    <CallSubRoutine SubRoutineName="Training" />
+  </SubRoutine>
+  <SubRoutine SubRoutineName="260 to 330">
+    <CallSubRoutine SubRoutineName="Fly to Training" />
+    <While Condition="FirstAid.Level &lt; 290" IgnoreCanRun="False">
+      <CastSpellAction Entry="18629" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </While>
+    <CallSubRoutine SubRoutineName="Training" />
+    <CallSubRoutine SubRoutineName="Training" />
+    <While Condition="FirstAid.Level &lt; 330" IgnoreCanRun="False">
+      <CastSpellAction Entry="18630" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </While>
+    <CallSubRoutine SubRoutineName="Training" />
+    <CallSubRoutine SubRoutineName="Training" />
+  </SubRoutine>
+  <SubRoutine SubRoutineName="150 to 260">
+    <CallSubRoutine SubRoutineName="Fly to Training" />
+    <While Condition="FirstAid.Level &lt; 180" IgnoreCanRun="False">
+      <CastSpellAction Entry="7928" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </While>
+    <CallSubRoutine SubRoutineName="Training" />
+    <While Condition="FirstAid.Level &lt; 210" IgnoreCanRun="False">
+      <CastSpellAction Entry="7929" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </While>
+    <CallSubRoutine SubRoutineName="Training" />
+    <While Condition="FirstAid.Level &lt; 240" IgnoreCanRun="False">
+      <CastSpellAction Entry="10840" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </While>
+    <CallSubRoutine SubRoutineName="Training" />
+    <While Condition="FirstAid.Level &lt; 260" IgnoreCanRun="False">
+      <CastSpellAction Entry="10841" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </While>
+    <CallSubRoutine SubRoutineName="Training" />
+  </SubRoutine>
+  <SubRoutine SubRoutineName="80 to 150">
+    <CallSubRoutine SubRoutineName="Fly to Training" />
+    <While Condition="FirstAid.Level &lt; 115" IgnoreCanRun="False">
+      <CastSpellAction Entry="3277" Repeat="60" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </While>
+    <CallSubRoutine SubRoutineName="Training" />
+    <While Condition="FirstAid.Level &lt; 150" IgnoreCanRun="False">
+      <CastSpellAction Entry="3278" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </While>
+    <CallSubRoutine SubRoutineName="Training" />
+  </SubRoutine>
+  <SubRoutine SubRoutineName="1 to 80">
+    <CallSubRoutine SubRoutineName="Fly to Training" />
+    <While Condition="FirstAid.Level &lt; 40" IgnoreCanRun="False">
+      <CastSpellAction Entry="3275" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </While>
+    <CallSubRoutine SubRoutineName="Training" />
+    <While Condition="FirstAid.Level &lt; 50" IgnoreCanRun="False">
+      <CastSpellAction Entry="3276" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </While>
+    <CallSubRoutine SubRoutineName="Training" />
+    <While Condition="FirstAid.Level &lt; 80" IgnoreCanRun="False">
+      <CastSpellAction Entry="3276" Repeat="1" RepeatType="Specific" CastOnItem="False" ItemId="0" ItemType="Chest" />
+    </While>
+  </SubRoutine>
+  <!---->
+  <!--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <SubRoutine SubRoutineName="Fly to Training">
+    <FlyToAction Dismount="False" X="-8612.659" Y="783.0335" Z="97.99324" />
+    <MoveToAction MoveType="NpcByID" Pathing="Navigator" Entry="2327" X="-8521.526" Y="816.257" Z="106.5205" />
+    <TrainSkillAction NpcEntry="2327" X="-8521.526" Y="816.257" Z="106.5204" />
+  </SubRoutine>
+  <SubRoutine SubRoutineName="Training">
+    <TrainSkillAction NpcEntry="2327" X="-8521.526" Y="816.257" Z="106.5195" />
+  </SubRoutine>
+  <!--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!---->
+  <SubRoutine SubRoutineName="Check Bot">
+    <If Condition="TreeRoot.Current.Name != &quot;Grind Bot&quot;" IgnoreCanRun="True">
+      <ChangeBotAction BotName="Grind Bot" />
+      <WaitAction Condition="TreeRoot.Current.Name == &quot;Grind Bot&quot;" Timeout="8000" />
+    </If>
+  </SubRoutine>
+  <!---->
+  <!--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <SubRoutine SubRoutineName="Linen Cloth">
+    <LoadProfileAction Path="HBProfiles\First Aid [seVen]\Linen Cloth.xml" ProfileType="Honorbuddy" />
+    <CallSubRoutine SubRoutineName="Check Bot" />
+    <If Condition="FirstAid.Level == 0" IgnoreCanRun="True">
+      <FlyToAction Dismount="False" X="-8593.77" Y="797.8241" Z="106.4197" />
+      <CallSubRoutine SubRoutineName="Training" />
+      <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-8593.77" Y="797.8241" Z="106.4197" />
+    </If>
+    <FlyToAction Dismount="True" X="-10959.06" Y="943.3261" Z="33.31181" />
+    <While Condition="true" IgnoreCanRun="True">
+      <If Condition="InbagCount(2589) &gt;= 170" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="1 to 80" />
+      </If>
+    </While>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="Wool Cloth">
+    <LoadProfileAction Path="HBProfiles\First Aid [seVen]\Wool Cloth.xml" ProfileType="Honorbuddy" />
+    <CallSubRoutine SubRoutineName="Check Bot" />
+    <FlyToAction Dismount="False" X="-3270.458" Y="-2787.835" Z="12.77805" />
+    <While Condition="true" IgnoreCanRun="True">
+      <If Condition="InbagCount(2592) &gt;= 180" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="80 to 150" />
+      </If>
+    </While>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="Silk Cloth">
+    <LoadProfileAction Path="HBProfiles\First Aid [seVen]\Silk Cloth.xml" ProfileType="Honorbuddy" />
+    <CallSubRoutine SubRoutineName="Check Bot" />
+    <FlyToAction Dismount="True" X="-6056.003" Y="-3173.177" Z="281.1721" />
+    <While Condition="true" IgnoreCanRun="True">
+      <If Condition="InbagCount(4306) &gt;= 150" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="150 to 260" />
+      </If>
+    </While>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="Mageweave Cloth">
+    <LoadProfileAction Path="HBProfiles\First Aid [seVen]\Mageweave Cloth.xml" ProfileType="Honorbuddy" />
+    <CallSubRoutine SubRoutineName="Check Bot" />
+    <FlyToAction Dismount="True" X="-6728.708" Y="-2340.795" Z="352.5557" />
+    <While Condition="InbagCount(21877) &gt;= 110" IgnoreCanRun="True">
+      <CallSubRoutine SubRoutineName="260 to 330" />
+    </While>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="Rune Cloth">
+    <LoadProfileAction Path="HBProfiles\First Aid [seVen]\Rune Cloth.xml" ProfileType="Honorbuddy" />
+    <CallSubRoutine SubRoutineName="Check Bot" />
+    <FlyToAction Dismount="True" X="-11546.35" Y="-2816.071" Z="5.38805" />
+    <While Condition="InbagCount(14047) &gt;= 210" IgnoreCanRun="True">
+      <CallSubRoutine SubRoutineName="260 to 330" />
+    </While>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="Netherweave Cloth">
+    <LoadProfileAction Path="HBProfiles\First Aid [seVen]\Netherweave Cloth.xml" ProfileType="Honorbuddy" />
+    <CallSubRoutine SubRoutineName="Check Bot" />
+    <If Condition="Me.ZoneId == 1519" IgnoreCanRun="True">
+      <FlyToAction Dismount="True" X="-8998.116" Y="861.5091" Z="128.8835" />
+      <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-9007.163" Y="871.4819" Z="129.6939" />
+      <WaitAction Condition="false" Timeout="2000" />
+      <InteractionAction Entry="195141" InteractDelay="0" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+      <WaitAction Condition="Me.ZoneId == 4" Timeout="15000" />
+    </If>
+    <If Condition="Me.ZoneId != 1519 &amp;&amp; Me.MapId == 0" IgnoreCanRun="True">
+      <FlyToAction Dismount="False" X="-11894.59" Y="-3207.328" Z="-14.6345" />
+      <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-11914.7" Y="-3209.604" Z="-14.64665" />
+      <CustomAction Code="CTM(-11914.7, -3209.604, -14.64665);" />
+    </If>
+    <WaitAction Condition="Me.ZoneId == 3483" Timeout="15000" />
+    <FlyToAction Dismount="True" X="-2238.796" Y="4242.589" Z="2.298323" />
+    <While Condition="InbagCount(21877) &gt;= 115" IgnoreCanRun="True">
+      <FlyToAction Dismount="False" X="-1952.469" Y="5385.531" Z="-12.42663" />
+      <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-1893.851" Y="5390.362" Z="-12.42817" />
+      <InteractionAction Entry="183325" InteractDelay="0" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+      <WaitAction Condition="Me.ZoneId == 1519" Timeout="12000" />
+      <CustomAction Code="CTM(-9022.146, 892.5498, 29.62106);" />
+      <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-8999.437" Y="862.3895" Z="129.3759" />
+      <CallSubRoutine SubRoutineName="330 to 375" />
+    </While>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="Frostweave Cloth">
+    <LoadProfileAction Path="HBProfiles\First Aid [seVen]\Frostweave Cloth.xml" ProfileType="Honorbuddy" />
+    <CallSubRoutine SubRoutineName="Check Bot" />
+    <If Condition="Me.MapId == 0" IgnoreCanRun="True">
+      <CallSubRoutine SubRoutineName="Boat" />
+      <SubRoutine SubRoutineName="Boat">
+        <FlyToAction Dismount="True" X="-8295.959" Y="1407.204" Z="4.397328" />
+        <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 190536 ) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 190536 ).Location.Distance(new WoWPoint(-8288.816, 1424.703, -0.01198259)) &lt; 18" Timeout="3600000" />
+        <MoveToAction MoveType="Location" Pathing="ClickToMove" Entry="0" X="-8295.061" Y="1421.347" Z="9.513207" />
+      </SubRoutine>
+      <WaitAction Condition="Me.MapId == 571" Timeout="200000" />
+    </If>
+    <FlyToAction Dismount="True" X="7410.811" Y="2487.783" Z="388.8829" />
+    <While Condition="InbagCount(33470) &gt;= 105" IgnoreCanRun="True">
+      <FlyToAction Dismount="False" X="6032.408" Y="878.402" Z="800.3228" />
+      <FlyToAction Dismount="False" X="5768.812" Y="709.8712" Z="642.5681" />
+      <InteractionAction Entry="190960" InteractDelay="0" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+      <WaitAction Condition="Me.ZoneId == 1519" Timeout="2000" />
+      <CallSubRoutine SubRoutineName="375 to 425" />
+    </While>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="Embersilk Cloth">
+    <LoadProfileAction Path="HBProfiles\First Aid [seVen]\Embersilk Cloth.xml" ProfileType="Honorbuddy" />
+    <CallSubRoutine SubRoutineName="Check Bot" />
+    <FlyToAction Dismount="True" X="-8208.458" Y="429.9966" Z="118.1135" />
+    <MoveToAction MoveType="Location" Pathing="ClickToMove" Entry="0" X="-8208.866" Y="451.7357" Z="117.6133" />
+    <InteractionAction Entry="206594" InteractDelay="0" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+    <WaitAction Condition="Me.ZoneId == 5389" Timeout="12000" />
+    <While Condition="InbagCount(53010) &gt;= 260" IgnoreCanRun="True">
+      <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-344.4966" Y="1034.234" Z="22.0901" />
+      <InteractionAction Entry="208227" InteractDelay="150" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+      <WaitAction Condition="Me.ZoneId == 1519" Timeout="12000" />
+      <CallSubRoutine SubRoutineName="425 to 525" />
+    </While>
+  </SubRoutine>
+</Professionbuddy>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Professionbuddy ChildrenCount="1">
+  <While Condition="true" IgnoreCanRun="True" ChildrenCount="3">
+    <CustomAction Code="var1 = ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(u =&gt; u.SubType == WoWGameObjectType.FishingBobber &amp;&amp; u.CreatedByGuid == Me.Guid);" />
+    <If Condition="var1 != null &amp;&amp; ((WoWFishingBobber)((WoWGameObject)var1).SubObj).IsBobbing" IgnoreCanRun="True" ChildrenCount="1">
+      <CustomAction Code="((WoWGameObject)var1).Interact();" />
+    </If>
+    <If Condition="var1 == null &amp;&amp; !Me.IsCasting" IgnoreCanRun="True" ChildrenCount="1">
+      <CustomAction Code="SpellManager.Cast(&quot;Fishing&quot;);Thread.Sleep(1000);" />
+    </If>
+  </While>
+</Professionbuddy>

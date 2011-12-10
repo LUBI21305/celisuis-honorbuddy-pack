@@ -1,0 +1,67 @@
+<HBProfile>
+	<Name>Twilight Higland - Lake+Lava Flying Mount v1.0 by Cicro</Name>
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>1</MinFreeBagSlots>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+	<ProtectedItems>
+		<Item name="Fishing Pole" entry="6256" />
+		<Item name="Mastercraft Kalu'ak Fishing Pole" entry="44050" />
+		<Item name="Arcanite Fishing Pole" entry="19970" />
+		<Item name="Bone Fishing Pole" entry="45991" />
+		<Item name="Jeweled Fishing Pole" entry="45992" />
+		<Item name="Nat's Lucky Fishing Pole" entry="45858" />
+		<Item name="Seth's Graphite Fishing Pole" entry="25978" />
+		<Item name="Big Iron Fishing Pole" entry="6367" />
+		<Item name="Blump Family Fishing Pole" entry="12225" />
+		<Item name="Darkwood Fishing Pole" entry="6366" />
+		<Item name="Jonathan's Fishing Pole" entry="52678" />
+		<Item name="Strong Fishing Pole" entry="6365" />
+		<Item name="Staats' Fishing Pole" entry="46337" />
+	</ProtectedItems>
+	<SubProfile>
+		<Name>Twilight Higland - Lake+Lava Flying Mount v1.0</Name>
+		<MinLevel>1</MinLevel>
+		<MaxLevel>87</MaxLevel>
+		<TargetMinLevel>87</TargetMinLevel>
+		<Factions></Factions>
+		<Hotspots>
+<Hotspot X="-4435.229" Y="-4166.502" Z="332.1654" />
+<Hotspot X="-4495.597" Y="-4052.628" Z="327.2234" />
+<Hotspot X="-4478.148" Y="-3891.836" Z="326.3348" />
+<Hotspot X="-4454.904" Y="-3850.406" Z="325.8085" />
+<Hotspot X="-4397.314" Y="-3843.237" Z="327.4747" />
+<Hotspot X="-4354.823" Y="-3879.826" Z="328.3189" />
+<Hotspot X="-4281.503" Y="-4032.246" Z="331.3795" />
+<Hotspot X="-4168.705" Y="-4164.757" Z="332.6738" />
+<Hotspot X="-4150.211" Y="-4203.51" Z="328.9747" />
+<Hotspot X="-4157.362" Y="-4264.602" Z="328.9242" />
+<Hotspot X="-4201.397" Y="-4309.194" Z="328.1217" />
+<Hotspot X="-4850.165" Y="-4548.142" Z="357.6566" />
+<Hotspot X="-4925.434" Y="-4667.349" Z="334.351" />
+<Hotspot X="-4968.94" Y="-4651.632" Z="333.4716" />
+<Hotspot X="-4992.304" Y="-4599.938" Z="333.8658" />
+<Hotspot X="-4967.061" Y="-4552.815" Z="336.0842" />
+<Hotspot X="-4458.864" Y="-4324.552" Z="351.0896" />
+<Hotspot X="-4424.701" Y="-4278.342" Z="343.646" />
+
+
+		</Hotspots>
+		<Vendors>
+
+		</Vendors>
+		<Blackspots>
+
+		</Blackspots>
+		<AvoidMobs>
+
+		</AvoidMobs>
+		<Mailboxes>
+		</Mailboxes>
+	</SubProfile>
+</HBProfile>

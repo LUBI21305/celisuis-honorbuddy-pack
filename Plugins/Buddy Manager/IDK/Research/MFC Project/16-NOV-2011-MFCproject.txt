@@ -1,0 +1,140 @@
+11/16/2011
+1001 cards, @ 37.5silver for the parchments, total 418.875 gold invested, all herbs bot farmed.
+
+257g09s14c starting gold.
+257.0914 g start
+-
+
+
+TEST1
+101 cards
+20g X 3
+1g X 15
+5g X 9
+5000g X 1  (Approx 95th card flipped)
+
+Start @ 257.0914 
+END @ 5395.0914
+Profit @ 5138.0000 G
+
+
+
+TEST2
+100 cards
+5g X 9
+1g X 16
+20g X 1
+
+Start @ 395.0914
+END @ 488.6914
+Profit @ 93.6 G
+
+
+
+TEST3
+100 cards
+20g X 2
+5g X 5
+1g X 24
+
+Start @ 488.6914
+END @ 592.8914
+Profit @ 104.2 G
+
+
+
+TEST4
+100 cards
+50g X 1
+5g X 8
+1g X 10
+
+Start @ 592.8914
+END @ 710.1914
+Profit @ 117.3
+
+
+
+TEST5
+100 cards
+50g X 1
+20g X 2
+5g X 7
+1g X 15
+
+Start @ 710.1914
+END @ 866.9914
+Profit @ 158.8
+
+
+
+TEST6
+100 cards
+20g X 1
+5g X 7
+1g X 17
+
+866.9914
+957.2914
+90.3
+
+
+
+TEST7
+100 cards
+20g X 3
+5g X 5
+1g X 16
+
+957.2914
+1047.2914
+90
+
+
+
+TEST8
+100 cards
+20g X 3
+5g X 8
+1g X 11
+
+1074.2884
+1201.0884
+126.8
+
+
+
+TEST9
+100 cards
+20g X 4
+5g X 6
+1g X 16
+
+1201.0884
+1340.8884
+139.8
+
+
+
+TEST10
+100 cards
+20g X 1
+5g X 6
+1g X 21
+
+1340.8884
+1431.5884
+90.7
+
+TOTAL Profits
+6149.5 G
+- 5000 luck draw
+1149 G profit
+in 1001 cards
+
+
+Average Gold per Card of when removing 5000g bullshit
+1.147852147852148
+
+With the 5000g bullshit draw the total comes to:
+6.143356643356643

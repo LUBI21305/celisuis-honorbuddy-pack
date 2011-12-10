@@ -1,0 +1,77 @@
+<HBProfile>
+	<Name>Mr Pinchy Flying Mount v2 by Cicro</Name>
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>1</MinFreeBagSlots>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+	<ProtectedItems>
+		<Item name="Fishing Pole" entry="6256" />
+		<Item name="Mastercraft Kalu'ak Fishing Pole" entry="44050" />
+		<Item name="Arcanite Fishing Pole" entry="19970" />
+		<Item name="Bone Fishing Pole" entry="45991" />
+		<Item name="Jeweled Fishing Pole" entry="45992" />
+		<Item name="Nat's Lucky Fishing Pole" entry="45858" />
+		<Item name="Seth's Graphite Fishing Pole" entry="25978" />
+		<Item name="Big Iron Fishing Pole" entry="6367" />
+		<Item name="Blump Family Fishing Pole" entry="12225" />
+		<Item name="Darkwood Fishing Pole" entry="6366" />
+		<Item name="Jonathan's Fishing Pole" entry="52678" />
+		<Item name="Strong Fishing Pole" entry="6365" />
+		<Item name="Staats' Fishing Pole" entry="46337" />
+		<Item name="Mr. Pinchy" entry="27388" />
+	</ProtectedItems>
+
+	<SubProfile>
+		<Name>Mr Pinchy Flying Mount</Name>
+		<MinLevel>1</MinLevel>
+		<MaxLevel>87</MaxLevel>
+		<TargetMinLevel>87</TargetMinLevel>
+		<Factions>7 </Factions>
+		<Hotspots>
+<Hotspot X="-3654.688" Y="3575.322" Z="282.6498" />
+<Hotspot X="-3814.663" Y="3601.386" Z="276.5522" />
+<Hotspot X="-3942.397" Y="3537.115" Z="278.9594" />
+<Hotspot X="-3963.231" Y="3472.153" Z="276.8565" />
+<Hotspot X="-3953.065" Y="3427.635" Z="278.7772" />
+<Hotspot X="-3890.699" Y="3394.404" Z="279.3688" />
+<Hotspot X="-3733.122" Y="3454.046" Z="278.7867" />
+<Hotspot X="-3601.367" Y="3544.733" Z="282.1711" />
+<Hotspot X="-3396.081" Y="3541.229" Z="281.8237" />
+<Hotspot X="-3325.255" Y="3617.948" Z="284.5718" />
+<Hotspot X="-3255.084" Y="3886.219" Z="61.69542" />
+<Hotspot X="-3109.412" Y="3902.384" Z="61.42995" />
+<Hotspot X="-3084.105" Y="3834.436" Z="60.10669" />
+<Hotspot X="-2486.386" Y="4475.032" Z="164.6981" />
+<Hotspot X="-2492.225" Y="4587.862" Z="162.9209" />
+<Hotspot X="-2459.561" Y="4629.716" Z="162.9196" />
+<Hotspot X="-2440.834" Y="4612.723" Z="162.9858" />
+<Hotspot X="-2444.328" Y="4529.421" Z="162.5757" />
+<Hotspot X="-2498.855" Y="4462.459" Z="162.4804" />
+<Hotspot X="-3085.34" Y="3904.703" Z="66.37222" />
+<Hotspot X="-3112.322" Y="3892.272" Z="61.63157" />
+<Hotspot X="-3158.179" Y="3834.395" Z="64.04913" />
+<Hotspot X="-3242.893" Y="3890.122" Z="81.72909" />
+<Hotspot X="-3278.636" Y="3887.213" Z="81.87615" />
+<Hotspot X="-3324.569" Y="3614.787" Z="287.3434" />
+<Hotspot X="-3364.544" Y="3555.219" Z="283.1859" />
+<Hotspot X="-3521.014" Y="3555.599" Z="281.268" />
+		</Hotspots>
+		<Vendors>
+<Vendor Name="Aaron Hollman" Entry="19662" Type="Repair" X="-2102.444" Y="5299.12" Z="-37.32356" />			
+		</Vendors>
+		<Blackspots>
+<Blackspot X="-3385.915" Y="3578.713" Z="283.6135" Radius="20.34322" />
+		</Blackspots>
+		<AvoidMobs>
+
+		</AvoidMobs>
+		<Mailboxes>
+<Hotspot X="-1897.246" Y="5160.589" Z="-40.2089" />
+		</Mailboxes>
+	</SubProfile>
+</HBProfile>

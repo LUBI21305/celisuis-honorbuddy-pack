@@ -1,0 +1,4 @@
+Professionbuddy 1.0.0.33
+* Tradeskills should now properly get imported.
+* 'Get Mail' now works again with getting mail by Item ID.
+* 'Buy item From Ah' now works again. 

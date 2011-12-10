@@ -1,0 +1,84 @@
+<HBProfile>
+	<Name>Uldum Fishing - Big route v2.2 by Cicro</Name>
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>1</MinFreeBagSlots>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+	<ProtectedItems>
+		<Item name="Fishing Pole" entry="6256" />
+		<Item name="Mastercraft Kalu'ak Fishing Pole" entry="44050" />
+		<Item name="Arcanite Fishing Pole" entry="19970" />
+		<Item name="Bone Fishing Pole" entry="45991" />
+		<Item name="Jeweled Fishing Pole" entry="45992" />
+		<Item name="Nat's Lucky Fishing Pole" entry="45858" />
+		<Item name="Seth's Graphite Fishing Pole" entry="25978" />
+		<Item name="Big Iron Fishing Pole" entry="6367" />
+		<Item name="Blump Family Fishing Pole" entry="12225" />
+		<Item name="Darkwood Fishing Pole" entry="6366" />
+		<Item name="Jonathan's Fishing Pole" entry="52678" />
+		<Item name="Strong Fishing Pole" entry="6365" />
+		<Item name="Staats' Fishing Pole" entry="46337" />
+	</ProtectedItems>
+	<SubProfile>
+		<Name>Uldum Fishing - Big route</Name>
+		<MinLevel>1</MinLevel>
+		<MaxLevel>87</MaxLevel>
+		<TargetMinLevel>87</TargetMinLevel>
+		<Factions></Factions>
+		<Hotspots>
+<Hotspot X="-9148.682" Y="-258.3885" Z="149.5714" />
+<Hotspot X="-9273.402" Y="-550.3066" Z="128.2935" />
+<Hotspot X="-9313.729" Y="-605.3788" Z="125.0171" />
+<Hotspot X="-9472.92" Y="-718.9778" Z="119.5565" />
+<Hotspot X="-9858.705" Y="-875.6988" Z="125.6411" />
+<Hotspot X="-10016.32" Y="-1009.39" Z="54.81334" />
+<Hotspot X="-10296.07" Y="-1191.765" Z="53.03661" />
+<Hotspot X="-10564.15" Y="-1260.19" Z="64.05469" />
+<Hotspot X="-10700.84" Y="-1242.358" Z="8.070822" />
+<Hotspot X="-11045.53" Y="-1223.137" Z="10.85841" />
+<Hotspot X="-11175.25" Y="-1263.082" Z="12.15636" />
+<Hotspot X="-11363.93" Y="-1277.412" Z="11.53089" />
+<Hotspot X="-11394.9" Y="-1333.887" Z="12.31486" />
+<Hotspot X="-11209.67" Y="-1641.42" Z="11.60174" />
+<Hotspot X="-11173.78" Y="-1811.181" Z="9.928377" />
+<Hotspot X="-11149.82" Y="-1839.931" Z="9.688822" />
+<Hotspot X="-11112.32" Y="-1846.825" Z="9.006413" />
+<Hotspot X="-11001.71" Y="-1713.772" Z="11.01211" />
+<Hotspot X="-10892.99" Y="-1569.677" Z="14.33764" />
+<Hotspot X="-10727.1" Y="-1430.031" Z="12.20126" />
+<Hotspot X="-10640.18" Y="-1356.138" Z="9.986684" />
+<Hotspot X="-10577.11" Y="-1308.531" Z="57.15214" />
+<Hotspot X="-10255.69" Y="-1229.304" Z="52.81849" />
+<Hotspot X="-9944.086" Y="-1085.093" Z="64.21175" />
+<Hotspot X="-9771.989" Y="-1057.876" Z="122.5488" />
+<Hotspot X="-9511.882" Y="-1180.692" Z="118.2182" />
+<Hotspot X="-9427.499" Y="-1205.749" Z="124.4815" />
+<Hotspot X="-9254.191" Y="-1179.923" Z="132.8259" />
+<Hotspot X="-9114.051" Y="-1087.715" Z="146.3964" />
+<Hotspot X="-8929.333" Y="-1063.499" Z="157.8104" />
+<Hotspot X="-8851.643" Y="-1065.627" Z="162.828" />
+<Hotspot X="-8781.924" Y="-1099.188" Z="164.3431" />
+<Hotspot X="-8721.587" Y="-1096.092" Z="167.0849" />
+<Hotspot X="-8693.871" Y="-1068.57" Z="171.7424" />
+
+
+		</Hotspots>
+		<Vendors>
+
+		</Vendors>
+		<Blackspots>
+<Blackspot X="-9657.031" Y="-714.3904" Z="101.9354" Radius="76.54272" />
+<Blackspot X="-10451.75" Y="-1306.196" Z="43.56141" Radius="36.93443" />
+		</Blackspots>
+		<AvoidMobs>
+
+		</AvoidMobs>
+		<Mailboxes>
+		</Mailboxes>
+	</SubProfile>
+</HBProfile>

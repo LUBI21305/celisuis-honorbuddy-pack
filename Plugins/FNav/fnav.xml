@@ -1,0 +1,2379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fnav>
+  <Location>
+    <Name>Stormwind</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Stormwind City</Zone>
+    <SubZone>no subzone</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Banks</Category>
+    <X>-8927.501</X>
+    <Y>618.0102</Y>
+    <Z>100.2248</Z>
+  </Location>
+  <Location>
+    <Name>Skinning</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Stormwind City</Zone>
+    <SubZone>Old Town</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Profession Trainers</Category>
+    <X>-8720.03</X>
+    <Y>469.3378</Y>
+    <Z>98.61317</Z>
+  </Location>
+  <Location>
+    <Name>Rogue</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Stormwind City</Zone>
+    <SubZone>SI:7</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Class Trainers</Category>
+    <X>-8704.4</X>
+    <Y>338.3325</Y>
+    <Z>101.9455</Z>
+  </Location>
+  <Location>
+    <Name>Hunter</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Stormwind City</Zone>
+    <SubZone>Command Center</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Class Trainers</Category>
+    <X>-8818.49</X>
+    <Y>346.781</Y>
+    <Z>107.0486</Z>
+  </Location>
+  <Location>
+    <Name>Warrior</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Stormwind City</Zone>
+    <SubZone>Command Center</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Class Trainers</Category>
+    <X>-8806.544</X>
+    <Y>331.2513</Y>
+    <Z>115.4664</Z>
+  </Location>
+  <Location>
+    <Name>Human Mounts</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Stormwind City</Zone>
+    <SubZone>no subzone</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Vendors</Category>
+    <X>-8780.453</X>
+    <Y>382.253</Y>
+    <Z>100.8314</Z>
+  </Location>
+  <Location>
+    <Name>Tram Portal</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Stormwind City</Zone>
+    <SubZone>Dwarven District</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Travel</Category>
+    <X>-8358.198</X>
+    <Y>515.4025</Y>
+    <Z>84.40903</Z>
+  </Location>
+  <Location>
+    <Name>Paladin</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Stormwind City</Zone>
+    <SubZone>Cathedral of Light</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Class Trainers</Category>
+    <X>-8519.031</X>
+    <Y>807.7723</Y>
+    <Z>106.5186</Z>
+  </Location>
+  <Location>
+    <Name>Priest</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Stormwind City</Zone>
+    <SubZone>Cathedral of Light</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Class Trainers</Category>
+    <X>-8518.102</X>
+    <Y>860.9028</Y>
+    <Z>109.8415</Z>
+  </Location>
+  <Location>
+    <Name>Boat to Northrend</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Stormwind City</Zone>
+    <SubZone>Stormwind Harbor</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Travel</Category>
+    <X>-8294.909</X>
+    <Y>1406.476</Y>
+    <Z>4.399245</Z>
+  </Location>
+  <Location>
+    <Name>Herbalism</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Stormwind City</Zone>
+    <SubZone>Mage Quarter</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Profession Trainers</Category>
+    <X>-8971.171</X>
+    <Y>777.4301</Y>
+    <Z>96.28532</Z>
+  </Location>
+  <Location>
+    <Name>Outland Portal</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Stormwind City</Zone>
+    <SubZone>Wizard's Sanctum</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Travel</Category>
+    <X>-9005.557</X>
+    <Y>869.1006</Y>
+    <Z>129.693</Z>
+  </Location>
+  <Location>
+    <Name>Mage</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Stormwind City</Zone>
+    <SubZone>Wizard's Sanctum</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Class Trainers</Category>
+    <X>-9015.224</X>
+    <Y>874.0864</Y>
+    <Z>148.6174</Z>
+  </Location>
+  <Location>
+    <Name>Stormwind</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Stormwind City</Zone>
+    <SubZone>Gryphon Roost</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>-8837.672</X>
+    <Y>489.1051</Y>
+    <Z>109.6099</Z>
+  </Location>
+  <Location>
+    <Name>Goldshire</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Elwynn Forest</Zone>
+    <SubZone>Goldshire</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>-9435.119</X>
+    <Y>85.46918</Y>
+    <Z>56.74005</Z>
+  </Location>
+  <Location>
+    <Name>Lion's Pride Inn</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Elwynn Forest</Zone>
+    <SubZone>Lion's Pride Inn</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Inns</Category>
+    <X>-9464.964</X>
+    <Y>16.53523</Y>
+    <Z>56.96283</Z>
+  </Location>
+  <Location>
+    <Name>Warlock</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Stormwind City</Zone>
+    <SubZone>The Slaughtered Lamb</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Class Trainers</Category>
+    <X>-8963.703</X>
+    <Y>1011.995</Y>
+    <Z>122.0262</Z>
+  </Location>
+  <Location>
+    <Name>Tram Portal</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Ironforge</Zone>
+    <SubZone>Tinker Town</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Travel</Category>
+    <X>-4839.51</X>
+    <Y>-1317.74</Y>
+    <Z>501.868</Z>
+  </Location>
+  <Location>
+    <Name>Hunter</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Ironforge</Zone>
+    <SubZone>Hall of Arms</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Class Trainers</Category>
+    <X>-5011.811</X>
+    <Y>-1266.919</Y>
+    <Z>507.7564</Z>
+  </Location>
+  <Location>
+    <Name>Warrior</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Ironforge</Zone>
+    <SubZone>Hall of Arms</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Class Trainers</Category>
+    <X>-5038.341</X>
+    <Y>-1242.318</Y>
+    <Z>507.7551</Z>
+  </Location>
+  <Location>
+    <Name>Ironforge</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Ironforge</Zone>
+    <SubZone>The Great Forge</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>-4822.22</X>
+    <Y>-1156.123</Y>
+    <Z>502.2099</Z>
+  </Location>
+  <Location>
+    <Name>Ironforge</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Ironforge</Zone>
+    <SubZone>Ironforge</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Mailboxes</Category>
+    <X>-4912.302</X>
+    <Y>-973.8723</Y>
+    <Z>501.455</Z>
+  </Location>
+  <Location>
+    <Name>Ironforge</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Ironforge</Zone>
+    <SubZone>Vault of Ironforge</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Banks</Category>
+    <X>-4883.855</X>
+    <Y>-980.9615</Y>
+    <Z>503.9407</Z>
+  </Location>
+  <Location>
+    <Name>Ironforge</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Ironforge</Zone>
+    <SubZone>Ironforge</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Auction House</Category>
+    <X>-4950.274</X>
+    <Y>-901.6608</Y>
+    <Z>503.8403</Z>
+  </Location>
+  <Location>
+    <Name>Mage</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Ironforge</Zone>
+    <SubZone>Hall of Mysteries</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Class Trainers</Category>
+    <X>-4609.526</X>
+    <Y>-921.7562</Y>
+    <Z>501.0679</Z>
+  </Location>
+  <Location>
+    <Name>Priest</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Ironforge</Zone>
+    <SubZone>Hall of Mysteries</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Class Trainers</Category>
+    <X>-4617.615</X>
+    <Y>-910.7685</Y>
+    <Z>501.0663</Z>
+  </Location>
+  <Location>
+    <Name>Rogue</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Ironforge</Zone>
+    <SubZone>The Forlorn Cavern</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Class Trainers</Category>
+    <X>-4648.704</X>
+    <Y>-1123.015</Y>
+    <Z>508.55</Z>
+  </Location>
+  <Location>
+    <Name>Warlock</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Ironforge</Zone>
+    <SubZone>The Forlorn Cavern</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Class Trainers</Category>
+    <X>-4601.914</X>
+    <Y>-1109.977</Y>
+    <Z>504.9388</Z>
+  </Location>
+  <Location>
+    <Name>Mining</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Ironforge</Zone>
+    <SubZone>The Great Forge</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Profession Trainers</Category>
+    <X>-4705.701</X>
+    <Y>-1112.329</Y>
+    <Z>504.4442</Z>
+  </Location>
+  <Location>
+    <Name>Skinning</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Ironforge</Zone>
+    <SubZone>The Great Forge</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Profession Trainers</Category>
+    <X>-4740.584</X>
+    <Y>-1023.583</Y>
+    <Z>504.4299</Z>
+  </Location>
+  <Location>
+    <Name>Menethil Harbor</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Wetlands</Zone>
+    <SubZone>Menethil Harbor</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>-3787.81</X>
+    <Y>-777.696</Y>
+    <Z>1.5582</Z>
+  </Location>
+  <Location>
+    <Name>Refuge Pointe</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Arathi Highlands</Zone>
+    <SubZone>Refuge Pointe</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>-1242.813</X>
+    <Y>-2515.823</Y>
+    <Z>21.35533</Z>
+  </Location>
+  <Location>
+    <Name>Chillwind Camp</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Western Plaguelands</Zone>
+    <SubZone>Chillwind Camp</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>931.6398</X>
+    <Y>-1431.997</Y>
+    <Z>64.49905</Z>
+  </Location>
+  <Location>
+    <Name>Light's Hope Chapel</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Eastern Plaguelands</Zone>
+    <SubZone>Light's Hope Chapel</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>2271.246</X>
+    <Y>-5338.235</Y>
+    <Z>87.36001</Z>
+  </Location>
+  <Location>
+    <Name>Thondroril River</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Eastern Plaguelands</Zone>
+    <SubZone>no subzone</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>1935.97</X>
+    <Y>-2694.48</Y>
+    <Z>61.9471</Z>
+  </Location>
+  <Location>
+    <Name>Thelsamar</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Loch Modan</Zone>
+    <SubZone>Thelsamar</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>-5422.288</X>
+    <Y>-2925.708</Y>
+    <Z>347.0298</Z>
+  </Location>
+  <Location>
+    <Name>Ironforge</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Ironforge</Zone>
+    <SubZone>Ironforge</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Inns</Category>
+    <X>-4841.181</X>
+    <Y>-862.6614</Y>
+    <Z>501.9147</Z>
+  </Location>
+  <Location>
+    <Name>Shaman</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Ironforge</Zone>
+    <SubZone>The Great Forge</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Class Trainers</Category>
+    <X>-4724.149</X>
+    <Y>-1150.594</Y>
+    <Z>502.4478</Z>
+  </Location>
+  <Location>
+    <Name>Darkshire</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Duskwood</Zone>
+    <SubZone>Darkshire</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>-10514.66</X>
+    <Y>-1263.873</Y>
+    <Z>41.26559</Z>
+  </Location>
+  <Location>
+    <Name>Booty Bay</Name>
+    <Faction>Alliance</Faction>
+    <Zone>The Cape of Stranglethorn</Zone>
+    <SubZone>Booty Bay</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>-14473</X>
+    <Y>464.15</Y>
+    <Z>36.42999</Z>
+  </Location>
+  <Location>
+    <Name>The Salty Sailor Tavern</Name>
+    <Faction>Alliance</Faction>
+    <Zone>The Cape of Stranglethorn</Zone>
+    <SubZone>The Salty Sailor Tavern</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Inns</Category>
+    <X>-14461.53</X>
+    <Y>492.1734</Y>
+    <Z>15.12523</Z>
+  </Location>
+  <Location>
+    <Name>Boat to Ratchet</Name>
+    <Faction>Alliance</Faction>
+    <Zone>The Cape of Stranglethorn</Zone>
+    <SubZone>Booty Bay</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Travel</Category>
+    <X>-14283.49</X>
+    <Y>560.097</Y>
+    <Z>8.683852</Z>
+  </Location>
+  <Location>
+    <Name>Fort Livingston</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Northern Stranglethorn</Zone>
+    <SubZone>Fort Livingston</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>-12829.65</X>
+    <Y>-418.6142</Y>
+    <Z>12.97347</Z>
+  </Location>
+  <Location>
+    <Name>Nesingwary Camp</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Northern Stranglethorn</Zone>
+    <SubZone>Nesingwary's Expedition</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Quest Hubs</Category>
+    <X>-11649.58</X>
+    <Y>-64.90175</Y>
+    <Z>16.23922</Z>
+  </Location>
+  <Location>
+    <Name>Rebel Camp</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Northern Stranglethorn</Zone>
+    <SubZone>Rebel Camp</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>-11341.01</X>
+    <Y>-213.5921</Y>
+    <Z>75.22085</Z>
+  </Location>
+  <Location>
+    <Name>Druid</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Stormwind City</Zone>
+    <SubZone>no subzone</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Class Trainers</Category>
+    <X>-8283.462</X>
+    <Y>722.0804</Y>
+    <Z>75.28392</Z>
+  </Location>
+  <Location>
+    <Name>Trade District</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Stormwind City</Zone>
+    <SubZone>Trade District</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Mailboxes</Category>
+    <X>-8864.944</X>
+    <Y>640.0527</Y>
+    <Z>96.14878</Z>
+  </Location>
+  <Location>
+    <Name>Trade District</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Stormwind City</Zone>
+    <SubZone>Trade District</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Auction House</Category>
+    <X>-8866.755</X>
+    <Y>671.7791</Y>
+    <Z>97.90327</Z>
+  </Location>
+  <Location>
+    <Name>Trade District</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Stormwind City</Zone>
+    <SubZone>Trade District</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Inns</Category>
+    <X>-8866.755</X>
+    <Y>671.7791</Y>
+    <Z>97.90327</Z>
+  </Location>
+  <Location>
+    <Name>Nighthaven</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Moonglade</Zone>
+    <SubZone>Nighthaven</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>7793.799</X>
+    <Y>-2404.825</Y>
+    <Z>489.0711</Z>
+  </Location>
+  <Location>
+    <Name>Darnassus</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Darnassus</Zone>
+    <SubZone>no subzone</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>9969.116</X>
+    <Y>2620.729</Y>
+    <Z>1316.005</Z>
+  </Location>
+  <Location>
+    <Name>Night Elf Mounts</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Darnassus</Zone>
+    <SubZone>Cenarion Enclave</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Vendors</Category>
+    <X>10126.87</X>
+    <Y>2534.615</Y>
+    <Z>1322.537</Z>
+  </Location>
+  <Location>
+    <Name>Druid</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Darnassus</Zone>
+    <SubZone>Cenarion Enclave</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Class Trainers</Category>
+    <X>10182.98</X>
+    <Y>2570.234</Y>
+    <Z>1325.962</Z>
+  </Location>
+  <Location>
+    <Name>Tradesmen's Terrace</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Darnassus</Zone>
+    <SubZone>Tradesmen's Terrace</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Auction House</Category>
+    <X>9863.133</X>
+    <Y>2339.843</Y>
+    <Z>1321.586</Z>
+  </Location>
+  <Location>
+    <Name>Darnassus</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Darnassus</Zone>
+    <SubZone>no subzone</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Banks</Category>
+    <X>9937.571</X>
+    <Y>2503.593</Y>
+    <Z>1317.836</Z>
+  </Location>
+  <Location>
+    <Name>Darnassus</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Darnassus</Zone>
+    <SubZone>no subzone</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Mailboxes</Category>
+    <X>9939.836</X>
+    <Y>2494.575</Y>
+    <Z>1317.622</Z>
+  </Location>
+  <Location>
+    <Name>Craftsmen's Terrace</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Darnassus</Zone>
+    <SubZone>Craftsmen's Terrace</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Inns</Category>
+    <X>10127.56</X>
+    <Y>2229.016</Y>
+    <Z>1328.548</Z>
+  </Location>
+  <Location>
+    <Name>Craftsmen's Terrace</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Darnassus</Zone>
+    <SubZone>Craftsmen's Terrace</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Mailboxes</Category>
+    <X>10127.56</X>
+    <Y>2229.016</Y>
+    <Z>1328.548</Z>
+  </Location>
+  <Location>
+    <Name>Dolanaar</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Teldrassil</Zone>
+    <SubZone>Dolanaar</SubZone>
+    <Category>Flight Paths</Category>
+    <Continent>Kalimdor</Continent>
+    <X>9868.563</X>
+    <Y>973.8838</Y>
+    <Z>1309.175</Z>
+  </Location>
+  <Location>
+    <Name>Dolanaar</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Teldrassil</Zone>
+    <SubZone>Dolanaar</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Mailboxes</Category>
+    <X>9852.993</X>
+    <Y>961.0125</Y>
+    <Z>1306.289</Z>
+  </Location>
+  <Location>
+    <Name>Druid</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Teldrassil</Zone>
+    <SubZone>Aldrassil</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Class Trainers</Category>
+    <X>10481.39</X>
+    <Y>814.3675</Y>
+    <Z>1322.745</Z>
+  </Location>
+  <Location>
+    <Name>Rogue</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Teldrassil</Zone>
+    <SubZone>Aldrassil</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Class Trainers</Category>
+    <X>10521.75</X>
+    <Y>781.0184</Y>
+    <Z>1329.598</Z>
+  </Location>
+  <Location>
+    <Name>Warrior</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Teldrassil</Zone>
+    <SubZone>Aldrassil</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Class Trainers</Category>
+    <X>10521.75</X>
+    <Y>781.0184</Y>
+    <Z>1329.598</Z>
+  </Location>
+  <Location>
+    <Name>Hunter</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Teldrassil</Zone>
+    <SubZone>Aldrassil</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Class Trainers</Category>
+    <X>10445.5</X>
+    <Y>781.7301</Y>
+    <Z>1322.674</Z>
+  </Location>
+  <Location>
+    <Name>Mage</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Teldrassil</Zone>
+    <SubZone>Aldrassil</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Class Trainers</Category>
+    <X>10454.94</X>
+    <Y>801.4033</Y>
+    <Z>1346.755</Z>
+  </Location>
+  <Location>
+    <Name>Priest</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Teldrassil</Zone>
+    <SubZone>Aldrassil</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Class Trainers</Category>
+    <X>10454.94</X>
+    <Y>801.4033</Y>
+    <Z>1346.755</Z>
+  </Location>
+  <Location>
+    <Name>Aldrassil</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Teldrassil</Zone>
+    <SubZone>Aldrassil</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Mailboxes</Category>
+    <X>10387.94</X>
+    <Y>747.1326</Y>
+    <Z>1320.941</Z>
+  </Location>
+  <Location>
+    <Name>Lor'danel</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Darkshore</Zone>
+    <SubZone>Lor'danel</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>7459.9</X>
+    <Y>-326.56</Y>
+    <Z>8.089991</Z>
+  </Location>
+  <Location>
+    <Name>Lor'danel</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Darkshore</Zone>
+    <SubZone>Lor'danel</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Inns</Category>
+    <X>7419.479</X>
+    <Y>-275.2365</Y>
+    <Z>7.668214</Z>
+  </Location>
+  <Location>
+    <Name>Lor'danel</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Darkshore</Zone>
+    <SubZone>Lor'danel</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Mailboxes</Category>
+    <X>7389.695</X>
+    <Y>-260.007</Y>
+    <Z>5.652356</Z>
+  </Location>
+  <Location>
+    <Name>Mage</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Darkshore</Zone>
+    <SubZone>Lor'danel</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Class Trainers</Category>
+    <X>7391.572</X>
+    <Y>-244.0798</Y>
+    <Z>6.025244</Z>
+  </Location>
+  <Location>
+    <Name>Warlock</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Darkshore</Zone>
+    <SubZone>Lor'danel</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Class Trainers</Category>
+    <X>7391.572</X>
+    <Y>-244.0798</Y>
+    <Z>6.025244</Z>
+  </Location>
+  <Location>
+    <Name>Druid</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Darkshore</Zone>
+    <SubZone>Lor'danel</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Class Trainers</Category>
+    <X>7382.162</X>
+    <Y>-224.9322</Y>
+    <Z>8.569288</Z>
+  </Location>
+  <Location>
+    <Name>Priest</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Darkshore</Zone>
+    <SubZone>Lor'danel</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Class Trainers</Category>
+    <X>7369.536</X>
+    <Y>-256.7283</Y>
+    <Z>8.299082</Z>
+  </Location>
+  <Location>
+    <Name>Stardust Spire</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Ashenvale</Zone>
+    <SubZone>Stardust Spire</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>1904.432</X>
+    <Y>-322.5373</Y>
+    <Z>118.2523</Z>
+  </Location>
+  <Location>
+    <Name>Astranaar</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Ashenvale</Zone>
+    <SubZone>Astranaar</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>2827.34</X>
+    <Y>-289.24</Y>
+    <Z>107.16</Z>
+  </Location>
+  <Location>
+    <Name>Blackfathom Camp</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Ashenvale</Zone>
+    <SubZone>Blackfathom Camp</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>3885.102</X>
+    <Y>653.51</Y>
+    <Z>10.45691</Z>
+  </Location>
+  <Location>
+    <Name>Forest Song</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Ashenvale</Zone>
+    <SubZone>Forest Song</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>3001.715</X>
+    <Y>-3206.09</Y>
+    <Z>190.0705</Z>
+  </Location>
+  <Location>
+    <Name>Emerald Sanctuary</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Felwood</Zone>
+    <SubZone>Emerald Sanctuary</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>3972.55</X>
+    <Y>-1323.972</Y>
+    <Z>244.7929</Z>
+  </Location>
+  <Location>
+    <Name>Talonbranch Glade </Name>
+    <Faction>Alliance</Faction>
+    <Zone>Felwood</Zone>
+    <SubZone>Talonbranch Glade </SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>6213.875</X>
+    <Y>-1872.949</Y>
+    <Z>566.0087</Z>
+  </Location>
+  <Location>
+    <Name>Everlook</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Winterspring</Zone>
+    <SubZone>Everlook</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>6801.411</X>
+    <Y>-4741.958</Y>
+    <Z>701.4981</Z>
+  </Location>
+  <Location>
+    <Name>Everlook</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Winterspring</Zone>
+    <SubZone>Everlook</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Mailboxes</Category>
+    <X>6707.189</X>
+    <Y>-4667.155</Y>
+    <Z>721.4012</Z>
+  </Location>
+  <Location>
+    <Name>Everlook</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Winterspring</Zone>
+    <SubZone>Everlook</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Inns</Category>
+    <X>6693.792</X>
+    <Y>-4670.115</Y>
+    <Z>721.5765</Z>
+  </Location>
+  <Location>
+    <Name>Windshear Hold</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Stonetalon Mountains</Zone>
+    <SubZone>Windshear Hold</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>1270.782</X>
+    <Y>436.3494</Y>
+    <Z>95.2739</Z>
+  </Location>
+  <Location>
+    <Name>Nijel's Point</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Desolace</Zone>
+    <SubZone>Nijel's Point</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>139.7587</X>
+    <Y>1325.82</Y>
+    <Z>193.4993</Z>
+  </Location>
+  <Location>
+    <Name>Thargad's Camp</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Desolace</Zone>
+    <SubZone>Thargad's Camp</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-1695.264</X>
+    <Y>2581.902</Y>
+    <Z>136.5272</Z>
+  </Location>
+  <Location>
+    <Name>Feathermoon Stronghold</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Feralas</Zone>
+    <SubZone>Feathermoon Stronghold</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-4465.381</X>
+    <Y>2187.394</Y>
+    <Z>17.89251</Z>
+  </Location>
+  <Location>
+    <Name>Alchemy</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Feralas</Zone>
+    <SubZone>Feathermoon Stronghold</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Profession Trainers</Category>
+    <X>-4374.665</X>
+    <Y>2218.691</Y>
+    <Z>13.48175</Z>
+  </Location>
+  <Location>
+    <Name>Enchanting</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Feralas</Zone>
+    <SubZone>Feathermoon Stronghold</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Profession Trainers</Category>
+    <X>-4352.901</X>
+    <Y>2198.62</Y>
+    <Z>13.50439</Z>
+  </Location>
+  <Location>
+    <Name>Feathermoon Stronghold</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Feralas</Zone>
+    <SubZone>Feathermoon Stronghold</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Inns</Category>
+    <X>-4462.283</X>
+    <Y>2236.432</Y>
+    <Z>27.67468</Z>
+  </Location>
+  <Location>
+    <Name>Feathermoon Stronghold</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Feralas</Zone>
+    <SubZone>Feathermoon Stronghold</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Mailboxes</Category>
+    <X>-4457.65</X>
+    <Y>2182.763</Y>
+    <Z>17.89025</Z>
+  </Location>
+  <Location>
+    <Name>Tower of Estulan</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Feralas</Zone>
+    <SubZone>Tower of Estulan</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-4864.558</X>
+    <Y>1478.914</Y>
+    <Z>84.84737</Z>
+  </Location>
+  <Location>
+    <Name>Shadebough</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Feralas</Zone>
+    <SubZone>Shadebough</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-4996.26</X>
+    <Y>73.00229</Y>
+    <Z>99.84628</Z>
+  </Location>
+  <Location>
+    <Name>Gadgetzan</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Tanaris</Zone>
+    <SubZone>Gadgetzan</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-7186.938</X>
+    <Y>-3769.523</Y>
+    <Z>9.277446</Z>
+  </Location>
+  <Location>
+    <Name>Gadgetzan</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Tanaris</Zone>
+    <SubZone>Gadgetzan</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Mailboxes</Category>
+    <X>-7083.554</X>
+    <Y>-3852.382</Y>
+    <Z>9.913953</Z>
+  </Location>
+  <Location>
+    <Name>Gadgetzan</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Tanaris</Zone>
+    <SubZone>Gadgetzan</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Inns</Category>
+    <X>-7069.564</X>
+    <Y>-3856.309</Y>
+    <Z>9.809835</Z>
+  </Location>
+  <Location>
+    <Name>Southmoon Ruins</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Tanaris</Zone>
+    <SubZone>Southmoon Ruins</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-9497.046</X>
+    <Y>-2949.405</Y>
+    <Z>13.12935</Z>
+  </Location>
+  <Location>
+    <Name>Un'Goro Crater Enterence</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Un'Goro Crater</Zone>
+    <SubZone>no subzone</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Quest Hubs</Category>
+    <X>-7871.636</X>
+    <Y>-2092.92</Y>
+    <Z>-271.0081</Z>
+  </Location>
+  <Location>
+    <Name>Marshal's Stand</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Un'Goro Crater</Zone>
+    <SubZone>Marshal's Stand</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-7548.821</X>
+    <Y>-1541.587</Y>
+    <Z>-271.0778</Z>
+  </Location>
+  <Location>
+    <Name>Marshal's Stand</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Un'Goro Crater</Zone>
+    <SubZone>Marshal's Stand</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Quest Hubs</Category>
+    <X>-7509.573</X>
+    <Y>-1510.93</Y>
+    <Z>-265.6902</Z>
+  </Location>
+  <Location>
+    <Name>Mossy Pile</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Un'Goro Crater</Zone>
+    <SubZone>Mossy Pile</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-6958.71</X>
+    <Y>-1096.348</Y>
+    <Z>-272.6498</Z>
+  </Location>
+  <Location>
+    <Name>Mossy Pile</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Un'Goro Crater</Zone>
+    <SubZone>Mossy Pile</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Quest Hubs</Category>
+    <X>-6981.969</X>
+    <Y>-1065.31</Y>
+    <Z>-269.7157</Z>
+  </Location>
+  <Location>
+    <Name>Cenarion Hold</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Silithus</Zone>
+    <SubZone>Cenarion Hold</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-6758.822</X>
+    <Y>774.7939</Y>
+    <Z>89.00261</Z>
+  </Location>
+  <Location>
+    <Name>Fizzle &amp; Pozzik's Speedbarge</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Thousand Needles</Zone>
+    <SubZone>Fizzle &amp; Pozzik's Speedbarge</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-6075.37</X>
+    <Y>-3913.44</Y>
+    <Z>21.6224</Z>
+  </Location>
+  <Location>
+    <Name>Mudsprocket</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Dustwallow Marsh</Zone>
+    <SubZone>Mudsprocket</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-4567.285</X>
+    <Y>-3225.451</Y>
+    <Z>34.8306</Z>
+  </Location>
+  <Location>
+    <Name>Mudsprocket</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Dustwallow Marsh</Zone>
+    <SubZone>Mudsprocket</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Mailboxes</Category>
+    <X>-4598.258</X>
+    <Y>-3180.563</Y>
+    <Z>34.91179</Z>
+  </Location>
+  <Location>
+    <Name>Mudsprocket</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Dustwallow Marsh</Zone>
+    <SubZone>Mudsprocket</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Inns</Category>
+    <X>-4627.834</X>
+    <Y>-3176.014</Y>
+    <Z>41.36575</Z>
+  </Location>
+  <Location>
+    <Name>Theramore Isle</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Dustwallow Marsh</Zone>
+    <SubZone>Theramore Isle</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Mailboxes</Category>
+    <X>-3616.896</X>
+    <Y>-4437.401</Y>
+    <Z>13.63466</Z>
+  </Location>
+  <Location>
+    <Name>Theramore Isle</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Dustwallow Marsh</Zone>
+    <SubZone>Theramore Isle</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Inns</Category>
+    <X>-3617.89</X>
+    <Y>-4469.954</Y>
+    <Z>14.24473</Z>
+  </Location>
+  <Location>
+    <Name>Theramore Isle</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Dustwallow Marsh</Zone>
+    <SubZone>Theramore Isle</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-3827.18</X>
+    <Y>-4516.35</Y>
+    <Z>10.50545</Z>
+  </Location>
+  <Location>
+    <Name>Boat to Menethil Harbor</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Dustwallow Marsh</Zone>
+    <SubZone>Theramore Isle</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Travel</Category>
+    <X>-4003.362</X>
+    <Y>-4729.932</Y>
+    <Z>4.6296</Z>
+  </Location>
+  <Location>
+    <Name>Boat to Theramore</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Wetlands</Zone>
+    <SubZone>Baradin Bay</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Travel</Category>
+    <X>-3862.16</X>
+    <Y>-654.2567</Y>
+    <Z>5.389001</Z>
+  </Location>
+  <Location>
+    <Name>Boat to Northrend</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Wetlands</Zone>
+    <SubZone>Menethil Harbor</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Travel</Category>
+    <X>-3685.509</X>
+    <Y>-601.7293</Y>
+    <Z>4.407247</Z>
+  </Location>
+  <Location>
+    <Name>Whelgar's Retreat</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Wetlands</Zone>
+    <SubZone>no subzone</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>-3227.109</X>
+    <Y>-1990.989</Y>
+    <Z>50.54816</Z>
+  </Location>
+  <Location>
+    <Name>Greenwarden's Grove</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Wetlands</Zone>
+    <SubZone>Greenwarden's Grove</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>-3300.437</X>
+    <Y>-2719.873</Y>
+    <Z>20.46725</Z>
+  </Location>
+  <Location>
+    <Name>Greenwarden's Grove</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Wetlands</Zone>
+    <SubZone>Greenwarden's Grove</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Mailboxes</Category>
+    <X>-3254.078</X>
+    <Y>-2769.254</Y>
+    <Z>12.93477</Z>
+  </Location>
+  <Location>
+    <Name>Greenwarden's Grove</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Wetlands</Zone>
+    <SubZone>Greenwarden's Grove</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Inns</Category>
+    <X>-3227.447</X>
+    <Y>-2793.531</Y>
+    <Z>21.12782</Z>
+  </Location>
+  <Location>
+    <Name>Valley of Strength</Name>
+    <Faction>Horde</Faction>
+    <Zone>Orgrimmar</Zone>
+    <SubZone>Valley of Strength</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Mailboxes</Category>
+    <X>1605.866</X>
+    <Y>-4384.781</Y>
+    <Z>20.57681</Z>
+  </Location>
+  <Location>
+    <Name>Valley of Strength</Name>
+    <Faction>Horde</Faction>
+    <Zone>Orgrimmar</Zone>
+    <SubZone>Valley of Strength</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Auction House</Category>
+    <X>1638.939</X>
+    <Y>-4443.134</Y>
+    <Z>17.04014</Z>
+  </Location>
+  <Location>
+    <Name>Valley of Strength</Name>
+    <Faction>Horde</Faction>
+    <Zone>Orgrimmar</Zone>
+    <SubZone>Valley of Strength</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Inns</Category>
+    <X>1573.38</X>
+    <Y>-4442.096</Y>
+    <Z>16.05546</Z>
+  </Location>
+  <Location>
+    <Name>Slabchisel's Survey</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Wetlands</Zone>
+    <SubZone>Slabchisel's Survey</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>-4108.885</X>
+    <Y>-2737.344</Y>
+    <Z>19.28626</Z>
+  </Location>
+  <Location>
+    <Name>Valley of Strength</Name>
+    <Faction>Horde</Faction>
+    <Zone>Orgrimmar</Zone>
+    <SubZone>Valley of Strength</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Banks</Category>
+    <X>1523.992</X>
+    <Y>-4361.266</Y>
+    <Z>20.54922</Z>
+  </Location>
+  <Location>
+    <Name>Farstrider Lodge</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Loch Modan</Zone>
+    <SubZone>no subzone</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>-5667.679</X>
+    <Y>-4255.713</Y>
+    <Z>407.0165</Z>
+  </Location>
+  <Location>
+    <Name>Farstrider Lodge</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Loch Modan</Zone>
+    <SubZone>no subzone</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Inns</Category>
+    <X>-5674.105</X>
+    <Y>-4254.51</Y>
+    <Z>407.0127</Z>
+  </Location>
+  <Location>
+    <Name>Mage</Name>
+    <Faction>Horde</Faction>
+    <Zone>Orgrimmar</Zone>
+    <SubZone>Valley of Spirits</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Class Trainers</Category>
+    <X>1689.398</X>
+    <Y>-4129.304</Y>
+    <Z>66.33934</Z>
+  </Location>
+  <Location>
+    <Name>Portal to Blasted Lands</Name>
+    <Faction>Horde</Faction>
+    <Zone>Orgrimmar</Zone>
+    <SubZone>Valley of Spirits</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Travel</Category>
+    <X>1685.304</X>
+    <Y>-4127.365</Y>
+    <Z>66.34176</Z>
+  </Location>
+  <Location>
+    <Name>Druid</Name>
+    <Faction>Horde</Faction>
+    <Zone>Orgrimmar</Zone>
+    <SubZone>Valley of Wisdom</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Class Trainers</Category>
+    <X>1887.905</X>
+    <Y>-4290.496</Y>
+    <Z>23.36517</Z>
+  </Location>
+  <Location>
+    <Name>Herbalism</Name>
+    <Faction>Horde</Faction>
+    <Zone>Orgrimmar</Zone>
+    <SubZone>The Drag</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Profession Trainers</Category>
+    <X>1899.857</X>
+    <Y>-4454.936</Y>
+    <Z>53.41528</Z>
+  </Location>
+  <Location>
+    <Name>Hunter</Name>
+    <Faction>Horde</Faction>
+    <Zone>Orgrimmar</Zone>
+    <SubZone>Valley of Wisdom</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Class Trainers</Category>
+    <X>1873.492</X>
+    <Y>-4286.792</Y>
+    <Z>23.89971</Z>
+  </Location>
+  <Location>
+    <Name>Mining</Name>
+    <Faction>Horde</Faction>
+    <Zone>Orgrimmar</Zone>
+    <SubZone>Valley of Strength</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Profession Trainers</Category>
+    <X>1577.662</X>
+    <Y>-4283.875</Y>
+    <Z>21.5547</Z>
+  </Location>
+  <Location>
+    <Name>Reagent and Poisons</Name>
+    <Faction>Horde</Faction>
+    <Zone>Orgrimmar</Zone>
+    <SubZone>Valley of Spirits</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Vendors</Category>
+    <X>1754.868</X>
+    <Y>-4110.667</Y>
+    <Z>51.58017</Z>
+  </Location>
+  <Location>
+    <Name>Kharanos</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Dun Morogh</Zone>
+    <SubZone>Kharanos</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>-5661.913</X>
+    <Y>-497.9189</Y>
+    <Z>397.2552</Z>
+  </Location>
+  <Location>
+    <Name>Razor Hill</Name>
+    <Faction>Horde</Faction>
+    <Zone>Durotar</Zone>
+    <SubZone>Razor Hill</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>272.8993</X>
+    <Y>-4769.443</Y>
+    <Z>11.5577</Z>
+  </Location>
+  <Location>
+    <Name>Razor Hill</Name>
+    <Faction>Horde</Faction>
+    <Zone>Durotar</Zone>
+    <SubZone>Razor Hill</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Mailboxes</Category>
+    <X>323.3642</X>
+    <Y>-4708.656</Y>
+    <Z>14.44456</Z>
+  </Location>
+  <Location>
+    <Name>Razor Hill</Name>
+    <Faction>Horde</Faction>
+    <Zone>Durotar</Zone>
+    <SubZone>Razor Hill</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Inns</Category>
+    <X>338.8551</X>
+    <Y>-4688.518</Y>
+    <Z>16.48929</Z>
+  </Location>
+  <Location>
+    <Name>Mage</Name>
+    <Faction>Horde</Faction>
+    <Zone>Durotar</Zone>
+    <SubZone>Razor Hill</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Class Trainers</Category>
+    <X>334.0642</X>
+    <Y>-4764.331</Y>
+    <Z>12.64734</Z>
+  </Location>
+  <Location>
+    <Name>Druid</Name>
+    <Faction>Horde</Faction>
+    <Zone>Durotar</Zone>
+    <SubZone>Razor Hill</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Class Trainers</Category>
+    <X>342.1651</X>
+    <Y>-4766.65</Y>
+    <Z>12.63559</Z>
+  </Location>
+  <Location>
+    <Name>Warlock</Name>
+    <Faction>Horde</Faction>
+    <Zone>Durotar</Zone>
+    <SubZone>Razor Hill</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Class Trainers</Category>
+    <X>354.6923</X>
+    <Y>-4835.489</Y>
+    <Z>10.86057</Z>
+  </Location>
+  <Location>
+    <Name>Troll Mount Vendor</Name>
+    <Faction>Horde</Faction>
+    <Zone>Durotar</Zone>
+    <SubZone>Sen'jin Village</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Vendors</Category>
+    <X>-854.3834</X>
+    <Y>-4880.216</Y>
+    <Z>21.12762</Z>
+  </Location>
+  <Location>
+    <Name>Herbalism</Name>
+    <Faction>Horde</Faction>
+    <Zone>Durotar</Zone>
+    <SubZone>Sen'jin Village</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Profession Trainers</Category>
+    <X>-845.8432</X>
+    <Y>-4902.263</Y>
+    <Z>21.29611</Z>
+  </Location>
+  <Location>
+    <Name>Sen'jin Village</Name>
+    <Faction>Horde</Faction>
+    <Zone>Durotar</Zone>
+    <SubZone>Sen'jin Village</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Mailboxes</Category>
+    <X>-817.285</X>
+    <Y>-4925.937</Y>
+    <Z>19.71935</Z>
+  </Location>
+  <Location>
+    <Name>Alchemy</Name>
+    <Faction>Horde</Faction>
+    <Zone>Durotar</Zone>
+    <SubZone>Sen'jin Village</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Profession Trainers</Category>
+    <X>-799.9206</X>
+    <Y>-4894.222</Y>
+    <Z>22.81844</Z>
+  </Location>
+  <Location>
+    <Name>Sen'jin Village</Name>
+    <Faction>Horde</Faction>
+    <Zone>Durotar</Zone>
+    <SubZone>Sen'jin Village</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-780.2018</X>
+    <Y>-4890.371</Y>
+    <Z>19.62566</Z>
+  </Location>
+  <Location>
+    <Name>Shaman</Name>
+    <Faction>Horde</Faction>
+    <Zone>Durotar</Zone>
+    <SubZone>Sen'jin Village</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Class Trainers</Category>
+    <X>-840.5091</X>
+    <Y>-4933.389</Y>
+    <Z>20.9841</Z>
+  </Location>
+  <Location>
+    <Name>Druid</Name>
+    <Faction>Horde</Faction>
+    <Zone>Durotar</Zone>
+    <SubZone>Sen'jin Village</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Class Trainers</Category>
+    <X>-840.5091</X>
+    <Y>-4933.389</Y>
+    <Z>20.9841</Z>
+  </Location>
+  <Location>
+    <Name>Warrior</Name>
+    <Faction>Horde</Faction>
+    <Zone>Durotar</Zone>
+    <SubZone>Sen'jin Village</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Class Trainers</Category>
+    <X>-783.1097</X>
+    <Y>-4946.039</Y>
+    <Z>22.24651</Z>
+  </Location>
+  <Location>
+    <Name>Gol'Bolar Quarry</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Dun Morogh</Zone>
+    <SubZone>Gol'Bolar Quarry</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>-5715.611</X>
+    <Y>-1578.37</Y>
+    <Z>383.206</Z>
+  </Location>
+  <Location>
+    <Name>Valormok</Name>
+    <Faction>Horde</Faction>
+    <Zone>Azshara</Zone>
+    <SubZone>Valormok</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>2988.238</X>
+    <Y>-4159.473</Y>
+    <Z>101.2643</Z>
+  </Location>
+  <Location>
+    <Name>Splintertree Post</Name>
+    <Faction>Horde</Faction>
+    <Zone>Ashenvale</Zone>
+    <SubZone>Splintertree Post</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>2302.39</X>
+    <Y>-2524.55</Y>
+    <Z>104.2806</Z>
+  </Location>
+  <Location>
+    <Name>Splintertree Post</Name>
+    <Faction>Horde</Faction>
+    <Zone>Ashenvale</Zone>
+    <SubZone>Splintertree Post</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Mailboxes</Category>
+    <X>2328.766</X>
+    <Y>-2545.32</Y>
+    <Z>101.6946</Z>
+  </Location>
+  <Location>
+    <Name>Splintertree Post</Name>
+    <Faction>Horde</Faction>
+    <Zone>Ashenvale</Zone>
+    <SubZone>Splintertree Post</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Inns</Category>
+    <X>2340.493</X>
+    <Y>-2564.316</Y>
+    <Z>103.0935</Z>
+  </Location>
+  <Location>
+    <Name>Redridge Mountains</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Redridge Mountains</Zone>
+    <SubZone>no subzone</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>-9433.134</X>
+    <Y>-2237.888</Y>
+    <Z>68.92805</Z>
+  </Location>
+  <Location>
+    <Name>Lakeshire</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Redridge Mountains</Zone>
+    <SubZone>Lakeshire</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Mailboxes</Category>
+    <X>-9249.618</X>
+    <Y>-2144.094</Y>
+    <Z>64.02837</Z>
+  </Location>
+  <Location>
+    <Name>Lakeshire</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Redridge Mountains</Zone>
+    <SubZone>no subzone</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Inns</Category>
+    <X>-9225.245</X>
+    <Y>-2155.389</Y>
+    <Z>63.73074</Z>
+  </Location>
+  <Location>
+    <Name>The Mor'shan Rampart</Name>
+    <Faction>Horde</Faction>
+    <Zone>Northern Barrens</Zone>
+    <SubZone>The Mor'shan Rampart</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>1206.05</X>
+    <Y>-2209.15</Y>
+    <Z>92.1406</Z>
+  </Location>
+  <Location>
+    <Name>The Crossroads</Name>
+    <Faction>Horde</Faction>
+    <Zone>Northern Barrens</Zone>
+    <SubZone>The Crossroads</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-441.8</X>
+    <Y>-2596.08</Y>
+    <Z>96.06</Z>
+  </Location>
+  <Location>
+    <Name>The Crossroads</Name>
+    <Faction>Horde</Faction>
+    <Zone>Northern Barrens</Zone>
+    <SubZone>The Crossroads</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Mailboxes</Category>
+    <X>-441.9362</X>
+    <Y>-2644.842</Y>
+    <Z>96.15999</Z>
+  </Location>
+  <Location>
+    <Name>The Crossroads</Name>
+    <Faction>Horde</Faction>
+    <Zone>Northern Barrens</Zone>
+    <SubZone>The Crossroads</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Inns</Category>
+    <X>-410.3555</X>
+    <Y>-2645.833</Y>
+    <Z>96.22305</Z>
+  </Location>
+  <Location>
+    <Name>Morgan's Vigil</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Burning Steppes</Zone>
+    <SubZone>Morgan's Vigil</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>-8362.647</X>
+    <Y>-2736.911</Y>
+    <Z>185.388</Z>
+  </Location>
+  <Location>
+    <Name>Brackenwall Village</Name>
+    <Faction>Horde</Faction>
+    <Zone>Dustwallow Marsh</Zone>
+    <SubZone>Brackenwall Village</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-3147.39</X>
+    <Y>-2842.18</Y>
+    <Z>34.61</Z>
+  </Location>
+  <Location>
+    <Name>Brackenwall Village</Name>
+    <Faction>Horde</Faction>
+    <Zone>Dustwallow Marsh</Zone>
+    <SubZone>Brackenwall Village</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Inns</Category>
+    <X>-3168.18</X>
+    <Y>-2908.74</Y>
+    <Z>34.95211</Z>
+  </Location>
+  <Location>
+    <Name>Hunter's Hill</Name>
+    <Faction>Horde</Faction>
+    <Zone>Southern Barrens</Zone>
+    <SubZone>Hunter's Hill</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-798.72</X>
+    <Y>-1590.87</Y>
+    <Z>140.63</Z>
+  </Location>
+  <Location>
+    <Name>Hunter's Hill</Name>
+    <Faction>Horde</Faction>
+    <Zone>Southern Barrens</Zone>
+    <Continent>Kalimdor</Continent>
+    <SubZone>Hunter's Hill</SubZone>
+    <Category>Inns</Category>
+    <X>-786.2134</X>
+    <Y>-1550.013</Y>
+    <Z>140.3934</Z>
+  </Location>
+  <Location>
+    <Name>Hunter's Hill</Name>
+    <Faction>Horde</Faction>
+    <Zone>Southern Barrens</Zone>
+    <SubZone>Hunter's Hill</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Mailboxes</Category>
+    <X>-787.5714</X>
+    <Y>-1558.069</Y>
+    <Z>141.0003</Z>
+  </Location>
+  <Location>
+    <Name>Thorium Point</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Searing Gorge</Zone>
+    <SubZone>Thorium Point</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-6556.842</X>
+    <Y>-1169.482</Y>
+    <Z>309.6797</Z>
+  </Location>
+  <Location>
+    <Name>Sun Rock Retreat</Name>
+    <Faction>Horde</Faction>
+    <Zone>Stonetalon Mountains</Zone>
+    <SubZone>Sun Rock Retreat</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>966.57</X>
+    <Y>1040.32</Y>
+    <Z>104.27</Z>
+  </Location>
+  <Location>
+    <Name>Sun Rock Retreat</Name>
+    <Faction>Horde</Faction>
+    <Zone>Stonetalon Mountains</Zone>
+    <SubZone>Sun Rock Retreat</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Mailboxes</Category>
+    <X>930.3725</X>
+    <Y>902.5878</Y>
+    <Z>104.4875</Z>
+  </Location>
+  <Location>
+    <Name>Sun Rock Retreat</Name>
+    <Faction>Horde</Faction>
+    <Zone>Stonetalon Mountains</Zone>
+    <Continent>Kalimdor</Continent>
+    <SubZone>Sun Rock Retreat</SubZone>
+    <Category>Inns</Category>
+    <X>896.2102</X>
+    <Y>924.988</Y>
+    <Z>106.258</Z>
+  </Location>
+  <Location>
+    <Name>Dragon's Mouth</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Badlands</Zone>
+    <SubZone>Dragon's Mouth</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>-7034.392</X>
+    <Y>-2567.297</Y>
+    <Z>251.8329</Z>
+  </Location>
+  <Location>
+    <Name>Dustwind Dig</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Badlands</Zone>
+    <SubZone>Dustwind Dig</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>-6597.356</X>
+    <Y>-3406.019</Y>
+    <Z>279.2868</Z>
+  </Location>
+  <Location>
+    <Name>Mudsprocket</Name>
+    <Faction>Horde</Faction>
+    <Zone>Dustwallow Marsh</Zone>
+    <SubZone>Mudsprocket</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-4567.058</X>
+    <Y>-3227.17</Y>
+    <Z>34.80809</Z>
+  </Location>
+  <Location>
+    <Name>Mudsprocket</Name>
+    <Faction>Horde</Faction>
+    <Zone>Dustwallow Marsh</Zone>
+    <SubZone>Mudsprocket</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Inns</Category>
+    <X>-4627.698</X>
+    <Y>-3175.164</Y>
+    <Z>41.45073</Z>
+  </Location>
+  <Location>
+    <Name>Mudsprocket</Name>
+    <Faction>Horde</Faction>
+    <Zone>Dustwallow Marsh</Zone>
+    <SubZone>Mudsprocket</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Mailboxes</Category>
+    <X>-4595.628</X>
+    <Y>-3180.223</Y>
+    <Z>34.87951</Z>
+  </Location>
+  <Location>
+    <Name>Nethergarde Keep</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Blasted Lands</Zone>
+    <SubZone>Nethergarde Keep</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Mailboxes</Category>
+    <X>-10998.25</X>
+    <Y>-3385.689</Y>
+    <Z>62.17092</Z>
+  </Location>
+  <Location>
+    <Name>Fizzle &amp; Pozzik's Speedbarge</Name>
+    <Faction>Horde</Faction>
+    <Zone>Thousand Needles</Zone>
+    <SubZone>Fizzle &amp; Pozzik's Speedbarge</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-6075.37</X>
+    <Y>-3913.44</Y>
+    <Z>21.6224</Z>
+  </Location>
+  <Location>
+    <Name>Nethergarde Keep</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Blasted Lands</Zone>
+    <SubZone>Nethergarde Keep</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Inns</Category>
+    <X>-10937.89</X>
+    <Y>-3393.821</Y>
+    <Z>65.0001</Z>
+  </Location>
+  <Location>
+    <Name>Gadgetzan</Name>
+    <Faction>Horde</Faction>
+    <Zone>Tanaris</Zone>
+    <SubZone>Gadgetzan</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-7094.03</X>
+    <Y>-3813.69</Y>
+    <Z>9.490781</Z>
+  </Location>
+  <Location>
+    <Name>Nethergarde Keep</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Blasted Lands</Zone>
+    <SubZone>Nethergarde Keep</SubZone>
+    <Continent>Azeroth</Continent>
+    <Category>Flight Paths</Category>
+    <X>-11111.67</X>
+    <Y>-3435.626</Y>
+    <Z>79.11578</Z>
+  </Location>
+  <Location>
+    <Name>Mossy Pile</Name>
+    <Faction>Horde</Faction>
+    <Zone>Un'Goro Crater</Zone>
+    <SubZone>Mossy Pile</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-6958.44</X>
+    <Y>-1095.24</Y>
+    <Z>-272.65</Z>
+  </Location>
+  <Location>
+    <Name>Mossy Pile</Name>
+    <Faction>Horde</Faction>
+    <Zone>Un'Goro Crater</Zone>
+    <SubZone>Mossy Pile</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Quest Hubs</Category>
+    <X>-6981.961</X>
+    <Y>-1068.894</Y>
+    <Z>-269.8558</Z>
+  </Location>
+  <Location>
+    <Name>Cenarion Hold</Name>
+    <Faction>Horde</Faction>
+    <Zone>Silithus</Zone>
+    <SubZone>Cenarion Hold</SubZone>
+    <Continent>Outland</Continent>
+    <Category>Flight Paths</Category>
+    <X>-6811.39</X>
+    <Y>836.74</Y>
+    <Z>49.80794</Z>
+  </Location>
+  <Location>
+    <Name>Expedition Point</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Hellfire Peninsula</Zone>
+    <SubZone>Expedition Point</SubZone>
+    <Continent>Outland</Continent>
+    <Category>Quest Hubs</Category>
+    <X>-675.0404</X>
+    <Y>1860.32</Y>
+    <Z>66.90994</Z>
+  </Location>
+  <Location>
+    <Name>Ratchet</Name>
+    <Faction>Horde</Faction>
+    <Zone>Northern Barrens</Zone>
+    <SubZone>Ratchet</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Flight Paths</Category>
+    <X>-894.59</X>
+    <Y>-3773.01</Y>
+    <Z>11.48</Z>
+  </Location>
+  <Location>
+    <Name>Boat to Stranglethorn</Name>
+    <Faction>Horde</Faction>
+    <Zone>Northern Barrens</Zone>
+    <SubZone>Ratchet</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Travel</Category>
+    <X>-993.9653</X>
+    <Y>-3827.461</Y>
+    <Z>5.646364</Z>
+  </Location>
+  <Location>
+    <Name>Temple of Telhamat</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Hellfire Peninsula</Zone>
+    <SubZone>Temple of Telhamat</SubZone>
+    <Continent>Outland</Continent>
+    <Category>Flight Paths</Category>
+    <X>199.16</X>
+    <Y>4241.56</Y>
+    <Z>121.7434</Z>
+  </Location>
+  <Location>
+    <Name>Temple of Telhamat</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Hellfire Peninsula</Zone>
+    <SubZone>Temple of Telhamat</SubZone>
+    <Continent>Outland</Continent>
+    <Category>Inns</Category>
+    <X>223.2947</X>
+    <Y>4332.157</Y>
+    <Z>119.2425</Z>
+  </Location>
+  <Location>
+    <Name>Cenarion Post</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Hellfire Peninsula</Zone>
+    <SubZone>Cenarion Post</SubZone>
+    <Continent>Outland</Continent>
+    <Category>Quest Hubs</Category>
+    <X>-320.2679</X>
+    <Y>4725.988</Y>
+    <Z>18.16824</Z>
+  </Location>
+  <Location>
+    <Name>Cenarion Refuge</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Zangarmarsh</Zone>
+    <SubZone>Cenarion Refuge</SubZone>
+    <Continent>Outland</Continent>
+    <Category>Quest Hubs</Category>
+    <X>-202.5983</X>
+    <Y>5508.111</Y>
+    <Z>21.86022</Z>
+  </Location>
+  <Location>
+    <Name>Cenarion Refuge</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Zangarmarsh</Zone>
+    <SubZone>Cenarion Refuge</SubZone>
+    <Continent>Outland</Continent>
+    <Category>Mailboxes</Category>
+    <X>-202.5983</X>
+    <Y>5508.111</Y>
+    <Z>21.86022</Z>
+  </Location>
+  <Location>
+    <Name>Cenarion Refuge</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Zangarmarsh</Zone>
+    <SubZone>Cenarion Refuge</SubZone>
+    <Continent>Outland</Continent>
+    <Category>Inns</Category>
+    <X>-176.6821</X>
+    <Y>5526.377</Y>
+    <Z>29.40753</Z>
+  </Location>
+  <Location>
+    <Name>Orebor Harborage</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Zangarmarsh</Zone>
+    <SubZone>Orebor Harborage</SubZone>
+    <Continent>Outland</Continent>
+    <Category>Flight Paths</Category>
+    <X>968.0043</X>
+    <Y>7399.037</Y>
+    <Z>29.17698</Z>
+  </Location>
+  <Location>
+    <Name>Valiance Keep</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Borean Tundra</Zone>
+    <SubZone>Valiance Keep</SubZone>
+    <Continent>Northrend</Continent>
+    <Category>Inns</Category>
+    <X>2280.507</X>
+    <Y>5206.671</Y>
+    <Z>12.49455</Z>
+  </Location>
+  <Location>
+    <Name>Valiance Keep</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Borean Tundra</Zone>
+    <SubZone>Valiance Keep</SubZone>
+    <Continent>Northrend</Continent>
+    <Category>Mailboxes</Category>
+    <X>2260.188</X>
+    <Y>5198.95</Y>
+    <Z>11.34421</Z>
+  </Location>
+  <Location>
+    <Name>Valiance Keep</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Borean Tundra</Zone>
+    <SubZone>Valiance Keep</SubZone>
+    <Continent>Northrend</Continent>
+    <Category>Flight Paths</Category>
+    <X>2271.382</X>
+    <Y>5174.446</Y>
+    <Z>11.09377</Z>
+  </Location>
+  <Location>
+    <Name>Windrunner's Overlook</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Crystalsong Forest</Zone>
+    <SubZone>Windrunner's Overlook</SubZone>
+    <Continent>Northrend</Continent>
+    <Category>Flight Paths</Category>
+    <X>5035.65</X>
+    <Y>-519.96</Y>
+    <Z>225.41</Z>
+  </Location>
+  <Location>
+    <Name>Wintergarde Keep</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Dragonblight</Zone>
+    <SubZone>Wintergarde Keep</SubZone>
+    <Continent>Northrend</Continent>
+    <Category>Flight Paths</Category>
+    <X>3712.43</X>
+    <Y>-694.86</Y>
+    <Z>215.3607</Z>
+  </Location>
+  <Location>
+    <Name>Wintergarde Keep</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Dragonblight</Zone>
+    <SubZone>Wintergarde Keep</SubZone>
+    <Continent>Northrend</Continent>
+    <Category>Mailboxes</Category>
+    <X>3670.641</X>
+    <Y>-707.4363</Y>
+    <Z>213.5619</Z>
+  </Location>
+  <Location>
+    <Name>Wintergarde Keep</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Dragonblight</Zone>
+    <SubZone>Wintergarde Keep</SubZone>
+    <Continent>Northrend</Continent>
+    <Category>Inns</Category>
+    <X>3655.723</X>
+    <Y>-706.1531</Y>
+    <Z>215.0268</Z>
+  </Location>
+  <Location>
+    <Name>Amberpine Lodge</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Grizzly Hills</Zone>
+    <SubZone>Amberpine Lodge</SubZone>
+    <Continent>Northrend</Continent>
+    <Category>Flight Paths</Category>
+    <X>3446.35</X>
+    <Y>-2754.1</Y>
+    <Z>199.3691</Z>
+  </Location>
+  <Location>
+    <Name>Westfall Brigade Encampment</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Grizzly Hills</Zone>
+    <SubZone>Westfall Brigade Encampment</SubZone>
+    <Continent>Northrend</Continent>
+    <Category>Flight Paths</Category>
+    <X>4584.98</X>
+    <Y>-4254.69</Y>
+    <Z>182.2079</Z>
+  </Location>
+  <Location>
+    <Name>Zim'Torga</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Zul'Drak</Zone>
+    <SubZone>Zim'Torga</SubZone>
+    <Continent>Northrend</Continent>
+    <Category>Flight Paths</Category>
+    <X>5777.4</X>
+    <Y>-3594.94</Y>
+    <Z>386.69</Z>
+  </Location>
+  <Location>
+    <Name>Shadebough Repair</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Feralas</Zone>
+    <SubZone>Shadebough</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Vendors</Category>
+    <X>-4974.979</X>
+    <Y>83.15708</Y>
+    <Z>99.92654</Z>
+  </Location>
+  <Location>
+    <Name>Fishing</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Feralas</Zone>
+    <SubZone>Feathermoon Stronghold</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Profession Trainers</Category>
+    <X>-4286.494</X>
+    <Y>2295.364</Y>
+    <Z>9.410378</Z>
+  </Location>
+  <Location>
+    <Name>Feathermoon Stronghold</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Feralas</Zone>
+    <SubZone>Feathermoon Stronghold</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Vendors</Category>
+    <X>-4314.476</X>
+    <Y>2289.967</Y>
+    <Z>9.41041</Z>
+  </Location>
+  <Location>
+    <Name>Nijel's Point</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Desolace</Zone>
+    <SubZone>Nijel's Point</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Mailboxes</Category>
+    <X>246.3593</X>
+    <Y>1292.702</Y>
+    <Z>190.5956</Z>
+  </Location>
+  <Location>
+    <Name>Nijel's Point</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Desolace</Zone>
+    <SubZone>Nijel's Point</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Inns</Category>
+    <X>252.3537</X>
+    <Y>1253.791</Y>
+    <Z>193.0053</Z>
+  </Location>
+  <Location>
+    <Name>Nijel's Point Repair</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Desolace</Zone>
+    <SubZone>Nijel's Point</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Vendors</Category>
+    <X>200.8824</X>
+    <Y>1179.031</Y>
+    <Z>167.9984</Z>
+  </Location>
+  <Location>
+    <Name>Stardust Spire Repair</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Ashenvale</Zone>
+    <SubZone>Stardust Spire</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Vendors</Category>
+    <X>1931.812</X>
+    <Y>-305.1461</Y>
+    <Z>122.2376</Z>
+  </Location>
+  <Location>
+    <Name>Emerald Sanctuary Repair</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Felwood</Zone>
+    <SubZone>Emerald Sanctuary</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Vendors</Category>
+    <X>4000.173</X>
+    <Y>-1318.115</Y>
+    <Z>246.2254</Z>
+  </Location>
+  <Location>
+    <Name>Grove of the Ancients Repair</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Darkshore</Zone>
+    <SubZone>Grove of the Ancients</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Vendors</Category>
+    <X>5003.768</X>
+    <Y>88.73399</Y>
+    <Z>52.73409</Z>
+  </Location>
+  <Location>
+    <Name>Blacksmith</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Darkshore</Zone>
+    <SubZone>Lor'danel</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Profession Trainers</Category>
+    <X>7394.247</X>
+    <Y>-268.9009</Y>
+    <Z>4.999803</Z>
+  </Location>
+  <Location>
+    <Name>Lor'danel Repair</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Darkshore</Zone>
+    <SubZone>Lor'danel</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Vendors</Category>
+    <X>7391.086</X>
+    <Y>-263.7815</Y>
+    <Z>5.297585</Z>
+  </Location>
+  <Location>
+    <Name>Mining</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Darkshore</Zone>
+    <SubZone>Lor'danel</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Class Trainers</Category>
+    <X>7402.109</X>
+    <Y>-305.2948</Y>
+    <Z>4.955804</Z>
+  </Location>
+  <Location>
+    <Name>Ruins of Mathystra Repair</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Darkshore</Zone>
+    <SubZone>Ruins of Mathystra</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Vendors</Category>
+    <X>7373.325</X>
+    <Y>-801.2351</Y>
+    <Z>8.029804</Z>
+  </Location>
+  <Location>
+    <Name>Ruins of Mathystra</Name>
+    <Faction>Alliance</Faction>
+    <Zone>Darkshore</Zone>
+    <SubZone>Ruins of Mathystra</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Quest Hubs</Category>
+    <X>7380.717</X>
+    <Y>-796.8838</Y>
+    <Z>8.301307</Z>
+  </Location>
+  <Location>
+    <Name>Razor Hill Repair</Name>
+    <Faction>Horde</Faction>
+    <Zone>Durotar</Zone>
+    <SubZone>Razor Hill</SubZone>
+    <Continent>Kalimdor</Continent>
+    <Category>Vendors</Category>
+    <X>358.4594</X>
+    <Y>-4762.28</Y>
+    <Z>12.51148</Z>
+  </Location>
+</fnav>

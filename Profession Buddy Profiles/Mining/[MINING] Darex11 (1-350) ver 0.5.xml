@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Professionbuddy ChildrenCount="21">
+
+    <CustomAction Code="LevelbotSettings.Instance.LootMobs = false;" />
+    <CustomAction Code="LevelbotSettings.Instance.LootChests = false;" />
+	
+  <While Condition="TreeRoot.Current.Name != &quot;Gatherbuddy2&quot;" IgnoreCanRun="True" ChildrenCount="2">
+    <CustomAction Code="MessageBox.Show(&quot;[DAREX11]: Please switch bot to Gatherbuddy2&quot;);" />
+    <CustomAction Code="TreeRoot.Stop();" />
+  </While>
+  
+    <While Condition="Mining.Level == Mining.MaxLevel" IgnoreCanRun="True" ChildrenCount="1">
+		<CustomAction Code="GatherbuddySettings.Instance.GatherMinerals = false;" />
+    </While>
+  
+    <While Condition="Mining.Level != Mining.MaxLevel" IgnoreCanRun="True" ChildrenCount="1">
+		<CustomAction Code="GatherbuddySettings.Instance.GatherMinerals = true;" />
+    </While>
+  
+    <While Condition="Me.FreeNormalBagSlots &lt;=2" IgnoreCanRun="True" ChildrenCount="3">
+		<CustomAction Code="Log(&quot;[DAREX11]: Bags are full. I go deposit to bank&quot;);" />
+        <FlyToAction Dismount="True" X="1919.767" Y="-4685.278" Z="35.20311" />
+        <PutItemInBankAction Amount="0" Entry="0" NpcEntry="0" GuildTab="0" AutoFindBank="True" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="TradeGoods" Bank="Personal" X="0" Y="0" Z="0" />
+    </While>
+	
+  <If Condition="Mining.Level &lt; 65" IgnoreCanRun="True" ChildrenCount="2">
+    <CustomAction Code="Log(&quot;[DAREX11]: I start training. Good luck!&quot;);" />
+    <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Horde\(GB2 50-120)(Barrens.Horde)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+  </If>
+  
+  <If Condition="Mining.Level &gt;= 65" IgnoreCanRun="True" ChildrenCount="2">
+	<CustomAction Code="Log(&quot;[DAREX11]: Goal 65 mining done. Congratulations ! I now change profile&quot;);" />
+    <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Horde\(GB2 120-180)(Ashenvale.Horde)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+  </If>
+  
+  <If Condition="Mining.Level &gt;= 125" IgnoreCanRun="True" ChildrenCount="2">
+    <CustomAction Code="Log(&quot;[DAREX11]: Goal 125 mining done. Congratulations ! I now change profile&quot;);" />
+    <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Horde\(GB2 180-225)(SouthernBarrens.Horde)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+  </If>
+
+  <If Condition="Mining.Level &gt;= 175" IgnoreCanRun="True" ChildrenCount="2">
+    <CustomAction Code="Log(&quot;[DAREX11]: Goal 175 mining done. Congratulations ! I now change profile&quot;);" />
+    <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Horde\(GB2 225-275)(Felwood.Horde)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+  </If>
+  
+  <If Condition="Mining.Level &gt;= 235" IgnoreCanRun="True" ChildrenCount="2">
+    <CustomAction Code="Log(&quot;[DAREX11]: Goal 235 mining done. Congratulations ! I now change profile&quot;);" />
+    <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Horde\(GB2 270-300)(Winterspring.Horde)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />
+  </If>
+  
+   <If Condition="Mining.Level &gt;= 300 &amp;&amp; Me.MapId == 1" IgnoreCanRun="True" ChildrenCount="8">
+    <CustomAction Code="Log(&quot;[DAREX11]: Goal 300 mining done. Congratulations ! I now change profile. Actually fly to enter portal to Plasted Land&quot;);" />	
+    <FlyToAction Dismount="False" X="1660.853" Y="-4121.795" Z="134.7299" />
+    <FlyToAction Dismount="False" X="1628.559" Y="-4108.34" Z="95.12854" />
+    <FlyToAction Dismount="False" X="1668.573" Y="-4098.407" Z="68.68221" />
+    <FlyToAction Dismount="False" X="1664.87" Y="-4139.927" Z="59.3757" />
+    <FlyToAction Dismount="False" X="1679.104" Y="-4137.892" Z="66.10688" />
+    <FlyToAction Dismount="False" X="1687.523" Y="-4130.607" Z="66.34079" />
+    <InteractionAction Entry="195142" InteractDelay="2000" InteractType="GameObject" GameObjectType="Transport" SpellFocus="Anvil" />
+  </If>
+  
+   <If Condition="Mining.Level &gt;= 300 &amp;&amp; Me.MapId == 0" IgnoreCanRun="True" ChildrenCount="5">
+    <FlyToAction Dismount="False" X="-11869.5" Y="-3203.938" Z="-21.3311" />
+	<MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-11891.13" Y="-3206.698" Z="-14.8218" />
+	<MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="-11920.13" Y="-3206.698" Z="-14.8218" />
+    <FlyToAction Dismount="False" X="-246.8418" Y="948.8459" Z="84.37975" />	
+    <WaitAction Condition="Me.MapId == 0" Timeout="25000" />	
+  </If>
+  
+    <If Condition="Mining.Level &gt;= 300 &amp;&amp; Me.MapId == 530" IgnoreCanRun="True" ChildrenCount="3">
+	   <CustomAction Code="Log(&quot;[DAREX11]: Goal 300 mining done. Congratulations ! I now change profile&quot;);" />	
+	   <LoadProfileAction Path="HBProfiles\(GB2 1-300)Herb&amp;Mining\Neutral\(GB2 300-350)(Outlands.Neutral)Herb&amp;Mining.xml" ProfileType="Honorbuddy" />	
+	   <WaitAction Condition="Me.MapId == 530" Timeout="25000" />   
+    </If>	
+	
+    <If Condition="Mining.MaxLevel == 0" IgnoreCanRun="True" ChildrenCount="3">
+	  <CustomAction Code="Log(&quot;[DAREX11]: Need learn Mining. I go to trainer&quot;);" />
+	  <FlyToAction Dismount="True" X="2059.807" Y="-4765.928" Z="27.56209" />
+      <TrainSkillAction NpcEntry="3357" X="2081.978" Y="-4764.085" Z="27.92557" />
+    </If>
+	
+	<If Condition="InbagCount (2901) == 0" IgnoreCanRun="True" ChildrenCount="4">
+	  <CustomAction Code="Log(&quot;[DAREX11]: Pick don't found. I go buy it!&quot;);" />
+	  <MoveToAction MoveType="Location" Pathing="Navigator" Entry="0" X="2087.52" Y="-4769.45" Z="27.92924" />
+	  <InteractionAction Entry="3358" InteractDelay="0" InteractType="NPC" GameObjectType="Mailbox" SpellFocus="Anvil" />
+	  <BuyItemAction NpcEntry="0" X="0" Y="0" Z="0" Entry="2901" Count="1" BuyItemType="SpecificItem" />
+    </If>
+	  
+    <If Condition="Mining.Level &gt;= 50 &amp;&amp; Mining.MaxLevel == 75" IgnoreCanRun="True" ChildrenCount="3">
+	  <CustomAction Code="Log(&quot;[DAREX11]: Need training new skill Mining. I fly to Orgrimmar&quot;);" />
+      <FlyToAction Dismount="True" X="2059.807" Y="-4765.928" Z="27.56209" />
+      <TrainSkillAction NpcEntry="3357" X="2081.978" Y="-4764.085" Z="27.92557" />
+    </If>
+	
+    <If Condition="Mining.Level &gt;= 125 &amp;&amp; Mining.MaxLevel == 150" IgnoreCanRun="True" ChildrenCount="3">
+	  <CustomAction Code="Log(&quot;[DAREX11]: Need training new skill Mining. I fly to Orgrimmar&quot;);" />
+      <FlyToAction Dismount="True" X="2059.807" Y="-4765.928" Z="27.56209" />
+      <TrainSkillAction NpcEntry="3357" X="2081.978" Y="-4764.085" Z="27.92557" />
+    </If>
+	
+    <If Condition="Mining.Level &gt;= 200 &amp;&amp; Mining.MaxLevel == 225" IgnoreCanRun="True" ChildrenCount="3">
+	  <CustomAction Code="Log(&quot;[DAREX11]: Need training new skill Mining. I fly to Orgrimmar&quot;);" />
+      <FlyToAction Dismount="True" X="2059.807" Y="-4765.928" Z="27.56209" />
+      <TrainSkillAction NpcEntry="3357" X="2081.978" Y="-4764.085" Z="27.92557" />
+    </If>
+	
+    <If Condition="Mining.Level &gt;= 275 &amp;&amp; Mining.MaxLevel == 300 &amp;&amp; Me.MapId == 1" IgnoreCanRun="True" ChildrenCount="3">
+      <CustomAction Code="Log(&quot;[DAREX11]: Need training new skill Mining. I fly to Orgrimmar&quot;);" />
+      <FlyToAction Dismount="True" X="2059.807" Y="-4765.928" Z="27.56209" />
+      <TrainSkillAction NpcEntry="3357" X="2081.978" Y="-4764.085" Z="27.92557" />
+    </If>
+	
+    <If Condition="Mining.Level &gt;= 350 &amp;&amp; Mining.MaxLevel == 375 &amp;&amp; Me.MapId == 530" IgnoreCanRun="True" ChildrenCount="3">
+      <CustomAction Code="Log(&quot;[DAREX11]: Need training new skill Mining. I fly to Thrallmar&quot;);" />
+      <FlyToAction Dismount="False" X="184.0248" Y="2675.708" Z="88.89044" /> 
+      <TrainSkillAction NpcEntry="18747" X="186.7552" Y="2676.357" Z="88.8905" />
+    </If>
+	
+</Professionbuddy>

@@ -1,0 +1,100 @@
+<HBProfile>
+	<Name>Twilight Higland - Lake+River Flying Mount v2.0 by Cicro</Name>
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>1</MinFreeBagSlots>
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+	<ProtectedItems>
+		<Item name="Fishing Pole" entry="6256" />
+		<Item name="Mastercraft Kalu'ak Fishing Pole" entry="44050" />
+		<Item name="Arcanite Fishing Pole" entry="19970" />
+		<Item name="Bone Fishing Pole" entry="45991" />
+		<Item name="Jeweled Fishing Pole" entry="45992" />
+		<Item name="Nat's Lucky Fishing Pole" entry="45858" />
+		<Item name="Seth's Graphite Fishing Pole" entry="25978" />
+		<Item name="Big Iron Fishing Pole" entry="6367" />
+		<Item name="Blump Family Fishing Pole" entry="12225" />
+		<Item name="Darkwood Fishing Pole" entry="6366" />
+		<Item name="Jonathan's Fishing Pole" entry="52678" />
+		<Item name="Strong Fishing Pole" entry="6365" />
+		<Item name="Staats' Fishing Pole" entry="46337" />
+	</ProtectedItems>
+	<SubProfile>
+		<Name>Twilight Higland - Lake+River Flying Mount</Name>
+		<MinLevel>1</MinLevel>
+		<MaxLevel>87</MaxLevel>
+		<TargetMinLevel>87</TargetMinLevel>
+		<Factions>7 </Factions>
+		<Hotspots>
+<Hotspot X="-4348.584" Y="-4301.293" Z="326.8285" />
+<Hotspot X="-4429.741" Y="-4191.639" Z="329.8522" />
+<Hotspot X="-4499.036" Y="-4070.736" Z="326.6502" />
+<Hotspot X="-4499.798" Y="-4003.372" Z="326.1856" />
+<Hotspot X="-4485.379" Y="-3942.631" Z="327.1496" />
+<Hotspot X="-4486.055" Y="-3885.268" Z="326.8368" />
+<Hotspot X="-4476.039" Y="-3857.236" Z="325.3004" />
+<Hotspot X="-4437.106" Y="-3831.54" Z="327.3283" />
+<Hotspot X="-4385.97" Y="-3836.645" Z="327.5497" />
+<Hotspot X="-4333.438" Y="-3865.796" Z="328.2029" />
+<Hotspot X="-4303.333" Y="-3913.689" Z="326.9878" />
+<Hotspot X="-4248.998" Y="-4079.927" Z="334.9294" />
+<Hotspot X="-4155.625" Y="-4176.566" Z="328.8883" />
+<Hotspot X="-4147.482" Y="-4238.458" Z="328.7191" />
+<Hotspot X="-4184.977" Y="-4294.874" Z="328.8689" />
+<Hotspot X="-4239.157" Y="-4414.75" Z="339.4695" />
+<Hotspot X="-4149.499" Y="-4544.322" Z="115.6897" />
+<Hotspot X="-4064.424" Y="-4658.842" Z="109.0354" />
+<Hotspot X="-3990.989" Y="-4761.417" Z="102.9145" />
+<Hotspot X="-3876.799" Y="-4855.581" Z="71.97092" />
+<Hotspot X="-3816.315" Y="-4993.86" Z="55.9284" />
+<Hotspot X="-3771.859" Y="-5018.519" Z="52.66541" />
+<Hotspot X="-3672.099" Y="-5039.914" Z="43.16821" />
+<Hotspot X="-3612.856" Y="-5081.843" Z="37.33745" />
+<Hotspot X="-3503.042" Y="-5256.238" Z="34.58245" />
+<Hotspot X="-3440.765" Y="-5318.679" Z="15.96694" />
+<Hotspot X="-3438.042" Y="-5451.438" Z="18.16247" />
+<Hotspot X="-3749.505" Y="-5956.927" Z="20.74659" />
+<Hotspot X="-3958.823" Y="-6039.341" Z="22.7376" />
+<Hotspot X="-4198.688" Y="-6053.173" Z="4.388871" />
+<Hotspot X="-4291.868" Y="-6117.066" Z="5.784261" />
+<Hotspot X="-4338.387" Y="-6223.991" Z="4.997891" />
+<Hotspot X="-4332.153" Y="-6322.224" Z="8.109123" />
+<Hotspot X="-4278.139" Y="-6469.452" Z="7.602482" />
+<Hotspot X="-4249.107" Y="-6521.525" Z="6.780975" />
+<Hotspot X="-4286.252" Y="-6416.507" Z="7.694417" />
+<Hotspot X="-4351.403" Y="-6299.111" Z="6.561498" />
+<Hotspot X="-4295.081" Y="-6118.063" Z="7.833792" />
+<Hotspot X="-4115.77" Y="-6011.213" Z="10.30646" />
+<Hotspot X="-3859.537" Y="-5962.099" Z="16.59479" />
+<Hotspot X="-3543.692" Y="-5676.328" Z="18.85489" />
+<Hotspot X="-3457.068" Y="-5512.76" Z="23.52668" />
+<Hotspot X="-3446.656" Y="-5322.681" Z="20.81303" />
+<Hotspot X="-3499.453" Y="-5240.478" Z="45.54766" />
+<Hotspot X="-3657.88" Y="-5061.661" Z="45.30154" />
+<Hotspot X="-3809.759" Y="-4998.357" Z="55.65456" />
+<Hotspot X="-3965.187" Y="-4782.711" Z="97.34404" />
+<Hotspot X="-4164.399" Y="-4523.365" Z="120.3236" />
+<Hotspot X="-4234.899" Y="-4430.384" Z="337.987" />
+<Hotspot X="-4261.686" Y="-4371.098" Z="334.338" />
+
+
+
+		</Hotspots>
+		<Vendors>
+
+		</Vendors>
+		<Blackspots>
+
+		</Blackspots>
+		<AvoidMobs>
+
+		</AvoidMobs>
+		<Mailboxes>
+		</Mailboxes>
+	</SubProfile>
+</HBProfile>

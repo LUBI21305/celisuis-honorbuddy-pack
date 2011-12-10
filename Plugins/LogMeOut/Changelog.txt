@@ -1,0 +1,16 @@
+LogMeOut! Changelog - written by ZenLulz
+-----------------------------------------
+1.1.1
+	- The timeout when the bot logs out is now correctly set to 5 minutes
+1.1
+	- Updater embedded
+	- Showing the name of the attacker and the bot's position when he dies
+	- Detect if another player is following/targeting the bot
+	- Every time HonorBuddy starts, LogMeOut! writes why the bot was logged out (only if the shutdown was launched by LogMeOut!)
+	- Possibility to add a beep when triggers fire
+	- Can ignore the number of death in BGs
+	- Case fixed : Don't get the elapsed time correctly if you start the bot before enable the plugin
+	- A timeout has been added if the bot get stucked during the lougout process (5 minutes)
+
+1.0
+	- First release

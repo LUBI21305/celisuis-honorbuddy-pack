@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Manifest>
+  <File>
+    <Path>\Gui\DBWConfig.cs</Path>
+    <Hash>692C9BBF51C70EDF9D17FFEE9D521248</Hash>
+  </File>
+  <File>
+    <Path>\Gui\DBWConfig.Designer.cs</Path>
+    <Hash>FCD64617938BF008631E6B9FA5A04702</Hash>
+  </File>
+  <File>
+    <Path>\Gui\DBWConfig.resx</Path>
+    <Hash>E96961F29304E6B7E5ABEB0F47F6A9B1</Hash>
+  </File>
+  <File>
+    <Path>\AutoUpdater.cs</Path>
+    <Hash>FB37EAA5E787CB4856ED9B67457C5169</Hash>
+  </File>
+  <File>
+    <Path>\DBWarlock.config</Path>
+    <Hash>B28C8A3508104B7D31A1C95336A05C57</Hash>
+  </File>
+  <File>
+    <Path>\SpellPriority.cs</Path>
+    <Hash>BE61793258CFB24C7AA0DB95A61C5831</Hash>
+  </File>
+  <File>
+    <Path>\Warlock.cs</Path>
+    <Hash>4985ABBE80B3B54578E2F72A51C54547</Hash>
+  </File>
+  <File>
+    <Path>\Warlock.Methods.cs</Path>
+    <Hash>E096E05289EE454A855B36F535B0DE79</Hash>
+  </File>
+  <File>
+    <Path>\WarlockSettings.cs</Path>
+    <Hash>454974BB755E471077D95BCA60D9D19A</Hash>
+  </File>
+</Manifest>

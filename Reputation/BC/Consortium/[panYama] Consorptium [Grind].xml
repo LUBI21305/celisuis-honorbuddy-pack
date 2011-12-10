@@ -1,0 +1,144 @@
+   <!--
+      PROFILE README:
+         * When using this profile, be certain to set the HonorBuddy bot to (select only one):
+                [*] Grinding
+                [ ] Questing
+                [ ] PvP
+   
+         * This profile is appropriate for:
+                [ ] Leveling
+                [ ] PvP
+				[ ] Questing
+				[*] Reputation
+		
+		
+		PROFILE FEATURES:
+         * An estimate of approx. 20-24 hours to get to Exalted.
+		 
+		 * A collection of Epics and Blue's for lvl 70 (http://www.wowhead.com/faction=933)
+		 
+		 * A Achievement for getting Exalted with Consortium.
+            
+			
+		PROFILE WARNINGS:
+         * DO NOT run this profile any other then Grinding bot. Using something else will result in errors.
+  
+         * DO NOT post bugs that are NOT related to this profile by any means, they will get ignored. Bugs that are ment for this profile will be listed and fixed, so the profile
+		 can be updated to run smoothly.
+		 
+		 
+		 PROFILE CHANGELOG:
+		 * v2.0 Profile Overhaul
+			Date: December 28th
+			* Since WoW has change so has HB, since it was such a mess, I rewritten this whole profile.
+			
+		 * v2.1 Changed tags to current database
+			Date: Januari 28th
+			* Making changes to the whole template to make it cleaner and useable again.
+    -->
+<HBProfile>
+		<Name>panYama's Consortium</Name>
+		
+		<!-- General Configuration -->
+		<MinDurability>0.4</MinDurability> 
+		<MinFreeBagSlots>4</MinFreeBagSlots>
+		<MinLevel>75</MinLevel>
+		<MaxLevel>86</MaxLevel>
+		
+		<!-- Vendor Configuration -->
+		<SellGrey>True</SellGrey>
+		<SellWhite>True</SellWhite>
+		<SellGreen>False</SellGreen>
+		<SellBlue>False</SellBlue>
+		<SellPurple>False</SellPurple>
+		
+		 <!-- Mail Configuration -->
+		<MailWhite>True</MailWhite>
+		<MailGreen>True</MailGreen>
+		<MailBlue>True</MailBlue>
+		<MailPurple>True</MailPurple>
+				
+		<!-- Protected Items Configuration -->
+		<ProtectedItems>    
+			<Item>4304</Item>
+			<Item>4234</Item>
+			<Item>1645</Item>   
+			<Item>33454</Item>
+		</ProtectedItems>
+		
+		<!-- EliteMob Configuration -->
+		<TargetElites>False</TargetElites>
+		
+		<!-- AvoidMob Configuration -->
+		<AvoidMobs>
+			<AvoidMob Name="Living Cyclone" Entry="17160" />
+			<AvoidMob Name="Mountain Gronn" Entry="19201" />
+		</AvoidMobs>
+		
+		<!-- Vendor Configuration -->
+		<Vendors>
+			<!-- Type: Repair -->
+			<Vendor Name="Paulsta'ats" Entry="23007" Type="Repair" X="-2054.747" Y="8609.072" Z="22.16224" />
+		</Vendors>
+		
+		<!-- Grind Configuration -->
+	   <GrindArea>
+		   <TargetMinLevel>60</TargetMinLevel>
+		   <TargetMaxLevel>86</TargetMaxLevel>
+		   <Factions>1693</Factions>
+		   <MaxDistance>80</MaxDistance>
+		   <RandomizeHotspots>False</RandomizeHotspots>
+				<Hotspots>
+				<!-- Grind normal -->
+				<Hotspot X="-1070.396" Y="8764.97" Z="87.40279" />
+				<Hotspot X="-1058.625" Y="8831.354" Z="105.1017" />
+				<Hotspot X="-1077.687" Y="8914.648" Z="102.6336" />
+				<Hotspot X="-1073.895" Y="8970.104" Z="101.173" />
+				<Hotspot X="-1024.35" Y="8990.742" Z="95.34889" />
+				<Hotspot X="-984.4323" Y="8952.002" Z="100.2656" />
+				<Hotspot X="-1097.228" Y="8968.354" Z="104.7172" />
+				<Hotspot X="-1000.992" Y="8871.263" Z="138.0809" />
+				<Hotspot X="-894.5291" Y="8924.317" Z="153.4185" />
+				<Hotspot X="-803.6417" Y="8894.978" Z="178.1363" />
+				<Hotspot X="-826.2312" Y="8866.525" Z="183.7398" />
+				<Hotspot X="-810.2722" Y="8820.603" Z="183.0186" />
+				<Hotspot X="-783.8132" Y="8764.504" Z="189.3472" />
+				<Hotspot X="-728.1994" Y="8754.762" Z="185.4833" />
+				<Hotspot X="-697.8544" Y="8690.127" Z="164.9163" />
+				<Hotspot X="-679.4695" Y="8804.257" Z="192.8519" />
+				<!-- Grind tunnel 1# -->	
+				<Hotspot X="-835.2336" Y="8767.28" Z="178.6105" />
+				<Hotspot X="-869.5895" Y="8751.365" Z="174.3792" />
+				<Hotspot X="-880.6052" Y="8701.749" Z="172.4872" />
+				<Hotspot X="-915.7034" Y="8670.726" Z="171.4047" />
+				<Hotspot X="-849.3988" Y="8716.124" Z="177.2111" />
+				<Hotspot X="-818.1047" Y="8727.896" Z="178.2141" />
+				<!-- Grind tunnel 2# -->	
+				<Hotspot X="-613.1221" Y="8804.754" Z="202.0898" />
+				<Hotspot X="-576.1516" Y="8855.539" Z="210.3957" />
+				<Hotspot X="-516.9886" Y="8868.445" Z="207.7128" />
+				<Hotspot X="-493.2357" Y="8866.404" Z="204.9469" />
+				<Hotspot X="-458.22" Y="8802.631" Z="198.7301" />
+				<Hotspot X="-444.2608" Y="8718.248" Z="183.7371" />
+				<Hotspot X="-379.9301" Y="8749.276" Z="204.4163" />
+				<Hotspot X="-426.2898" Y="8819.208" Z="221.5058" />
+				<Hotspot X="-444.8234" Y="8863.632" Z="224.6348" />
+				<Hotspot X="-484.4931" Y="8888.67" Z="225.703" />
+				<Hotspot X="-541.4457" Y="8876.327" Z="230.1818" />
+				<Hotspot X="-520.4193" Y="8845.367" Z="234.6516" />
+				<Hotspot X="-479.7154" Y="8849.625" Z="239.6473" />
+				</Hotspots>
+		</GrindArea>	
+					
+				
+		<!-- Blackspot Configuration -->
+		<BlackSpots>
+			<Blackspot X="-502.759" Y="8884.553" Z="227.1713" Radius="4" />
+			<Blackspot X="-509.3953" Y="8886.236" Z="227.9266" Radius="4" />
+			<Blackspot X="-518.8105" Y="8885.918" Z="229.0405" Radius="4" />
+			<Blackspot X="-527.1234" Y="8882.833" Z="229.8404" Radius="6" />
+			<Blackspot X="-536.1481" Y="8876.563" Z="229.7449" Radius="6" />
+			<Blackspot X="-538.592" Y="8866.002" Z="228.7124" Radius="6" />
+		</BlackSpots>
+
+</HBProfile>

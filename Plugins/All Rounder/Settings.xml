@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+  <Option Value="useMilling" Set="false" />
+  <Option Value="useInking" Set="false" />
+  <Option Value="useProspecting" Set="false" /> 
+  <Option Value="useMail" Set="false"/>
+  <Option Value="useDisenchant" Set ="false"/>
+  <Option Value="useGuildw" Set="false"/>
+  <Option Value="useDarkmoon" Set="false" />  
+  <Option Value="useDarkmoon" Set="false"/>
+  <Option Value="useGuilddeposit" Set="false" />
+  <Option Value="useAutosmelt" Set="False" />
+  <Option Value="useEternals" Set="False" />
+  <Option Value="useSewingHelp" Set="False" />
+  <Option Value="useSkinningHelp" Set="False" />
+  <Option Value="useFortune" Set="False" />
+  <Option Value="useInkvend" Set="False" />
+  <Option Value="usePapervend" Set="False" />
+  </Settings>

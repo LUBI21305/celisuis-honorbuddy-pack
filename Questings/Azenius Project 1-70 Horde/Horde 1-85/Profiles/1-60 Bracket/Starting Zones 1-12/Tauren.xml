@@ -1,0 +1,459 @@
+<HBProfile>
+   <Name>The Azenius Project [Tauren]</Name>
+   <MinLevel>1</MinLevel>
+   <MaxLevel>13</MaxLevel>
+   <MinDurability>0.4</MinDurability>
+   <MinFreeBagSlots>2</MinFreeBagSlots>
+    
+   <MailGrey>False</MailGrey>
+   <MailWhite>False</MailWhite>
+   <MailGreen>False</MailGreen>
+   <MailBlue>True</MailBlue>
+   <MailPurple>True</MailPurple>
+   
+   <SellGrey>True</SellGrey>
+   <SellWhite>True</SellWhite>
+   <SellGreen>False</SellGreen>
+   <SellBlue>False</SellBlue>
+   <SellPurple>False</SellPurple>
+   
+   <TargetElites>False</TargetElites>
+
+   <ContinentID>1</ContinentID> <!-- Kalimdor -->
+   
+   <Mailboxes>
+        <Mailbox X="-2898.267" Y="-239.2811" Z="60.12371" /> <!-- Camp Narache -->
+   </Mailboxes>
+   
+
+<!-- Vendors and trainers -->
+   <Vendors> 
+ <!-- Camp Narache -->
+
+<!-- Camp Narache Vendors -->
+<Vendor Name="Marjak Keenblade" Entry="3073" Type="Repair" X="-2926.32" Y="-215.72" Z="61.07586" />
+<Vendor Name="Moodan Sungrain" Entry="3883" Type="Food" X="-2942.083" Y="-243.3767" Z="59.66914" />
+<!-- Camp Narache Trainers-->
+<Vendor Name="Harutt Thunderhorn" Entry="3059" Type="Train" TrainClass="Warrior" X="-2912.415" Y="-247.7344" Z="59.72438" />
+<Vendor Name="Sunwalker Helaku" Entry="37737" Type="Train" TrainClass="Paladin" X="-2905.906" Y="-246.2292" Z="59.80151" />
+<Vendor Name="Seer Ravenfeather" Entry="37724" Type="Train" TrainClass="Priest" X="-2900.104" Y="-247.8229" Z="59.78636" />
+<Vendor Name="Meela Dawnstrider" Entry="3062" Type="Train" TrainClass="Shaman" X="-2895.839" Y="-253.2118" Z="59.74339" />
+<Vendor Name="Gart Mistrunner" Entry="3060" Type="Train" TrainClass="Druid" X="-2898.491" Y="-260.25" Z="59.6141" />
+<Vendor Name="Lanka Farshot" Entry="3061" Type="Train" TrainClass="Hunter" X="-2904.892" Y="-263.3472" Z="59.51458" />
+ <!-- Bloodhof Village -->
+
+ <!-- Bloodhoof Village Vendors-->
+<Vendor Name="Harant Ironbrace" Entry="3080" Type="Repair" X="-2284.468" Y="-310.2602" Z="-9.424723" />
+<Vendor Name="Moorat Longstride" Entry="3076" Type="Food" X="-2247.812" Y="-308.1569" Z="-9.424822" />
+<!-- Bloodhoof Village Trainers-->
+<Vendor Name="Tarl Cloudsong" Entry="51637" Type="Train" TrainClass="Shaman" X="-2298.96" Y="-437.7421" Z="-5.438281" />
+<Vendor Name="Gennia Runetotem" Entry="3064" Type="Train" TrainClass="Druid" X="-2315.745" Y="-442.6335" Z="-5.438281" />
+<Vendor Name="Sunwalker Iopi" Entry="43013" Type="Train" TrainClass="Paladin" X="-2309.479" Y="-454.5504" Z="-5.437756" />
+<Vendor Name="Seer Alsoomse" Entry="43015" Type="Train" TrainClass="Priest" X="-2301.691" Y="-452.6441" Z="-5.438269" />
+<Vendor Name="Krang Stonehoof" Entry="3063" Type="Train" TrainClass="Warrior" X="-2347.98" Y="-495.9203" Z="-9.047392" />
+<Vendor Name="Yaw Sharpmane" Entry="3065" Type="Train" TrainClass="Hunter" X="-2180.222" Y="-408.8162" Z="-4.601451" />
+<!-- Razor Hill Vendors -->
+   <Vendor Name="Wuark" Entry="3167" Type="Repair" X="358.1284" Y="-4706.727" Z="14.3939" />
+   <Vendor Name="Innkeeper Grosk" Entry="6928" Type="Food" X="340.3629" Y="-4686.287" Z="16.48974" />
+   <!-- Razor Hill Trainers -->
+   <Vendor Name="Tarshaw Jaggedscar" Entry="3169" Type="Train" TrainClass="Warrior" X="311.3524" Y="-4827.792" Z="9.580672" />
+   <Vendor Name="Tai'jin" Entry="3706" Type="Train" TrainClass="Priest" X="294.8838" Y="-4831.495" Z="10.52395" />  
+   <Vendor Name="Swart" Entry="3173" Type="Train" TrainClass="Shaman" X="307.1142" Y="-4839.906" Z="10.52459" />
+   <Vendor Name="Un'Thuwa" Entry="5880" Type="Train" TrainClass="Mage" X="334.717" Y="-4767.622" Z="12.63539" />
+   <Vendor Name="Jabul" Entry="44380" Type="Train" TrainClass="Druid" X="342.061" Y="-4771.4" Z="12.6346" />
+   <Vendor Name="Dhugru Gorelust" Entry="3172" Type="Train" TrainClass="Warlock" X="356.192" Y="-4837.954" Z="11.08916" />
+</Vendors>
+
+	<AvoidMobs>
+ <!-- Camp Narache -->
+	</AvoidMobs>
+   
+	<Blackspots>
+        <!-- Gets stuck in a Meat Rack -->
+	<Blackspot X="-2402.485" Y="-399.1347" Z="-2.200567" Radius="5.970284" />
+	</Blackspots>
+   
+<Quest Id="11129" Name="Kyle's Gone Missing">
+		<Objective Type="CollectItem" ItemId="33009" CollectCount="1">
+			<Hotspots>
+				<Hotspot X="-2401.864" Y="-683.5173" Z="-5.595833" />
+				<Hotspot X="-2464.954" Y="-756.9886" Z="-3.039775" />
+			</Hotspots>
+		</Objective>
+	</Quest>  
+
+   <QuestOrder>
+ <!-- Camp Narache -->
+ 
+ <CustomBehavior File="UserSettings" LootMobs="True" UseMount="True" PullDistance="30" />
+		<CustomBehavior File="UserSettings" LootMobs="True" TrainNewSkills="False" LearnFlightPaths="True" UseFlightPaths="False" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Azenius Questing Profiles (Kalimdor = Mulgore - Tauren Profile Loaded)." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Compiling Quests." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning off auto-train." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting UseFlightPaths to false." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting LearnFlightPaths to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting LootMobs to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting UseMount to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting PullDistance to 30." />
+		
+       <PickUp QuestName="The First Step" QuestId="14449" GiverName="Chief Hawkwind" GiverId="2981" />
+               <TurnIn QuestName="The First Step" QuestId="14449" TurnInName="Grull Hawkwind" TurnInId="2980" />
+
+       <PickUp QuestName="Rite of Strength" QuestId="14452" GiverName="Bristleback Invaders" GiverId="2980" />
+                     <Objective QuestName="Rite of Strength" QuestId="14452" Type="KillMob" MobId="2952" KillCount="6" />
+               <TurnIn QuestName="Rite of Strength" QuestId="14452" TurnInName="Grull Hawkwind" TurnInId="2980" />
+
+       <PickUp QuestName="Our Tribe, Imprisoned" QuestId="24852" GiverName="Grull Hawkwind" GiverId="2980" />
+                     <Objective QuestName="Our Tribe, Imprisoned" QuestId="24852" Type="UseObject" ObjectId="202112" UseCount="4" />
+               <TurnIn QuestName="Our Tribe, Imprisoned" QuestId="24852" TurnInName="Grull Hawkwind" TurnInId="2980" />
+
+       <PickUp QuestName="Go to Adana" QuestId="14458" GiverName="Grull Hawkwind" GiverId="2980" />
+               <TurnIn QuestName="Go to Adana" QuestId="14458" TurnInName="Adana Thunderhorn" TurnInId="36694" />
+
+       <PickUp QuestName="Rite of Courage" QuestId="14456" GiverName="Adana Thunderhorn" GiverId="36694" />
+       <PickUp QuestName="Stop the Thorncallers" QuestId="14455" GiverName="Adana Thunderhorn" GiverId="36694" />
+                     <Objective QuestName="Rite of Courage" QuestId="14456" Type="CollectItem" ItemId="49535" CollectCount="7" />
+                     <Objective QuestName="Stop the Thorncallers" QuestId="14455" Type="KillMob" MobId="36697" KillCount="7" />
+               <TurnIn QuestName="Rite of Courage" QuestId="14456" TurnInName="Adana Thunderhorn" TurnInId="36694" />
+               <TurnIn QuestName="Stop the Thorncallers" QuestId="14455" TurnInName="Adana Thunderhorn" TurnInId="36694" />
+
+       <PickUp QuestName="The Battleboars" QuestId="14459" GiverName="Adana Thunderhorn" GiverId="36694" />       
+       <PickUp QuestName="Feed of Evil" QuestId="14461" GiverName="Adana Thunderhorn" GiverId="36694" />
+
+<If Condition="Me.Class == WoWClass.Hunter">
+		<PickUp QuestName="Etched Note" QuestId="3092" GiverName="Rohaku Stonehoof" GiverId="44927" />
+
+	<ElseIf Condition="Me.Class == WoWClass.Paladin">
+		<PickUp QuestName="Consecrated Note" QuestId="27015" GiverName="Rohaku Stonehoof" GiverId="44927" />
+	</ElseIf>
+
+	<ElseIf Condition="Me.Class == WoWClass.Priest">
+		<PickUp QuestName="Hallowed Note" QuestId="27014" GiverName="Rohaku Stonehoof" GiverId="44927" />
+	</ElseIf>
+
+	<ElseIf Condition="Me.Class == WoWClass.Warrior">
+		<PickUp QuestName="Simple Note" QuestId="3091" GiverName="Rohaku Stonehoof" GiverId="44927" />
+	</ElseIf>
+
+	<ElseIf Condition="Me.Class == WoWClass.Druid">
+		<PickUp QuestName="Verdant Note" QuestId="3094" GiverName="Rohaku Stonehoof" GiverId="44927" />
+	</ElseIf>
+
+	<ElseIf Condition="Me.Class == WoWClass.Shaman">
+		<PickUp QuestName="Rune-Inscribed Note" QuestId="3093" GiverName="Rohaku Stonehoof" GiverId="44927" />
+	</ElseIf>
+
+
+	</If>
+                     <UseItem ItemId="49539" QuestName="Feed of Evil" QuestId="14461" X="-3402.287" Y="-265.6391" Z="61.41732" />
+	             <UseItem ItemId="49539" QuestName="Feed of Evil" QuestId="14461" X="-3359.096" Y="-239.2343" Z="61.67306" />
+	             <UseItem ItemId="49539" QuestName="Feed of Evil" QuestId="14461" X="-3384.705" Y="-210.0777" Z="61.68301" />
+                     <Objective QuestName="The Battleboars" QuestId="14459" Type="KillMob" MobId="36696" KillCount="10" />
+               <TurnIn QuestName="Feed of Evil" QuestId="14461" TurnInName="Adana Thunderhorn" TurnInId="36694" />
+               <TurnIn QuestName="The Battleboars" QuestId="14459" TurnInName="Adana Thunderhorn" TurnInId="36694" />
+
+<SetGrindArea>
+      <GrindArea>
+        <TargetMinLevel>3</TargetMinLevel>
+        <TargetMaxLevel>4</TargetMaxLevel>
+	<Factions>189</Factions>
+       <Hotspots>
+    		<Hotspot X="-3388.907" Y="-249.1891" Z="60.7123" />
+  	</Hotspots>
+      </GrindArea>
+    </SetGrindArea>
+<GrindTo Level="5" />
+<Checkpoint Level="5" />
+
+<PickUp QuestName="Rite of Honor" QuestId="14460" GiverName="Adana Thunderhorn" GiverId="36694" />
+
+<If Condition="(HasQuest(14460))" >
+<PickUp QuestName="Rite of Honor" QuestId="14460" GiverName="Adana Thunderhorn" GiverId="36694" />
+<CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="False" />
+<CustomBehavior File="WaitTimer" WaitTime="1000"/>
+                </If>
+
+       <PickUp QuestName="Rite of Honor" QuestId="14460" GiverName="Adana Thunderhorn" GiverId="36694" />
+                     <Objective QuestName="Rite of Honor" QuestId="14460" Type="CollectItem" ItemId="50473" CollectCount="1" />
+               <TurnIn QuestName="Rite of Honor" QuestId="14460" TurnInName="Chief Hawkwind" TurnInId="2981" />
+       
+       <PickUp QuestName="Last Rites, First Rites" QuestId="24861" GiverName="Chief Hawkwind" GiverId="2981" />
+               <If Condition="((HasQuest(24861)) &amp;&amp; (!IsQuestCompleted(24861)))" >
+                     <!--UseItem ItemId="50465" QuestName="Last Rites, First Rites" QuestId="24861" X="-2907.939" Y="-254.3848" Z="59.73428" -->
+		     <CustomBehavior File="UseItem" QuestId="24861" ItemId="50465" NumOfTimes="1" WaitTime="1000" X="-2907.939" Y="-254.3848" Z="59.73428" />
+             </If>
+               <TurnIn QuestName="Last Rites, First Rites" QuestId="24861" TurnInName="Chief Hawkwind" TurnInId="2981" />
+       <PickUp QuestName="Rites of the Earthmother" QuestId="23733" GiverName="Chief Hawkwind" GiverId="2981" />
+
+<If Condition="Me.Class == WoWClass.Hunter">
+		<TurnIn QuestName="Etched Note" QuestId="3092" TurnInName="Lanka Farshot" TurnInId="3061" />
+                <PickUp QuestName="The Hunter's Path" QuestId="27021" GiverName="Lanka Farshot" GiverId="3061" />
+
+<If Condition="!HasSpell(56641)">
+			<CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="False" />
+                        <CustomBehavior File="WaitTimer" WaitTime="1000"/>
+		</If>
+
+		<CustomBehavior File="CastSpellOn" QuestId="27021" SpellId="56641" MobId="44848" NumOfTimes="5" MobHpPercentLeft="100" MinRange="7" X="-2869.347" Y="-249.1271" Z="59.95384" />
+		<TurnIn QuestName="The Hunter's Path" QuestId="27021" TurnInName="Lanka Farshot" TurnInId="3061" />
+                
+	<ElseIf Condition="Me.Class == WoWClass.Paladin">
+		<TurnIn QuestName="Consecrated Note" QuestId="27015" TurnInName="Sunwalker Helaku" TurnInId="37737" />
+                 <PickUp QuestName="The Way of the Sunwalkers" QuestId="27023" GiverName="Sunwalker Helaku" GiverId="37737" />
+
+<If Condition="!HasSpell(20271)">
+			<CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="False" />
+		</If>
+		<While Condition="HasQuest(27023) &amp;&amp; !IsQuestCompleted(27023)">
+		<If Condition="!HasAura(&quot;Seal of Righteousness&quot;)">
+			<CustomBehavior File="RunMacro" Macro="/cast Seal of Righteousness" NumOfTimes="1" />
+		</If>
+		<CustomBehavior File="CastSpellOn" SpellId="20271" MobId="44848" NumOfTimes="1" MobHpPercentLeft="100" MinRange="3" Range="5" X="-2869.347" Y="-249.1271" Z="59.95384" />
+		</While>
+		<TurnIn QuestName="The Way of the Sunwalkers" QuestId="27023" TurnInName="Sunwalker Helaku" TurnInId="37737" />
+	</ElseIf>
+
+	<ElseIf Condition="Me.Class == WoWClass.Priest">
+		<TurnIn QuestName="Hallowed Note" QuestId="27014" TurnInName="Seer Ravenfeather" TurnInId="37724" />
+                <PickUp QuestName="Healing in a Flash" QuestId="27066" GiverName="Seer Ravenfeather" GiverId="37724" />
+
+<If Condition="!HasSpell(2061)">
+			<CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="False" />
+		</If>
+
+		<CustomBehavior File="CastSpellOn" QuestId="27066" SpellId="2061" MobId="45199" NumOfTimes="5" MobHpPercentLeft="100" MinRange="8" X="-2880.177" Y="-225.9676" Z="61.34525" />
+		<TurnIn QuestName="Healing in a Flash" QuestId="27066" TurnInName="Seer Ravenfeather" TurnInId="37724" />
+	</ElseIf>
+
+	<ElseIf Condition="Me.Class == WoWClass.Warrior">
+		<TurnIn QuestName="Simple Note" QuestId="3091" TurnInName="Harutt Thunderhorn" TurnInId="3059" />
+                <PickUp QuestName="The First Lesson" QuestId="27020" GiverName="Harutt Thunderhorn" GiverId="3059" />
+
+<If Condition="!HasSpell(100)">
+			<CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="False" />
+		</If>
+	<While Condition="HasQuest(27020) &amp;&amp; !IsQuestCompleted(27020)">
+                <RunTo X="-2871.837" Y="-248.5042" Z="60.14921" />
+                <CustomBehavior File="RunMacro" Macro="/target Training Dummy" NumOfTimes="1" WaitTime="1000"/>
+		<CustomBehavior File="CastSpellOn" QuestId="27020" SpellId="100" MobId="44848" NumOfTimes="1" MobHpPercentLeft="100" MinRange="8" X="-2869.347" Y="-249.1271" Z="59.95384" />
+        </While>
+		<TurnIn QuestName="The First Lesson" QuestId="27020" TurnInName="Harutt Thunderhorn" TurnInId="3059" />
+
+	</ElseIf>
+
+	<ElseIf Condition="Me.Class == WoWClass.Druid">
+                <TurnIn QuestName="Verdant Note" QuestId="3094" TurnInName="Gart Mistrunner" TurnInId="3060" />
+                <PickUp QuestName="Rejuvenating Touch" QuestId="27067" GiverName="Gart Mistrunner" GiverId="3060" />
+
+<If Condition="!HasSpell(2061)">
+			<CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="False" />
+		</If>
+		<CustomBehavior File="CastSpellOn" QuestId="27066" SpellId="774" MobId="45199" NumOfTimes="1" MinRange="8" X="-2880.177" Y="-225.9676" Z="61.34525"/>
+		<TurnIn QuestName="Rejuvenating Touch" QuestId="27067" TurnInName="Gart Mistrunner" TurnInId="3060" />
+	</ElseIf>
+
+	<ElseIf Condition="Me.Class == WoWClass.Shaman">
+		<TurnIn QuestName="Rune-Inscribed Note" QuestId="3093" TurnInName="Meela Dawnstrider" TurnInId="3062" />
+                <PickUp QuestName="Primal Strike" QuestId="27027" GiverName="Meela Dawnstrider" GiverId="3062" />
+
+<If Condition="!HasSpell(73899)">
+			<CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="False" />
+		</If>
+		<RunTo X="-2863.797" Y="-246.0717" Z="60.25845" />
+		<While Condition="HasQuest(27027) &amp;&amp; !IsQuestCompleted(27027)">
+			<CustomBehavior File="CastSpellOn" QuestId="27027" SpellId="73899" MobId="44848" NumOfTimes="1" MobHpPercentLeft="100" MinRange="1" Range="5" X="-2880.177" Y="-225.9676" Z="61.34525" />
+		</While>
+		<TurnIn QuestName="Primal Strike" QuestId="27027" TurnInName="Meela Dawnstrider" TurnInId="3062" />
+	</ElseIf>
+                </If>
+       <PickUp QuestName="Rites of the Earthmother" QuestId="23733" GiverName="Chief Hawkwind" GiverId="2981" />
+               <TurnIn QuestName="Rites of the Earthmother" QuestId="23733" TurnInName="Dyami Windsoar" TurnInId="36803" />
+
+       <PickUp QuestName="Rite of the Winds" QuestId="24215" GiverName="Dyami Windsoar" GiverId="36803" />
+	<If Condition="HasQuest(24215)">
+		<CustomBehavior File="UseItem" QuestId="24215" ItemId="49652" NumOfTimes="1" WaitTime="20000" X="-2933.432" Y="-38.93042" Z="190.0488" />
+	</If>
+
+               <TurnIn QuestName="Rite of the Winds" QuestId="24215" TurnInName="Ahmo Thunderhorn" TurnInId="36644" />
+        <!-- Bloodhof Village -->
+
+       <PickUp QuestName="Sharing the Land" QuestId="14438" GiverName="Ahmo Thunderhorn" GiverId="36644" />
+       <PickUp QuestName="Swoop Hunting" QuestId="761" GiverName="Harken Windtotem" GiverId="2947" />
+       <PickUp QuestName="Poison Water" QuestId="20440" GiverName="Mull Thunderhorn" GiverId="2948" />
+       <PickUp QuestName="A Bundle of Hides" QuestId="6361" GiverName="Varg Windwhisper" GiverId="3079" />
+               <TurnIn QuestName="A Bundle of Hides" QuestId="6361" TurnInName="Tak" TurnInId="40809" />
+       <PickUp QuestName="The Ravaged Caravan" QuestId="749" GiverName="Morin Cloudstalker" GiverId="2988" />
+                     <Objective QuestName="Sharing the Land" QuestId="14438" Type="KillMob" MobId="42354" KillCount="15" />
+                     <Objective QuestName="Swoop Hunting" QuestId="761" Type="CollectItem" ItemId="4769" CollectCount="8" />
+                     <Objective QuestName="Poison Water" QuestId="20440" Type="CollectItem" ItemId="4758" CollectCount="6" />
+                     <Objective QuestName="Poison Water" QuestId="20440" Type="CollectItem" ItemId="4759" CollectCount="4" />
+               <TurnIn QuestName="Sharing the Land" QuestId="14438" TurnInName="Ahmo Thunderhorn" TurnInId="36644" />
+		<If Condition="HasQuest(761) &amp;&amp; IsQuestCompleted(761)">
+			<CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="True" />
+		</If>
+               <TurnIn QuestName="Swoop Hunting" QuestId="761" TurnInName="Harken Windtotem" TurnInId="2947" />
+               <TurnIn QuestName="Poison Water" QuestId="20440" TurnInName="Mull Thunderhorn" TurnInId="2948" />
+       <PickUp QuestName="Winterhoof Cleansing" QuestId="24440" GiverName="Mull Thunderhorn" GiverId="2948" />
+       <PickUp QuestName="The Restless Earth" QuestId="14491" GiverName="Ahmo Thunderhorn" GiverId="36644" />
+       <PickUp QuestName="Dangers of the Windfury" QuestId="743" GiverName="Ruul Eagletalon" GiverId="2985" />
+			<TurnIn QuestName="The Ravaged Caravan" QuestId="749" TurnInName="Sealed Supply Crate" TurnInId="2908" />
+       <PickUp QuestName="The Ravaged Caravan" QuestId="751" GiverName="Sealed Supply Crate" GiverId="2908" />
+               <TurnIn QuestName="The Ravaged Caravan" QuestId="751" TurnInName="Morin Cloudstalker" TurnInId="2988" />
+       <PickUp QuestName="The Venture Co." QuestId="26179" GiverName="Morin Cloudstalker" GiverId="2988" />
+       <PickUp QuestName="Supervisor Fizsprocket" QuestId="26180" GiverName="Morin Cloudstalker" GiverId="2988" />
+                     <UseItem ItemId="5411" QuestName="Winterhoof Cleansing Totem" QuestId="24440" NpcState="Alive" X="-2545.188" Y="-705.7835" Z="-8.959166" />
+       <If Condition="HasQuest(24440)">
+		     <CustomBehavior File="WaitTimer" WaitTime="4000"/>
+		</If>
+                     <Objective QuestName="Dangers of the Windfury" QuestId="743" Type="CollectItem" ItemId="4751" CollectCount="8" />
+       <If Condition="((HasQuest(14491)) &amp;&amp; (!IsQuestCompleted(14491)))" >
+                     <CustomBehavior File="UseItemOn" QuestId="14491" ItemId="49647" Range="5" WaitTime="3000" NumOfTimes="20" MobId="36845" X="-1952.291" Y="414.7807" Z="134.8153" />
+                </If>
+               <TurnIn QuestName="The Restless Earth" QuestId="14491" TurnInName="Ahmo Thunderhorn" TurnInId="36644" />        
+               <TurnIn QuestName="Dangers of the Windfury" QuestId="743" TurnInName="Ruul Eagletalon" TurnInId="2985" />
+               <TurnIn QuestName="Winterhoof Cleansing" QuestId="24440" TurnInName="Mull Thunderhorn" TurnInId="2948" />
+		<PickUp QuestName="Kyle's gone Missing" QuestId="11129" GiverName="Ahab Wheathoof" GiverId="23618" />
+		<Objective QuestName="Kyle's gone missing!" QuestId="11129" Type="CollectItem" ItemId="33009" CollectCount="1" />
+		<If Condition="HasQuest(11129)">
+			<CustomBehavior File="UseItemOn" QuestId="11129" ItemId="33009" Range="10" WaitTime="1000" NumOfTimes="1" MobType="Npc" MobId="23616" X="-2318.894" Y="-353.6412" Z="-9.272294" />
+		</If>
+		<TurnIn QuestName="Kyle's gone missing!" QuestId="11129" TurnInName="Ahab Wheathoof" TurnInId="23618" />
+       <PickUp QuestName="Thunderhorn Totem" QuestId="24441" GiverName="Mull Thunderhorn" GiverId="2948" />
+       <PickUp QuestName="Mazzranache" QuestId="26188" GiverName="Maur Raincaller" GiverId="3055" />
+                     <Objective QuestName="Thunderhorn Totem" QuestId="24441" Type="CollectItem" ItemId="4801" CollectCount="6" />
+                     <Objective QuestName="Thunderhorn Totem" QuestId="24441" Type="CollectItem" ItemId="4802" CollectCount="6" />
+                     <Objective QuestName="Mazzranache" QuestId="26188" Type="CollectItem" ItemId="4805" CollectCount="1" />
+		<If Condition="HasQuest(26188) &amp;&amp; IsQuestCompleted(26188)">
+			<CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="True" />
+		</If>
+               <TurnIn QuestName="Mazzranache" QuestId="26188" TurnInName="Maur Raincaller" TurnInId="3055" />
+               <TurnIn QuestName="Thunderhorn Totem" QuestId="24441" TurnInName="Mull Thunderhorn" TurnInId="2948" />
+       <PickUp QuestName="Thunderhorn Cleansing" QuestId="24456" GiverName="Mull Thunderhorn" GiverId="2948" />
+       <While Condition="((HasQuest(24456)) &amp;&amp; (!IsQuestCompleted(24456)))" >
+                     <UseItem ItemId="5415" QuestName="Thunderhorn Cleansing Totem" QuestId="24456" X="-1830.308" Y="-238.617" Z="-9.424802" />
+                </While>
+               <TurnIn QuestName="Thunderhorn Cleansing" QuestId="24456" TurnInName="Mull Thunderhorn" TurnInId="2948" />
+		<PickUp QuestName="Ride to Thunder Bluff" QuestId="6362" GiverName="Tak" GiverId="40809" />
+		<If Condition="HasQuest(6362)">
+			<CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="True" />
+			<RunTo X="-2299.118" Y="-381.5382" Z="-9.052087" />
+			<CustomBehavior File="UseTaxi" MobId="40809" DestName="Thunder Bluff"  X="-2299.118" Y="-381.5382" Z="-9.052087" />
+		</If>
+		<TurnIn QuestName="Ride to Thunder Bluff" QuestId="6362" TurnInName="Ahanu" TurnInId="8359" />
+		<PickUp QuestName="Tal the Wind Rider Master" QuestId="6363" GiverName="Ahanu" GiverId="8359" />
+		<TurnIn QuestName="Tal the Wind Rider Master" QuestId="6363" TurnInName="Tal" TurnInId="2995" />
+		<PickUp QuestName="Return to Varg" QuestId="6364" GiverName="Tal" GiverId="2995" />
+		<If Condition="HasQuest(6364)">
+			<RunTo X="-1197.407" Y="28.0897" Z="176.9492" />
+			<CustomBehavior File="UseTaxi" MobId="2995" DestName="Bloodhoof Village"  X="-1195.095" Y="25.68229" Z="176.9489"  />
+		</If>
+		<TurnIn QuestName="Return to Varg" QuestId="6364" TurnInName="Varg Windwhisper" TurnInId="3079" />
+       <PickUp QuestName="Rite of Vision" QuestId="24457" GiverName="Mull Thunderhorn" GiverId="2948" />
+                     <Objective QuestName="Supervisor Fizsprocket" QuestId="26180" Type="CollectItem" ItemId="4819" CollectCount="1" />
+                     <Objective QuestName="The Venture Co." QuestId="26179" Type="KillMob" MobId="2978" KillCount="7" />
+               <TurnIn QuestName="The Venture Co." QuestId="26179" TurnInName="Morin Cloudstalker" TurnInId="2988" />
+               <TurnIn QuestName="Supervisor Fizsprocket" QuestId="26180" TurnInName="Morin Cloudstalker" TurnInId="2988" />
+               <TurnIn QuestName="Rite of Vision" QuestId="24457" TurnInName="Zarlman Two-Moons" TurnInId="3054" />
+       <PickUp QuestName="Rite of Vision" QuestId="20441" GiverName="Zarlman Two-Moons" GiverId="3054" />
+                     <UseItem ItemId="49651" QuestName="Water of vision" QuestId="20441" X="-2242.823" Y="-401.8785" Z="-9.423522" />
+       <If Condition="((HasQuest(20441)) &amp;&amp; (IsQuestCompleted(20441)))" >
+                     <CustomBehavior File="WaitTimer" WaitTime="59"/>
+               </If>
+               <TurnIn QuestName="Rite of Vision" QuestId="20441" TurnInName="Una Wildmane" TurnInId="37024" />
+
+       <!-- Camp Sungraze -->
+
+       <PickUp QuestName="Wildmane Totem" QuestId="24523" GiverName="Una Wildmane" GiverId="37024" />
+       <PickUp QuestName="Rite of Wisdom" QuestId="773" GiverName="Lorekeeper Raintotem" GiverId="3233" />
+       <PickUp QuestName="A Sacred Burial" QuestId="833" GiverName="Lorekeeper Raintotem" GiverId="3233" />
+       <PickUp QuestName="The Hunter's Way" QuestId="861" GiverName="Skorn Whitecloud" GiverId="3052" />
+       <PickUp QuestName="Preparation for Ceremony" QuestId="744" GiverName="Eyahn Eagletalon" GiverId="2987" />      
+               <TurnIn QuestName="Rite of Wisdom" QuestId="773" TurnInName="Ancestral Spirit" TurnInId="2994" />
+                     <Objective QuestName="A Sacred Burial" QuestId="833" Type="KillMob" MobId="3232" KillCount="8" />
+                     <Objective QuestName="Wildmane Totem" QuestId="24523" Type="CollectItem" ItemId="4803" CollectCount="4" />
+                     <Objective QuestName="The Hunter's Way" QuestId="861" Type="CollectItem" ItemId="5203" CollectCount="4" />
+                     <Objective QuestName="Preparation for Ceremony" QuestId="744" Type="CollectItem" ItemId="4752" CollectCount="6" />
+                     <Objective QuestName="Preparation for Ceremony" QuestId="744" Type="CollectItem" ItemId="4753" CollectCount="6" />
+               <TurnIn QuestName="Wildmane Totem" QuestId="24523" TurnInName="Una Wildmane" TurnInId="37024" />
+               <TurnIn QuestName="A Sacred Burial" QuestId="833" TurnInName="Lorekeeper Raintotem" TurnInId="3233" />
+               <TurnIn QuestName="The Hunter's Way" QuestId="861" TurnInName="Skorn Whitecloud" TurnInId="3052" />
+               <TurnIn QuestName="Preparation for Ceremony" QuestId="744" TurnInName="Eyahn Eagletalon" TurnInId="2987" />
+       <PickUp QuestName="Wildmane Cleansing" QuestId="24524" GiverName="Una Wildmane" GiverId="37024" />
+			<While Condition="HasQuest(24524) &amp;&amp; !IsQuestCompleted(24524)">
+                     <UseItem ItemId="5416" QuestName="Wildmane Cleansing" QuestId="24524" X="-759.0037" Y="-153.5029" Z="-28.03802" />
+			</While>
+		<If Condition="HasQuest(24524) &amp;&amp; IsQuestCompleted(24524)">
+			<CustomBehavior File="ForceSetVendor" DoTrain="True" DoRepair="True" />
+		</If>
+               <TurnIn QuestName="Wildmane Cleansing" QuestId="24524" TurnInName="Una Wildmane" TurnInId="37024" />
+		<PickUp QuestName="Journey into Thunder Bluff" QuestId="24550" GiverName="Una Wildmane" GiverId="37024" />
+		<If Condition="HasQuest(24550)">
+			<CustomBehavior File="UseTransport" TransportId="47297"
+				WaitAtX="-1034.986" WaitAtY="-55.75095" WaitAtZ="69.2531"
+				TransportStartX="-1037.266" TransportStartY="-49.23546" TransportStartZ="69.27228"
+				TransportEndX="-1037.266" TransportEndY="-49.23547" TransportEndZ="140.4947"
+				StandOnX="-1036.892" StandOnY="-49.12611" StandOnZ="69.31226"
+				GetOffX="-1044.676" GetOffY="-44.7309" GetOffZ="140.6944" />
+		</If>
+		<TurnIn QuestName="Journey into Thunder Bluff" QuestId="24550" TurnInName="Baine Bloodhoof" TurnInId="36648" />
+		<PickUp QuestName="War Dance" QuestId="24540" GiverName="Baine Bloodhoof" GiverId="36648" />
+		<If Condition="HasQuest(24540) &amp;&amp; !IsQuestCompleted(24540)">
+			<CustomBehavior File="Hearthstone" MobId="6746" X="-1300.277" Y="38.48579" Z="129.2086" HearthLocation="5345" WithinDistance="1000"/> 
+		</If>
+		<If Condition="HasQuest(24540) &amp;&amp; !IsQuestCompleted(24540)">
+			<CustomBehavior File="UseTransport" TransportId="47297"
+				GetOffX="-1034.986" GetOffY="-55.75095" GetOffZ="69.2531"
+				TransportEndX="-1037.266" TransportEndY="-49.23546" TransportEndZ="69.27228"
+				StandOnX="-1036.892" StandOnY="-49.12611" StandOnZ="140.4947"
+				TransportStartX="-1037.266" TransportStartY="-49.23547" TransportStartZ="140.4947"
+				WaitAtX="-1044.676" WaitAtY="-44.7309" WaitAtZ="140.6944" />
+		</If>
+		<Objective QuestName="War Dance" QuestId="24540" Type="KillMob" MobId="36931" KillCount="1" />
+		
+<SetGrindArea>
+      <GrindArea>
+        <TargetMinLevel>8</TargetMinLevel>
+        <TargetMaxLevel>12</TargetMaxLevel>
+	<Factions>189 38 16 514 </Factions>
+       <Hotspots>
+    		<Hotspot X="-683.4793" Y="-2.73705" Z="-12.50546" />
+                <Hotspot X="-542.0758" Y="12.58465" Z="7.802971" />
+                <Hotspot X="-633.4066" Y="-162.3678" Z="-4.195632" />
+                <Hotspot X="-745.5947" Y="-152.6885" Z="-28.37892" />
+                <Hotspot X="-580.1774" Y="-284.1733" Z="27.91135" />
+                <Hotspot X="-757.6667" Y="-283.2636" Z="-31.95111" />
+                <Hotspot X="-982.2325" Y="-493.3472" Z="-53.74636" />
+                <Hotspot X="-1160.553" Y="-587.5127" Z="-57.939" />
+  	</Hotspots>
+      </GrindArea>
+    </SetGrindArea>
+<GrindTo Level="12" />
+		<If Condition="HasQuest(24540) &amp;&amp; IsQuestCompleted(24540)">
+			<CustomBehavior File="UseHearthstone" HearthLocation="5345" X="-1300.277" Y="38.48579" Z="129.2086" OutsideDistance="1"/>
+		</If>
+		<TurnIn QuestName="War Dance" QuestId="24540" TurnInName="Baine Bloodhoof" TurnInId="36648" />
+		<PickUp QuestName="Walk With the Earth Mother" QuestId="26397" GiverName="Baine Bloodhoof" GiverId="36648" />
+		<If Condition="HasQuest(26397) &amp;&amp; Me.ZoneId != 1637">
+			<PickUp QuestName="Warchiefs command: Northern Barrens" QuestId="28494" GiverType="Object" GiverName="Warchief's Command Board" GiverId="207323" X="-1252.493" Y="74.89415" Z="127.9335" />
+			<CustomBehavior File="InteractWith" MobId="2995" GossipOptions="2" ObjectType="Npc" X="-1197.407" Y="28.0897" Z="176.9492" />
+			<While Condition="Me.ZoneId != 1637">
+				<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			</While>
+		</If>
+		<If Condition="Me.ZoneId==1637">
+			<CustomBehavior File="UseTransport" TransportId="206610" 
+			GetOffX="1749.218" GetOffY="-4388.167" GetOffZ="42.50698"
+			TransportEndX="1755.314" TransportEndY="-4396.597" TransportEndZ="42.34779" 
+			TransportStartX="1755.314" TransportStartY="-4396.597" TransportStartZ="109.2562" 
+			WaitAtX="1750.3" WaitAtY="-4389.18" WaitAtZ="109.6168" />
+		</If>
+		<TurnIn QuestName="Walk With the Earth Mother" QuestId="26397" TurnInName="Garrosh Hellscream" TurnInId="39605" />
+		<PickUp QuestName="Conscript of the Horde" QuestId="840" GiverName="Takrin Pathseeker" GiverId="3336" />
+
+		<CustomBehavior File="LoadProfile" Profile="Northern Barrens 12-20+.xml" />
+
+    </QuestOrder>
+   </HBProfile>

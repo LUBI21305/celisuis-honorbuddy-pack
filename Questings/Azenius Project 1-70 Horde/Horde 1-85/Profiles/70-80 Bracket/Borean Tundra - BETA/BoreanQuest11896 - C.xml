@@ -1,0 +1,96 @@
+<HBProfile>
+   <Name>The Azenius Project[Borean Tundra] Subprofile</Name>
+   <MinLevel>1</MinLevel>
+   <MaxLevel>86</MaxLevel>
+   <MinDurability>0.4</MinDurability>
+   <MinFreeBagSlots>2</MinFreeBagSlots>
+    
+   <MailGrey>False</MailGrey>
+   <MailWhite>False</MailWhite>
+   <MailGreen>False</MailGreen>
+   <MailBlue>True</MailBlue>
+   <MailPurple>True</MailPurple>
+   
+   <SellGrey>True</SellGrey>
+   <SellWhite>True</SellWhite>
+   <SellGreen>False</SellGreen>
+   <SellBlue>False</SellBlue>
+   <SellPurple>False</SellPurple>
+   
+   <TargetElites>False</TargetElites>
+   
+   <Mailboxes>
+        <Mailbox X="-2337.382" Y="-368.8676" Z="-8.430426" /> <!-- Warsong Hold -->
+		<Mailbox X="3458.575" Y="4131.085" Z="15.26849" /> <!-- Taunka'le Village -->
+		<Mailbox X="4501.965" Y="5718.781" Z="81.47813" /> <!-- Bor'gorok Outpost -->
+   </Mailboxes>
+   
+
+ <!-- Vendors and trainers -->
+   <Vendors> 
+	<!-- Warsong Hold -->
+	<Vendor Name="Armorer Orkuruk" Entry="25274" Type="Repair" X="2764.425" Y="6180.714" Z="83.45659" />
+	<Vendor Name="Groll" Entry="26938" Type="Food" X="2808.646" Y="6205.534" Z="104.9365" />
+	
+	<!-- Amber Ledge -->
+	<Vendor Name="Librarian Whitley" Entry="27139" Type="Repair" X="3646.29" Y="5888.981" Z="140.1046" />
+	<Vendor Name="Apprentice Fraser" Entry="27137" Type="Food" X="3639.235" Y="5883.9" Z="140.1044" />
+	
+	<!-- Taunka'le Village -->
+	<Vendor Name="Trader Alorn" Entry="26718" Type="Food" X="3430.155" Y="4137.813" Z="16.86727" />
+	<Vendor Name="Tewah Chillmane" Entry="26697" Type="Repair" X="3468.827" Y="4154.3" Z="17.19446" />
+	
+	<!-- Bor'gorok Outpost -->
+	<Vendor Name="Drigoth" Entry="27067" Type="Repair" X="4510.52" Y="5703.353" Z="81.54052" />
+       </Vendors>
+
+	<AvoidMobs>
+	</AvoidMobs>
+
+	<Blackspots>
+          <Blackspot X="2925.199" Y="6394.559" Z="91.6399" Radius="6.484929" />
+          <Blackspot X="2932.177" Y="6494.663" Z="79.08061" Radius="1.956746" />
+          <Blackspot X="2931.44" Y="6488.665" Z="78.77148" Radius="15.39137" />
+	  <Blackspot X="3076.945" Y="6723.135" Z="3.030285" Radius="20.7583" />
+	</Blackspots>
+
+   <QuestOrder>
+
+		<CustomBehavior File="UserSettings" LootMobs="True" UseMount="True" PullDistance="30" />
+		<CustomBehavior File="UserSettings" LootMobs="True" TrainNewSkills="False" LearnFlightPaths="True" UseFlightPaths="False" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Azenius Questing Profiles (Northrend = Profile for quest 11896)." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Compiling Quests." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Turning off auto-train." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting UseFlightPaths to false." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting LearnFlightPaths to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting LootMobs to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="-----" />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting UseMount to true." />
+		<CustomBehavior File="Message" LogColor="SpringGreen" Text="Setting PullDistance to 30." />
+
+		<If Condition="HasQuest(11896) &amp;&amp; !IsQuestCompleted(11896)">
+                <CustomBehavior File="UserSettings" PullDistance="1" />
+                <CustomBehavior File="FlyTo" X="3908.396" Y="4626.471" Z="1.3044" />
+                <CustomBehavior File="ForcedDismount" />
+				<CustomBehavior File="UserSettings" PullDistance="30" />
+					</If>
+				<CustomBehavior File="UserSettings" PullDistance="30" />
+		
+		<While Condition="HasQuest(11896) &amp;&amp; !IsQuestCompleted(11896)">
+			<If Condition="HasQuest(11896) &amp;&amp; !IsQuestCompleted(11896)">
+				<CustomBehavior File="CombatUseItemOn" ItemId="35352" NumOfTimes="1" MobId1="25753" MobId2="25758" MobId3="25752" MobHpPercentLeft="100" X="3908.396" Y="4626.471" Z="1.3044" />
+			</If>
+			<If Condition="HasQuest(11896) &amp;&amp; !IsQuestCompleted(11896)">
+				<CustomBehavior File="CombatUseItemOn" ItemId="35352" NumOfTimes="1" MobId1="25753" MobId2="25758" MobId3="25752" MobHpPercentLeft="100" X="4046.696" Y="4745.558" Z="-0.908548" />
+			</If>
+			<If Condition="HasQuest(11896) &amp;&amp; !IsQuestCompleted(11896)">
+				<CustomBehavior File="CombatUseItemOn" ItemId="35352" NumOfTimes="1" MobId1="25753" MobId2="25758" MobId3="25752" MobHpPercentLeft="100" X="3924.243" Y="4742.706" Z="-12.67307" />
+			</If>
+		</While>
+		
+		<CustomBehavior File="LoadProfile" ProfileName="Borean Tundra (COMMENTED OUT).xml" />
+
+    </QuestOrder>
+   </HBProfile>

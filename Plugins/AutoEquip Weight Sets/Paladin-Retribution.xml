@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WeightSet Class="Paladin" Spec="Retribution">
+  <DPS>470</DPS>
+  <HitRating>100</HitRating>
+  <Strength>80</Strength>
+  <ExpertiseRating>66</ExpertiseRating>
+  <CriticalStrikeRating>40</CriticalStrikeRating>
+  <Agility>32</Agility>
+  <HasteRating>30</HasteRating>
+  <SpellPower>9</SpellPower>
+</WeightSet>

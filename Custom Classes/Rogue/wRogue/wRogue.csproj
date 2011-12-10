@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F7E160EB-DFA4-42A3-8DB9-D6603545765C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>wRogue</RootNamespace>
+    <AssemblyName>wRogue</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="fasmdll_managed">
+      <HintPath>..\..\..\Honorbuddy\2.0.0.5445\fasmdll_managed.dll</HintPath>
+    </Reference>
+    <Reference Include="Honorbuddy">
+      <HintPath>..\..\..\Honorbuddy\2.0.0.5445\Honorbuddy.exe</HintPath>
+    </Reference>
+    <Reference Include="RemoteASMNative">
+      <HintPath>..\..\..\Honorbuddy\2.0.0.5445\RemoteASMNative.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\Honorbuddy\2.0.0.5445\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tripper.RecastManaged">
+      <HintPath>..\..\..\Honorbuddy\2.0.0.5445\Tripper.RecastManaged.dll</HintPath>
+    </Reference>
+    <Reference Include="Tripper.Tools">
+      <HintPath>..\..\..\Honorbuddy\2.0.0.5445\Tripper.Tools.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Combat\advancedCombat.cs" />
+    <Compile Include="Combat\basicCombat.cs" />
+    <Compile Include="Combat\finishCombat.cs" />
+    <Compile Include="Combat\movementLogic.cs" />
+    <Compile Include="Combat\pullCombat.cs" />
+    <Compile Include="Combat\pvpTargeting.cs" />
+    <Compile Include="Combat\targetHelpers.cs" />
+    <Compile Include="Overrides\combatBuff.cs" />
+    <Compile Include="Overrides\eatRest.cs" />
+    <Compile Include="Overrides\healRest.cs" />
+    <Compile Include="Overrides\onPulse.cs" />
+    <Compile Include="Overrides\precombatBuff.cs" />
+    <Compile Include="Overrides\pullBuff.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\wRogue-Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\wRogue-Config.Designer.cs">
+      <DependentUpon>wRogue-Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\wRogue-Settings.cs" />
+    <Compile Include="Skills\classSkills.cs" />
+    <Compile Include="Skills\racialSkills.cs" />
+    <Compile Include="Talents\talentManager.cs" />
+    <Compile Include="Talents\wRogue-Spec.cs" />
+    <Compile Include="updater.cs" />
+    <Compile Include="wRogue.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

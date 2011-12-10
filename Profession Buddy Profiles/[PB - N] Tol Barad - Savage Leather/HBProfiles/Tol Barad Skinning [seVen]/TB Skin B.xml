@@ -1,0 +1,46 @@
+<HBProfile>
+  <Name>Tol Barad Skinning</Name>
+  <MinDurability>0.4</MinDurability>
+  <MinFreeBagSlots>0</MinFreeBagSlots>
+  
+  <MinLevel>85</MinLevel>
+  <MaxLevel>86</MaxLevel>
+  <Factions>99999</Factions>
+  
+  <MailGrey>False</MailGrey>
+  <MailWhite>True</MailWhite>
+  <MailGreen>True</MailGreen>
+  <MailBlue>True</MailBlue>
+  <MailPurple>True</MailPurple>
+ 
+  <SellGrey>True</SellGrey>
+  <SellWhite>False</SellWhite>
+  <SellGreen>False</SellGreen>
+  <SellBlue>False</SellBlue>
+  <SellPurple>False</SellPurple>
+
+  <Vendors>
+<Vendor Name="Karosh" Entry="48356" Type="Repair" X="-607.5608" Y="1380.215" Z="22.00975" />
+</Vendors>
+
+     <GrindArea>
+       <TargetMinLevel>80</TargetMinLevel>
+       <TargetMaxLevel>85</TargetMaxLevel>
+       <Factions>22</Factions>
+       <Hotspots>
+    <Hotspot X="-175.6367" Y="1407.939" Z="22" />
+    <Hotspot X="-258.9367" Y="1335.725" Z="22" />
+    <Hotspot X="-311.8566" Y="1228.231" Z="22" />
+    <Hotspot X="-391.2367" Y="1352.63" Z="22" />
+    <Hotspot X="-313.8167" Y="1366.595" Z="22" />
+    <Hotspot X="-288.3367" Y="1454.427" Z="22" />
+       </Hotspots>
+   </GrindArea>
+  
+
+
+<Blackspots>
+<Blackspot X="-345.9073" Y="1079.434" Z="22.38031" Radius="25.44131" />
+</Blackspots>
+
+</HBProfile>

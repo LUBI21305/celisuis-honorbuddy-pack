@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoEquipSettings>
+  <AutoEquipItems>true</AutoEquipItems>
+  <AutoEquipBags>true</AutoEquipBags>
+  <ReplaceHeirlooms>false</ReplaceHeirlooms>
+  <EquipPurples>false</EquipPurples>
+  <EquipBlues>true</EquipBlues>
+  <EquipGreens>true</EquipGreens>
+  <EquipWhites>true</EquipWhites>
+  <EquipGrays>true</EquipGrays>
+  
+  <IgnoreItems>
+    <!--Common Miscellaneous -->
+    <Item Entry="7005" Name="Skinning Knife" />
+    <Item Entry="46069" Name="Alliance Lance" />
+    <Item Entry="6219" Name="Archlight Spanner" />
+    <Item Entry="46106" Name="Argent Lance" /> 
+    <Item Entry="5956" Name="Blacksmith hammer" />
+    <Item Entry="45861" Name="Diamond-tipped Cane" />
+    <Item Entry="45750" Name="Elekk Lance [PH]" />
+    <Item Entry="46070" Name="Horde Lance" />
+    <Item Entry="2901" Name="Mining Pick" />
+    <Item Entry="4616" Name="Ryedol's Lucky Pick" />
+    <Item Entry="45073" Name="Spring Flowers" />
+    <Item Entry="37708" Name="Stick" />
+    <!-- Fishing Rods -->
+    <Item Entry="44050" Name="Mastercraft Kalu'ak Fishing Pole" />
+    <Item Entry="19970" Name="Arcanite Fishing Pole" />
+    <Item Entry="45991" Name="Bone Fishing Pole" />
+    <Item Entry="45992" Name="Jeweled Fishing Pole" />
+    <Item Entry="45858" Name="Nat's Lucky Fishing Pole" />
+    <Item Entry="19022" Name="Nat Pagle's Extreme Angler FC-5000" />
+    <Item Entry="25978" Name="Sath's Graphite Fishing Pole" />  
+    <Item Entry="6367" Name="Big Iron Fishing Pole" />
+    <Item Entry="12225" Name="Blump Family Fishing Pole"/>
+    <Item Entry="6366" Name="Darkwood Fishin Pole" />
+    <Item Entry="6256" Name="Fishing Pole" />
+    <!-- Darkmoon Faire Common Weapons -->
+    <Item Entry="19292" Name="Last Month's Mutton" />
+    <Item Entry="19293" Name="Last Year's Mutton" />
+  </IgnoreItems>
+  
+  <IgnoreTypes>
+    <Type>Trinket</Type>
+    <Type>Ammo</Type>
+    <!-- Removing this will not remove it from the plug-in.
+    It's hardcoded - this is just an example. -->
+    <!-- Valid types are:
+    Head, Neck, Shoulder, Body, Chest, Waist, Legs, Feet, Wrist, Hand, Finger, Trinket, Weapon, Shield, Ranged, Cloak,
+    TwoHandWeapon, Bag, Tabard, Robe, WeaponMainHand, WeaponOffHand, Holdable, Ammo, Thrown,  RangedRight, Quiver, Relic
+    -->
+  </IgnoreTypes>
+  
+  <ProtectedSlots>
+    <Slot>Trinket0Slot</Slot>
+    <Slot>Trinket1Slot</Slot>
+    <Slot>AmmoSlot</Slot>
+    <!-- Removing this will not remove it from the plug-in.
+    It's hardcoded - this is just an example. -->
+    <!-- Valid slots are:
+    AmmoSlot, HeadSlot, NeckSlot, ShoulderSlot, ShirtSlot, ChestSlot, WaistSlot, LegsSlot, FeetSlot, WristSlot, HandsSlot, Finger0Slot, Finger1Slot
+    Trinket0Slot, Trinket1Slot, BackSlot, MainHandSlot, SecondaryHandSlot, RangedSlot, TabardSlot, Bag0Slot, Bag1Slot, Bag2Slot, Bag3Slot
+    -->
+  </ProtectedSlots>
+</AutoEquipSettings>

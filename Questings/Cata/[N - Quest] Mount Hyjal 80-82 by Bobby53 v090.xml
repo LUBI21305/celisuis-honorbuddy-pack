@@ -1,0 +1,2764 @@
+<HBProfile>
+   <!--
+      NAME:     80-82 Mount Hyjal Questing
+      AUTHOR:   Bobby53
+      
+      DESCRIPTION:
+                Profile should be started in Orgrimmar / Stormwind.  After completing the first
+                few quests up until you arrive in Mount Hyjal, you can start either in the city
+                (where it will use the portals) or in Mount Hyjal (allowing easy stop/start).             
+      
+                This profile follows Arixan's Horde Leveling Guide - Mt Hyjal (80-82) leveling guide 
+                at http://wow-pro.com/leveling_guides/arixans_horde_leveling_guide_mt_hyjal_80-82
+                Supports Horde or Alliance character completing 115 quests in Mount Hyjal earning
+                the achievemnt Coming Down the Mountain http://www.wowhead.com/achievement=4870. 
+                If you have completed some quests already, it may travel some initially handling 
+                any chain pre-requisites missed.  A flying mount and support for flying are required
+                for this profile.
+                
+                The key discrepancies of this quest profile vs the guide are:
+                
+                1. Although its a Horde guide, there are only a handful of faction specific 
+                quests.  The profile recognizes these and does the appropriate ones for you.
+                There is an alliance version of the guide on their site as well.
+                
+                1. Takes Aviana's Legacy http://www.wowhead.com/quest=27874 instead of
+                Wings Over Mount Hyjal http://www.wowhead.com/quest=25985 read the wowhead
+                comments for those quests for reasoning.
+                
+                2. Does not complete the "Joust" quests.  It does accept the bread crumb quest
+                http://www.wowhead.com/quest=25810 and leaves it in your log so if you choose
+                to manually complete you can easily find the entrance on your map when quest
+                objectives are displayed.
+                
+                3. Does not complete the 10. The Throne of Flame section of the guide.  The goal of
+                this profile is to obtain the achievement and 115 quests is reached without this.
+                
+                4. You can 
+                
+      OTHER REQUIREMENTS:
+                [X]  Ground Mount
+                [X]  Flying Mount               
+         
+      PROFILE EXPECTATIONS:
+         * When using this profile, be certain to set the HonorBuddy bot to (select only one):
+                ( ) Grinding / Mixed
+                (*) Questing
+                ( ) PvP
+                
+         * When using this profile, be sure following HonorBuddy options checked/unchecked as shown:
+                [ ] Gather Ore
+                [ ] Gather Herbs
+                [X] Use Mount
+
+         * This profile is appropriate for (check all that apply):
+                [X] Alliance   [X] Achievement
+                [X] Horde      [ ] Farming
+                               [X] Leveling
+                               [ ] PvP
+                               [X] Questing
+                               [ ] Reputation
+                               [ ] Seasonal  
+   
+         * An explanation of <ForceMail> and <ProtectedItems> usage is here...
+               http://www.buddyforum.de/mediawiki/index.php?title=HonorBuddy:_About_ProtectedItems_and_ForceMail
+   
+         * DO NOT INCLUDE a <ForceMail> element in a profile!
+           Instead, each user should populate his <hb_install_dir>/ForceMail.xml file.
+           The Buddy Wiki provides a robust sample <ForceMail> element here...
+               http://www.buddyforum.de/mediawiki/index.php?title=Honorbuddy:_A_prototypical_ForceMail_Element
+  
+         * DO NOT INCLUDE a <ProtectedItems> element in a profile!
+           Instead, each user should populate his <hb_install_dir>/Protected Items.xml file.
+           The Buddy Wiki provides a robust sample <ProtectedItems> element here...
+               http://www.buddyforum.de/mediawiki/index.php?title=Honorbuddy:_A_prototypical_ProtectedItems_Element
+   
+    -->
+   <Name>80-82 Mount Hyjal Questing 0.90 by Bobby53</Name>
+   <MinDurability>0.4</MinDurability>
+   <MinFreeBagSlots>2</MinFreeBagSlots>
+   <MinLevel>80</MinLevel>
+   <MaxLevel>86</MaxLevel>
+   <MailGrey>False</MailGrey>
+   <MailWhite>False</MailWhite>
+   <MailGreen>True</MailGreen>
+   <MailBlue>True</MailBlue>
+   <MailPurple>True</MailPurple>
+   <SellGrey>True</SellGrey>
+   <SellWhite>False</SellWhite>
+   <SellGreen>False</SellGreen>
+   <SellBlue>False</SellBlue>
+   <SellPurple>False</SellPurple>
+
+   <AvoidMobs>
+      <Mob Name="Baron Geddon" Entry="40147" />
+      <Mob Name="Blazebound Elemental" Entry="38896" />
+      <Mob Name="Blazing Trainer" Entry="40434" />
+      <Mob Name="Nemesis" Entry="40340" />
+      <Mob Name="Smolderos the Carbonizer" Entry="39348" />
+      <Mob Name="Twilight Juggernaut" Entry="41031" />
+   </AvoidMobs>
+
+   <Mailboxes>
+      <!-- Nordrassil -->
+      <Mailbox X="5524.274" Y="-3625.619" Z="1567.2" />
+      <!-- Shrine of Aviana -->
+      <Mailbox X="4937.44" Y="-2710.538" Z="1432.489" />
+      <!-- Grove of Aessina -->
+      <Mailbox X="5136.307" Y="-1724.023" Z="1336" />
+   </Mailboxes>
+
+   <Vendors>
+      <!-- Nordrassil -->
+      <Vendor Name="Toron Rockhoof" Entry="43410" Type="Repair" X="5572.65" Y="-3600.99" Z="1570.599" />
+      <!-- Shrine of Aviana -->
+      <Vendor Name="Nunaha Grasshoof" Entry="43495" Type="Repair" X="4924.59" Y="-2740.14" Z="1437.64" />
+      <!-- Grove of Aessina -->
+      <Vendor Name="Jalin Lakedeep" Entry="43380" Type="Repair" X="5180.91" Y="-1716.01" Z="1339.965" />
+      <!-- Sanctuary of Malorne -->
+      <Vendor Name="Inoho Stronghide" Entry="43550" Type="Repair" X="4421.68" Y="-2095.55" Z="1205.802" />
+      <!-- Forge of Supplication -->
+      <Vendor Name="Mahaega Grimforge" Entry="43564" Type="Repair" X="4610.84" Y="-4729.36" Z="883.6992" />
+      <!-- Shrine of Goldrinn -->
+      <!-- pathing issues when I fly to Berin Connad -->
+      <!-- Vendor Name="Berin Connad" Entry="43548" Type="Repair" X="5355.78" Y="-2133.64" Z="1280.52" / -->
+   </Vendors>
+
+   <Blackspots>
+      <!-- area where mobs spawn too quickly and interfere with quest turn in -->
+      <Blackspot X="5485.751" Y="-2361.87" Z="1462.701" Radius="17.49475" />
+      <!-- area in Orgrimmar where it gets stuck doing Warchief's Command: Mount Hyjal! -->
+      <Blackspot X="1881.228" Y="-4238.041" Z="36.04667" Radius="5" />
+      <!-- area in @ 41,31 where targeting is difficult with some CCs due to los and range -->
+      <Blackspot X="5303.247" Y="-2699.104" Z="1483.324" Radius="7" />
+
+      <!-- Fireland Forgeworks:  stuck in cave doing Rage of the Wolf Ancient -->
+      <Blackspot X="5076.667" Y="-2198.329" Z="1136.605" Radius="15" />
+
+      <!-- fallen tree in Mount Hyjal: The Inferno @ 17:44 -->
+      <Blackspot X="4924.088" Y="-1651.01" Z="1327.801" Radius="8" />
+
+      <!-- structure on Lightning Ledge at 26:40 (one above, one below -->
+      <Blackspot X="5063.191" Y="-2042.757" Z="1373.645" Radius="5" />
+      <Blackspot X="5061.18" Y="-2046.469" Z="1368.516"  Radius="5" />
+
+      <!-- fallen tree in Mount Hyjal: -->
+      <Blackspot X="4707.827" Y="-1599.426" Z="1297.589" Radius="5"/>
+
+      <!-- The Flamewake:  fallen tree -->
+      <Blackspot X="4530.832" Y="-2409.293" Z="1133.055" Radius="4"/>
+
+      <!-- Tree base in The Flamewake -->
+      <Blackspot X="4654.686" Y="-2532.633" Z="1140.43" Radius="5" />
+
+      <!-- area in The Flamewake near Nordu where you fall off a corner -->
+      <Blackspot X="4708.464" Y="-2080.37" Z="1213.533" Radius="3.550406" />
+
+      <!-- area inside The Crucible of Flame @ 63,53-->
+      <Blackspot X="4679.042" Y="-3611.135" Z="694.2313" Radius="15" />
+      <Blackspot X="4699.588" Y="-3614.435" Z="691.9857" Radius="5" />
+      <Blackspot X="4695.953" Y="-3608.301" Z="692.4604" Radius="5" />
+
+      <!-- spot in Nordrassil by tree root -->
+      <Blackspot X="5629.592" Y="-3619.701" Z="1572.852" Radius="10" />
+
+   </Blackspots>
+
+
+   <Quest Id="25460" Name="The Earth Rises" GiverId="39925">
+      <Objective Type="KillMob" MobId="40229" KillCount="8">
+         <Hotspots>
+            <Hotspot X="5608.303" Y="-3521.603" Z="1579.711" />
+            <Hotspot X="5545.243" Y="-3654.402" Z="1566.43" />
+            <Hotspot X="5588.834" Y="-3804.239" Z="1597.44" />
+            <Hotspot X="5491.814" Y="-3693.559" Z="1578.25" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <Quest Id="25370" Name="Inciting the Elements">
+      <!-- Twilight Inciter -->
+      <Objective Type="KillMob" MobId="39926" KillCount="4">
+         <Hotspots>
+            <Hotspot X="5712.747" Y="-3382.227" Z="1593.513" />
+            <Hotspot X="5657.078" Y="-3397.726" Z="1586.557" />
+            <Hotspot X="5636.126" Y="-3601.183" Z="1573.444" />
+            <Hotspot X="5637.923" Y="-3702.896" Z="1584.714" />
+            <Hotspot X="5549.063" Y="-3796.288" Z="1589.927" />
+            <Hotspot X="5461.868" Y="-3801.56" Z="1607.895" />
+            <Hotspot X="5535.99" Y="-3703.135" Z="1572.248" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <Quest Id="25234" Name="In the Rear With the Gear">
+      <!-- Twilight Supplies -->
+      <Objective Type="CollectItem" ItemId="52568" CollectCount="36">
+         <CollectFrom>
+            <GameObject  Name="Twilight Supplies Container" Id="202652" />
+         </CollectFrom>
+         <Hotspots>
+            <Hotspot X="5541.472" Y="-2567.67" Z="1480.089" />
+            <Hotspot X="5550.704" Y="-2473.846" Z="1475.366" />
+            <Hotspot X="5514.951" Y="-2403.266" Z="1467.206" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <!-- quest override to prevent grinding near bridges @ 41,31 -->
+   <Quest Name="Harrying the Hunters" Id="25255" >
+      <Objective Type="KillMob" MobId="39437" KillCount="6">
+         <Hotspots>
+            <Hotspot X="5585.667" Y="-2653.288" Z="1491.831" />
+            <Hotspot X="5508.069" Y="-2669.835" Z="1487.699" />
+            <Hotspot X="5494.502" Y="-2554.881" Z="1482.097" />
+            <Hotspot X="5521.54" Y="-2483.72" Z="1475.789" />
+            <Hotspot X="5591.413" Y="-2476.633" Z="1485.232" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <!-- Horde Version -->
+   <Quest Name="Cleaning House" Id="25277">
+      <Objective Type="KillMob" MobId="39642" KillCount="8">
+         <Hotspots>
+            <Hotspot X="5223.507" Y="-2075.567" Z="1269.403" />
+            <Hotspot X="5174.78" Y="-2140.868" Z="1277.844" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <!-- Alliance Version -->
+   <Quest Name="Cleaning House" Id="25278">
+      <Objective Type="KillMob" MobId="39642" KillCount="8">
+         <Hotspots>
+            <Hotspot X="5223.507" Y="-2075.567" Z="1269.403" />
+            <Hotspot X="5174.78" Y="-2140.868" Z="1277.844" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <Quest Id="25297" Name="From the Mouth of Madness">
+      <!-- Bitterblossom -->
+      <Objective Type="CollectItem" ItemId="52727" CollectCount="1">
+         <CollectFrom>
+            <GameObject  Name="Bitterblossom Container" Id="202703" />
+         </CollectFrom>
+         <Hotspots>
+            <Hotspot X="5279.418" Y="-2172.972" Z="1258.276" />
+         </Hotspots>
+      </Objective>
+      <!-- Stonebloom -->
+      <Objective Type="CollectItem" ItemId="52726" CollectCount="1">
+         <CollectFrom>
+            <GameObject  Name="Stonebloom Container" Id="202702" />
+         </CollectFrom>
+      </Objective>
+      <!-- Darkflame Ember -->
+      <Objective Type="CollectItem" ItemId="52728" CollectCount="1">
+         <CollectFrom>
+            <GameObject  Name="Darkflame Ember Container" Id="202705" />
+         </CollectFrom>
+      </Objective>
+   </Quest>
+
+   <!-- horde version: quest override to attempt to stay away from cliff edge-->
+   <Quest Id="25354" QuestName="Sweeping the Shelf" >
+      <Objective Type="KillMob" MobId="39843" KillCount="20">
+         <Hotspots>
+            <Hotspot X="5289.987" Y="-1904.343" Z="1345.492" />
+            <Hotspot X="5213.437" Y="-1932.928" Z="1366.272" />
+            <Hotspot X="5195.294" Y="-1986.667" Z="1365.661" />
+            <Hotspot X="5129.877" Y="-2028.627" Z="1365.523" />
+            <Hotspot X="5085.015" Y="-2080.066" Z="1369.15" />
+            <Hotspot X="5057.447" Y="-2124.754" Z="1375.51" />
+            <Hotspot X="5068.945" Y="-2172.579" Z="1385.188" />
+            <Hotspot X="5083.039" Y="-2244.609" Z="1391.91" />
+            <Hotspot X="5081.398" Y="-2307.707" Z="1404.4" />
+            <Hotspot X="5083.039" Y="-2244.609" Z="1391.91" />
+            <Hotspot X="5068.945" Y="-2172.579" Z="1385.188" />
+            <Hotspot X="5057.447" Y="-2124.754" Z="1375.51" />
+            <Hotspot X="5085.015" Y="-2080.066" Z="1369.15" />
+            <Hotspot X="5129.877" Y="-2028.627" Z="1365.523" />
+            <Hotspot X="5195.294" Y="-1986.667" Z="1365.661" />
+            <Hotspot X="5213.437" Y="-1932.928" Z="1366.272" />
+         </Hotspots>
+      </Objective>
+      <Objective Type="KillMob" MobId="39844" KillCount="5">
+         <Hotspots>
+            <Hotspot X="5289.987" Y="-1904.343" Z="1345.492" />
+            <Hotspot X="5213.437" Y="-1932.928" Z="1366.272" />
+            <Hotspot X="5195.294" Y="-1986.667" Z="1365.661" />
+            <Hotspot X="5129.877" Y="-2028.627" Z="1365.523" />
+            <Hotspot X="5085.015" Y="-2080.066" Z="1369.15" />
+            <Hotspot X="5057.447" Y="-2124.754" Z="1375.51" />
+            <Hotspot X="5068.945" Y="-2172.579" Z="1385.188" />
+            <Hotspot X="5083.039" Y="-2244.609" Z="1391.91" />
+            <Hotspot X="5081.398" Y="-2307.707" Z="1404.4" />
+            <Hotspot X="5083.039" Y="-2244.609" Z="1391.91" />
+            <Hotspot X="5068.945" Y="-2172.579" Z="1385.188" />
+            <Hotspot X="5057.447" Y="-2124.754" Z="1375.51" />
+            <Hotspot X="5085.015" Y="-2080.066" Z="1369.15" />
+            <Hotspot X="5129.877" Y="-2028.627" Z="1365.523" />
+            <Hotspot X="5195.294" Y="-1986.667" Z="1365.661" />
+            <Hotspot X="5213.437" Y="-1932.928" Z="1366.272" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <!-- alliance version: quest override to attempt to stay away from cliff edge-->
+   <Quest Id="25352" QuestName="Sweeping the Shelf">
+      <Objective Type="KillMob" MobId="39843" KillCount="20">
+         <Hotspots>
+            <Hotspot X="5289.987" Y="-1904.343" Z="1345.492" />
+            <Hotspot X="5213.437" Y="-1932.928" Z="1366.272" />
+            <Hotspot X="5195.294" Y="-1986.667" Z="1365.661" />
+            <Hotspot X="5129.877" Y="-2028.627" Z="1365.523" />
+            <Hotspot X="5085.015" Y="-2080.066" Z="1369.15" />
+            <Hotspot X="5057.447" Y="-2124.754" Z="1375.51" />
+            <Hotspot X="5068.945" Y="-2172.579" Z="1385.188" />
+            <Hotspot X="5083.039" Y="-2244.609" Z="1391.91" />
+            <Hotspot X="5081.398" Y="-2307.707" Z="1404.4" />
+            <Hotspot X="5083.039" Y="-2244.609" Z="1391.91" />
+            <Hotspot X="5068.945" Y="-2172.579" Z="1385.188" />
+            <Hotspot X="5057.447" Y="-2124.754" Z="1375.51" />
+            <Hotspot X="5085.015" Y="-2080.066" Z="1369.15" />
+            <Hotspot X="5129.877" Y="-2028.627" Z="1365.523" />
+            <Hotspot X="5195.294" Y="-1986.667" Z="1365.661" />
+            <Hotspot X="5213.437" Y="-1932.928" Z="1366.272" />
+         </Hotspots>
+      </Objective>
+      <Objective Type="KillMob" MobId="39844" KillCount="5">
+         <Hotspots>
+            <Hotspot X="5289.987" Y="-1904.343" Z="1345.492" />
+            <Hotspot X="5213.437" Y="-1932.928" Z="1366.272" />
+            <Hotspot X="5195.294" Y="-1986.667" Z="1365.661" />
+            <Hotspot X="5129.877" Y="-2028.627" Z="1365.523" />
+            <Hotspot X="5085.015" Y="-2080.066" Z="1369.15" />
+            <Hotspot X="5057.447" Y="-2124.754" Z="1375.51" />
+            <Hotspot X="5068.945" Y="-2172.579" Z="1385.188" />
+            <Hotspot X="5083.039" Y="-2244.609" Z="1391.91" />
+            <Hotspot X="5081.398" Y="-2307.707" Z="1404.4" />
+            <Hotspot X="5083.039" Y="-2244.609" Z="1391.91" />
+            <Hotspot X="5068.945" Y="-2172.579" Z="1385.188" />
+            <Hotspot X="5057.447" Y="-2124.754" Z="1375.51" />
+            <Hotspot X="5085.015" Y="-2080.066" Z="1369.15" />
+            <Hotspot X="5129.877" Y="-2028.627" Z="1365.523" />
+            <Hotspot X="5195.294" Y="-1986.667" Z="1365.661" />
+            <Hotspot X="5213.437" Y="-1932.928" Z="1366.272" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <!-- Dark Iron Laborer -->
+   <Quest Id="25576" Name="Rage of the Wolf Ancient" GiverId="40837">
+      <Objective Type="KillMob" MobId="40838" KillCount="12">
+         <Hotspots>
+            <Hotspot X="5023.625" Y="-2099.079" Z="1144.002" />
+            <Hotspot X="4992.121" Y="-2103.631" Z="1144.759" />
+            <Hotspot X="5074.164" Y="-2148.42" Z="1136.606" />
+            <Hotspot X="5062.623" Y="-2196.422" Z="1136.294" />
+            <Hotspot X="5005.96" Y="-2186.906" Z="1128.279" />
+            <Hotspot X="5021.006" Y="-2099.964" Z="1143.878" />
+            <Hotspot X="4989.808" Y="-2103.621" Z="1144.759" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <Quest Id="25599" Name="Cindermaul, the Portal Master">
+      <!-- Cindermaul -->
+      <Objective Type="KillMob" MobId="40844" KillCount="1">
+         <Hotspots>
+            <Hotspot X="5015.21" Y="-2234.49" Z="1128.823" />
+         </Hotspots>
+      </Objective>
+      <!-- Tome of Openings -->
+      <Objective Type="CollectItem" ItemId="55136" CollectCount="1">
+         <CollectFrom>
+            <Mob Name="Cindermaul" Id="40844" />
+         </CollectFrom>
+         <Hotspots>
+            <Hotspot X="5015.21" Y="-2234.49" Z="1128.823" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <Quest Id="25655" Name="The Wormwing Problem">
+      <Objective Type="KillMob" MobId="41027" KillCount="10">
+         <Hotspots>
+            <Hotspot X="4928.269" Y="-2468.313" Z="1440.689" />
+            <Hotspot X="4943.044" Y="-2528.333" Z="1433.468" />
+            <Hotspot X="4999.804" Y="-2521.759" Z="1430.947" />
+            <Hotspot X="4947.979" Y="-2586.678" Z="1426.011" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <Quest Id="25382" Name="Disrupting the Rituals">
+      <Objective Type="KillMob" MobId="39974" KillCount="6">
+         <Hotspots>
+            <Hotspot X="4920.596" Y="-1535.969" Z="1334.124" />
+            <Hotspot X="5163.797" Y="-1347.351" Z="1358.602" />
+            <Hotspot X="5027.069" Y="-1427.538" Z="1335.089" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <Quest Id="25381" Name="Fighting Fire With ... Anything">
+      <Objective Type="KillMob" MobId="39939" KillCount="10">
+         <Hotspots>
+            <Hotspot X="4910.641" Y="-1607.429" Z="1325.351" />
+            <Hotspot X="4921.333" Y="-1543.805" Z="1334.789" />
+            <Hotspot X="4998.908" Y="-1497.264" Z="1328.624" />
+            <Hotspot X="5065.231" Y="-1417.74" Z="1339.533" />
+            <Hotspot X="5166.739" Y="-1351.315" Z="1358.842" />
+            <Hotspot X="5180.106" Y="-1438.672" Z="1353.388" />
+            <Hotspot X="5101.735" Y="-1462.428" Z="1344.819" />
+            <Hotspot X="5015.132" Y="-1537.167" Z="1333.076" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <Quest Id="25490" Name="Smashing Through Ashes" GiverId="39932">
+      <Objective Type="KillMob" MobId="40336" KillCount="8">
+         <!-- hotspots form a trail down and back to avoid cliff along water -->
+         <Hotspots>
+            <Hotspot X="4783.204" Y="-1593.487" Z="1306.378" />
+            <Hotspot X="4749.722" Y="-1622.634" Z="1296.792" />
+            <Hotspot X="4710.792" Y="-1625.465" Z="1292.332" />
+            <Hotspot X="4665.166" Y="-1663.235" Z="1282.349" />
+            <Hotspot X="4620.683" Y="-1709.026" Z="1277.902" />
+            <Hotspot X="4568.271" Y="-1727.445" Z="1272.364" />
+            <Hotspot X="4521.686" Y="-1760.933" Z="1266.574" />
+            <Hotspot X="4515.276" Y="-1809.817" Z="1255.244" />
+            <Hotspot X="4538.279" Y="-1829.662" Z="1255.46" />
+            <Hotspot X="4506.712" Y="-1907.269" Z="1230.956" />
+            <Hotspot X="4466.151" Y="-1959.569" Z="1224.549" />
+            <Hotspot X="4460.007" Y="-2008.921" Z="1209.533" />
+            <Hotspot X="4510.004" Y="-2076.501" Z="1196.239" />
+            <Hotspot X="4496.805" Y="-2163.711" Z="1182.595" />
+            <Hotspot X="4534.981" Y="-2186.357" Z="1180.28" />
+            <Hotspot X="4496.805" Y="-2163.711" Z="1182.595" />
+            <Hotspot X="4510.004" Y="-2076.501" Z="1196.239" />
+            <Hotspot X="4460.007" Y="-2008.921" Z="1209.533" />
+            <Hotspot X="4466.151" Y="-1959.569" Z="1224.549" />
+            <Hotspot X="4506.712" Y="-1907.269" Z="1230.956" />
+            <Hotspot X="4538.279" Y="-1829.662" Z="1255.46" />
+            <Hotspot X="4515.276" Y="-1809.817" Z="1255.244" />
+            <Hotspot X="4521.686" Y="-1760.933" Z="1266.574" />
+            <Hotspot X="4568.271" Y="-1727.445" Z="1272.364" />
+            <Hotspot X="4620.683" Y="-1709.026" Z="1277.902" />
+            <Hotspot X="4665.166" Y="-1663.235" Z="1282.349" />
+            <Hotspot X="4710.792" Y="-1625.465" Z="1292.332" />
+            <Hotspot X="4749.722" Y="-1622.634" Z="1296.792" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <Quest Id="25493" Name="Fresh Bait" GiverId="39858">
+      <Objective Type="CollectItem" ItemId="54609" CollectCount="4">
+         <CollectFrom>
+            <Mob Name="Core Hound" Id="46910" />
+         </CollectFrom>
+         <Hotspots>
+            <Hotspot X="4539.558" Y="-2365.23" Z="1134.857" />
+            <Hotspot X="4489.555" Y="-2423.949" Z="1133.291" />
+            <Hotspot X="4468.217" Y="-2511.47" Z="1127.985" />
+            <Hotspot X="4419.411" Y="-2546.707" Z="1119.91" />
+            <Hotspot X="4398.042" Y="-2598.863" Z="1120.04" />
+            <Hotspot X="4431.172" Y="-2661.271" Z="1104.382" />
+            <Hotspot X="4476.467" Y="-2685.161" Z="1101.341" />
+            <Hotspot X="4542.336" Y="-2660.135" Z="1115.66" />
+            <Hotspot X="4637.652" Y="-2654.599" Z="1142.305" />
+            <Hotspot X="4685.485" Y="-2596.256" Z="1146.053" />
+            <Hotspot X="4673.183" Y="-2540.775" Z="1143.339" />
+            <Hotspot X="4716.206" Y="-2502.886" Z="1152.58" />
+            <Hotspot X="4704.584" Y="-2429.849" Z="1161.001" />
+            <Hotspot X="4618.9" Y="-2410.276" Z="1149.31" />
+            <Hotspot X="4552.752" Y="-2379.235" Z="1136.076" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <Quest Id="25492" Name="Firebreak" GiverId="40331">
+      <Objective Type="KillMob" MobId="46911" KillCount="10">
+         <Hotspots>
+            <Hotspot X="4539.558" Y="-2365.23" Z="1134.857" />
+            <Hotspot X="4489.555" Y="-2423.949" Z="1133.291" />
+            <Hotspot X="4468.217" Y="-2511.47" Z="1127.985" />
+            <Hotspot X="4419.411" Y="-2546.707" Z="1119.91" />
+            <Hotspot X="4398.042" Y="-2598.863" Z="1120.04" />
+            <Hotspot X="4431.172" Y="-2661.271" Z="1104.382" />
+            <Hotspot X="4476.467" Y="-2685.161" Z="1101.341" />
+            <Hotspot X="4542.336" Y="-2660.135" Z="1115.66" />
+            <Hotspot X="4637.652" Y="-2654.599" Z="1142.305" />
+            <Hotspot X="4685.485" Y="-2596.256" Z="1146.053" />
+            <Hotspot X="4673.183" Y="-2540.775" Z="1143.339" />
+            <Hotspot X="4716.206" Y="-2502.886" Z="1152.58" />
+            <Hotspot X="4704.584" Y="-2429.849" Z="1161.001" />
+            <Hotspot X="4618.9" Y="-2410.276" Z="1149.31" />
+            <Hotspot X="4552.752" Y="-2379.235" Z="1136.076" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <Quest Id="25746" Name="Sethria's Brood" >
+      <Objective Type="KillMob" MobId="41029" KillCount="12">
+         <Hotspots>
+            <Hotspot X="4088.553" Y="-2289.239" Z="1131.962" />
+            <Hotspot X="4051.33" Y="-2253.276" Z="1132.283" />
+            <Hotspot X="4015.131" Y="-2224.251" Z="1132.595" />
+            <Hotspot X="3968.23" Y="-2225.449" Z="1131.777" />
+            <Hotspot X="3921.997" Y="-2221.752" Z="1123.477" />
+            <Hotspot X="3974.994" Y="-2238.197" Z="1132.68" />
+            <Hotspot X="4015.508" Y="-2253.152" Z="1132.495" />
+            <Hotspot X="4058.222" Y="-2269.668" Z="1131.921" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <Quest Id="25764" Name="Egg Hunt">
+      <!-- Aviana's Egg -->
+      <Objective Type="CollectItem" ItemId="53454" CollectCount="1">
+         <CollectFrom>
+            <GameObject  Name="Shadow Cloak Generator" Id="203208" />
+         </CollectFrom>
+         <Hotspots>
+            <Hotspot X="4013.838" Y="-2201.706" Z="1132.807" />
+            <Hotspot X="3911.204" Y="-2215.782" Z="1122.954" />
+            <Hotspot X="3964.914" Y="-2232.289" Z="1131.75" />
+            <Hotspot X="4021.482" Y="-2298.525" Z="1138.808" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <Quest Id="25548" Name="Might of the Firelord">
+      <!-- Pure Twilight Egg -->
+      <Objective Type="CollectItem" ItemId="55178" CollectCount="1">
+         <CollectFrom>
+            <GameObject  Name="Twilight Subjugator" Id="40463" />
+         </CollectFrom>
+         <Hotspots>
+         </Hotspots>
+      </Objective>
+   </Quest >
+
+   <Quest Name="Firefight" Id="25842" >
+      <Objective Type="KillMob" MobId="41396" KillCount="5">
+         <Hotspots>
+            <Hotspot X="4709.082" Y="-2057.675" Z="1220.031" />
+            <Hotspot X="4738.608" Y="-2099.336" Z="1219.012" />
+            <Hotspot X="4736.797" Y="-2152.038" Z="1208.607" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <Quest Name="Hyjal Recycling Program" Id="25901" >
+      <!-- Warden's Arrow -->
+      <Objective Type="CollectItem" ItemId="56176" CollectCount="15">
+         <CollectFrom>
+            <GameObject  Name="Warden's Arrow" Id="203310" />
+         </CollectFrom>
+         <Hotspots>
+            <Hotspot X="4625.909" Y="-3416.642" Z="1016.133" />
+            <Hotspot X="4526.471" Y="-3414.956" Z="1017.197" />
+            <Hotspot X="4575.26" Y="-3298.454" Z="1009.593" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <Quest Name="The Hammer and the Key" Id="25904" >
+      <!-- Glyph of Opening -->
+      <Objective Type="CollectItem" ItemId="56177" CollectCount="1">
+         <CollectFrom>
+            <Mob Name="Twilight Field Captain" Id="18132" />
+         </CollectFrom>
+      </Objective>
+   </Quest>
+
+
+   <Quest Name="The Time for Mercy has Passed" Id="25910" >
+      <!-- Shadowflame Master -->
+      <Objective Type="KillMob" MobId="41563" KillCount="4">
+         <Hotspots>
+            <Hotspot X="4701.189" Y="-3644.102" Z="690.7233" />
+            <Hotspot X="4722.705" Y="-3607.632" Z="689.3476" />
+            <Hotspot X="4731.903" Y="-3576.196" Z="692.6157" />
+            <Hotspot X="4691.44" Y="-3567.223" Z="688.8544" />
+            <Hotspot X="4650.681" Y="-3586.193" Z="688.3388" />
+            <Hotspot X="4691.44" Y="-3567.223" Z="688.8544" />
+            <Hotspot X="4731.903" Y="-3576.196" Z="692.6157" />
+            <Hotspot X="4722.705" Y="-3607.632" Z="689.3476" />
+         </Hotspots>
+      </Objective>
+      <!-- Molten Tormentor -->
+      <Objective Type="KillMob" MobId="41565" KillCount="10">
+         <Hotspots>
+            <Hotspot X="4701.189" Y="-3644.102" Z="690.7233" />
+            <Hotspot X="4722.705" Y="-3607.632" Z="689.3476" />
+            <Hotspot X="4731.903" Y="-3576.196" Z="692.6157" />
+            <Hotspot X="4691.44" Y="-3567.223" Z="688.8544" />
+            <Hotspot X="4650.681" Y="-3586.193" Z="688.3388" />
+            <Hotspot X="4691.44" Y="-3567.223" Z="688.8544" />
+            <Hotspot X="4731.903" Y="-3576.196" Z="692.6157" />
+            <Hotspot X="4722.705" Y="-3607.632" Z="689.3476" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <Quest Name="Signed in Blood" Id="25274"  >
+      <!-- Twilight Recruitment Papers -->
+      <Objective Type="CollectItem" ItemId="52685" CollectCount="1">
+         <CollectFrom>
+            <Mob Name="Twilight Recruit" Id="39619" />
+         </CollectFrom>
+      </Objective>
+   </Quest>
+
+   <Quest Name="In Bloom" Id="25224">
+      <!-- Flame Blossom -->
+      <Objective Type="CollectItem" ItemId="52537" CollectCount="5">
+         <CollectFrom>
+            <GameObject  Name="Flame Blossom" Id="202619" />
+         </CollectFrom>
+         <Hotspots>
+            <Hotspot X="4374.801" Y="-4180.664" Z="934.5401" />
+            <Hotspot X="4379.756" Y="-4272.705" Z="908.0508" />
+            <Hotspot X="4365.284" Y="-4364.524" Z="902.3391" />
+            <Hotspot X="4440.345" Y="-4367.922" Z="902.5823" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+   <Quest Name="Gather the Intelligence" Id="25296">
+      <!-- Twilight Communique -->
+      <Objective Type="CollectItem" ItemId="52724" CollectCount="1">
+         <CollectFrom>
+            <GameObject  Name="Crate of Scrolls" Id="202968" />
+         </CollectFrom>
+         <Hotspots>
+            <Hotspot X="4624.22" Y="-4726.703" Z="883.6404" />
+         </Hotspots>
+      </Objective>
+      <!--  -->
+      <Objective Type="CollectItem" ItemId="52725" CollectCount="1">
+         <!-- Hyjal Battleplans -->
+         <CollectFrom>
+            <GameObject  Name="Hyjal Battleplans" Id="202969" />
+         </CollectFrom>
+         <Hotspots>
+            <Hotspot X="4741.615" Y="-4838.78" Z="882.9802" />
+         </Hotspots>
+      </Objective>
+   </Quest>
+
+
+   <QuestOrder>
+
+      <!--===============================================================================================
+    ==  0. Check Pre-requisites described in profile comment at top of file
+    ================================================================================================-->
+
+      <!--===============================================================================================
+    ==  1. Getting to Mt Hyjal
+    ==  http://wow-pro.com/leveling_guides/arixans_horde_leveling_guide_mt_hyjal_80-82#getmthyjal
+    ================================================================================================-->
+      <If Condition="Me.IsHorde" >
+         <!-- warchief's command not done and not in org?-->
+         <If Condition="!HasQuest(27721) &amp;&amp; !IsQuestCompleted(27721) &amp;&amp; Me.ZoneId != 1637" >
+            <CustomBehavior File="Halt" Msg="TAKE CHARACTER TO ORGRIMMAR AND PRESS START THIS TIME ONLY" />
+         </If>
+         <!-- if we are in orgrimmar -->
+         <If Condition="Me.ZoneId == 1637" >
+            <!-- if we got the auto-quest then turn in -->
+            <If Condition="HasQuest(28790)" >
+               <!-- fly to Farseer Krogar @ portals in Orgrimmar -->
+               <CustomBehavior File="FlyTo"  X="2044.765" Y="-4380.304" Z="99.21565"  />
+               <TurnIn QuestName="A Personal Summons" QuestId="28790" TurnInName="Farseer Krogar" TurnInId="45244" />
+            </If>
+            <!-- if we have done warchief's command breadcrumb before, then use portal -->
+            <If Condition="!HasQuest(27721) &amp;&amp; IsQuestCompleted(27721)" >
+               <CustomBehavior File="Message" Text="Using Mount Hyjal Portal" LogColor="Green" GoalColor="Green" />
+               <!-- fly to portal area -->
+               <CustomBehavior File="FlyTo" X="2045.171" Y="-4389.435" Z="98.802" />
+               <CustomBehavior File="ForcedDismount" QuestId="0" />
+               <CustomBehavior File="InteractWith" QuestId="0" ObjectType="Gameobject" MobId="207688" NumOfTimes="1" Range="5" WaitTime="10000" CollectionDistance="10" X="2045.171" Y="-4389.435" Z="98.802" />
+               <Else>
+                  <!-- fly to Warchief's Command board near front entrance of Org -->
+                  <CustomBehavior File="FlyTo" X="1596.561" Y="-4372.455" Z="21.08165" />
+                  <!-- Warchief's Command: Mount Hyjal! (level 80) -->
+                  <!-- Speak to Cenarion Emissary Blackhoof to secure transportation to Moonglade.  -->
+                  <!-- Faction: Horde -->
+                  <!-- http://www.wowhead.com/quest=27721 -->
+                  <PickUp QuestName="Warchief's Command: Mount Hyjal!" QuestId="27721" GiverName="Warchief's Command Board" GiverId="206109" GiverType="Object" X="1598.263" Y="-4371.132" Z="21.21064" />
+                  <CustomBehavior File="InteractWith" QuestId="27721" ObjectType="Npc" MobId="15188" NumOfTimes="1" GossipOption="1" WaitTime="1000" CollectionDistance="10" X="1896.11" Y="-4200.94" Z="37.24149" />
+                  <TurnIn QuestName="Warchief's Command: Mount Hyjal!" QuestId="27721"  TurnInName="Emissary Windsong" TurnInId="39865" />
+               </Else>
+            </If>
+         </If>
+      </If>
+      <If Condition="Me.IsAlliance" >
+         <!-- heros call not done and not in stormwind?-->
+         <If Condition="!HasQuest(27726) &amp;&amp; !IsQuestCompleted(27726) &amp;&amp; Me.ZoneId != 1519" >
+            <CustomBehavior File="Halt" Msg="ERROR:  TAKE CHARACTER TO STORMWIND AND PRESS START THIS TIME ONLY" />
+         </If>
+         <!-- if we are in stormwind -->
+         <If Condition="Me.ZoneId == 1519" >
+            <!-- if we got the auto-quest, then turn in -->
+            <If Condition="HasQuest(28825)" >
+               <CustomBehavior File="FlyTo" X="-8212.919" Y="429.0749" Z="118.0505" />
+               <TurnIn QuestName="A Personal Summons" QuestId="28825" TurnInName="Naraat the Earthspeaker" TurnInId="45226" />
+            </If>
+
+            <!-- if we have done heros call breadcrumb before, then use portal -->
+            <If Condition="!HasQuest(27726) &amp;&amp; IsQuestCompleted(27726)" >
+               <CustomBehavior File="Message" Text="Using Mount Hyjal Portal" LogColor="Green" GoalColor="Green" />
+               <!-- fly to portal area -->
+               <CustomBehavior File="FlyTo" X="-8212.556" Y="403.7414" Z="117.2893" />
+               <CustomBehavior File="ForcedDismount" QuestId="0" />
+               <CustomBehavior File="InteractWith" QuestId="0" ObjectType="Gameobject" MobId="207692" NumOfTimes="1" Range="5" WaitTime="10000" CollectionDistance="10" X="-8212.556" Y="403.7414" Z="117.2893" />
+               <Else>
+                  <CustomBehavior File="Message" Text="Using Hero's Call Board" LogColor="Green" GoalColor="Green" />
+                  <!-- fly to heros call board -->
+                  <CustomBehavior File="FlyTo" X="-8343.58" Y="640.1898" Z="95.87756" />
+                  <!-- Hero's Call: Mount Hyjal! (level 80) -->
+                  <!-- Speak to Cenarion Emissary Jademoon to secure transportation to Moonglade.   -->
+                  <!-- Faction: Alliance -->
+                  <!-- http://www.wowhead.com/quest=27726 -->
+                  <PickUp QuestName="Hero's Call: Mount Hyjal!" QuestId="27726" GiverName="Hero's Call Board" GiverId="206294" GiverType="Object" X="-8345.287" Y="638.1205" Z="95.42052" />
+                  <CustomBehavior File="InteractWith" QuestId="27726" ObjectType="Npc" MobId="15187" NumOfTimes="1" GossipOption="1" WaitTime="1000" CollectionDistance="30" X="-8323.653" Y="285.2976" Z="156.8337" />
+                  <TurnIn QuestName="Hero's Call: Mount Hyjal!" QuestId="27726" TurnInName="Emissary Windsong" TurnInId="39865" />
+               </Else>
+            </If>
+         </If>
+      </If>
+
+      <!-- As Hyjal Burns (level 81) -->
+      <!-- Fly to Hyjal using Aronus and speak to Ysera once you're there. -->
+      <!-- http://www.wowhead.com/quest=25316 -->
+      <PickUp QuestName="As Hyjal Burns" GiverName="Emissary Windsong" QuestId="25316" GiverId="39865" />
+      <If Condition="HasQuest(25316)">
+         <CustomBehavior File="MountVehOnly"
+                         NpcMountId="39140"
+                         X="7791.06" Y="-2445.54" Z="489.5634" />
+         <CustomBehavior File="Message" Text="Pausing 2:10 for flight to complete" LogColor="Green" GoalColor="Green" />
+         <CustomBehavior File="WaitTimer" WaitTime="130000" />
+         <!-- Wait 130 seconds ( 2 min, 10 sec ) -->
+      </If>
+
+      <!-- make sure we are in Mount Hyjal -->
+      <If Condition="Me.ZoneId != 616" >
+         <CustomBehavior File="Halt" Msg="ERROR:  MOVE CHARACTER TO MOUNT HYJAL AND PRESS START"/>
+      </If>
+
+      <!--===============================================================================================
+    ==  2. Nordrassil - The World Tree
+    ==  http://wow-pro.com/leveling_guides/arixans_horde_leveling_guide_mt_hyjal_80-82
+    ================================================================================================-->
+      <TurnIn QuestName="As Hyjal Burns" TurnInName="Ysera" QuestId="25316" TurnInId="40289" />
+
+      <!-- Protect the World Tree (level 81) -->
+      <!-- Speak to Malfurion Stormrage at the Tranquil Grove in Mount Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25317 -->
+      <PickUp QuestName="Protect the World Tree" GiverName="Ysera" QuestId="25317" GiverId="40289" />
+
+      <!-- http://www.wowhead.com/quest=25460 -->
+      <PickUp QuestName="The Earth Rises" GiverName="Anren Shadowseeker" QuestId="25460" GiverId="39925" />
+
+      <!-- Inciting the Elements (level 81) -->
+      <!-- Feed Juniper Berries to the Faerie Dragons and slay 4 Twilight Inciters. -->
+      <!-- http://www.wowhead.com/quest=25370 -->
+      <PickUp QuestName="Inciting the Elements" GiverName="Tholo Whitehoof" QuestId="25370" GiverId="40278" />
+      <While Condition="HasQuest(25370) &amp;&amp; !IsQuestCompleted(25370)" >
+         <!-- gather a juniper berry -->
+         <CustomBehavior File="InteractWith" QuestId="25370" ObjectType="Gameobject" MobId="202754" NumOfTimes="1" WaitTime="0" CollectionDistance="1000" X="5608.584" Y="-3748.102" Z="1591.679" />
+         <!-- now use it on a faerie -->
+         <CustomBehavior File="Message" Text="Waiting for Twilight Inciter to attack..." LogColor="Blue" GoalColor="Blue" />
+         <CustomBehavior File="UseItemOn" QuestId="25370" ObjectType="Npc" MobId="39921" ItemId="53009" NumOfTimes="1" WaitTime="20000" CollectionDistance="1000" X="5608.584" Y="-3748.102" Z="1591.679" />
+      </While>
+
+      <Objective QuestName="Inciting the Elements" QuestId="25370" Type="KillMob" MobId="39926" KillCount="4" />
+      <Objective QuestName="The Earth Rises" QuestId="25460" Type="KillMob" KillCount="8" MobId="40229" />
+
+      <If Condition="HasQuest(25460) || HasQuest(25370)" >
+         <!-- fly to Tholo Whitehoof @ Nordrassil -->
+         <CustomBehavior File="FlyTo" X="5559.859" Y="-3647.065" Z="1567.568" />
+      </If>
+      <TurnIn QuestName="The Earth Rises" TurnInName="Anren Shadowseeker" QuestId="25460" TurnInId="39925" />
+      <TurnIn QuestName="Inciting the Elements" TurnInName="Tholo Whitehoof" QuestId="25370" TurnInId="40278" />
+
+      <!-- Flames from Above (level 81) -->
+      <!-- Seek the Twilight Encampment north of Nordrassil and use Tholo's Horn. -->
+      <!-- http://www.wowhead.com/quest=25574 -->
+      <PickUp QuestName="Flames from Above" GiverName="Tholo Whitehoof" QuestId="25574" GiverId="40278" />
+      <If Condition="HasQuest(25574) &amp;&amp; !IsQuestCompleted(25574)" >
+         <!-- fly to Twilight Encampment @ 55,15 -->
+         <CustomBehavior File="FlyTo" X="5768.15" Y="-3297.633" Z="1604.598" />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+      </If>
+      <UseItem ItemId="55122" QuestName="Flames from Above" QuestId="25574" X="5768.15" Y="-3297.633" Z="1604.598" />
+
+      <If Condition="HasQuest(25574) &amp;&amp; IsQuestCompleted(25574)" >
+         <!-- fly to Tholo Whitehoof @ Nordrassil -->
+         <CustomBehavior File="FlyTo" X="5559.859" Y="-3647.065" Z="1567.568" />
+      </If>
+      <TurnIn QuestName="Flames from Above" TurnInName="Tholo Whitehoof" QuestId="25574" TurnInId="40278" />
+
+      <!--===============================================================================================
+    ==  3. The Verdant Thicket
+    ==  http://wow-pro.com/leveling_guides/arixans_horde_leveling_guide_mt_hyjal_80-82
+    ================================================================================================-->
+      <If Condition="HasQuest(25317)" >
+         <!-- fly to Malfurion Stormrage @ 47,35 -->
+         <CustomBehavior File="FlyTo" X="5192.812" Y="-2956.034" Z="1560.821" />
+      </If>
+      <TurnIn QuestName="Protect the World Tree" TurnInName="Malfurion Stormrage" QuestId="25317" TurnInId="39857" />
+
+      <!-- War on the Twilight's Hammer (level 81) -->
+      <!-- Kill 4 Twilight Flamecallers and 10 Twilight Vanquishers. -->
+      <!-- http://www.wowhead.com/quest=25319 -->
+      <PickUp QuestName="War on the Twilight's Hammer" GiverName="Malfurion Stormrage" QuestId="25319" GiverId="39857" />
+
+      <!-- The Flameseer's Staff (level 81) -->
+      <!-- Obtain 8 Bone Staff Fragments. -->
+      <!-- http://www.wowhead.com/quest=25472 -->
+      <PickUp QuestName="The Flameseer's Staff" GiverName="Windspeaker Tamila" QuestId="25472" GiverId="39869" />
+
+      <!-- Charred Staff Fragment -->
+      <Objective QuestName="The Flameseer's Staff" QuestId="25472" Type="Collect" CollectCount="8" ItemId="54461" />
+
+      <!-- Twilight Flamecaller -->
+      <Objective QuestName="War on the Twilight's Hammer" QuestId="25319" Type="KillMob" KillCount="4" MobId="38926" />
+      <!-- Twilight Vanquisher -->
+      <Objective QuestName="War on the Twilight's Hammer" QuestId="25319" Type="KillMob" KillCount="10" MobId="38913" />
+
+      <If Condition="HasQuest(25472) &amp;&amp; IsQuestCompleted(25472)" >
+         <!-- fly to Malfurion Stormrage @ 47,35 -->
+         <CustomBehavior File="FlyTo" X="5192.812" Y="-2956.034" Z="1560.821" />
+      </If>
+      <TurnIn QuestName="War on the Twilight's Hammer" TurnInName="Malfurion Stormrage" QuestId="25319" TurnInId="39857" />
+      <TurnIn QuestName="The Flameseer's Staff" TurnInName="Malfurion Stormrage" QuestId="25472" TurnInId="39857" />
+
+      <!-- Flamebreaker (level 81) -->
+      <!-- Kill 30 Unbound Flame Spirits. -->
+      <!-- http://www.wowhead.com/quest=25323 -->
+      <PickUp QuestName="Flamebreaker" GiverName="Malfurion Stormrage" QuestId="25323" GiverId="39857" />
+      <!-- use: Flameseer's Staff 53107 -->
+      <!-- on:  Blazebound Elemental 38896 -->
+      <!-- CustomBehavior File="UseItemAtRange" QuestId="25323" ObjectType="Npc" MobId="38896" ItemId="53107" NumOfTimes="20" WaitTime="12500" RangeWanted="19" CollectionDistance="1250" X="5307.976" Y="-3015.134" Z="1553.262" / -->
+      <CustomBehavior File="ForcedDismount" QuestId="25323" />
+      <CustomBehavior File="UseItemOn" QuestId="25323" MobId="38896" ItemId="53107" NumOfTimes="20" WaitTime="12500" Range="19" CollectionDistance="1250" X="5416.229" Y="-2911.149" Z="1536.219" />
+
+      <!-- Unbound Flame Spirit -->
+      <Objective QuestName="Flamebreaker" QuestId="25323" Type="KillMob" KillCount="30" MobId="40065" />
+
+      <If Condition="HasQuest(25323) &amp;&amp; IsQuestCompleted(25323)" >
+         <!-- fly to Malfurion Stormrage @ 47,35 -->
+         <CustomBehavior File="FlyTo" X="5192.812" Y="-2956.034" Z="1560.821" />
+      </If>
+      <TurnIn QuestName="Flamebreaker" TurnInName="Malfurion Stormrage" QuestId="25323" TurnInId="39857" />
+
+      <!-- The Return of Baron Geddon (level 81) -->
+      <!-- Channel the Flameseer's Staff to weaken Baron Geddon. -->
+      <!-- http://www.wowhead.com/quest=25464 -->
+      <PickUp QuestName="The Return of Baron Geddon" GiverName="Malfurion Stormrage" QuestId="25464" GiverId="39857" />
+
+      <If Condition="HasQuest(25464) &amp;&amp; !IsQuestCompleted(25464)" >
+         <!-- fly to Baron Geddon @ 47,35 -->
+         <CustomBehavior File="FlyTo" X="5411.066" Y="-2756.996" Z="1518.385" />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+      </If>
+
+      <!-- Baron Geddon Weakened -->
+      <CustomBehavior File="MountHyjal\BaronGeddon" QuestId="25464" MobId="40147" ItemId="54463" AuraId="74813" X="5421.708" Y="-2777.452" Z="1515.463" />
+
+      <If Condition="HasQuest(25464)" >
+         <!-- fly to Malfurion Stormrage @ 47,35 -->
+         <CustomBehavior File="FlyTo" X="5192.812" Y="-2956.034" Z="1560.821" />
+      </If>
+      <TurnIn QuestName="The Return of Baron Geddon" TurnInName="Malfurion Stormrage" QuestId="25464" TurnInId="39857" />
+
+      <!-- Emerald Allies (level 81) -->
+      <!-- Speak to Alysra at the Ruins of Lar'donir in Mount Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25430 -->
+      <PickUp QuestName="Emerald Allies" GiverName="Windspeaker Tamila" QuestId="25430" GiverId="39869" />
+      <If Condition="HasQuest(25430)" >
+         <!-- fly to Alysra at The Ruins of Lardonir -->
+         <CustomBehavior File="FlyTo" X="5656.109" Y="-2987.364" Z="1560.7" />
+      </If>
+      <TurnIn QuestName="Emerald Allies" TurnInName="Alysra" QuestId="25430" TurnInId="38917" />
+
+      <!-- The Captured Scout (level 81) -->
+      <!-- Find Scout Larandia at the Twilight Command Post in Mount Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25320 -->
+      <PickUp QuestName="The Captured Scout" GiverName="Alysra" QuestId="25320" GiverId="38917" />
+
+      <If Condition="HasQuest(25320)" >
+         <!-- fly to Scout Larandia at Twilight Camp -->
+         <CustomBehavior File="FlyTo" X="5658.367" Y="-2815.689" Z="1524.302" />
+      </If>
+      <TurnIn QuestName="The Captured Scout" TurnInName="Scout Larandia" QuestId="25320" TurnInId="40096" />
+
+      <!-- Twilight Captivity (level 81) -->
+      <!-- Obtain a Twilight Overseer's Key at the Twilight Command Post in Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25321 -->
+      <PickUp QuestName="Twilight Captivity" GiverName="Scout Larandia" QuestId="25321" GiverId="40096" />
+      <!-- Twilight Overseer's Key -->
+      <Objective QuestName="Twilight Captivity" QuestId="25321" Type="Collect" CollectCount="1" ItemId="53139" />
+      <TurnIn QuestName="Twilight Captivity" TurnInName="Scout Larandia" QuestId="25321" TurnInId="40096" />
+
+      <!-- Return to Alysra (level 81) -->
+      <!-- Return to Alysra at the Ruins of Lar'donir in Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25424 -->
+      <PickUp QuestName="Return to Alysra" GiverName="Scout Larandia" QuestId="25424" GiverId="40096" />
+
+      <If Condition="HasQuest(25424)" >
+         <!-- fly to Alysra at The Ruins of Lardonir -->
+         <CustomBehavior File="FlyTo" X="5656.109" Y="-2987.364" Z="1560.7" />
+      </If>
+      <TurnIn QuestName="Return to Alysra" TurnInName="Alysra" QuestId="25424" TurnInId="38917" />
+
+      <!-- A Prisoner of Interest (level 81) -->
+      <!-- Speak to Captain Saynna Stormrunner at the Barrow Dens in Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25324 -->
+      <PickUp QuestName="A Prisoner of Interest" GiverName="Alysra" QuestId="25324" GiverId="38917" />
+
+      <If Condition="HasQuest(25324)" >
+         <!-- fly to Captain Saynna Stormrunner at Barrow Dens -->
+         <CustomBehavior File="FlyTo" X="5704.759" Y="-3149.692" Z="1592.941" />
+      </If>
+      <TurnIn QuestName="A Prisoner of Interest" TurnInName="Captain Saynna Stormrunner" QuestId="25324" TurnInId="40139" />
+
+      <!-- Through the Dream (level 81) -->
+      <!-- Deliver Arch Druid Fandral Staghelm to Alysra at the entrance of the Barrow Dens in Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25325 -->
+      <PickUp QuestName="Through the Dream" GiverName="Captain Saynna Stormrunner" QuestId="25325" GiverId="40139" />
+      <!-- Arch Druid Fandral Staghelm delivered -->
+      <!-- NOTE:  Alysra has moved to outside cave entrance temporarily -->
+      <TurnIn QuestName="Through the Dream" TurnInName="Alysra" QuestId="25325" TurnInId="40178" />
+
+      <!-- Return to Nordrassil (level 81) -->
+      <!-- Speak to Ysera at Nordrassil in Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25578 -->
+      <PickUp QuestName="Return to Nordrassil" GiverName="Alysra" QuestId="25578" GiverId="40178" />
+      <If Condition="HasQuest(25578)" >
+         <!-- Fly to Nordrassil -->
+         <CustomBehavior File="FlyTo" X="5575.909" Y="-3616.602" Z="1570.599"  />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+      </If>
+
+      <!--===============================================================================================
+    ==  4. Shrine of Goldrinn
+    ==  http://wow-pro.com/leveling_guides/arixans_horde_leveling_guide_mt_hyjal_80-82
+    ================================================================================================-->
+      <TurnIn QuestName="Return to Nordrassil" TurnInName="Ysera" QuestId="25578" TurnInId="40289" />
+
+      <!-- The Return of the Ancients (level 81) -->
+      <!-- Speak to Oomla Whitehorn at Wolf's Run in Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25584 -->
+      <PickUp QuestName="The Return of the Ancients" GiverName="Ysera" QuestId="25584" GiverId="40289" />
+      <If Condition="HasQuest(25584)" >
+         <!-- if not flying and within 70 yards of Ysera (in Nordrassil Inn) -->
+         <If Condition="!Me.IsFlying &amp;&amp; Me.Location.Distance(new WoWPoint(5492.833,-3566.269,1569.25)) &lt; 70" >
+            <!-- run outside of Nordrassil Inn -->
+            <RunTo X="5575.909" Y="-3616.602" Z="1570.599"  />
+         </If>
+         <!-- fly to Oomla Whitehorn -->
+         <CustomBehavior File="FlyTo" X="5643.741" Y="-2444.383" Z="1527.16" />
+      </If>
+      <TurnIn QuestName="The Return of the Ancients" TurnInName="Oomla Whitehorn" QuestId="25584" TurnInId="39429" />
+
+      <!-- Harrying the Hunters (level 81) -->
+      <!-- Kill 6 Twilight Hunters at Wolf's Run in Mount Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25255 -->
+      <PickUp QuestName="Harrying the Hunters" GiverName="Oomla Whitehorn" QuestId="25255" GiverId="39429" />
+
+      <!-- End of the Supply Line (level 81) -->
+      <!-- Slay 4 Twilight Proveditors at Wolf's Run in Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25233 -->
+      <PickUp QuestName="End of the Supply Line" GiverName="Jadi Falaryn" QuestId="25233" GiverId="39427" />
+
+      <!-- In the Rear With the Gear (level 81) -->
+      <!-- Collect 36 Twilight Supplies left behind from freed Twilight Slaves. -->
+      <!-- http://www.wowhead.com/quest=25234 -->
+      <PickUp QuestName="In the Rear With the Gear" GiverName="Jadi Falaryn" QuestId="25234" GiverId="39427" />
+
+      <If Condition="HasQuest(25234) &amp;&amp; !IsQuestCompleted(25234)" >
+         <CustomBehavior File="FlyTo" X="5599.614" Y="-2622.326" Z="1490.518" />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+      </If>
+      <Objective QuestName="In the Rear With the Gear" QuestId="25234" Type="CollectItem" ItemId="52568" CollectCount="36" />
+
+      <!-- Twilight Hunter -->
+      <Objective QuestName="Harrying the Hunters" QuestId="25255" Type="KillMob" KillCount="6" MobId="39437" />
+
+      <Objective QuestName="End of the Supply Line" QuestId="25233" Type="KillMob" KillCount="4" MobId="39436" />
+
+      <If Condition="HasQuest(25234) &amp;&amp; HasQuest(25255) &amp;&amp; IsQuestCompleted(25234) &amp;&amp; IsQuestCompleted(25255)" >
+         <!-- fly to turnin -->
+         <CustomBehavior File="FlyTo" X="5643.741" Y="-2444.383" Z="1527.16" />
+      </If>
+
+      <TurnIn QuestName="Harrying the Hunters" TurnInName="Oomla Whitehorn" QuestId="25255" TurnInId="39429" />
+      <TurnIn QuestName="End of the Supply Line" TurnInName="Jadi Falaryn" QuestId="25233" TurnInId="39427" />
+      <TurnIn QuestName="In the Rear With the Gear" TurnInName="Jadi Falaryn" QuestId="25234" TurnInId="39427" />
+
+     
+      <If Condition="Me.IsHorde" >
+         <!-- The Voice of Lo'Gosh (level 81) -->
+         <!-- Locate Takrik Ragehowl near the Shrine of Goldrinn in Hyjal. -->
+         <!-- Faction: HORDE ONLY -->
+         <!-- http://www.wowhead.com/quest=25269 -->
+         <PickUp QuestName="The Voice of Lo'Gosh" GiverName="Oomla Whitehorn" QuestId="25269" GiverId="39429" />
+         <If Condition="HasQuest(25269)" >
+            <!-- fly to turnin -->
+            <CustomBehavior File="FlyTo" X="5298.323" Y="-2204.983" Z="1263.675" />
+            <CustomBehavior File="ForcedDismount" QuestId="0" />
+         </If>
+         <TurnIn QuestName="The Voice of Lo'Gosh" TurnInName="Takrik Ragehowl" QuestId="25269" TurnInId="39432" />
+
+         <!-- Howling Mad (level 81) -->
+         <!-- Acquire 6 Polluted Incense. -->
+         <!-- Faction: HORDE ONLY -->
+         <!-- http://www.wowhead.com/quest=25270 -->
+         <PickUp QuestName="Howling Mad" GiverName="Takrik Ragehowl" QuestId="25270" GiverId="39432" />
+         <!-- Polluted Incense -->
+         <Objective QuestName="Howling Mad" QuestId="25270" Type="Collect" CollectCount="6" ItemId="52658" />
+         <TurnIn QuestName="Howling Mad" TurnInName="Takrik Ragehowl" QuestId="25270" TurnInId="39432" />
+
+         <!-- Lycanthoth the Corruptor (level 81) -->
+         <!-- Use Lycanthoth's Incense within the Maw of Lycanthoth in Hyjal to summon and kill Lycanthoth. -->
+         <!-- Faction: HORDE ONLY -->
+         <!-- http://www.wowhead.com/quest=25272 -->
+         <PickUp QuestName="Lycanthoth the Corruptor" GiverName="Takrik Ragehowl" QuestId="25272" GiverId="39432" />
+         <!-- Lycanthoth -->
+         <UseItem ItemId="52682" QuestName="Lycanthoth the Corruptor" QuestId="25272" X="5144.01" Y="-2302.301" Z="1278.465" />
+         <Objective QuestName="Lycanthoth the Corruptor" QuestId="25272" Type="KillMob" KillCount="1" MobId="39446" />
+         <TurnIn QuestName="Lycanthoth the Corruptor" TurnInName="Spirit of Lo'Gosh" QuestId="25272" TurnInId="39622" />
+
+         <!-- The Shrine Reclaimed (level 81) -->
+         <!-- Return to Takrik Ragehowl at the reclaimed Shrine of Goldrinn in Hyjal. -->
+         <!-- Faction: HORDE ONLY -->
+         <!-- http://www.wowhead.com/quest=25279 -->
+         <PickUp QuestName="The Shrine Reclaimed" GiverName="Spirit of Lo'Gosh" QuestId="25279" GiverId="39622" />
+         <TurnIn QuestName="The Shrine Reclaimed" TurnInName="Takrik Ragehowl" QuestId="25279" TurnInId="39432" />
+
+         <!-- Cleaning House (level 81) -->
+         <!-- Kill any combination of 8 Hovel Brutes or Hovel Shadowcasters within Gar'gol's Hovel in Hyjal. -->
+         <!-- Faction: HORDE ONLY -->
+         <!-- http://www.wowhead.com/quest=25277 -->
+         <PickUp QuestName="Cleaning House" GiverName="Takrik Ragehowl" QuestId="25277" GiverId="39432" />
+
+         <Else>
+            <!-- The Voice of Goldrinn (level 81) -->
+            <!-- Locate Ian Duran near the Shrine of Goldrinn in Hyjal. -->
+            <!-- Faction: ALLIANCE ONLY -->
+            <!-- http://www.wowhead.com/quest=25268 -->
+            <PickUp QuestName="The Voice of Goldrinn" GiverName="Jadi Falaryn" QuestId="25268" GiverId="39427" />
+            <If Condition="HasQuest(25268)" >
+               <!-- fly to turnin -->
+               <CustomBehavior File="FlyTo" X="5298.323" Y="-2204.983" Z="1263.675" />
+               <CustomBehavior File="ForcedDismount" QuestId="0" />
+            </If>
+            <TurnIn QuestName="The Voice of Goldrinn" TurnInName="Ian Duran" QuestId="25268" TurnInId="39433" />
+
+            <!-- Goldrinn's Ferocity (level 81) -->
+            <!-- Acquire 6 Polluted Incense. -->
+            <!-- Faction: ALLIANCE ONLY -->
+            <!-- http://www.wowhead.com/quest=25271 -->
+            <PickUp QuestName="Goldrinn's Ferocity" GiverName="Ian Duran" QuestId="25271" GiverId="39433" />
+            <!-- Polluted Incense -->
+            <Objective QuestName="Goldrinn's Ferocity" QuestId="25271" Type="Collect" CollectCount="6" ItemId="52658" />
+            <TurnIn QuestName="Goldrinn's Ferocity" TurnInName="Ian Duran" QuestId="25271" TurnInId="39433" />
+
+            <!-- Lycanthoth the Corruptor (level 81) -->
+            <!-- Use Lycanthoth's Incense within the Maw of Lycanthoth in Hyjal to summon and kill Lycanthoth. -->
+            <!-- Faction: ALLIANCE ONLY -->
+            <!-- http://www.wowhead.com/quest=25273 -->
+            <PickUp QuestName="Lycanthoth the Corruptor" GiverName="Ian Duran" QuestId="25273" GiverId="39433" />
+            <!-- Lycanthoth -->
+            <UseItem ItemId="52682" QuestName="Lycanthoth the Corruptor" QuestId="25273" X="5144.01" Y="-2302.301" Z="1278.465" />
+            <Objective QuestName="Lycanthoth the Corruptor" QuestId="25273" Type="KillMob" KillCount="1" MobId="39446" />
+            <TurnIn QuestName="Lycanthoth the Corruptor" TurnInName="Spirit of Goldrinn" QuestId="25273" TurnInId="39627" />
+
+            <!-- The Shrine Reclaimed (level 81) -->
+            <!-- Return to Ian Duran at the reclaimed Shrine of Goldrinn in Hyjal. -->
+            <!-- Faction: ALLIANCE ONLY -->
+            <!-- http://www.wowhead.com/quest=25280 -->
+            <PickUp QuestName="The Shrine Reclaimed" GiverName="Spirit of Goldrinn" QuestId="25280" GiverId="39627" />
+            <TurnIn QuestName="The Shrine Reclaimed" TurnInName="Ian Duran" QuestId="25280" TurnInId="39433" />
+
+            <!-- Cleaning House (level 81) -->
+            <!-- Kill any combination of 8 Hovel Brutes or Hovel Shadowcasters within Gar'gol's Hovel in Hyjal. -->
+            <!-- Faction: ALLIANCE ONLY -->
+            <!-- http://www.wowhead.com/quest=25278 -->
+            <PickUp QuestName="Cleaning House" GiverName="Ian Duran" QuestId="25278" GiverId="39433" />
+         </Else>
+      </If>
+
+      <PickUp QuestName="From the Mouth of Madness" GiverName="Rio Duran" QuestId="25297" GiverId="39434" />
+
+      <PickUp QuestName="The Eye of Twilight" GiverName="Royce Duskwhisper" QuestId="25300" GiverId="39435" />
+
+      <Objective QuestName="From the Mouth of Madness" QuestId="25297" Type="CollectItem" CollectCount="1" ItemId="52727" />
+      <Objective QuestName="From the Mouth of Madness" QuestId="25297" Type="CollectItem" CollectCount="1" ItemId="52726" />
+      <Objective QuestName="From the Mouth of Madness" QuestId="25297" Type="CollectItem" CollectCount="1" ItemId="52728" />
+
+      <If Condition="Me.IsHorde" >
+         <!-- Minion of Gar'gol Slain - seem to be more Brutes so killing 6 of those, 2 of other -->
+         <Objective QuestName="Cleaning House" QuestId="25277" Type="KillMob" MobId="39642" KillCount="8" />
+         <Else>
+            <!-- Hovel Shadowcaster(NPC Entry=39643) -->
+            <Objective QuestName="Cleaning House" QuestId="25278" Type="KillMob" MobId="39642" KillCount="8" />
+         </Else>
+      </If>
+
+      <TurnIn QuestName="From the Mouth of Madness" TurnInName="Twilight Cauldron" QuestId="25297" TurnInId="202706" />
+      <PickUp QuestName="Free Your Mind, the Rest Follows" QuestId="25298" GiverName="Twilight Cauldron" GiverId="202706" GiverType="Object" X="5165.295" Y="-2134.595" Z="1277.844" />
+
+      <TurnIn QuestName="The Eye of Twilight" TurnInName="Eye of Twilight" QuestId="25300" TurnInId="202697" />
+      <PickUp QuestName="Mastering Puppets" QuestId="25301" GiverName="Eye of Twilight" GiverId="202697" GiverType="Object" X="5199.349" Y="-2082.641" Z="1281.333" />
+
+
+      <!--
+    entering cave:
+    move to <Hotspot X="5184.144" Y="-2084.343" Z="1281.334" />
+    ctm to <Hotspot X="5161.323" Y="-2064.842" Z="1279.816" />
+    
+    leaving cave:
+    reverse
+    -->
+
+      <If Condition="Me.IsOutdoors &amp;&amp; (HasQuest(25298) || HasQuest(25328) || HasQuest(25301))">
+         <!-- fly to vendor Jalin Lakedeep @ Grove of Aessina -->
+         <CustomBehavior File="FlyTo" X="5180.179" Y="-1718.222" Z="1339.936" />
+         <CustomBehavior File="ForceSetVendor" VendorType="Sell" />
+         <CustomBehavior File="ForceSetVendor" VendorType="Repair" />
+         <CustomBehavior File="FlyTo" X="5184.144" Y="-2084.343" Z="1281.334" />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+         <!-- CustomBehavior File="myCTM" X="5161.323" Y="-2064.842" Z="1279.816" / -->
+         <RunTo X="5161.323" Y="-2064.842" Z="1279.816" />
+      </If>
+      
+      <!-- need to talk to 8 x Twilight Servitor -->
+      <While Condition="HasQuest(25298) &amp;&amp; !IsQuestCompleted(25298)">
+         <CustomBehavior File="InteractWith" QuestId="25298" ObjectType="Npc" MobId="39644" NumOfTimes="1" GossipOption="1" WaitTime="1000" CollectionDistance="150" X="5080.783" Y="-2070.575" Z="1274.841" />
+         <!-- CustomBehavior File="RunMacro" Macro="/script GossipTitleButton1:Click()\n" NumOfTimes="1" / -->
+      </While>
+
+      <!-- Gar'gol's Gotta Go (level 81) -->
+      <!-- Get the Rusted Skull Key from Gar'gol's Personal Treasure Chest. -->
+      <!-- http://www.wowhead.com/quest=25328 -->
+      <PickUp QuestName="Gar'gol's Gotta Go" GiverName="Kristoff Manheim" QuestId="25328" GiverId="39640" X="5038.081" Y="-2084.975" Z="1276.445" />
+
+      <!-- COMPLETE THROUGH STEP 23 IN http://wow-pro.com/leveling_guides/arixans_horde_leveling_guide_mt_hyjal_80-82 -->
+
+      <TurnIn QuestName="Mastering Puppets" TurnInName="The Twilight Apocrypha" QuestId="25301" TurnInId="202712" />
+
+      <While Condition="!IsQuestCompleted(25303)" >
+         <CustomBehavior File="AbandonQuest" QuestId="25303" Type="Incomplete" />
+         <PickUp QuestName="Elementary!" QuestId="25303" GiverName="The Twilight Apocrypha" GiverId="202712" GiverType="Object" X="5017.146" Y="-2025.394" Z="1269.936" />
+         <!-- map coords (in cave): 25.89, 41.61  do crucibles in order: Fire=39730 Earth=39737 Air=39736 Water=39738 -->
+         <CustomBehavior File="InteractWith" QuestId="25303" ObjectType="Npc" MobId="39730" NumOfTimes="1" WaitTime="0" CollectionDistance="35" X="5012.012" Y="-2031.457" Z="1270.971"  />
+         <CustomBehavior File="InteractWith" QuestId="25303" ObjectType="Npc" MobId="39737" NumOfTimes="1" WaitTime="0" CollectionDistance="35" X="5016.444" Y="-2019.877" Z="1271.356"  />
+         <CustomBehavior File="InteractWith" QuestId="25303" ObjectType="Npc" MobId="39736" NumOfTimes="1" WaitTime="0" CollectionDistance="35" X="5011.444" Y="-2024.575" Z="1271.797"  />
+         <CustomBehavior File="InteractWith" QuestId="25303" ObjectType="Npc" MobId="39738" NumOfTimes="1" WaitTime="0" CollectionDistance="35"  X="5017.847" Y="-2031.226" Z="1270.698"  />
+      </While>
+      
+      <TurnIn QuestName="Elementary!" TurnInName="The Twilight Apocrypha" QuestId="25303" TurnInId="202712" />
+
+      <PickUp QuestName="Return to Duskwhisper" GiverName="The Twilight Apocrypha" QuestId="25312" GiverId="202712" GiverType="Object" X="5017.146" Y="-2025.394" Z="1269.936" />
+
+      <!-- Rusted Skull Key -->
+      <Objective QuestName="Gar'gol's Gotta Go" QuestId="25328" Type="Collect" CollectCount="1" ItemId="52789" />
+      <TurnIn QuestName="Gar'gol's Gotta Go" TurnInName="Kristoff Manheim" QuestId="25328" TurnInId="39640"  X="5038.081" Y="-2084.975" Z="1276.445" />
+
+      <!-- Get Me Outta Here! (level 81) -->
+      <!-- Escort Kristoff out of Gar'gol's Hovel. -->
+      <!-- http://www.wowhead.com/quest=25332 -->
+      <PickUp QuestName="Get Me Outta Here!" GiverName="Kristoff Manheim" QuestId="25332" GiverId="39640"  X="5038.081" Y="-2084.975" Z="1276.445" />
+      <If Condition="HasQuest(25332) &amp;&amp; !IsQuestCompleted(25332)">
+         <RunTo X="5181.847" Y="-2083.274" Z="1281.333" />
+         <CustomBehavior File="WaitTimer" WaitTime="5000" />
+      </If>
+
+      <!-- fly to quest turn in --> 
+      <If Condition="HasQuest(25277) || HasQuest(25278) || HasQuest(25298) || HasQuest(25332) || HasQuest(25312)" >
+         <!-- run to Shrine of Goldrinn (flying sometimes bugs to this spot) -->
+         <RunTo X="5344.787" Y="-2129.156" Z="1280.521" />
+      </If>
+
+      <TurnIn QuestName="Free Your Mind, the Rest Follows" TurnInName="Rio Duran" QuestId="25298" TurnInId="39434" />
+      <TurnIn QuestName="Get Me Outta Here!" TurnInName="Royce Duskwhisper" QuestId="25332" TurnInId="39435" />
+      <TurnIn QuestName="Return to Duskwhisper" TurnInName="Royce Duskwhisper" QuestId="25312" TurnInId="39435" />
+
+      <If Condition="Me.IsHorde" >
+         <TurnIn QuestName="Cleaning House" TurnInName="Takrik Ragehowl" QuestId="25277" TurnInId="39432" />
+         
+         <!-- Sweeping the Shelf (level 81) -->
+         <!-- Slay 8 Twilight Stormcallers and 5 Howling Riftdwellers. -->
+         <!-- Faction: HORDE ONLY -->
+         <!-- http://www.wowhead.com/quest=25354 -->
+         <PickUp QuestName="Sweeping the Shelf" GiverName="Takrik Ragehowl" QuestId="25354" GiverId="39432" />
+
+         <!-- Lightning in a Bottle (level 81) -->
+         <!-- Collect a Charged Condenser Jar from a Twilight Lightning Channel. -->
+         <!-- Faction: HORDE ONLY -->
+         <!-- http://www.wowhead.com/quest=25355 -->
+         <PickUp QuestName="Lightning in a Bottle" QuestId="25355" GiverName="Takrik Ragehowl" GiverId="39432" />
+
+         <If Condition="HasQuest(25355) &amp;&amp; !IsQuestCompleted(25355)" >
+            <!-- fly to Shrine of Goldrinn -->
+            <CustomBehavior File="FlyTo" X="5284.652" Y="-1918.041" Z="1340.629" />
+         </If>
+         <!-- Charged Condenser Jar -->
+         <Objective QuestName="Lightning in a Bottle" QuestId="25355" Type="Collect" CollectCount="1" ItemId="52834" />
+
+         <!-- Twilight Stormcaller -->
+         <!-- enter as 20 even though only 8 because quest complete takes care of it and want 
+         to kill Howling Riftdwellers required as part of this grind (will only kill 8)
+    -->
+         <Objective QuestName="Sweeping the Shelf" QuestId="25354" Type="KillMob" KillCount="20" MobId="39843" />
+         <!-- Howling Riftdweller -->
+         <Objective QuestName="Sweeping the Shelf" QuestId="25354" Type="KillMob" KillCount="5" MobId="39844" />
+
+         <If Condition="HasQuest(25355) &amp;&amp; IsQuestCompleted(25355)" >
+            <!-- use Totem of Lo'Gosh -->
+            <CustomBehavior File="RunMacro" Macro="/use item:52854" NumOfTimes="1" WaitTime="1500" />
+            <TurnIn QuestName="Lightning in a Bottle" QuestId="25355" TurnInName="Spirit of Lo'Gosh" TurnInId="39622" />
+
+            <!-- DUPLICATE QUEST NAMES:  could be http://www.wowhead.com/quest=25624 instead -->
+            <!-- Into the Maw! (level 81) -->
+            <!-- Step through the flamegate atop the Lightning Ledge in Mount Hyjal, and speak with Jordan Olafson within. -->
+            <!-- Faction: HORDE ONLY -->
+            <!-- http://www.wowhead.com/quest=25617 -->
+            <PickUp QuestName="Into the Maw!" QuestId="25617" GiverName="Spirit of Lo'Gosh" GiverId="39622" />
+         </If>
+         <Else>
+            <TurnIn QuestName="Cleaning House" TurnInName="Ian Duran" QuestId="25278" TurnInId="39433" />
+            
+            <!-- Sweeping the Shelf (level 81) -->
+            <!-- Slay 8 Twilight Stormcallers and 5 Howling Riftdwellers. -->
+            <!-- Faction: ALLIANCE ONLY -->
+            <!-- http://www.wowhead.com/quest=25352 -->
+            <PickUp QuestName="Sweeping the Shelf" GiverName="Ian Duran" QuestId="25352" GiverId="39433" />
+
+            <!-- Lightning in a Bottle (level 81) -->
+            <!-- Collect a Charged Condenser Jar from a Twilight Lightning Channel. -->
+            <!-- Faction: ALLIANCE ONLY -->
+            <!-- http://www.wowhead.com/quest=25353 -->
+            <PickUp QuestName="Lightning in a Bottle" GiverName="Ian Duran" QuestId="25353" GiverId="39433" />
+
+            <!-- Charged Condenser Jar - user InteractWith and range... collect kept trying to run through gameobject -->          
+            <CustomBehavior File="InteractWith" QuestId="25353" ObjectType="Gameobject" MobId="202731" NumOfTimes="1" Range="5" WaitTime="1000" CollectionDistance="300" X="5291.482" Y="-1891.535" Z="1348.965" />
+
+            <!-- Twilight Stormcaller -->
+            <!-- enter as 20 even though only 8 because quest complete takes care of it and want   to kill Howling Riftdwellers required as part of this grind (will only kill 8) -->
+            <Objective QuestName="Sweeping the Shelf" QuestId="25352" Type="KillMob" KillCount="20" MobId="39843" />
+            <!-- Howling Riftdweller -->
+            <Objective QuestName="Sweeping the Shelf" QuestId="25352" Type="KillMob" KillCount="5" MobId="39844" />
+
+            <If Condition="HasQuest(25353) &amp;&amp; IsQuestCompleted(25353)" >
+               <!-- use Totem of Goldrinn -->
+               <CustomBehavior File="RunMacro" Macro="/use item:52853" NumOfTimes="1" WaitTime="1500" />
+               <TurnIn QuestName="Lightning in a Bottle" TurnInName="Spirit of Goldrinn" QuestId="25353" TurnInId="39627" />
+
+               <!-- Into the Maw! (level 81) -->
+               <!-- Step through the flamegate atop the Lightning Ledge in Mount Hyjal, and speak with Jordan Olafson within. -->
+               <!-- Faction: ALLIANCE ONLY -->
+               <!-- http://www.wowhead.com/quest=25618 -->
+               <PickUp QuestName="Into the Maw!" GiverName="Ian Duran" QuestId="25618" GiverId="39627" />
+            </If>
+         </Else>
+      </If>
+
+      <!-- 
+    ENTER THE PORTAL HERE!!!!!! TO:  Fireland Forgeworks 
+    
+    GoThruPortal.cs will aim for a target 10 yards past the coordinates given
+    It should always be paired with a <RunTo> or other movement command to 
+    establish control over the direction of movement.  Then choose a spot
+    as close as possible to portal entrance without passing through.  Behavior
+    will stop moving towards the spot when one of the following occurs
+    
+    1) it reaches extended spot (coords +10 yds): should not happen ever
+    2) OR load screen detected  (!InGame)
+    3) OR new zone?? map?? tile?? detected   (change in Me.ZoneText)
+    
+    -->
+      <If Condition="Me.IsOutdoors &amp;&amp; (HasQuest(25617) || HasQuest(25623))" >
+         <!-- just outside Fireland Forgeworks portal @ Lightning Ledge -->
+         <RunTo  X="5045.169" Y="-2058.247" Z="1367.731" />
+         <!-- run to point inside -->
+         <!-- CustomBehavior File="GoThruPortal" X="5033.706" Y="-2040.36" Z="1370.544" / -->
+         <RunTo  X="5028.314" Y="-2033.591" Z="1148.975" />
+      </If>
+
+      <!-- SUBZONE:  Fireland Forgeworks  -->
+
+      <If Condition="Me.IsHorde" >
+         <TurnIn QuestName="Into the Maw!" TurnInName="Jordan Olafson" QuestId="25617" TurnInId="40834" />
+         <Else>
+            <If Condition="HasQuest(25618)" >
+               <TurnIn QuestName="Into the Maw!" TurnInName="Jordan Olafson" QuestId="25618" TurnInId="40834" />
+            </If>
+         </Else>
+      </If>
+
+      <!-- Forged of Shadow and Flame (level 81) -->
+      <!-- Destroy 10 Twilight Arms crates. -->
+      <!-- http://www.wowhead.com/quest=25575 -->
+      <PickUp QuestName="Forged of Shadow and Flame" GiverName="Jordan Olafson" QuestId="25575" GiverId="40834" />
+
+      <!-- Crushing the Cores (level 81) -->
+      <!-- Acquire 8 Smoldering Cores by killing Searing Guardians, then smash them against a Twilight Anvil. -->
+      <!-- http://www.wowhead.com/quest=25577 -->
+      <PickUp QuestName="Crushing the Cores" QuestId="25577" GiverName="Jordan Olafson" GiverId="40834" />
+
+      <!-- Rage of the Wolf Ancient (level 81) -->
+      <!-- Slay 12 Dark Iron Laborers. -->
+      <!-- http://www.wowhead.com/quest=25576 -->
+      <PickUp QuestName="Rage of the Wolf Ancient" GiverName="Yargra Blackscar" QuestId="25576" GiverId="40837" />
+
+      <While Condition="HasQuest(25575) &amp;&amp; !IsQuestCompleted(25575)" >
+         <!-- 10 x Twilight Arms Crate Destroyed (give larger number to be sure it completes) -->
+         <CustomBehavior File="InteractWith"
+                     QuestId="25575"
+                     ObjectType="GameObject"
+                     MobId="203066"
+                     NumOfTimes="10"
+                     Range="5"
+                     WaitTime="0"
+                     CollectionDistance="400"
+                     X="5039.193" Y="-2159.692" Z="1136.213" />
+      </While>
+      
+      <!-- Dark Iron Laborer -->
+      <Objective QuestName="Rage of the Wolf Ancient" QuestId="25576" Type="KillMob" MobId="40838" KillCount="12" />
+      <!-- 8 Smoldering Cores Collected -->
+      <If Condition="HasQuest(25577) &amp;&amp; !IsQuestCompleted(25577)">
+         <Objective QuestName="Crushing the Cores" QuestId="25577" Type="CollectItem" Count="8" Id="55123" />
+      </If>
+      <!-- 8 Smoldering Cores Destroyed :  requires a Twilight Anvil - try to do all at one place -->
+      <!-- UseItem tag used to also set position, but RunMacro used because of built-in wait param -->
+      <While Condition="HasQuest(25577) &amp;&amp; !IsQuestCompleted(25577)" >
+         <UseItem ItemId="55123" QuestName="Crushing the Cores" QuestId="25577"  X="4980.953" Y="-2105.104" Z="1144.759" />
+         <CustomBehavior File="WaitTimer" WaitTime="2000" />
+      </While>
+
+      <TurnIn QuestName="Forged of Shadow and Flame" TurnInName="Jordan Olafson" QuestId="25575" TurnInId="40834" />
+      <TurnIn QuestName="Crushing the Cores" TurnInName="Jordan Olafson" QuestId="25577" TurnInId="40834" />
+      <TurnIn QuestName="Rage of the Wolf Ancient" TurnInName="Yargra Blackscar" QuestId="25576" TurnInId="40837" />
+
+      <!-- Cindermaul, the Portal Master (level 81) -->
+      <!-- Slay Cindermaul and locate the Tome of Openings. -->
+      <!-- http://www.wowhead.com/quest=25599 -->
+      <!-- 
+        This quest has been very bugged in the past and required deleting Cache folders
+        to receive credit when killing and able to loot chest
+    -->
+      <PickUp QuestName="Cindermaul, the Portal Master" GiverName="Jordan Olafson" QuestId="25599" GiverId="40834" />
+      <!-- Cindermaul -->
+      <Objective QuestName="Cindermaul, the Portal Master" QuestId="25599" Type="KillMob" KillCount="1" MobId="40844" />
+      <!-- Tome of Openings -->
+      <Objective QuestName="Cindermaul, the Portal Master" QuestId="25599" Type="Collect" CollectCount="1" ItemId="55136" />
+      <TurnIn QuestName="Cindermaul, the Portal Master" TurnInName="Jordan Olafson" QuestId="25599" TurnInId="40834" />
+
+      <!-- Forgemaster Pyrendius (level 81) -->
+      <!-- Slay Forgemaster Pyrendius. Lure him onto the Portal Runes and use them to weaken him. -->
+      <!-- http://www.wowhead.com/quest=25600 -->
+      <PickUp QuestName="Forgemaster Pyrendius" GiverName="Jordan Olafson" QuestId="25600" GiverId="40834" />
+      <!-- all classes tested could solo this elite, so runes not used -->
+      <!-- Forgemaster Pyrendius -->
+
+      <!-- Gameobject 203092	Portal Rune	X="4892.73" Y="-2272.44" Z="1117.29" / -->
+      <!-- Gameobject 203094	Portal Rune	X="4876.24" Y="-2274.11" Z="1117.26" / -->
+      <Objective QuestName="Forgemaster Pyrendius" QuestId="25600" Type="KillMob" KillCount="1" MobId="40845" />
+      
+      <TurnIn QuestName="Forgemaster Pyrendius" TurnInName="Jordan Olafson" QuestId="25600" TurnInId="40834" />
+
+      <If Condition="Me.IsHorde" >
+         <!-- Return from the Firelands (level 81) -->
+         <!-- Return to Takrik Ragehowl at the Shrine of Goldrinn in Hyjal. -->
+         <!-- Faction: HORDE ONLY -->
+
+         <!-- http://www.wowhead.com/quest=25612 -->
+         <PickUp QuestName="Return from the Firelands" GiverName="Jordan Olafson" QuestId="25612" GiverId="40834" />
+         <Else>
+            <!-- Return from the Firelands (level 81) -->
+            <!-- Return to Ian Duran at the Shrine of Goldrinn in Hyjal. -->
+            <!-- Faction: ALLIANCE ONLY -->
+
+            <!-- http://www.wowhead.com/quest=25611 -->
+            <PickUp QuestName="Return from the Firelands" GiverName="Jordan Olafson" QuestId="25611" GiverId="40834" />
+         </Else>
+      </If>
+
+      <!-- USE PORTAL TO EXIT TO:  Shrine of Goldrinn  -->
+      <If Condition="(HasQuest(25612) || HasQuest(25611)) &amp;&amp; Me.IsIndoors" >
+         <RunTo  X="5028.314" Y="-2033.591" Z="1148.975" />
+         <!-- CustomBehavior File="GoThruPortal" X="5035.951" Y="-2029.371" Z="1148.975" / -->
+         <RunTo  X="5045.169" Y="-2058.247" Z="1367.731" />
+      </If>
+
+      <!-- fly to quest turn in -->
+      <If Condition="(HasQuest(25354) &amp;&amp; IsQuestCompleted(25354)) || (HasQuest(25352) &amp;&amp; IsQuestCompleted(25352))" >
+         <!-- fly to turnin -->
+         <CustomBehavior File="FlyTo" X="5345.049" Y="-2133.379" Z="1280.52" />
+         <!-- CustomBehavior File="ForcedDismount" QuestId="0" / -->
+      </If>
+
+      <!-- abandon Wings Over Mount Hyjal if user picked up manually -->
+      <If Condition="HasQuest(25985)" >
+         <CustomBehavior File="AbandonQuest" QuestId="25985" Type="All" />
+         <!-- brief pause because quest log doesn't reflect change immediately -->
+         <CustomBehavior File="WaitTimer" WaitTime="1000" />
+      </If>
+
+      <If Condition="Me.IsHorde" >
+         <TurnIn QuestName="Sweeping the Shelf" TurnInName="Takrik Ragehowl" QuestId="25354" TurnInId="39432" />
+         <If Condition="HasQuest(25612)" >
+            <!-- turn in quest and let Vision of Ysera spawn -->
+            <TurnIn QuestName="Return from the Firelands" TurnInName="Takrik Ragehowl" QuestId="25612" TurnInId="39432" />
+            <CustomBehavior File="WaitTimer" WaitTime="3000" />
+         </If>
+         <Else>
+            <TurnIn QuestName="Sweeping the Shelf" TurnInName="Ian Duran" QuestId="25352" TurnInId="39433" />
+            <If Condition="HasQuest(25611)" >
+               <!-- turn in quest and let Vision of Ysera spawn -->
+               <TurnIn QuestName="Return from the Firelands" TurnInName="Ian Duran" QuestId="25611" TurnInId="39433" />
+               <CustomBehavior File="WaitTimer" WaitTime="3000" />
+            </If>
+         </Else>
+      </If>
+
+      <!-- skip Aviana's Legacy if they have already completed Wings Over Mount Hyjal-->
+      <If Condition="!IsQuestCompleted(25985)" >
+         <!-- Aviana's Legacy (level 81) -->
+         <!-- Locate Choluna at the Shrine of Aviana in Mount Hyjal. -->
+         <!-- http://www.wowhead.com/quest=27874 -->
+         <PickUp QuestName="Aviana's Legacy" GiverName="Vision of Ysera" QuestId="27874" GiverId="46987" X="5351.8" Y="-2135.54" Z="1281.52" />
+      </If>
+
+      <!-- The Fires of Mount Hyjal (level 81) -->
+      <!-- Speak with Laina Nightsky near the Grove of Aessina in Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25630 -->
+      <PickUp QuestName="The Fires of Mount Hyjal" GiverName="Rio Duran" QuestId="25630" GiverId="39434" />
+
+      <!--===============================================================================================
+    ==  5. Shrine of Aviana
+    ==  http://wow-pro.com/leveling_guides/arixans_horde_leveling_guide_mt_hyjal_80-82
+    ================================================================================================-->
+      <If Condition="(HasQuest(27874)) || (HasQuest(25612) &amp;&amp; IsQuestCompleted(25612))" >
+         <!-- fly to Shrine of Aviana -->
+         <CustomBehavior File="FlyTo" X="4928.762" Y="-2699.903" Z="1431.984" />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+      </If>
+
+      <!-- check if we have Aviana's Legacy first, since they may have manually completed Wings Over Mount Hyjal-->
+      <If Condition="HasQuest(27874)" >
+         <TurnIn QuestName="Aviana's Legacy" TurnInName="Choluna" QuestId="27874" TurnInId="41005" />
+      </If>
+
+      <!-- An Offering for Aviana (level 81) -->
+      <!-- Use the Sacred Nectar at Aviana's Burial Circle. -->
+      <!-- http://www.wowhead.com/quest=25663 -->
+      <PickUp QuestName="An Offering for Aviana" GiverName="Choluna" QuestId="25663" GiverId="41005" />
+
+      <!-- Scrambling for Eggs (level 81) -->
+      <!-- Gather 8 Hyjal Eggs. -->
+      <!-- http://www.wowhead.com/quest=25656 -->
+      <PickUp QuestName="Scrambling for Eggs" GiverName="Thisalee Crow" QuestId="25656" GiverId="41006" />
+
+      <!-- The Wormwing Problem (level 81) -->
+      <!-- Slay any combination of 10 Wormwing Harpies (either Screechers or Swifttalons). -->
+      <!-- http://www.wowhead.com/quest=25655 -->
+      <PickUp QuestName="The Wormwing Problem" GiverName="Thisalee Crow" QuestId="25655" GiverId="41006" />
+
+      <!-- Nectar Offered -->
+      <UseItem ItemId="55208" QuestName="An Offering for Aviana" QuestId="25663" X="4941.872" Y="-2646.029" Z="1426.432"  />
+      <TurnIn QuestName="An Offering for Aviana" TurnInName="Mysterious Winged Spirit" QuestId="25663" TurnInId="41068" />
+
+      <!-- A Plea From Beyond (level 81) -->
+      <!-- Return to Choluna inside of the Shrine of Aviana in Mount Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25665 -->
+      <PickUp QuestName="A Plea From Beyond" GiverName="Mysterious Winged Spirit" QuestId="25665" GiverId="41068" />
+
+      <!-- Hyjal Egg -->
+      <Objective QuestName="Scrambling for Eggs" QuestId="25656" Type="Collect" CollectCount="8" ItemId="55189" />
+
+      <!-- Wormwing Screecher 41027 / Wormwing Swifttalon 41028 -->
+      <Objective QuestName="The Wormwing Problem" QuestId="25655" Type="KillMob" KillCount="10" MobId="41027" />
+      <!-- Objective QuestName="The Wormwing Problem" QuestId="25655" Type="KillMob" KillCount="2" MobId="41028" / -->
+
+      <TurnIn QuestName="The Wormwing Problem" TurnInName="Thisalee Crow" QuestId="25655" TurnInId="41006" />
+      <TurnIn QuestName="Scrambling for Eggs" TurnInName="Thisalee Crow" QuestId="25656" TurnInId="41006" />
+
+      <TurnIn QuestName="A Plea From Beyond" TurnInName="Choluna" QuestId="25665" TurnInId="41005" />
+
+      <!-- A Prayer and a Wing (level 81) -->
+      <!-- Use the Enormous Bird Call at one of Blaithe's Nests perched atop the Rim of the World. Kill Blaithe and gather one of his Ancient Feathers. -->
+      <!-- http://www.wowhead.com/quest=25664 -->
+      <PickUp QuestName="A Prayer and a Wing" GiverName="Choluna" QuestId="25664" GiverId="41005" />
+
+
+      <!-- 
+    ATTENTION: The following section attempts to handle any failed attempts at
+    completing "A Bird in Hand".  This quest can fail due to a PvP or other 
+    issues that cause the corpse to despawn before the final response.
+    -->
+      <While Condition="!IsQuestCompleted(25731)" >
+         <!-- if we have quest and its incomplete, need to abandon and try again -->
+         <If Condition="HasQuest(25731)" >
+            <CustomBehavior File="AbandonQuest" QuestId="25731" Type="Incomplete" />
+            <!-- try to run back without going along cliff -->
+            <RunTo X="4990.549" Y="-2544.123" Z="1428.152" />
+            <RunTo X="4966.836" Y="-2665.974" Z="1424.932" />
+         </If>
+
+         <!-- A Bird in Hand (level 81) -->
+         <!-- Extinguish a Harpy Signal Fire to get the attention of Marion Wormwing. Fight her until Thisalee subdues her, then question the harpy matron. -->
+         <!-- http://www.wowhead.com/quest=25731 -->
+         <PickUp QuestName="A Bird in Hand" GiverName="Thisalee Crow" QuestId="25731" GiverId="41006" />
+         <RunTo X="4966.836" Y="-2665.974" Z="1424.932" />
+         <RunTo X="4990.549" Y="-2544.123" Z="1428.152" />
+
+         <!-- wait for Smoked Out aura to expire (if from prev failed attempt) -->
+         <If Condition="Me.HasAura(&quot;Smoked Out&quot;)">
+            <CustomBehavior File="Message" Text="Waiting until Smoked Out debuff fades" LogColor="Orange" />
+            <While Condition="Me.HasAura(&quot;Smoked Out&quot;)">
+               <CustomBehavior File="WaitTimer" WaitTime="30000" />
+            </While>
+            <CustomBehavior File="Message" Text="Waiting 2 additional minutes for signal fire" LogColor="Orange" />
+            <CustomBehavior File="WaitTimer" WaitTime="120000" />
+         </If>
+
+         <!-- Extinguish Harpy Fire - Marion Wormwing Summoned -->
+         <CustomBehavior File="InteractWith" QuestId="25731" ObjectType="Gameobject" MobId="203187" NumOfTimes="1" CollectionDistance="10"  X="4926.642" Y="-2480.365" Z="1440.825" />
+
+         <!-- Marion Wormwing Captured (almost killed) -->
+         <CustomBehavior File="Message" Text="Waiting 5 secs for Marion to aggro" LogColor="Green" />
+         <CustomBehavior File="WaitTimer" WaitTime="5000" />
+
+         <!-- Marion Wormwing Interrogated -->
+         <CustomBehavior File="Message" Text="Interrogating Marion" LogColor="Green" />
+         <CustomBehavior File="InteractWith" QuestId="25731" ObjectType="Npc" MobId="41112" NumOfTimes="1" Range="5" GossipOption="2,1,1,1" CollectionDistance="20" X="4924.33" Y="-2480.314" Z="1440.964" />
+
+      </While>
+      <!-- end of A Bird in Hand loop -->
+
+      <If Condition="HasQuest(25664) &amp;&amp; !IsQuestCompleted(25664)" >
+         <!-- fly to Blaithe's roost (make sure we dismount in center of nest -->
+         <CustomBehavior File="FlyTo" X="4976.005" Y="-2467.209" Z="1576.105" />
+         <CustomBehavior File="FlyTo" X="4997.258" Y="-2443.325" Z="1573.572" />
+         <CustomBehavior File="FlyTo" X="4997.258" Y="-2443.325" Z="1567.251" />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+      </If>
+
+      <UseItem ItemId="55211" QuestName="A Prayer and a Wing" QuestId="25664" X="4997.576" Y="-2443.685" Z="1563.837" />
+      <If Condition="HasQuest(25664) &amp;&amp; !IsQuestCompleted(25664)" >
+         <CustomBehavior File="WaitTimer" WaitTime="5000" />
+      </If>
+      <!-- Ancient Feather -->
+      <Objective QuestName="A Prayer and a Wing" QuestId="25664" Type="Collect" CollectCount="1" ItemId="55210" />
+
+      <If Condition="HasQuest(25664) &amp;&amp; IsQuestCompleted(25664)" >
+         <CustomBehavior File="FlyTo"  X="4928.762" Y="-2699.903" Z="1431.984"  />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+      </If>
+
+      <TurnIn QuestName="A Bird in Hand" TurnInName="Thisalee Crow" QuestId="25731" TurnInId="41006" />
+
+      <TurnIn QuestName="A Prayer and a Wing" TurnInName="Choluna" QuestId="25664" TurnInId="41005" />
+
+      <!-- Fact-Finding Mission (level 81) -->
+      <!-- Report to Thisalee at the entrance to Sethria's Roost in Mount Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25740 -->
+      <PickUp QuestName="Fact-Finding Mission" GiverName="Skylord Omnuron" QuestId="25740" GiverId="40997" />
+      <If Condition="HasQuest(25630)" >
+         <If Condition="Me.IsIndoors" >
+            <RunTo X="4928.762" Y="-2699.903" Z="1431.984" />
+         </If>
+         <CustomBehavior File="FlyTo"  X="5133.778" Y="-1739.218" Z="1335.467" />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+      </If>
+
+      <!--===============================================================================================
+    ==  6. Grove of Aessina
+    ==  http://wow-pro.com/leveling_guides/arixans_horde_leveling_guide_mt_hyjal_80-82
+    ================================================================================================-->
+      <!-- Save the Wee Animals (level 81) -->
+      <!-- Go into the Inferno and rescue any combination of 10 Panicked Bunnies or Terrified Squirrels. -->
+      <!-- http://www.wowhead.com/quest=25385 -->
+      <PickUp QuestName="Save the Wee Animals" GiverName="Mylune" QuestId="25385" GiverId="39930" />
+
+      <!-- If You're Not Against Us... (level 81) -->
+      <!-- Speak with Tyrus Blackhorn and convince him to help in the fight against the Twilight's Hammer. -->
+      <!-- http://www.wowhead.com/quest=25404 -->
+      <PickUp QuestName="If You're Not Against Us..." GiverName="Matoclaw" QuestId="25404" GiverId="39928" />
+
+      <!-- Blackhorn Persuaded -->
+      <If Condition="HasQuest(25404) &amp;&amp; !IsQuestCompleted(25404)" >
+         <CustomBehavior File="InteractWith" QuestId="25404" ObjectType="NPC" MobId="39933" NumOfTimes="1" WaitTime="500" CollectionDistance="20" X="4923.303" Y="-1867.593" Z="1334.107"  />
+         <CustomBehavior File="RunMacro" Macro="/script SelectGossipOption(1)" NumOfTimes="4" WaitTime="1000" />
+      </If>
+
+      <TurnIn QuestName="If You're Not Against Us..." TurnInName="Tyrus Blackhorn" QuestId="25404" TurnInId="39933" />
+
+      <!-- Seeds of Their Demise (level 81) -->
+      <!-- Collect 8 Bileberries. -->
+      <!-- http://www.wowhead.com/quest=25408 -->
+      <PickUp QuestName="Seeds of Their Demise" GiverName="Tyrus Blackhorn" QuestId="25408" GiverId="39933" />
+
+      <!-- Bileberry -->
+      <Objective QuestName="Seeds of Their Demise" QuestId="25408" Type="Collect" CollectCount="8" ItemId="53102" />
+      <TurnIn QuestName="Seeds of Their Demise" TurnInName="Tyrus Blackhorn" QuestId="25408" TurnInId="39933" />
+
+      <!-- A New Master (level 81) -->
+      <!-- Use the Bottled Bileberry Brew on the corpse of a Twilight Inferno Lord, then speak with him. -->
+      <!-- http://www.wowhead.com/quest=25411 -->
+      <PickUp QuestName="A New Master" GiverName="Tyrus Blackhorn" QuestId="25411" GiverId="39933" />
+
+      <TurnIn QuestName="The Fires of Mount Hyjal" TurnInName="Laina Nightsky" QuestId="25630" TurnInId="39927" />
+
+      <!-- Fighting Fire With ... Anything (level 81) -->
+      <!-- Slay 10 Raging Firestorms within the Inferno. -->
+      <!-- http://www.wowhead.com/quest=25381 -->
+      <PickUp QuestName="Fighting Fire With ... Anything" GiverName="Laina Nightsky" QuestId="25381" GiverId="39927" />
+
+      <!-- Disrupting the Rituals (level 81) -->
+      <!-- Slay 6 Twilight Inferno Lords within the Inferno. -->
+      <!-- http://www.wowhead.com/quest=25382 -->
+      <PickUp QuestName="Disrupting the Rituals" GiverName="Laina Nightsky" QuestId="25382" GiverId="39927" />
+
+
+      <!-- Twilight Inferno Lord -->
+      <Objective QuestName="Disrupting the Rituals" QuestId="25382" Type="KillMob" KillCount="6" MobId="39974" />
+
+      <!-- Twilight Inferno Lord Subjugated -->
+      <CustomBehavior File="UseItemOn" QuestId="25411" ObjectType="Npc" MobId="39974" ItemId="53120" NumOfTimes="1" WaitTime="2000" CollectionDistance="300" X="5044.084" Y="-1440.482" Z="1336.548"  />
+
+      <TurnIn QuestName="A New Master" TurnInName="Subjugated Inferno Lord" QuestId="25411" TurnInId="40093" />
+
+      <!-- The Name Never Spoken (level 81) -->
+      <!-- Assemble the true name by examining the three Firestones. -->
+      <!-- http://www.wowhead.com/quest=25412 -->
+      <PickUp QuestName="The Name Never Spoken" GiverName="Subjugated Inferno Lord" QuestId="25412" GiverId="40093" />
+      <If Condition="HasQuest(25412) &amp;&amp; !IsQuestCompleted(25412)" >
+         <!-- Northern Firestone Examined -->
+         <Objective QuestName="The Name Never Spoken" QuestId="25412" Type="UseObject" ObjectId="202765" UseCount="1" />
+         <!-- Central Firestone Examined -->
+         <Objective QuestName="The Name Never Spoken" QuestId="25412" Type="UseObject" ObjectId="202764" UseCount="1" />
+         <!-- Southern Firestone Examined -->
+         <Objective QuestName="The Name Never Spoken" QuestId="25412" Type="UseObject" ObjectId="202763" UseCount="1" />
+      </If>
+
+      <!-- Raging Firestorm -->
+      <Objective QuestName="Fighting Fire With ... Anything" QuestId="25381" Type="KillMob" KillCount="10" MobId="39939" />
+
+      <!-- Frightened Animals -->
+      <!-- Objective QuestName="Save the Wee Animals" QuestId="25385" Type="Collect" CollectCount="10" ItemId="53060" / -->
+      <CustomBehavior File="InteractWith" QuestId="25385" MobId="39997" NumOfTimes="10" CollectionDistance="600" ObjectType="NPC" X="5020.353" Y="-1527.741" Z="1334.347" />
+
+      <!-- fly to quest turn in -->
+      <If Condition="HasQuest(25381) &amp;&amp; IsQuestCompleted(25381) &amp;&amp; HasQuest(25382) &amp;&amp; IsQuestCompleted(25382)" >
+         <!-- fly to turnin -->
+         <CustomBehavior File="FlyTo"  X="5037.76" Y="-1730.079" Z="1322.66"  />
+      </If>
+
+      <TurnIn QuestName="Fighting Fire With ... Anything" TurnInName="Laina Nightsky" QuestId="25381" TurnInId="39927" />
+      <TurnIn QuestName="Disrupting the Rituals" TurnInName="Laina Nightsky" QuestId="25382" TurnInId="39927" />
+
+      <!-- fly to quest turn in -->
+      <If Condition="HasQuest(25385) &amp;&amp; IsQuestCompleted(25385)" >
+         <!-- fly to turnin -->
+         <CustomBehavior File="FlyTo"   X="5120.663" Y="-1746.443" Z="1334.372"   />
+      </If>
+
+      <TurnIn QuestName="Save the Wee Animals" TurnInName="Mylune" QuestId="25385" TurnInId="39930" />
+
+      <!-- Oh, Deer! (level 81) -->
+      <!-- Rescue three Injured Fawns from the Inferno and escort them back to Mylune at the Grove of Aessina. -->
+      <!-- http://www.wowhead.com/quest=25392 -->
+      <PickUp QuestName="Oh, Deer!" GiverName="Mylune" QuestId="25392" GiverId="39930" />
+
+      <!-- fly to quest turn in -->
+      <If Condition="HasQuest(25412) &amp;&amp; IsQuestCompleted(25412)" >
+         <!-- fly to turnin -->
+         <CustomBehavior File="FlyTo"   X="4924.617" Y="-1872.089" Z="1334.569" />
+      </If>
+
+      <TurnIn QuestName="The Name Never Spoken" TurnInName="Tyrus Blackhorn" QuestId="25412" TurnInId="39933" />
+
+      <!-- Black Heart of Flame (level 81) -->
+      <!-- Use the Charred Branch within the Inferno to Summon Thol'embaar. Kill him and take the Black Heart of Thol'embaar. -->
+      <!-- http://www.wowhead.com/quest=25428 -->
+      <PickUp QuestName="Black Heart of Flame" GiverName="Tyrus Blackhorn" QuestId="25428" GiverId="39933" />
+
+      <If Condition="HasQuest(25428) &amp;&amp; !IsQuestCompleted(25428)" >
+         <!-- fly to turnin -->
+         <CustomBehavior File="FlyTo"  X="5022.274" Y="-1514.921" Z="1333.921" />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+         <CustomBehavior File="WaitTimer" WaitTime="2000" />
+      </If>
+
+      <!-- Summon Thol'embaar with Charred Branch #53464 -->
+      <UseItem QuestName="Black Heart of Flame" QuestId="25428" ItemId="53464"  X="5022.274" Y="-1514.921" Z="1333.921" />
+      <If Condition="HasQuest(25428) &amp;&amp; !IsQuestCompleted(25428)" >
+         <!-- wait here for summoned Thol'embaar to aggro -->
+         <CustomBehavior File="WaitTimer" WaitTime="10000" />
+      </If >
+      <!-- Black Heart of Thol'embaar -->
+      <Objective QuestName="Black Heart of Flame" QuestId="25428" Type="CollectItem" ItemId="53454" CollectCount="1" />
+
+      <!-- Injured Fawn Escorted Home 3 times -->
+      <While Condition="!IsQuestCompleted(25392)" >
+         <CustomBehavior File="InteractWith" QuestId="25392" MobId="39999" NumOfTimes="3" CollectionDistance="500" ObjectType="NPC" X="5083.381" Y="-1455.294" Z="1341.938" />
+         <CustomBehavior File="FlyTo" X="5117.118" Y="-1748.948" Z="1334.337" />
+      </While>
+      <TurnIn QuestName="Oh, Deer!" TurnInName="Mylune" QuestId="25392" TurnInId="39930" />
+
+      <!-- fly to quest turn in -->
+      <If Condition="HasQuest(25428) &amp;&amp; IsQuestCompleted(25428)" >
+         <!-- fly to turnin -->
+         <CustomBehavior File="FlyTo"   X="4924.617" Y="-1872.089" Z="1334.569" />
+      </If>
+
+      <TurnIn QuestName="Black Heart of Flame" TurnInName="Tyrus Blackhorn" QuestId="25428" TurnInId="39933" />
+
+      <!-- following is auto-discovered after completing Black Heart of Flame -->
+      <!-- PickUp QuestName="Good News... and Bad News" QuestId="29066" GiverName="" GiverId="" / -->
+      <If Condition="HasQuest(29066)">
+         <!-- fly to turnin -->
+         <CustomBehavior File="FlyTo"  X="5143.617" Y="-1739.303" Z="1336.152"  />
+         <TurnIn QuestName="Good News... and Bad News" QuestId="29066" TurnInName="Matoclaw" TurnInId="39928" />
+      </If>
+
+      <!-- Last Stand at Whistling Grove (level 81) -->
+      <!-- Report to Keeper Taldros at Whistling Grove in Mount Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25940 -->
+      <PickUp QuestName="Last Stand at Whistling Grove" GiverName="Matoclaw" QuestId="25940" GiverId="39928" />
+
+      <If Condition="HasQuest(25940)" >
+         <!-- fly to turnin -->
+         <CustomBehavior File="FlyTo"  X="5267.283" Y="-1506.688" Z="1366.02"  />
+      </If>
+      <TurnIn QuestName="Last Stand at Whistling Grove" TurnInName="Keeper Taldros" QuestId="25940" TurnInId="39932" />
+
+      <!-- The Bears Up There (level 81) -->
+      <!-- Climb up trees in the Whistling Grove, grab stranded Hyjal Bear Cubs, and then hurl them at the Soft Target from the top of the tree. This is perfectly safe. -->
+      <!-- http://www.wowhead.com/quest=25462 -->
+      <PickUp QuestName="The Bears Up There" GiverName="Keeper Taldros" QuestId="25462" GiverId="39932" />
+
+      <!-- if have quest and not in Climbing Tree, then dismount and use the ladder to enter vehicle -->
+      <!-- dismount is required before you can Use the ladder npc -->
+      <!-- Coordinates for ONLY LADDER this CB supports used below - DO NOT CHANGE -->
+      <If Condition="!Me.IsOnTransport &amp;&amp; HasQuest(25462) &amp;&amp; !IsQuestCompleted(25462)" >
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+         <RunTo  X="5254.562" Y="-1536.917" Z="1361.341" />
+         <CustomBehavior File="InteractWith"
+                     QuestId="25462"
+                     ObjectType="Npc"
+                     MobId="40190"
+                     NumOfTimes="1"
+                     CollectionDistance="2"
+                     X="5254.562" Y="-1536.917" Z="1361.341" />
+      </If>
+
+      <!-- Run the Custom Behavior - minimal info needed -->
+      <CustomBehavior File="MountHyjal\BearsUpThere"
+                  QuestName="The Bears Up There"
+                  QuestId="25462"
+                />
+      <!-- Hyjal Bear Cubs Rescued -->
+      <TurnIn QuestName="The Bears Up There" TurnInName="Keeper Taldros" QuestId="25462" TurnInId="39932" />
+
+      <!-- Smashing Through Ashes (level 81) -->
+      <!-- Slay 8 Charbringers. -->
+      <!-- http://www.wowhead.com/quest=25490 -->
+      <PickUp QuestName="Smashing Through Ashes" GiverName="Keeper Taldros" QuestId="25490" GiverId="39932" />
+
+      <!-- SUBZONE:  Sanctuary of Malorne -->
+      <If Condition="HasQuest(25490) &amp;&amp; !IsQuestCompleted(25490)" >
+         <!-- fly to start of quest grind area -->
+         <CustomBehavior File="FlyTo"  X="4783.204" Y="-1593.487" Z="1306.378" />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+      </If>
+
+      <!-- Charbringer -->
+      <Objective QuestName="Smashing Through Ashes" QuestId="25490" Type="KillMob" KillCount="8" MobId="40336" />
+
+      <If Condition="HasQuest(25490)" >
+         <!-- fly to Sanctuary of Malorne -->
+         <CustomBehavior File="FlyTo" X="4415.926" Y="-2081.841" Z="1210.7" />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+      </If>
+
+
+      <!--===============================================================================================
+    ==  7. Sanctuary of Malorne
+    ==  http://wow-pro.com/leveling_guides/arixans_horde_leveling_guide_mt_hyjal_80-82
+    ================================================================================================-->
+      <TurnIn QuestName="Smashing Through Ashes" TurnInName="Arch Druid Hamuul Runetotem" QuestId="25490" TurnInId="39858" />
+
+      <!-- Durable Seeds (level 81) -->
+      <!-- Gather 10 Hyjal Seedlings from piles of Scorched Soil. -->
+      <!-- http://www.wowhead.com/quest=25491 -->
+      <PickUp QuestName="Durable Seeds" GiverName="Arch Druid Hamuul Runetotem" QuestId="25491" GiverId="39858" />
+
+      <!-- Fresh Bait (level 81) -->
+      <!-- Collect 4 heaps of Core Hound Entrails. -->
+      <!-- http://www.wowhead.com/quest=25493 -->
+      <PickUp QuestName="Fresh Bait" GiverName="Arch Druid Hamuul Runetotem" QuestId="25493" GiverId="39858" />
+
+      <!-- Firebreak (level 81) -->
+      <!-- Slay 10 Lava Surgers. -->
+      <!-- http://www.wowhead.com/quest=25492 -->
+      <PickUp QuestName="Firebreak" GiverName="Rayne Feathersong" QuestId="25492" GiverId="40331" />
+
+      <!-- Hyjal Seedling -->
+      <Objective QuestName="Durable Seeds" QuestId="25491" Type="Collect" CollectCount="10" ItemId="54574" />
+
+      <!-- Core Hound Entrails -->
+      <Objective QuestName="Fresh Bait" QuestId="25493" Type="Collect" CollectCount="4" ItemId="54609" />
+
+      <!-- Lava Surger -->
+      <Objective QuestName="Firebreak" QuestId="25492" Type="KillMob" KillCount="10" MobId="46911" />
+
+
+      <If Condition="HasQuest(25491) &amp;&amp; IsQuestCompleted(25491) &amp;&amp; HasQuest(25493) &amp;&amp; IsQuestCompleted(25493) &amp;&amp; HasQuest(25492) &amp;&amp; IsQuestCompleted(25492)" >
+         <!-- fly to Sanctuary of Malorne -->
+         <CustomBehavior File="FlyTo" X="4415.926" Y="-2081.841" Z="1210.7" />
+      </If>
+
+      <TurnIn QuestName="Durable Seeds" TurnInName="Arch Druid Hamuul Runetotem" QuestId="25491" TurnInId="39858" />
+      <TurnIn QuestName="Fresh Bait" TurnInName="Arch Druid Hamuul Runetotem" QuestId="25493" TurnInId="39858" />
+
+      <!-- Hell's Shells (level 81) -->
+      <!-- Use the Heap of Core Hound Innards near Nemesis to distract him. Collect a Nemesis Shell Fragment. -->
+      <!-- http://www.wowhead.com/quest=25507 -->
+      <PickUp QuestName="Hell's Shells" GiverName="Arch Druid Hamuul Runetotem" QuestId="25507" GiverId="39858" />
+
+      <TurnIn QuestName="Firebreak" TurnInName="Rayne Feathersong" QuestId="25492" TurnInId="40331" />
+
+      <!-- Prepping the Soil (level 81) -->
+      <!-- Activate and defend a Flameward. -->
+      <!-- http://www.wowhead.com/quest=25502 -->
+      <PickUp QuestName="Prepping the Soil" GiverName="Rayne Feathersong" QuestId="25502" GiverId="40331" />
+
+      <If Condition="HasQuest(25507) &amp;&amp; !IsQuestCompleted(25507)" >
+         <!-- fly to start of quest grind area -->
+         <CustomBehavior File="FlyTo" X="4564.084" Y="-2579.997" Z="1122.932" />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+      </If>
+
+      <!-- Nemesis Shell Fragment -->
+      <!-- CustomBehavior File="UseItemAtRange" QuestId="25507" ObjectType="NPC" MobId="40340" ItemId="54744" NumOfTimes="1" WaitTime="4000" RangeWanted="30" CollectionDistance="750" X="4563.871" Y="-2567.292" Z="1122.528" / -->
+      <CustomBehavior File="UseItemOn" QuestId="25507" MobId="40340" ItemId="54744" NumOfTimes="1" WaitTime="5000" Range="30" CollectionDistance="750" X="4563.871" Y="-2567.292" Z="1122.528" />
+      <!-- CustomBehavior File="BasicInteractWith" QuestId="25507" NpcID="40340" / -->
+      <CustomBehavior File="InteractWith" QuestId="25507" ObjectType="NPC" MobId="40340" NumOfTimes="1" CollectionDistance="750" Range="5" X="4563.871" Y="-2567.292" Z="1122.528" />
+
+      <!-- Clear mobs around Flameward -->
+      <If Condition="HasQuest(25502) &amp;&amp; !IsQuestCompleted(25502)">
+         <!-- fly to grind area to clear for next quest -->
+         <CustomBehavior File="FlyTo"  X="4322.655" Y="-2358.724" Z="1148.624"  />
+         <RunTo X="4322.655" Y="-2358.724" Z="1148.624"  />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+         
+         <RunTo QuestId="25502" X="4322.655" Y="-2358.724" Z="1148.624" />
+         <CustomBehavior File="WaitTimer" WaitTime="500" />
+         <RunTo QuestId="25502" X="4342.231" Y="-2376.832" Z="1147.997" />
+         <CustomBehavior File="WaitTimer" WaitTime="500" />
+         <RunTo QuestId="25502" X="4362.398" Y="-2321.526" Z="1154.676" />
+         <CustomBehavior File="WaitTimer" WaitTime="500" />
+      </If>
+
+      <!-- Flameward Activated -->
+      <CustomBehavior File="InteractWith"
+                  QuestId="25502"
+                  ObjectType="GameObject"
+                  MobId="202902"
+                  NumOfTimes="1"
+                  CollectionDistance="25"
+                  Range="5" 
+                  X="4362.398" Y="-2321.526" Z="1154.676" />
+
+      <!-- Use a Grind Area to defend the Flameward -->
+      <SetGrindArea>
+         <GrindArea>
+            <Name>Hill of Small Pebbles and Rainbows</Name>
+            <TargetMinLevel>78</TargetMinLevel>
+            <TargetMaxLevel>86</TargetMaxLevel>
+            <Factions>54 2146 2254</Factions>
+            <LootRadius>15</LootRadius>
+            <Hotspots>
+               <Hotspot X="4370.335" Y="-2331.658" Z="1151.352" />
+               <Hotspot X="4364.208" Y="-2333.156" Z="1151.595" />
+            </Hotspots>
+         </GrindArea>
+      </SetGrindArea>
+
+      <GrindTo Condition="!HasQuest(25502) || (HasQuest(25502) &amp;&amp; IsQuestCompleted(25502))" />
+
+      <TurnIn QuestName="Fact-Finding Mission" TurnInName="Thisalee Crow" QuestId="25740" TurnInId="41006" />
+
+      <!-- Sethria's Brood (level 81) -->
+      <!-- Slay 12 of Sethria's Minions: Any combination of Twilight Dragonkin or Twilight Dragonkin Armorers. -->
+      <!-- http://www.wowhead.com/quest=25746 -->
+      <PickUp QuestName="Sethria's Brood" GiverName="Thisalee Crow" QuestId="25746" GiverId="41006" />
+      <!-- A Gap in Their Armor (level 81) -->
+      <!-- Gather 8 Twilight Armor Plates. -->
+      <!-- http://www.wowhead.com/quest=25758 -->
+      <PickUp QuestName="A Gap in Their Armor" GiverName="Thisalee Crow" QuestId="25758" GiverId="41006" />
+
+      <PickUp QuestName="The Codex of Shadows" QuestId="25763" GiverName="Codex of Shadows" GiverId="203207" GiverType="Object" X="4015.68" Y="-2255.00" Z="1132.20" />
+
+      <Objective QuestName="A Gap in Their Armor" QuestId="25758" Type="Collect" CollectCount="8" ItemId="55809" />
+
+      <Objective QuestName="Sethria's Brood" QuestId="25746" Type="KillMob" KillCount="12" Id="41029" />
+
+      <TurnIn QuestName="Sethria's Brood" TurnInName="Thisalee Crow" QuestId="25746" TurnInId="41006" />
+      <TurnIn QuestName="The Codex of Shadows" TurnInName="Thisalee Crow" QuestId="25763" TurnInId="41006" />
+      <TurnIn QuestName="A Gap in Their Armor" TurnInName="Thisalee Crow" QuestId="25758" TurnInId="41006" />
+
+      <!-- Egg Hunt (level 81) -->
+      <!-- Disable the Shadow Cloak Generators until you unveil Aviana's Egg. Once the egg is unveiled, defend it until the Druids of the Talon can carry it to safety. -->
+      <!-- http://www.wowhead.com/quest=25764 -->
+      <PickUp QuestName="Egg Hunt" GiverName="Thisalee Crow" QuestId="25764" GiverId="41006" />
+
+      <!-- Disassembly (level 81) -->
+      <!-- Use Thisalee's Shiv to awaken and kill 3 Twilight Juggernauts. The shiv can be used multiple times to tear down a Juggernaut's armor. -->
+      <!-- http://www.wowhead.com/quest=25761 -->
+      <PickUp QuestName="Disassembly" GiverName="Thisalee Crow" QuestId="25761" GiverId="41006" />
+
+      <While Condition="HasQuest(25761) &amp;&amp; !IsQuestCompleted(25761)" >
+         <!-- Use Thisalee's Shiv to awaken and kill 3 Twilight Juggernauts. The shiv can be used multiple times to tear down a Juggernaut's armor. -->
+         <CustomBehavior File="UseItemOn" QuestId="25761" NpcId="41031" ItemId="55883" NumOfTimes="3" Range="4" CollectionDistance="300" WaitTime="500" X="4011.471" Y="-2235.279" Z="1129.395" />
+      </While>
+
+      <Objective QuestName="Disassembly" QuestId="25761" Type="KillMob" KillCount="3" MobId="41031" />
+
+      <!-- Aviana's Egg Unveiled and Defended -->
+      <!-- Objective QuestName="Egg Hunt" QuestId="25764" Type="Collect" CollectCount="1" ItemId="53454" / -->
+      <While Condition="HasQuest(25764) &amp;&amp; !IsQuestCompleted(25764)">
+         <CustomBehavior File="InteractWith" QuestId="25764" ObjectType="Gameobject" MobId="203208" NumOfTimes="1" WaitTime="5000" Range="6" CollectionDistance="1500" X="4010.493" Y="-2226.904" Z="1132.841" />
+      </While>
+
+      <TurnIn QuestName="Egg Hunt" TurnInName="Thisalee Crow" QuestId="25764" TurnInId="41006" />
+      <TurnIn QuestName="Disassembly" TurnInName="Thisalee Crow" QuestId="25761" TurnInId="41006" />
+
+      <!-- Sethria's Demise (level 81) -->
+      <!-- Slay the dragon Sethria. Once she reveals her true form, you will need to use the signal rocket to call in reinforcements! -->
+      <!-- http://www.wowhead.com/quest=25776 -->
+      <PickUp QuestName="Sethria's Demise" GiverName="Thisalee Crow" QuestId="25776" GiverId="41006" />
+
+      <If Condition="HasQuest(25776) &amp;&amp; !IsQuestCompleted(25776)" >
+         <!-- fly to Sethria -->
+         <CustomBehavior File="FlyTo" X="3444.225" Y="-2418.92" Z="968.374" />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />         
+      </If>
+
+      <!-- Sethria -->
+      <While Condition="HasQuest(25776) &amp;&amp; !IsQuestCompleted(25776)">
+         <CustomBehavior File="CombatUseItemOn" QuestId="25776" NpcId="41255" ItemId="56003" NpcHPLeft="65" NumOfTimes="1" X="3444.225" Y="-2418.92" Z="968.374" />
+      </While>     
+      <Objective QuestName="Sethria's Demise" QuestId="25776" Type="KillMob" KillCount="1" MobId="41255" />
+
+      <If Condition="HasQuest(25776) &amp;&amp; IsQuestCompleted(25776)" >
+         <!-- fly to Thisalee Crow @ Sethria's Roost -->
+         <CustomBehavior File="ForcedMount" QuestId="0" MountType="Flying" />
+         <CustomBehavior File="FlyTo" X="4189.995" Y="-2321.81" Z="1147.369" />
+      </If>
+      <TurnIn QuestName="Sethria's Demise" TurnInName="Thisalee Crow" QuestId="25776" TurnInId="41006" />
+
+      <!-- Return to the Shrine (level 81) -->
+      <!-- Return to Choluna at the Shrine of Aviana in Mount Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25795 -->
+      <PickUp QuestName="Return to the Shrine" GiverName="Thisalee Crow" QuestId="25795" GiverId="41006" />
+
+      <If Condition="(HasQuest(25502) &amp;&amp; IsQuestCompleted(25502)) || (HasQuest(25507) &amp;&amp; IsQuestCompleted(25507))" >
+         <!-- fly to Sanctuary of Malorne -->
+         <CustomBehavior File="FlyTo"  X="4415.954" Y="-2081.169" Z="1210.699" />
+      </If>
+
+      <TurnIn QuestName="Prepping the Soil" TurnInName="Rayne Feathersong" QuestId="25502" TurnInId="40331" />
+      <TurnIn QuestName="Hell's Shells" TurnInName="Arch Druid Hamuul Runetotem" QuestId="25507" TurnInId="39858" />
+
+      <!-- Tortolla Speaks (level 81) -->
+      <!-- Go to Tortolla, the turtle ancient, at the Ashen Lake in Mount Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25510 -->
+      <PickUp QuestName="Tortolla Speaks" GiverName="Arch Druid Hamuul Runetotem" QuestId="25510" GiverId="39858" />
+
+      <If Condition="HasQuest(25510)" >
+         <!-- fly to Tortolla @ Ashen Lake -->
+         <CustomBehavior File="FlyTo" X="4624.72" Y="-1983.163" Z="1193.507"  />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+      </If>
+
+      <TurnIn QuestName="Tortolla Speaks" TurnInName="Tortolla" QuestId="25510" TurnInId="40341" />
+
+      <!-- Children of Tortolla (level 81) -->
+      <!-- Slay 6 Deep Corruptors attacking Tortolla's Eggs in the Ashen Lake. -->
+      <!-- http://www.wowhead.com/quest=25519 -->
+      <PickUp QuestName="Children of Tortolla" GiverName="Tortolla" QuestId="25519" GiverId="40341" />
+
+      <If Condition="HasQuest(25519) &amp;&amp; !IsQuestCompleted(25519)">
+         <!-- make sure we are at Tortolla @ Ashen Lake -->
+         <CustomBehavior File="FlyTo" X="4624.72" Y="-1983.163" Z="1193.507"  />
+         <!-- move to surface in center -->
+         <CustomBehavior File="MyCTM" QuestId="25519"  X="4594.024" Y="-1976.13" Z="1187.255" />
+      </If>
+
+      <!-- #####################################################################
+    following uses CTM with no mesh, so questid is 0 to make sure we 
+    stay on path defined as closely as possible (no unstuck).  quest mobs
+    are simply aggroed so completion comes by wandering around
+    #####################################################################  -->
+      <While Condition="HasQuest(25519) &amp;&amp; !IsQuestCompleted(25519)">
+         <!-- move to west end of Ashen Lake at surface -->
+         <CustomBehavior File="MyCTM" QuestId="0"  X="4578.409" Y="-1902.436" Z="1187.255" />
+         <!-- move down to eggs -->
+         <CustomBehavior File="MyCTM" QuestId="0"  X="4583.665" Y="-1890.701" Z="1161.09" />
+         <CustomBehavior File="MyCTM" QuestId="0"  X="4579.325" Y="-1938.462" Z="1157.726" />
+         <CustomBehavior File="MyCTM" QuestId="0"  X="4564.482" Y="-1976.154" Z="1158.21" />
+         <CustomBehavior File="MyCTM" QuestId="0"  X="4581.77" Y="-1980.803" Z="1154.091" />
+         <CustomBehavior File="MyCTM" QuestId="0"  X="4597.055" Y="-1999.084" Z="1167.434" />
+         <!-- move to surface in center (always, so quest # is 0 -->
+         <CustomBehavior File="MyCTM" QuestId="0"  X="4594.024" Y="-1976.13" Z="1187.255" />
+      </While>
+   
+      <If Condition="HasQuest(25519) &amp;&amp; IsQuestCompleted(25519) &amp;&amp; Me.IsSwimming" >
+         <!-- if done and still in water, then move to Tortolla on land -->
+         <CustomBehavior File="MyCTM" QuestId="0"  X="4624.72" Y="-1983.163" Z="1193.507"  />
+      </If>
+
+      <!-- First Rod of Subjugation Disabled -->
+      <While Condition="!IsQuestCompleted(25514)">
+         <CustomBehavior File="AbandonQuest" QuestId="25514" Type="Incomplete" />
+         
+         <!-- Breaking the Bonds (level 81) -->
+         <!-- Disable the two Rods of Subjugation that bind Tortolla. -->
+         <!-- http://www.wowhead.com/quest=25514 -->
+         <PickUp QuestName="Breaking the Bonds" GiverName="Tortolla" QuestId="25514" GiverId="40341" />
+
+         <If Condition="HasQuest(25514) &amp;&amp; !IsQuestCompleted(25514)" >
+            <CustomBehavior File="InteractWith" QuestId="25514" ObjectType="Gameobject" MobId="202955" NumOfTimes="1" Range="6" CollectionDistance="15" X="4643.358" Y="-1999.619" Z="1193.13" />
+            <!-- Following MyCTM is a hack to fix Mesh problem so it can make a full path to next spot -->
+            <CustomBehavior File="MyCTM" QuestId="25514" X="4639.028" Y="-1990.209" Z="1193.523" />
+         </If>
+         <!-- Second Rod of Subjugation Disabled -->
+         <If Condition="HasQuest(25514) &amp;&amp; !IsQuestCompleted(25514)" >
+            <CustomBehavior File="InteractWith" QuestId="25514" ObjectType="Gameobject" MobId="202954" NumOfTimes="1" Range="6" CollectionDistance="15" X="4613.022" Y="-1946.628" Z="1192.408" />
+            <!-- Following MyCTM is a hack to fix Mesh problem so it can make a full path to next spot -->
+            <CustomBehavior File="MyCTM" QuestId="25514" X="4616.098" Y="-1951.721" Z="1193.347" />
+         </If>
+      </While>
+
+      <TurnIn QuestName="Children of Tortolla" TurnInName="Tortolla" QuestId="25519" TurnInId="40341" />
+      <TurnIn QuestName="Breaking the Bonds" TurnInName="Tortolla" QuestId="25514" TurnInId="40341" />
+
+      <!-- An Ancient Awakens (level 81) -->
+      <!-- Return to Arch Druid Hamuul Runetotem at the Shrine of Malorne in Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25520 -->
+      <PickUp QuestName="An Ancient Awakens" GiverName="Tortolla" QuestId="25520" GiverId="40341" />
+
+      <If Condition="HasQuest(25520)" >
+         <!-- fly to Sanctuary of Malorne -->
+         <CustomBehavior File="FlyTo" X="4415.361" Y="-2084.358" Z="1211.043" />
+      </If>
+
+      <TurnIn QuestName="An Ancient Awakens" TurnInName="Arch Druid Hamuul Runetotem" QuestId="25520" TurnInId="39858" />
+
+      <If Condition="HasQuest(25795)" >
+         <!-- fly to Shrine of Aviana -->
+         <CustomBehavior File="FlyTo" X="4928.762" Y="-2699.903" Z="1431.984" />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+      </If>
+
+      <TurnIn QuestName="Return to the Shrine" TurnInName="Choluna" QuestId="25795" TurnInId="41005" />
+
+      <!-- An Ancient Reborn (level 81) -->
+      <!-- Use the Herald's Incense before Aviana's Egg at the Shrine of Aviana. -->
+      <!-- http://www.wowhead.com/quest=25807 -->
+      <PickUp QuestName="An Ancient Reborn" GiverName="Choluna" QuestId="25807" GiverId="41005" />
+
+
+      <!-- Herald's Incense Burned -->
+      <If Condition="HasQuest(25807)">
+         <RunTo X="4839.729" Y="-2811.592" Z="1444.529" />
+         <CustomBehavior File="UseItemOn" QuestId="25807" ObjectType="Npc" MobId="41300" ItemId="56016" NumOfTimes="1" WaitTime="2000" Range="5" CollectionDistance="15" X="4839.729" Y="-2811.592" Z="1444.529" />
+      </If>
+
+      <TurnIn QuestName="An Ancient Reborn" TurnInName="Aviana" QuestId="25807" TurnInId="41308" />
+
+      <!-- The Hatchery Must Burn (level 81) -->
+      <!-- Travel through the flamegate in the center of the Flamewake in Mount Hyjal. Speak with Farden Talonshrike once you are inside. -->
+      <!-- http://www.wowhead.com/quest=25810 -->
+      <PickUp QuestName="The Hatchery Must Burn" GiverName="Morthis Whisperwing" QuestId="25810" GiverId="41003" />
+
+      <!-- The Last Living Lorekeeper (level 81) -->
+      <!-- Seek out Nordu, an Ancient of Lore, at the Flamewake in Mount Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25830 -->
+      <PickUp QuestName="The Last Living Lorekeeper" GiverName="Vision of Ysera" QuestId="25830" GiverId="47002" />
+
+      <!-- 
+          SKIP          
+          a. skipping the Joust quest line
+          b. leaving The Hatchery Must Burn bread crumb in quest log for user to easily find location
+    -->
+
+      <If Condition="HasQuest(25830)" >
+         <!-- fly to Nordu in The Flamewake -->
+         <CustomBehavior File="FlyTo" X="4621.804" Y="-2101.178" Z="1237.513" />
+      </If>
+      <TurnIn QuestName="The Last Living Lorekeeper" TurnInName="Nordu" QuestId="25830" TurnInId="41381" />
+
+      <!-- Firefight (level 81) -->
+      <!-- Kill 5 Fiery Tormentors to keep them from Nordu. -->
+      <!-- http://www.wowhead.com/quest=25842 -->
+      <PickUp QuestName="Firefight" GiverName="Nordu" QuestId="25842" GiverId="41381" />
+      <If Condition="HasQuest(25842) &amp;&amp; !IsQuestCompleted(25842)">
+         <CustomBehavior File="MyCTM" QuestId="25842"  X="4710.685" Y="-2052.783" Z="1221.31" />
+         <Objective QuestName="Firefight" QuestId="25842" Type="KillMob" KillCount="5" MobId="41396" />
+      </If>
+      <If Condition="HasQuest(25842) &amp;&amp; IsQuestCompleted(25842)">
+         <RunTo X="4710.685" Y="-2052.783" Z="1221.31" />
+         <CustomBehavior File="MyCTM" QuestId="0" X="4628.224" Y="-2087.219" Z="1237.377" />
+      </If>
+      <TurnIn QuestName="Firefight" TurnInName="Nordu" QuestId="25842" TurnInId="41381" />
+
+      <!-- Aessina's Miracle (level 81) -->
+      <!-- Take the Heart of the Forest to Hamuul Runetotem at the Grove of Aessina in Mount Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25372 -->
+      <PickUp QuestName="Aessina's Miracle" GiverName="Nordu" QuestId="25372" GiverId="41381" />
+      <If Condition="HasQuest(25372)">
+         <!-- move off land bridge that gives so many pathing errors -->
+         <CustomBehavior File="MyCTM" QuestId="25842"  X="4710.685" Y="-2052.783" Z="1221.31" />
+         <!-- fly to Sanctuary of Malorne -->
+         <CustomBehavior File="FlyTo"  X="4415.954" Y="-2081.169" Z="1210.699" />
+      </If>
+
+      <TurnIn QuestName="Aessina's Miracle" TurnInName="Arch Druid Hamuul Runetotem" QuestId="25372" TurnInId="39858" />
+
+      <!-- Tortolla's Revenge (level 81) -->
+      <!-- Speak to Tortolla at the Scorched Plain in Mount Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25843 -->
+      <PickUp QuestName="Tortolla's Revenge" GiverName="Arch Druid Hamuul Runetotem" QuestId="25843" GiverId="39858" />
+
+      <If Condition="HasQuest(25843)" >
+         <!-- fly to Tortolla at The Regrowth -->
+         <CustomBehavior File="FlyTo" X="4467.924" Y="-2720.188" Z="1099.93" />
+      </If>
+
+      <TurnIn QuestName="Tortolla's Revenge" TurnInName="Tortolla" QuestId="25843" TurnInId="41504" />
+
+      <!--===============================================================================================
+    ==  8. The Scorched Plain
+    ==  http://wow-pro.com/leveling_guides/arixans_horde_leveling_guide_mt_hyjal_80-82
+    ================================================================================================-->
+      <!-- The Hammer and the Key (level 81) -->
+      <!-- Kill a Twilight Field Captain and recover the Glyph of Opening. -->
+      <!-- http://www.wowhead.com/quest=25904 -->
+      <PickUp QuestName="The Hammer and the Key" GiverName="Tortolla" QuestId="25904" GiverId="41504" />
+
+      <!-- Breakthrough (level 81) -->
+      <!-- Slay 10 Twilight Scorchlords. -->
+      <!-- http://www.wowhead.com/quest=25899 -->
+      <PickUp QuestName="Breakthrough" GiverName="Niden" QuestId="25899" GiverId="41507" />
+      <!-- Lost Wardens (level 81) -->
+      <!-- Locate and rescue 8 Lost Wardens. -->
+      <!-- http://www.wowhead.com/quest=25881 -->
+      <PickUp QuestName="Lost Wardens" GiverName="Niden" QuestId="25881" GiverId="41507" />
+
+      <!-- Lost Warden Rescued -->
+      <!-- fly to area with Lost Wardens @ 52, 52 -->
+      <If Condition="HasQuest(25881)" >
+         <CustomBehavior File="FlyTo" X="4707.339" Y="-3166.735" Z="1055.907" />
+         <While Condition="HasQuest(25881) &amp;&amp; !IsQuestCompleted(25881)">
+            <CustomBehavior File="InteractWith" QuestId="25881" ObjectType="Npc" MobId="41499" NumOfTimes="1" WaitTime="0" CollectionDistance="500" X="4707.339" Y="-3166.735" Z="1055.907" />
+            <CustomBehavior File="RunMacro" Macro="/script GossipTitleButton1:Click()\n" NumOfTimes="1" WaitTime="0" />
+         </While>
+      </If>
+
+      <!-- Twilight Scorchlord -->
+      <Objective QuestName="Breakthrough" QuestId="25899" Type="KillMob" KillCount="10" MobId="41500" />
+
+      <If Condition="HasQuest(25881)" >
+         <!-- Fly to Captain Irontree -->
+         <CustomBehavior File="FlyTo" X="4645.622" Y="-3380.834" Z="1018.952" />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+      </If>
+
+      <TurnIn QuestName="Lost Wardens" TurnInName="Captain Irontree" QuestId="25881" TurnInId="41492" />
+      <TurnIn QuestName="Breakthrough" TurnInName="Captain Irontree" QuestId="25899" TurnInId="41492" />
+
+      <!-- Pressing the Advantage (level 81) -->
+      <!-- Slay 4 Twilight Field Captains. -->
+      <!-- http://www.wowhead.com/quest=25886 -->
+      <PickUp QuestName="Pressing the Advantage" GiverName="Captain Irontree" QuestId="25886" GiverId="41492" />
+
+      <!-- Hyjal Recycling Program (level 81) -->
+      <!-- Gather 15 Warden's Arrows. -->
+      <!-- http://www.wowhead.com/quest=25901 -->
+      <PickUp QuestName="Hyjal Recycling Program" GiverName="Logram" QuestId="25901" GiverId="41497" />
+
+      <!-- Warden's Arrow -->
+      <Objective QuestName="Hyjal Recycling Program" QuestId="25901" Type="Collect" CollectCount="15" ItemId="56176" />
+
+      <!-- Twilight Field Captain -->
+      <Objective QuestName="Pressing the Advantage" QuestId="25886" Type="KillMob" KillCount="4" MobId="41502" />
+
+      <!-- Glyph of Opening -->
+      <Objective QuestName="The Hammer and the Key" QuestId="25904" Type="Collect" CollectCount="1" ItemId="56177" />
+
+      <If Condition="HasQuest(25904)" >
+         <!-- fly to Tortolla at The Regrowth -->
+         <CustomBehavior File="FlyTo" X="4467.924" Y="-2720.188" Z="1099.93" />
+         <TurnIn QuestName="The Hammer and the Key" TurnInName="Tortolla" QuestId="25904" TurnInId="41504" />
+      </If>
+
+      <!-- The Third Flamegate (level 81) -->
+      <!-- Travel through the flamegate in the Scorched Plain and locate Garunda Mountainpeak within. -->
+      <!-- http://www.wowhead.com/quest=25906 -->
+      <PickUp QuestName="The Third Flamegate" GiverName="Tortolla" QuestId="25906" GiverId="41504" />
+
+      <If Condition="HasQuest(25886)" >
+         <!-- Fly to Captain Irontree -->
+         <CustomBehavior File="FlyTo" X="4645.622" Y="-3380.834" Z="1018.952" />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+      </If>
+
+      <TurnIn QuestName="Pressing the Advantage" TurnInName="Captain Irontree" QuestId="25886" TurnInId="41492" />
+      <TurnIn QuestName="Hyjal Recycling Program" TurnInName="Logram" QuestId="25901" TurnInId="41497" />
+
+      <!-- Outdoors = not in cave, Inside = in the cave -->
+      <If Condition="HasQuest(25906) &amp;&amp; Me.IsOutdoors" >
+         <!-- Run outside of building @ 57, 54 -->
+         <If Condition="Me.Location.Distance(new WoWPoint(4645.622,-3380.834,1018.952)) &lt; 100">
+            <RunTo X="4645.622" Y="-3380.834" Z="1018.952" />
+         </If>
+         <!-- Fly to Flamegate in center of Flamewake -->
+         <CustomBehavior File="FlyTo"  X="4646.201" Y="-3685.043" Z="954.2496" />
+         <!-- Run to same spot flew to in Flamegate (just in case) -->
+         <RunTo X="4646.201" Y="-3685.043" Z="954.2496" />
+         <!-- CustomBehavior File="GoThruPortal" X="4656.928" Y="-3685.472" Z="957.185" / -->
+         <RunTo X="4679.054" Y="-3659.998" Z="696.8289"  />
+      </If>
+
+      <TurnIn QuestName="The Third Flamegate" TurnInName="Garunda Mountainpeak" QuestId="25906" TurnInId="41498" />
+
+      <!-- The Time for Mercy has Passed (level 81) -->
+      <!-- Slay 10 Molten Tormentors and 4 Shadowflame Masters. -->
+      <!-- http://www.wowhead.com/quest=25910 -->
+      <PickUp QuestName="The Time for Mercy has Passed" GiverName="Garunda Mountainpeak" QuestId="25910" GiverId="41498" />
+
+      <!-- make sure no pets out if we are about to accept 25915-->
+      <While Condition="!IsQuestCompleted(25915)">
+         <While Condition="!Me.HasAura(&quot;Turtle-Power!&quot;)" >
+            <If Condition="HasQuest(25915)" >
+               <CustomBehavior File="Message" Text="Picking up quest again for Turtle-Power! buff" LogColor="Green" />
+               <CustomBehavior File="AbandonQuest" QuestId="25915" Type="Incomplete" />
+            </If>
+            
+            <CustomBehavior File="RunMacro" Macro="/script DestroyTotem(1)" />
+            <CustomBehavior File="RunMacro" Macro="/script PetAbandon()" />
+            <CustomBehavior File="RunMacro" Macro="/script DismissCompanion('CRITTER')" />
+            <CustomBehavior File="RunMacro" Macro="/cancelform" />
+
+            <!-- The Strength of Tortolla (level 81) -->
+            <!-- Escort a Child of Tortolla to a Nemesis Crystal. See Garunda Mountainpeak if you lose your companion. -->
+            <!-- http://www.wowhead.com/quest=25915 -->
+            <PickUp QuestName="The Strength of Tortolla" GiverName="Garunda Mountainpeak" QuestId="25915" GiverId="41498" />
+         </While>
+         
+         <!-- 
+        NOTE!!!!  The Strength of Tortilla requires you to have the Turtle-Power! buff to complete. 
+        Druids must be in caster form
+        We are going to complete this then turn-in because it gets complicated if you die since
+        you have to abandon the quest and pickup again to get buff
+    -->
+         <!-- Nemesis Crystal Examined -->
+         <If Condition="HasQuest(25915) &amp;&amp; !IsQuestCompleted(25915)">
+            <CustomBehavior File="RunLikeHell" >
+               <Hotspot X="4715.074" Y="-3602.111" Z="689.3828" />
+               <Hotspot X="4712.444" Y="-3586.894" Z="689.5445" />
+               <Hotspot X="4697.497" Y="-3565.219" Z="689.1264" />
+               <Hotspot X="4675.29" Y="-3569.925" Z="687.6534" />
+               <Hotspot X="4650.883" Y="-3575.985" Z="687.7224" />
+               <Hotspot X="4639.209" Y="-3570.143" Z="685.4538" />
+               <Hotspot X="4601.352" Y="-3541.847" Z="684.4879" />
+               <Hotspot X="4569.198" Y="-3583.015" Z="681.5554" />
+               <Hotspot X="4567.413" Y="-3618.005" Z="678.421" />
+               <Hotspot X="4562.538" Y="-3701.962" Z="674.8973" />
+               <Hotspot X="4579.29" Y="-3722.945" Z="675.4017" />
+            </CustomBehavior>
+            <CustomBehavior File="Message" Text="Waiting for quest completion" LogColor="Green" />
+            <While Condition="HasQuest(25915) &amp;&amp; !IsQuestCompleted(25915)">
+               <CustomBehavior File="WaitTimer" WaitTime="1000" />
+            </While>
+            <CustomBehavior File="WaitTimer" WaitTime="2500" />
+            <CustomBehavior File="RunLikeHell" >
+               <Hotspot X="4562.538" Y="-3701.962" Z="674.8973" />
+               <Hotspot X="4567.413" Y="-3618.005" Z="678.421" />
+               <Hotspot X="4569.198" Y="-3583.015" Z="681.5554" />
+               <Hotspot X="4601.352" Y="-3541.847" Z="684.4879" />
+               <Hotspot X="4639.209" Y="-3570.143" Z="685.4538" />
+               <Hotspot X="4650.883" Y="-3575.985" Z="687.7224" />
+               <Hotspot X="4675.29" Y="-3569.925" Z="687.6534" />
+               <Hotspot X="4697.497" Y="-3565.219" Z="689.1264" />
+               <Hotspot X="4712.444" Y="-3586.894" Z="689.5445" />
+               <Hotspot X="4715.074" Y="-3602.111" Z="689.3828" />
+            </CustomBehavior>
+         </If>
+      </While>
+
+      <TurnIn QuestName="The Strength of Tortolla" TurnInName="Garunda Mountainpeak" QuestId="25915" TurnInId="41498" />
+      
+      <!-- Shadowflame Master -->
+      <Objective QuestName="The Time for Mercy has Passed" QuestId="25910" Type="KillMob" KillCount="4" MobId="41563" />
+      <!-- Molten Tormentor -->
+      <Objective QuestName="The Time for Mercy has Passed" QuestId="25910" Type="KillMob" KillCount="10" MobId="41565" />
+
+      <TurnIn QuestName="The Time for Mercy has Passed" TurnInName="Garunda Mountainpeak" QuestId="25910" TurnInId="41498" />
+
+      <!-- Finish Nemesis (level 81) -->
+      <!-- Use the Totem of Tortolla and the help of a Child of Tortolla to defeat Nemesis. See Garunda Mountainpeak if you lose your turtle companion. -->
+      <!-- http://www.wowhead.com/quest=25923 -->
+      <PickUp QuestName="Finish Nemesis" GiverName="Garunda Mountainpeak" QuestId="25923" GiverId="41498" />
+
+      <While Condition="HasQuest(25923) &amp;&amp; !IsQuestCompleted(25923) &amp;&amp; !Me.HasAura(&quot;Turtle-Power!&quot;)" >
+         <CustomBehavior File="RunMacro" Macro="/script DestroyTotem(1)" />
+         <CustomBehavior File="RunMacro" Macro="/script PetAbandon()" />
+         <CustomBehavior File="RunMacro" Macro="/script DismissCompanion('CRITTER')" />
+         <CustomBehavior File="RunMacro" Macro="/cancelform" />
+         <CustomBehavior File="InteractWith" QuestId="25923" ObjectType="NPC" MobId="41498" NumOfTimes="1" GossipOption="1" WaitTime="2000" CollectionDistance="10"  X="4680.972" Y="-3654.518" Z="696.4132" />
+      </While>
+
+            <!-- Nemesis -->
+      <If Condition="HasQuest(25923) &amp;&amp; !IsQuestCompleted(25923)" >
+         <CustomBehavior File="RunLikeHell" >
+            <Hotspot X="4725.484" Y="-3604.052" Z="689.5881" />
+            <Hotspot X="4706.878" Y="-3561.022" Z="689.999" />
+            <Hotspot X="4650.349" Y="-3569.544" Z="686.7864" />
+            <Hotspot X="4624.86" Y="-3557.753" Z="681.5289" />
+            <Hotspot X="4593.946" Y="-3555.688" Z="684.4039" />
+            <Hotspot X="4568.284" Y="-3605.457" Z="680.2103" />
+            <Hotspot X="4560.872" Y="-3646.33" Z="674.3967" />
+            <Hotspot X="4540.81" Y="-3661.883" Z="670.7759" />
+            <Hotspot X="4497.683" Y="-3665.379" Z="661.4581" />
+            <Hotspot X="4459.074" Y="-3670.096" Z="653.7382" />
+            <Hotspot X="4432.391" Y="-3656.842" Z="644.8122" />
+            <Hotspot X="4435.815" Y="-3625.667" Z="640.3588" />
+         </CustomBehavior>
+         <CustomBehavior File="CombatUseItemOn" QuestId="25923" NpcId="41614" ItemId="56207" NumOfTimes="99" CastingSpellId="77777" X="4433.968" Y="-3618.536" Z="639.7628" />
+         <!-- Objective QuestName="Finish Nemesis" QuestId="25923" Type="KillMob" KillCount="1" MobId="41614" / -->
+         <CustomBehavior File="RunLikeHell" >
+            <Hotspot X="4435.815" Y="-3625.667" Z="640.3588" />
+            <Hotspot X="4432.391" Y="-3656.842" Z="644.8122" />
+            <Hotspot X="4459.074" Y="-3670.096" Z="653.7382" />
+            <Hotspot X="4497.683" Y="-3665.379" Z="661.4581" />
+            <Hotspot X="4540.81" Y="-3661.883" Z="670.7759" />
+            <Hotspot X="4560.872" Y="-3646.33" Z="674.3967" />
+            <Hotspot X="4568.284" Y="-3605.457" Z="680.2103" />
+            <Hotspot X="4593.946" Y="-3555.688" Z="684.4039" />
+            <Hotspot X="4624.86" Y="-3557.753" Z="681.5289" />
+            <Hotspot X="4650.349" Y="-3569.544" Z="686.7864" />
+            <Hotspot X="4706.878" Y="-3561.022" Z="689.999" />
+            <Hotspot X="4725.484" Y="-3604.052" Z="689.5881" />
+         </CustomBehavior>
+      </If>
+      
+      <TurnIn QuestName="Finish Nemesis" TurnInName="Garunda Mountainpeak" QuestId="25923" TurnInId="41498" />
+
+      <!-- Tortolla's Triumph (level 81) -->
+      <!-- Step back through the flamegate and return to Tortolla at the Scorched Plain in Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25928 -->
+      <PickUp QuestName="Tortolla's Triumph" GiverName="Garunda Mountainpeak" QuestId="25928" GiverId="41498" />
+
+      <If Condition="HasQuest(25928) &amp;&amp; Me.IsIndoors" >
+         <RunTo X="4679.054" Y="-3659.998" Z="696.8289"  />
+         <!-- CustomBehavior File="GoThruPortal" X="4678.179" Y="-3677.961" Z="697.6279" / -->
+         <RunTo X="4646.201" Y="-3685.043" Z="954.2496" />
+      </If>
+
+      <If Condition="HasQuest(25928)" >
+         <!-- moving away slightly to be sure we don't fly back into portal -->
+         <If Condition="HasQuest(25928) &amp;&amp; Me.Location.Distance(new WoWPoint(4640.894,-3677.734,954.9988)) &lt; 70" >           
+            <RunTo X="4640.894" Y="-3677.734" Z="954.9988" />
+         </If>
+         <!-- fly to Tortolla at The Regrowth -->
+         <CustomBehavior File="FlyTo" X="4467.924" Y="-2720.188" Z="1099.93" />
+      </If>
+
+      <TurnIn QuestName="Tortolla's Triumph" TurnInName="Tortolla" QuestId="25928" TurnInId="41504" />
+      <!-- The Ancients are With Us (level 81) -->
+      <!-- Return to Ysera at Nordrassil in Mount Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25653 -->
+      <PickUp QuestName="The Ancients are With Us" GiverName="Tortolla" QuestId="25653" GiverId="41504" />
+
+      <If Condition="HasQuest(25653)" >
+         <!-- Fly to Nordrassil -->
+         <CustomBehavior File="FlyTo" X="5575.909" Y="-3616.602" Z="1570.599"  />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+      </If>
+      <TurnIn QuestName="The Ancients are With Us" TurnInName="Ysera" QuestId="25653" TurnInId="40289" />
+
+      <!-- Commander Jarod Shadowsong (level 81) -->
+      <!-- Speak to Elementalist Ortell at Darkwhisper Pass. -->
+      <!-- http://www.wowhead.com/quest=25597 -->
+      <PickUp QuestName="Commander Jarod Shadowsong" GiverName="Ysera" QuestId="25597" GiverId="40289" />
+
+      <If Condition="HasQuest(25597)" >
+         <!-- if not flying and within 70 yards of Ysera (in Nordrassil Inn) -->
+         <If Condition="!Me.IsFlying &amp;&amp; Me.Location.Distance(new WoWPoint(5492.833,-3566.269,1569.25)) &lt; 70" >
+            <!-- run outside of Nordrassil Inn -->
+            <RunTo X="5575.909" Y="-3616.602" Z="1570.599"  />
+         </If>
+         <!-- Fly to Elementalist Ortell @ Darkwhisper Pass -->
+         <CustomBehavior File="FlyTo" X="4549.419" Y="-3982.059" Z="943.7506" />
+      </If>
+
+      <!--===============================================================================================
+    ==  9. Darkwhisper Gorge
+    ==  http://wow-pro.com/leveling_guides/arixans_horde_leveling_guide_mt_hyjal_80-82
+    ================================================================================================-->
+      <TurnIn QuestName="Commander Jarod Shadowsong" TurnInName="Elementalist Ortell" QuestId="25597" TurnInId="39621" />
+
+      <!-- Signed in Blood (level 81) -->
+      <!-- Lure a Twilight Recruit away from the group and take his Twilight Recruitment Papers. -->
+      <!-- http://www.wowhead.com/quest=25274 -->
+      <PickUp QuestName="Signed in Blood" GiverName="Elementalist Ortell" QuestId="25274" GiverId="39621" />
+
+      <If Condition="HasQuest(25274) &amp;&amp; !IsQuestCompleted(25274)" >
+         <!-- Fly to Twilight Recruit @ Darkwhisper Gorge -->
+         <CustomBehavior File="FlyTo" X="4490.249" Y="-4050.766" Z="936.9135"  />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+         <!-- grab a Twilight Recruit -->
+         <CustomBehavior File="InteractWith" QuestId="25274" ObjectType="Npc" MobId="39619" NumOfTimes="1" CollectionDistance="35" X="4490.249" Y="-4050.766" Z="936.9135"  />
+         <!-- lead them away -->
+         <RunTo X="4530.261" Y="-3999.64" Z="940.1867" />
+         <!-- use Blackjack on a Twilight Recruit -->
+         <CustomBehavior File="UseItemOn" QuestId="25274" ObjectType="Npc" MobId="39619" ItemId="52683" NumOfTimes="1" WaitTime="500" CollectionDistance="50" X="4490.249" Y="-4050.766" Z="936.9135" />
+         <!-- Twilight Recruitment Papers -->
+         <Objective QuestName="Signed in Blood" QuestId="25274" Type="Collect" CollectCount="1" ItemId="52685" />
+      </If>
+
+      <TurnIn QuestName="Signed in Blood" TurnInName="Elementalist Ortell" QuestId="25274" TurnInId="39621" />
+
+      <!-- Your New Identity (level 81) -->
+      <!-- Speak to Condenna the Pitiless at the Training Grounds in Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25276 -->
+      <PickUp QuestName="Your New Identity" GiverName="Elementalist Ortell" QuestId="25276" GiverId="39621" />
+
+      <If Condition="HasQuest(25276)" >
+         <!-- Fly to Condenna the Pitiless @ Training Grounds -->
+         <CustomBehavior File="FlyTo" X="4435.501" Y="-4196.045" Z="929.6309" />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+      </If>
+
+      <TurnIn QuestName="Your New Identity" TurnInName="Condenna the Pitiless" QuestId="25276" TurnInId="39442" />
+
+      <!-- Trial By Fire (level 81) -->
+      <!-- Defeat 8 Fiery Instructors. -->
+      <!-- http://www.wowhead.com/quest=25223 -->
+      <PickUp QuestName="Trial By Fire" GiverName="Condenna the Pitiless" QuestId="25223" GiverId="39442" />
+      <!-- In Bloom (level 81) -->
+      <!-- Obtain 5 Flame Blossoms. -->
+      <!-- http://www.wowhead.com/quest=25224 -->
+      <PickUp QuestName="In Bloom" GiverName="Condenna the Pitiless" QuestId="25224" GiverId="39442" />
+      <!-- Waste of Flesh (level 81) -->
+      <!-- Use the Frostgale Crystal to extinguish the flames on an 4 Immolated Supplicants. -->
+      <!-- http://www.wowhead.com/quest=25330 -->
+      <PickUp QuestName="Waste of Flesh" GiverName="Instructor Cargall" QuestId="25330" GiverId="39451" />
+
+      <!-- Flame Blossom -->
+      <Objective QuestName="In Bloom" QuestId="25224" Type="Collect" CollectCount="5" ItemId="52537" />
+      <!-- Immolated Supplicant saved -->
+      <While Condition="HasQuest(25330) &amp;&amp; !IsQuestCompleted(25330)" >
+         <!-- CustomBehavior File="UseItemAtRange" QuestId="25330" ObjectType="NPC" MobId="39453" ItemId="52819" NumOfTimes="1" WaitTime="500" RangeWanted="8" CollectionDistance="750" X="4387.74" Y="-4363.985" Z="900.4168" / -->
+         <CustomBehavior File="UseItemOn" QuestId="25330" MobId="39453" ItemId="52819" NumOfTimes="1" WaitTime="500" Range="8" CollectionDistance="750" X="4387.74" Y="-4363.985" Z="900.4168" />
+      </While>
+
+      <!-- Fiery Instructor -->
+      <Objective QuestName="Trial By Fire" QuestId="25223" Type="KillMob" KillCount="8" MobId="39344" />
+
+      <TurnIn QuestName="In Bloom" TurnInName="Condenna the Pitiless" QuestId="25224" TurnInId="39442" />
+      <TurnIn QuestName="Trial By Fire" TurnInName="Condenna the Pitiless" QuestId="25223" TurnInId="39442" />
+      <TurnIn QuestName="Waste of Flesh" TurnInName="Instructor Cargall" QuestId="25330" TurnInId="39451" />
+
+      <!-- Twilight Training (level 81) -->
+      <!-- Speak to Instructor Mylva in Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25291 -->
+      <PickUp QuestName="Twilight Training" GiverName="Condenna the Pitiless" QuestId="25291" GiverId="39442" />
+
+      <If Condition="HasQuest(25291)" >
+         <!-- Fly to Instructor Mylva @ The Forge of Supplication -->
+         <CustomBehavior File="FlyTo" X="4524.021" Y="-4731.176" Z="887.9406" />
+      </If>
+
+      <TurnIn QuestName="Twilight Training" TurnInName="Instructor Mylva" QuestId="25291" TurnInId="39413" />
+
+      <!-- Physical Training: Forced Labor (level 81) -->
+      <!-- Break 5 Darkwhisper Lodestones. -->
+      <!-- http://www.wowhead.com/quest=25509 -->
+      <PickUp QuestName="Physical Training: Forced Labor" GiverName="Instructor Mylva" QuestId="25509" GiverId="39413" />
+      <!-- Walking the Dog (level 81) -->
+      <!-- Collect and feed 5 pieces of Charred Basilisk Meat to the Spawn of Smolderos. -->
+      <!-- http://www.wowhead.com/quest=25294 -->
+      <PickUp QuestName="Walking the Dog" GiverName="Instructor Devoran" QuestId="25294" GiverId="39406" />
+      <PickUp QuestName="Gather the Intelligence" GiverName="Outhouse Hideout" QuestId="25296" GiverId="202701" GiverType="Object" X="4542.032" Y="-4680.777" Z="884.845" />
+
+      <!-- Fly to Crate of Scrolls @ The Forge of Supplication -->
+      <If Condition="HasQuest(25296) &amp;&amp; !IsQuestCompleted(25296)" >
+         <CustomBehavior File="FlyTo" X="4622.016" Y="-4722.415" Z="883.4589" />
+         <Objective QuestName="Gather the Intelligence" QuestId="25296" Type="CollectItem" Count="1" ItemId="52724" />
+      </If>
+
+      <!-- Fly to Hyjal Battleplans @ Doom's Vigil -->
+      <If Condition="HasQuest(25296) &amp;&amp; !IsQuestCompleted(25296)" >
+         <CustomBehavior File="FlyTo" X="4741.615" Y="-4838.78" Z="882.9802" />
+         <Objective QuestName="Gather the Intelligence" QuestId="25296" Type="CollectItem" Count="1" ItemId="52725" />
+      </If>
+
+      <!-- Break 5 x Lodestone -->
+      <While Condition="HasQuest(25509) &amp;&amp; !IsQuestCompleted(25509)">
+         <Objective QuestName="Physical Training: Forced Labor" QuestId="25509" Type="CollectItem" Count="1" ItemId="202952" />
+      </While>
+
+      <!-- Collect 5 x Charred Basilisk Meat -->
+      <Objective QuestId="25294" Type="CollectItem" Count="5" ItemId="52708" />
+
+      <If Condition="HasQuest(25294)" >
+         <CustomBehavior File="FlyTo" X="4602.514" Y="-4755.32" Z="889.5089" />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+      </If>
+      <!-- use Fiery Leash to summon Spawn of Smolderos -->
+      <UseItem QuestId="25294" ItemId="52717" X="4602.514" Y="-4755.32" Z="889.5089" />
+      <!-- UseItemOn must be in loop since this QB blacklists NPC and we are feeding same one 5 times -->
+      <While Condition="HasQuest(25294) &amp;&amp; !IsQuestCompleted(25294)">
+         <!-- Spawn of Smolderos Fed 5 times -->
+         <CustomBehavior File="UseItemOn" QuestId="25294" ItemId="52708" ObjectType="NPC" MobId="39659" NumOfTimes="1" WaitTime="3000" X="4602.514" Y="-4755.32" Z="889.5089" />
+      </While>
+
+      <TurnIn QuestName="Walking the Dog" TurnInName="Instructor Devoran" QuestId="25294" TurnInId="39406" />
+      <!-- A Champion's Collar (level 81) -->
+      <!-- Obtain the Spiked Basilisk Hide from the Spinescale Matriarch. -->
+      <!-- http://www.wowhead.com/quest=25494 -->
+      <PickUp QuestName="A Champion's Collar" GiverName="Instructor Devoran" QuestId="25494" GiverId="39406" />
+
+      <TurnIn QuestName="Gather the Intelligence" TurnInName="Outhouse Hideout" QuestId="25296" TurnInId="202701" />
+      <PickUp QuestName="Seeds of Discord" GiverName="Outhouse Hideout" QuestId="25308" GiverId="202701" GiverType="Object" X="4542.032" Y="-4680.777" Z="884.845" />
+
+      <TurnIn QuestName="Physical Training: Forced Labor" TurnInName="Instructor Mylva" QuestId="25509" TurnInId="39413" />
+
+      <!-- fly to the Outhouse -->
+      <If Condition="HasQuest(25308) &amp;&amp; !IsQuestCompleted(25308)" >
+         <CustomBehavior File="FlyTo" X="4837.766" Y="-4219.213" Z="894.6891" />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+
+         <!-- put on Ogre costume by the Outhouse -->
+         <UseItem QuestId="25308" ItemId="55137" X="4837.766" Y="-4219.213" Z="894.6891" />
+         <!-- talk to Karr'gonn -->
+         <CustomBehavior File="InteractWith" QuestId="25308" ObjectType="Npc" MobId="40489" NumOfTimes="1" CollectionDistance="500" X="4837.766" Y="-4219.213" Z="894.6891" />
+         <CustomBehavior File="RunMacro" Macro="/script GossipTitleButton1:Click()\n" NumOfTimes="1" />
+         <!-- kill High Cultist Azennios -->
+         <Objective QuestName="Seeds of Discord" QuestId="25308" Type="KillMob" KillCount="1" MobId="40491" />
+         <!-- run back to Outhouse (safespot) and take off costume to mount -->
+         <RunTo X="4837.766" Y="-4219.213" Z="894.6891" />
+         <CustomBehavior File="RunMacro" QuestId="0" Macro="/cancelaura Seeds of Discord" NumOfTimes="1" WaitTime="0" />
+      </If>
+
+      <If Condition="HasQuest(25308) &amp;&amp; IsQuestCompleted(25308)" >
+            <!-- Fly to Instructor Mylva @ The Forge of Supplication -->
+            <CustomBehavior File="FlyTo" X="4524.021" Y="-4731.176" Z="887.9406" />
+            <CustomBehavior File="ForcedDismount" QuestId="0"/>
+      </If>
+      
+      <!-- Agility Training: Run Like Hell! (level 81) -->
+      <!-- Run away from the Blazing Trainer within the Forge of Supplication for 1 minute. -->
+      <!-- http://www.wowhead.com/quest=25499 -->
+      <While Condition="!IsQuestCompleted(25499)" >
+         <!-- if incomplete (failed or bugged) then abandon and try again -->
+         <CustomBehavior File="AbandonQuest" QuestId="25499" Type="Incomplete" />
+         <CustomBehavior File="WaitTimer" WaitTime="1000" />
+         <!-- now use QB to run to same spot and install hook for behavior before accepting quest -->
+         <PickUp QuestName="Agility Training: Run Like Hell!" GiverName="Instructor Mylva" QuestId="25499" GiverId="39413" />
+         <CustomBehavior File="RunLikeHell" QuestId="25499" MobId="40434" Range="20" NumOfTimes="8" Combat="false" UseCTM="true">
+            <Hotspot X="4525.9" Y="-4729.855" Z="887.4866" />
+            <Hotspot X="4522.312" Y="-4711.035" Z="887.2271" />
+            <Hotspot X="4531.972" Y="-4685.22" Z="885.4999" />
+            <Hotspot X="4565.489" Y="-4689.967" Z="883.0197" />
+            <Hotspot X="4593.59" Y="-4687.18" Z="883.1829" />
+            <Hotspot X="4612.155" Y="-4706.596" Z="883.1025" />
+            <Hotspot X="4599.795" Y="-4725.593" Z="884.2396" />
+            <Hotspot X="4591.743" Y="-4752.175" Z="889.1088" />            
+         </CustomBehavior>
+      </While>
+
+      <TurnIn QuestName="Agility Training: Run Like Hell!" TurnInName="Instructor Mylva" QuestId="25499" TurnInId="39413" />
+
+      <!-- Mental Training: Speaking the Truth to Power (level 81) -->
+      <!-- Use the Orb of Ascension and answer 10 answers correctly. -->
+      <!-- http://www.wowhead.com/quest=25299 -->
+      <PickUp QuestName="Mental Training: Speaking the Truth to Power" GiverName="Instructor Mylva" QuestId="25299" GiverId="39413" />
+      <CustomBehavior File="WaitTimer" WaitTime="500" />
+      <RunTo QuestId="25299" X="4524.021" Y="-4731.176" Z="887.9406" />
+      <!-- Mental Training -->
+      <CustomBehavior File="MountHyjal\MentalTraining" QuestId="25299" />
+      <TurnIn QuestName="Mental Training: Speaking the Truth to Power" TurnInName="Instructor Mylva" QuestId="25299" TurnInId="39413" />
+
+      <!-- Spiritual Training: Mercy is for the Weak (level 81) -->
+      <!-- Slay 5 Failed Supplicants at Doom's Vigil. -->
+      <!-- http://www.wowhead.com/quest=25309 -->
+      <PickUp QuestName="Spiritual Training: Mercy is for the Weak" GiverName="Instructor Mylva" QuestId="25309" GiverId="39413" />
+
+      <!-- Quest:  The Defector (obsolete) -->
+
+      <!-- fly to Supplicants @ Doom's Vigil -->
+      <If Condition="HasQuest(25309) &amp;&amp; !IsQuestCompleted(25309)" >
+         <CustomBehavior File="FlyTo" X="4787.883" Y="-4847.537" Z="883.5432" />
+      </If>
+
+      <!-- Failed Supplicant -->
+      <Objective QuestName="Spiritual Training: Mercy is for the Weak" QuestId="25309" Type="KillMob" KillCount="5" MobId="39752" />
+
+      <!-- fly to Basilisk Matriarch -->
+      <If Condition="HasQuest(25494) &amp;&amp; !IsQuestCompleted(25494)" >
+         <CustomBehavior File="FlyTo" X="4877.733" Y="-4544.911" Z="863.1895" />
+         <CustomBehavior File="ForcedDismount" QuestId="25494" />
+      </If>
+      <!-- Spiked Basilisk Hide -->
+      <Objective QuestName="A Champion's Collar" QuestId="25494" Type="Collect" CollectCount="1" ItemId="54610" />
+
+      <!-- fly to Instructor Devoran -->
+      <If Condition="HasQuest(25494)" >
+         <CustomBehavior File="FlyTo" X="4602.514" Y="-4755.32" Z="889.5089" />
+      </If>
+      <TurnIn QuestName="A Champion's Collar" TurnInName="Instructor Devoran" QuestId="25494" TurnInId="39406" />
+
+      <!-- Grudge Match (level 81) -->
+      <!-- Challenge Gromm'ko at the Seat of the Chosen in Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25496 -->
+      <PickUp QuestName="Grudge Match" GiverName="Instructor Devoran" QuestId="25496" GiverId="39406" />
+
+      <!-- fly to Gromm'ko @ Seat of the Chosen -->
+      <If Condition="HasQuest(25496) &amp;&amp; !IsQuestCompleted(25496)" >
+         <CustomBehavior File="FlyTo" X="4769.567" Y="-4245.351" Z="891.9484" />
+         <CustomBehavior File="ForcedDismount" QuestId="0"/>
+         <!-- Grudge Match -->
+         <RunTo X="4742.446" Y="-4233.19" Z="894.4583" />
+         <CustomBehavior File="InteractWith" QuestId="25496" ObjectType="Npc" MobId="40409" NumOfTimes="1" WaitTime="500" CollectionDistance="500" X="4741.135" Y="-4233.127" Z="894.4476"  />
+         <CustomBehavior File="RunMacro" QuestId="25496" Macro="/script GossipTitleButton1:Click()\n" NumOfTimes="1" />
+         <CustomBehavior File="WaitTimer" WaitTime="20000" />
+      </If>
+
+      <Objective QuestName="Grudge Match" QuestId="25496" Type="KillMob" KillCount="1" MobId="40409" />
+
+      <!-- fly to Instructor Devoran -->
+      <If Condition="HasQuest(25496)" >
+         <!-- run out from under roof so flying mount doesnt get stuck -->
+         <If Condition="Me.Location.Distance(new WoWPoint(5492.833,-3566.269,1569.25)) &lt; 80" >
+            <RunTo X="4769.567" Y="-4245.351" Z="891.9484" />
+         </If>
+         <CustomBehavior File="FlyTo" X="4602.514" Y="-4755.32" Z="889.5089" />
+      </If>
+
+      <TurnIn QuestName="Grudge Match" TurnInName="Instructor Devoran" QuestId="25496" TurnInId="39406" />
+      <TurnIn QuestName="Seeds of Discord" TurnInName="Outhouse Hideout" QuestId="25308" TurnInId="202701" />
+      <TurnIn QuestName="Spiritual Training: Mercy is for the Weak" TurnInName="Instructor Mylva" QuestId="25309" TurnInId="39413" />
+
+      <!-- The Greater of Two Evils (level 81) -->
+      <!-- Use the Talisman of Flame Ascendancy and slay Garnoth, Fist of the Legion, at the Gates of Sothann in Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25310 -->
+      <PickUp QuestName="The Greater of Two Evils" GiverName="Instructor Mylva" QuestId="25310" GiverId="39413" />
+      <!-- Twilight Territory (level 81) -->
+      <!-- Slay 10 Horrorguards at the Gates of Sothann in Hyjal. -->
+      <!-- http://www.wowhead.com/quest=25311 -->
+      <PickUp QuestName="Twilight Territory" GiverName="Instructor Mylva" QuestId="25311" GiverId="39413" />
+
+
+      <!-- fly to Garnoth @ Gates of Sothann -->
+      <If Condition="HasQuest(25310) &amp;&amp; !IsQuestCompleted(25310)" >
+         <CustomBehavior File="FlyTo"  X="4329.924" Y="-3728.172" Z="1001.362" />
+         <CustomBehavior File="ForcedDismount" QuestId="0" />
+      </If>
+
+      <!-- Garnoth, Fist of the Legion -->
+      <CustomBehavior File="MountHyjal\GreaterOfTwoEvils" QuestId="25310" MobId="39726" />
+
+      <!-- Horrorguard -->
+      <Objective QuestName="Twilight Territory" QuestId="25311" Type="KillMob" KillCount="10" MobId="39724" />
+
+      <If Condition="HasQuest(25310) &amp;&amp; IsQuestCompleted(25310)" >
+         <!-- Fly to Instructor Mylva @ The Forge of Supplication -->
+         <CustomBehavior File="FlyTo" X="4524.021" Y="-4731.176" Z="887.9406" />
+      </If>
+
+      <TurnIn QuestName="The Greater of Two Evils" TurnInName="Instructor Mylva" QuestId="25310" TurnInId="39413" />
+      <TurnIn QuestName="Twilight Territory" TurnInName="Instructor Mylva" QuestId="25311" TurnInId="39413" />
+
+      <PickUp QuestName="Speech Writing for Dummies" GiverName="Outhouse Hideout" QuestId="25314" GiverId="202701" GiverType="Object" X="4542.032" Y="-4680.777" Z="884.845" />
+
+      <If Condition="HasQuest(25314) &amp;&amp; !IsQuestCompleted(25314)" >
+         <!-- fly to area that Okrog patrols in Seat of the Chosen -->
+         <CustomBehavior File="FlyTo" X="4765.092" Y="-4307.086" Z="896.2662" />
+      </If>
+      <Objective QuestName="Speech Writing for Dummies" QuestId="25314" Type="KillMob" KillCount="1" MobId="40922" />
+
+      <If Condition="HasQuest(25314) &amp;&amp; IsQuestCompleted(25314)" >
+         <!-- Fly to Outhouse Hideout @ The Forge of Supplication -->
+         <CustomBehavior File="FlyTo" X="4524.021" Y="-4731.176" Z="887.9406" />
+      </If>
+      <TurnIn QuestName="Speech Writing for Dummies" TurnInName="Outhouse Hideout" QuestId="25314" TurnInId="202701" />
+
+      <PickUp QuestName="Head of the Class" GiverName="Outhouse Hideout" QuestId="25601" GiverId="202701" GiverType="Object" X="4542.032" Y="-4680.777" Z="884.845" />
+
+      <TurnIn QuestName="Head of the Class" TurnInName="Instructor Mylva" QuestId="25601" TurnInId="39413" />
+
+
+      <!--===============================================================================================
+    ==  10. The Throne of Flame
+    ==  http://wow-pro.com/leveling_guides/arixans_horde_leveling_guide_mt_hyjal_80-82
+    ==
+    ==  This section is not required to obtain http://www.wowhead.com/achievement=4870
+    ================================================================================================-->
+
+   </QuestOrder>
+
+   <!--
+  
+  Coords of Interest
+  
+  Nordrassil   
+  <CustomBehavior File="FlyTo" X="5575.909" Y="-3616.602" Z="1570.599" 
+
+  Shrine of Aviana  
+  <CustomBehavior File="FlyTo" X="4928.762" Y="-2699.903" Z="1431.984" 
+  
+  Grove of Aessina   
+  <CustomBehavior File="FlyTo" X="5133.778" Y="-1739.218" Z="1335.467" 
+
+  The Forge of Supplication 
+  <CustomBehavior File="FlyTo" X="4524.021" Y="-4731.176" Z="887.9406" />
+
+-->
+<!--
+   TODO:
+
+   Add checks for required HB options
+
+   QBs to add/update to distribution
+   - AbandonQuest.cs
+   - ForceDismount.cs
+   - Halt.cs
+   - RunLikeHell.cs
+   - MountHyjal\BearsUpThere.cs
+   - MountHyjal\BaronGeddon.cs
+   - MountHyjal\GreaterOfTwoEvils.cs
+   - MountHyjal\MentalTraining.cs
+
+    
+   -->
+
+
+</HBProfile>

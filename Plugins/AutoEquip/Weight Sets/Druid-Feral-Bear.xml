@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WeightSet Class="Druid" Spec="Feral" Misc="Bear">
+  <Stamina>100</Stamina>
+  <Armor>96</Armor>
+  <Agility>48</Agility>
+  <DodgeRating>41</DodgeRating>
+  <CriticalStrikeRating>13</CriticalStrikeRating>
+  <Strength>10</Strength>
+  <ExpertiseRating>10</ExpertiseRating>
+  <Health>7</Health>
+  <AttackPowerInForms>5</AttackPowerInForms>
+  <AttackPower>5</AttackPower>
+  <HitRating>5</HitRating>
+  <HasteRating>1</HasteRating>
+</WeightSet>

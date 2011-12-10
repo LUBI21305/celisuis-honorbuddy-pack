@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WeightSet Class="Warrior" Spec="Fury">
+  <!-- prot: {__icon:'Ability_Warrior_DefensiveStance',  sta:100,  mastrtng:100,  dodgertng:90,  parryrtng:67,  agi:67,  str:48,  exprtng:19,  hitrtng:10,  critstrkrtng:7,  armor:6  ,hastertng:1} -->
+  <Stamina>100</Stamina>
+  <Mastery>100</Mastery>
+  <DodgeRating>90</DodgeRating>
+  <ParryRating>67</ParryRating>
+  <Agility>67</Agility>
+  <Strength>48</Strength>
+  <ExpertiseRating>19</ExpertiseRating>
+  <HitRating>10</HitRating>
+  <CriticalStrikeRating>7</CriticalStrikeRating>
+  <Armor>6</Armor>
+  <HasteRating>1</HasteRating>
+</WeightSet>

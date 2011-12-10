@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WeightSet Class="Priest" Spec="Discipline">
+  <SpellPower>100</SpellPower>
+  <Intellect>65</Intellect>
+  <HasteRating>59</HasteRating>
+  <CriticalStrikeRating>48</CriticalStrikeRating>
+  <Spirit>22</Spirit>
+</WeightSet>

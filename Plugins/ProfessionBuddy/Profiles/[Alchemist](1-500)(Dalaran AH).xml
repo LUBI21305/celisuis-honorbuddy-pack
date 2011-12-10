@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Professionbuddy ChildrenCount="9">
+  <LoadProfileAction Path="" ProfileType="Honorbuddy" />
+  <While Condition="Me.FreeNormalBagSlots &lt;= 2" IgnoreCanRun="True" ChildrenCount="1">
+    <SellItemOnAhAction ItemName="" MinBuyout="0g10s0c" MaxBuyout="100g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.0001" UseCategory="True" Category="Consumable" SubCategoryType="SubCategoryType" SubCategory="None" X="0" Y="0" Z="0" />
+  </While>
+  <While Condition="InbagCount(3371) &lt; 20" IgnoreCanRun="True" ChildrenCount="2">
+    <BuyItemAction NpcEntry="28725" X="5882.353" Y="707.77" Z="643.2384" Entry="3371" Count="60" BuyItemType="SpecificItem" />
+    <WaitAction Condition="false" Timeout="2000" />
+  </While>
+  <While Condition="HasNewMail || MailCount &gt; 0" IgnoreCanRun="True" ChildrenCount="2">
+    <GetMailAction Entry="0" GetMailType="AllItems" AutoFindMailBox="True" X="0" Y="0" Z="0" MinFreeBagSlots="2" />
+    <WaitAction Condition="false" Timeout="2000" />
+  </While>
+  <While Condition="Alchemy.MaxLevel == 0" IgnoreCanRun="False" ChildrenCount="1">
+    <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+  </While>
+  <If Condition="Alchemy.Level &lt; 270 &amp;&amp; !Me.NormalBagsFull" IgnoreCanRun="False" ChildrenCount="13">
+    <While Condition="Alchemy.Level &lt; 60" IgnoreCanRun="False" ChildrenCount="2">
+      <If Condition="CanCraft(2330)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="2330" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(2330) &amp;&amp; !HasNewMail" IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="2330" MaxBuyout="10g0s0c" Amount="20" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=60 &amp;&amp; Alchemy.Level &lt; 105" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(2337)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(2337)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="2337" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(2337) &amp;&amp; !HasNewMail" IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="2337" MaxBuyout="10g0s0c" Amount="50" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=105 &amp;&amp; Alchemy.Level &lt; 110" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(3171)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(3171)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="3171" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(3171)" IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="3171" MaxBuyout="10g0s0c" Amount="10" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=110 &amp;&amp; Alchemy.Level &lt; 140" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(3447)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(3447)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="3447" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(3447) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="3447" MaxBuyout="10g0s0c" Amount="10" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=140 &amp;&amp; Alchemy.Level &lt; 155" IgnoreCanRun="False" ChildrenCount="5">
+      <If Condition="!HasRecipe(3173)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(3173)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="3173" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="CanCraft(6371)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="6371" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(3173) &amp;&amp; !HasNewMail" IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="3173" MaxBuyout="10g0s0c" Amount="15" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+      <If Condition="!CanCraft(3173) &amp;&amp; !CanCraft(6371) &amp;&amp; !HasNewMail" IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="6371" MaxBuyout="10g0s0c" Amount="15" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=155 &amp;&amp; Alchemy.Level &lt; 175" IgnoreCanRun="False" ChildrenCount="5">
+      <If Condition="!HasRecipe(7181)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(7181)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="7181" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="CanCraft(7837)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="7837" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(7181) &amp;&amp; !HasNewMail" IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="7181" MaxBuyout="10g0s0c" Amount="20" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+      <If Condition="!CanCraft(7181) &amp;&amp; !CanCraft(7837) &amp;&amp; !HasNewMail" IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="7837" MaxBuyout="10g0s0c" Amount="15" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=175 &amp;&amp; Alchemy.Level &lt; 185" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(3452)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(3452)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="3452" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(3452) &amp;&amp; !HasNewMail" IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="3452" MaxBuyout="10g0s0c" Amount="20" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=185 &amp;&amp; Alchemy.Level &lt; 205" IgnoreCanRun="False" ChildrenCount="6">
+      <If Condition="!HasRecipe(11449)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(3450)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="3450" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(11449) &amp;&amp; !HasNewMail" IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="11449" MaxBuyout="5g0s0c" Amount="20" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+      <If Condition="CanCraft(3448)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="3448" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(11449) &amp;&amp; !CanCraft(3450) &amp;&amp; !HasNewMail" IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="3450" MaxBuyout="10g0s0c" Amount="20" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+      <If Condition="!CanCraft(11449) &amp;&amp; !CanCraft(3450) &amp;&amp; !CanCraft(3448) &amp;&amp; !HasNewMail" IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="3448" MaxBuyout="10g0s0c" Amount="20" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=205 &amp;&amp; Alchemy.Level &lt; 215" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(11450)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(11450)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="11450" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(11450) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="11450" MaxBuyout="10g0s0c" Amount="10" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=215 &amp;&amp; Alchemy.Level &lt; 235" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(11457)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(11457)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="11457" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(11457) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="11457" MaxBuyout="10g0s0c" Amount="10" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=235 &amp;&amp; Alchemy.Level &lt; 240" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(11465)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(11465)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="11465" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(11465) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="11465" MaxBuyout="10g0s0c" Amount="5" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=240 &amp;&amp; Alchemy.Level &lt; 265" IgnoreCanRun="False" ChildrenCount="8">
+      <If Condition="!HasRecipe(11467)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="!HasRecipe(9233) &amp;&amp; Alchemy.Level &gt;= 250" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(11467) " IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="11467" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="CanCraft(11465) " IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="11465" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="CanCraft(9233) " IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="9233" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(11467) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="11467" MaxBuyout="10g0s0c" Amount="25" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+      <If Condition="!CanCraft(11465) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="11465" MaxBuyout="10g0s0c" Amount="5" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+      <If Condition="HasRecipe(9233) &amp;&amp; !CanCraft(9233) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="9233" MaxBuyout="10g0s0c" Amount="10" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=265 &amp;&amp; Alchemy.Level &lt; 270" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(17553)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(17553)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="17553" Repeat="15" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(17553) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="17553" MaxBuyout="10g0s0c" Amount="5" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+  </If>
+  <If Condition="Alchemy.Level &gt;= 270 &amp;&amp; Alchemy.Level &lt; 350 &amp;&amp; !Me.NormalBagsFull" IgnoreCanRun="False" ChildrenCount="6">
+    <While Condition="Alchemy.Level &gt;=270 &amp;&amp; Alchemy.Level &lt; 285" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(17555)" IgnoreCanRun="True" ChildrenCount="2">
+        <SellItemOnAhAction ItemName="" MinBuyout="0g10s0c" MaxBuyout="6g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Herb" X="0" Y="0" Z="0" />
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(17555)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="17555" Repeat="15" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(17555) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="17555" MaxBuyout="10g0s0c" Amount="15" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=285 &amp;&amp; Alchemy.Level &lt; 300" IgnoreCanRun="False" ChildrenCount="4">
+      <CustomAction Code="Log(&quot;here&quot;);" />
+      <If Condition="!HasRecipe(17556)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(17556)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="17556" Repeat="15" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(17556) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="17556" MaxBuyout="10g0s0c" Amount="15" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=300 &amp;&amp; Alchemy.Level &lt; 315" IgnoreCanRun="False" ChildrenCount="7">
+      <If Condition="!HasRecipe(33732)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(33732)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="33732" Repeat="15" RepeatType="Craftable" />
+      </If>
+      <If Condition="CanCraft(33740)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="33740" Repeat="15" RepeatType="Craftable" />
+      </If>
+      <If Condition="CanCraft(33738)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="33738" Repeat="15" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(33732) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="33732" MaxBuyout="10g0s0c" Amount="5" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+      <If Condition="!CanCraft(33740) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="33740" MaxBuyout="10g0s0c" Amount="5" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+      <If Condition="!CanCraft(33738) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="33738" MaxBuyout="10g0s0c" Amount="5" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=315 &amp;&amp; Alchemy.Level &lt; 325" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(28545)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(28545)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="28545" Repeat="15" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(28545) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="28545" MaxBuyout="10g0s0c" Amount="15" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=325 &amp;&amp; Alchemy.Level &lt; 335" IgnoreCanRun="False" ChildrenCount="5">
+      <If Condition="!HasRecipe(39638)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(45061)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="45061" Repeat="15" RepeatType="Craftable" />
+      </If>
+      <If Condition="CanCraft(39638)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="39638" Repeat="15" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(45061) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="45061" MaxBuyout="10g0s0c" Amount="5" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+      <If Condition="!CanCraft(39638) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="39638" MaxBuyout="10g0s0c" Amount="5" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=335 &amp;&amp; Alchemy.Level &lt; 350" IgnoreCanRun="False" ChildrenCount="7">
+      <If Condition="!HasRecipe(28551)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(45061)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="45061" Repeat="15" RepeatType="Craftable" />
+      </If>
+      <If Condition="CanCraft(28551)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="28551" Repeat="15" RepeatType="Craftable" />
+      </If>
+      <If Condition="CanCraft(39638)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="39638" Repeat="15" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(39638) &amp;&amp; !HasNewMail" IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="39638" MaxBuyout="10g0s0c" Amount="5" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+      <If Condition="!CanCraft(45061) &amp;&amp; !HasNewMail" IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="45061" MaxBuyout="10g0s0c" Amount="5" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+      <If Condition="!CanCraft(28551) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="28551" MaxBuyout="10g0s0c" Amount="5" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+  </If>
+  <If Condition="Alchemy.Level &gt;= 350 &amp;&amp; Alchemy.Level &lt; 425 &amp;&amp; !Me.NormalBagsFull" IgnoreCanRun="False" ChildrenCount="9">
+    <While Condition="Alchemy.Level &gt;=350 &amp;&amp; Alchemy.Level &lt; 360" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(53838)" IgnoreCanRun="True" ChildrenCount="2">
+        <SellItemOnAhAction ItemName="" MinBuyout="0g10s0c" MaxBuyout="6g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Herb" X="0" Y="0" Z="0" />
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(53838)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="53838" Repeat="15" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(53838) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="53838" MaxBuyout="10g0s0c" Amount="10" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=360 &amp;&amp; Alchemy.Level &lt; 365" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(53839)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(53839)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="53839" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(53839) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="53839" MaxBuyout="10g0s0c" Amount="5" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=365 &amp;&amp; Alchemy.Level &lt; 375" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(53842)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(53842)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="53842" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(53842) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="53842" MaxBuyout="10g0s0c" Amount="10" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=375 &amp;&amp; Alchemy.Level &lt; 380" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(53812)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(53812)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="53812" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(53812) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="53812" MaxBuyout="10g0s0c" Amount="5" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=380 &amp;&amp; Alchemy.Level &lt; 385" IgnoreCanRun="False" ChildrenCount="5">
+      <If Condition="!HasRecipe(53900)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(53900)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="53900" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="CanCraft(53812)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="53812" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(53900) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="53900" MaxBuyout="10g0s0c" Amount="5" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+      <If Condition="!CanCraft(53812) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="53812" MaxBuyout="10g0s0c" Amount="5" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=385 &amp;&amp; Alchemy.Level &lt; 395" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(54218)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(54218)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="54218" Repeat="10" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(54218) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="54218" MaxBuyout="10g0s0c" Amount="12" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=395 &amp;&amp; Alchemy.Level &lt; 405" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(53840)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(53840)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="53840" Repeat="10" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(53840) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="53840" MaxBuyout="10g0s0c" Amount="14" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=405 &amp;&amp; Alchemy.Level &lt; 415" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(53905)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(53905)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="53905" Repeat="10" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(53905) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="53905" MaxBuyout="10g0s0c" Amount="10" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=415 &amp;&amp; Alchemy.Level &lt; 425" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(53837)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(53837)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="53837" Repeat="10" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(53837) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="53837" MaxBuyout="10g0s0c" Amount="10" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+  </If>
+  <If Condition="Alchemy.Level &gt;= 425 &amp;&amp; Alchemy.Level &lt;=525 &amp;&amp; !Me.NormalBagsFull" IgnoreCanRun="False" ChildrenCount="10">
+    <While Condition="Alchemy.Level &gt;=425 &amp;&amp; Alchemy.Level &lt; 450" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(93935)" IgnoreCanRun="True" ChildrenCount="2">
+        <SellItemOnAhAction ItemName="" MinBuyout="0g10s0c" MaxBuyout="6g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Herb" X="0" Y="0" Z="0" />
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(93935)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="93935" Repeat="15" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(93935) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="93935" MaxBuyout="10g0s0c" Amount="10" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=450 &amp;&amp; Alchemy.Level &lt; 455" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(80477)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(80477)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="80477" Repeat="15" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(80477) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="80477" MaxBuyout="10g0s0c" Amount="5" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=455 &amp;&amp; Alchemy.Level &lt; 460" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(80479)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(80479)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="80479" Repeat="15" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(80479) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="80479" MaxBuyout="10g0s0c" Amount="5" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=460 &amp;&amp; Alchemy.Level &lt; 465" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(80481)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(80481)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="80481" Repeat="15" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(80481) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="80481" MaxBuyout="10g0s0c" Amount="5" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=465 &amp;&amp; Alchemy.Level &lt; 475" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(80484)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(80484)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="80484" Repeat="15" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(80484) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="80484" MaxBuyout="10g0s0c" Amount="10" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=475 &amp;&amp; Alchemy.Level &lt; 480" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(80488)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(80488)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="80488" Repeat="15" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(80488) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="80488" MaxBuyout="10g0s0c" Amount="5" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=480 &amp;&amp; Alchemy.Level &lt; 490" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(80491)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(80491)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="80491" Repeat="15" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(80491) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="80491" MaxBuyout="10g0s0c" Amount="10" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=490 &amp;&amp; Alchemy.Level &lt; 495" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(80496)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(80496)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="80496" Repeat="15" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(80496) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="80496" MaxBuyout="15g0s0c" Amount="10" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <While Condition="Alchemy.Level &gt;=495 &amp;&amp; Alchemy.Level &lt; 500" IgnoreCanRun="False" ChildrenCount="3">
+      <If Condition="!HasRecipe(80497)" IgnoreCanRun="True" ChildrenCount="1">
+        <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      </If>
+      <If Condition="CanCraft(80497)" IgnoreCanRun="True" ChildrenCount="1">
+        <CastSpellAction Entry="80497" Repeat="5" RepeatType="Craftable" />
+      </If>
+      <If Condition="!CanCraft(80497) " IgnoreCanRun="True" ChildrenCount="1">
+        <BuyItemFromAhAction Entry="80497" MaxBuyout="10g0s0c" Amount="5" ItemListType="RecipeMats" AutoFindAh="True" X="0" Y="0" Z="0" />
+      </If>
+    </While>
+    <If Condition="Alchemy.Level &gt;=500" IgnoreCanRun="True" ChildrenCount="5">
+      <SellItemOnAhAction ItemName="" MinBuyout="0g10s0c" MaxBuyout="6g0s0c" RunTime="_24_Hours" Amount="10" StackSize="20" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="Herb" X="0" Y="0" Z="0" />
+      <SellItemOnAhAction ItemName="" MinBuyout="0g10s0c" MaxBuyout="200g0s0c" RunTime="_24_Hours" Amount="10" StackSize="5" AmountType="Everything" AutoFindAh="True" BidPrecent="95" UndercutPrecent="0.1" UseCategory="True" Category="Consumable" SubCategoryType="SubCategoryType" SubCategory="None" X="0" Y="0" Z="0" />
+      <TrainSkillAction NpcEntry="28703" X="5889.271" Y="698.5286" Z="643.2379" />
+      <CustomAction Code="Log(&quot;Reached Alchemy level 500. Logging out&quot;);" />
+      <CustomAction Code="Lua.DoString(&quot;LogOut()&quot;);TreeRoot.Stop();" />
+    </If>
+  </If>
+</Professionbuddy>

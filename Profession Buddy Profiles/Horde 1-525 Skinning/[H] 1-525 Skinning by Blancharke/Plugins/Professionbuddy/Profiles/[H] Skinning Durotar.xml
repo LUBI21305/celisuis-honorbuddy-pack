@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Professionbuddy>
+  <CustomAction Code="Log(&quot;Leveling to 65&quot;);" />
+  <If Condition="TreeRoot.Current.Name != &quot;Grind Bot&quot;" IgnoreCanRun="True">
+    <CustomAction Code="SwitchToBot (&quot;Grind Bot&quot;);" />
+  </If>
+  <!--Selling to vendor in Razor Hill-->
+  <If Condition="Me.FreeNormalBagSlots &lt; 2" IgnoreCanRun="True">
+    <FlyToAction Dismount="True" X="352.1344" Y="-4757.09" Z="12.95497" />
+    <SellItemAction NpcEntry="3165" X="362.1046" Y="-4763.842" Z="12.46935" ItemID="" Count="0" SellItemType="Greys" />
+    <SellItemAction NpcEntry="3165" X="362.1046" Y="-4763.842" Z="12.46935" ItemID="" Count="0" SellItemType="Greens" />
+    <MailItemAction Entry="" AutoFindMailBox="True" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+  </If>
+  <!--Leveling to 65-->
+  <If Condition="Me.FreeNormalBagSlots &gt; 2" IgnoreCanRun="True">
+    <If Condition="Me.MapId == 1" IgnoreCanRun="True">
+      <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 1 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &lt; 30" IgnoreCanRun="False">
+        <FlyToAction Dismount="True" X="450.3699" Y="-4887.356" Z="21.0892" />
+        <CustomAction Code="Log(&quot;Loading Profile 1-30&quot;);" />
+        <LoadProfileAction Path="HBProfiles\Skinning\1-30.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 30 &amp;&amp; Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &lt; 65" IgnoreCanRun="False">
+        <FlyToAction Dismount="True" X="453.4744" Y="-3982.678" Z="22.19759" />
+        <CustomAction Code="Log(&quot;Loading Profile 65-110&quot;);" />
+        <LoadProfileAction Path="HBProfiles\Skinning\30-65.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 65" IgnoreCanRun="False">
+        <CustomAction Code="Log(&quot;Loading Main Profile&quot;);" />
+       <LoadProfileAction Path="[H] Skinning  1-525.xml" ProfileType="Professionbuddy" />
+      </If>
+    </If>
+  </If>
+</Professionbuddy>

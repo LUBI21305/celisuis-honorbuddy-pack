@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Professionbuddy>
+  <CustomAction Code="Log(&quot;Leveling to 525&quot;);" />
+  <If Condition="TreeRoot.Current.Name != &quot;Grind Bot&quot;" IgnoreCanRun="True">
+    <CustomAction Code="SwitchToBot (&quot;Grind Bot&quot;);" />
+  </If>
+  <!--Selling to vendor at Grove of Aessina-->
+  <If Condition="Me.FreeNormalBagSlots &lt; 2" IgnoreCanRun="True">
+    <FlyToAction Dismount="True" X="5180.91" Y="-1716.01" Z="1339.965" />
+    <SellItemAction NpcEntry="43380" X="5180.91" Y="-1716.01" Z="1339.965" ItemID="" Count="0" SellItemType="Greys" />
+    <SellItemAction NpcEntry="43380" X="5180.91" Y="-1716.01" Z="1339.965" ItemID="" Count="0" SellItemType="Greens" />
+    <MailItemAction Entry="" AutoFindMailBox="True" UseCategory="True" Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" X="0" Y="0" Z="0" />
+  </If>
+  <!--Leveling to 525-->
+  <If Condition="Me.FreeNormalBagSlots &gt; 2" IgnoreCanRun="True">
+    <If Condition="Me.MapId == 1" IgnoreCanRun="True">
+      <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &lt; 525" IgnoreCanRun="False">
+        <FlyToAction Dismount="True" X="5264.253" Y="-1493.856" Z="1364.646" />
+        <CustomAction Code="Log(&quot;Loading Profile 440-525&quot;);" />
+        <LoadProfileAction Path="HBProfiles\Skinning\440-525.xml" ProfileType="Honorbuddy" />
+      </If>
+      <If Condition="Me.GetSkill(Styx.SkillLine.Skinning).CurrentValue &gt;= 525" IgnoreCanRun="False">
+        <CustomAction Code="Log(&quot;Loading Main Profile &quot;);" />
+        <LoadProfileAction Path="[H] Skinning  1-525.xml" ProfileType="Professionbuddy" />
+      </If>
+    </If>
+  </If>
+</Professionbuddy>
